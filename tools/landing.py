@@ -123,6 +123,8 @@ AT_TOP=['TF Bank Mastercard Gold','Advanzia Bank free Mastercard Gold','easybank
 def page(rel, build):
     f=R+rel+'index.html'; src=open(f).read()
     head=src[:src.index('<body')]
+    x='<link rel="alternate" hreflang="x-default" href="https://finvallo.com/">'
+    while head.count(x)>1: head=head.replace(x+x,x)
     head=re.sub(r'<script type="application/ld\+json">\{"@context": "https://schema.org", "@type": "FAQPage".*?</script>\n','',head,flags=re.S)
     hdr=re.search(r'<a class="skip".*?</header>',src,re.S).group(0)
     P='../'*rel.count('/')
