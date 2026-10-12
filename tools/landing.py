@@ -16,6 +16,7 @@ def stars(v,uid):
 def de(x): return f'{x:.1f}'.replace('.',',')
 def ic(p): return f'<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{p}</svg>'
 I={
+'robo':'<rect x="5" y="8" width="14" height="11" rx="2.5"/><path d="M12 4v4M9 13h.01M15 13h.01M9.5 16h5"/>','btc':'<circle cx="12" cy="12" r="9"/><path d="M9.5 7.5v9M9.5 8h3.5a2 2 0 0 1 0 4H9.5h4a2 2 0 0 1 0 4H9.5M11 6v2M11 16v2"/>','lock':'<rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
 'card':'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6 15h4"/>',
 'trophy':'<path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7M10 17h4"/>',
 'brief':'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/>',
@@ -149,9 +150,13 @@ def b_root(P,hdr):
       tile(P,'at/kreditkarten/business/','brief','Business-Kreditkarten','Firmenkarten für Selbstständige'),
       tile(P,'at/kreditkarten/rechner/','calc','Kartenrechner','Was kostet dich deine Karte wirklich?'),
       tile(P,'at/ratgeber/','book','Ratgeber','Gebühren, Punkte, Versicherung erklärt'),
+      tile(P,'de/rechner/','calc','Finanzrechner','Zinseszins, Kredit, Steuer und mehr'),
       tile(P,'','coin','Girokonto','Kontoführung, Karten, Zinsen',True),
-      tile(P,'','chart','Depot & Broker','Ordergebühren und Sparpläne',True),
-      tile(P,'','pie','ETFs','Kosten und Steuern',True)])
+      tile(P,'','chart','Tagesgeld','Zinsen und Einlagensicherung im Vergleich',True),
+      tile(P,'','lock','Festgeld','Feste Zinsen für 1 bis 10 Jahre',True),
+      tile(P,'','pie','Broker & Depot','Ordergebühren, Sparpläne, ETFs',True),
+      tile(P,'','btc','Krypto-Börsen','Gebühren, Sicherheit, Regulierung',True),
+      tile(P,'','robo','Robo-Advisor','Automatisch anlegen mit ETF-Portfolios',True)])
     fq,ld=faqblock(ROOT_FAQ(t))
     return (hero(SHIELD,'Dein unabhängiger Finanzvergleich für Österreich und Deutschland.',
         'Banken, Preise und Bedingungen unterscheiden sich. Wähle dein Land, dann siehst du nur Angebote, die du dort auch bekommst.',
@@ -173,12 +178,15 @@ def b_at(P,hdr):
     tiles=''.join([tile(P,'at/kreditkarten/','card','Kreditkarten',f'{nA} Karten im Vergleich'),
       tile(P,'at/kreditkarten/bestenlisten/','trophy','Bestenlisten','Die besten Karten nach Kategorie'),
       tile(P,'at/kreditkarten/business/','brief','Business-Kreditkarten','Firmenkarten für Selbstständige'),
-      tile(P,'at/kreditkarten/rechner/','calc','Kartenrechner','Was kostet dich deine Karte wirklich?'),
       tile(P,'at/kreditkarten/anbieter/','bank','Anbieter',f'{anbA} Banken und Kartenanbieter'),
       tile(P,'at/ratgeber/','book','Ratgeber','Gebühren, Punkte, Versicherung erklärt'),
+      tile(P,'at/rechner/','calc','Finanzrechner','Zinseszins, Kredit, KESt und mehr'),
       tile(P,'','coin','Girokonto','Kontoführung, Karten, Zinsen',True),
-      tile(P,'','chart','Depot & Broker','Ordergebühren und Sparpläne',True),
-      tile(P,'','pie','ETFs','Kosten und Steuern in Österreich',True)])
+      tile(P,'','chart','Tagesgeld','Zinsen und Einlagensicherung im Vergleich',True),
+      tile(P,'','lock','Festgeld','Feste Zinsen für 1 bis 10 Jahre',True),
+      tile(P,'','pie','Broker & Depot','Ordergebühren, Sparpläne, ETFs',True),
+      tile(P,'','btc','Krypto-Börsen','Gebühren, Sicherheit, Regulierung',True),
+      tile(P,'','robo','Robo-Advisor','Automatisch anlegen mit ETF-Portfolios',True)])
     fq,ld=faqblock([q for q in ROOT_FAQ(t) if not q[0].startswith('Warum muss')])
     return (hero(f'{FLAG["AT"]} Österreich · unabhängig bewertet','Kreditkarten in Österreich unabhängig vergleichen.',
         f'{nA} Kredit-, Debit- und Prepaid-Karten von {anbA} Anbietern, mit Gebühren, Versicherung und Bewertung.',
@@ -203,7 +211,14 @@ def b_de(P,hdr):
       tile(P,'de/ratgeber/fremdwaehrung/','globe','Zahlen im Ausland','Gebühren und Kursaufschläge'),
       tile(P,'de/ratgeber/reiseversicherung/','plane','Reiseversicherung','Was die Karte wirklich abdeckt'),
       tile(P,'de/ratgeber/business/','brief','Firmenkreditkarten','Für Selbstständige und Firmen'),
-      tile(P,'de/ratgeber/','book','Alle Ratgeber','Kreditkarten einfach erklärt')])
+      tile(P,'de/ratgeber/','book','Alle Ratgeber','Kreditkarten einfach erklärt'),
+      tile(P,'de/rechner/','calc','Finanzrechner','Zinseszins, Kredit, Abgeltungsteuer und mehr'),
+      tile(P,'','coin','Girokonto','Kontoführung, Karten, Zinsen',True),
+      tile(P,'','chart','Tagesgeld','Zinsen und Einlagensicherung im Vergleich',True),
+      tile(P,'','lock','Festgeld','Feste Zinsen für 1 bis 10 Jahre',True),
+      tile(P,'','pie','Broker & Depot','Ordergebühren, Sparpläne, ETFs',True),
+      tile(P,'','btc','Krypto-Börsen','Gebühren, Sicherheit, Regulierung',True),
+      tile(P,'','robo','Robo-Advisor','Automatisch anlegen mit ETF-Portfolios',True)])
     faq=[('Gibt es den Kreditkartenvergleich auch für Deutschland?', f'Ja. Wir vergleichen {nD} Kreditkarten für Deutschland nach derselben Methode wie in Österreich.' if DD else 'Er ist in Arbeit. Wir sammeln und prüfen gerade die Konditionen aller Kreditkarten in Deutschland, direkt bei den Anbietern und in den Preisverzeichnissen. Danach erscheinen sie hier mit derselben Bewertung wie in Österreich.'),
      ('Warum übernehmt ihr nicht einfach die Werte aus Österreich?','Banken, Preise und Bedingungen sind in Deutschland anders, und viele Karten gibt es nur in einem der beiden Länder. Wir übernehmen deshalb keine Werte von einem Land ins andere.'),
      ('Was kostet Finvallo?','Nichts. Du kannst alles ohne Registrierung nutzen. Wir finanzieren uns über Affiliate-Links, die mit * markiert sind. Die Provision hat keinen Einfluss auf Sterne oder Reihenfolge.'),
