@@ -368,7 +368,7 @@ function cashCost(c, amt){ const m=c.cash; if(!m) return null; switch(m[0]){ cas
 const DEF = {q:'',typ:[],kl:[],fee:'all',art:'all',nw:[],ex:[],sort:'score'};
 let F = Object.assign({}, DEF, LS.get('ka-f',{}));
 ['typ','kl','nw','ex'].forEach(k=>{ if(!Array.isArray(F[k])) F[k]=[]; });
-let ui = {land:LS.get('ka-land','AT'), panel:null, limit:12, open:{}, tab:{}, calc:LS.get('ka-calc',{on:false,fx:1500,n:12,amt:200,year:'folge'}), finder:{}};
+let ui = {land:(['AT','DE'].includes(new URLSearchParams(location.search).get('land'))?new URLSearchParams(location.search).get('land'):LS.get('ka-land','AT')), panel:null, limit:12, open:{}, tab:{}, calc:LS.get('ka-calc',{on:false,fx:1500,n:12,amt:200,year:'folge'}), finder:{}};
 const saveF = () => LS.set('ka-f', F);
 const EXOPTS = [['giro0','🏦','Ohne Girokonto'],['sep'],['cb','💰','Cashback / Punkte'],['ml','✈️','Flugmeilen sammeln'],['reise','🛡️','Reiseversicherung'],['lounge','🛋️','Lounge-Zugang'],['pay','📱','Apple Pay / Google Pay'],['fx0','🌍','Gebührenfrei im Ausland zahlen'],['cash0','🏧','Gebührenfrei Geld abheben'],['nobon','✅','Ohne Bonitätsprüfung'],['bonus','🎁','Mit Aktion / Willkommensbonus']];
 const TYPS = [['Kreditkarte','Kreditkarte','Mit Kreditrahmen und Teilzahlung'],['Charge','Charge-Karte','Monatliche Gesamtabrechnung'],['Debit','Debitkarte','Sofortige Kontobelastung'],['Prepaid','Prepaid-Karte','Aufladbare Guthabenkarte']];

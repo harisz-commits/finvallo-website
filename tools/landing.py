@@ -61,6 +61,9 @@ def top3(d,names=None):
         K={c['titel']:c for c in ks}; return [K[n] for n in names]
     return sorted(ks,key=lambda c:(-c['stars'],c.get('rank') or 999))[:3]
 def mark(hdr): return re.search(r'<svg class="mark".*?</svg>',hdr).group(0)
+def herolands(P,at,dd):
+    def one(code,href,name,sub): return f'<a class="hp-hl" href="{P}{href}" hreflang="de-{code}">{FLAG[code].replace(chr(34)+"flag"+chr(34),chr(34)+"flag big"+chr(34))}<span><b>{name}</b><small>{sub}</small></span>{ic(I["arrow"])}</a>'
+    return one('AT','at/','Österreich',f'{len(at["karten"])} Kreditkarten im Vergleich')+one('DE','de/','Deutschland',f'{len(dd["karten"])} Kreditkarten im Vergleich' if dd else 'Ratgeber · Vergleich in Arbeit')
 def picker(P,at,dd):
     def one(code,href,name,sub):
         return f'<a class="hp-land" href="{P}{href}" hreflang="de-{code}">{FLAG[code].replace("class=\"flag\"","class=\"flag big\"")}<span><b>{name}</b><small>{sub}</small></span><span class="hp-land-go">{ic(I["arrow"])}</span></a>'
@@ -108,7 +111,7 @@ def trust(P):
 <a href="{P}at/kreditkarten/methodik/"><span class="hp-ic">{ic(I['chart'])}</span><b>Feste, offene Regeln</b><span class="hp-muted">Sieben gewichtete Kriterien, für jede Karte gleich angewendet.</span><small>Zur Methodik →</small></a>
 <a href="{P}at/kreditkarten/faktencheck/"><span class="hp-ic">{ic(I['search'])}</span><b>Geprüft beim Anbieter</b><span class="hp-muted">Konditionen aus Preisblatt und Anbieterseite, mit Quellenangabe.</span><small>Zum Faktencheck →</small></a>
 <a href="{P}so-verdienen-wir-geld/"><span class="hp-ic">{ic(I['shield'])}</span><b>Provision ohne Einfluss</b><span class="hp-muted">Affiliate-Links sind gekennzeichnet und ändern keine Bewertung.</span><small>So verdienen wir Geld →</small></a></div>''')
-SHIELD=ic(I['shield'])+' Unabhängig bewertet · keine bezahlten Platzierungen'
+SHIELD=ic(I['shield'])+' Unabhängig bewertet'
 AT_GUIDES=[('at/ratgeber/fremdwaehrung/','Ausland','Gebühren im Ausland verstehen','Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“.'),
 ('at/ratgeber/reiseversicherung/','Versicherung','Reiseversicherung über die Kreditkarte','Wann sie gilt, wer mitversichert ist und worauf du bei Storno achten musst.'),
 ('at/ratgeber/punkte-sammeln-at/','Punkte','Lohnt sich Punktesammeln in Österreich?','Amex, Miles & More und Hilton: was Punkte wirklich wert sind.')]
@@ -148,10 +151,9 @@ def b_root(P,hdr):
       tile(P,'','pie','ETFs','Kosten und Steuern',True)])
     fq,ld=faqblock(ROOT_FAQ(t))
     return (hero(SHIELD,'Dein unabhängiger Finanzvergleich für Österreich und Deutschland.',
-        f'Aktuelle Konditionen, bewertet nach offenen Regeln. Sortiert nach Bewertung, nicht nach Provision. Kostenlos und ohne Registrierung.',
-        f'<a class="btn primary" href="{P}at/kreditkarten/">{FLAG["AT"]} Österreich vergleichen</a><a class="btn ghost" href="{P}de/">{FLAG["DE"]} Deutschland</a>',art(t[0],None))
-      + picker(P,AT,DD)
-      + stats([(nA,'Kreditkarten in Österreich'),(anbA,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(0,'bezahlte Platzierungen')])
+        'Banken, Preise und Bedingungen unterscheiden sich. Wähle dein Land, dann siehst du nur Angebote, die du dort auch bekommst.',
+        herolands(P,AT,DD),art(t[0],None))
+      + stats([(nA,'Kreditkarten in Österreich'),(len(DD['karten']) if DD else '–','Kreditkarten in Deutschland'),(anbA+(len({c['anbieter'] for c in DD['karten']}) if DD else 0),'Banken und Anbieter'),(7,'offene Bewertungskriterien')])
       + sec('Unsere Vergleiche im Überblick','Finde das passende Finanzprodukt. Weitere Vergleiche folgen.',f'<div class="hp-tiles">{tiles}</div>')
       + tc + trust(P)
       + sec('Ratgeber','Kreditkarten einfach erklärt.',f'<div class="hp-posts">{guides(P,AT_GUIDES)}</div><div class="hp-more"><a class="btn" href="{P}at/ratgeber/">Ratgeber Österreich →</a> <a class="btn ghost" href="{P}de/ratgeber/">Ratgeber Deutschland →</a></div>',True)
@@ -176,9 +178,9 @@ def b_at(P,hdr):
       tile(P,'','pie','ETFs','Kosten und Steuern in Österreich',True)])
     fq,ld=faqblock([q for q in ROOT_FAQ(t) if not q[0].startswith('Warum muss')])
     return (hero(f'{FLAG["AT"]} Österreich · unabhängig bewertet','Kreditkarten in Österreich unabhängig vergleichen.',
-        f'{nA} Kredit-, Debit- und Prepaid-Karten von {anbA} Anbietern, mit Gebühren, Versicherung und Bewertung. Sortiert nach Bewertung, nicht nach Provision.',
+        f'{nA} Kredit-, Debit- und Prepaid-Karten von {anbA} Anbietern, mit Gebühren, Versicherung und Bewertung.',
         f'<a class="btn primary" href="{P}at/kreditkarten/">Kreditkarten vergleichen {ic(I["arrow"])}</a><a class="btn ghost" href="#testsieger">Testsieger ansehen</a>',art(t[0],'AT'))
-      + stats([(nA,'Kreditkarten verglichen'),(anbA,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(0,'bezahlte Platzierungen')])
+      + stats([(nA,'Kreditkarten verglichen'),(anbA,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(8,'Bestenlisten nach Kategorie')])
       + tc
       + sec('Alles für Österreich','Vergleiche, Werkzeuge und Ratgeber.',f'<div class="hp-tiles">{tiles}</div>')
       + trust(P)
@@ -206,9 +208,9 @@ def b_de(P,hdr):
      ('Ist Finvallo eine Finanzberatung?','Nein. Finvallo vergleicht und erklärt, ersetzt aber keine persönliche Beratung. Prüfe die Konditionen vor dem Abschluss beim Anbieter.')]
     fq,ld=faqblock(faq)
     if DD:
-        st=stats([(nD,'Kreditkarten verglichen'),(anbD,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(0,'bezahlte Platzierungen')])
+        st=stats([(nD,'Kreditkarten verglichen'),(anbD,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(8,'Bestenlisten nach Kategorie')])
         cta=f'<a class="btn primary" href="{P}de/kreditkarten/">Kreditkarten vergleichen {ic(I["arrow"])}</a><a class="btn ghost" href="#testsieger">Testsieger ansehen</a>'
-        p=f'{nD} Kreditkarten von {anbD} Anbietern, mit Gebühren, Versicherung und Bewertung. Sortiert nach Bewertung, nicht nach Provision.'
+        p=f'{nD} Kreditkarten von {anbD} Anbietern, mit Gebühren, Versicherung und Bewertung.'
     else:
         st=stats([(len(DE_GUIDES)+1,'Ratgeber für Deutschland'),(7,'offene Bewertungskriterien'),(0,'bezahlte Platzierungen'),('100 %','kostenlos')])
         cta=f'<a class="btn primary" href="{P}de/ratgeber/">Zu den Ratgebern {ic(I["arrow"])}</a><a class="btn ghost" href="{P}at/kreditkarten/">{FLAG["AT"]} Österreich-Vergleich</a>'

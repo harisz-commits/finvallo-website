@@ -4,16 +4,17 @@ MARK='<svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGrad
 DOWN='<svg class="ic-down" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
 BURGER='<svg class="ic-burger" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'
 
-AT_MAIN=[('at/kreditkarten/','Kreditkarten'),('at/kreditkarten/bestenlisten/','Bestenlisten'),('at/ratgeber/','Ratgeber'),('at/kreditkarten/anbieter/','Anbieter'),('at/kreditkarten/rechner/','Rechner')]
+AT_MAIN=[('at/kreditkarten/','Kreditkarten'),('at/kreditkarten/bestenlisten/','Bestenlisten'),('at/ratgeber/','Ratgeber'),('at/kreditkarten/anbieter/','Anbieter'),('at/kreditkarten/rechner/?land=AT','Rechner')]
 AT_MORE=[('at/kreditkarten/business/','Business-Kreditkarten'),('at/kreditkarten/methodik/','So bewerten wir'),('at/kreditkarten/faktencheck/','Faktencheck'),('at/','Übersicht Österreich')]
-DE_MAIN=[('de/kreditkarten/','Kreditkarten'),('de/kreditkarten/business/','Business'),('de/ratgeber/','Ratgeber'),('de/kreditkarten/anbieter/','Anbieter')]
-DE_MORE=[('at/kreditkarten/methodik/','So bewerten wir'),('de/','Übersicht Deutschland'),('at/kreditkarten/','Kreditkarten Österreich')]
+DE_MAIN=[('de/kreditkarten/','Kreditkarten'),('de/kreditkarten/bestenlisten/','Bestenlisten'),('de/ratgeber/','Ratgeber'),('de/kreditkarten/anbieter/','Anbieter'),('at/kreditkarten/rechner/?land=DE','Rechner')]
+DE_MORE=[('de/kreditkarten/business/','Business-Kreditkarten'),('de/kreditkarten/methodik/','So bewerten wir'),('de/kreditkarten/faktencheck/','Faktencheck'),('de/','Übersicht Deutschland')]
 INFO=[('ueber-uns/','Über uns'),('so-verdienen-wir-geld/','So verdienen wir Geld')]
 
 def active(rel, items):
     # longest matching prefix wins; card pages fall under Kreditkarten
     best=None
     for h,_ in items:
+        h=h.split('?')[0]
         if rel==h or (rel.startswith(h) and h not in ('at/','de/')):
             if best is None or len(h)>len(best): best=h
     return best
@@ -26,7 +27,7 @@ def build(rel, P, land):
     main, more = (DE_MAIN, DE_MORE) if de else (AT_MAIN, AT_MORE)
     cur = active(rel, main+more+INFO)
     def a(h,t,cls=''):
-        ac=' aria-current="page"' if h==cur else ''
+        ac=' aria-current="page"' if h.split('?')[0]==cur else ''
         c=f' class="{cls}"' if cls else ''
         return f'<a{c} href="{P}{h}"{ac}>{t}</a>'
     nav=''.join(a(h,t) for h,t in main)
