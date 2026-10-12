@@ -112,15 +112,18 @@ def trust(P):
 <a href="{P}at/kreditkarten/faktencheck/"><span class="hp-ic">{ic(I['search'])}</span><b>Geprüft beim Anbieter</b><span class="hp-muted">Konditionen aus Preisblatt und Anbieterseite, mit Quellenangabe.</span><small>Zum Faktencheck →</small></a>
 <a href="{P}so-verdienen-wir-geld/"><span class="hp-ic">{ic(I['shield'])}</span><b>Provision ohne Einfluss</b><span class="hp-muted">Affiliate-Links sind gekennzeichnet und ändern keine Bewertung.</span><small>So verdienen wir Geld →</small></a></div>''')
 SHIELD=ic(I['shield'])+' Unabhängig bewertet'
-AT_GUIDES=[('at/ratgeber/fremdwaehrung/','Ausland','Gebühren im Ausland verstehen','Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“.'),
+AT_GUIDES=[('at/ratgeber/kostenlose-kreditkarte/','Vergleich','Kostenlose Kreditkarte in Österreich','Welche Karten wirklich nichts kosten und wo die Haken liegen.'),
+('at/ratgeber/fremdwaehrung/','Ausland','Gebühren im Ausland verstehen','Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“.'),
 ('at/ratgeber/reiseversicherung/','Versicherung','Reiseversicherung über die Kreditkarte','Wann sie gilt, wer mitversichert ist und worauf du bei Storno achten musst.'),
+('at/ratgeber/ohne-bonitaetspruefung/','Bonität','Kreditkarte ohne KSV-Abfrage','Was seriös möglich ist und welche Alternativen es gibt.'),
+('at/ratgeber/mietwagen-kaution/','Reisen','Kreditkarte für Mietwagen und Kaution','Warum Vermieter eine echte Kreditkarte wollen.'),
 ('at/ratgeber/punkte-sammeln-at/','Punkte','Lohnt sich Punktesammeln in Österreich?','Amex, Miles & More und Hilton: was Punkte wirklich wert sind.')]
-DE_GUIDES=[('de/ratgeber/punkte-sammeln-de/','Punkte','Lohnt sich Punktesammeln in Deutschland?','Amex-Boni, 13 Transferpartner, Miles & More und Payback: was sich wirklich lohnt.'),
-('de/ratgeber/fremdwaehrung/','Ausland','Gebühren im Ausland verstehen','Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“.'),
-('de/ratgeber/reiseversicherung/','Versicherung','Reiseversicherung über die Kreditkarte','Wann der Schutz gilt, wer mitversichert ist und worauf du achten musst.'),
-('de/ratgeber/kartentypen/','Grundlagen','Kredit-, Charge-, Debit- oder Prepaid-Karte?','Die vier Kartentypen in Deutschland einfach erklärt.'),
-('de/ratgeber/teilzahlung/','Kosten','Teilzahlung: warum sie so teuer ist','Wie Revolving-Kreditkarten funktionieren und wie du die Zinsfalle vermeidest.'),
-('de/ratgeber/punkte/','Punkte','Punkte und Meilen: der Einstieg','Punkte, Meilen oder Cashback? Was Kreditkarten-Punkte wert sind.')]
+DE_GUIDES=[('de/ratgeber/kostenlose-kreditkarte/','Vergleich','Kostenlose Kreditkarte in Deutschland','Welche Karten wirklich nichts kosten und wo die Haken liegen.'),
+('de/ratgeber/ohne-bonitaetspruefung/','Schufa','Kreditkarte ohne Schufa','Was seriös möglich ist und welche Alternativen es gibt.'),
+('de/ratgeber/fremdwaehrung/','Ausland','Gebühren im Ausland verstehen','Auslandseinsatzentgelt und die Falle „in Euro zahlen“.'),
+('de/ratgeber/mietwagen-kaution/','Reisen','Kreditkarte für Mietwagen und Kaution','Warum Vermieter eine echte Kreditkarte wollen.'),
+('de/ratgeber/punkte-sammeln-de/','Punkte','Lohnt sich Punktesammeln in Deutschland?','Amex-Boni, Miles & More und Payback: was sich wirklich lohnt.'),
+('de/ratgeber/kreditkarte-beantragen/','Antrag','Kreditkarte beantragen','Ablauf, Unterlagen und warum Anträge abgelehnt werden.')]
 AT_TOP=['TF Bank Mastercard Gold','Advanzia Bank free Mastercard Gold','easybank Gold Student']
 
 def page(rel, build):
@@ -153,10 +156,10 @@ def b_root(P,hdr):
     return (hero(SHIELD,'Dein unabhängiger Finanzvergleich für Österreich und Deutschland.',
         'Banken, Preise und Bedingungen unterscheiden sich. Wähle dein Land, dann siehst du nur Angebote, die du dort auch bekommst.',
         herolands(P,AT,DD),art(t[0],None))
-      + stats([(nA,'Kreditkarten in Österreich'),(len(DD['karten']) if DD else '–','Kreditkarten in Deutschland'),(anbA+(len({c['anbieter'] for c in DD['karten']}) if DD else 0),'Banken und Anbieter'),(7,'offene Bewertungskriterien')])
+      + stats([(nA,'Kreditkarten in Österreich'),(len(DD['karten']) if DD else '–','Kreditkarten in Deutschland'),(len({c['anbieter'].split()[0].lower().strip(',') for c in AT['karten']+(DD['karten'] if DD else [])}),'Banken und Anbieter'),(7,'offene Bewertungskriterien')])
       + sec('Unsere Vergleiche im Überblick','Finde das passende Finanzprodukt. Weitere Vergleiche folgen.',f'<div class="hp-tiles">{tiles}</div>')
       + tc + trust(P)
-      + sec('Ratgeber','Kreditkarten einfach erklärt.',f'<div class="hp-posts">{guides(P,AT_GUIDES)}</div><div class="hp-more"><a class="btn" href="{P}at/ratgeber/">Ratgeber Österreich →</a> <a class="btn ghost" href="{P}de/ratgeber/">Ratgeber Deutschland →</a></div>',True)
+      + sec('Ratgeber','Kreditkarten einfach erklärt.',f'<div class="hp-posts">{guides(P,AT_GUIDES[:3])}</div><div class="hp-more"><a class="btn" href="{P}at/ratgeber/">Ratgeber Österreich →</a> <a class="btn ghost" href="{P}de/ratgeber/">Ratgeber Deutschland →</a></div>',True)
       + fq), ld
 def ROOT_FAQ(t): return [
  ('Was kostet Finvallo?','Nichts. Du kannst alle Vergleiche ohne Registrierung nutzen. Wir finanzieren uns über Affiliate-Links, die mit * markiert sind. Die Provision hat keinen Einfluss auf Sterne oder Reihenfolge.'),

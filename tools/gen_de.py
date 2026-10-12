@@ -463,11 +463,32 @@ def llms(cards,priv):
         s=s.replace('Unabhängiger Finanzvergleich für Österreich (und Ratgeber für Deutschland). 77 Kredit-, Charge-, Debit- und Prepaid-Karten',f'Unabhängiger Finanzvergleich für Österreich und Deutschland. 77 Karten in Österreich und {n} in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten)')
         s=re.sub(r'77 Karten in Österreich und \d+ in Deutschland',f'77 Karten in Österreich und {n} in Deutschland',s)
         top=priv[:15 if fn=='llms.txt' else 60]
-        blk='\n## Deutschland: Kreditkarten\n'+f'- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller {n} Karten, Stand {STAND_DE}\n- [Anbieter Deutschland](https://finvallo.com/de/kreditkarten/anbieter/)\n- [Daten als JSON](https://finvallo.com/de/daten/kreditkarten.json)\n'
+        blk='\n## Deutschland: Kreditkarten\n'+f'- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller {n} Karten, Stand {STAND_DE}\n- [Bestenlisten Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/): beste Karten nach Kategorie\n- [Bewertungsmethodik Deutschland](https://finvallo.com/de/kreditkarten/methodik/)\n- [Faktencheck Deutschland](https://finvallo.com/de/kreditkarten/faktencheck/): Quellen je Karte\n- [Business-Kreditkarten Deutschland](https://finvallo.com/de/kreditkarten/business/)\n- [Anbieter Deutschland](https://finvallo.com/de/kreditkarten/anbieter/)\n- [Daten als JSON](https://finvallo.com/de/daten/kreditkarten.json)\n'
+        L,_=cat_lists(cards)
+        blk+=''.join(f'- [{c["h"]} in Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/{c["k"]}/): Platz 1 {L[c["k"]][0]["titel"]}\n' for c in CATS if L[c['k']])
         blk+=''.join(f'- [{c["titel"]}](https://finvallo.com/de/kreditkarten/{c["slug"]}/): Platz {c["rank"]}, {de1(c["stars"])}/5 ({c["note"]}); Jahresgebühr {feeT(c)}, Ausland {fxT(c)}, {TIER[c["tier"]][1] if c.get("tier") is not None else ""}\n' for c in top)
+        s=re.sub(r'\n## Schnellantworten.*?(?=\n## )','',s,flags=re.S)
+        qa=quick_answers(cards,priv)
+        j=s.find('\n## ')
+        s=s[:j]+'\n## Schnellantworten (Stand '+STAND_DE+')\n'+qa+s[j:]
         i=s.find('\n## Deutschland: Ratgeber')
         s=s[:i]+blk+s[i:] if i>=0 else s+blk
         open(p,'w').write(s)
+def at_top(k):
+    f=R+f'at/kreditkarten/bestenlisten/{k}/index.html'
+    if not os.path.exists(f): return None
+    m=re.search(r'<tr><td><b>1</b></td><td><a class="lnk" href="([^"]*)">([^<]*)</a>',open(f).read())
+    return (html.unescape(m.group(2)),'https://finvallo.com/at/kreditkarten/'+m.group(1).replace('../../','')) if m else None
+def quick_answers(cards,priv):
+    L,_=cat_lists(cards); out=''
+    at=json.load(open(R+'at/daten/kreditkarten.json'))['karten']; atr=sorted([c for c in at if c.get('stars')],key=lambda c:-c['stars'])
+    out+=f'- Beste Kreditkarte Deutschland (Gesamtwertung): {priv[0]["titel"]} ({de1(priv[0]["stars"])}/5) – https://finvallo.com/de/kreditkarten/{priv[0]["slug"]}/\n'
+    if atr: out+=f'- Beste Kreditkarte Österreich (Gesamtwertung): {atr[0]["titel"]} ({de1(atr[0]["stars"])}/5) – {atr[0]["url"]}\n'
+    for k,q in [('gratis','Beste kostenlose Kreditkarte'),('reisen','Beste Kreditkarte für Reisen'),('ausland','Beste Kreditkarte ohne Auslandsgebühr'),('punkte','Beste Kreditkarte für Punkte/Meilen'),('lounge','Beste Kreditkarte mit Lounge-Zugang'),('debit','Beste Debitkarte/App-Bank')]:
+        if L.get(k): c=L[k][0]; out+=f'- {q} Deutschland: {c["titel"]} – https://finvallo.com/de/kreditkarten/{c["slug"]}/\n'
+        a=at_top(k)
+        if a: out+=f'- {q} Österreich: {a[0]} – {a[1]}\n'
+    return out
 def rechner(cards,prov):
     p=R+'at/kreditkarten/rechner/index.html'; s=open(p).read()
     m=re.search(r'(<script id="data" type="application/json">)(.*?)(</script>)',s,re.S)
