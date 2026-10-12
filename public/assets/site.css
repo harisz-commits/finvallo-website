@@ -478,3 +478,11 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
   .hp-land{padding:16px 18px;gap:14px}
   .flag.big{width:44px;height:30px}
 }
+/* hero country buttons (homepage) */
+.hp-cta .hp-hl{display:flex;align-items:center;gap:14px;min-width:250px;padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.28);color:#fff;text-decoration:none;transition:background .15s,border-color .15s,transform .15s}
+.hp-cta .hp-hl:hover{background:rgba(255,255,255,.14);border-color:#2bc4a8;transform:translateY(-2px)}
+.hp-cta .hp-hl .flag.big{width:40px;height:27px;border-radius:5px}
+.hp-cta .hp-hl span{flex:1;display:grid;line-height:1.25}
+.hp-cta .hp-hl b{font-size:18px}.hp-cta .hp-hl small{color:#b9cccc;font-size:14px}
+.hp-cta .hp-hl>svg{width:20px;height:20px;color:#2bc4a8}
+@media (max-width:640px){.hp-cta .hp-hl{flex:1 1 100%;min-width:0}}
