@@ -448,3 +448,33 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
   .hp-cta .btn{flex:1 1 100%}
   .hp-foot-grid{grid-template-columns:1fr 1fr}
 }
+/* flags + country picker */
+.flag{width:20px;height:14px;border-radius:3px;flex:none;display:inline-block;vertical-align:-2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+.flag.big{width:54px;height:36px;border-radius:6px}
+.hdr .land a{display:inline-flex;align-items:center;gap:6px}
+.hdr .land .flag{width:18px;height:12px;border-radius:2px}
+.hp-cta .btn .flag{width:22px;height:15px}
+.hp-picker{background:var(--bg2);border-bottom:1px solid var(--line);padding-block:40px}
+.hp-picker h2{margin:0 0 6px;text-align:center;font-size:clamp(22px,3vw,28px)}
+.hp-picker p{margin:0 auto 24px;text-align:center;color:var(--muted);max-width:62ch}
+.hp-lands{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:860px;margin:0 auto}
+.hp-land{display:flex;align-items:center;gap:18px;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:20px 22px;text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}
+.hp-land:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,23,32,.1)}
+.hp-land>span:nth-child(2){flex:1;min-width:0}
+.hp-land b{display:block;font-size:21px;letter-spacing:-.02em}
+.hp-land small{color:var(--muted);font-size:14.5px}
+.hp-land-go{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue-text);flex:none}
+.hp-land-go svg{width:20px;height:20px}
+.hp-art-flag{position:absolute;right:6px;bottom:10px}
+.hp-art-flag .flag{width:48px;height:32px;border-radius:6px;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.hp-eyebrow .flag{width:18px;height:12px;border-radius:2px}
+.hp-switch{padding-block:28px;border-top:1px solid var(--line)}
+.hp-switch .hp-w{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;font-weight:600}
+.hp-switch span{display:inline-flex;align-items:center;gap:10px}
+.hp-foot-lands{display:flex;gap:14px;margin-top:12px;flex-wrap:wrap}
+.hp-foot-lands a{display:inline-flex;align-items:center;gap:7px}
+@media (max-width:640px){
+  .hp-lands{grid-template-columns:1fr}
+  .hp-land{padding:16px 18px;gap:14px}
+  .flag.big{width:44px;height:30px}
+}
