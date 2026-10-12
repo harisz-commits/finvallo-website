@@ -128,7 +128,12 @@ def ratecards(cards):
     for c in cards: c.setdefault('rank',None)
     return priv
 # ---------- HTML ----------
-def head(title,desc,canon,P,ld,lang='de-DE'):
+ATPAIR={}
+def at_pairs():
+    for f in glob.glob(R+'at/kreditkarten/*/index.html'):
+        m=re.search(r'<title>(.*?) im Vergleich 2026',open(f).read())
+        if m: ATPAIR[html.unescape(m.group(1))]=os.path.relpath(os.path.dirname(f),R)+'/'
+def head(title,desc,canon,P,ld,lang='de-DE',alt=None):
     css=open(R+'index.html').read(); v=re.search(r'site\.css\?v=([a-z0-9]+)',css).group(1); fv=re.search(r'favicon\.svg\?v=([a-z0-9]+)',css).group(1)
     return f'''<!doctype html>
 <html lang="{lang}">
@@ -138,7 +143,7 @@ def head(title,desc,canon,P,ld,lang='de-DE'):
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc)}">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-<link rel="canonical" href="https://finvallo.com/{canon}">
+<link rel="canonical" href="https://finvallo.com/{canon}">{alt or ''}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Finvallo">
 <meta property="og:locale" content="de_DE">
@@ -252,11 +257,16 @@ def who(c):
     return a,b
 def card_page(c,cards,nrated):
     rel=f'de/kreditkarten/{c["slug"]}/'; P='../../../'
-    t=f'{c["titel"]} im Vergleich 2026 | Finvallo'
+    t=f'{c["titel"]} in Deutschland 2026 | Finvallo'
+    if len(t)>65: t=f'{c["titel"]} (DE) 2026 | Finvallo'
+    if len(t)>65: t=f'{c["titel"]} | Finvallo'
     bits=[('ohne Jahresgebühr' if c.get('fee')==0 else f'{eur(c["fee"])} € im Jahr') if c.get('fee') is not None else None,
-          ('0 % im Ausland' if c.get('fx')==0 else f'{fxT(c)} im Ausland') if c.get('fx') is not None else None,
+          ('0 % im Ausland' if c.get('fx')==0 else f'{pct(c["fx"])} im Ausland') if c.get('fx') is not None else None,
           TIER[c['tier']][1] if c.get('tier') else None]
     d=f'{c["titel"]} in Deutschland: {", ".join(b for b in bits if b)}.'+(f' Bewertung {de1(c["stars"])}/5.' if c.get('stars') else '')+' Alle Kosten, Vor- und Nachteile.'
+    if len(d)>155: d=d.replace(' Alle Kosten, Vor- und Nachteile.',' Kosten, Vor- und Nachteile.')
+    if len(d)>155: d=d.replace(' Kosten, Vor- und Nachteile.','')
+    if len(d)>155: d=d[:152].rsplit(' ',1)[0]+' …'
     pc=c['pros']; kc=c['cons']
     ld_card={"@type":"CreditCard","@id":f"https://finvallo.com/{rel}#card","name":c['titel'],"url":f"https://finvallo.com/{rel}",
       "provider":{"@type":"BankOrCreditUnion","name":c.get('herausgeber') or c['anbieter'],"url":c.get('quelle')},"areaServed":{"@type":"Country","name":"Deutschland"},
@@ -322,7 +332,14 @@ def card_page(c,cards,nrated):
   <p class="src" style="margin-top:18px">Hauptquelle: {ext(c.get("quelle"))}{" · Preisverzeichnis: "+ext(c.get("preis")) if c.get("preis") else ""}{" ("+E(c["stand"])+")" if c.get("stand") else ""}.</p>
 </main>
 {footer(P)}'''
-    write(rel,head(t,d,rel,P,ld)+body)
+    alt=None; atrel=ATPAIR.get(c['titel'])
+    if atrel and c['art']=='Privat':
+        alt=f'\n<link rel="alternate" hreflang="de-DE" href="https://finvallo.com/{rel}"><link rel="alternate" hreflang="de-AT" href="https://finvallo.com/{atrel}">'
+        fa=R+atrel+'index.html'; sa=open(fa).read()
+        sa=re.sub(r'\n<link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/kreditkarten/[^"]*"><link rel="alternate" hreflang="de-AT" href="[^"]*">','',sa)
+        sa=sa.replace(f'<link rel="canonical" href="https://finvallo.com/{atrel}">',f'<link rel="canonical" href="https://finvallo.com/{atrel}">'+alt,1)
+        open(fa,'w').write(sa)
+    write(rel,head(t,d,rel,P,ld,alt=alt)+body)
 def list_item(c,P,base=''):
     v=cash200(c.get('cash'))
     st=lambda good,txt: f'<b class="{ "good" if good else ""}">{E(txt)}</b>'
@@ -342,7 +359,8 @@ def list_page(cards,priv,biz):
     n=len(cards); na=len({c['anbieter'] for c in cards})
     t='Kreditkarten Vergleich Deutschland 2026 – unabhängig | Finvallo'
     top=priv[:3]
-    d=f'{n} Kreditkarten in Deutschland unabhängig verglichen: Jahresgebühr, Auslandsgebühren, Bargeld, Reiseversicherung. Testsieger: {top[0]["titel"]} ({de1(top[0]["stars"])}/5).'
+    d=f'{n} Kreditkarten in Deutschland unabhängig verglichen: Jahresgebühr, Ausland, Bargeld, Versicherung. Testsieger: {top[0]["titel"]} ({de1(top[0]["stars"])}/5).'
+    if len(d)>158: d=f'{n} Kreditkarten in Deutschland unabhängig verglichen: Jahresgebühr, Ausland, Bargeld und Reiseversicherung. Mit Testsieger und Rangliste.'
     ld=graph(rel,t,d,[('Deutschland','de/'),('Kreditkarten',rel)],[{"@type":"ItemList","name":"Beste Kreditkarten Deutschland","itemListElement":[{"@type":"ListItem","position":c['rank'],"name":c['titel'],"url":f"https://finvallo.com/{rel}{c['slug']}/"} for c in priv[:20]]}])
     kurz=f'<b>Kurz gesagt:</b> Die bestbewertete Kreditkarte in Deutschland ist laut Finvallo die {top[0]["titel"]} mit {de1(top[0]["stars"])} von 5 Sternen, vor der {top[1]["titel"]} ({de1(top[1]["stars"])}) und der {top[2]["titel"]} ({de1(top[2]["stars"])}). Wir vergleichen {n} Karten von {na} Anbietern nach festen, offen gelegten Regeln. Stand: {STAND_DE}.'
     unrated=[c for c in cards if c['art']=='Privat' and c.get('stars') is None and not c.get('nurfuer')]
@@ -393,7 +411,7 @@ def anbieter_pages(cards):
     for p,v in prov.items():
         rel2=f'{rel}{p}/'; P2='../../../../'; nm=v[0]['anbieter']
         v=sorted(v,key=lambda c:-(c.get('stars') or 0))
-        t2=f'{nm} Kreditkarten im Vergleich 2026 | Finvallo'; d2=f'Alle {len(v)} Kreditkarten von {nm} in Deutschland: Gebühren, Versicherung und Bewertung.'
+        t2=f'{nm} Kreditkarten in Deutschland 2026 | Finvallo'; d2=f'Alle {len(v)} Kreditkarten von {nm} in Deutschland: Gebühren, Versicherung und Bewertung.'
         items=[]
         for c in v:
             r=c.get('rank'); c['rank']=None; items.append(list_item(c,P2,'../../')); c['rank']=r
@@ -412,7 +430,7 @@ def main():
     global HDR
     sys.path.insert(0,SP); import header as H
     HDR=lambda P,rel: H.build(rel,P,LAND_DE(P))
-    cards=load(); priv=ratecards(cards)
+    at_pairs(); cards=load(); priv=ratecards(cards)
     biz=[c for c in cards if c['art']=='Business']
     print('Karten',len(cards),'bewertet privat',len(priv),'business',len(biz))
     for c in cards: card_page(c,cards,len(priv))
@@ -426,6 +444,8 @@ def main():
 def sitemap(cards,prov):
     p=R+'sitemap.xml'; s=open(p).read()
     s=re.sub(r'<url><loc>https://finvallo\.com/de/kreditkarten/[^<]*</loc>.*?</url>\n','',s)
+    if 'https://finvallo.com/at/kreditkarten/rechner/' not in s:
+        s=s.replace('</urlset>','<url><loc>https://finvallo.com/at/kreditkarten/rechner/</loc><lastmod>'+STAND+'</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n</urlset>')
     urls=['de/kreditkarten/','de/kreditkarten/anbieter/']+(['de/kreditkarten/business/'] if any(c['art']=='Business' for c in cards) else [])
     urls+=[f'de/kreditkarten/{c["slug"]}/' for c in cards]+[f'de/kreditkarten/anbieter/{x}/' for x in prov]
     add=''.join(f'<url><loc>https://finvallo.com/{u}</loc><lastmod>{STAND}</lastmod><changefreq>weekly</changefreq><priority>{"0.8" if u.count("/")<=3 else "0.6"}</priority></url>\n' for u in urls)
@@ -461,6 +481,9 @@ def rechner(cards,prov):
           'pros':c['pros'],'cons':c['cons'],'rank':c.get('rank'),'vorteilRows':[],'land':'DE','preis':c.get('preis'),'earn':c.get('cbText') if ex.get('cb') else None,'offer':None})
     for k,v in prov.items():
         d['providers']['de-'+k]={'name':v[0]['anbieter'],'typ':'Bank','sitz':'','web':v[0].get('quelle'),'text':f'Kartenanbieter in Deutschland. {len(v)} Karten im Finvallo-Vergleich.','slug':'de-'+k,'cards':[c['rid'] for c in v]}
+    if '<link rel="canonical"' not in s:
+        s=s.replace('<meta name="viewport" content="width=device-width, initial-scale=1">','<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="description" content="Kreditkarten-Rechner für Österreich und Deutschland: Jahreskosten, Auslandsgebühren und Bargeld für deine Nutzung berechnen und Karten vergleichen.">\n<link rel="canonical" href="https://finvallo.com/at/kreditkarten/rechner/">',1)
+        m=re.search(r'(<script id="data" type="application/json">)(.*?)(</script>)',s,re.S)
     js=json.dumps(d,ensure_ascii=False).replace('</','<\\/')
     s=s[:m.start(2)]+js+s[m.end(2):]; open(p,'w').write(s)
 _main=main
