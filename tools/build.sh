@@ -4,6 +4,7 @@ set -e; cd "$(dirname "$0")/.."
 rm -rf public/de/kreditkarten public/de/daten
 python3 tools/gen_de.py
 python3 tools/ratgeber.py
+python3 tools/rechner.py
 python3 tools/header.py >/dev/null
 python3 tools/landing.py
 V=$(sha256sum public/assets/site.css | cut -c1-8)

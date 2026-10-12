@@ -116,3 +116,21 @@ Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/a
 ## Optional
 - [Vollständige Kartendaten als Text](https://finvallo.com/llms-full.txt)
 - [Kartendaten als JSON](https://finvallo.com/at/daten/kreditkarten.json)
+
+## Finanzrechner
+- [Zinseszinsrechner & Sparrechner (Deutschland)](https://finvallo.com/de/rechner/zinseszins/)
+- [Kreditrechner (Deutschland)](https://finvallo.com/de/rechner/kreditrechner/)
+- [Teilzahlungsrechner für Kreditkarten (Deutschland)](https://finvallo.com/de/rechner/teilzahlung/)
+- [Entnahmeplan-Rechner (Deutschland)](https://finvallo.com/de/rechner/entnahmeplan/)
+- [Inflationsrechner (Deutschland)](https://finvallo.com/de/rechner/inflationsrechner/)
+- [Renditerechner (Deutschland)](https://finvallo.com/de/rechner/renditerechner/)
+- [Abgeltungsteuer-Rechner (Deutschland)](https://finvallo.com/de/rechner/kapitalertragsteuer/)
+- [Mehrwertsteuer-Rechner (Deutschland)](https://finvallo.com/de/rechner/mehrwertsteuer/)
+- [Zinseszinsrechner & Sparrechner (Österreich)](https://finvallo.com/at/rechner/zinseszins/)
+- [Kreditrechner (Österreich)](https://finvallo.com/at/rechner/kreditrechner/)
+- [Teilzahlungsrechner für Kreditkarten (Österreich)](https://finvallo.com/at/rechner/teilzahlung/)
+- [Entnahmeplan-Rechner (Österreich)](https://finvallo.com/at/rechner/entnahmeplan/)
+- [Inflationsrechner (Österreich)](https://finvallo.com/at/rechner/inflationsrechner/)
+- [Renditerechner (Österreich)](https://finvallo.com/at/rechner/renditerechner/)
+- [KESt-Rechner (Kapitalertragsteuer) (Österreich)](https://finvallo.com/at/rechner/kapitalertragsteuer/)
+- [Mehrwertsteuer-Rechner (Österreich)](https://finvallo.com/at/rechner/mehrwertsteuer/)
