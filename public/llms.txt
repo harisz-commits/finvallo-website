@@ -1,6 +1,6 @@
 # Finvallo
 
-> Unabhängiger Finanzvergleich für Österreich (und Ratgeber für Deutschland). 77 Kredit-, Charge-, Debit- und Prepaid-Karten, bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Werte aus Sekundärquellen sind mit „Sek.“ markiert. Stand: 12.10.2026.
+> Unabhängiger Finanzvergleich für Österreich und Deutschland. 77 Karten in Österreich und 165 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Werte aus Sekundärquellen sind mit „Sek.“ markiert. Stand: 12.10.2026.
 
 Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/at/ und /de/). Konditionen aus Deutschland gelten nicht für Österreich. Bitte bei Zitaten die jeweilige Seiten-URL als Quelle angeben.
 
@@ -32,6 +32,26 @@ Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/a
 - [Teilzahlung bei Kreditkarten in Österreich](https://finvallo.com/at/ratgeber/teilzahlung/): Wie Teilzahlung bei Revolving-Kreditkarten funktioniert, was sie in Österreich kostet und wie du die Zinsfalle vermeidest.
 - [Lounge-Zugang mit Kreditkarte in Österreich](https://finvallo.com/at/ratgeber/lounges/): Welche Kreditkarten in Österreich gratis Zugang zu Flughafen-Lounges geben: Priority Pass, Wiener Lounges, Besuche pro Jahr und Begleitpersonen.
 - [Firmenkreditkarten: das musst du wissen (Österreich)](https://finvallo.com/at/ratgeber/business/): Worauf Selbstständige und Firmen bei Firmenkreditkarten in Österreich achten sollten: Haftung, Abrechnung, Mitarbeiterkarten und Kosten.
+
+## Deutschland: Kreditkarten
+- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 165 Karten, Stand 12.10.2026
+- [Anbieter Deutschland](https://finvallo.com/de/kreditkarten/anbieter/)
+- [Daten als JSON](https://finvallo.com/de/daten/kreditkarten.json)
+- [WEB.Cent Mastercard Gold (GMX / WEB.DE)](https://finvallo.com/de/kreditkarten/web-cent-mastercard-gold-gmx-web-de/): Platz 1, 4,7/5 (Sehr gut); Jahresgebühr kostenlos, Ausland 0 %, Reiseversicherung inkl. Storno
+- [Advanzia Bank Gebührenfrei Mastercard Gold](https://finvallo.com/de/kreditkarten/advanzia-bank-gebuehrenfrei-mastercard-gold/): Platz 2, 4,6/5 (Sehr gut); Jahresgebühr kostenlos, Ausland 0 %, Reiseversicherung inkl. Storno
+- [TF Bank Mastercard Gold](https://finvallo.com/de/kreditkarten/tf-bank-mastercard-gold/): Platz 3, 4,6/5 (Sehr gut); Jahresgebühr kostenlos, Ausland 0 %, Reiseversicherung inkl. Storno
+- [Bank Norwegian Visa Kreditkarte](https://finvallo.com/de/kreditkarten/bank-norwegian-visa-kreditkarte/): Platz 4, 4,6/5 (Sehr gut); Jahresgebühr kostenlos, Ausland 0 %, Reiseversicherung inkl. Storno
+- [easybank Kreditkarte Platinum](https://finvallo.com/de/kreditkarten/easybank-kreditkarte-platinum/): Platz 5, 4,4/5 (Gut); Jahresgebühr 99 € pro Jahr, Ausland 0 %, Umfassender Reiseschutz
+- [Deutschland-Kreditkarte Gold](https://finvallo.com/de/kreditkarten/deutschland-kreditkarte-gold/): Platz 6, 4,4/5 (Gut); Jahresgebühr 58,80 € pro Jahr, Ausland 0 %, Reiseversicherung inkl. Storno
+- [Turkish Airlines Miles&Smiles Mastercard Gold](https://finvallo.com/de/kreditkarten/turkish-airlines-milesundsmiles-mastercard-gold/): Platz 7, 4,4/5 (Gut); Jahresgebühr 96 € pro Jahr, Ausland 0 %, Reiseversicherung inkl. Storno
+- [Openbank BestCard Extra](https://finvallo.com/de/kreditkarten/openbank-bestcard-extra/): Platz 8, 4,3/5 (Gut); Jahresgebühr 58,80 € pro Jahr, Ausland 0 %, Reiseversicherung inkl. Storno
+- [Hanseatic Bank GoldCard](https://finvallo.com/de/kreditkarten/hanseatic-bank-goldcard/): Platz 9, 4,3/5 (Gut); Jahresgebühr 58,80 € pro Jahr, Ausland 0 %, Reiseversicherung inkl. Storno
+- [Hilton Honors Kreditkarte](https://finvallo.com/de/kreditkarten/hilton-honors-kreditkarte/): Platz 10, 4,3/5 (Gut); Jahresgebühr 72 € pro Jahr, Ausland 0 %, Reiseversicherung inkl. Storno
+- [Openbank BestCard Premium](https://finvallo.com/de/kreditkarten/openbank-bestcard-premium/): Platz 11, 4,3/5 (Gut); Jahresgebühr 118,80 € pro Jahr, Ausland 0 %, Umfassender Reiseschutz
+- [Eurowings Kreditkarte Premium](https://finvallo.com/de/kreditkarten/eurowings-kreditkarte-premium/): Platz 12, 4,3/5 (Gut); Jahresgebühr 99 € pro Jahr, Ausland 0 %, Umfassender Reiseschutz
+- [Consorsbank Visa Card Gold](https://finvallo.com/de/kreditkarten/consorsbank-visa-card-gold/): Platz 13, 4,1/5 (Gut); Jahresgebühr 108 € pro Jahr, Ausland 0 %, Umfassender Reiseschutz
+- [TUI Card Gold](https://finvallo.com/de/kreditkarten/tui-card-gold/): Platz 14, 4,1/5 (Gut); Jahresgebühr 149,90 € pro Jahr, Ausland 0 %, Reiseversicherung inkl. Storno
+- [Eurowings Kreditkarte Classic](https://finvallo.com/de/kreditkarten/eurowings-kreditkarte-classic/): Platz 15, 4,1/5 (Gut); Jahresgebühr 29 € pro Jahr, Ausland 1,99 % (in Euro gebührenfrei), Reiseversicherung inkl. Storno
 
 ## Deutschland: Ratgeber
 - [Kreditkarten Deutschland](https://finvallo.com/de/)

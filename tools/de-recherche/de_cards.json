@@ -1,0 +1,192 @@
+[
+ {
+  "key": "hanseatic-genialcard",
+  "anbieter": "Hanseatic Bank",
+  "p": "hanseatic-bank",
+  "name": "GenialCard",
+  "typ": "Kreditkarte",
+  "klasse": "Gold",
+  "netz": "Visa",
+  "fee": 0,
+  "fee1": null,
+  "fx": 0,
+  "fxText": "0 %",
+  "cash": [
+   "fix",
+   3.95
+  ],
+  "cashText": "3,95 € im Inland, 0 € im Ausland",
+  "cashNote": "Im Ausland kostenlos",
+  "soll": 18.3,
+  "effz": 19.92,
+  "rahmen": null,
+  "giro": false,
+  "auto": true,
+  "autoNote": "Teilzahlung (3 %, mind. 20 €) ist voreingestellt; auf 100 % umstellbar",
+  "teilz": true,
+  "pay": true,
+  "tier": 0,
+  "insText": "Keine Reiseversicherung inklusive; „SicherReise“ gegen 88,40 € pro Jahr",
+  "ex": {
+   "cb": true
+  },
+  "cbText": "Bis 8 % Reise-Cashback über die Hanseatic-Reisewelt, Rabatte in der Angebotswelt",
+  "bonus": null,
+  "extra": [
+   "Apple Pay und Google Pay",
+   "Digitale Karte nach Genehmigung sofort nutzbar",
+   "Bargeld bis 500 € pro Tag"
+  ],
+  "cons_extra": [
+   "Teilzahlung ist voreingestellt: Stell auf volle Rückzahlung um, sonst zahlst du Zinsen",
+   "Überweisung vom Kartenkonto kostet 3,95 €"
+  ],
+  "quelle": "https://www.hanseaticbank.de/kreditkarte/genialcard",
+  "preis": "https://www.hanseaticbank.de/content/download/7147/file/GenialCard_Konditionen.pdf",
+  "stand": "PLV GenialCard 07/2026",
+  "sek": [
+   "cb"
+  ]
+ },
+ {
+  "key": "awa7-visa",
+  "anbieter": "Hanseatic Bank",
+  "p": "hanseatic-bank",
+  "name": "awa7 Visa Kreditkarte",
+  "typ": "Kreditkarte",
+  "klasse": "Gold",
+  "netz": "Visa",
+  "fee": 0,
+  "fee1": null,
+  "fx": 0,
+  "fxText": "0 %",
+  "cash": [
+   "fix",
+   3.95
+  ],
+  "cashText": "3,95 € im Inland, 0 € im Ausland",
+  "cashNote": "Im Ausland kostenlos",
+  "soll": 20.02,
+  "effz": 21.96,
+  "rahmen": null,
+  "giro": false,
+  "auto": true,
+  "autoNote": "Teilzahlung ist voreingestellt; auf 100 % umstellbar",
+  "teilz": true,
+  "pay": null,
+  "tier": 0,
+  "insText": "Keine Reiseversicherung inklusive; „SicherReise“ gegen 88,40 € pro Jahr",
+  "ex": {},
+  "cbText": null,
+  "bonus": null,
+  "extra": [
+   "Kooperationskarte des Shopping-Portals awa7 mit der Hanseatic Bank"
+  ],
+  "cons_extra": [
+   "Teilzahlung ist voreingestellt",
+   "Überweisung vom Kartenkonto kostet 3,95 €"
+  ],
+  "quelle": "https://www.awa7.de/kreditkarte",
+  "preis": "https://www.hanseaticbank.de/content/download/7149/file/Zins%C3%BCbersicht_awa7",
+  "stand": "Konditionen awa7 2026",
+  "sek": [
+   "pay"
+  ]
+ },
+ {
+  "key": "hanseatic-goldcard",
+  "anbieter": "Hanseatic Bank",
+  "p": "hanseatic-bank",
+  "name": "GoldCard",
+  "typ": "Kreditkarte",
+  "klasse": "Gold",
+  "netz": "Visa",
+  "fee": 58.8,
+  "fee1": null,
+  "feeNote": "4,90 € pro Monat",
+  "fx": 0,
+  "fxText": "0 %",
+  "cash": [
+   "free"
+  ],
+  "cashText": "0 €",
+  "cashNote": null,
+  "soll": 16.3,
+  "effz": 25.79,
+  "effzNote": "inkl. Monatsgebühr",
+  "rahmen": "bis 5.000 €",
+  "giro": false,
+  "auto": true,
+  "autoNote": "Teilzahlung (3 %, mind. 20 €) ist voreingestellt; auf 100 % umstellbar",
+  "teilz": true,
+  "pay": true,
+  "tier": 2,
+  "insText": "Versicherungspaket „SicherMobil“ (HanseMerkur): Reiserücktritt und -abbruch bis 5.000 € je Reise (50 % mit Karte bezahlt), Auslandsreise-Kranken, Reisegepäck, Flug- und Gepäckverspätung, Ticket- und Notfallversicherung. Kein Mietwagenschutz.",
+  "ex": {
+   "cb": true
+  },
+  "cbText": "Bis 8 % Rabatt auf Reisen über Urlaubsplus, Rabatte in der Vorteilswelt",
+  "bonus": null,
+  "extra": [
+   "Apple Pay und Google Pay",
+   "Weltweit gebührenfrei Bargeld",
+   "Versichert sind auch Partner und minderjährige Kinder (bis 6 Personen)"
+  ],
+  "cons_extra": [
+   "Teilzahlung ist voreingestellt: Stell auf volle Rückzahlung um",
+   "Überweisung vom Kartenkonto kostet 3,95 € (erste kostenlos)"
+  ],
+  "quelle": "https://www.hanseaticbank.de/kreditkarte/goldcard",
+  "preis": "https://www.hanseaticbank.de/content/download/8871/file/PLV%20GoldCard%20BF%20V1.07.2026.pdf",
+  "stand": "PLV GoldCard 07/2026",
+  "sek": []
+ },
+ {
+  "key": "bank-norwegian-visa",
+  "anbieter": "Bank Norwegian",
+  "p": "bank-norwegian",
+  "name": "Visa Kreditkarte",
+  "typ": "Kreditkarte",
+  "klasse": "Std",
+  "netz": "Visa",
+  "fee": 0,
+  "fee1": null,
+  "fx": 0,
+  "fxText": "0 %",
+  "cash": [
+   "free"
+  ],
+  "cashText": "0 €",
+  "cashNote": null,
+  "soll": 21.99,
+  "effz": 24.4,
+  "rahmen": null,
+  "giro": false,
+  "auto": false,
+  "autoNote": "Rechnung per Überweisung; neue SEPA-Lastschriften sind nicht möglich",
+  "teilz": true,
+  "pay": true,
+  "tier": 2,
+  "insText": "Reise- und Reiserücktrittsversicherung inklusive. Laut Vergleichsportal Reiserücktritt bis 2.000 € pro Person und 4.000 € pro Reise, 20 % Selbstbehalt (mind. 185 €), mindestens 50 % der Transportkosten mit der Karte bezahlt, bis einschließlich 65 Jahre.",
+  "ex": {
+   "offer": true
+  },
+  "cbText": null,
+  "bonus": "15 € Willkommensbonus nach dem ersten Einkauf innerhalb von 45 Tagen",
+  "extra": [
+   "Bis zu 44 Tage zinsfrei",
+   "Apple Pay, Google Pay und Garmin Pay",
+   "Bargeld bis 500 € pro Tag im Inland, 1.000 € im Ausland"
+  ],
+  "cons_extra": [
+   "Überweisungen vom Kartenkonto werden ab dem ersten Tag verzinst"
+  ],
+  "quelle": "https://www.banknorwegian.de/kreditkarte/",
+  "preis": "https://www.banknorwegian.de/preise-und-produkte/",
+  "stand": "Preisliste Bank Norwegian 10/2026",
+  "sek": [
+   "auto",
+   "insText"
+  ]
+ }
+]
