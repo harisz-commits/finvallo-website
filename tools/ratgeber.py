@@ -277,7 +277,23 @@ DE_FIX={
  'reiseversicherung':[('../../../at/kreditkarten/bestenlisten/reisen/','../../kreditkarten/bestenlisten/reisen/')],
 }
 PAIRS={('at','punkte-sammeln-at'):('de','punkte-sammeln-de'),('de','punkte-sammeln-de'):('at','punkte-sammeln-at')}
+WHY_AMEX={'at':('punkte-sammeln-at','Österreich'),'de':('punkte-sammeln-de','Deutschland')}
+def why_amex(land):
+    slug,N=WHY_AMEX[land]
+    return (f'<h2 id="bestenliste">Warum steht Amex in der Bestenliste nicht auf Platz 1?</h2><div class="prose"><p>Beide Rechnungen stimmen, sie gehen nur von verschiedenen Nutzer:innen aus. '
+            f'Unsere <a href="../../kreditkarten/bestenlisten/punkte/">Bestenliste Meilen &amp; Punkte</a> bewertet jeden Punkt vorsichtig mit 1 Cent, rechnet mit 1.000 € Umsatz im Monat und zieht Jahresgebühr und Aufpreise ab. '
+            f'So passt sie für die meisten, die Punkte für Gutscheine, Cashback oder Economy-Flüge einlösen. Dort liegen Karten ohne Jahresgebühr mit festem Cashback vorne.</p>'
+            f'<p>Dieser Ratgeber rechnet dagegen mit 1 bis 2 Cent pro Punkt und dem Turbo-Bonus. Diesen Wert erreichst du nur, wenn du die Punkte gezielt in Business- oder First-Class-Flüge über Partnerprogramme tauschst. '
+            f'Wenn du das vorhast und viel mit der Karte zahlst, lohnt sich American Express. Wenn nicht, nimm eine Karte aus der Bestenliste.</p></div>')
 def fix_static():
+    for land,(slug,N) in WHY_AMEX.items():
+        f=R+f'{land}/ratgeber/{slug}/index.html'
+        if not os.path.exists(f): continue
+        s=open(f).read()
+        s=re.sub(r'<h2 id="bestenliste">.*?</div>(?=\s*<h2)','',s,count=1,flags=re.S)
+        i=s.find('<h2',s.find('Kurzantwort'))
+        if i>0: s=s[:i]+why_amex(land)+'\n'+s[i:]
+        open(f,'w').write(s)
     for slug,reps in DE_FIX.items():
         f=R+f'de/ratgeber/{slug}/index.html'
         if not os.path.exists(f): continue

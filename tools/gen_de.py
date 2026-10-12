@@ -439,7 +439,7 @@ def main():
     LISTS,BEST=cat_lists(cards)
     for c in cards: card_page(c,cards,len(priv))
     list_page(cards,priv,biz)
-    bestenlisten(cards); methodik_page(cards,priv); faktencheck_page(cards)
+    bestenlisten_land(cards,'de'); _,atbest=bestenlisten_land(at_cards(),'at'); patch_at_best(atbest); methodik_page(cards,priv); faktencheck_page(cards)
     if biz: biz_page(biz)
     anbieter_pages(cards); datafile(cards)
     for c in priv[:12]: print(c['rank'],c['stars'],c['titel'],c['fee'],c['fx'],c['tier'])
@@ -527,12 +527,21 @@ CATS=[
  dict(k='reisen',t='Reisen',h='Die besten Karten für Reisen',d='Hier zählen Reiseversicherung und Auslandsgebühren am meisten.',f=lambda c:c['typ']!='Prepaid',w={'Reiseversicherung':30,'Zahlen im Ausland':25,'Jahresgebühr':15,'Kartenart & Akzeptanz':10,'Extras':10,'Bargeld':10}),
  dict(k='gratis',t='Ohne Jahresgebühr',h='Die besten Karten ohne Jahresgebühr',d='Nur Karten, die dauerhaft nichts kosten. Bewertet wie in der Gesamtwertung.',f=lambda c:c.get('fee')==0,w=None),
  dict(k='ausland',t='Ohne Auslandsgebühr',h='Die besten Karten zum Zahlen im Ausland',d='Karten mit höchstens 0,5 % Aufschlag in fremder Währung. Bargeld und Akzeptanz zählen hier mehr.',f=lambda c:c.get('fx') is not None and c['fx']<=0.5,w={'Zahlen im Ausland':30,'Bargeld':20,'Jahresgebühr':20,'Kartenart & Akzeptanz':15,'Alltag & Flexibilität':15}),
- dict(k='punkte',t='Meilen & Punkte',h='Die besten Karten für Meilen, Punkte und Cashback',d='Karten mit Prämienprogramm. Die Extras zählen hier am meisten.',f=lambda c:bool(c['ex'].get('cb') or c['ex'].get('ml')),w={'Extras':35,'Jahresgebühr':20,'Zahlen im Ausland':15,'Reiseversicherung':15,'Kartenart & Akzeptanz':15}),
+ dict(k='punkte',t='Meilen & Punkte',h='Die besten Karten für Meilen, Punkte und Cashback',d='Nur Karten, die auf normale Einkäufe Punkte, Meilen oder Cashback geben. Am meisten zählt der Sammelwert: was bei 1.000 € Umsatz im Monat pro Jahr zurückkommt. Reine Partner- oder Reiserabatte zählen hier nicht.',f=lambda c:c.get('sammel') is not None,w={'Sammelwert':45,'Jahresgebühr':20,'Zahlen im Ausland':15,'Reiseversicherung':10,'Kartenart & Akzeptanz':10}),
  dict(k='lounge',t='Lounge-Zugang',h='Die besten Karten mit Lounge-Zugang',d='Nur Karten mit kostenlosen Lounge-Besuchen. Am meisten zählt, wie gut der Lounge-Zugang ist: wie viele Besuche im Jahr und ob eine Begleitperson gratis mitkommt.',f=lambda c:bool(c['ex'].get('lg')),w={'Lounge-Zugang':60,'Reiseversicherung':15,'Jahresgebühr':15,'Zahlen im Ausland':10}),
  dict(k='premium',t='Premium',h='Die besten Premiumkarten',d='Top-Karten mit Lounges oder Premium-Reiseschutz. Die Jahresgebühr zählt hier weniger.',f=lambda c:c['klasse']=='Premium',w={'Reiseversicherung':30,'Extras':25,'Zahlen im Ausland':15,'Jahresgebühr':10,'Kartenart & Akzeptanz':10,'Bargeld':10}),
- dict(k='studium',t='Studierende',h='Die besten Karten für Studierende und junge Leute',d='Karten für Studierende, Azubis und junge Kund:innen sowie kostenlose Karten ohne Mindesteinkommen. Bewertet wie in der Gesamtwertung.',f=lambda c:bool(re.search(r'Student|Young|Jugend|Azubi|Junge',c['titel'])) or (c.get('fee')==0 and c['typ'] in ('Kreditkarte','Charge') and not c.get('giro')),w=None),
+ dict(k='studium',f_at=lambda c:bool(re.search(r'Student|Maturant',c['titel'])),t='Studierende',h='Die besten Karten für Studierende und junge Leute',d='Karten, die für Studierende, Azubis oder junge Kund:innen günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.',f=lambda c:youth(c) is not None,w=None),
  dict(k='debit',t='Debit & App-Banken',h='Die besten Debitkarten und App-Banken',d='Karten, die sofort vom Konto abbuchen. Kosten im Ausland zählen hier mehr.',f=lambda c:c['typ'] in ('Debit','Prepaid'),w={'Jahresgebühr':30,'Zahlen im Ausland':25,'Extras':15,'Reiseversicherung':15,'Alltag & Flexibilität':15}),
 ]
+YOUTH=r'(unter (?:2|3)\d(?: Jahren|-Jährige| in Ausbildung)?|bis (?:1|2)\d Jahre|bis zum (?:1|2)\d\. Geburtstag|in Ausbildung|Studierende|Student|Young|StartKonto|Azubi)'
+def youth(c):
+    if c.get('typ') is None: return None
+    for k in ('titel','feeNote','konto'):
+        m=re.search(r'[^;()]{0,50}'+YOUTH+r'[^;()]{0,30}',str(c.get(k) or ''))
+        if m: return m.group(0).strip(' ,')
+    for x in c.get('extra') or []:
+        if re.search(YOUTH,x): return x
+    return None
 def lounge_score(c):
     t=(c.get('lgText') or '')
     if not c['ex'].get('lg'): return None
@@ -550,6 +559,7 @@ def cat_stars(c,w):
     for p in c['score']['parts']:
         if p['k'] in w: a+=p['s']*w[p['k']]; b+=w[p['k']]
     if 'Lounge-Zugang' in w and c.get('lounge') is not None: a+=c['lounge']*w['Lounge-Zugang']; b+=w['Lounge-Zugang']
+    if 'Sammelwert' in w and c.get('sammel') is not None: a+=c['sammel']*w['Sammelwert']; b+=w['Sammelwert']
     return round(a/b+1e-9,1) if b else None
 def cat_reason(c,k):
     r=[]
@@ -559,15 +569,29 @@ def cat_reason(c,k):
     if k=='ausland':
         r.append('0 % Aufschlag' if c.get('fx')==0 else fxT(c)); r.append('Bargeld: '+cashT(c))
     if k=='lounge' and c.get('lgText'): r.append(c['lgText'])
-    if k in ('punkte','premium') and c.get('cbText') and c['ex'].get('cb'): r.append(c['cbText'])
+    if k=='punkte' and c.get('sammelTxt'): r.append(c['sammelTxt']); r.append(f'≈ {eur(c["sammelEur"])} € pro Jahr bei 1.000 €/Monat')
+    if k=='premium' and c.get('cbText') and c['ex'].get('cb'): r.append(c['cbText'])
     if k=='debit': r.append('Ausland: '+('0 %' if c.get('fx')==0 else fxT(c)))
+    if k=='studium':
+        y=youth(c) if not re.search(r'Student|Maturant',c['titel']) else None
+        if y: r.append(y)
+    if k in ('gratis','studium'):
+        if (c.get('tier') or 0)>=1: r.append(TIER[c['tier']][1])
+        r.append('0 % im Ausland' if c.get('fx')==0 else ('Ausland: '+fxT(c) if c.get('fx') is not None else ''))
+    r=[x for x in r if x]
     if not r and c['pros']: r.append(c['pros'][0])
     return ' · '.join(x[:110] for x in r[:2])
-def cat_lists(cards):
+def cat_lists(cards,land='de'):
+    import sammeln
     out={}
-    for c in cards: c['lounge']=lounge_score(c)
+    for c in cards:
+        if land=='de': c['lounge']=lounge_score(c)
+        v=sammeln.value(land,c['titel'])
+        c['sammel']=sammeln.note(v[0]) if v else None; c['sammelEur']=v[0] if v else None; c['sammelTxt']=v[1]['txt'] if v else None
+        if c['sammel'] is None: c['sammel']=None
     for cat in CATS:
-        L=[c for c in cards if c['art']=='Privat' and not c.get('nurfuer') and c.get('stars') is not None and cat['f'](c)]
+        f=cat.get('f_'+land,cat['f'])
+        L=[c for c in cards if c['art']=='Privat' and not c.get('nurfuer') and c.get('stars') is not None and f(c)]
         L=sorted(L,key=lambda c:(-(cat_stars(c,cat['w']) or 0),c.get('fee') if c.get('fee') is not None else 1e9))
         out[cat['k']]=L
     best={}
@@ -700,5 +724,111 @@ def faktencheck_page(cards):
 </main>
 {footer(P)}''')
 SEKN={'fee':'Jahresgebühr','fee1':'1. Jahr','fx':'Ausland','fxText':'Ausland','cash':'Bargeld','cashText':'Bargeld','pay':'Apple/Google Pay','auto':'Abbuchung','insText':'Versicherung','tier':'Versicherung','bonus':'Bonus','cbText':'Cashback','soll':'Zins','effz':'Zins','zinsfrei':'zinsfreie Tage','rahmen':'Kreditrahmen','lgText':'Lounge','creditsText':'Guthaben','konto':'Konto','cashInterest':'Bargeldzinsen','feeNote':'Gebührenhinweis','giro':'Konto nötig','netz':'Kartennetz'}
+
+
+# ---------- Bestenlisten für beide Länder ----------
+def at_cards():
+    rj=json.loads(re.search(r'<script id="data" type="application/json">(.*?)</script>',open(R+'at/kreditkarten/rechner/index.html').read(),re.S).group(1))
+    urls={c['id']:c for c in json.load(open(R+'at/daten/kreditkarten.json'))['karten']}
+    out=[]
+    for c in rj['cards']:
+        if c.get('land')!='AT' or c['id'] not in urls: continue
+        u=urls[c['id']]; slug=u['url'].rstrip('/').split('/')[-1]
+        out.append(dict(titel=u['titel'],slug=slug,name=c['name'],anbieter=c['anbieter'],art=c.get('art','Privat'),nurfuer=c.get('bestand'),stars=c.get('stars'),score=c.get('score') or {'parts':[]},
+          typ=c['typ'],fee=c.get('fee'),fx=c.get('fx'),fxText=c.get('fxText'),cashText=c.get('cashText'),cash=c.get('cash'),klasse=c.get('klasse'),tier=c.get('tier'),
+          ex={'cb':bool(c.get('cb') or c.get('earn')),'ml':bool(c.get('ml')),'lg':bool(c.get('lgf'))},lgText=c.get('lg'),cbText=c.get('earn') or c.get('cb'),
+          pros=c.get('pros') or [],lounge=(c.get('lounge') or {}).get('s') if c.get('lgf') else None,offer=c.get('offer')))
+    return out
+def footer_land(land,P):
+    if land=='de': return footer(P)
+    return footer(P).replace('Unabhängiger Finanzvergleich für Deutschland','Unabhängiger Finanzvergleich für Österreich').replace(f'{P}de/kreditkarten/methodik/',f'{P}at/kreditkarten/methodik/').replace(f'{P}de/kreditkarten/faktencheck/',f'{P}at/kreditkarten/faktencheck/')
+def land_div(land,P,at_rel,de_rel):
+    return (f'<div class="land" role="group" aria-label="Land wählen"><a href="{P}{at_rel}" hreflang="de-AT" aria-current="{"true" if land=="at" else "false"}" title="Österreich">AT</a>'
+            f'<a href="{P}{de_rel}" hreflang="de-DE" aria-current="{"true" if land=="de" else "false"}" title="Deutschland">DE</a></div>')
+def bestenlisten_land(cards,land):
+    import header as H
+    N={'at':'Österreich','de':'Deutschland'}[land]; other='de' if land=='at' else 'at'
+    lists,best=cat_lists(cards,land)
+    base=f'{land}/kreditkarten/bestenlisten/'; P='../../../'
+    hdr=lambda P_,rel_: H.build(rel_,P_,land_div(land,P_,rel_.replace(land+'/','at/',1),rel_.replace(land+'/','de/',1)))
+    alt=lambda rel_: f'\n<link rel="alternate" hreflang="de-AT" href="https://finvallo.com/{rel_.replace(land+"/","at/",1)}"><link rel="alternate" hreflang="de-DE" href="https://finvallo.com/{rel_.replace(land+"/","de/",1)}">'
+    hd=lambda t,d,rel_,P_,ld: head(t,d,rel_,P_,ld,lang='de-AT' if land=='at' else 'de-DE',alt=alt(rel_)).replace('content="de_DE"','content="de_AT"' if land=='at' else 'content="de_DE"')
+    tiles=''
+    for cat in CATS:
+        L=lists[cat['k']]
+        if not L: continue
+        c=L[0]; s_=cat_stars(c,cat['w'])
+        tiles+=f'<a class="catcard" href="{cat["k"]}/"><span class="ct">{E(cat["t"])}</span><b>{E(c["titel"])}</b><span>{stars(s_)} {de1(s_)}</span><small>{len(L)} Karten · Liste ansehen →</small></a>'
+    t=f'Beste Kreditkarten {N} 2026 nach Kategorie | Finvallo'
+    d=f'Die besten Kreditkarten in {N} für Reisen, ohne Jahresgebühr, ohne Auslandsgebühr, für Punkte, Lounges, Premium, Studierende und Debit.'
+    ld=graph(base,t,d,[(N,f'{land}/'),('Kreditkarten',f'{land}/kreditkarten/'),('Bestenlisten',base)],[{"@type":"ItemList","name":f"Bestenlisten Kreditkarten {N}","itemListElement":[{"@type":"ListItem","position":i+1,"name":cat['h']+' in '+N,'url':f"https://finvallo.com/{base}{cat['k']}/"} for i,cat in enumerate(CATS) if lists[cat['k']]]}])
+    why=f'''<h2>Warum steht eine Karte hier woanders als in der Gesamtwertung?</h2><div class="prose"><p>Die <a href="../">Gesamtwertung</a> gewichtet alle sieben Kriterien gleich für alle Karten. In den Bestenlisten zählt, was in der jeweiligen Kategorie wichtig ist. Eine teure Premiumkarte mit hohem Sammelwert kann deshalb bei „Meilen &amp; Punkte“ weit oben stehen und in der Gesamtwertung weiter hinten, weil dort die Jahresgebühr stärker zählt. Jede Liste zeigt ihre Gewichte.</p></div>'''
+    write(base,hd(t,d,base,P,ld)+f'''{hdr(P,base)}
+<div class="wrap"><main id="app">
+<h1>Beste Kreditkarten in {N} nach Kategorie</h1><p class="lede">Manche Karten sind in einer Disziplin viel stärker als in der Gesamtwertung. Für jede Kategorie gewichten wir die Kriterien anders. Die Gewichte stehen jeweils dabei. Stand: {STAND_DE}.</p><div class="catgrid">{tiles}</div>
+{why}
+</main>
+{footer_land(land,P)}''')
+    chips=lambda k: ''.join(f'<a class="chip" href="../{c["k"]}/" aria-pressed="{"true" if c["k"]==k else "false"}" style="text-decoration:none">{E(c["t"])}</a>' for c in CATS if lists[c['k']])
+    for cat in CATS:
+        L=lists[cat['k']]
+        if not L: continue
+        rel=f'{base}{cat["k"]}/'; P2='../../../../'
+        t=f'{cat["h"]} in {N} 2026 | Finvallo'
+        if len(t)>65: t=f'{cat["h"]} ({land.upper()}) 2026 | Finvallo'
+        top=L[0]
+        d=f'{cat["h"]} in {N}, Stand {STAND_DE}: Platz 1 ist die {top["titel"]} ({de1(cat_stars(top,cat["w"]))} Sterne). {len(L)} Karten im Vergleich.'
+        if len(d)>158: d=f'{cat["h"]} in {N}: Platz 1 ist die {top["titel"]}. {len(L)} Karten im Vergleich, Stand {STAND_DE}.'
+        if len(d)>158: d=d[:155].rsplit(' ',1)[0]+' …'
+        wb=''
+        if cat['w']:
+            mx=max(cat['w'].values())
+            extra={'lounge':' Die Lounge-Note richtet sich nach Zahl der Gratis-Besuche und danach, ob eine Begleitperson kostenlos mitkommt.',
+                   'punkte':' Sammelwert: ab 180 € pro Jahr 5,0 Sterne, ab 120 € 4,5, ab 90 € 4,0, ab 60 € 3,5, ab 36 € 3,0, darunter 2,5. Ein Punkt oder eine Meile zählt mit 1 Cent, ein Hilton-Punkt mit 0,4 Cent; Höchstgrenzen und Aufpreise für das Programm sind eingerechnet.'}.get(cat['k'],'')
+            wb='<details class="box howscore"><summary><span><b>So gewichten wir in dieser Kategorie</b></span><span class="lnk">anzeigen</span></summary><div class="wbars">'+''.join(f'<div class="wbar"><span>{E(k)}</span><span class="t"><i style="width:{v/mx*100}%"></i></span><em>{v} %</em></div>' for k,v in cat['w'].items())+'</div><p class="note">Die Sterne je Kriterium sind dieselben wie in der Gesamtwertung, nur die Gewichte ändern sich.'+extra+'</p></details>'
+        rows=''.join(f'<tr><td><b>{i+1}</b></td><td><a class="lnk" href="../../{c["slug"]}/">{E(c["titel"])}</a></td><td>{E(cat_reason(c,cat["k"]))}</td><td>{eur(c["fee"]) if c.get("fee") is not None else "–"} €</td><td style="white-space:nowrap"><b>{de1(cat_stars(c,cat["w"]))} ★</b></td><td style="white-space:nowrap">{de1(c["stars"])} ★</td></tr>' for i,c in enumerate(L[:25]))
+        kurz=f'<b>Kurz gesagt:</b> {cat["h"]} in {N}: Platz 1 ist laut Finvallo die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} Sternen in dieser Kategorie'+(f', vor der {L[1]["titel"]}' if len(L)>1 else '')+(f' und der {L[2]["titel"]}' if len(L)>2 else '')+f'. Verglichen haben wir {len(L)} Karten. Stand: {STAND_DE}.'
+        fq=[(f'Welche Karte ist in {N} am besten in der Kategorie „{cat["t"]}“?',f'Laut Finvallo-Bewertung ist es die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} von 5 Sternen in dieser Kategorie. Stand: {STAND_DE}.'),
+            ('Wie entsteht diese Rangliste?',cat['d']+' Grundlage sind dieselben Sterne je Kriterium wie in der Gesamtwertung, nur anders gewichtet.'),
+            ('Spielen Provisionen eine Rolle?','Nein. Provisionen haben keinen Einfluss auf Sterne oder Reihenfolge, und es gibt keine bezahlten Platzierungen.')]
+        ld=graph(rel,t,d,[(N,f'{land}/'),('Kreditkarten',f'{land}/kreditkarten/'),('Bestenlisten',base),(cat['t'],rel)],
+                 [{"@type":"ItemList","name":cat['h']+' in '+N,"numberOfItems":len(L),"itemListElement":[{"@type":"ListItem","position":i+1,"name":c['titel'],"url":f"https://finvallo.com/{land}/kreditkarten/{c['slug']}/"} for i,c in enumerate(L[:25])]},
+                  {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}])
+        write(rel,hd(t,d,rel,P2,ld)+f'''{hdr(P2,rel)}
+<div class="wrap"><main id="app">
+<div class="crumb"><span><a href="../">Bestenlisten</a> › {E(cat["t"])}</span><span>Stand {STAND_DE}</span></div><h1>{E(cat["h"])} in {N}</h1><p class="lede">{E(cat["d"])}</p>
+<div class="facts prose"><p>{kurz}</p></div>
+<div class="chips" style="margin:14px 0">{chips(cat["k"])}</div>
+{wb}
+<div class="tbl wide" style="margin-top:16px"><table><thead><tr><th>#</th><th>Karte</th><th>Darum</th><th>Jahresgebühr</th><th>Kategorie</th><th>Gesamt</th></tr></thead><tbody>{rows}</tbody></table></div>
+<h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div>
+<p class="note" style="margin-top:18px"><a class="lnk" href="{P2}{land}/kreditkarten/">Zur Gesamtwertung aller Karten →</a> · <a class="lnk" href="{P2}{land}/kreditkarten/methodik/">So bewerten wir →</a></p>
+</main>
+{footer_land(land,P2)}''')
+    return lists,best
+
+
+def patch_at_best(best):
+    """AT-Seiten: 🏆-Abzeichen an die aktuellen AT-Bestenlisten anpassen."""
+    import glob
+    TAG=re.compile(r'<a class="tag best" href="[^"]*bestenlisten/[^"]*">🏆 Platz \d+ für [^<]*</a>')
+    def tag(slug,prefix):
+        if slug not in best: return ''
+        i,t,k=best[slug]; return f'<a class="tag best" href="{prefix}bestenlisten/{k}/">🏆 Platz {i+1} für {E(t)}</a>'
+    for f in glob.glob(R+'at/kreditkarten/**/index.html',recursive=True):
+        rel=os.path.relpath(f,R); s=open(f).read(); o=s
+        parts=rel.split('/')
+        if len(parts)==4 and parts[2] not in ('anbieter','bestenlisten','alle','business','methodik','faktencheck','rechner'):
+            slug=parts[2]
+            if TAG.search(s): s=TAG.sub(tag(slug,'../'),s,count=1)
+            elif slug in best: s=s.replace('<div class="tags">','<div class="tags">'+tag(slug,'../'),1)
+        def art_sub(m):
+            a=m.group(0); sm=re.search(r'<h3 class="iname"><a href="([^"]*)/">',a)
+            if not sm: return a
+            slug=sm.group(1).rstrip('/').split('/')[-1]; pre=sm.group(1)[:-len(slug)]
+            a=TAG.sub('',a)
+            return a.replace('<div class="tags">','<div class="tags">'+tag(slug,pre),1)
+        s=re.sub(r'<article class="item".*?</article>',art_sub,s,flags=re.S)
+        if s!=o: open(f,'w').write(s)
 
 if __name__=='__main__': main()
