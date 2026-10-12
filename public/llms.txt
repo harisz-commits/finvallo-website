@@ -1,0 +1,60 @@
+# Finvallo
+
+> Unabhängiger Kreditkarten-Vergleich für Österreich (und Ratgeber für Deutschland). 77 Kredit-, Charge-, Debit- und Prepaid-Karten, bewertet nach 7 offen gelegten Kriterien. Ohne Provisionen und ohne Affiliate-Links. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Werte aus Sekundärquellen sind mit „Sek.“ markiert. Stand: 12.10.2026.
+
+Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/at/ und /de/). Konditionen aus Deutschland gelten nicht für Österreich. Bitte bei Zitaten die jeweilige Seiten-URL als Quelle angeben.
+
+## Österreich: Übersicht
+- [Finanzvergleich Österreich](https://finvallo.com/at/): Übersicht
+- [Kreditkarten-Vergleich Österreich](https://finvallo.com/at/kreditkarten/): Rangliste aller bewerteten Karten
+- [Alle Karten nach Anbieter](https://finvallo.com/at/kreditkarten/alle/)
+- [Bestenlisten nach Kategorie](https://finvallo.com/at/kreditkarten/bestenlisten/)
+- [Business-Kreditkarten](https://finvallo.com/at/kreditkarten/business/)
+- [Bewertungsmethodik](https://finvallo.com/at/kreditkarten/methodik/): Kriterien, Gewichte, Regeln
+- [Faktencheck](https://finvallo.com/at/kreditkarten/faktencheck/): alle Korrekturen mit Quellen
+
+## Österreich: Bestenlisten
+- [Die besten Karten für Reisen in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/reisen/): Die besten Karten für Reisen in Österreich, Stand 12.10.2026. Hier zählen Reiseversicherung und Auslandsgebühren am meisten.
+- [Die besten Karten ohne Jahresgebühr in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/gratis/): Die besten Karten ohne Jahresgebühr in Österreich, Stand 12.10.2026. Nur Karten, die dauerhaft nichts kosten. Bewertet wie in der Gesamtwertung.
+- [Die besten Karten zum Zahlen im Ausland in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/ausland/): Die besten Karten zum Zahlen im Ausland in Österreich, Stand 12.10.2026. Karten mit höchstens 0,5 % Aufschlag in fremder Währung. Bargeld und Akzeptanz…
+- [Die besten Karten für Meilen, Punkte und Cashback 2026](https://finvallo.com/at/kreditkarten/bestenlisten/punkte/): Die besten Karten für Meilen, Punkte und Cashback in Österreich, Stand 12.10.2026. Karten mit Prämienprogramm. Die Extras zählen hier am meisten.
+- [Die besten Karten mit Lounge-Zugang in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/lounge/): Die besten Karten mit Lounge-Zugang in Österreich, Stand 12.10.2026. Nur Karten mit kostenlosen Lounge-Besuchen. Am meisten zählt, wie gut der Lounge-Zugang…
+- [Die besten Premiumkarten in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/premium/): Die besten Premiumkarten in Österreich, Stand 12.10.2026. Top-Karten mit Lounges oder Premium-Reiseschutz. Die Jahresgebühr zählt hier weniger.
+- [Die besten Karten für Studierende in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/studium/): Die besten Karten für Studierende in Österreich, Stand 12.10.2026. Studenten- und Maturantenkarten. Bewertet wie in der Gesamtwertung.
+- [Die besten Debitkarten und App-Banken in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/debit/): Die besten Debitkarten und App-Banken in Österreich, Stand 12.10.2026. Karten, die sofort vom Konto abbuchen. Kosten im Ausland zählen hier mehr.
+
+## Österreich: Ratgeber
+- [Lohnt sich Punktesammeln mit Kreditkarte in Österreich?](https://finvallo.com/at/ratgeber/punkte-sammeln-at/): Amex, Miles & More und Hilton in Österreich: was Punkte wert sind, welche Transferpartner es gibt und ab welchem Umsatz sich eine Karte rechnet.
+- [Punkte und Meilen mit Kreditkarte (Österreich)](https://finvallo.com/at/ratgeber/punkte/): Punkte, Meilen oder Cashback? Was Kreditkarten-Punkte in Österreich wert sind, welche Programme es gibt und wie du mehr aus ihnen herausholst.
+- [Kreditkarte im Ausland: Gebühren verstehen (Österreich)](https://finvallo.com/at/ratgeber/fremdwaehrung/): Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“: So vermeidest du unnötige Gebühren, wenn du aus Österreich verreist.
+- [Reiseversicherung über die Kreditkarte (Österreich)](https://finvallo.com/at/ratgeber/reiseversicherung/): Wann die Reiseversicherung deiner Kreditkarte in Österreich gilt, wer mitversichert ist und worauf du bei Storno, Arztkosten und Gepäck achten musst.
+- [Kartentypen in Österreich: Kredit, Charge, Debit, Prepaid](https://finvallo.com/at/ratgeber/kartentypen/): Kreditkarte, Charge-Karte, Debitkarte oder Prepaid-Karte: die vier Kartentypen in Österreich einfach erklärt, mit Vor- und Nachteilen.
+- [Teilzahlung bei Kreditkarten in Österreich](https://finvallo.com/at/ratgeber/teilzahlung/): Wie Teilzahlung bei Revolving-Kreditkarten funktioniert, was sie in Österreich kostet und wie du die Zinsfalle vermeidest.
+- [Lounge-Zugang mit Kreditkarte in Österreich](https://finvallo.com/at/ratgeber/lounges/): Welche Kreditkarten in Österreich gratis Zugang zu Flughafen-Lounges geben: Priority Pass, Wiener Lounges, Besuche pro Jahr und Begleitpersonen.
+- [Firmenkreditkarten: das musst du wissen (Österreich)](https://finvallo.com/at/ratgeber/business/): Worauf Selbstständige und Firmen bei Firmenkreditkarten in Österreich achten sollten: Haftung, Abrechnung, Mitarbeiterkarten und Kosten.
+
+## Deutschland: Ratgeber
+- [Kreditkarten Deutschland](https://finvallo.com/de/)
+- [Lohnt sich Punktesammeln mit Kreditkarte in Deutschland?](https://finvallo.com/de/ratgeber/punkte-sammeln-de/): Amex-Boni bis 85.000 Punkte, 13 Transferpartner, Miles & More und Payback: was sich in Deutschland wirklich lohnt.
+- [Punkte und Meilen mit Kreditkarte (Deutschland)](https://finvallo.com/de/ratgeber/punkte/): Punkte, Meilen oder Cashback? Was Kreditkarten-Punkte in Deutschland wert sind, welche Programme es gibt und wie du mehr aus ihnen herausholst.
+- [Kreditkarte im Ausland: Gebühren verstehen (Deutschland)](https://finvallo.com/de/ratgeber/fremdwaehrung/): Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“: So vermeidest du unnötige Gebühren, wenn du aus Deutschland verreist.
+- [Reiseversicherung über die Kreditkarte (Deutschland)](https://finvallo.com/de/ratgeber/reiseversicherung/): Wann die Reiseversicherung deiner Kreditkarte in Deutschland gilt, wer mitversichert ist und worauf du bei Storno, Arztkosten und Gepäck achten musst.
+- [Kartentypen in Deutschland: Kredit, Charge, Debit, Prepaid](https://finvallo.com/de/ratgeber/kartentypen/): Kreditkarte, Charge-Karte, Debitkarte oder Prepaid-Karte: die vier Kartentypen in Deutschland einfach erklärt, mit Vor- und Nachteilen.
+- [Teilzahlung bei Kreditkarten in Deutschland](https://finvallo.com/de/ratgeber/teilzahlung/): Wie Teilzahlung bei Revolving-Kreditkarten funktioniert, was sie in Deutschland kostet und wie du die Zinsfalle vermeidest.
+- [Firmenkreditkarten: das musst du wissen (Deutschland)](https://finvallo.com/de/ratgeber/business/): Worauf Selbstständige und Firmen bei Firmenkreditkarten in Deutschland achten sollten: Haftung, Abrechnung, Mitarbeiterkarten und Kosten.
+
+## Österreich: Top 10 laut Bewertung
+- [TF Bank Mastercard Gold](https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/): Typ: Kreditkarte; Netz: Mastercard; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 0 € (Zinsen ab Abhebung); Reiseversicherung: Reiseversicherung inkl. Storno; Zins: 22,60 % Soll / 25,09 % effektiv; Sammelrate: bis 5 % Cashback bei Partnern; Bewertung: 4,6/5 (Sehr gut)
+- [Advanzia Bank free Mastercard Gold](https://finvallo.com/at/kreditkarten/advanzia-bank-free-mastercard-gold/): Typ: Kreditkarte; Netz: Mastercard; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 0 € (Zinsen ab Abhebung); Reiseversicherung: Reiseversicherung inkl. Storno; Zins: 24,95 % effektiv; Bewertung: 4,5/5 (Sehr gut)
+- [easybank Gold Student](https://finvallo.com/at/kreditkarten/easybank-gold-student/): Typ: Charge; Netz: beim Anbieter prüfen; Jahresgebühr: 0 €; Fremdwährung: 1,5 % plus Kursaufschlag (Höhe beim Anbieter prüfen); Bargeld: 3,63 € je Behebung; Reiseversicherung: Reiseversicherung inkl. Storno; Bewertung: 4,2/5 (Gut)
+- [Erste Bank und Sparkassen GÖD Premiumcard](https://finvallo.com/at/kreditkarten/erste-bank-und-sparkassen-goed-premiumcard/): Typ: Charge; Netz: Visa; Jahresgebühr: 49,44 € (1. Jahr 0 €); Fremdwährung: 1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs); Bargeld: 3 %, mind. 3,63 €; Reiseversicherung: Umfassender Reiseschutz; Sammelrate: 0,6 % online, max. 30 €/Jahr; Bewertung: 4,2/5 (Gut)
+- [Advanzia Bank Hilton Honors Kreditkarte](https://finvallo.com/at/kreditkarten/advanzia-bank-hilton-honors-kreditkarte/): Typ: Kreditkarte; Netz: Mastercard; Jahresgebühr: 72 €; Fremdwährung: 0 %; Bargeld: 0 € (Zinsen ab Abhebung); Reiseversicherung: Reiseversicherung inkl. Storno; Zins: 22,48 % Soll / 24,95 % effektiv; Sammelrate: 1 Hilton-Punkt je €, 2 in Hilton-Hotels; Bewertung: 4,2/5 (Gut)
+- [Erste Bank und Sparkassen Premiumcard](https://finvallo.com/at/kreditkarten/erste-bank-und-sparkassen-premiumcard/): Typ: Charge; Netz: Visa/Mastercard; Jahresgebühr: 99 € (1. Jahr 0 €); Fremdwährung: 1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs); Bargeld: 3 %, mind. 3,63 €; Reiseversicherung: Umfassender Reiseschutz; Zins: 5 % Soll / 5,19 % effektiv; Lounge: Wiener Lounges ermäßigt (SKY 31 €, VIENNA 36 €); Sammelrate: 0,6 % online, max. 30 €/Jahr; Bewertung: 4,0/5 (Gut)
+- [easybank Kreditkarte](https://finvallo.com/at/kreditkarten/easybank-kreditkarte/): Typ: Charge; Netz: Mastercard; Jahresgebühr: 12 €; Fremdwährung: 1,5 % plus Kursaufschlag (Höhe beim Anbieter prüfen); Bargeld: 3,63 € je Behebung; Reiseversicherung: Basis-Reiseschutz; Zins: 12,15 % Soll / 13,39 % effektiv (Teilzahlung); Bewertung: 3,9/5 (Befriedigend)
+- [Santander Card](https://finvallo.com/at/kreditkarten/santander-card/): Typ: Kreditkarte; Netz: beim Anbieter prüfen; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: Kostenlos; Reiseversicherung: Keine Reiseversicherung; Zins: 18,00 % Soll / 19,56 % effektiv; Sammelrate: 1 % Cashback, max. 50 €/Jahr; Bewertung: 3,8/5 (Befriedigend)
+- [Trade Republic Karte](https://finvallo.com/at/kreditkarten/trade-republic-karte/): Typ: Debit; Netz: Visa; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 1 € unter 100 €, sonst 0 €; Reiseversicherung: Keine Reiseversicherung; Sammelrate: 1 % Saveback, max. 15 €/Monat; Bewertung: 3,8/5 (Befriedigend)
+- [Erste Bank und Sparkassen GÖD Smartcard](https://finvallo.com/at/kreditkarten/erste-bank-und-sparkassen-goed-smartcard/): Typ: Charge; Netz: Visa; Jahresgebühr: 11,16 €; Fremdwährung: 1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs); Bargeld: 3 %, mind. 3,63 €; Reiseversicherung: beim Anbieter prüfen; Sammelrate: 0,3 % online, max. 8 €/Jahr; Bewertung: 3,8/5 (Befriedigend)
+
+## Optional
+- [Vollständige Kartendaten als Text](https://finvallo.com/llms-full.txt)
+- [Kartendaten als JSON](https://finvallo.com/at/daten/kreditkarten.json)
