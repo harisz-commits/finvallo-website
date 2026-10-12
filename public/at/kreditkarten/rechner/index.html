@@ -2,10 +2,8 @@
 <html lang="de-AT">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>@font-face{font-family:'Figtree';font-weight:400;font-display:swap;src:url(/assets/fonts/figtree-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'Figtree';font-weight:500;font-display:swap;src:url(/assets/fonts/figtree-latin-500-normal.woff2) format('woff2')}@font-face{font-family:'Figtree';font-weight:600;font-display:swap;src:url(/assets/fonts/figtree-latin-600-normal.woff2) format('woff2')}@font-face{font-family:'Figtree';font-weight:700;font-display:swap;src:url(/assets/fonts/figtree-latin-700-normal.woff2) format('woff2')}@font-face{font-family:'Figtree';font-weight:800;font-display:swap;src:url(/assets/fonts/figtree-latin-800-normal.woff2) format('woff2')}</style>
 <title>Finvallo Österreich</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
 <style>
 /* Layout: single column (max 860px) comparison app; sticky header, hash-routed views, sticky compare bar at the bottom. Dark-first navy. */
 :root{
@@ -327,7 +325,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-block:24px 40px;
 <div class="wrap"><main id="app"></main>
 <footer>
   <span><b>finvallo</b> · Kreditkarten in Österreich und Deutschland</span>
-  <span>Recherche 09.10.2026 · Faktencheck 11.10.2026 · Keine Provisionen, keine Affiliate-Links.</span>
+  <span>Recherche 09.10.2026 · Faktencheck 11.10.2026 · Bewertung unabhängig von Provisionen · Mit * markierte Links sind Affiliate-Links.</span>
   <span>Keine Finanzberatung. Konditionen vor Abschluss beim Anbieter prüfen. „Sek.“ = Wert nur aus Vergleichsportal oder Fachblog.</span>
 </footer></div>
 <div id="cbar"></div>
@@ -462,7 +460,7 @@ function item(c){
     ${c.pros.length?`<ul class="checks">${c.pros.slice(0,4).map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
     ${ui.open[c.id]?`<div class="more">${moreTabs(c)}</div>`:''}
     <button class="toggle" data-open="${c.id}">${ui.open[c.id]?'⌃ Weniger anzeigen':'⌄ Mehr anzeigen'}</button>
-    <div class="acts">${isUrl(c.quelle)?`<a class="btn primary block" href="${esc(c.quelle)}" target="_blank" rel="noopener">Zum Anbieter ↗</a>`:''}<a class="btn ghost block" href="#karte-${c.id}">Details ansehen</a>
+    <div class="acts">${provBtn(c.aff, c.quelle, 'btn primary block')}<a class="btn ghost block" href="#karte-${c.id}">Details ansehen</a>
       <div class="actrow">${priceLink(c)}<label class="cmp"><input type="checkbox" data-cmp="${c.id}" ${cmp.includes(c.id)?'checked':''}> Vergleichen</label></div></div>
   </article>`;
 }
@@ -472,7 +470,7 @@ function home(){
   if(ui.land!=='AT' && !CL().length) return deHome();
   const n = activeCount();
   return `<h1>Kreditkarten Vergleich ${LANDS[ui.land]}</h1>
-  <p class="lede">${CL().length} Kredit-, Charge-, Debit- und Prepaidkarten von ${new Set(CL().map(c=>c.p)).size} Anbietern. Sortiert nach unserer Bewertung, ohne Provisionen und ohne Partnerlinks.</p>
+  <p class="lede">${CL().length} Kredit-, Charge-, Debit- und Prepaidkarten von ${new Set(CL().map(c=>c.p)).size} Anbietern. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>
   <p class="upd">Zuletzt geprüft: 11.10.2026</p>
   <div class="box toolbar">
     <div class="tb-btns">
@@ -692,7 +690,7 @@ function detail(id){
   <div class="feat">${feats.map(([k,t])=>`<span class="${k}">${esc(t)}</span>`).join('')}</div>
   ${offerBox(c,true)}
   <div class="box feebox"><small>Jahresgebühr</small><span class="big ${c.fee===0?'good':''}">${c.fee==null?NA:c.fee===0?'kostenlos':eur(c.fee)}</span>${c.fee1!=null?`<span class="note">Im 1. Jahr ${eur(c.fee1)}</span>`:''}
-    ${isUrl(c.quelle)?`<a class="btn primary block" href="${esc(c.quelle)}" target="_blank" rel="noopener">Zum Anbieter ↗</a>`:''}
+    ${provBtn(c.aff, c.quelle, 'btn primary block')}
     <div class="actrow">${priceLink(c)}<label class="cmp"><input type="checkbox" data-cmp="${c.id}" ${cmp.includes(c.id)?'checked':''}> Vergleichen</label></div></div>
   <nav class="secnav" aria-label="Abschnitte"><a href="#karte-${c.id}" data-sec="s-ueb" class="on">Überblick</a><a href="#karte-${c.id}" data-sec="s-kond">Konditionen</a><a href="#karte-${c.id}" data-sec="s-vers">Versicherung</a><a href="#karte-${c.id}" data-sec="s-bew">Bewertung</a><a href="#karte-${c.id}" data-sec="s-faq">Fragen</a></nav>
   <section id="s-ueb">
@@ -780,7 +778,7 @@ function anbieter(slug){
   return `<div class="crumb"><span><a href="#anbieter">Anbieter</a> › ${esc(p.name)}</span><span>11.10.26</span></div>
   <div class="dh" style="grid-template-columns:64px 1fr"><span class="plogo" style="width:64px;height:64px;font-size:20px">${esc(p.name.slice(0,2).toUpperCase())}</span><div><span class="tag">${esc(p.typ)}</span><h1 style="margin-top:8px">${esc(p.name)}: Kreditkarten</h1></div></div>
   <div class="feat">${p.sitz?`<span>📍 ${esc(p.sitz)}</span>`:''}<span class="b">▭ ${cs.length} ${cs.length===1?'Karte':'Karten'}</span>${scored.length?`<span class="g">★ bis ${String(scored[0].stars).replace('.',',')}</span>`:''}</div>
-  ${p.web?`<a class="btn primary block" style="margin-top:16px" href="${esc(p.web)}" target="_blank" rel="noopener">Zum Anbieter ↗</a>`:''}
+  ${provBtn(p.aff, p.web, 'btn primary block" style="margin-top:16px')}
   <div class="ptabs" role="tablist">${[['ueb','Übersicht'],['prod','Produkte'],['geb','Gebühren'],['kon','Kontakt']].map(([k,l])=>`<button role="tab" aria-selected="${k===t}" data-ptab="${k}">${l}</button>`).join('')}</div>${body}`;
 }
 
@@ -797,7 +795,7 @@ function methodik(){
     ['Extras','Jede Karte startet bei 2,5 Sternen. Für jedes Extra gibt es einen Zuschlag, höchstens bis 5,0.',[['Cashback oder Punkte','+1,0'],['kostenlose Lounge-Besuche','+1,0'],['nur Lounge-Mitgliedschaft','+0,4'],['Meilen','+0,5'],['Guthaben oder Partner-Abos','+0,5'],['FastTrack','+0,3'],['Aktion im 1. Jahr','+0,3']]],
   ];
   const ex=byId['AT02'];
-  return `<h1>So bewerten wir die Karten</h1><p class="lede">Jede Karte bekommt 1 bis 5 Sterne. Wir verdienen an keiner Karte, deshalb beeinflusst kein Anbieter die Reihenfolge. Hier steht genau, wie die Sterne entstehen.</p>
+  return `<h1>So bewerten wir die Karten</h1><p class="lede">Jede Karte bekommt 1 bis 5 Sterne. Ob wir mit einem Anbieter eine Partnerschaft haben, spielt für Sterne und Reihenfolge keine Rolle. Hier steht genau, wie die Sterne entstehen.</p>
   <h2>In drei Schritten</h2><div class="steps">
    <div class="step"><span class="no">1</span><div><b>Sieben Kriterien bewerten</b><p>Jedes Kriterium bekommt nach festen Regeln 1,0 bis 5,0 Sterne. Die Regeln stehen unten.</p></div></div>
    <div class="step"><span class="no">2</span><div><b>Nach Wichtigkeit gewichten</b><p>Kosten und Reiseschutz zählen mehr als Extras. Die Gewichte sind für alle Karten gleich.</p></div></div>
@@ -842,6 +840,7 @@ document.addEventListener('click', e=>{ const b=e.target.closest('[data-land]');
 const offerBox = (c, big) => !c.offer ? '' : `<div class="offer ${big?'big':''}"><div class="otop"><span class="olabel">🎁 Willkommensangebot</span>${c.offer.end?`<span class="oend">befristet bis ${esc(c.offer.end)}</span>`:''}</div>
   <b>${esc(c.offer.head)}</b>${c.offer.text?`<span>${esc(c.offer.text)}</span>`:''}${c.offer.save?`<span class="osave">Du sparst ${eur(c.offer.save)}</span>`:''}${c.offer.value?`<span class="osave">Wert ${esc(c.offer.value)}</span>`:''}
   ${big&&c.offer.note?`<small>${esc(c.offer.note)}${c.offer.sek?' · nur aus Sekundärquelle':''}</small>`:''}</div>`;
+const provBtn = (aff, url, cls) => aff ? `<a class="${cls}" href="${esc(aff)}" target="_blank" rel="sponsored nofollow noopener">Zum Anbieter* ↗</a><small class="note">* Affiliate-Link: Wir erhalten eventuell eine Provision. Für dich ändert sich der Preis nicht, und auf unsere Bewertung hat das keinen Einfluss.</small>` : (isUrl(url) ? `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">Zum Anbieter ↗</a>` : '');
 const priceLink = c => c.preis ? `<a class="plink" href="${esc(c.preis)}" target="_blank" rel="noopener">Preise & Gebühren${/\.pdf/i.test(c.preis)?' (PDF)':''} ↗</a>` : (isUrl(c.quelle)?`<a class="plink" href="${esc(c.quelle)}" target="_blank" rel="noopener">Konditionen beim Anbieter ↗</a>`:'');
 
 const CATS = [
