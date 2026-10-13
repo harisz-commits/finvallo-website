@@ -63,7 +63,8 @@
   "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
   "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "deutsche-bank-mastercard-gold",
@@ -131,7 +132,8 @@
   "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
   "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "deutsche-bank-mastercard-travel",
@@ -197,7 +199,8 @@
   "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
   "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "deutsche-bank-mastercard-platin",
@@ -261,7 +264,8 @@
   "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
   "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
   "sek": [],
-  "notiz": "Keine eigene Produktseite mehr (Platin-URL leitet auf Kartenvergleich um); laut FAQ der DB nur telefonisch/Filiale beantragbar. Preis und Priority Pass aus PLV 01.10.2026. Versicherungsbedingungen für Platin nicht öffentlich gefunden -> tier null."
+  "notiz": "Keine eigene Produktseite mehr (Platin-URL leitet auf Kartenvergleich um); laut FAQ der DB nur telefonisch/Filiale beantragbar. Preis und Priority Pass aus PLV 01.10.2026. Versicherungsbedingungen für Platin nicht öffentlich gefunden -> tier null.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "deutsche-bank-mastercard-black",
@@ -323,7 +327,8 @@
   "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
   "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
   "sek": [],
-  "notiz": "Im PLV 01.10.2026 mit 600 € gelistet, aber weder im Kartenvergleich noch im FAQ als beantragbar genannt; vermutlich nur für ausgewählte Kunden/Wealth Management auf Anfrage. Status unsicher, Versicherung unbekannt."
+  "notiz": "Im PLV 01.10.2026 mit 600 € gelistet, aber weder im Kartenvergleich noch im FAQ als beantragbar genannt; vermutlich nur für ausgewählte Kunden/Wealth Management auf Anfrage. Status unsicher, Versicherung unbekannt.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "deutsche-bank-businesscard",
@@ -386,7 +391,8 @@
   "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
   "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
   "sek": [],
-  "notiz": "Nur Preis/Entgelte aus PLV; Leistungsumfang (Versicherungen) nicht geprüft."
+  "notiz": "Nur Preis/Entgelte aus PLV; Leistungsumfang (Versicherungen) nicht geprüft.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "deutsche-bank-businesscard-plus",
@@ -447,7 +453,8 @@
   "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
   "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
   "sek": [],
-  "notiz": "Nur Preis/Entgelte aus PLV; Inhalt des PLUS-Pakets (Versicherungen) nicht geprüft."
+  "notiz": "Nur Preis/Entgelte aus PLV; Inhalt des PLUS-Pakets (Versicherungen) nicht geprüft.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "deutsche-bank-worldflexcard",
@@ -504,7 +511,8 @@
   "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
   "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
   "sek": [],
-  "notiz": "PLV 01.10.2026: 'Ausschließlich Bestandsprodukt, kein Neugeschäft'. Mit Teilrückzahlungsfunktion."
+  "notiz": "PLV 01.10.2026: 'Ausschließlich Bestandsprodukt, kein Neugeschäft'. Mit Teilrückzahlungsfunktion.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "miles-and-more-gold-credit-card",
@@ -573,7 +581,8 @@
   "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
   "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
   "sek": [],
-  "notiz": "Effektiver Jahreszins im PLV nicht angegeben. Seit Okt. 2025 von der Deutschen Bank herausgegeben (vorher DKB). Guthabenzins 2,1 % nur Aktion bis 30.11.2026."
+  "notiz": "Effektiver Jahreszins im PLV nicht angegeben. Seit Okt. 2025 von der Deutschen Bank herausgegeben (vorher DKB). Guthabenzins 2,1 % nur Aktion bis 30.11.2026.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "miles-and-more-blue-credit-card",
@@ -639,7 +648,8 @@
   "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
   "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
   "sek": [],
-  "notiz": "Effektiver Jahreszins im PLV nicht angegeben."
+  "notiz": "Effektiver Jahreszins im PLV nicht angegeben.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "miles-and-more-myflex-credit-card",
@@ -706,7 +716,8 @@
   "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis-myflex.pdf",
   "stand": "PLV Miles & More MyFlex Credit Card, Stand Juli 2026",
   "sek": [],
-  "notiz": "Effektiver Jahreszins im PLV nicht angegeben. Kein Willkommensbonus (Worldshop-Rabatt ausgeschlossen)."
+  "notiz": "Effektiver Jahreszins im PLV nicht angegeben. Kein Willkommensbonus (Worldshop-Rabatt ausgeschlossen).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "miles-and-more-lufthansa-frequent-traveller-credit-card",
@@ -769,7 +780,8 @@
   "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
   "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
   "sek": [],
-  "notiz": "Statuskarte: Beantragung setzt den jeweiligen Lufthansa-Vielfliegerstatus voraus (PLV Fn. 2). Lounge-Zugang ergibt sich aus dem Status, nicht aus der Karte. Business-Varianten mit gleichem Preis existieren."
+  "notiz": "Statuskarte: Beantragung setzt den jeweiligen Lufthansa-Vielfliegerstatus voraus (PLV Fn. 2). Lounge-Zugang ergibt sich aus dem Status, nicht aus der Karte. Business-Varianten mit gleichem Preis existieren.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "miles-and-more-lufthansa-senator-credit-card",
@@ -832,7 +844,8 @@
   "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
   "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
   "sek": [],
-  "notiz": "Statuskarte: Beantragung setzt den jeweiligen Lufthansa-Vielfliegerstatus voraus (PLV Fn. 2). Lounge-Zugang ergibt sich aus dem Status, nicht aus der Karte. Business-Varianten mit gleichem Preis existieren."
+  "notiz": "Statuskarte: Beantragung setzt den jeweiligen Lufthansa-Vielfliegerstatus voraus (PLV Fn. 2). Lounge-Zugang ergibt sich aus dem Status, nicht aus der Karte. Business-Varianten mit gleichem Preis existieren.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "miles-and-more-lufthansa-hon-circle-credit-card",
@@ -895,7 +908,8 @@
   "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
   "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
   "sek": [],
-  "notiz": "Statuskarte: Beantragung setzt den jeweiligen Lufthansa-Vielfliegerstatus voraus (PLV Fn. 2). Lounge-Zugang ergibt sich aus dem Status, nicht aus der Karte. Business-Varianten mit gleichem Preis existieren."
+  "notiz": "Statuskarte: Beantragung setzt den jeweiligen Lufthansa-Vielfliegerstatus voraus (PLV Fn. 2). Lounge-Zugang ergibt sich aus dem Status, nicht aus der Karte. Business-Varianten mit gleichem Preis existieren.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "miles-and-more-gold-credit-card-business",
@@ -958,7 +972,8 @@
   "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
   "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "miles-and-more-blue-credit-card-business",
@@ -1020,7 +1035,8 @@
   "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
   "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "postbank-mastercard",
@@ -1086,7 +1102,8 @@
   "preis": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
   "stand": "PLV Postbank, Stand 01.10.2026",
   "sek": [],
-  "notiz": "Karte wird laut Vorvertraglichen Informationen per Lastschrift 'von Ihrem Girokonto' eingezogen; Postbank-Girokonto nicht ausdrücklich Voraussetzung (nur Bonität), Rabatte aber nur mit Postbank-Konto."
+  "notiz": "Karte wird laut Vorvertraglichen Informationen per Lastschrift 'von Ihrem Girokonto' eingezogen; Postbank-Girokonto nicht ausdrücklich Voraussetzung (nur Bonität), Rabatte aber nur mit Postbank-Konto.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "postbank-mastercard-gold",
@@ -1153,7 +1170,8 @@
   "preis": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
   "stand": "PLV Postbank, Stand 01.10.2026",
   "sek": [],
-  "notiz": "Preis mit Giro extra plus (30 €) laut Produktseite; im PLV-Text abgeschnitten. Produktseite nennt Stand 05.04.2023."
+  "notiz": "Preis mit Giro extra plus (30 €) laut Produktseite; im PLV-Text abgeschnitten. Produktseite nennt Stand 05.04.2023.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "postbank-mastercard-platinum",
@@ -1220,7 +1238,8 @@
   "preis": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
   "stand": "PLV Postbank, Stand 01.10.2026",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "postbank-mastercard-business-card-classic",
@@ -1277,7 +1296,8 @@
   "preis": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
   "stand": "PLV Postbank, Stand 01.10.2026",
   "sek": [],
-  "notiz": "Nur PLV-Daten; Produktseite/Leistungen nicht geprüft. Im PLV-Inhaltsverzeichnis auch als 'Mastercard / Visa Card Business Classic' bezeichnet."
+  "notiz": "Nur PLV-Daten; Produktseite/Leistungen nicht geprüft. Im PLV-Inhaltsverzeichnis auch als 'Mastercard / Visa Card Business Classic' bezeichnet.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "postbank-mastercard-business-card-gold",
@@ -1334,7 +1354,8 @@
   "preis": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
   "stand": "PLV Postbank, Stand 01.10.2026",
   "sek": [],
-  "notiz": "Nur PLV-Daten; Versicherungsumfang nicht geprüft."
+  "notiz": "Nur PLV-Daten; Versicherungsumfang nicht geprüft.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "norisbank-mastercard",
@@ -1401,7 +1422,8 @@
    "pay",
    "payText"
   ],
-  "notiz": "Typ Charge angenommen (keine Teilzahlung im PLV genannt). Versicherungen nicht ausdrücklich ausgeschlossen, aber nirgends genannt."
+  "notiz": "Typ Charge angenommen (keine Teilzahlung im PLV genannt). Versicherungen nicht ausdrücklich ausgeschlossen, aber nirgends genannt.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "openbank-bestcard-basic",
@@ -1466,7 +1488,8 @@
   "preis": "https://www.openbank.de/content/dam/openbank/dokumente/preis-und-leistungsverzeichnisse/preisverzeichnis.pdf.coredownload.pdf",
   "stand": "PLV Openbank Deutschland, Stand 07.10.2026 (Antrag ab 02.06.2026)",
   "sek": [],
-  "notiz": "Laut Portal (kreditkarte24) seit 03.06.2026 nur noch in Filialen abschließbar – auf Openbank-Seite nicht bestätigt; Basic fehlt aber in der Online-Vergleichstabelle."
+  "notiz": "Laut Portal (kreditkarte24) seit 03.06.2026 nur noch in Filialen abschließbar – auf Openbank-Seite nicht bestätigt; Basic fehlt aber in der Online-Vergleichstabelle.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "openbank-bestcard-smart",
@@ -1531,7 +1554,8 @@
   "preis": "https://www.openbank.de/content/dam/openbank/dokumente/preis-und-leistungsverzeichnisse/preisverzeichnis.pdf.coredownload.pdf",
   "stand": "PLV Openbank Deutschland, Stand 07.10.2026 (Antrag ab 02.06.2026)",
   "sek": [],
-  "notiz": "0 % Auslandseinsatz gilt für Anträge ab 02.06.2026; Altkarten 1,85 %."
+  "notiz": "0 % Auslandseinsatz gilt für Anträge ab 02.06.2026; Altkarten 1,85 %.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "openbank-bestcard-extra",
@@ -1595,7 +1619,8 @@
   "preis": "https://www.openbank.de/content/dam/openbank/dokumente/preis-und-leistungsverzeichnisse/preisverzeichnis.pdf.coredownload.pdf",
   "stand": "PLV Openbank Deutschland, Stand 07.10.2026 (Antrag ab 02.06.2026)",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "openbank-bestcard-premium",
@@ -1660,7 +1685,8 @@
   "preis": "https://www.openbank.de/content/dam/openbank/dokumente/preis-und-leistungsverzeichnisse/preisverzeichnis.pdf.coredownload.pdf",
   "stand": "PLV Openbank Deutschland, Stand 07.10.2026 (Antrag ab 02.06.2026)",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "santander-1plus-visa-card",
@@ -1713,7 +1739,8 @@
   "preis": "https://www.openbank.de/content/dam/openbank/dokumente/preis-und-leistungsverzeichnisse/preisverzeichnis.pdf.coredownload.pdf",
   "stand": "PLV 07.10.2026",
   "sek": [],
-  "notiz": "Nicht mehr im aktuellen Openbank-PLV und nicht auf der Webseite; laut Portalen bereits 2020 eingestellt (kreditkarte24.de, reisetopia.de)."
+  "notiz": "Nicht mehr im aktuellen Openbank-PLV und nicht auf der Webseite; laut Portalen bereits 2020 eingestellt (kreditkarte24.de, reisetopia.de).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "targobank-online-classic-karte",
@@ -1779,7 +1806,8 @@
   "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
   "stand": "PLV TARGOBANK, Stand 30.09.2026",
   "sek": [],
-  "notiz": "Monatl. Sollzins 1,27 % (x12 = 15,24 % p.a. nominal). Voreinstellung Voll-/Teilzahlung nicht angegeben."
+  "notiz": "Monatl. Sollzins 1,27 % (x12 = 15,24 % p.a. nominal). Voreinstellung Voll-/Teilzahlung nicht angegeben.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "targobank-gold-karte",
@@ -1845,7 +1873,8 @@
   "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
   "stand": "PLV TARGOBANK, Stand 30.09.2026",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "targobank-premium-karte",
@@ -1910,7 +1939,8 @@
   "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
   "stand": "PLV TARGOBANK, Stand 30.09.2026",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "targobank-business-kreditkarte-komfort",
@@ -1967,7 +1997,8 @@
   "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
   "stand": "PLV TARGOBANK, Stand 30.09.2026",
   "sek": [],
-  "notiz": "Nur Preis und Zins (16,35 % eff.) aus PLV Abschnitt Business; Auslandseinsatz/Bargeld als gleich wie Privatkarten angenommen, Leistungen nicht geprüft."
+  "notiz": "Nur Preis und Zins (16,35 % eff.) aus PLV Abschnitt Business; Auslandseinsatz/Bargeld als gleich wie Privatkarten angenommen, Leistungen nicht geprüft.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "targobank-business-kreditkarte-premium",
@@ -2024,7 +2055,8 @@
   "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
   "stand": "PLV TARGOBANK, Stand 30.09.2026",
   "sek": [],
-  "notiz": "Nur Preis und Zins (16,35 % eff.) aus PLV Abschnitt Business; Auslandseinsatz/Bargeld als gleich wie Privatkarten angenommen, Leistungen nicht geprüft."
+  "notiz": "Nur Preis und Zins (16,35 % eff.) aus PLV Abschnitt Business; Auslandseinsatz/Bargeld als gleich wie Privatkarten angenommen, Leistungen nicht geprüft.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "targobank-visa-classic-karte",
@@ -2081,6 +2113,7 @@
   "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
   "stand": "PLV TARGOBANK, Stand 30.09.2026",
   "sek": [],
-  "notiz": "Im PLV noch gelistet, aber auf targobank.de nur Online-Classic, Gold und Premium angeboten – vermutlich Bestandsprodukt (ebenso BestGold, PlusPunkt, Flexx)."
+  "notiz": "Im PLV noch gelistet, aber auf targobank.de nur Online-Classic, Gold und Premium angeboten – vermutlich Bestandsprodukt (ebenso BestGold, PlusPunkt, Flexx).",
+  "geprueft": "2026-10-12"
  }
 ]

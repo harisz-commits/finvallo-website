@@ -61,6 +61,7 @@ TEXT = [
     (r'(Bargeld (?:beheben|abheben)) kostet:? (?=(?!Inland\b)[A-ZÄÖÜ])', r'\1: '),
     (r'(Bargeld (?:beheben|abheben)) kostet: (?=\d)', r'\1 kostet '),
     (r'Das kostet: (?=(?!Inland\b)[A-ZÄÖÜ])', 'Die Bedingungen: '),
+    (r' \(von dir hochgeladen\)', ''), (r', von dir hochgeladen\)', ')'),
     # „unklar“
     (r'Ausland unklar', 'Ausland beim Anbieter prüfen'), (r'Geltung für DE unklar', 'Geltung für Deutschland beim Anbieter prüfen'),
     (r'Kartennetz noch nicht bestätigt', 'Kartennetz beim Anbieter prüfen'),
@@ -157,6 +158,7 @@ def spa(s):
         ('<a href="#daten">Rohdaten der Recherche</a>', ''),
         ("else if(h==='faktencheck')", "else if(h==='__fc')"),
         ("else if(h==='daten')", "else if(h==='__daten')"),
+        ('<h1>Rohdaten der Recherche</h1><p class="lede">Alle Tabellen aus der Excel-Recherche, nach dem Faktencheck.</p>', '<h1>Daten</h1>'),
         (". Status: ${esc(c.status||'')}</p>", ".</p>"),
         ("? '<span class=\"sek\" title=\"Nur aus Sekundärquelle\">Sek.</span>' : ''", "? '' : ''"),
         ("${x.sek?'<span class=\"sek\">Sek.</span>':''}", ''),

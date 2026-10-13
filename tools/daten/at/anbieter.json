@@ -1,0 +1,149 @@
+{
+ "advanzia": {
+  "name": "Advanzia Bank",
+  "typ": "Direktbank",
+  "sitz": "Munsbach, Luxemburg",
+  "web": "https://free.at/",
+  "text": "Luxemburger Direktbank. In Österreich bekannt für die gebührenfreie free Mastercard Gold. Die Rechnung wird per Überweisung bezahlt, nicht per Lastschrift."
+ },
+ "tf-bank": {
+  "name": "TF Bank",
+  "typ": "Direktbank",
+  "sitz": "Borås, Schweden",
+  "web": "https://tfbank.at/mastercard-gold-reiseversicherung",
+  "text": "Schwedische Direktbank mit Vollbanklizenz (gegründet 1987). Bietet in Österreich die TF Mastercard Gold ohne Jahresgebühr an. Einlagensicherung über Schweden, bis ca. 100.000 €."
+ },
+ "american-express": {
+  "name": "American Express",
+  "typ": "Kartenanbieter",
+  "sitz": null,
+  "web": "https://www.americanexpress.com/at/legal/terms-and-conditions/",
+  "text": "Eigenes Kartennetz mit Charge-Karten. In Österreich Gold und Platinum als Hauptprodukte, dazu BMW-Karten und einzelne ältere Produkte. Fremdwährungsentgelt 2 %."
+ },
+ "card-complete": {
+  "name": "card complete",
+  "typ": "Kartenanbieter",
+  "sitz": "Wien",
+  "web": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
+  "text": "card complete Service Bank AG, einer der größten Kreditkartenanbieter Österreichs. Gibt Visa- und Mastercard-Karten aus und betreibt auch Diners Club in Österreich. Karten werden auch über Banken wie bank99 vermittelt."
+ },
+ "diners-club": {
+  "name": "Diners Club",
+  "typ": "Kartenanbieter",
+  "sitz": "Wien",
+  "web": "https://www.cardcomplete.com/diners-club/privatkarten/",
+  "text": "Diners Club wird in Österreich über card complete angeboten. Eigenes Kartennetz mit eingeschränkter Akzeptanz, dafür Lounge-Zutritte bei Umsatz und optional Miles & More."
+ },
+ "paylife": {
+  "name": "PayLife",
+  "typ": "Kartenanbieter",
+  "sitz": "Wien",
+  "web": "https://www.paylife.at/paylife/privat/kreditkarten",
+  "text": "Kreditkartenmarke der BAWAG. Karten von Classic bis Platinum, Halbpreisaktion im ersten Jahr bis 31.12.2026 für GoldPlus, Black und Platinum."
+ },
+ "erste": {
+  "name": "Erste Bank und Sparkassen",
+  "typ": "Filialbank",
+  "sitz": "Wien",
+  "web": "https://www.sparkasse.at/erstebank/privatkunden/konto-karten/s-kreditkarten",
+  "text": "Smartcard und Premiumcard als Visa oder Mastercard, dazu seit 2026 die Austrian Miles & More Premiumcard. Kreditkarten nur mit Girokonto. Preise können je Sparkasse abweichen."
+ },
+ "raiffeisen": {
+  "name": "Raiffeisen",
+  "typ": "Filialbank",
+  "sitz": "Regionalbanken",
+  "web": "https://www.raiffeisen.at/de/privatkunden/karte/kreditkarte.html",
+  "text": "Raiffeisen-Kreditkarten Classic, Gold und Platinum über die Regionalbanken. Gold und Platinum mit kostenloser Priority-Pass-Mitgliedschaft, jeder Besuch kostet 30 €."
+ },
+ "bank-austria": {
+  "name": "Bank Austria",
+  "typ": "Filialbank",
+  "sitz": "Wien",
+  "web": "https://www.bankaustria.at/files/preise_konditionen_kreditkarten_bank_austria_de.pdf",
+  "text": "UniCredit Bank Austria mit eigenen Mastercard-Kreditkarten von Classic bis World Elite. Neukunden zahlen im ersten Jahr keine Kartengebühr (Aktion bis 31.12.2026). Girokonto nötig."
+ },
+ "bawag": {
+  "name": "BAWAG",
+  "typ": "Filialbank",
+  "sitz": "Wien",
+  "web": "https://www.bawag.at/bawag/privatkunden/kreditkarte/kreditkarte-gold",
+  "text": "BAWAG-Kreditkarten Weiß und Gold, teils in Kontopaketen (KontoBox) enthalten. Visa Gold mit 2 Lounge-Zutritten in Wien pro Kalenderjahr."
+ },
+ "easybank": {
+  "name": "easybank",
+  "typ": "Direktbank",
+  "sitz": "Wien",
+  "web": "https://www.easybank.at/easybank/kreditkarten",
+  "text": "Direktbank der BAWAG Group. Kreditkarten nur mit easybank-Girokonto; je nach Kontomodell entfällt das Kartenentgelt."
+ },
+ "oberbank": {
+  "name": "Oberbank",
+  "typ": "Filialbank",
+  "sitz": "Linz",
+  "web": "https://www.oberbank.at/documents/20373/28034/ipk_obkfactsheet.pdf",
+  "text": "Oberösterreichische Regionalbank mit eigenen Mastercard-Karten Klassik und Gold. Gold mit Reisestorno."
+ },
+ "bank99": {
+  "name": "bank99",
+  "typ": "Filialbank",
+  "sitz": "Wien",
+  "web": "https://bank99.at/kreditkarten",
+  "text": "Bank der Österreichischen Post. Vermittelt card-complete-Karten; der Vertrag läuft mit card complete. Für Neukunden mit bank99-Konto die ersten 12 Monate gratis."
+ },
+ "bank-direkt": {
+  "name": "Bank Direkt",
+  "typ": "Direktbank",
+  "sitz": "Linz",
+  "web": "https://www.raiffeisen.at/ooe/de/privatkunden/karte/kreditkarte.html",
+  "text": "Direktbank aus der Raiffeisen-Gruppe Oberösterreich. Kreditkarten Classic, Gold und Platinum, nur mit Bank-Direkt-Girokonto."
+ },
+ "santander": {
+  "name": "Santander Consumer Bank",
+  "typ": "Direktbank",
+  "sitz": null,
+  "web": "https://www.santanderconsumer.at/",
+  "text": "Konsumkreditbank. Die Santander Card ist eine Kreditkarte ohne Jahresgebühr mit Cashback."
+ },
+ "revolut": {
+  "name": "Revolut",
+  "typ": "Neobank",
+  "sitz": "Litauen (EU-Lizenz)",
+  "web": "https://www.revolut.com/de-AT/our-pricing-plans/",
+  "text": "App-Bank mit fünf Tarifen von Standard bis Ultra. Debitkarten, RevPoints-Prämienprogramm und je nach Tarif Versicherungen und Partner-Abos."
+ },
+ "n26": {
+  "name": "N26",
+  "typ": "Neobank",
+  "sitz": "Berlin",
+  "web": "https://n26.com/de-at/metal",
+  "text": "Deutsche App-Bank mit Standard, Smart, Go und Metal. Go und Metal enthalten eine Allianz-Reiseversicherung."
+ },
+ "trade-republic": {
+  "name": "Trade Republic",
+  "typ": "Neobank",
+  "sitz": "Berlin, mit Zweigniederlassung in Österreich",
+  "web": "https://traderepublic.com/de-at/karte",
+  "text": "Broker und Bank mit kostenloser Visa-Debitkarte. Saveback: 1 % der Kartenzahlungen fließen in den Sparplan (max. 15 €/Monat)."
+ },
+ "bitpanda": {
+  "name": "Bitpanda",
+  "typ": "Neobank",
+  "sitz": "Wien",
+  "web": "https://www.bitpanda.com/de/card",
+  "text": "Aktuelle Kartenversion und Konditionen in Österreich beim Anbieter prüfen."
+ },
+ "bunq": {
+  "name": "bunq",
+  "typ": "Neobank",
+  "sitz": "Amsterdam",
+  "web": "https://www.bunq.com/",
+  "text": "Abotarife und Kartenklassifikation beim Anbieter prüfen."
+ },
+ "wise": {
+  "name": "Wise",
+  "typ": "Zahlungsdienst",
+  "sitz": "Brüssel (EU)",
+  "web": "https://wise.com/at/card/",
+  "text": "Mehrwährungskonto mit Debitkarte. Umrechnung zum Mittelkurs ab 0,47 %, Karte einmalig 7 €."
+ }
+}

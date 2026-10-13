@@ -63,7 +63,8 @@
   "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
   "stand": "PLV Stand 01.10.2026",
   "sek": [],
-  "notiz": "Online-Antrag nur mit Commerzbank-Girokonto und Online Banking (Aufladung per Überweisung). Bargeld-Verzinsung: nicht verzinst (Guthabenkarte)."
+  "notiz": "Online-Antrag nur mit Commerzbank-Girokonto und Online Banking (Aufladung per Überweisung). Bargeld-Verzinsung: nicht verzinst (Guthabenkarte).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "commerzbank-mastercard-debit",
@@ -128,7 +129,8 @@
   "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
   "stand": "PLV Stand 01.10.2026",
   "sek": [],
-  "notiz": "fee = Kartenpreis (42 €) + günstigstes Konto GiroKonto (58,80 €). Nur Karte: 42 €/Jahr. Portal (finanzfluss) nennt 42 € und 50 € Bonus – Bonus nicht auf Commerzbank-Seite gefunden."
+  "notiz": "fee = Kartenpreis (42 €) + günstigstes Konto GiroKonto (58,80 €). Nur Karte: 42 €/Jahr. Portal (finanzfluss) nennt 42 € und 50 € Bonus – Bonus nicht auf Commerzbank-Seite gefunden.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "commerzbank-classic-kreditkarte",
@@ -195,7 +197,8 @@
   "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
   "stand": "PLV Stand 01.10.2026",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "commerzbank-gold-kreditkarte",
@@ -262,7 +265,8 @@
   "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
   "stand": "PLV Stand 01.10.2026",
   "sek": [],
-  "notiz": "Priority Pass: laut Produktinfo ‚Mitgliedsbeitrag im Jahrespreis enthalten‘; Besuchsentgelte nicht genannt, daher lgm statt lg."
+  "notiz": "Priority Pass: laut Produktinfo ‚Mitgliedsbeitrag im Jahrespreis enthalten‘; Besuchsentgelte nicht genannt, daher lgm statt lg.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "commerzbank-premium-kreditkarte",
@@ -329,7 +333,8 @@
   "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
   "stand": "PLV Stand 01.10.2026",
   "sek": [],
-  "notiz": "fee = Preis PremiumKonto (Karte allein nicht erhältlich). Kontoführung + Girocard im Preis. tier 2 statt 3, da kein Mietwagenschutz."
+  "notiz": "fee = Preis PremiumKonto (Karte allein nicht erhältlich). Kontoführung + Girocard im Preis. tier 2 statt 3, da kein Mietwagenschutz.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "commerzbank-young-visa",
@@ -393,7 +398,8 @@
   "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
   "stand": "PLV Stand 01.10.2026",
   "sek": [],
-  "notiz": "Ergänzt: Jugend-Kreditkarte, nur mit StartKonto."
+  "notiz": "Ergänzt: Jugend-Kreditkarte, nur mit StartKonto.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "commerzbank-business-card-classic",
@@ -457,7 +463,8 @@
   "preis": "https://www.commerzbank.de/unternehmerkunden/firmenkreditkarten/businesscard/",
   "stand": "Produktseite 10/2026",
   "sek": [],
-  "notiz": "Ergänzt. Werte von der Produktseite; Geschäftskunden-PLV nicht gelesen."
+  "notiz": "Ergänzt. Werte von der Produktseite; Geschäftskunden-PLV nicht gelesen.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "commerzbank-business-card-premium",
@@ -522,7 +529,8 @@
   "preis": "https://www.commerzbank.de/unternehmerkunden/firmenkreditkarten/business-card-premium/",
   "stand": "Produktseite 10/2026",
   "sek": [],
-  "notiz": "Ergänzt. Versicherungsbedingungen nicht im Detail gelesen. Daneben gibt es Business Card Premium Debit (5,90 €/Monat) und Partnerangebot Pliant."
+  "notiz": "Ergänzt. Versicherungsbedingungen nicht im Detail gelesen. Daneben gibt es Business Card Premium Debit (5,90 €/Monat) und Partnerangebot Pliant.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "comdirect-visa-kreditkarte",
@@ -587,7 +595,8 @@
   "preis": "https://www.comdirect.de/formulare/preis-leistungsverzeichnis",
   "stand": "PLV gültig ab 15.07.2026 (Stand 07/26)",
   "sek": [],
-  "notiz": "Reise-Sorglos-Paket (Rücktritt, Auslandskranken, Gepäck, Mietwagen) kostet 7,90 €/Monat extra bzw. ist im Girokonto Plus (9,90 €/Monat) enthalten – daher tier 0. comdirect vermittelt außerdem American Express (Gold Card) – Herausgeber Amex, nicht hier erfasst."
+  "notiz": "Reise-Sorglos-Paket (Rücktritt, Auslandskranken, Gepäck, Mietwagen) kostet 7,90 €/Monat extra bzw. ist im Girokonto Plus (9,90 €/Monat) enthalten – daher tier 0. comdirect vermittelt außerdem American Express (Gold Card) – Herausgeber Amex, nicht hier erfasst.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "comdirect-visa-debitkarte",
@@ -654,7 +663,8 @@
   "sek": [
    "bonus"
   ],
-  "notiz": "fee = Kontopreis Girokonto Aktiv ohne Bedingung (4,90 € × 12). Bonus nur aus mydealz/konto.org, nicht auf comdirect.de verifiziert."
+  "notiz": "fee = Kontopreis Girokonto Aktiv ohne Bedingung (4,90 € × 12). Bonus nur aus mydealz/konto.org, nicht auf comdirect.de verifiziert.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "dkb-visa-debitkarte",
@@ -720,7 +730,8 @@
   "sek": [
    "cbText"
   ],
-  "notiz": "fee = Kontopreis ohne Bedingung (4,50 € × 12). Cashback-Sammelrate (bis 7 %) nur von finanzfluss. Aktuelle Neukundenaktion: 4 % Tagesgeld für 4 Monate (bis 20.10.2026) – kein Kartenbonus, daher offer=false."
+  "notiz": "fee = Kontopreis ohne Bedingung (4,50 € × 12). Cashback-Sammelrate (bis 7 %) nur von finanzfluss. Aktuelle Neukundenaktion: 4 % Tagesgeld für 4 Monate (bis 20.10.2026) – kein Kartenbonus, daher offer=false.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "dkb-visa-kreditkarte",
@@ -786,7 +797,8 @@
   "sek": [
    "cbText"
   ],
-  "notiz": "Keine Teilzahlung/Sollzins im PLV genannt – Charge-Karte. DKB gibt laut PLV-Glossar auch Miles & More Credit Cards heraus (prüfen, ob in anderer Gruppe erfasst)."
+  "notiz": "Keine Teilzahlung/Sollzins im PLV genannt – Charge-Karte. DKB gibt laut PLV-Glossar auch Miles & More Credit Cards heraus (prüfen, ob in anderer Gruppe erfasst).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "ing-visa-card-debit",
@@ -851,7 +863,8 @@
   "preis": "https://www.ing.de/dokumente/ing-diba-preise-leistungen/",
   "stand": "PLV Stand 14.05.2026",
   "sek": [],
-  "notiz": "fee = Kontopreis ohne Bedingung (4,90 € × 12). Eine ING-Kreditkarte ist laut Presse (Börsen-Zeitung, t-online/dpa 2026) für Ende 2026 angekündigt, auf ing.de im Oktober 2026 aber noch nicht erhältlich – daher nicht erfasst. Aktuell kein Girokonto-Bonus auf ing.de sichtbar (nur 3,75 % Extra-Konto-Zins für 4 Monate, 50 € Kunden-werben-Kunden)."
+  "notiz": "fee = Kontopreis ohne Bedingung (4,90 € × 12). Eine ING-Kreditkarte ist laut Presse (Börsen-Zeitung, t-online/dpa 2026) für Ende 2026 angekündigt, auf ing.de im Oktober 2026 aber noch nicht erhältlich – daher nicht erfasst. Aktuell kein Girokonto-Bonus auf ing.de sichtbar (nur 3,75 % Extra-Konto-Zins für 4 Monate, 50 € Kunden-werben-Kunden).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "1822direkt-visa-classic",
@@ -915,7 +928,8 @@
   "preis": "https://www.1822direkt.de/fileadmin/Home/Dokumente/PDF/PDF/pv_gesamt_1822direkt.pdf",
   "stand": "PLV 11.08.2026",
   "sek": [],
-  "notiz": "Herausgeber: Frankfurter Sparkasse (1822direkt ist deren Direktbank-Marke). Finanzfluss-PLV (2023) veraltet: dort 29,90 €. Bedingungen/Enddatum der 200-€-Kontoprämie nicht geprüft."
+  "notiz": "Herausgeber: Frankfurter Sparkasse (1822direkt ist deren Direktbank-Marke). Finanzfluss-PLV (2023) veraltet: dort 29,90 €. Bedingungen/Enddatum der 200-€-Kontoprämie nicht geprüft.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "1822direkt-visa-gold",
@@ -981,7 +995,8 @@
   "preis": "https://www.1822direkt.de/fileadmin/Home/Dokumente/PDF/PDF/pv_gesamt_1822direkt.pdf",
   "stand": "PLV 11.08.2026",
   "sek": [],
-  "notiz": "tier 2 wegen Reiserücktritt, aber ohne Auslandskranken – schwächer als typisches Gold-Paket (ggf. tier 1). Herausgeber Frankfurter Sparkasse."
+  "notiz": "tier 2 wegen Reiserücktritt, aber ohne Auslandskranken – schwächer als typisches Gold-Paket (ggf. tier 1). Herausgeber Frankfurter Sparkasse.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "hvb-mastercard",
@@ -1047,7 +1062,8 @@
   "preis": "https://www.hypovereinsbank.de/content/dam/hypovereinsbank/shared/pdf/Produktprofile/HVB-Mastercard-Kreditkarte-Produktprofil.pdf",
   "stand": "Produktprofil Stand 02/2025; Produktseite 10/2026",
   "sek": [],
-  "notiz": "fee = Preis im günstigsten Neukunden-Kontomodell PlusKonto. Vollständiges PLV (hvb.de/preis-leistung) nicht abrufbar, Werte aus Produktprofil und Produktseite."
+  "notiz": "fee = Preis im günstigsten Neukunden-Kontomodell PlusKonto. Vollständiges PLV (hvb.de/preis-leistung) nicht abrufbar, Werte aus Produktprofil und Produktseite.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "hvb-mastercard-gold",
@@ -1114,7 +1130,8 @@
   "preis": "https://www.hypovereinsbank.de/content/dam/hypovereinsbank/shared/pdf/Produktprofile/HVB-MastercardGold-Kreditkarte-Produktprofil.pdf",
   "stand": "Produktprofil Stand 08/2026",
   "sek": [],
-  "notiz": "Laut Produktseite gibt es bei HVB nur noch HVB Mastercard und Mastercard Gold als Kreditkarten (Visa- und FC-Bayern-Karten nicht mehr gelistet). Debitkarte: UniCredit Card (Mastercard Debit, 0 € in Plus-/Exklusiv-/StartKonto, 1,75 % Fremdwährung) – nicht als eigene Karte erfasst."
+  "notiz": "Laut Produktseite gibt es bei HVB nur noch HVB Mastercard und Mastercard Gold als Kreditkarten (Visa- und FC-Bayern-Karten nicht mehr gelistet). Debitkarte: UniCredit Card (Mastercard Debit, 0 € in Plus-/Exklusiv-/StartKonto, 1,75 % Fremdwährung) – nicht als eigene Karte erfasst.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "sparkasse-kreditkarte-classic",
@@ -1181,7 +1198,8 @@
   "preis": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
   "stand": "PLV Berliner Sparkasse 15.07.2026",
   "sek": [],
-  "notiz": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. Andere Sparkassen: oft Mastercard Standard/Visa Classic 30–50 €, Fremdwährung 1,75–2 %. finanzfluss nennt für ‚Sparkasse Visa Gold‘ ebenfalls 78 € / 1,9 % / 2 % mind. 7,50 € (= Berliner Sparkasse)."
+  "notiz": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. Andere Sparkassen: oft Mastercard Standard/Visa Classic 30–50 €, Fremdwährung 1,75–2 %. finanzfluss nennt für ‚Sparkasse Visa Gold‘ ebenfalls 78 € / 1,9 % / 2 % mind. 7,50 € (= Berliner Sparkasse).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "sparkasse-kreditkarte-gold",
@@ -1249,7 +1267,8 @@
   "preis": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
   "stand": "PLV Berliner Sparkasse 15.07.2026",
   "sek": [],
-  "notiz": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. Konditionen und Versicherungspaket unterscheiden sich je Sparkasse deutlich (z. B. Haspa, Frankfurter Sparkasse). Versicherungsbedingungen nur in Auszügen gelesen."
+  "notiz": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. Konditionen und Versicherungspaket unterscheiden sich je Sparkasse deutlich (z. B. Haspa, Frankfurter Sparkasse). Versicherungsbedingungen nur in Auszügen gelesen.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "sparkasse-visa-card-basis",
@@ -1315,7 +1334,8 @@
   "preis": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
   "stand": "PLV Berliner Sparkasse 15.07.2026",
   "sek": [],
-  "notiz": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. Ergänzt. Von der Sparkasse als Debitkarte auf Guthabenbasis bezeichnet; hier als Prepaid eingeordnet."
+  "notiz": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. Ergänzt. Von der Sparkasse als Debitkarte auf Guthabenbasis bezeichnet; hier als Prepaid eingeordnet.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "sparkasse-visa-business-gold",
@@ -1376,7 +1396,8 @@
   "preis": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
   "stand": "PLV Berliner Sparkasse 15.07.2026",
   "sek": [],
-  "notiz": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. Ergänzt, nur Preis aus PLV gelesen; Versicherungsumfang, Fremdwährungsentgelt und Bargeldkonditionen nicht geprüft (tier/fx daher null)."
+  "notiz": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. Ergänzt, nur Preis aus PLV gelesen; Versicherungsumfang, Fremdwährungsentgelt und Bargeldkonditionen nicht geprüft (tier/fx daher null).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "volksbank-classiccard",
@@ -1444,7 +1465,8 @@
    "fxText",
    "cash"
   ],
-  "notiz": "Preis je Volksbank unterschiedlich, Beispiel: Berliner Volksbank. fx und Inlands-Bargeld nur von finanzfluss (1,80 % / 2 %); Preisaushang der Berliner Volksbank war nicht abrufbar (404). Netz laut Seitentitel Mastercard (Visa ebenfalls genannt)."
+  "notiz": "Preis je Volksbank unterschiedlich, Beispiel: Berliner Volksbank. fx und Inlands-Bargeld nur von finanzfluss (1,80 % / 2 %); Preisaushang der Berliner Volksbank war nicht abrufbar (404). Netz laut Seitentitel Mastercard (Visa ebenfalls genannt).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "volksbank-goldcard",
@@ -1513,7 +1535,8 @@
   "sek": [
    "cash"
   ],
-  "notiz": "Preis je Volksbank unterschiedlich, Beispiel: Berliner Volksbank. Inlands-Bargeld nur aus Portalen (Capitalo: mind. 7,50 €). Mitgliedschaft erfordert Kauf von Genossenschaftsanteilen. finanzfluss nennt 107,40 € – veraltet (Bank: 5 €/Monat). Bonus 200 € gilt für das Girokonto, nicht die Karte."
+  "notiz": "Preis je Volksbank unterschiedlich, Beispiel: Berliner Volksbank. Inlands-Bargeld nur aus Portalen (Capitalo: mind. 7,50 €). Mitgliedschaft erfordert Kauf von Genossenschaftsanteilen. finanzfluss nennt 107,40 € – veraltet (Bank: 5 €/Monat). Bonus 200 € gilt für das Girokonto, nicht die Karte.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "olb-mastercard-prepaid",
@@ -1580,7 +1603,8 @@
    "pay",
    "payText"
   ],
-  "notiz": "Kontopflicht aus PLV-Struktur abgeleitet (Karte wird zu OLB-Kontomodellen ausgegeben), nicht ausdrücklich bestätigt. PLV-Stand 10/2025 ist das auf olb.de verlinkte aktuelle Dokument."
+  "notiz": "Kontopflicht aus PLV-Struktur abgeleitet (Karte wird zu OLB-Kontomodellen ausgegeben), nicht ausdrücklich bestätigt. PLV-Stand 10/2025 ist das auf olb.de verlinkte aktuelle Dokument.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "olb-mastercard-standard",
@@ -1646,7 +1670,8 @@
    "pay",
    "payText"
   ],
-  "notiz": "Ergänzt. Typ (Charge) und Versicherungen nicht geprüft."
+  "notiz": "Ergänzt. Typ (Charge) und Versicherungen nicht geprüft.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "olb-mastercard-gold",
@@ -1713,7 +1738,8 @@
    "pay",
    "payText"
   ],
-  "notiz": "Ergänzt. Versicherungsumfang nicht geprüft (tier null)."
+  "notiz": "Ergänzt. Versicherungsumfang nicht geprüft (tier null).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "olb-mastercard-world-elite",
@@ -1779,6 +1805,7 @@
    "pay",
    "payText"
   ],
-  "notiz": "Ergänzt. Versicherungs-/Lounge-Leistungen nicht geprüft (tier null). Daneben Business-Karten: Mastercard Business 45 €/Jahr, ‚MasterCard VC‘ Business/First/Family 59–79 €/Jahr – nicht erfasst."
+  "notiz": "Ergänzt. Versicherungs-/Lounge-Leistungen nicht geprüft (tier null). Daneben Business-Karten: Mastercard Business 45 €/Jahr, ‚MasterCard VC‘ Business/First/Family 59–79 €/Jahr – nicht erfasst.",
+  "geprueft": "2026-10-12"
  }
 ]

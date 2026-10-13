@@ -66,7 +66,8 @@
   "sek": [
    "auto"
   ],
-  "notiz": "Lastschrift-Fehlen nur aus Portalen (finanzfluss, bankdaten); Produktseite spricht von 'Überweisungsbetrag ist Ihnen überlassen'. Freunde-werben-Bonus ist kein Neukundenbonus, daher offer=false."
+  "notiz": "Lastschrift-Fehlen nur aus Portalen (finanzfluss, bankdaten); Produktseite spricht von 'Überweisungsbetrag ist Ihnen überlassen'. Freunde-werben-Bonus ist kein Neukundenbonus, daher offer=false.",
+  "geprueft": "2026-10-12"
  },
  {
   "status": "aktiv",
@@ -138,7 +139,8 @@
    "zinsfrei",
    "cbText"
   ],
-  "notiz": "Sollzins 1,86 % nominal pro Monat (×12 = 22,32 % p. a.). Produktseite gebuhrenfrei.com per Cloudflare gesperrt; Konditionen aus Advanzia-PLV/AGB (advanzia.com/de/dokumente). Lastschrift-Umstellung laut WEB.Cent-Produktseite (gleiche Bank) und finanzfluss. KWK-Aktion 60+60 € lief bis 30.09.2026 (mydealz), daher kein aktueller Bonus eingetragen."
+  "notiz": "Sollzins 1,86 % nominal pro Monat (×12 = 22,32 % p. a.). Produktseite gebuhrenfrei.com per Cloudflare gesperrt; Konditionen aus Advanzia-PLV/AGB (advanzia.com/de/dokumente). Lastschrift-Umstellung laut WEB.Cent-Produktseite (gleiche Bank) und finanzfluss. KWK-Aktion 60+60 € lief bis 30.09.2026 (mydealz), daher kein aktueller Bonus eingetragen.",
+  "geprueft": "2026-10-12"
  },
  {
   "status": "aktiv",
@@ -205,7 +207,8 @@
   ],
   "quelle": "https://vorteile.gmx.net/webcent/sammeln/shops/webcentcard_gmx/webcent_kreditkarte_gmx/",
   "sek": [],
-  "notiz": "GMX Mastercard Gold und WEB.DE Mastercard Gold sind heute dieselbe Karte 'WEB.Cent Kreditkarte' (WEB.DE-Seite: https://vorteile.web.de/webcent/sammeln/shops/webcentcard_webde/webcent_kreditkarte_webde/). Zins/Gebühren laut Advanzia-PLV. Produktseite nennt 'zinsfreies Zahlungsziel bis zu sieben Wochen'."
+  "notiz": "GMX Mastercard Gold und WEB.DE Mastercard Gold sind heute dieselbe Karte 'WEB.Cent Kreditkarte' (WEB.DE-Seite: https://vorteile.web.de/webcent/sammeln/shops/webcentcard_webde/webcent_kreditkarte_webde/). Zins/Gebühren laut Advanzia-PLV. Produktseite nennt 'zinsfreies Zahlungsziel bis zu sieben Wochen'.",
+  "geprueft": "2026-10-12"
  },
  {
   "status": "aktiv",
@@ -277,7 +280,8 @@
    "pay",
    "auto"
   ],
-  "notiz": "Gebühr 6 €/Monat aus Advanzia-PLV 07/2024. Punkte, Status und Bonus nur aus Blogs (meilenoptimieren 08.10.2026, mydealz); offizielle Hilton-Seite nicht abrufbar (403). Antragsseite ist eine Partnerseite (mein-onlineantrag.de/financeads)."
+  "notiz": "Gebühr 6 €/Monat aus Advanzia-PLV 07/2024. Punkte, Status und Bonus nur aus Blogs (meilenoptimieren 08.10.2026, mydealz); offizielle Hilton-Seite nicht abrufbar (403). Antragsseite ist eine Partnerseite (mein-onlineantrag.de/financeads).",
+  "geprueft": "2026-10-12"
  },
  {
   "status": "aktiv",
@@ -350,7 +354,8 @@
    "zinsfrei",
    "auto"
   ],
-  "notiz": "Gebühr 8 €/Monat aus Advanzia-PLV 07/2024; Produktseite per Cloudflare gesperrt. Ergänzt (nicht in Auftragsliste). Ob die Karte noch aktiv vermarktet wird, ist unsicher (letzte Blogberichte 2024/2025). Versicherung: als Mastercard Gold vermutlich Gold-Bedingungen."
+  "notiz": "Gebühr 8 €/Monat aus Advanzia-PLV 07/2024; Produktseite per Cloudflare gesperrt. Ergänzt (nicht in Auftragsliste). Ob die Karte noch aktiv vermarktet wird, ist unsicher (letzte Blogberichte 2024/2025). Versicherung: als Mastercard Gold vermutlich Gold-Bedingungen.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "deutschland-kreditkarte-classic",
@@ -418,7 +423,8 @@
   "preis": "https://www.deutschland-kreditkarte.de/preisliste.html",
   "stand": "Preisliste Website, Abruf 12.10.2026",
   "sek": [],
-  "notiz": "Kein PDF-PLV gefunden; Konditionen von der Preisliste-Seite. Startseite zeigt beim Classic '60 € Prämie sichern' – Fußnote dazu nur für Gold, daher unklar. Cash-Zinsen bei Vollzahlung laut Preisliste 0 %."
+  "notiz": "Kein PDF-PLV gefunden; Konditionen von der Preisliste-Seite. Startseite zeigt beim Classic '60 € Prämie sichern' – Fußnote dazu nur für Gold, daher unklar. Cash-Zinsen bei Vollzahlung laut Preisliste 0 %.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "deutschland-kreditkarte-gold",
@@ -485,7 +491,8 @@
   "preis": "https://www.deutschland-kreditkarte.de/preisliste.html",
   "stand": "Preisliste Website, Abruf 12.10.2026; Versicherungsinfo Stand 05/2024",
   "sek": [],
-  "notiz": "Effektivzins 27,87 % enthält die Monatsgebühr im repräsentativen Beispiel."
+  "notiz": "Effektivzins 27,87 % enthält die Monatsgebühr im repräsentativen Beispiel.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "instabank-kreditkarte",
@@ -555,7 +562,8 @@
   "sek": [
    "netz"
   ],
-  "notiz": "Instabank ASA (Oslo). Karte verzinst jeden Umsatz ab Tag 1 – faktisch Ratenkredit-Karte. Netz Visa nur aus Portalen."
+  "notiz": "Instabank ASA (Oslo). Karte verzinst jeden Umsatz ab Tag 1 – faktisch Ratenkredit-Karte. Netz Visa nur aus Portalen.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "bank-dimare-extra-karte",
@@ -628,7 +636,8 @@
    "rahmen",
    "cashInterest"
   ],
-  "notiz": "extrakarte.com per Incapsula für curl gesperrt, Inhalte via WebFetch gelesen. Sollzins 21,99 % nur aus Portal (Kostenübersicht nennt nur 24,60 % eff.). 'Bis ca. 8 Wochen zinsfrei' von bankdimare.com -> zinsfrei=56. Ob Lastschrift den Gesamtbetrag einzieht, nicht explizit belegt; finanzfluss sagt auto=false."
+  "notiz": "extrakarte.com per Incapsula für curl gesperrt, Inhalte via WebFetch gelesen. Sollzins 21,99 % nur aus Portal (Kostenübersicht nennt nur 24,60 % eff.). 'Bis ca. 8 Wochen zinsfrei' von bankdimare.com -> zinsfrei=56. Ob Lastschrift den Gesamtbetrag einzieht, nicht explizit belegt; finanzfluss sagt auto=false.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "klarna-card-standard",
@@ -694,7 +703,8 @@
   "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
   "stand": "PLV v5.7.0 vom 16.09.2026",
   "sek": [],
-  "notiz": "Standard-Plan laut Website: kostenlose virtuelle Karte + kostenloses Bankkonto. Finanzfluss-Label 'Klarna Card Standard' als Kreditkarte ist veraltet: Die Klarna-Kreditkarte erfordert laut PLV eine kostenpflichtige Mitgliedschaft."
+  "notiz": "Standard-Plan laut Website: kostenlose virtuelle Karte + kostenloses Bankkonto. Finanzfluss-Label 'Klarna Card Standard' als Kreditkarte ist veraltet: Die Klarna-Kreditkarte erfordert laut PLV eine kostenpflichtige Mitgliedschaft.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "klarna-kreditkarte-everywhere",
@@ -763,7 +773,8 @@
    "effz",
    "cash"
   ],
-  "notiz": "Günstigste Mitgliedschaft, mit der die Kreditkarte nutzbar ist (PLV: 'kostenpflichtige monatliche Mitgliedschaft (ab 4,99 €/Monat) erforderlich'). Effektivzins 14,74 % nur aus finanzfluss; Capitalo nennt bis 14,99 % nominal + 0,45 €/Monat für Ratenkauf. Bargeld-Kontingent laut PLV für die Klarna Card; ob es für die Kreditkarten-Variante gleich gilt, ist nicht eindeutig."
+  "notiz": "Günstigste Mitgliedschaft, mit der die Kreditkarte nutzbar ist (PLV: 'kostenpflichtige monatliche Mitgliedschaft (ab 4,99 €/Monat) erforderlich'). Effektivzins 14,74 % nur aus finanzfluss; Capitalo nennt bis 14,99 % nominal + 0,45 €/Monat für Ratenkauf. Bargeld-Kontingent laut PLV für die Klarna Card; ob es für die Kreditkarten-Variante gleich gilt, ist nicht eindeutig.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "klarna-plus",
@@ -833,7 +844,8 @@
    "effz",
    "cash"
   ],
-  "notiz": "Karte als Debit- oder Kreditkarten-Variante wählbar; hier als Kreditkarte erfasst."
+  "notiz": "Karte als Debit- oder Kreditkarten-Variante wählbar; hier als Kreditkarte erfasst.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "klarna-premium",
@@ -904,7 +916,8 @@
    "effz",
    "cash"
   ],
-  "notiz": "tier=1, weil Rücktritt fehlt, obwohl Mietwagen und Reisekranken enthalten sind – Redaktion ggf. anpassen. Gratis-Abhebungen: PLV 16.09.2026 nennt 8, Produktseite 6. Karte als Debit oder Kredit wählbar."
+  "notiz": "tier=1, weil Rücktritt fehlt, obwohl Mietwagen und Reisekranken enthalten sind – Redaktion ggf. anpassen. Gratis-Abhebungen: PLV 16.09.2026 nennt 8, Produktseite 6. Karte als Debit oder Kredit wählbar.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "klarna-max",
@@ -975,6 +988,7 @@
    "effz",
    "cash"
   ],
-  "notiz": "tier=3 gewählt (Kranken + Mietwagen + Storno-Service); Storno ist keine Versicherung. Karte als Debit oder Kredit wählbar."
+  "notiz": "tier=3 gewählt (Kranken + Mietwagen + Storno-Service); Storno ist keine Versicherung. Karte als Debit oder Kredit wählbar.",
+  "geprueft": "2026-10-12"
  }
 ]

@@ -4,6 +4,7 @@
  "lizenz": "Frei nutzbar mit Quellenangabe Finvallo",
  "karten": [
   {
+   "id": null,
    "slug": "tf-bank-mastercard-gold",
    "anbieter": "TF Bank",
    "herausgeber": "Avarda Bank AB (TF Bank ist Zweitname)",
@@ -28,7 +29,7 @@
    "tier": 2,
    "stars": 4.6,
    "note": "Sehr gut",
-   "rank": 3,
+   "rank": 4,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -52,11 +53,13 @@
    "quelle": "https://tfbank.de/",
    "preis": "https://tfbank.de/media/metjnv0f/preis-und-leistungsverzeichnis_tf-bank-de_20260624.pdf",
    "stand": "PLV 24.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/tf-bank-mastercard-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/tf-bank-mastercard-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "advanzia-bank-gebuehrenfrei-mastercard-gold",
    "anbieter": "Advanzia Bank",
    "herausgeber": null,
@@ -104,11 +107,13 @@
    "quelle": "https://www.gebuhrenfrei.com/",
    "preis": "https://cdn.sanity.io/files/mkiw82r3/production/ef9d9e8b04864b895f98b8269f5adb789846b68f.pdf",
    "stand": "PLV 07/2024 (AGB 07/2025)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/advanzia-bank-gebuehrenfrei-mastercard-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/advanzia-bank-gebuehrenfrei-mastercard-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "web-cent-mastercard-gold-gmx-web-de",
    "anbieter": "GMX / WEB.DE",
    "herausgeber": "Advanzia Bank",
@@ -156,11 +161,13 @@
    "quelle": "https://vorteile.gmx.net/webcent/sammeln/shops/webcentcard_gmx/webcent_kreditkarte_gmx/",
    "preis": "https://cdn.sanity.io/files/mkiw82r3/production/ef9d9e8b04864b895f98b8269f5adb789846b68f.pdf",
    "stand": "PLV 07/2024 (AGB 07/2025)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/web-cent-mastercard-gold-gmx-web-de/"
+   "url": "https://finvallo.com/de/kreditkarten/web-cent-mastercard-gold-gmx-web-de/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "hilton-honors-kreditkarte",
    "anbieter": "Hilton Honors",
    "herausgeber": "Advanzia Bank",
@@ -208,11 +215,13 @@
    "quelle": "https://hilton-honors.mein-onlineantrag.de/",
    "preis": "https://cdn.sanity.io/files/mkiw82r3/production/ef9d9e8b04864b895f98b8269f5adb789846b68f.pdf",
    "stand": "PLV 07/2024 (AGB 07/2025)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/hilton-honors-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/hilton-honors-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "turkish-airlines-milesundsmiles-mastercard-gold",
    "anbieter": "Turkish Airlines",
    "herausgeber": "Advanzia Bank",
@@ -237,7 +246,7 @@
    "tier": 2,
    "stars": 4.4,
    "note": "Gut",
-   "rank": 7,
+   "rank": 6,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Reiseversicherung inkl. Storno",
@@ -260,11 +269,13 @@
    "quelle": "https://milesandsmiles.kartegold.de/",
    "preis": "https://cdn.sanity.io/files/mkiw82r3/production/ef9d9e8b04864b895f98b8269f5adb789846b68f.pdf",
    "stand": "PLV 07/2024 (AGB 07/2025)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/turkish-airlines-milesundsmiles-mastercard-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/turkish-airlines-milesundsmiles-mastercard-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "deutschland-kreditkarte-classic",
    "anbieter": "Deutschland-Kreditkarte",
    "herausgeber": "Hanseatic Bank (Vertrieb PaySol)",
@@ -289,7 +300,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 24,
+   "rank": 23,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -312,11 +323,13 @@
    "quelle": "https://www.deutschland-kreditkarte.de/classic",
    "preis": "https://www.deutschland-kreditkarte.de/preisliste.html",
    "stand": "Preisliste Website, Abruf 12.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/deutschland-kreditkarte-classic/"
+   "url": "https://finvallo.com/de/kreditkarten/deutschland-kreditkarte-classic/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "deutschland-kreditkarte-gold",
    "anbieter": "Deutschland-Kreditkarte",
    "herausgeber": "Hanseatic Bank (Vertrieb PaySol)",
@@ -341,7 +354,7 @@
    "tier": 2,
    "stars": 4.4,
    "note": "Gut",
-   "rank": 6,
+   "rank": 5,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -363,11 +376,13 @@
    "quelle": "https://www.deutschland-kreditkarte.de/gold",
    "preis": "https://www.deutschland-kreditkarte.de/preisliste.html",
    "stand": "Preisliste Website, Abruf 12.10.2026; Versicherungsinfo Stand 05/2024",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/deutschland-kreditkarte-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/deutschland-kreditkarte-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "instabank-kreditkarte",
    "anbieter": "Instabank",
    "herausgeber": null,
@@ -392,7 +407,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 87,
+   "rank": 83,
    "pros": [
     "Keine Jahresgebühr",
     "Wechselnder Monatsrabatt in einer Kategorie (z. B. Oktober 2026: 5 % auf Sportausrüstung), max. 50 €/Monat und 300 €/Jahr, Abzug von der nächsten Rechnung",
@@ -415,11 +430,13 @@
    "quelle": "https://instabank.de/kreditkarte",
    "preis": "https://instabank.de/vollstandige-preisliste",
    "stand": "Preisliste Website, Abruf 12.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/instabank-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/instabank-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bank-dimare-extra-karte-mastercard",
    "anbieter": "Bank DiMare",
    "herausgeber": "Bank DiMare Limited (Malta, bis 07/2026 Novum Bank)",
@@ -444,7 +461,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 96,
+   "rank": 84,
    "pros": [
     "Keine Jahresgebühr",
     "Kein allgemeines Cashback; Extra Club mit Partner-Rabatten (z. B. 10 % Zalando-Gutscheine, 15 % YOOX), Reise-Cashback und Mietwagenrabatten",
@@ -468,11 +485,13 @@
    "quelle": "https://www.extrakarte.com/",
    "preis": "https://www.extrakarte.com/kreditkarten-kostenuebersicht",
    "stand": "Kostenübersicht Website, Abruf 12.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/bank-dimare-extra-karte-mastercard/"
+   "url": "https://finvallo.com/de/kreditkarten/bank-dimare-extra-karte-mastercard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "klarna-card",
    "anbieter": "Klarna",
    "herausgeber": "Klarna Bank AB (publ)",
@@ -497,7 +516,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 48,
+   "rank": 46,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -517,11 +536,13 @@
    "quelle": "https://www.klarna.com/de/klarna-card/",
    "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
    "stand": "PLV v5.7.0 vom 16.09.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/klarna-card/"
+   "url": "https://finvallo.com/de/kreditkarten/klarna-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "klarna-kreditkarte-everywhere",
    "anbieter": "Klarna",
    "herausgeber": "Klarna Bank AB (publ)",
@@ -546,7 +567,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 63,
+   "rank": 65,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -565,11 +586,13 @@
    "quelle": "https://www.klarna.com/de/klarna-card/",
    "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
    "stand": "PLV v5.7.0 vom 16.09.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/klarna-kreditkarte-everywhere/"
+   "url": "https://finvallo.com/de/kreditkarten/klarna-kreditkarte-everywhere/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "klarna-plus",
    "anbieter": "Klarna",
    "herausgeber": "Klarna Bank AB (publ)",
@@ -615,11 +638,13 @@
    "quelle": "https://www.klarna.com/de/klarna-card/",
    "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
    "stand": "PLV v5.7.0 vom 16.09.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/klarna-plus/"
+   "url": "https://finvallo.com/de/kreditkarten/klarna-plus/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "klarna-premium",
    "anbieter": "Klarna",
    "herausgeber": "Klarna Bank AB (publ)",
@@ -644,7 +669,7 @@
    "tier": 1,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 27,
+   "rank": 30,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -657,6 +682,7 @@
     "Metallkarte"
    ],
    "cons": [
+    "Hohe Jahresgebühr (239,88 €)",
     "19,99 € Monatsgebühr (240 €/Jahr)",
     "Keine Reiserücktrittsversicherung",
     "Kündigung in den ersten 6 Monaten: 50 € Auflösungsgebühr"
@@ -664,11 +690,13 @@
    "quelle": "https://www.klarna.com/de/klarna-card/",
    "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
    "stand": "PLV v5.7.0 vom 16.09.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/klarna-premium/"
+   "url": "https://finvallo.com/de/kreditkarten/klarna-premium/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "klarna-max",
    "anbieter": "Klarna",
    "herausgeber": "Klarna Bank AB (publ)",
@@ -693,7 +721,7 @@
    "tier": 3,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 19,
+   "rank": 22,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -706,6 +734,7 @@
     "Unbegrenzt Lounge-Zugang (1.500+ Lounges)"
    ],
    "cons": [
+    "Hohe Jahresgebühr (539,88 €)",
     "44,99 € Monatsgebühr (540 €/Jahr)",
     "Storno-Schutz ist keine Versicherung, nur 70 % Erstattung",
     "Kündigung in den ersten 6 Monaten: 50 € Auflösungsgebühr"
@@ -713,11 +742,13 @@
    "quelle": "https://www.klarna.com/de/klarna-card/",
    "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
    "stand": "PLV v5.7.0 vom 16.09.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/klarna-max/"
+   "url": "https://finvallo.com/de/kreditkarten/klarna-max/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "easybank-kreditkarte",
    "anbieter": "easybank",
    "herausgeber": "BAWAG AG Niederlassung Deutschland (ehem. Barclays)",
@@ -742,7 +773,7 @@
    "tier": 0,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 20,
+   "rank": 18,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -766,11 +797,13 @@
    "quelle": "https://www.easybank.de/easybank-de/kreditkarten/easybank-kreditkarte",
    "preis": "https://www.easybank.de/resource/blob/123020/e828ed43452aa5ec5d39ff98b5efd2a5/preisverzeichnis-easybank-kreditkarte-data.pdf",
    "stand": "PLV 04/2026 (012 585 LV BV PRV 0426)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/easybank-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/easybank-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "easybank-kreditkarte-gold",
    "anbieter": "easybank",
    "herausgeber": "BAWAG AG Niederlassung Deutschland (ehem. Barclays)",
@@ -795,7 +828,7 @@
    "tier": 2,
    "stars": 4.1,
    "note": "Gut",
-   "rank": 16,
+   "rank": 14,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "5 % Rückvergütung auf Reisen über easybank Reiseservice Plus (PTG)",
@@ -818,11 +851,13 @@
    "quelle": "https://www.easybank.de/easybank-de/kreditkarten/kreditkarte-gold",
    "preis": "https://www.easybank.de/resource/blob/123008/33084be362fbecdcd098c70d38244d19/preisverzeichnis-easybank-kreditkarte-gold-data.pdf",
    "stand": "PLV 04/2026 (002 452 LV YU PRV 0426)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/easybank-kreditkarte-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/easybank-kreditkarte-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "easybank-kreditkarte-platinum",
    "anbieter": "easybank",
    "herausgeber": "BAWAG AG Niederlassung Deutschland (ehem. Barclays)",
@@ -847,7 +882,7 @@
    "tier": 3,
    "stars": 4.4,
    "note": "Gut",
-   "rank": 5,
+   "rank": 7,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Umfassender Reiseschutz",
@@ -870,11 +905,13 @@
    "quelle": "https://www.easybank.de/easybank-de/kreditkarten/kreditkarte-platinum",
    "preis": "https://www.easybank.de/resource/blob/123014/0bb3dac7ce3ce8312675fde4d2e5b24a/preisverzeichnis-easybank-kreditkarte-platinum-data.pdf",
    "stand": "PLV 08/2026 (004 451 LG YS PRV 0826)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/easybank-kreditkarte-platinum/"
+   "url": "https://finvallo.com/de/kreditkarten/easybank-kreditkarte-platinum/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "eurowings-kreditkarte-classic",
    "anbieter": "Eurowings",
    "herausgeber": "easybank (BAWAG AG Niederlassung Deutschland, ehem. Barclays)",
@@ -899,7 +936,7 @@
    "tier": 2,
    "stars": 4.1,
    "note": "Gut",
-   "rank": 15,
+   "rank": 13,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "1 Miles & More Prämienmeile je 2 € Umsatz (36 Monate gültig)",
@@ -922,11 +959,13 @@
    "quelle": "https://www.easybank.de/easybank-de/kreditkarten/eurowings-kreditkarte-classic",
    "preis": "https://www.easybank.de/resource/blob/140380/b50246d6517f2b68e2e269b86cc47037/preisverzeichnis-eurowings-kreditkarte-classic-ab-230426-data.pdf",
    "stand": "PLV gültig ab 23.04.2026 (109 571 LB GW PRV 0426)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/eurowings-kreditkarte-classic/"
+   "url": "https://finvallo.com/de/kreditkarten/eurowings-kreditkarte-classic/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "eurowings-kreditkarte-premium",
    "anbieter": "Eurowings",
    "herausgeber": "easybank (BAWAG AG Niederlassung Deutschland, ehem. Barclays)",
@@ -951,7 +990,7 @@
    "tier": 3,
    "stars": 4.3,
    "note": "Gut",
-   "rank": 12,
+   "rank": 11,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Umfassender Reiseschutz",
@@ -974,11 +1013,13 @@
    "quelle": "https://www.easybank.de/easybank-de/kreditkarten/eurowings-kreditkarte-premium",
    "preis": "https://www.easybank.de/resource/blob/140382/b07cf091714e2f674879132ccf1fc2fc/preisverzeichnis-eurowings-kreditkarte-premium-ab-230426-data.pdf",
    "stand": "PLV gültig ab 23.04.2026 (120 590 LB EW PRV 0426)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/eurowings-kreditkarte-premium/"
+   "url": "https://finvallo.com/de/kreditkarten/eurowings-kreditkarte-premium/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "consorsbank-credit-card-gold-light",
    "anbieter": "Consorsbank",
    "herausgeber": "BNP Paribas S.A. Niederlassung Deutschland",
@@ -1003,7 +1044,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 28,
+   "rank": 26,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -1024,11 +1065,13 @@
    "quelle": "https://www.consorsbank.de/web/Girokonto",
    "preis": "https://www.consorsbank.de/content/dam/de-cb/b2c/content/pdf/transversal/agb/CB.80.089_403-OL_PLV-Depot-Ver.K-TG.K-Girokonto-NK.pdf",
    "stand": "PLV Stand 07/2026 (CB.80.089_403)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/consorsbank-credit-card-gold-light/"
+   "url": "https://finvallo.com/de/kreditkarten/consorsbank-credit-card-gold-light/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "consorsbank-visa-card-gold",
    "anbieter": "Consorsbank",
    "herausgeber": "BNP Paribas S.A. Niederlassung Deutschland",
@@ -1053,7 +1096,7 @@
    "tier": 3,
    "stars": 4.1,
    "note": "Gut",
-   "rank": 13,
+   "rank": 16,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -1074,11 +1117,13 @@
    "quelle": "https://www.consorsbank.de/web/Girokonto",
    "preis": "https://www.consorsbank.de/content/dam/de-cb/b2c/content/pdf/transversal/agb/CB.80.089_403-OL_PLV-Depot-Ver.K-TG.K-Girokonto-NK.pdf",
    "stand": "PLV Stand 07/2026 (CB.80.089_403)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/consorsbank-visa-card-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/consorsbank-visa-card-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "consorsbank-visa-card-debit",
    "anbieter": "Consorsbank",
    "herausgeber": "BNP Paribas S.A. Niederlassung Deutschland",
@@ -1103,7 +1148,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 97,
+   "rank": 85,
    "pros": [
     "Keine Jahresgebühr",
     "Bargeld ohne Automatengebühr",
@@ -1123,11 +1168,13 @@
    "quelle": "https://www.consorsbank.de/web/Girokonto",
    "preis": "https://www.consorsbank.de/content/dam/de-cb/b2c/content/pdf/transversal/agb/CB.80.089_403-OL_PLV-Depot-Ver.K-TG.K-Girokonto-NK.pdf",
    "stand": "PLV Stand 07/2026 (CB.80.089_403)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/consorsbank-visa-card-debit/"
+   "url": "https://finvallo.com/de/kreditkarten/consorsbank-visa-card-debit/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "consors-finanz-mastercard",
    "anbieter": "Consors Finanz",
    "herausgeber": "BNP Paribas S.A. Niederlassung Deutschland",
@@ -1152,7 +1199,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 33,
+   "rank": 32,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -1174,11 +1221,13 @@
    "quelle": "https://www.consorsfinanz.de/karte-kredite/mastercard",
    "preis": null,
    "stand": "Produktseite Okt. 2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/consors-finanz-mastercard/"
+   "url": "https://finvallo.com/de/kreditkarten/consors-finanz-mastercard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "amazon-visa",
    "anbieter": "Amazon",
    "herausgeber": "Open Bank S.A. (Openbank Pay, ehem. Zinia; Santander)",
@@ -1225,11 +1274,13 @@
    "quelle": "https://www.openbankpay.com/de/amazon",
    "preis": "https://www.openbankpay.com/assets/CF_DE/de-DE/documents/v1/CB.AMZ.DE.TC.GENERAL_SPECIAL.pdf",
    "stand": "AGB/PLV v1 (Openbank Pay), abgerufen 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/amazon-visa/"
+   "url": "https://finvallo.com/de/kreditkarten/amazon-visa/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "ikea-family-kreditkarte",
    "anbieter": "IKEA",
    "herausgeber": "Ikano Bank AB (publ), Zweigniederlassung Deutschland",
@@ -1254,7 +1305,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 68,
+   "rank": 61,
    "pros": [
     "Keine Jahresgebühr",
     "1 % Bonus auf den Umsatz als IKEA Aktionskarte (max. 30 € pro Jahr); 10 € Aktionskarte nach 6 erfolgreichen Lastschrifteinzügen",
@@ -1277,11 +1328,13 @@
    "quelle": "https://ikea-finanzprodukte.de/ikea-kreditkarte",
    "preis": "https://ikea-finanzprodukte.de/-/media/germany/ikea-finanzprodukte-de/dokumente/ikeafamilykreditkarte/ikanobank-ikea-family-kreditkarte-preisverzeichnis_17102025.pdf",
    "stand": "PLV gültig ab 07/2025, Stand 17.10.2025",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/ikea-family-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/ikea-family-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "tui-card-classic",
    "anbieter": "TUI",
    "herausgeber": "Commerzbank AG",
@@ -1306,7 +1359,7 @@
    "tier": 2,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 18,
+   "rank": 21,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Reiseversicherung inkl. Storno",
@@ -1329,11 +1382,13 @@
    "quelle": "https://www.tui.com/tui-card/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/TUICardBedingungen.pdf",
    "stand": "PLV Stand 06.10.2025 (Dokument HD1025-01, 22/07/26)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/tui-card-classic/"
+   "url": "https://finvallo.com/de/kreditkarten/tui-card-classic/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "tui-card-gold",
    "anbieter": "TUI",
    "herausgeber": "Commerzbank AG",
@@ -1358,7 +1413,7 @@
    "tier": 2,
    "stars": 4.1,
    "note": "Gut",
-   "rank": 14,
+   "rank": 17,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -1379,11 +1434,13 @@
    "quelle": "https://www.tui.com/tui-card/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/TUICardBedingungen.pdf",
    "stand": "PLV Stand 06.10.2025 (Dokument HD1025-01, 22/07/26)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/tui-card-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/tui-card-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "tui-card-titan",
    "anbieter": "TUI",
    "herausgeber": "Commerzbank AG",
@@ -1408,7 +1465,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 43,
+   "rank": 44,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -1422,6 +1479,7 @@
    ],
    "cons": [
     "Teilzahlung ist teuer: 10,03 % Soll / 10,50 % effektiv",
+    "Hohe Jahresgebühr (279,90 €)",
     "Sehr hohe Jahresgebühr 279,90 €",
     "Versicherung nur für TUI-/airtours-Buchungen",
     "Keine Mietwagenversicherung/Lounge"
@@ -1429,11 +1487,13 @@
    "quelle": "https://www.tui.com/tui-card/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/TUICardBedingungen.pdf",
    "stand": "PLV Stand 06.10.2025 (Dokument HD1025-01, 22/07/26)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/tui-card-titan/"
+   "url": "https://finvallo.com/de/kreditkarten/tui-card-titan/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "deutsche-bank-mastercard-standard",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1458,7 +1518,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 121,
+   "rank": 118,
    "pros": [
     "Kein Girokonto beim Anbieter nötig",
     "Girokonto bei der Deutschen Bank nicht nötig",
@@ -1477,11 +1537,13 @@
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
    "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-standard/"
+   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-standard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "deutsche-bank-mastercard-gold",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1506,7 +1568,7 @@
    "tier": 1,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 77,
+   "rank": 80,
    "pros": [
     "6 % Rückvergütung auf Reisebuchungen über den Reiseservice-Partner PTG (kontoreiseservice.de)",
     "Kein Girokonto beim Anbieter nötig",
@@ -1527,11 +1589,13 @@
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
    "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "deutsche-bank-mastercard-travel",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1556,7 +1620,7 @@
    "tier": 2,
    "stars": 4.1,
    "note": "Gut",
-   "rank": 17,
+   "rank": 15,
    "pros": [
     "Niedrige Fremdwährungskosten (0,50 % (kein Auslandseinsatzentgelt, nur Währungsumrechnungsentgelt))",
     "Reiseversicherung inkl. Storno",
@@ -1576,11 +1640,13 @@
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
    "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-travel/"
+   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-travel/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "deutsche-bank-mastercard-platin",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1605,7 +1671,7 @@
    "tier": null,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 130,
+   "rank": 132,
    "pros": [
     "Priority Pass für Flughafen-Lounges: Besuche für Karteninhaber kostenfrei, Begleitperson 20 € pro Besuch",
     "Kein Girokonto beim Anbieter nötig",
@@ -1613,6 +1679,7 @@
     "Girokonto bei der Deutschen Bank nicht nötig"
    ],
    "cons": [
+    "Hohe Jahresgebühr (200 €)",
     "Fremdwährungsgebühr: 2,25 % (1,75 % Auslandseinsatzentgelt, mind. 1,50 €, + 0,50 % Währungsumrechnungsentgelt)",
     "Bargeld am Automaten kostet 2,5 %, mind. 5,75 € am Geldautomaten im Inland und in Euro im EWR (Schalter 3 %, mind. 5,75 €); außerhalb EWR/Fremdwährung zzgl. 1,75 % (mind. 1,50 €) und 0,50 % Umrechnungsentgelt",
     "Nur telefonisch oder in der Filiale beantragbar",
@@ -1622,11 +1689,13 @@
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
    "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-platin/"
+   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-platin/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "deutsche-bank-mastercard-black",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1658,6 +1727,7 @@
     "Priority Pass, Besuche für Karteninhaber kostenlos"
    ],
    "cons": [
+    "Hohe Jahresgebühr (600 €)",
     "Fremdwährungsgebühr: 2,25 % (1,75 % Auslandseinsatzentgelt, mind. 1,50 €, + 0,50 % Währungsumrechnungsentgelt)",
     "Bargeld am Automaten kostet 2,5 %, mind. 5,75 € am Geldautomaten im Inland und in Euro im EWR (Schalter 3 %, mind. 5,75 €); außerhalb EWR/Fremdwährung zzgl. 1,75 % (mind. 1,50 €) und 0,50 % Umrechnungsentgelt",
     "Kein Online-Antrag",
@@ -1666,11 +1736,13 @@
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
    "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-black/"
+   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-black/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "deutsche-bank-businesscard",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1710,11 +1782,13 @@
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
    "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-businesscard/"
+   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-businesscard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "deutsche-bank-businesscard-mit-plus-paket",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1752,11 +1826,13 @@
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
    "stand": "PLV Deutsche Bank AG, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-businesscard-mit-plus-paket/"
+   "url": "https://finvallo.com/de/kreditkarten/deutsche-bank-businesscard-mit-plus-paket/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "miles-und-more-gold-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1781,7 +1857,7 @@
    "tier": 3,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 23,
+   "rank": 29,
    "pros": [
     "Umfassender Reiseschutz",
     "1 Meile pro 2 € Kartenumsatz (Privatkarten); 1 Meile pro 1 € beim Überweisungsservice (kostet 2,5 % Entgelt); Meilen unbegrenzt gültig; Meilentausch in Points (bis 25.000 Meilen = 100 Points/Jahr)",
@@ -1803,11 +1879,13 @@
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten/miles-and-more-gold-credit-card.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-gold-credit-card/"
+   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-gold-credit-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "miles-und-more-blue-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1832,7 +1910,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 100,
+   "rank": 94,
    "pros": [
     "1 Meile pro 2 € Kartenumsatz (Privatkarten); 1 Meile pro 1 € beim Überweisungsservice (kostet 2,5 % Entgelt); Meilen unbegrenzt gültig",
     "6 Monate Wolt+ kostenlos (danach 4,99 €/Monat, verlängert sich automatisch)",
@@ -1853,11 +1931,13 @@
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten/miles-and-more-blue-credit-card.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-blue-credit-card/"
+   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-blue-credit-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "miles-und-more-myflex-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1882,7 +1962,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 69,
+   "rank": 62,
    "pros": [
     "Keine Jahresgebühr",
     "1 Meile pro 2 € Kartenumsatz; Meilen verfallen nach den normalen Miles & More Regeln",
@@ -1902,11 +1982,13 @@
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten/miles-and-more-myflex-credit-card.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis-myflex.pdf",
    "stand": "PLV Miles & More MyFlex Credit Card, Stand Juli 2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-myflex-credit-card/"
+   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-myflex-credit-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "miles-und-more-lufthansa-frequent-traveller-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1949,11 +2031,13 @@
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten-fuer-vielfliegende/lufthansa-frequent-traveller-credit-card.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-lufthansa-frequent-traveller-credit-card/"
+   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-lufthansa-frequent-traveller-credit-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "miles-und-more-lufthansa-senator-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1997,11 +2081,13 @@
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten-fuer-vielfliegende/lufthansa-senator-credit-card.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-lufthansa-senator-credit-card/"
+   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-lufthansa-senator-credit-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "miles-und-more-lufthansa-hon-circle-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -2045,11 +2131,13 @@
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten-fuer-vielfliegende/lufthansa-hon-circle-credit-card.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-lufthansa-hon-circle-credit-card/"
+   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-lufthansa-hon-circle-credit-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "miles-und-more-gold-credit-card-business",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -2091,11 +2179,13 @@
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/selbststaendige.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-gold-credit-card-business/"
+   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-gold-credit-card-business/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "miles-und-more-blue-credit-card-business",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -2136,11 +2226,13 @@
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/selbststaendige.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV Lufthansa Miles & More Credit Card, Stand Juli 2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-blue-credit-card-business/"
+   "url": "https://finvallo.com/de/kreditkarten/miles-und-more-blue-credit-card-business/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "postbank-mastercard",
    "anbieter": "Postbank",
    "herausgeber": "Deutsche Bank AG (Postbank – eine Niederlassung der Deutsche Bank AG)",
@@ -2165,7 +2257,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 111,
+   "rank": 106,
    "pros": [
     "5 % Reisebonus auf Buchungen über Partner Urlaubsplus",
     "Kein Girokonto beim Anbieter nötig",
@@ -2185,11 +2277,13 @@
    "quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/kreditkarten/mastercard.html",
    "preis": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
    "stand": "PLV Postbank, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/postbank-mastercard/"
+   "url": "https://finvallo.com/de/kreditkarten/postbank-mastercard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "postbank-mastercard-gold",
    "anbieter": "Postbank",
    "herausgeber": "Deutsche Bank AG (Postbank – eine Niederlassung der Deutsche Bank AG)",
@@ -2214,7 +2308,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 46,
+   "rank": 52,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "5 % Reisebonus auf Buchungen über Partner Urlaubsplus",
@@ -2235,11 +2329,13 @@
    "quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/kreditkarten/mastercard-gold.html",
    "preis": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
    "stand": "PLV Postbank, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/postbank-mastercard-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/postbank-mastercard-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "postbank-mastercard-platinum",
    "anbieter": "Postbank",
    "herausgeber": "Deutsche Bank AG (Postbank – eine Niederlassung der Deutsche Bank AG)",
@@ -2285,11 +2381,13 @@
    "quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/kreditkarten/mastercard-platinum.html",
    "preis": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
    "stand": "PLV Postbank, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/postbank-mastercard-platinum/"
+   "url": "https://finvallo.com/de/kreditkarten/postbank-mastercard-platinum/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "postbank-mastercard-business-card-classic",
    "anbieter": "Postbank",
    "herausgeber": "Deutsche Bank AG (Postbank – eine Niederlassung der Deutsche Bank AG)",
@@ -2325,11 +2423,13 @@
    "quelle": "https://www.postbank.de/geschaeftskunden.html",
    "preis": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
    "stand": "PLV Postbank, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/postbank-mastercard-business-card-classic/"
+   "url": "https://finvallo.com/de/kreditkarten/postbank-mastercard-business-card-classic/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "postbank-mastercard-business-card-gold",
    "anbieter": "Postbank",
    "herausgeber": "Deutsche Bank AG (Postbank – eine Niederlassung der Deutsche Bank AG)",
@@ -2364,11 +2464,13 @@
    "quelle": "https://www.postbank.de/geschaeftskunden.html",
    "preis": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
    "stand": "PLV Postbank, Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/postbank-mastercard-business-card-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/postbank-mastercard-business-card-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "norisbank-mastercard-kreditkarte",
    "anbieter": "norisbank",
    "herausgeber": null,
@@ -2393,7 +2495,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 110,
+   "rank": 104,
    "pros": [
     "Keine Jahresgebühr",
     "Kostenlos zum Girokonto",
@@ -2409,11 +2511,13 @@
    "quelle": "https://www.norisbank.de/girokonto",
    "preis": "https://www.norisbank.de/dam/norisbank/de/shared/pdf/Preis_und_Leistungsverzeichnis.pdf",
    "stand": "PLV norisbank 19.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/norisbank-mastercard-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/norisbank-mastercard-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "openbank-bestcard-basic",
    "anbieter": "Openbank",
    "herausgeber": "Openbank Deutschland AG (ehem. Santander Consumer Bank AG)",
@@ -2438,7 +2542,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 78,
+   "rank": 76,
    "pros": [
     "Keine Jahresgebühr",
     "Kein Girokonto beim Anbieter nötig",
@@ -2457,11 +2561,13 @@
    "quelle": "https://www.openbank.de/content/openbank/de/de/home/produkte/konten-und-karten/karten/kostenlose-kreditkarte.html",
    "preis": "https://www.openbank.de/content/dam/openbank/dokumente/preis-und-leistungsverzeichnisse/preisverzeichnis.pdf.coredownload.pdf",
    "stand": "PLV Openbank Deutschland, Stand 07.10.2026 (Antrag ab 02.06.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/openbank-bestcard-basic/"
+   "url": "https://finvallo.com/de/kreditkarten/openbank-bestcard-basic/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "openbank-bestcard-smart",
    "anbieter": "Openbank",
    "herausgeber": "Openbank Deutschland AG (ehem. Santander Consumer Bank AG)",
@@ -2486,7 +2592,7 @@
    "tier": 0,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 21,
+   "rank": 19,
    "pros": [
     "Im 1. Jahr 0 € statt 24 €",
     "Keine Fremdwährungsgebühr",
@@ -2507,11 +2613,13 @@
    "quelle": "https://www.openbank.de/content/openbank/de/de/home/produkte/konten-und-karten/karten/shopping-kreditkarte.html",
    "preis": "https://www.openbank.de/content/dam/openbank/dokumente/preis-und-leistungsverzeichnisse/preisverzeichnis.pdf.coredownload.pdf",
    "stand": "PLV Openbank Deutschland, Stand 07.10.2026 (Antrag ab 02.06.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/openbank-bestcard-smart/"
+   "url": "https://finvallo.com/de/kreditkarten/openbank-bestcard-smart/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "openbank-bestcard-extra",
    "anbieter": "Openbank",
    "herausgeber": "Openbank Deutschland AG (ehem. Santander Consumer Bank AG)",
@@ -2536,7 +2644,7 @@
    "tier": 2,
    "stars": 4.3,
    "note": "Gut",
-   "rank": 8,
+   "rank": 9,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -2556,11 +2664,13 @@
    "quelle": "https://www.openbank.de/content/openbank/de/de/home/produkte/konten-und-karten/karten/reise-kreditkarte.html",
    "preis": "https://www.openbank.de/content/dam/openbank/dokumente/preis-und-leistungsverzeichnisse/preisverzeichnis.pdf.coredownload.pdf",
    "stand": "PLV Openbank Deutschland, Stand 07.10.2026 (Antrag ab 02.06.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/openbank-bestcard-extra/"
+   "url": "https://finvallo.com/de/kreditkarten/openbank-bestcard-extra/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "openbank-bestcard-premium",
    "anbieter": "Openbank",
    "herausgeber": "Openbank Deutschland AG (ehem. Santander Consumer Bank AG)",
@@ -2585,7 +2695,7 @@
    "tier": 3,
    "stars": 4.3,
    "note": "Gut",
-   "rank": 11,
+   "rank": 12,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -2605,11 +2715,13 @@
    "quelle": "https://www.openbank.de/content/openbank/de/de/home/produkte/konten-und-karten/karten/premium-kreditkarte.html",
    "preis": "https://www.openbank.de/content/dam/openbank/dokumente/preis-und-leistungsverzeichnisse/preisverzeichnis.pdf.coredownload.pdf",
    "stand": "PLV Openbank Deutschland, Stand 07.10.2026 (Antrag ab 02.06.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/openbank-bestcard-premium/"
+   "url": "https://finvallo.com/de/kreditkarten/openbank-bestcard-premium/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "targobank-online-classic-karte",
    "anbieter": "TARGOBANK",
    "herausgeber": null,
@@ -2634,7 +2746,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 105,
+   "rank": 103,
    "pros": [
     "Keine Jahresgebühr",
     "5 % Reisebonus über Partner Urlaubsplus",
@@ -2655,11 +2767,13 @@
    "quelle": "https://www.targobank.de/de/konto-karten/kreditkarte-classic.html",
    "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
    "stand": "PLV TARGOBANK, Stand 30.09.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/targobank-online-classic-karte/"
+   "url": "https://finvallo.com/de/kreditkarten/targobank-online-classic-karte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "targobank-gold-karte",
    "anbieter": "TARGOBANK",
    "herausgeber": null,
@@ -2705,11 +2819,13 @@
    "quelle": "https://www.targobank.de/de/konto-karten/kreditkarte-gold.html",
    "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
    "stand": "PLV TARGOBANK, Stand 30.09.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/targobank-gold-karte/"
+   "url": "https://finvallo.com/de/kreditkarten/targobank-gold-karte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "targobank-premium-karte",
    "anbieter": "TARGOBANK",
    "herausgeber": null,
@@ -2734,7 +2850,7 @@
    "tier": 3,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 53,
+   "rank": 55,
    "pros": [
     "Umfassender Reiseschutz",
     "1 Bonuspunkt pro 1 € (2 Punkte bei Reise/Restaurant), max. 20.000 Punkte/Jahr; 100 Punkte = 1 €, Einlösung ab 9.000 Punkten",
@@ -2756,11 +2872,13 @@
    "quelle": "https://www.targobank.de/de/konto-karten/kreditkarte-premium.html",
    "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
    "stand": "PLV TARGOBANK, Stand 30.09.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/targobank-premium-karte/"
+   "url": "https://finvallo.com/de/kreditkarten/targobank-premium-karte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "targobank-business-kreditkarte-komfort",
    "anbieter": "TARGOBANK",
    "herausgeber": null,
@@ -2799,11 +2917,13 @@
    "quelle": "https://www.targobank.de/",
    "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
    "stand": "PLV TARGOBANK, Stand 30.09.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/targobank-business-kreditkarte-komfort/"
+   "url": "https://finvallo.com/de/kreditkarten/targobank-business-kreditkarte-komfort/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "targobank-business-kreditkarte-premium",
    "anbieter": "TARGOBANK",
    "herausgeber": null,
@@ -2842,11 +2962,13 @@
    "quelle": "https://www.targobank.de/",
    "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
    "stand": "PLV TARGOBANK, Stand 30.09.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/targobank-business-kreditkarte-premium/"
+   "url": "https://finvallo.com/de/kreditkarten/targobank-business-kreditkarte-premium/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "commerzbank-prepaid-kreditkarte",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -2871,7 +2993,7 @@
    "tier": 0,
    "stars": 3.0,
    "note": "Ausreichend",
-   "rank": 134,
+   "rank": 133,
    "pros": [
     "Keine SCHUFA-/Bonitätsprüfung",
     "Visa oder Mastercard wählbar",
@@ -2890,11 +3012,13 @@
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/prepaid-karte/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
    "stand": "PLV Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/commerzbank-prepaid-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/commerzbank-prepaid-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "commerzbank-mastercard-debit",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -2938,11 +3062,13 @@
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/mastercard-debit/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
    "stand": "PLV Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/commerzbank-mastercard-debit/"
+   "url": "https://finvallo.com/de/kreditkarten/commerzbank-mastercard-debit/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "commerzbank-classickreditkarte",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -2967,7 +3093,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 118,
+   "rank": 119,
    "pros": [
     "Visa oder Mastercard wählbar",
     "Monatlich kündbar, anteilige Erstattung",
@@ -2986,11 +3112,13 @@
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/classic-kreditkarte/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
    "stand": "PLV Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/commerzbank-classickreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/commerzbank-classickreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "commerzbank-goldkreditkarte",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -3015,7 +3143,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 54,
+   "rank": 56,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Reiseversicherung ohne Karteneinsatzpflicht",
@@ -3035,11 +3163,13 @@
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/gold-kreditkarte/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
    "stand": "PLV Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/commerzbank-goldkreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/commerzbank-goldkreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "commerzbank-premiumkreditkarte",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -3064,7 +3194,7 @@
    "tier": 2,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 95,
+   "rank": 98,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Bis zu 2 Visa + 2 Mastercard im PremiumKonto",
@@ -3074,6 +3204,7 @@
     "Priority-Pass-Mitgliedschaft"
    ],
    "cons": [
+    "Hohe Jahresgebühr (154,80 €)",
     "Fremdwährungsgebühr: 1,75 % (außerhalb Euroland; in EWR-Währungen zzgl. 0,59 % Umrechnungsentgelt)",
     "Bargeld am Automaten kostet 12 Abhebungen p. a. im Inland und 25 im Ausland kostenlos, danach 1,95 %, mind. 5,98 € (Ausland zzgl. 1,75 % Auslandseinsatzentgelt)",
     "Nur mit Konto beim Anbieter (Commerzbank PremiumKonto (12,90 €/Monat, Pflicht))",
@@ -3084,11 +3215,13 @@
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/premium-kreditkarte/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
    "stand": "PLV Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/commerzbank-premiumkreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/commerzbank-premiumkreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "commerzbank-young-visa-kreditkarte",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -3113,7 +3246,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 88,
+   "rank": 82,
    "pros": [
     "Keine Jahresgebühr",
     "Kostenlos für junge Leute bis 27",
@@ -3130,11 +3263,13 @@
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/young-visa/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
    "stand": "PLV Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/commerzbank-young-visa-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/commerzbank-young-visa-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "commerzbank-business-card-classic",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -3176,11 +3311,13 @@
    "quelle": "https://www.commerzbank.de/unternehmerkunden/firmenkreditkarten/businesscard/",
    "preis": "https://www.commerzbank.de/unternehmerkunden/firmenkreditkarten/businesscard/",
    "stand": "Produktseite 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/commerzbank-business-card-classic/"
+   "url": "https://finvallo.com/de/kreditkarten/commerzbank-business-card-classic/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "commerzbank-business-card-premium",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -3223,11 +3360,13 @@
    "quelle": "https://www.commerzbank.de/unternehmerkunden/firmenkreditkarten/business-card-premium/",
    "preis": "https://www.commerzbank.de/unternehmerkunden/firmenkreditkarten/business-card-premium/",
    "stand": "Produktseite 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/commerzbank-business-card-premium/"
+   "url": "https://finvallo.com/de/kreditkarten/commerzbank-business-card-premium/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "comdirect-visa-kreditkarte",
    "anbieter": "comdirect",
    "herausgeber": "Commerzbank AG",
@@ -3252,7 +3391,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 74,
+   "rank": 77,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Kein Auslandseinsatzentgelt",
@@ -3271,11 +3410,13 @@
    "quelle": "https://www.comdirect.de/konto/karten.html",
    "preis": "https://www.comdirect.de/formulare/preis-leistungsverzeichnis",
    "stand": "PLV gültig ab 15.07.2026 (Stand 07/26)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/comdirect-visa-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/comdirect-visa-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "comdirect-visa-debitkarte",
    "anbieter": "comdirect",
    "herausgeber": "Commerzbank AG",
@@ -3300,7 +3441,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 122,
+   "rank": 121,
    "pros": [
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Gratis-Konto unter Bedingungen",
@@ -3319,11 +3460,13 @@
    "quelle": "https://www.comdirect.de/konto/karten.html",
    "preis": "https://www.comdirect.de/formulare/preis-leistungsverzeichnis",
    "stand": "PLV gültig ab 15.07.2026 (Stand 07/26)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/comdirect-visa-debitkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/comdirect-visa-debitkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "dkb-visa-debitkarte",
    "anbieter": "DKB",
    "herausgeber": "Deutsche Kreditbank AG",
@@ -3369,11 +3512,13 @@
    "quelle": "https://www.dkb.de/girokonto",
    "preis": "https://dok.dkb.de/pdf/plv_pk_karten.pdf",
    "stand": "PLV Karten Stand 15.09.2026; PLV Konten Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/dkb-visa-debitkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/dkb-visa-debitkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "dkb-visa-kreditkarte",
    "anbieter": "DKB",
    "herausgeber": "Deutsche Kreditbank AG",
@@ -3398,7 +3543,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 39,
+   "rank": 37,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -3418,11 +3563,13 @@
    "quelle": "https://www.dkb.de/kreditkarte",
    "preis": "https://dok.dkb.de/pdf/plv_pk_karten.pdf",
    "stand": "PLV Karten Stand 15.09.2026; PLV Konten Stand 01.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/dkb-visa-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/dkb-visa-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "ing-visa-card",
    "anbieter": "ING",
    "herausgeber": "ING-DiBa AG",
@@ -3447,7 +3594,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 129,
+   "rank": 130,
    "pros": [
     "Bargeld ohne Automatengebühr",
     "Nur Partner-Cashback über das ING-Portal DealWise, kein Cashback auf normale Einkäufe",
@@ -3468,11 +3615,13 @@
    "quelle": "https://www.ing.de/girokonto/",
    "preis": "https://www.ing.de/dokumente/ing-diba-preise-leistungen/",
    "stand": "PLV Stand 14.05.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/ing-visa-card/"
+   "url": "https://finvallo.com/de/kreditkarten/ing-visa-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "1822direkt-visa-classic-kreditkarte",
    "anbieter": "1822direkt",
    "herausgeber": "Frankfurter Sparkasse",
@@ -3497,7 +3646,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 104,
+   "rank": 107,
    "pros": [
     "Im 1. Jahr 0 € statt 36 €",
     "Bargeld ohne Automatengebühr",
@@ -3517,11 +3666,13 @@
    "quelle": "https://www.1822direkt.de/girokonto/kreditkarte/",
    "preis": "https://www.1822direkt.de/fileadmin/Home/Dokumente/PDF/PDF/pv_gesamt_1822direkt.pdf",
    "stand": "PLV 11.08.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/1822direkt-visa-classic-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/1822direkt-visa-classic-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "1822direkt-visa-gold-kreditkarte",
    "anbieter": "1822direkt",
    "herausgeber": "Frankfurter Sparkasse",
@@ -3546,7 +3697,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 31,
+   "rank": 39,
    "pros": [
     "Im 1. Jahr 0 € statt 72 €",
     "Bargeld ohne Automatengebühr",
@@ -3568,11 +3719,13 @@
    "quelle": "https://www.1822direkt.de/girokonto/kreditkarte/",
    "preis": "https://www.1822direkt.de/fileadmin/Home/Dokumente/PDF/PDF/pv_gesamt_1822direkt.pdf",
    "stand": "PLV 11.08.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/1822direkt-visa-gold-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/1822direkt-visa-gold-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "hypovereinsbank-mastercard",
    "anbieter": "HypoVereinsbank",
    "herausgeber": "UniCredit Bank GmbH",
@@ -3597,7 +3750,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 98,
+   "rank": 86,
    "pros": [
     "Im ExklusivKonto und StartKonto kostenlos",
     "Bargeld an HVB-Automaten kostenlos",
@@ -3616,11 +3769,13 @@
    "quelle": "https://www.hypovereinsbank.de/hvb/privatkunden/banking-im-alltag/karten/mastercard",
    "preis": "https://www.hypovereinsbank.de/content/dam/hypovereinsbank/shared/pdf/Produktprofile/HVB-Mastercard-Kreditkarte-Produktprofil.pdf",
    "stand": "Produktprofil Stand 02/2025; Produktseite 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/hypovereinsbank-mastercard/"
+   "url": "https://finvallo.com/de/kreditkarten/hypovereinsbank-mastercard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "hypovereinsbank-mastercard-gold",
    "anbieter": "HypoVereinsbank",
    "herausgeber": "UniCredit Bank GmbH",
@@ -3645,7 +3800,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 44,
+   "rank": 38,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Reiseschutz ohne Karteneinsatzpflicht",
@@ -3665,11 +3820,13 @@
    "quelle": "https://www.hypovereinsbank.de/hvb/privatkunden/banking-im-alltag/karten/mastercard-gold",
    "preis": "https://www.hypovereinsbank.de/content/dam/hypovereinsbank/shared/pdf/Produktprofile/HVB-MastercardGold-Kreditkarte-Produktprofil.pdf",
    "stand": "Produktprofil Stand 08/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/hypovereinsbank-mastercard-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/hypovereinsbank-mastercard-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "sparkasse-kreditkarte-classic",
    "anbieter": "Sparkasse",
    "herausgeber": "Berliner Sparkasse (Beispiel; Herausgeber ist die jeweilige Sparkasse)",
@@ -3694,7 +3851,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 115,
+   "rank": 117,
    "pros": [
     "Bis zu 7 % Rückerstattung nur auf Reisebuchungen über den ReisebuchungsService der Sparkasse (kein Cashback auf normale Einkäufe)",
     "Bargeld im Ausland kostenlos",
@@ -3714,11 +3871,13 @@
    "quelle": "https://www.berliner-sparkasse.de/de/home/privatkunden/kreditkarte/visa-card.html",
    "preis": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
    "stand": "PLV Berliner Sparkasse 15.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/sparkasse-kreditkarte-classic/"
+   "url": "https://finvallo.com/de/kreditkarten/sparkasse-kreditkarte-classic/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "sparkasse-kreditkarte-gold",
    "anbieter": "Sparkasse",
    "herausgeber": "Berliner Sparkasse (Beispiel; Herausgeber ist die jeweilige Sparkasse)",
@@ -3743,7 +3902,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 52,
+   "rank": 54,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Bis zu 7 % Rückerstattung nur auf Reisebuchungen über den ReisebuchungsService der Sparkasse (kein Cashback auf normale Einkäufe)",
@@ -3765,11 +3924,13 @@
    "quelle": "https://www.berliner-sparkasse.de/de/home/privatkunden/kreditkarte/visa-card-gold.html",
    "preis": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
    "stand": "PLV Berliner Sparkasse 15.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/sparkasse-kreditkarte-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/sparkasse-kreditkarte-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "sparkasse-visa-card-basis",
    "anbieter": "Sparkasse",
    "herausgeber": "Berliner Sparkasse (Beispiel; Herausgeber ist die jeweilige Sparkasse)",
@@ -3794,7 +3955,7 @@
    "tier": 0,
    "stars": 3.0,
    "note": "Ausreichend",
-   "rank": 133,
+   "rank": 134,
    "pros": [
     "Bis zu 7 % Rückerstattung nur auf Reisebuchungen über den ReisebuchungsService der Sparkasse (kein Cashback auf normale Einkäufe)",
     "Ab 12 Jahren",
@@ -3813,11 +3974,13 @@
    "quelle": "https://www.berliner-sparkasse.de/de/home/privatkunden/kreditkarte/visa-basis.html",
    "preis": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
    "stand": "PLV Berliner Sparkasse 15.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/sparkasse-visa-card-basis/"
+   "url": "https://finvallo.com/de/kreditkarten/sparkasse-visa-card-basis/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "sparkasse-visa-card-business-gold",
    "anbieter": "Sparkasse",
    "herausgeber": "Berliner Sparkasse (Beispiel; Herausgeber ist die jeweilige Sparkasse)",
@@ -3855,11 +4018,13 @@
    "quelle": "https://www.berliner-sparkasse.de/",
    "preis": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
    "stand": "PLV Berliner Sparkasse 15.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/sparkasse-visa-card-business-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/sparkasse-visa-card-business-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "volksbank-classiccard",
    "anbieter": "Volksbank",
    "herausgeber": "Berliner Volksbank eG (Beispiel; Herausgeber ist die jeweilige Volksbank, Kartenprodukt DG Nexolution)",
@@ -3884,7 +4049,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 62,
+   "rank": 60,
    "pros": [
     "Keine Jahresgebühr",
     "Bis 4 % (Classic) bzw. 10 % (Gold) Reisebonus nur bei Buchung über vr-meinereise.de/Urlaubsplus – kein Cashback auf normale Einkäufe",
@@ -3903,11 +4068,13 @@
    "quelle": "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte.html",
    "preis": "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte.html",
    "stand": "Produktseiten 10/2026 (Preisverzeichnis-PDF nicht abrufbar)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/volksbank-classiccard/"
+   "url": "https://finvallo.com/de/kreditkarten/volksbank-classiccard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "volksbank-goldcard",
    "anbieter": "Volksbank",
    "herausgeber": "Berliner Volksbank eG (Beispiel; Herausgeber ist die jeweilige Volksbank, Kartenprodukt DG Nexolution)",
@@ -3932,7 +4099,7 @@
    "tier": 2,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 22,
+   "rank": 20,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Reiseversicherung inkl. Storno",
@@ -3953,11 +4120,13 @@
    "quelle": "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte-gold.html",
    "preis": "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte-gold.html",
    "stand": "Produktseiten 10/2026 (Preisverzeichnis-PDF nicht abrufbar)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/volksbank-goldcard/"
+   "url": "https://finvallo.com/de/kreditkarten/volksbank-goldcard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "olb-mastercard-prepaid",
    "anbieter": "OLB",
    "herausgeber": "Oldenburgische Landesbank AG",
@@ -3982,7 +4151,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 131,
+   "rank": 125,
    "pros": [
     "Bis 25 Jahre kostenlos",
     "Keine Bonitätsprüfung (Guthabenbasis)"
@@ -3999,11 +4168,13 @@
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
    "stand": "PLV gültig ab 01.10.2025 (aktuell verlinkt, 10/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-prepaid/"
+   "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-prepaid/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "olb-mastercard-standard",
    "anbieter": "OLB",
    "herausgeber": "Oldenburgische Landesbank AG",
@@ -4028,7 +4199,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 117,
+   "rank": 116,
    "pros": [
     "Im smartDialog-Konto enthalten"
    ],
@@ -4043,11 +4214,13 @@
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
    "stand": "PLV gültig ab 01.10.2025 (aktuell verlinkt, 10/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-standard/"
+   "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-standard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "olb-mastercard-gold",
    "anbieter": "OLB",
    "herausgeber": "Oldenburgische Landesbank AG",
@@ -4072,7 +4245,7 @@
    "tier": null,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 65,
+   "rank": 68,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Kein Fremdwährungsentgelt",
@@ -4087,11 +4260,13 @@
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
    "stand": "PLV gültig ab 01.10.2025 (aktuell verlinkt, 10/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "olb-mastercard-world-elite",
    "anbieter": "OLB",
    "herausgeber": "Oldenburgische Landesbank AG",
@@ -4116,13 +4291,14 @@
    "tier": null,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 107,
+   "rank": 111,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Kein Fremdwährungsentgelt",
     "Bargeld im Ausland kostenlos"
    ],
    "cons": [
+    "Hohe Jahresgebühr (198 €)",
     "Nur mit Konto beim Anbieter (OLB Girokonto (z. B. smartDigital 5 €/Monat, 0 € ab 1.000 € Durchschnittsguthaben; smartDialog 7,50 €/Monat inkl. Mastercard Standard, bis 25 Jahre 0 €))",
     "Nur mit OLB-Girokonto",
     "Hohe Monatsgebühr"
@@ -4130,11 +4306,13 @@
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
    "stand": "PLV gültig ab 01.10.2025 (aktuell verlinkt, 10/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": null,
-   "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-world-elite/"
+   "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-world-elite/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "american-express-platinum-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4159,7 +4337,7 @@
    "tier": 4,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 109,
+   "rank": 114,
    "pros": [
     "Premium-Reiseschutz",
     "Membership Rewards inklusive: 1 Punkt pro 1 € Umsatz, Punkte u. a. zu Airline- und Hotelprogrammen übertragbar",
@@ -4172,22 +4350,24 @@
     "Status-Upgrades bei Hotel- und Mietwagenprogrammen"
    ],
    "cons": [
+    "Hohe Jahresgebühr (720 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (Inland wie Ausland, zzgl. 2 % bei Fremdwährung); max. 1.500 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
     "720 € Jahresgebühr",
     "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
-    "Lounge-Besuche auf 50 pro Jahr begrenzt"
+    "Bargeld 4 %, mind. 5 €"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/platinum-card/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Platinum_Card_Informationen.pdf",
    "stand": "Platinum Card Informationen (PDF 06/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Premium-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/american-express-platinum-card/"
+   "url": "https://finvallo.com/de/kreditkarten/american-express-platinum-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "american-express-gold-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4212,7 +4392,7 @@
    "tier": 2,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 85,
+   "rank": 99,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Membership Rewards inklusive: 1 Punkt pro 1 € Umsatz, Punkte u. a. zu Airline-Partnern übertragbar",
@@ -4225,22 +4405,24 @@
     "GHA DISCOVERY Gold-Status"
    ],
    "cons": [
+    "Hohe Jahresgebühr (240 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (Inland wie Ausland, zzgl. 2 % bei Fremdwährung); max. 1.500 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
     "240 € Jahresgebühr",
     "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
-    "keine Mietwagen-Vollkasko"
+    "Bargeld 4 %, mind. 5 €"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/goldcard/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Gold_Card_Informationen.pdf",
    "stand": "Gold Card aus Metall Informationen (PDF 08/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/american-express-gold-card/"
+   "url": "https://finvallo.com/de/kreditkarten/american-express-gold-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "american-express-gold-card-rose",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4265,7 +4447,7 @@
    "tier": 2,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 86,
+   "rank": 100,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Membership Rewards inklusive: 1 Punkt pro 1 € Umsatz, Punkte u. a. zu Airline-Partnern übertragbar",
@@ -4278,22 +4460,24 @@
     "GHA DISCOVERY Gold-Status"
    ],
    "cons": [
+    "Hohe Jahresgebühr (240 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (Inland wie Ausland, zzgl. 2 % bei Fremdwährung); max. 1.500 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
     "240 € Jahresgebühr",
     "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
-    "keine Mietwagen-Vollkasko"
+    "Bargeld 4 %, mind. 5 €"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/gold-rose/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Gold_Card_Informationen.pdf",
    "stand": "Gold Card aus Metall Informationen (PDF 08/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/american-express-gold-card-rose/"
+   "url": "https://finvallo.com/de/kreditkarten/american-express-gold-card-rose/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "american-express-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4318,7 +4502,7 @@
    "tier": 1,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 83,
+   "rank": 93,
    "pros": [
     "Membership Rewards Classic inklusive (für Neukunden ab 01/2026): 1 Punkt pro 1 € Umsatz",
     "Kein Girokonto beim Anbieter nötig",
@@ -4338,11 +4522,13 @@
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/american-express-card/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/American_Express_Card_Informationen.pdf",
    "stand": "American Express Card Informationen (PDF 06/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/american-express-card/"
+   "url": "https://finvallo.com/de/kreditkarten/american-express-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "american-express-blue-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4387,11 +4573,13 @@
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/blue-card/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Blue_Card_Informationen.pdf",
    "stand": "Blue Card Informationen (PDF 06/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/american-express-blue-card/"
+   "url": "https://finvallo.com/de/kreditkarten/american-express-blue-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "payback-american-express-karte",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4438,11 +4626,13 @@
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/payback-karte/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Payback_Card_Informationen.pdf",
    "stand": "PAYBACK Card Informationen (PDF 06/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/payback-american-express-karte/"
+   "url": "https://finvallo.com/de/kreditkarten/payback-american-express-karte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "dm-payback-american-express-karte",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4488,11 +4678,13 @@
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/dm-payback-karte/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Payback_Card_Informationen.pdf",
    "stand": "PAYBACK Card Informationen (PDF 06/2026, gilt auch für die dm-Variante)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/dm-payback-american-express-karte/"
+   "url": "https://finvallo.com/de/kreditkarten/dm-payback-american-express-karte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bmw-card-von-american-express",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4517,7 +4709,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 112,
+   "rank": 108,
    "pros": [
     "1 % Gutschrift ohne Limit auf Tank- und E-Ladeumsätze bei gelisteten Ketten in DE; sonst Membership Rewards inklusive (1 Punkt pro 1 €, ohne Tankumsätze)",
     "Kein Girokonto beim Anbieter nötig",
@@ -4538,11 +4730,13 @@
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/bmw-card/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/BMW_Card_Informationen.pdf",
    "stand": "BMW Card Informationen (PDF 06/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/bmw-card-von-american-express/"
+   "url": "https://finvallo.com/de/kreditkarten/bmw-card-von-american-express/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bmw-premium-card-carbon",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4567,7 +4761,7 @@
    "tier": 3,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 114,
+   "rank": 113,
    "pros": [
     "Umfassender Reiseschutz",
     "Membership Rewards inklusive: 1 Punkt pro 1 €, bei BMW-Händlern, SIXT und ausgewählten Tankstellen in DE 2 Punkte pro 1 €",
@@ -4580,22 +4774,24 @@
     "SIXT Status- und Fahrzeug-Upgrades"
    ],
    "cons": [
+    "Hohe Jahresgebühr (500 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 1.500 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
     "500 € Jahresgebühr",
     "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
-    "Lounge-Gäste kostenpflichtig"
+    "Bargeld 4 %, mind. 5 €"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/bmw-carbon/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/BMW_Carbon_Card_Informationen.pdf",
    "stand": "BMW Premium Card Carbon Informationen (PDF 06/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/bmw-premium-card-carbon/"
+   "url": "https://finvallo.com/de/kreditkarten/bmw-premium-card-carbon/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "american-express-business-platinum-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4633,22 +4829,24 @@
     "Platinum Plus Card für private Ausgaben inklusive"
    ],
    "cons": [
+    "Hohe Jahresgebühr (850 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 950 €/7 Tage; erst nach Anmeldung, frühestens 6 Monate nach Kartenausstellung",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
     "850 € Jahresgebühr",
     "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
-    "Apple Pay nicht erwähnt"
+    "Bargeld 4 %, mind. 5 €"
    ],
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/business-platinum/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Platinum_Card_Informationen_NEU.pdf",
    "stand": "Business Platinum Leistungsübersicht 06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Premium-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/american-express-business-platinum-card/"
+   "url": "https://finvallo.com/de/kreditkarten/american-express-business-platinum-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "american-express-business-gold-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4685,6 +4883,7 @@
     "bis zu 50 Tage Zahlungsziel"
    ],
    "cons": [
+    "Hohe Jahresgebühr (175 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 950 €/7 Tage",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
@@ -4695,11 +4894,13 @@
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/business-gold/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Gold_Card_Informationen_NEU.pdf",
    "stand": "Business Gold Leistungsübersicht 06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/american-express-business-gold-card/"
+   "url": "https://finvallo.com/de/kreditkarten/american-express-business-gold-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "american-express-business-green-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4744,11 +4945,13 @@
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/business-green/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Green_Card_Informationen.pdf",
    "stand": "Business Green Leistungsübersicht 06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/american-express-business-green-card/"
+   "url": "https://finvallo.com/de/kreditkarten/american-express-business-green-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "amazon-business-american-express-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4794,11 +4997,13 @@
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/amazon-business-card/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amazon_Business_Amex_Card_Informationen.pdf",
    "stand": "Amazon Business Amex Informationen (PDF 06/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/amazon-business-american-express-card/"
+   "url": "https://finvallo.com/de/kreditkarten/amazon-business-american-express-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "amazon-business-prime-american-express-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4845,11 +5050,13 @@
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/amazon-business-prime-card/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amazon_Business_Amex_Card_Informationen.pdf",
    "stand": "Amazon Business Amex Informationen (PDF 06/2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/amazon-business-prime-american-express-card/"
+   "url": "https://finvallo.com/de/kreditkarten/amazon-business-prime-american-express-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "payback-visa-kreditkarte",
    "anbieter": "PAYBACK",
    "herausgeber": "BW-Bank (Baden-Württembergische Bank)",
@@ -4874,7 +5081,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 60,
+   "rank": 63,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "1 PAYBACK °Punkt pro 5 € Umsatz (ca. 0,2 %), zusätzlich die regulären Punkte bei PAYBACK-Partnern; kein Punkteverfall",
@@ -4895,11 +5102,13 @@
    "quelle": "https://www.payback.de/visa",
    "preis": "https://www.bw-bank.de/content/dam/myif/bwbank/work/dokumente/pdf/public/onlinedienste/paybackvisa-preis-leistungsverzeichnis.pdf",
    "stand": "PLV Fassung 20.07.2025",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/payback-visa-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/payback-visa-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "payback-visa-kreditkarte-auf-guthabenbasis",
    "anbieter": "PAYBACK",
    "herausgeber": "BW-Bank (Baden-Württembergische Bank)",
@@ -4924,7 +5133,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 89,
+   "rank": 87,
    "pros": [
     "Bargeld ohne Automatengebühr",
     "PAYBACK °Punkte auf Kartenumsätze (Sammelrate laut Finanzfluss 1 °P pro 5 €)",
@@ -4944,11 +5153,13 @@
    "quelle": "https://www.payback.de/visa",
    "preis": "https://www.bw-bank.de/content/dam/myif/bwbank/work/dokumente/pdf/public/onlinedienste/paybackvisa-guthaben-preis-leistungsverzeichnis.pdf",
    "stand": "PLV Fassung 20.07.2025",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/payback-visa-kreditkarte-auf-guthabenbasis/"
+   "url": "https://finvallo.com/de/kreditkarten/payback-visa-kreditkarte-auf-guthabenbasis/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "adac-kreditkarte",
    "anbieter": "ADAC",
    "herausgeber": "Solaris SE",
@@ -4973,7 +5184,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 103,
+   "rank": 105,
    "pros": [
     "Im 1. Jahr 0 € statt 22,80 €",
     "Kein Girokonto beim Anbieter nötig",
@@ -4995,11 +5206,13 @@
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
    "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
    "stand": "PLV Version 1.1, Stand 01.07.2026 (ab 28.10.2026 Version 1.2)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/adac-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/adac-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "adac-kreditkarte-mit-paket-schutz",
    "anbieter": "ADAC",
    "herausgeber": "Solaris SE",
@@ -5024,7 +5237,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 61,
+   "rank": 64,
    "pros": [
     "Im 1. Jahr 0 € statt 46,80 €",
     "Kein Girokonto beim Anbieter nötig",
@@ -5044,11 +5257,13 @@
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
    "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
    "stand": "PLV Version 1.1, Stand 01.07.2026 (ab 28.10.2026 Version 1.2)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/adac-kreditkarte-mit-paket-schutz/"
+   "url": "https://finvallo.com/de/kreditkarten/adac-kreditkarte-mit-paket-schutz/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "adac-kreditkarte-mit-paket-sparen",
    "anbieter": "ADAC",
    "herausgeber": "Solaris SE",
@@ -5073,7 +5288,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 119,
+   "rank": 120,
    "pros": [
     "Im 1. Jahr 0 € statt 58,80 €",
     "2 % Tankrabatt weltweit auf Tankstellen- und E-Ladeumsätze bis 150 € pro Monat (also max. 3 €/Monat); bis zu 30 % Cashback über den ADAC-Cashback-Shop; 5 % auf Ferienmietwagen und 10 % auf Clubmobile der ADAC Autovermietung",
@@ -5095,11 +5310,13 @@
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
    "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
    "stand": "PLV Version 1.1, Stand 01.07.2026 (ab 28.10.2026 Version 1.2)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/adac-kreditkarte-mit-paket-sparen/"
+   "url": "https://finvallo.com/de/kreditkarten/adac-kreditkarte-mit-paket-sparen/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "adac-kreditkarte-mit-paket-reise",
    "anbieter": "ADAC",
    "herausgeber": "Solaris SE",
@@ -5124,7 +5341,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 47,
+   "rank": 53,
    "pros": [
     "Im 1. Jahr 0 € statt 70,80 €",
     "Reiseversicherung inkl. Storno",
@@ -5147,11 +5364,13 @@
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
    "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
    "stand": "PLV Version 1.1, Stand 01.07.2026 (ab 28.10.2026 Version 1.2)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/adac-kreditkarte-mit-paket-reise/"
+   "url": "https://finvallo.com/de/kreditkarten/adac-kreditkarte-mit-paket-reise/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "adac-kreditkarte-mit-paket-platin",
    "anbieter": "ADAC",
    "herausgeber": "Solaris SE",
@@ -5200,11 +5419,13 @@
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
    "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
    "stand": "PLV Version 1.1, Stand 01.07.2026 (ab 28.10.2026 Version 1.2)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/adac-kreditkarte-mit-paket-platin/"
+   "url": "https://finvallo.com/de/kreditkarten/adac-kreditkarte-mit-paket-platin/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "n26-standard",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5229,7 +5450,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 49,
+   "rank": 47,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -5250,11 +5471,13 @@
    "quelle": "https://n26.com/de-de/konten-vergleichen",
    "preis": "https://docs.n26.com/legal/01+DE/01+Account/de/13account-pricelist-de.pdf",
    "stand": "PLV Version 4.4 vom 26.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/n26-standard/"
+   "url": "https://finvallo.com/de/kreditkarten/n26-standard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "n26-smart",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5279,7 +5502,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 99,
+   "rank": 92,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5299,11 +5522,13 @@
    "quelle": "https://n26.com/de-de/konten-vergleichen",
    "preis": "https://docs.n26.com/legal/01+DE/01+Account/de/13account-pricelist-de.pdf",
    "stand": "PLV Version 4.4 vom 26.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/n26-smart/"
+   "url": "https://finvallo.com/de/kreditkarten/n26-smart/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "n26-go",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5328,7 +5553,7 @@
    "tier": 2,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 26,
+   "rank": 28,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5349,11 +5574,13 @@
    "quelle": "https://n26.com/de-de/konten-vergleichen",
    "preis": "https://docs.n26.com/legal/01+DE/01+Account/de/13account-pricelist-de.pdf",
    "stand": "PLV Version 4.4 vom 26.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/n26-go/"
+   "url": "https://finvallo.com/de/kreditkarten/n26-go/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "n26-metal",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5378,7 +5605,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 32,
+   "rank": 42,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5391,6 +5618,7 @@
     "1,5 % Tagesgeldzinsen, 10 Gratis-Trades/Monat"
    ],
    "cons": [
+    "Hohe Jahresgebühr (202,80 €)",
     "Nur mit Konto beim Anbieter (N26 Metal (16,90 €/Monat))",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Hohe Monatsgebühr",
@@ -5400,11 +5628,13 @@
    "quelle": "https://n26.com/de-de/konten-vergleichen",
    "preis": "https://docs.n26.com/legal/01+DE/01+Account/de/13account-pricelist-de.pdf",
    "stand": "PLV Version 4.4 vom 26.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/n26-metal/"
+   "url": "https://finvallo.com/de/kreditkarten/n26-metal/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "n26-business-standard",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5449,11 +5679,13 @@
    "quelle": "https://n26.com/de-de/geschaeftskonto",
    "preis": "https://docs.n26.com/legal/01+DE/01+Account/de/13account-pricelist-de.pdf",
    "stand": "PLV Version 4.4 vom 26.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/n26-business-standard/"
+   "url": "https://finvallo.com/de/kreditkarten/n26-business-standard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "n26-business-smart",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5495,11 +5727,13 @@
    "quelle": "https://n26.com/de-de/geschaeftskonto",
    "preis": "https://docs.n26.com/legal/01+DE/01+Account/de/13account-pricelist-de.pdf",
    "stand": "PLV Version 4.4 vom 26.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/n26-business-smart/"
+   "url": "https://finvallo.com/de/kreditkarten/n26-business-smart/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "n26-business-go",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5541,11 +5775,13 @@
    "quelle": "https://n26.com/de-de/geschaeftskonto",
    "preis": "https://docs.n26.com/legal/01+DE/01+Account/de/13account-pricelist-de.pdf",
    "stand": "PLV Version 4.4 vom 26.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/n26-business-go/"
+   "url": "https://finvallo.com/de/kreditkarten/n26-business-go/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "n26-business-metal",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5582,6 +5818,7 @@
     "Reise-, Handy- und Einkaufsversicherung"
    ],
    "cons": [
+    "Hohe Jahresgebühr (202,80 €)",
     "Nur mit Konto beim Anbieter (N26 Business Metal (16,90 €/Monat))",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Hohe Monatsgebühr",
@@ -5590,11 +5827,13 @@
    "quelle": "https://n26.com/de-de/business-metal",
    "preis": "https://docs.n26.com/legal/01+DE/01+Account/de/13account-pricelist-de.pdf",
    "stand": "PLV Version 4.4 vom 26.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/n26-business-metal/"
+   "url": "https://finvallo.com/de/kreditkarten/n26-business-metal/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "c24-bank-smart",
    "anbieter": "C24 Bank",
    "herausgeber": null,
@@ -5619,7 +5858,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 34,
+   "rank": 31,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -5641,11 +5880,13 @@
    "quelle": "https://c24.de/preise",
    "preis": "https://api.c24.de/api/documents/price_service_list/download/",
    "stand": "PLV Stand 08.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/c24-bank-smart/"
+   "url": "https://finvallo.com/de/kreditkarten/c24-bank-smart/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "c24-bank-plus",
    "anbieter": "C24 Bank",
    "herausgeber": null,
@@ -5670,7 +5911,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 80,
+   "rank": 79,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5691,11 +5932,13 @@
    "quelle": "https://c24.de/preise",
    "preis": "https://api.c24.de/api/documents/price_service_list/download/",
    "stand": "PLV Stand 08.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/c24-bank-plus/"
+   "url": "https://finvallo.com/de/kreditkarten/c24-bank-plus/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "c24-bank-max",
    "anbieter": "C24 Bank",
    "herausgeber": null,
@@ -5720,7 +5963,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 106,
+   "rank": 109,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5743,11 +5986,13 @@
    "quelle": "https://c24.de/preise",
    "preis": "https://api.c24.de/api/documents/price_service_list/download/",
    "stand": "PLV Stand 08.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/c24-bank-max/"
+   "url": "https://finvallo.com/de/kreditkarten/c24-bank-max/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "tomorrow-now",
    "anbieter": "Tomorrow",
    "herausgeber": "Solaris SE",
@@ -5772,7 +6017,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 124,
+   "rank": 129,
    "pros": [
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Nachhaltiges Konto (Klimaschutzbeitrag)",
@@ -5791,11 +6036,13 @@
    "quelle": "https://www.tomorrow.one/de-DE/konten/",
    "preis": "https://assets.tomorrow.one/de-DE/legal/preisliste/preisliste.pdf",
    "stand": "Preisliste Version 2.0.0, Stand 01.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/tomorrow-now/"
+   "url": "https://finvallo.com/de/kreditkarten/tomorrow-now/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "tomorrow-change",
    "anbieter": "Tomorrow",
    "herausgeber": "Solaris SE",
@@ -5820,7 +6067,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 66,
+   "rank": 69,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5838,11 +6085,13 @@
    "quelle": "https://www.tomorrow.one/de-DE/konten/",
    "preis": "https://assets.tomorrow.one/de-DE/legal/preisliste/preisliste.pdf",
    "stand": "Preisliste Version 2.0.0, Stand 01.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/tomorrow-change/"
+   "url": "https://finvallo.com/de/kreditkarten/tomorrow-change/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "tomorrow-plus",
    "anbieter": "Tomorrow",
    "herausgeber": "Solaris SE",
@@ -5867,7 +6116,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 55,
+   "rank": 57,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -5879,6 +6128,7 @@
     "1,75 % Tagesgeldzins"
    ],
    "cons": [
+    "Hohe Jahresgebühr (214,80 €)",
     "Nur mit Konto beim Anbieter (Tomorrow Plus (17,90 €/Monat))",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "17,90 €/Monat",
@@ -5888,11 +6138,13 @@
    "quelle": "https://www.tomorrow.one/de-DE/konten/",
    "preis": "https://assets.tomorrow.one/de-DE/legal/preisliste/preisliste.pdf",
    "stand": "Preisliste Version 2.0.0, Stand 01.06.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/tomorrow-plus/"
+   "url": "https://finvallo.com/de/kreditkarten/tomorrow-plus/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "revolut-standard",
    "anbieter": "Revolut",
    "herausgeber": "Revolut Bank UAB, Zweigniederlassung Deutschland",
@@ -5917,7 +6169,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 50,
+   "rank": 48,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -5938,11 +6190,13 @@
    "quelle": "https://www.revolut.com/de-DE/our-pricing-plans/",
    "preis": "https://cdn.revolut.com/terms_and_conditions/pdf/geb_hren_f_r_privatkunden_standard_e926e9b6_1.7.1_1757689367_de.pdf",
    "stand": "Gebühren Standard (DE-Zweigniederlassung), gültig ab 22.04.2025, Dok.-Version 1.7.1",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/revolut-standard/"
+   "url": "https://finvallo.com/de/kreditkarten/revolut-standard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "revolut-plus",
    "anbieter": "Revolut",
    "herausgeber": "Revolut Bank UAB, Zweigniederlassung Deutschland",
@@ -5967,7 +6221,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 76,
+   "rank": 78,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5987,11 +6241,13 @@
    "quelle": "https://www.revolut.com/de-DE/our-pricing-plans/",
    "preis": "https://cdn.revolut.com/terms_and_conditions/pdf/pers_nliche_geb_hren_plus_a420656e_1.6.0_1739875223_de.pdf",
    "stand": "Gebühren Plus (DE-Zweigniederlassung), gültig ab 22.04.2025, Dok.-Version 1.6.0",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/revolut-plus/"
+   "url": "https://finvallo.com/de/kreditkarten/revolut-plus/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "revolut-premium",
    "anbieter": "Revolut",
    "herausgeber": "Revolut Bank UAB, Zweigniederlassung Deutschland",
@@ -6016,7 +6272,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 67,
+   "rank": 70,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6035,11 +6291,13 @@
    "quelle": "https://www.revolut.com/de-DE/our-pricing-plans/",
    "preis": "https://cdn.revolut.com/terms_and_conditions/pdf/pers_nliche_geb_hren_premium_b7803e21_2.8.0_1778139355_de.pdf",
    "stand": "Gebühren Premium (DE-Zweigniederlassung), Neukunden ab 07.05.2026, Dok.-Version 2.8.0",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/revolut-premium/"
+   "url": "https://finvallo.com/de/kreditkarten/revolut-premium/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "revolut-metal",
    "anbieter": "Revolut",
    "herausgeber": "Revolut Bank UAB, Zweigniederlassung Deutschland",
@@ -6075,6 +6333,7 @@
     "Höhere Vault-Zinsen"
    ],
    "cons": [
+    "Hohe Jahresgebühr (191,88 €)",
     "Nur mit Konto beim Anbieter (Revolut Metal (15,99 € pro Monat oder 155 € pro Jahr (Neukunden ab 07.05.2026)))",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Lounge nur kostenpflichtig",
@@ -6083,11 +6342,13 @@
    "quelle": "https://www.revolut.com/de-DE/our-pricing-plans/",
    "preis": "https://cdn.revolut.com/terms_and_conditions/pdf/pers_nliche_geb_hren_metal_60e6b156_1.7.0_1778140095_de.pdf",
    "stand": "Gebühren Metal (DE-Zweigniederlassung), Neukunden ab 07.05.2026, Dok.-Version 1.7.0",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Basis-Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/revolut-metal/"
+   "url": "https://finvallo.com/de/kreditkarten/revolut-metal/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "revolut-ultra",
    "anbieter": "Revolut",
    "herausgeber": "Revolut Bank UAB, Zweigniederlassung Deutschland",
@@ -6125,6 +6386,7 @@
     "Platin-Karte"
    ],
    "cons": [
+    "Hohe Jahresgebühr (780 €)",
     "Nur mit Konto beim Anbieter (Revolut Ultra (65 € pro Monat oder 650 € pro Jahr (Neukunden ab 07.05.2026)))",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Sehr hohe Gebühr (780 €/Jahr bei Monatszahlung)",
@@ -6134,11 +6396,13 @@
    "quelle": "https://www.revolut.com/de-DE/our-pricing-plans/",
    "preis": "https://cdn.revolut.com/terms_and_conditions/pdf/personal_fees_ultra_010d3a88_1.7.0_1778141184_en.pdf",
    "stand": "Personal Fees Ultra (German Branch), Neukunden ab 07.05.2026, Dok.-Version 1.7.0 (EN-Fassung, DE bindend)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/revolut-ultra/"
+   "url": "https://finvallo.com/de/kreditkarten/revolut-ultra/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bunq-free",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6181,11 +6445,13 @@
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
    "stand": "bunq Entgeltinformationen 22.09.2026 (Entgeltinformation 20.08.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/bunq-free/"
+   "url": "https://finvallo.com/de/kreditkarten/bunq-free/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bunq-core",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6210,7 +6476,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 91,
+   "rank": 90,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Kurs + 0,5 % 'Schutz vor Wechselkursschwankungen'))",
     "1 physische Mastercard inklusive",
@@ -6228,11 +6494,13 @@
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
    "stand": "bunq Entgeltinformationen 22.09.2026 (Entgeltinformation 20.08.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/bunq-core/"
+   "url": "https://finvallo.com/de/kreditkarten/bunq-core/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bunq-pro",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6257,7 +6525,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 120,
+   "rank": 122,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Kurs + 0,5 % 'Schutz vor Wechselkursschwankungen'))",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6276,11 +6544,13 @@
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
    "stand": "bunq Entgeltinformationen 22.09.2026 (Entgeltinformation 20.08.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/bunq-pro/"
+   "url": "https://finvallo.com/de/kreditkarten/bunq-pro/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bunq-elite",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6305,7 +6575,7 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 42,
+   "rank": 43,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Kurs + 0,5 % 'Schutz vor Wechselkursschwankungen'))",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6317,6 +6587,7 @@
     "Aktienhandel 0,49 %"
    ],
    "cons": [
+    "Hohe Jahresgebühr (227,88 €)",
     "Nur mit Konto beim Anbieter (bunq Elite (18,99 € pro Monat (25 Konten)))",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "0,5 % Fremdwährungsaufschlag",
@@ -6326,11 +6597,13 @@
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
    "stand": "bunq Entgeltinformationen 22.09.2026 (Entgeltinformation 20.08.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/bunq-elite/"
+   "url": "https://finvallo.com/de/kreditkarten/bunq-elite/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bunq-free-business",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6371,11 +6644,13 @@
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
    "stand": "bunq Entgeltinformationen 22.09.2026 (Entgeltinformation 20.08.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/bunq-free-business/"
+   "url": "https://finvallo.com/de/kreditkarten/bunq-free-business/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bunq-core-business",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6416,11 +6691,13 @@
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
    "stand": "bunq Entgeltinformationen 22.09.2026 (Entgeltinformation 20.08.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/bunq-core-business/"
+   "url": "https://finvallo.com/de/kreditkarten/bunq-core-business/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bunq-pro-business",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6454,6 +6731,7 @@
     "250 Echtzeit-Überweisungen/Jahr frei"
    ],
    "cons": [
+    "Hohe Jahresgebühr (167,88 €)",
     "Nur mit Konto beim Anbieter (bunq Pro Business (13,99 € pro Monat (25 Konten)))",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
@@ -6463,11 +6741,13 @@
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
    "stand": "bunq Entgeltinformationen 22.09.2026 (Entgeltinformation 20.08.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/bunq-pro-business/"
+   "url": "https://finvallo.com/de/kreditkarten/bunq-pro-business/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bunq-elite-business",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6502,6 +6782,7 @@
     "500 Echtzeit-Überweisungen/Jahr frei"
    ],
    "cons": [
+    "Hohe Jahresgebühr (287,88 €)",
     "Nur mit Konto beim Anbieter (bunq Elite Business (23,99 € pro Monat (25 Konten)))",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Hohe Monatsgebühr",
@@ -6510,11 +6791,13 @@
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
    "stand": "bunq Entgeltinformationen 22.09.2026 (Entgeltinformation 20.08.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Umfassender Reiseschutz",
-   "url": "https://finvallo.com/de/kreditkarten/bunq-elite-business/"
+   "url": "https://finvallo.com/de/kreditkarten/bunq-elite-business/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "vivid-money-standard",
    "anbieter": "Vivid Money",
    "herausgeber": "Vivid Money S.A. (Luxemburg)",
@@ -6539,7 +6822,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 92,
+   "rank": 91,
    "pros": [
     "Niedrige Fremdwährungskosten (1 % Währungsaufschlag auf den Wechselkurs bei Kartenzahlungen außerhalb EUR)",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6560,11 +6843,13 @@
    "quelle": "https://vivid.money/de-de/personal/",
    "preis": "https://website-static.vivid.money/static/legal-docs/de-de/fees-for-retail-users-vivid-money-sa.pdf",
    "stand": "Gebühren Privatkunden v.4, gültig ab 18.08.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/vivid-money-standard/"
+   "url": "https://finvallo.com/de/kreditkarten/vivid-money-standard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "vivid-money-plus",
    "anbieter": "Vivid Money",
    "herausgeber": "Vivid Money S.A. (Luxemburg)",
@@ -6589,7 +6874,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 93,
+   "rank": 95,
    "pros": [
     "Niedrige Fremdwährungskosten (1 % Währungsaufschlag auf den Wechselkurs bei Kartenzahlungen außerhalb EUR)",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6608,11 +6893,13 @@
    "quelle": "https://vivid.money/de-de/personal/",
    "preis": "https://website-static.vivid.money/static/legal-docs/de-de/fees-for-retail-users-vivid-money-sa.pdf",
    "stand": "Gebühren Privatkunden v.4, gültig ab 18.08.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/vivid-money-plus/"
+   "url": "https://finvallo.com/de/kreditkarten/vivid-money-plus/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "vivid-money-prime",
    "anbieter": "Vivid Money",
    "herausgeber": "Vivid Money S.A. (Luxemburg)",
@@ -6637,7 +6924,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 113,
+   "rank": 110,
    "pros": [
     "Niedrige Fremdwährungskosten (1 % Währungsaufschlag auf den Wechselkurs bei Kartenzahlungen außerhalb EUR)",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6659,11 +6946,13 @@
    "quelle": "https://vivid.money/de-de/personal/",
    "preis": "https://website-static.vivid.money/static/legal-docs/de-de/fees-for-retail-users-vivid-money-sa.pdf",
    "stand": "Gebühren Privatkunden v.4, gültig ab 18.08.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/vivid-money-prime/"
+   "url": "https://finvallo.com/de/kreditkarten/vivid-money-prime/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "wise-debitkarte",
    "anbieter": "Wise",
    "herausgeber": "Wise Europe SA (Belgien)",
@@ -6688,7 +6977,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 51,
+   "rank": 49,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (ca. 0,47 % Umrechnungsgebühr EUR→USD zum Devisenmittelkurs (variabel, abhängig von Währung/Betrag; Stand 12.10.2026 per Wise-Preisrechner); 0 % bei Zahlung aus vorhandenem USD-Guthaben)",
@@ -6709,11 +6998,13 @@
    "quelle": "https://wise.com/de/card/",
    "preis": "https://wise.com/de/pricing/card-fees",
    "stand": "Wise-Gebührenseite Karte, abgerufen 12.10.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/wise-debitkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/wise-debitkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "trade-republic-karte",
    "anbieter": "Trade Republic",
    "herausgeber": "Trade Republic Bank GmbH",
@@ -6738,7 +7029,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 35,
+   "rank": 34,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -6759,11 +7050,13 @@
    "quelle": "https://traderepublic.com/de-de/karte",
    "preis": "https://assets.traderepublic.com/assets/files/FeeInformation_PaymentAccount_de.pdf",
    "stand": "Entgeltinformation 01.01.2025",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/trade-republic-karte/"
+   "url": "https://finvallo.com/de/kreditkarten/trade-republic-karte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "trading-212-card",
    "anbieter": "Trading 212",
    "herausgeber": "Paynetics AD",
@@ -6788,7 +7081,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 36,
+   "rank": 35,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -6810,11 +7103,13 @@
    "quelle": "https://www.trading212.com/de/card",
    "preis": "https://helpcentre.trading212.com/hc/de-de/articles/19288398028317-Welche-Geb%C3%BChren-fallen-f%C3%BCr-die-212-Card-an",
    "stand": "Help Centre, abgerufen 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/trading-212-card/"
+   "url": "https://finvallo.com/de/kreditkarten/trading-212-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "unitplus-mastercard",
    "anbieter": "UnitPlus",
    "herausgeber": null,
@@ -6859,11 +7154,13 @@
    "quelle": "https://www.unitplus.eu/bankkarte",
    "preis": "https://www.unitplus.eu/kosten",
    "stand": "Kostenübersicht, abgerufen 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/unitplus-mastercard/"
+   "url": "https://finvallo.com/de/kreditkarten/unitplus-mastercard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "kraken-krak-card",
    "anbieter": "Kraken",
    "herausgeber": null,
@@ -6888,7 +7185,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 29,
+   "rank": 27,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -6909,11 +7206,13 @@
    "quelle": "https://www.krak.app/de/card",
    "preis": "https://support.kraken.com/de/articles/kraken-card-faqs",
    "stand": "Kraken Support FAQ, abgerufen 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/kraken-krak-card/"
+   "url": "https://finvallo.com/de/kreditkarten/kraken-krak-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bbva-debitkarte",
    "anbieter": "BBVA",
    "herausgeber": "Banco Bilbao Vizcaya Argentaria S.A., Zweigniederlassung Deutschland",
@@ -6938,7 +7237,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 30,
+   "rank": 25,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -6958,11 +7257,13 @@
    "quelle": "https://www.bbva.de/",
    "preis": "https://www.bbva.de/content/dam/public-web/alemania/documents/general/rechtliche-dokumente/konto-und-debitkarte/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV 01.08.2025",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/bbva-debitkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/bbva-debitkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bitpanda-visa-card",
    "anbieter": "Bitpanda",
    "herausgeber": null,
@@ -6987,7 +7288,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 56,
+   "rank": 50,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7009,11 +7310,13 @@
    "quelle": "https://www.bitpanda.com/de/card",
    "preis": "https://support.bitpanda.com/hc/en-us/articles/360018933120",
    "stand": "Produktseite und Support-Artikel, abgerufen 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/bitpanda-visa-card/"
+   "url": "https://finvallo.com/de/kreditkarten/bitpanda-visa-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "crypto-com-visa-card-midnight",
    "anbieter": "Crypto.com",
    "herausgeber": "Foris MT Limited (Malta)",
@@ -7038,7 +7341,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 75,
+   "rank": 74,
    "pros": [
     "Keine Jahresgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7058,11 +7361,13 @@
    "quelle": "https://crypto.com/en-de/levelup/basic",
    "preis": "https://help.crypto.com/en/articles/5977463-crypto-com-prepaid-visa-card-fees-and-limits-europe-applicable-to-europe-residential-address-users-only",
    "stand": "Help Center 'Fees and Limits (Europe)' vom 31.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/crypto-com-visa-card-midnight/"
+   "url": "https://finvallo.com/de/kreditkarten/crypto-com-visa-card-midnight/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "crypto-com-visa-card-ruby-steel",
    "anbieter": "Crypto.com",
    "herausgeber": "Foris MT Limited (Malta)",
@@ -7087,7 +7392,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 57,
+   "rank": 51,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7110,11 +7415,13 @@
    "quelle": "https://crypto.com/en-de/levelup/plus",
    "preis": "https://help.crypto.com/en/articles/5977463-crypto-com-prepaid-visa-card-fees-and-limits-europe-applicable-to-europe-residential-address-users-only",
    "stand": "Help Center 'Fees and Limits (Europe)' vom 31.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/crypto-com-visa-card-ruby-steel/"
+   "url": "https://finvallo.com/de/kreditkarten/crypto-com-visa-card-ruby-steel/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "crypto-com-visa-card-jade-indigo",
    "anbieter": "Crypto.com",
    "herausgeber": "Foris MT Limited (Malta)",
@@ -7152,22 +7459,24 @@
     "Gebührenfreier Kryptohandel bis 50.000 US-$/Monat"
    ],
    "cons": [
+    "Hohe Jahresgebühr (299,88 €)",
     "Nur mit Konto beim Anbieter (Crypto.com App-Konto mit Level Up Pro (24,99 €/Monat))",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Abo 24,99 €/Monat (249,90 €/Jahr)",
     "Cashback in CRO, nur bis 2.500 US-$ Umsatz/Monat",
-    "Lounge-Besuche nur für Jahresabonnenten",
-    "Inaktivitätsgebühr 6 € pro Monat nach 12 Monaten ohne Nutzung (ab 01.10.2026)"
+    "Lounge-Besuche nur für Jahresabonnenten"
    ],
    "quelle": "https://crypto.com/en-de/levelup/pro",
    "preis": "https://help.crypto.com/en/articles/5977463-crypto-com-prepaid-visa-card-fees-and-limits-europe-applicable-to-europe-residential-address-users-only",
    "stand": "Help Center 'Fees and Limits (Europe)' vom 31.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/crypto-com-visa-card-jade-indigo/"
+   "url": "https://finvallo.com/de/kreditkarten/crypto-com-visa-card-jade-indigo/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "curve-pay",
    "anbieter": "Curve",
    "herausgeber": "Curve Europe UAB (Litauen)",
@@ -7192,7 +7501,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 116,
+   "rank": 115,
    "pros": [
     "Keine Jahresgebühr",
     "Kein Girokonto beim Anbieter nötig",
@@ -7212,11 +7521,13 @@
    "quelle": "https://www.curve.com/plans",
    "preis": "https://help.curve.com/en_gb/fees-HkkKBu2Lu",
    "stand": "Help Center 'Fees', aktualisiert 24.05.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/curve-pay/"
+   "url": "https://finvallo.com/de/kreditkarten/curve-pay/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "curve-pay-x",
    "anbieter": "Curve",
    "herausgeber": "Curve Europe UAB (Litauen)",
@@ -7241,7 +7552,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 70,
+   "rank": 66,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7263,11 +7574,13 @@
    "quelle": "https://www.curve.com/plans",
    "preis": "https://help.curve.com/en_gb/fees-HkkKBu2Lu",
    "stand": "Help Center 'Fees', aktualisiert 24.05.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/curve-pay-x/"
+   "url": "https://finvallo.com/de/kreditkarten/curve-pay-x/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "curve-pay-pro",
    "anbieter": "Curve",
    "herausgeber": "Curve Europe UAB (Litauen)",
@@ -7292,7 +7605,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 94,
+   "rank": 97,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7314,11 +7627,13 @@
    "quelle": "https://www.curve.com/plans",
    "preis": "https://help.curve.com/en_gb/fees-HkkKBu2Lu",
    "stand": "Help Center 'Fees', aktualisiert 24.05.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/curve-pay-pro/"
+   "url": "https://finvallo.com/de/kreditkarten/curve-pay-pro/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "curve-pay-proplus",
    "anbieter": "Curve",
    "herausgeber": "Curve Europe UAB (Litauen)",
@@ -7343,7 +7658,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 108,
+   "rank": 112,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7355,6 +7670,7 @@
     "Business-Karten bis 1.500 € gebührenfrei"
    ],
    "cons": [
+    "Hohe Jahresgebühr (215,88 €)",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "17,99 € pro Monat",
@@ -7365,11 +7681,13 @@
    "quelle": "https://www.curve.com/plans",
    "preis": "https://help.curve.com/en_gb/fees-HkkKBu2Lu",
    "stand": "Help Center 'Fees', aktualisiert 24.05.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/curve-pay-proplus/"
+   "url": "https://finvallo.com/de/kreditkarten/curve-pay-proplus/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "magenta-pay-visa-debitkarte",
    "anbieter": "Magenta Pay (Telekom)",
    "herausgeber": "Telekom Payments S.A. (ehem. COSMOTE Payments, Griechenland)",
@@ -7394,7 +7712,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 79,
+   "rank": 75,
    "pros": [
     "Keine Jahresgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7416,11 +7734,13 @@
    "quelle": "https://www.magenta.pay/",
    "preis": null,
    "stand": null,
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/magenta-pay-visa-debitkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/magenta-pay-visa-debitkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "sumup-pay-mastercard",
    "anbieter": "SumUp",
    "herausgeber": "SumUp Limited (E-Geld-Institut, Irland)",
@@ -7445,7 +7765,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 37,
+   "rank": 33,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7465,11 +7785,13 @@
    "quelle": "https://www.sumup.com/de-de/privat/reisen/",
    "preis": "https://www.sumup.com/de-de/pay/legal/fee-schedule/",
    "stand": "Kostenübersicht SumUp Pay, abgerufen 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/sumup-pay-mastercard/"
+   "url": "https://finvallo.com/de/kreditkarten/sumup-pay-mastercard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "sumup-geschaeftskonto-mastercard",
    "anbieter": "SumUp",
    "herausgeber": "SumUp Limited (E-Geld-Institut, Irland)",
@@ -7511,11 +7833,13 @@
    "quelle": "https://www.sumup.com/de-de/geschaeftskonto/",
    "preis": null,
    "stand": "Produktseite, abgerufen 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/sumup-geschaeftskonto-mastercard/"
+   "url": "https://finvallo.com/de/kreditkarten/sumup-geschaeftskonto-mastercard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "monese-mastercard-pay-as-you-go",
    "anbieter": "Monese",
    "herausgeber": "PPS EU SA (Belgien), Vermittler Monese EU SA",
@@ -7540,7 +7864,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 125,
+   "rank": 124,
    "pros": [
     "Keine Jahresgebühr",
     "Kein Monatsentgelt",
@@ -7558,11 +7882,13 @@
    "quelle": "https://monese.com/our-pricing-eu/",
    "preis": "https://monese.com/fees-and-limits/deutschland-personal-fees-and-limits-03-07-2026",
    "stand": "Fees and Limits Deutschland 03.07.2026 (gültig ab 04.05.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/monese-mastercard-pay-as-you-go/"
+   "url": "https://finvallo.com/de/kreditkarten/monese-mastercard-pay-as-you-go/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "monese-mastercard-everyday",
    "anbieter": "Monese",
    "herausgeber": "PPS EU SA (Belgien), Vermittler Monese EU SA",
@@ -7604,11 +7930,13 @@
    "quelle": "https://monese.com/our-pricing-eu/",
    "preis": "https://monese.com/fees-and-limits/deutschland-personal-fees-and-limits-03-07-2026",
    "stand": "Fees and Limits Deutschland 03.07.2026 (gültig ab 04.05.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/monese-mastercard-everyday/"
+   "url": "https://finvallo.com/de/kreditkarten/monese-mastercard-everyday/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "monese-mastercard-cashback",
    "anbieter": "Monese",
    "herausgeber": "PPS EU SA (Belgien), Vermittler Monese EU SA",
@@ -7633,7 +7961,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 84,
+   "rank": 96,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Großhandelskurs))",
     "Bargeld ohne Automatengebühr",
@@ -7655,11 +7983,13 @@
    "quelle": "https://monese.com/our-pricing-eu/",
    "preis": "https://monese.com/fees-and-limits/deutschland-personal-fees-and-limits-03-07-2026",
    "stand": "Fees and Limits Deutschland 03.07.2026 (gültig ab 04.05.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/monese-mastercard-cashback/"
+   "url": "https://finvallo.com/de/kreditkarten/monese-mastercard-cashback/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "monese-mastercard-premium",
    "anbieter": "Monese",
    "herausgeber": "PPS EU SA (Belgien), Vermittler Monese EU SA",
@@ -7684,7 +8014,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 132,
+   "rank": 131,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7693,22 +8023,24 @@
     "Bareinzahlung bis 1.000 €/Monat frei"
    ],
    "cons": [
+    "Hohe Jahresgebühr (179,40 €)",
     "Nur mit Konto beim Anbieter (Monese Premium (14,95 €/Monat))",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "14,95 € pro Monat",
     "Keine Versicherungen oder Cashback trotz hoher Gebühr",
-    "E-Geld-Konto ohne Einlagensicherung",
-    "Physische Karte 4,95 € Liefergebühr"
+    "E-Geld-Konto ohne Einlagensicherung"
    ],
    "quelle": "https://monese.com/our-pricing-eu/",
    "preis": "https://monese.com/fees-and-limits/deutschland-personal-fees-and-limits-03-07-2026",
    "stand": "Fees and Limits Deutschland 03.07.2026 (gültig ab 04.05.2026)",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/monese-mastercard-premium/"
+   "url": "https://finvallo.com/de/kreditkarten/monese-mastercard-premium/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "volkswagen-bank-audi-bank-visa-card",
    "anbieter": "Volkswagen Bank / Audi Bank",
    "herausgeber": null,
@@ -7733,7 +8065,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 90,
+   "rank": 88,
    "pros": [
     "Rabatte statt Cashback: 2 % auf Kartenumsätze bei Konzernpartnern der Volkswagen AG, 5–8 % Rückvergütung auf Reisen über das VW-Bank-Reise-Center, bis 20 % Rabatt bei Europcar",
     "Kein Girokonto beim Anbieter nötig",
@@ -7756,11 +8088,13 @@
    "quelle": "https://www.volkswagenbank.de/girokonto-kreditkarte/kreditkarte.html",
    "preis": "https://www.volkswagenbank.de/content/dam/bluelabel/valid/www-volkswagenbank-de/dokumente/allgemeines/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV Volkswagen Bank/Audi Bank 30.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/volkswagen-bank-audi-bank-visa-card/"
+   "url": "https://finvallo.com/de/kreditkarten/volkswagen-bank-audi-bank-visa-card/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "volkswagen-bank-audi-bank-visa-card-pur",
    "anbieter": "Volkswagen Bank / Audi Bank",
    "herausgeber": null,
@@ -7785,7 +8119,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 82,
+   "rank": 89,
    "pros": [
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Kostenlos zum Girokonto inkl. Zusatzkarte",
@@ -7803,11 +8137,13 @@
    "quelle": "https://www.volkswagenbank.de/girokonto-kreditkarte/girokonto.html",
    "preis": "https://www.volkswagenbank.de/content/dam/bluelabel/valid/www-volkswagenbank-de/dokumente/allgemeines/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV Volkswagen Bank/Audi Bank 30.07.2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/volkswagen-bank-audi-bank-visa-card-pur/"
+   "url": "https://finvallo.com/de/kreditkarten/volkswagen-bank-audi-bank-visa-card-pur/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "mercedes-benz-bw-bank-mercedes-credit-card-silber",
    "anbieter": "Mercedes-Benz / BW-Bank",
    "herausgeber": "Baden-Württembergische Bank (BW-Bank, LBBW)",
@@ -7847,11 +8183,13 @@
    "quelle": "https://www.bw-bank.de/de/home/privatkunden/kreditkarte/mercedescard.html",
    "preis": null,
    "stand": null,
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/mercedes-benz-bw-bank-mercedes-credit-card-silber/"
+   "url": "https://finvallo.com/de/kreditkarten/mercedes-benz-bw-bank-mercedes-credit-card-silber/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "mercedes-benz-bw-bank-mercedes-credit-card-gold",
    "anbieter": "Mercedes-Benz / BW-Bank",
    "herausgeber": "Baden-Württembergische Bank (BW-Bank, LBBW)",
@@ -7876,7 +8214,7 @@
    "tier": 2,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 64,
+   "rank": 67,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Kein Girokonto beim Anbieter nötig",
@@ -7892,11 +8230,13 @@
    "quelle": "https://www.bw-bank.de/de/home/privatkunden/kreditkarte/mercedescard.html",
    "preis": null,
    "stand": null,
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/mercedes-benz-bw-bank-mercedes-credit-card-gold/"
+   "url": "https://finvallo.com/de/kreditkarten/mercedes-benz-bw-bank-mercedes-credit-card-gold/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "hanseatic-bank-genialcard",
    "anbieter": "Hanseatic Bank",
    "herausgeber": null,
@@ -7921,7 +8261,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 25,
+   "rank": 24,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7941,11 +8281,13 @@
    "quelle": "https://www.hanseaticbank.de/kreditkarte/genialcard",
    "preis": "https://www.hanseaticbank.de/content/download/7147/file/GenialCard_Konditionen.pdf",
    "stand": "PLV GenialCard 07/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/hanseatic-bank-genialcard/"
+   "url": "https://finvallo.com/de/kreditkarten/hanseatic-bank-genialcard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "awa7-visa-kreditkarte",
    "anbieter": "Hanseatic Bank",
    "herausgeber": null,
@@ -7970,7 +8312,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 38,
+   "rank": 36,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7987,11 +8329,13 @@
    "quelle": "https://www.awa7.de/kreditkarte",
    "preis": "https://www.hanseaticbank.de/content/download/7149/file/Zins%C3%BCbersicht_awa7",
    "stand": "Konditionen awa7 2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Keine Reiseversicherung",
-   "url": "https://finvallo.com/de/kreditkarten/awa7-visa-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/awa7-visa-kreditkarte/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "hanseatic-bank-goldcard",
    "anbieter": "Hanseatic Bank",
    "herausgeber": null,
@@ -8016,7 +8360,7 @@
    "tier": 2,
    "stars": 4.3,
    "note": "Gut",
-   "rank": 9,
+   "rank": 8,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -8036,11 +8380,13 @@
    "quelle": "https://www.hanseaticbank.de/kreditkarte/goldcard",
    "preis": "https://www.hanseaticbank.de/content/download/8871/file/PLV%20GoldCard%20BF%20V1.07.2026.pdf",
    "stand": "PLV GoldCard 07/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/hanseatic-bank-goldcard/"
+   "url": "https://finvallo.com/de/kreditkarten/hanseatic-bank-goldcard/",
+   "sek": []
   },
   {
+   "id": null,
    "slug": "bank-norwegian-visa-kreditkarte",
    "anbieter": "Bank Norwegian",
    "herausgeber": null,
@@ -8065,7 +8411,7 @@
    "tier": 2,
    "stars": 4.6,
    "note": "Sehr gut",
-   "rank": 4,
+   "rank": 3,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -8084,9 +8430,10 @@
    "quelle": "https://www.banknorwegian.de/kreditkarte/",
    "preis": "https://www.banknorwegian.de/preise-und-produkte/",
    "stand": "Preisliste Bank Norwegian 10/2026",
-   "sek": [],
+   "geprueft": "2026-10-12",
    "versicherung": "Reiseversicherung inkl. Storno",
-   "url": "https://finvallo.com/de/kreditkarten/bank-norwegian-visa-kreditkarte/"
+   "url": "https://finvallo.com/de/kreditkarten/bank-norwegian-visa-kreditkarte/",
+   "sek": []
   }
  ]
 }

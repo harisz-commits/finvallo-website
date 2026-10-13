@@ -46,7 +46,8 @@
   "stand": "PLV GenialCard 07/2026",
   "sek": [
    "cb"
-  ]
+  ],
+  "geprueft": "2026-10-12"
  },
  {
   "key": "awa7-visa",
@@ -91,7 +92,8 @@
   "stand": "Konditionen awa7 2026",
   "sek": [
    "pay"
-  ]
+  ],
+  "geprueft": "2026-10-12"
  },
  {
   "key": "hanseatic-goldcard",
@@ -139,7 +141,8 @@
   "quelle": "https://www.hanseaticbank.de/kreditkarte/goldcard",
   "preis": "https://www.hanseaticbank.de/content/download/8871/file/PLV%20GoldCard%20BF%20V1.07.2026.pdf",
   "stand": "PLV GoldCard 07/2026",
-  "sek": []
+  "sek": [],
+  "geprueft": "2026-10-12"
  },
  {
   "key": "bank-norwegian-visa",
@@ -187,6 +190,7 @@
   "sek": [
    "auto",
    "insText"
-  ]
+  ],
+  "geprueft": "2026-10-12"
  }
 ]

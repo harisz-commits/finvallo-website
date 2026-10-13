@@ -1,8 +1,7 @@
 #!/bin/bash
 # Kompletter Neuaufbau aller generierten Seiten in der richtigen Reihenfolge.
 set -e; cd "$(dirname "$0")/.."
-rm -rf public/de/kreditkarten public/de/daten
-python3 tools/gen_de.py
+python3 tools/karten.py
 python3 tools/ratgeber.py
 python3 tools/rechner.py
 python3 tools/header.py >/dev/null
