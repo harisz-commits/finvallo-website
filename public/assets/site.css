@@ -529,3 +529,22 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
 .blt td.nw{white-space:nowrap}
 .blt table{min-width:640px}
 .blt th{white-space:nowrap}
+/* Lohnt sich das? */
+.lprofs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.lprof{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:6px}
+.lprof small{color:var(--muted);line-height:1.45}
+.lprof span{font-weight:700}
+.good{color:var(--green)} .bad{color:var(--red)}
+.lcalc{display:grid;gap:10px;margin-top:22px}
+.lcalc .lgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.lcalc label{display:grid;gap:6px;font-size:14.5px;color:var(--muted)}
+.lcalc input[type=number]{padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.lcalc .lc{display:flex;gap:10px;align-items:center;color:var(--ink)}
+.lcalc .lc b{margin-left:auto;white-space:nowrap}
+.lcalc .lc input{width:20px;height:20px;accent-color:var(--blue)}
+.lres{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px;padding-top:12px;border-top:1px dashed var(--line)}
+.lres small{display:block;color:var(--muted);font-size:13px}
+.lres b{font-size:20px}
+.ltab{max-height:none}
+.ltab td.nw{white-space:nowrap;vertical-align:top;font-weight:600}
+.ltab td small{display:block;margin-top:4px;line-height:1.4}

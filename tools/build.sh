@@ -2,6 +2,7 @@
 # Kompletter Neuaufbau aller generierten Seiten in der richtigen Reihenfolge.
 set -e; cd "$(dirname "$0")/.."
 python3 tools/karten.py
+python3 tools/lohnt.py
 python3 tools/ratgeber.py
 python3 tools/rechner.py
 python3 tools/header.py >/dev/null

@@ -7,10 +7,12 @@ Alles neu bauen: `bash tools/build.sh` (idempotent, danach committen).
 - `daten/at/anbieter.json` – Anbieter Österreich (Name, Typ, Sitz, Website, Kurztext).
 - `daten/at/business.json` – weitere Business-Angebote Österreich.
 - `de-recherche/*.json` – alle Karten Deutschland (`geprueft` je Karte), `INSTRUCTIONS.md` = Erfassungsregeln; `overrides.py` = redaktionelle Korrekturen.
+- `daten/at/lohnt.json`, `daten/de/lohnt.json` – Guthaben, Lounges, Abos und Annahmen für „Ab wann lohnt sich …?“.
 - `sammeln.py` – Sammelraten für die Bestenlisten Meilen/Punkte und Cashback.
 
 ## Skripte (Reihenfolge wie in build.sh)
 - `karten.py` – Karten-, Listen-, Anbieter-, Bestenlisten-Seiten, JSON-Daten, Sitemap, llms.txt und Kreditkarten-Rechner für AT und DE.
+- `lohnt.py` – Seiten „Ab wann lohnt sich …?“ und der Block „Top-Karten, je nachdem wie du sie nutzt“ auf den Bestenlisten.
 - `score.py` – Bewertung nach der Finvallo-Methodik.
 - `ratgeber.py`, `rechner.py`, `landing.py` – Ratgeber, Finanzrechner, Startseiten.
 - `header.py` – Header/Navigation auf allen Seiten.
