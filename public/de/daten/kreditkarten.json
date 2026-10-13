@@ -52,9 +52,7 @@
    "quelle": "https://tfbank.de/",
    "preis": "https://tfbank.de/media/metjnv0f/preis-und-leistungsverzeichnis_tf-bank-de_20260624.pdf",
    "stand": "PLV 24.06.2026",
-   "sek": [
-    "auto"
-   ],
+   "sek": [],
    "versicherung": "Reiseversicherung inkl. Storno",
    "url": "https://finvallo.com/de/kreditkarten/tf-bank-mastercard-gold/"
   },
@@ -106,12 +104,7 @@
    "quelle": "https://www.gebuhrenfrei.com/",
    "preis": "https://cdn.sanity.io/files/mkiw82r3/production/ef9d9e8b04864b895f98b8269f5adb789846b68f.pdf",
    "stand": "PLV 07/2024 (AGB 07/2025)",
-   "sek": [
-    "auto",
-    "pay",
-    "zinsfrei",
-    "cbText"
-   ],
+   "sek": [],
    "versicherung": "Reiseversicherung inkl. Storno",
    "url": "https://finvallo.com/de/kreditkarten/advanzia-bank-gebuehrenfrei-mastercard-gold/"
   },
@@ -215,13 +208,7 @@
    "quelle": "https://hilton-honors.mein-onlineantrag.de/",
    "preis": "https://cdn.sanity.io/files/mkiw82r3/production/ef9d9e8b04864b895f98b8269f5adb789846b68f.pdf",
    "stand": "PLV 07/2024 (AGB 07/2025)",
-   "sek": [
-    "cbText",
-    "bonus",
-    "zinsfrei",
-    "pay",
-    "auto"
-   ],
+   "sek": [],
    "versicherung": "Reiseversicherung inkl. Storno",
    "url": "https://finvallo.com/de/kreditkarten/hilton-honors-kreditkarte/"
   },
@@ -273,15 +260,7 @@
    "quelle": "https://milesandsmiles.kartegold.de/",
    "preis": "https://cdn.sanity.io/files/mkiw82r3/production/ef9d9e8b04864b895f98b8269f5adb789846b68f.pdf",
    "stand": "PLV 07/2024 (AGB 07/2025)",
-   "sek": [
-    "cbText",
-    "bonus",
-    "pay",
-    "tier",
-    "insText",
-    "zinsfrei",
-    "auto"
-   ],
+   "sek": [],
    "versicherung": "Reiseversicherung inkl. Storno",
    "url": "https://finvallo.com/de/kreditkarten/turkish-airlines-milesundsmiles-mastercard-gold/"
   },
@@ -436,9 +415,7 @@
    "quelle": "https://instabank.de/kreditkarte",
    "preis": "https://instabank.de/vollstandige-preisliste",
    "stand": "Preisliste Website, Abruf 12.10.2026",
-   "sek": [
-    "netz"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/instabank-kreditkarte/"
   },
@@ -460,7 +437,7 @@
    "cashText": "3 % (mind. 3 €) im In- und Ausland; Quasi-Bargeld (E-Geld) 5,95 % (mind. 5,95 €); Barverfügungen werden verzinst",
    "soll": 21.99,
    "effz": 24.6,
-   "rahmen": "individuell nach Bonität (Portale: bis 4.000 € Start)",
+   "rahmen": "individuell nach Bonität (meist bis 4.000 € Start)",
    "giro": false,
    "auto": true,
    "pay": true,
@@ -491,11 +468,7 @@
    "quelle": "https://www.extrakarte.com/",
    "preis": "https://www.extrakarte.com/kreditkarten-kostenuebersicht",
    "stand": "Kostenübersicht Website, Abruf 12.10.2026",
-   "sek": [
-    "soll",
-    "rahmen",
-    "cashInterest"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/bank-dimare-extra-karte-mastercard/"
   },
@@ -592,10 +565,7 @@
    "quelle": "https://www.klarna.com/de/klarna-card/",
    "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
    "stand": "PLV v5.7.0 vom 16.09.2026",
-   "sek": [
-    "effz",
-    "cash"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/klarna-kreditkarte-everywhere/"
   },
@@ -645,10 +615,7 @@
    "quelle": "https://www.klarna.com/de/klarna-card/",
    "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
    "stand": "PLV v5.7.0 vom 16.09.2026",
-   "sek": [
-    "effz",
-    "cash"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/klarna-plus/"
   },
@@ -697,10 +664,7 @@
    "quelle": "https://www.klarna.com/de/klarna-card/",
    "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
    "stand": "PLV v5.7.0 vom 16.09.2026",
-   "sek": [
-    "effz",
-    "cash"
-   ],
+   "sek": [],
    "versicherung": "Basis-Reiseschutz",
    "url": "https://finvallo.com/de/kreditkarten/klarna-premium/"
   },
@@ -749,10 +713,7 @@
    "quelle": "https://www.klarna.com/de/klarna-card/",
    "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
    "stand": "PLV v5.7.0 vom 16.09.2026",
-   "sek": [
-    "effz",
-    "cash"
-   ],
+   "sek": [],
    "versicherung": "Umfassender Reiseschutz",
    "url": "https://finvallo.com/de/kreditkarten/klarna-max/"
   },
@@ -909,9 +870,7 @@
    "quelle": "https://www.easybank.de/easybank-de/kreditkarten/kreditkarte-platinum",
    "preis": "https://www.easybank.de/resource/blob/123014/0bb3dac7ce3ce8312675fde4d2e5b24a/preisverzeichnis-easybank-kreditkarte-platinum-data.pdf",
    "stand": "PLV 08/2026 (004 451 LG YS PRV 0826)",
-   "sek": [
-    "bonus"
-   ],
+   "sek": [],
    "versicherung": "Umfassender Reiseschutz",
    "url": "https://finvallo.com/de/kreditkarten/easybank-kreditkarte-platinum/"
   },
@@ -1215,9 +1174,7 @@
    "quelle": "https://www.consorsfinanz.de/karte-kredite/mastercard",
    "preis": null,
    "stand": "Produktseite Okt. 2026",
-   "sek": [
-    "cashInterest"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/consors-finanz-mastercard/"
   },
@@ -2452,10 +2409,7 @@
    "quelle": "https://www.norisbank.de/girokonto",
    "preis": "https://www.norisbank.de/dam/norisbank/de/shared/pdf/Preis_und_Leistungsverzeichnis.pdf",
    "stand": "PLV norisbank 19.06.2026",
-   "sek": [
-    "pay",
-    "payText"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/norisbank-mastercard-kreditkarte/"
   },
@@ -3365,9 +3319,7 @@
    "quelle": "https://www.comdirect.de/konto/karten.html",
    "preis": "https://www.comdirect.de/formulare/preis-leistungsverzeichnis",
    "stand": "PLV gültig ab 15.07.2026 (Stand 07/26)",
-   "sek": [
-    "bonus"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/comdirect-visa-debitkarte/"
   },
@@ -3399,7 +3351,7 @@
    "rank": 128,
    "pros": [
     "Bargeld ohne Automatengebühr",
-    "Nur Partner-Cashback (kein Cashback auf normale Einkäufe): ausgewählte Partnershops über die DKB-App (bis zu 7 % laut Portal)",
+    "Nur Partner-Cashback (kein Cashback auf normale Einkäufe): ausgewählte Partnershops über die DKB-App (bis zu 7 %)",
     "Weltweit kostenlos zahlen und abheben im Aktivstatus",
     "Euro-Abhebungen auch ohne Aktivstatus kostenlos",
     "Apple Pay und Google Pay",
@@ -3417,9 +3369,7 @@
    "quelle": "https://www.dkb.de/girokonto",
    "preis": "https://dok.dkb.de/pdf/plv_pk_karten.pdf",
    "stand": "PLV Karten Stand 15.09.2026; PLV Konten Stand 01.10.2026",
-   "sek": [
-    "cbText"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/dkb-visa-debitkarte/"
   },
@@ -3452,7 +3402,7 @@
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
-    "Nur Partner-Cashback (kein Cashback auf normale Einkäufe): ausgewählte Partnershops über die DKB-App (bis zu 7 % laut Portal)",
+    "Nur Partner-Cashback (kein Cashback auf normale Einkäufe): ausgewählte Partnershops über die DKB-App (bis zu 7 %)",
     "Kein Auslandseinsatzentgelt",
     "Weltweit kostenlos Bargeld am Automaten",
     "Digitaler Kiosk: 3 Zeitungen/Zeitschriften pro Monat",
@@ -3468,9 +3418,7 @@
    "quelle": "https://www.dkb.de/kreditkarte",
    "preis": "https://dok.dkb.de/pdf/plv_pk_karten.pdf",
    "stand": "PLV Karten Stand 15.09.2026; PLV Konten Stand 01.10.2026",
-   "sek": [
-    "cbText"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/dkb-visa-kreditkarte/"
   },
@@ -3925,8 +3873,8 @@
    "fee1": null,
    "feeNote": "Preis je Volksbank unterschiedlich, Beispiel: Berliner Volksbank. Im Girokonto (3,95 €/Monat) ohne Zusatzkosten enthalten; im alten PrivatGiro 2,50 €/Monat; Zusatzkarte 1,25 €/Monat",
    "fx": 1.8,
-   "fxText": "1,8 % (laut Portal; auf Bankseite nicht beziffert)",
-   "cashText": "Inland 2 % (laut Portal); im Ausland ohne Bankentgelt (ggf. Betreiberentgelt)",
+   "fxText": "1,8 %",
+   "cashText": "Inland 2 %; im Ausland ohne Bankentgelt (ggf. Betreiberentgelt)",
    "soll": null,
    "effz": null,
    "rahmen": "bonitätsabhängig; Verfügung 1.000 €/Tag, 4.000 €/Woche",
@@ -3945,8 +3893,8 @@
     "Reisebonus bis 4 % über Bank-Reiseportal"
    ],
    "cons": [
-    "Fremdwährungsgebühr: 1,8 % (laut Portal; auf Bankseite nicht beziffert)",
-    "Bargeld am Automaten kostet Inland 2 % (laut Portal); im Ausland ohne Bankentgelt (ggf. Betreiberentgelt)",
+    "Fremdwährungsgebühr: 1,8 %",
+    "Bargeld am Automaten kostet Inland 2 %; im Ausland ohne Bankentgelt (ggf. Betreiberentgelt)",
     "Nur mit Konto beim Anbieter (Girokonto der Berliner Volksbank (3,95 €/Monat, ClassicCard inklusive))",
     "Nur mit Girokonto der Volksbank (3,95 €/Monat)",
     "Fremdwährungsentgelt",
@@ -3955,11 +3903,7 @@
    "quelle": "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte.html",
    "preis": "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte.html",
    "stand": "Produktseiten 10/2026 (Preisverzeichnis-PDF nicht abrufbar)",
-   "sek": [
-    "fx",
-    "fxText",
-    "cash"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/volksbank-classiccard/"
   },
@@ -3978,7 +3922,7 @@
    "feeNote": "Preis je Volksbank unterschiedlich, Beispiel: Berliner Volksbank. 5 €/Monat (60 €/Jahr) im Girokonto, für Mitglieder (Genossenschaftsanteil) kostenlos; Zusatzkarte 2,50 €/Monat; im Girokonto blauorange 1 Karte inklusive",
    "fx": 0,
    "fxText": "0 % (‚auch in Fremdwährung keine Gebühren‘ laut Produktseite)",
-   "cashText": "Im Ausland kostenlos seitens der Bank; Inland laut Portal 2 %, mind. 7,50 €",
+   "cashText": "Im Ausland kostenlos seitens der Bank; Inland 2 %, mind. 7,50 €",
    "soll": null,
    "effz": null,
    "rahmen": "bonitätsabhängig; Verfügung 1.000 €/Tag, 4.000 €/Woche",
@@ -4000,7 +3944,7 @@
     "Familie mitversichert"
    ],
    "cons": [
-    "Bargeld am Automaten kostet Im Ausland kostenlos seitens der Bank; Inland laut Portal 2 %, mind. 7,50 €",
+    "Bargeld am Automaten kostet Im Ausland kostenlos seitens der Bank; Inland 2 %, mind. 7,50 €",
     "Nur mit Konto beim Anbieter (Girokonto der Berliner Volksbank (3,95 €/Monat, ClassicCard inklusive))",
     "Nur mit Girokonto der Volksbank",
     "Inlands-Abhebung kostenpflichtig",
@@ -4009,9 +3953,7 @@
    "quelle": "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte-gold.html",
    "preis": "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte-gold.html",
    "stand": "Produktseiten 10/2026 (Preisverzeichnis-PDF nicht abrufbar)",
-   "sek": [
-    "cash"
-   ],
+   "sek": [],
    "versicherung": "Reiseversicherung inkl. Storno",
    "url": "https://finvallo.com/de/kreditkarten/volksbank-goldcard/"
   },
@@ -4057,10 +3999,7 @@
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
    "stand": "PLV gültig ab 01.10.2025 (aktuell verlinkt, 10/2026)",
-   "sek": [
-    "pay",
-    "payText"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-prepaid/"
   },
@@ -4104,10 +4043,7 @@
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
    "stand": "PLV gültig ab 01.10.2025 (aktuell verlinkt, 10/2026)",
-   "sek": [
-    "pay",
-    "payText"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-standard/"
   },
@@ -4151,10 +4087,7 @@
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
    "stand": "PLV gültig ab 01.10.2025 (aktuell verlinkt, 10/2026)",
-   "sek": [
-    "pay",
-    "payText"
-   ],
+   "sek": [],
    "versicherung": null,
    "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-gold/"
   },
@@ -4197,10 +4130,7 @@
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
    "stand": "PLV gültig ab 01.10.2025 (aktuell verlinkt, 10/2026)",
-   "sek": [
-    "pay",
-    "payText"
-   ],
+   "sek": [],
    "versicherung": null,
    "url": "https://finvallo.com/de/kreditkarten/olb-mastercard-world-elite/"
   },
@@ -4714,9 +4644,7 @@
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/business-platinum/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Platinum_Card_Informationen_NEU.pdf",
    "stand": "Business Platinum Leistungsübersicht 06.2026",
-   "sek": [
-    "bonus"
-   ],
+   "sek": [],
    "versicherung": "Premium-Reiseschutz",
    "url": "https://finvallo.com/de/kreditkarten/american-express-business-platinum-card/"
   },
@@ -4967,10 +4895,7 @@
    "quelle": "https://www.payback.de/visa",
    "preis": "https://www.bw-bank.de/content/dam/myif/bwbank/work/dokumente/pdf/public/onlinedienste/paybackvisa-preis-leistungsverzeichnis.pdf",
    "stand": "PLV Fassung 20.07.2025",
-   "sek": [
-    "pay",
-    "payText"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/payback-visa-kreditkarte/"
   },
@@ -5019,11 +4944,7 @@
    "quelle": "https://www.payback.de/visa",
    "preis": "https://www.bw-bank.de/content/dam/myif/bwbank/work/dokumente/pdf/public/onlinedienste/paybackvisa-guthaben-preis-leistungsverzeichnis.pdf",
    "stand": "PLV Fassung 20.07.2025",
-   "sek": [
-    "pay",
-    "payText",
-    "cbText"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/payback-visa-kreditkarte-auf-guthabenbasis/"
   },
@@ -6838,10 +6759,7 @@
    "quelle": "https://traderepublic.com/de-de/karte",
    "preis": "https://assets.traderepublic.com/assets/files/FeeInformation_PaymentAccount_de.pdf",
    "stand": "Entgeltinformation 01.01.2025",
-   "sek": [
-    "cbText",
-    "pay"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/trade-republic-karte/"
   },
@@ -6857,7 +6775,7 @@
    "netz": "Mastercard",
    "fee": 0,
    "fee1": null,
-   "feeNote": "Keine Kontoführungs- oder Kartengebühr; virtuelle Karte kostenlos, physische Karte einmalige Ausstellungsgebühr (Betrag wird in der App angezeigt, laut Portalen 4,95 €)",
+   "feeNote": "Keine Kontoführungs- oder Kartengebühr; virtuelle Karte kostenlos, physische Karte einmalige Ausstellungsgebühr (Betrag wird in der App angezeigt,en 4,95 €)",
    "fx": 0,
    "fxText": "0 %",
    "cashText": "Bis 400 € pro Monat weltweit kostenlos, darüber 1 % (Inland und Ausland); Fremdgebühren der Automatenbetreiber möglich",
@@ -6892,9 +6810,7 @@
    "quelle": "https://www.trading212.com/de/card",
    "preis": "https://helpcentre.trading212.com/hc/de-de/articles/19288398028317-Welche-Geb%C3%BChren-fallen-f%C3%BCr-die-212-Card-an",
    "stand": "Help Centre, abgerufen 10/2026",
-   "sek": [
-    "cbText"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/trading-212-card/"
   },
@@ -7042,11 +6958,7 @@
    "quelle": "https://www.bbva.de/",
    "preis": "https://www.bbva.de/content/dam/public-web/alemania/documents/general/rechtliche-dokumente/konto-und-debitkarte/preis-und-leistungsverzeichnis.pdf",
    "stand": "PLV 01.08.2025",
-   "sek": [
-    "cbText",
-    "rahmen",
-    "netz"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/bbva-debitkarte/"
   },
@@ -7267,7 +7179,7 @@
    "netz": "Mastercard",
    "fee": 0,
    "fee1": null,
-   "feeNote": "Kostenloser Tarif; physische Karte kostenpflichtig (laut Portal 5,99 € einmalig)",
+   "feeNote": "Kostenloser Tarif; physische Karte kostenpflichtig (5,99 € einmalig)",
    "fx": 2.99,
    "fxText": "0 % bis 250 € pro Monat, danach 2,99 %; am Wochenende zusätzlich 1,5 %",
    "cashText": "Keine Gratis-Abhebungen: 2 %, mind. 2 € pro Abhebung (Inland und Ausland); am Wochenende in Fremdwährung +1,5 %",
@@ -7300,9 +7212,7 @@
    "quelle": "https://www.curve.com/plans",
    "preis": "https://help.curve.com/en_gb/fees-HkkKBu2Lu",
    "stand": "Help Center 'Fees', aktualisiert 24.05.2026",
-   "sek": [
-    "feeNote"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/curve-pay/"
   },
@@ -7455,9 +7365,7 @@
    "quelle": "https://www.curve.com/plans",
    "preis": "https://help.curve.com/en_gb/fees-HkkKBu2Lu",
    "stand": "Help Center 'Fees', aktualisiert 24.05.2026",
-   "sek": [
-    "lgText"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/curve-pay-proplus/"
   },
@@ -7476,7 +7384,7 @@
    "feeNote": "Keine Konto- oder Kartengebühr; nur virtuelle Karte (keine physische Karte)",
    "fx": 2.5,
    "fxText": "2,5 % außerhalb des Euroraums, max. 7,50 € pro Zahlung",
-   "cashText": "In Deutschland kostenlos, aber nur kontaktlos an NFC-fähigen Automaten (virtuelle Karte); Ausland unklar",
+   "cashText": "In Deutschland kostenlos, aber nur kontaktlos an NFC-fähigen Automaten (virtuelle Karte); Ausland beim Anbieter prüfen",
    "soll": null,
    "effz": null,
    "rahmen": "kein Kreditrahmen (E-Geld-Konto)",
@@ -7508,19 +7416,7 @@
    "quelle": "https://www.magenta.pay/",
    "preis": null,
    "stand": null,
-   "sek": [
-    "fee",
-    "feeNote",
-    "fx",
-    "fxText",
-    "cash",
-    "cashText",
-    "cbText",
-    "pay",
-    "payText",
-    "herausgeber",
-    "konto"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/magenta-pay-visa-debitkarte/"
   },
@@ -7951,11 +7847,7 @@
    "quelle": "https://www.bw-bank.de/de/home/privatkunden/kreditkarte/mercedescard.html",
    "preis": null,
    "stand": null,
-   "sek": [
-    "fee",
-    "feeNote",
-    "zinsfrei"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/mercedes-benz-bw-bank-mercedes-credit-card-silber/"
   },
@@ -8000,13 +7892,7 @@
    "quelle": "https://www.bw-bank.de/de/home/privatkunden/kreditkarte/mercedescard.html",
    "preis": null,
    "stand": null,
-   "sek": [
-    "fee",
-    "feeNote",
-    "zinsfrei",
-    "tier",
-    "insText"
-   ],
+   "sek": [],
    "versicherung": "Reiseversicherung inkl. Storno",
    "url": "https://finvallo.com/de/kreditkarten/mercedes-benz-bw-bank-mercedes-credit-card-gold/"
   },
@@ -8055,9 +7941,7 @@
    "quelle": "https://www.hanseaticbank.de/kreditkarte/genialcard",
    "preis": "https://www.hanseaticbank.de/content/download/7147/file/GenialCard_Konditionen.pdf",
    "stand": "PLV GenialCard 07/2026",
-   "sek": [
-    "cb"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/hanseatic-bank-genialcard/"
   },
@@ -8103,9 +7987,7 @@
    "quelle": "https://www.awa7.de/kreditkarte",
    "preis": "https://www.hanseaticbank.de/content/download/7149/file/Zins%C3%BCbersicht_awa7",
    "stand": "Konditionen awa7 2026",
-   "sek": [
-    "pay"
-   ],
+   "sek": [],
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/awa7-visa-kreditkarte/"
   },
@@ -8202,10 +8084,7 @@
    "quelle": "https://www.banknorwegian.de/kreditkarte/",
    "preis": "https://www.banknorwegian.de/preise-und-produkte/",
    "stand": "Preisliste Bank Norwegian 10/2026",
-   "sek": [
-    "auto",
-    "insText"
-   ],
+   "sek": [],
    "versicherung": "Reiseversicherung inkl. Storno",
    "url": "https://finvallo.com/de/kreditkarten/bank-norwegian-visa-kreditkarte/"
   }

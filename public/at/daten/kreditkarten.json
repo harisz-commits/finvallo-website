@@ -94,11 +94,7 @@
    ],
    "quelle": "https://tfbank.at/mastercard-gold-reiseversicherung",
    "preis": null,
-   "sek": [
-    "cb",
-    "zf",
-    "zins"
-   ],
+   "sek": [],
    "titel": "TF Bank Mastercard Gold",
    "url": "https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/"
   },
@@ -276,9 +272,7 @@
    "cons": [],
    "quelle": "https://www.americanexpress.com/at/legal/terms-and-conditions/",
    "preis": null,
-   "sek": [
-    "fee"
-   ],
+   "sek": [],
    "titel": "American Express Card",
    "url": "https://finvallo.com/at/kreditkarten/american-express-card/"
   },
@@ -312,7 +306,7 @@
     "Automatischer Rechnungsausgleich per Lastschrift"
    ],
    "cons": [
-    "Jahresgebühr nicht bestätigt",
+    "Jahresgebühr beim Anbieter erfragen",
     "Nicht mehr aktiv beworben"
    ],
    "quelle": "https://www.americanexpress.com/at/legal/terms-and-conditions/",
@@ -351,7 +345,7 @@
     "Automatischer Rechnungsausgleich per Lastschrift"
    ],
    "cons": [
-    "Jahresgebühr nicht bestätigt",
+    "Jahresgebühr beim Anbieter erfragen",
     "Nicht mehr aktiv beworben"
    ],
    "quelle": "https://www.americanexpress.com/at/legal/terms-and-conditions/",
@@ -434,9 +428,7 @@
    ],
    "quelle": "https://www.americanexpress.com/at/legal/terms-and-conditions/",
    "preis": null,
-   "sek": [
-    "fee"
-   ],
+   "sek": [],
    "titel": "American Express BMW Card Gold",
    "url": "https://finvallo.com/at/kreditkarten/american-express-bmw-card-gold/"
   },
@@ -470,7 +462,7 @@
     "Automatischer Rechnungsausgleich per Lastschrift"
    ],
    "cons": [
-    "Jahresgebühr nicht bestätigt",
+    "Jahresgebühr beim Anbieter erfragen",
     "Nur auf Einladung"
    ],
    "quelle": "https://www.americanexpress.com/at/legal/terms-and-conditions/",
@@ -811,9 +803,7 @@
    ],
    "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
    "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "card complete Prepaid",
    "url": "https://finvallo.com/at/kreditkarten/card-complete-prepaid/"
   },
@@ -1052,7 +1042,7 @@
     "Automatischer Rechnungsausgleich per Lastschrift"
    ],
    "cons": [
-    "Jahresgebühr nicht bestätigt",
+    "Jahresgebühr beim Anbieter erfragen",
     "Eingeschränkte Akzeptanz (Diners-Netz)"
    ],
    "quelle": "https://www.cardcomplete.com/diners-club/privatkarten/",
@@ -1257,7 +1247,7 @@
     "Im 1. Jahr 12,70 € statt 54 €",
     "Reiseversicherung inkl. Storno",
     "Automatischer Rechnungsausgleich per Lastschrift",
-    "Für Studierende und Maturant:innen"
+    "Für Studierende und Maturanten"
    ],
    "cons": [
     "Hohe Fremdwährungskosten (1,65 % + 1 % Kursaufschlag)",
@@ -1886,9 +1876,7 @@
    ],
    "quelle": "https://www.bankaustria.at/files/mastercard_kreditkartenbedingungen.pdf",
    "preis": "https://www.bankaustria.at/files/preise_konditionen_kreditkarten_bank_austria_de.pdf",
-   "sek": [
-    "f1"
-   ],
+   "sek": [],
    "titel": "Bank Austria World Elite",
    "url": "https://finvallo.com/at/kreditkarten/bank-austria-world-elite/"
   },
@@ -2008,9 +1996,7 @@
    ],
    "quelle": "https://www.bawag.at/bawag/privatkunden/kreditkarte/kreditkarte-gold",
    "preis": "https://www.bawag.at/resource/blob/19990/4cfc070f75923d081a8776672b0b1d20/konditionenuebersicht-bawag-kreditkarten-data.pdf",
-   "sek": [
-    "f1"
-   ],
+   "sek": [],
    "titel": "BAWAG Gold Student",
    "url": "https://finvallo.com/at/kreditkarten/bawag-gold-student/"
   },
@@ -2049,12 +2035,7 @@
    ],
    "quelle": "https://www.easybank.at/easybank/kreditkarten",
    "preis": null,
-   "sek": [
-    "cash",
-    "fx",
-    "netz",
-    "zins"
-   ],
+   "sek": [],
    "titel": "easybank Kreditkarte",
    "url": "https://finvallo.com/at/kreditkarten/easybank-kreditkarte/"
   },
@@ -2095,10 +2076,7 @@
    ],
    "quelle": "https://www.easybank.at/easybank/kreditkarten",
    "preis": null,
-   "sek": [
-    "cash",
-    "fx"
-   ],
+   "sek": [],
    "titel": "easybank Kreditkarte Gold",
    "url": "https://finvallo.com/at/kreditkarten/easybank-kreditkarte-gold/"
   },
@@ -2139,10 +2117,7 @@
    ],
    "quelle": "https://www.easybank.at/easybank/kreditkarten",
    "preis": null,
-   "sek": [
-    "cash",
-    "fx"
-   ],
+   "sek": [],
    "titel": "easybank Gold Student",
    "url": "https://finvallo.com/at/kreditkarten/easybank-gold-student/"
   },
@@ -2419,9 +2394,7 @@
    ],
    "quelle": "https://www.raiffeisen.at/ooe/de/privatkunden/karte/kreditkarte.html",
    "preis": null,
-   "sek": [
-    "f1"
-   ],
+   "sek": [],
    "titel": "Bank Direkt Gold",
    "url": "https://finvallo.com/at/kreditkarten/bank-direkt-gold/"
   },
@@ -2501,15 +2474,9 @@
     "Teilzahlung ist teuer: 18,00 % Soll / 19,56 % effektiv",
     "Keine Reiseversicherung"
    ],
-   "quelle": "https://www.capitalo.at/kreditkarte",
+   "quelle": "https://www.santanderconsumer.at/",
    "preis": null,
-   "sek": [
-    "cash",
-    "cb",
-    "fee",
-    "fx",
-    "zins"
-   ],
+   "sek": [],
    "titel": "Santander Card",
    "url": "https://finvallo.com/at/kreditkarten/santander-card/"
   },
@@ -2548,9 +2515,7 @@
    ],
    "quelle": "https://www.revolut.com/de-AT/our-pricing-plans/",
    "preis": "https://www.revolut.com/de-AT/our-pricing-plans/",
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "Revolut Standard",
    "url": "https://finvallo.com/at/kreditkarten/revolut-standard/"
   },
@@ -2589,9 +2554,7 @@
    ],
    "quelle": "https://www.revolut.com/de-AT/our-pricing-plans/",
    "preis": "https://www.revolut.com/de-AT/our-pricing-plans/",
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "Revolut Plus",
    "url": "https://finvallo.com/at/kreditkarten/revolut-plus/"
   },
@@ -2630,9 +2593,7 @@
    ],
    "quelle": "https://www.revolut.com/de-AT/our-pricing-plans/",
    "preis": "https://www.revolut.com/de-AT/our-pricing-plans/",
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "Revolut Premium",
    "url": "https://finvallo.com/at/kreditkarten/revolut-premium/"
   },
@@ -2674,9 +2635,7 @@
    ],
    "quelle": "https://www.revolut.com/de-AT/our-pricing-plans/",
    "preis": "https://www.revolut.com/de-AT/our-pricing-plans/",
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "Revolut Metal",
    "url": "https://finvallo.com/at/kreditkarten/revolut-metal/"
   },
@@ -2718,9 +2677,7 @@
    ],
    "quelle": "https://www.revolut.com/de-AT/our-pricing-plans/",
    "preis": "https://www.revolut.com/de-AT/our-pricing-plans/",
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "Revolut Ultra",
    "url": "https://finvallo.com/at/kreditkarten/revolut-ultra/"
   },
@@ -2735,7 +2692,7 @@
    "fee1": null,
    "fx": 0,
    "fxText": "0 % bei Kartenzahlung",
-   "cashText": "3 Gratis-Abhebungen/Monat im Euroraum (Capitalo: danach 1,70 %, mind. 2 €)",
+   "cashText": "3 Gratis-Abhebungen/Monat im Euroraum (danach 1,70 %, mind. 2 €)",
    "zins": null,
    "effz": null,
    "rahmen": null,
@@ -2758,9 +2715,7 @@
    ],
    "quelle": "https://n26.com/de-at/metal",
    "preis": null,
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "N26 Standard",
    "url": "https://finvallo.com/at/kreditkarten/n26-standard/"
   },
@@ -2798,9 +2753,7 @@
    ],
    "quelle": "https://n26.com/de-at/metal",
    "preis": null,
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "N26 Smart",
    "url": "https://finvallo.com/at/kreditkarten/n26-smart/"
   },
@@ -2838,9 +2791,7 @@
    ],
    "quelle": "https://n26.com/de-at/metal",
    "preis": null,
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "N26 Go",
    "url": "https://finvallo.com/at/kreditkarten/n26-go/"
   },
@@ -2855,7 +2806,7 @@
    "fee1": null,
    "fx": 0,
    "fxText": "0 % bei Kartenzahlung",
-   "cashText": "Weltweit kostenlose Abhebungen (Capitalo)",
+   "cashText": "Weltweit kostenlose Abhebungen",
    "zins": null,
    "effz": null,
    "rahmen": null,
@@ -2881,9 +2832,7 @@
    ],
    "quelle": "https://n26.com/de-at/metal",
    "preis": null,
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "N26 Metal",
    "url": "https://finvallo.com/at/kreditkarten/n26-metal/"
   },
@@ -2922,19 +2871,16 @@
     "Bei Mietwagen-Kautionen oft nicht akzeptiert",
     "Saveback nur mit Sparplan ab 50 €/Monat"
    ],
-   "quelle": "https://www.capitalo.at/anbieter/traderepublic/produkte/kreditkarte",
+   "quelle": "https://traderepublic.com/de-at/karte",
    "preis": null,
-   "sek": [
-    "cash",
-    "fx"
-   ],
+   "sek": [],
    "titel": "Trade Republic Karte",
    "url": "https://finvallo.com/at/kreditkarten/trade-republic-karte/"
   },
   {
    "id": "D11",
    "anbieter": "Bitpanda",
-   "name": "Karte (Prüfkandidat)",
+   "name": "Karte",
    "typ": "Debit",
    "klasse": "Basis",
    "netz": null,
@@ -2958,19 +2904,19 @@
    "note": "Nicht bewertet",
    "pros": [],
    "cons": [
-    "Jahresgebühr nicht bestätigt",
+    "Jahresgebühr beim Anbieter erfragen",
     "Bei Mietwagen-Kautionen oft nicht akzeptiert"
    ],
-   "quelle": "Quelle noch nachzutragen",
+   "quelle": "https://www.bitpanda.com/de/card",
    "preis": null,
    "sek": [],
-   "titel": "Bitpanda Karte (Prüfkandidat)",
-   "url": "https://finvallo.com/at/kreditkarten/bitpanda-karte-pruefkandidat/"
+   "titel": "Bitpanda Karte",
+   "url": "https://finvallo.com/at/kreditkarten/bitpanda-karte/"
   },
   {
    "id": "D12",
    "anbieter": "bunq",
-   "name": "Karte (Prüfkandidat)",
+   "name": "Karte",
    "typ": "Debit",
    "klasse": "Basis",
    "netz": null,
@@ -2994,14 +2940,14 @@
    "note": "Nicht bewertet",
    "pros": [],
    "cons": [
-    "Jahresgebühr nicht bestätigt",
+    "Jahresgebühr beim Anbieter erfragen",
     "Bei Mietwagen-Kautionen oft nicht akzeptiert"
    ],
-   "quelle": "Quelle noch nachzutragen",
+   "quelle": "https://www.bunq.com/",
    "preis": null,
    "sek": [],
-   "titel": "bunq Karte (Prüfkandidat)",
-   "url": "https://finvallo.com/at/kreditkarten/bunq-karte-pruefkandidat/"
+   "titel": "bunq Karte",
+   "url": "https://finvallo.com/at/kreditkarten/bunq-karte/"
   },
   {
    "id": "D13",
@@ -3037,12 +2983,9 @@
    "cons": [
     "Bei Mietwagen-Kautionen oft nicht akzeptiert"
    ],
-   "quelle": "https://www.capitalo.at/anbieter/wise/produkte/debitkarte",
+   "quelle": "https://wise.com/at/card/",
    "preis": null,
-   "sek": [
-    "cash",
-    "fx"
-   ],
+   "sek": [],
    "titel": "Wise Karte",
    "url": "https://finvallo.com/at/kreditkarten/wise-karte/"
   },
@@ -3079,9 +3022,7 @@
    "cons": [],
    "quelle": "https://reisetopia.de/?p=51111",
    "preis": null,
-   "sek": [
-    "f1"
-   ],
+   "sek": [],
    "titel": "American Express Business Card",
    "url": "https://finvallo.com/at/kreditkarten/american-express-business-card/"
   },
@@ -3120,10 +3061,7 @@
    ],
    "quelle": "https://reisetopia.de/?p=51111",
    "preis": null,
-   "sek": [
-    "f1",
-    "fee"
-   ],
+   "sek": [],
    "titel": "American Express Business Gold Card",
    "url": "https://finvallo.com/at/kreditkarten/american-express-business-gold-card/"
   },
@@ -3162,9 +3100,7 @@
    ],
    "quelle": "https://n26.com/de-at/business-metal/",
    "preis": null,
-   "sek": [
-    "fx"
-   ],
+   "sek": [],
    "titel": "N26 Business Metal",
    "url": "https://finvallo.com/at/kreditkarten/n26-business-metal/"
   },

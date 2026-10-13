@@ -1,6 +1,6 @@
 # Finvallo
 
-> Unabhängiger Finanzvergleich für Österreich und Deutschland. 77 Karten in Österreich und 165 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Werte aus Sekundärquellen sind mit „Sek.“ markiert. Stand: 12.10.2026.
+> Unabhängiger Finanzvergleich für Österreich und Deutschland. 77 Karten in Österreich und 165 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Stand: 12.10.2026.
 
 Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/at/ und /de/). Konditionen aus Deutschland gelten nicht für Österreich. Bitte bei Zitaten die jeweilige Seiten-URL als Quelle angeben.
 
@@ -29,7 +29,6 @@ Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/a
 - [Bestenlisten nach Kategorie](https://finvallo.com/at/kreditkarten/bestenlisten/)
 - [Business-Kreditkarten](https://finvallo.com/at/kreditkarten/business/)
 - [Bewertungsmethodik](https://finvallo.com/at/kreditkarten/methodik/): Kriterien, Gewichte, Regeln
-- [Faktencheck](https://finvallo.com/at/kreditkarten/faktencheck/): alle Korrekturen mit Quellen
 
 ## Österreich: Bestenlisten
 - [Die besten Karten für Reisen in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/reisen/): Platz 1 TF Bank Mastercard Gold. Hier zählen Reiseversicherung und Auslandsgebühren am meisten.
@@ -39,7 +38,7 @@ Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/a
 - [Die besten Karten mit Cashback in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/cashback/): Platz 1 Trade Republic Karte. Nur Karten, die auf normale Einkäufe Geld zurückgeben. Am meisten zählt, wie viel bei 1.000 € Umsatz im Monat pro Jahr zurückkommt, mit allen Höchstgrenzen. Partner- und Reiserabatte zählen hier nicht.
 - [Die besten Karten mit Lounge-Zugang in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/lounge/): Platz 1 American Express Platinum Card. Nur Karten mit kostenlosen Lounge-Besuchen. Am meisten zählt, wie gut der Lounge-Zugang ist: wie viele Besuche im Jahr und ob eine Begleitperson gratis mitkommt.
 - [Die besten Premiumkarten in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/premium/): Platz 1 Erste Bank und Sparkassen Austrian Miles & More Premiumcard. Top-Karten mit Lounges oder Premium-Reiseschutz. Die Jahresgebühr zählt hier weniger.
-- [Die besten Karten für Studierende und junge Leute in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/studium/): Platz 1 easybank Gold Student. Karten, die für Studierende, Azubis oder junge Kund:innen günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.
+- [Die besten Karten für Studierende und junge Leute in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/studium/): Platz 1 easybank Gold Student. Karten, die für Studierende, Azubis oder junge Kunden günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.
 - [Die besten Debitkarten und App-Banken in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/debit/): Platz 1 Revolut Standard. Karten, die sofort vom Konto abbuchen. Kosten im Ausland zählen hier mehr.
 
 ## Österreich: Ratgeber
@@ -61,7 +60,6 @@ Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/a
 - [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 165 Karten, Stand 12.10.2026
 - [Bestenlisten Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/): beste Karten nach Kategorie
 - [Bewertungsmethodik Deutschland](https://finvallo.com/de/kreditkarten/methodik/)
-- [Faktencheck Deutschland](https://finvallo.com/de/kreditkarten/faktencheck/): Quellen je Karte
 - [Business-Kreditkarten Deutschland](https://finvallo.com/de/kreditkarten/business/)
 - [Anbieter Deutschland](https://finvallo.com/de/kreditkarten/anbieter/)
 - [Daten als JSON](https://finvallo.com/de/daten/kreditkarten.json)

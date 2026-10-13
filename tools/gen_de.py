@@ -63,7 +63,7 @@ def zinsT(c):
     if c.get('effz'): return f'{pct(c["effz"])} effektiv'
     return None
 TYPLAB={'Kreditkarte':'Kreditkarte mit Teilzahlung','Charge':'Charge-Karte','Debit':'Debitkarte','Prepaid':'Prepaid-Karte'}
-def sekb(c,*f): return '<span class="sek" title="Nur aus Sekundärquelle">Sek.</span>' if any(x in c['sek'] for x in f) else ''
+def sekb(c,*f): return ''
 def pros(c):
     p=[]
     f=c.get('fee')
@@ -110,7 +110,7 @@ def feats(c):
     if c.get('fee')==0: t.append(('g','Dauerhaft ohne Jahresgebühr'))
     return ''.join(f'<span class="{a}">{b}</span>' for a,b in t)
 def summary(c):
-    s=f'Die {c["titel"]} ist eine {TYPLAB.get(c["typ"],c["typ"])} ({c["netz"]}) für Kund:innen in Deutschland. '
+    s=f'Die {c["titel"]} ist eine {TYPLAB.get(c["typ"],c["typ"])} für Kunden in Deutschland. '
     f=c.get('fee')
     s+= 'Sie hat keine Jahresgebühr. ' if f==0 else (f'Sie kostet {eur(f)} € pro Jahr' + (f' ({c["feeNote"]})' if c.get('feeNote') else '') + '. ') if f is not None else ''
     s+= 'Zahlungen in fremder Währung kosten nichts extra. ' if c.get('fx')==0 else (f'Zahlungen in fremder Währung kosten {fxT(c)}. ' if c.get('fx') is not None else '')
@@ -173,8 +173,8 @@ def footer(P):
     return f'''<footer>
 <span><b>finvallo</b> · Unabhängiger Finanzvergleich für Deutschland</span>
 <span>Stand {STAND_DE} · Bewertung unabhängig von Provisionen, keine bezahlten Platzierungen · Mit * markierte Links sind Affiliate-Links.</span>
-<span>Keine Finanzberatung. Konditionen vor Abschluss beim Anbieter prüfen. „Sek.“ = Wert nur aus Vergleichsportal oder Fachblog.</span>
-<nav aria-label="Fußzeile"><a href="{P}de/kreditkarten/methodik/">So bewerten wir</a><a href="{P}de/kreditkarten/faktencheck/">Faktencheck</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a><a href="{P}ueber-uns/">Über uns</a><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></nav>
+<span>Keine Finanzberatung. Konditionen vor Abschluss beim Anbieter prüfen.</span>
+<nav aria-label="Fußzeile"><a href="{P}de/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a><a href="{P}ueber-uns/">Über uns</a><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></nav>
 </footer>
 </div>
 </body>
@@ -281,7 +281,7 @@ def card_page(c,cards,nrated):
     ld=graph(rel,t,d,[('Deutschland','de/'),('Kreditkarten','de/kreditkarten/'),('Anbieter','de/kreditkarten/anbieter/'),(c['anbieter'],f'de/kreditkarten/anbieter/{c["p"]}/'),(c['titel'],rel)],
              [ld_card,{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}])
     rk=f', Platz {c["rank"]} von {nrated} bewerteten Privatkarten in Deutschland' if c.get('rank') else ''
-    glance=summary(c)+(f'Finvallo bewertet sie mit {de1(c["stars"])} von 5 Sternen ({c["note"]}){rk}. ' if c.get('stars') else '')+f'Stand: {STAND_DE}.'
+    glance=summary(c)+(f'Finvallo bewertet sie mit {de1(c["stars"])} von 5 Sternen{rk}. ' if c.get('stars') else '')+f'Stand: {STAND_DE}.'
     a,b=who(c)
     how=''
     if c['typ']=='Kreditkarte':
@@ -311,8 +311,8 @@ def card_page(c,cards,nrated):
   <div class="box feebox"><small>Jahresgebühr</small><span class="big{" good" if c.get("fee")==0 else ""}">{E(feeT(c).replace(" pro Jahr"," / Jahr"))}</span>
     <a class="btn primary block" href="{E(c.get("quelle"))}" target="_blank" rel="noopener">Zum Anbieter ↗</a>
     <div class="actrow"><a class="plink" href="{E(c.get("preis") or c.get("quelle"))}" target="_blank" rel="noopener">{"Preise &amp; Gebühren (PDF) ↗" if (c.get("preis") or "").lower().endswith(".pdf") else "Konditionen beim Anbieter ↗"}</a></div></div>
-  <nav class="secnav" aria-label="Abschnitte"><a href="#s-ueb" data-sec="s-ueb" class="on">Überblick</a><a href="#s-kond" data-sec="s-kond">Konditionen</a><a href="#s-vers" data-sec="s-vers">Versicherung</a><a href="#s-bew" data-sec="s-bew">Bewertung</a><a href="#s-faq" data-sec="s-faq">Fragen</a></nav>
-  <section class="facts box" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section><section id="s-ueb">
+  <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
+  <nav class="secnav" aria-label="Abschnitte"><a href="#s-ueb" data-sec="s-ueb" class="on">Überblick</a><a href="#s-kond" data-sec="s-kond">Konditionen</a><a href="#s-vers" data-sec="s-vers">Versicherung</a><a href="#s-bew" data-sec="s-bew">Bewertung</a><a href="#s-faq" data-sec="s-faq">Fragen</a></nav><section id="s-ueb">
   <h2>Vorteile und Nachteile</h2>
   <div class="pc"><div class="box pro"><h3>Das spricht dafür</h3><ul class="checks">{"".join(f"<li>{E(x)}</li>" for x in pc) or "<li>–</li>"}</ul></div>
   <div class="box con"><h3>Das spricht dagegen</h3><ul class="checks neg">{"".join(f"<li>{E(x)}</li>" for x in kc) or "<li>–</li>"}</ul></div></div>
@@ -417,7 +417,7 @@ def anbieter_pages(cards):
         for c in v:
             r=c.get('rank'); c['rank']=None; items.append(list_item(c,P2,'../../')); c['rank']=r
         write(rel2,head(t2,d2,rel2,P2,graph(rel2,t2,d2,[('Deutschland','de/'),('Kreditkarten','de/kreditkarten/'),('Anbieter',rel),(nm,rel2)]))+f'''{HDR(P2,rel2)}
-<div class="wrap"><main id="app"><div class="crumb"><span><a href="../">Anbieter</a> › {E(nm)}</span></div><h1>{E(nm)} Kreditkarten</h1><p class="lede">{len(v)} {"Karte" if len(v)==1 else "Karten"} von {E(nm)} für Kund:innen in Deutschland.</p><div class="list">{"".join(items)}</div></main>
+<div class="wrap"><main id="app"><div class="crumb"><span><a href="../">Anbieter</a> › {E(nm)}</span></div><h1>{E(nm)} Kreditkarten</h1><p class="lede">{len(v)} {"Karte" if len(v)==1 else "Karten"} von {E(nm)} für Kunden in Deutschland.</p><div class="list">{"".join(items)}</div></main>
 {footer(P2)}''')
     return prov
 def datafile(cards):
@@ -439,7 +439,7 @@ def main():
     LISTS,BEST=cat_lists(cards)
     for c in cards: card_page(c,cards,len(priv))
     list_page(cards,priv,biz)
-    bestenlisten_land(cards,'de'); _,atbest=bestenlisten_land(at_cards(),'at'); patch_at_best(atbest); patch_tabs(); methodik_page(cards,priv); faktencheck_page(cards)
+    bestenlisten_land(cards,'de'); _,atbest=bestenlisten_land(at_cards(),'at'); patch_at_best(atbest); patch_tabs(); methodik_page(cards,priv)
     if biz: biz_page(biz)
     anbieter_pages(cards); datafile(cards)
     for c in priv[:12]: print(c['rank'],c['stars'],c['titel'],c['fee'],c['fx'],c['tier'])
@@ -451,7 +451,7 @@ def sitemap(cards,prov):
     s=re.sub(r'<url><loc>https://finvallo\.com/de/kreditkarten/[^<]*</loc>.*?</url>\n','',s)
     if 'https://finvallo.com/at/kreditkarten/rechner/' not in s:
         s=s.replace('</urlset>','<url><loc>https://finvallo.com/at/kreditkarten/rechner/</loc><lastmod>'+STAND+'</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n</urlset>')
-    urls=['de/kreditkarten/','de/kreditkarten/anbieter/','de/kreditkarten/methodik/','de/kreditkarten/faktencheck/','de/kreditkarten/bestenlisten/']+[f'de/kreditkarten/bestenlisten/{c["k"]}/' for c in CATS if os.path.exists(R+f'de/kreditkarten/bestenlisten/{c["k"]}/index.html')]+(['de/kreditkarten/business/'] if any(c['art']=='Business' for c in cards) else [])
+    urls=['de/kreditkarten/','de/kreditkarten/anbieter/','de/kreditkarten/methodik/','de/kreditkarten/bestenlisten/']+[f'de/kreditkarten/bestenlisten/{c["k"]}/' for c in CATS if os.path.exists(R+f'de/kreditkarten/bestenlisten/{c["k"]}/index.html')]+(['de/kreditkarten/business/'] if any(c['art']=='Business' for c in cards) else [])
     urls+=[f'de/kreditkarten/{c["slug"]}/' for c in cards]+[f'de/kreditkarten/anbieter/{x}/' for x in prov]
     add=''.join(f'<url><loc>https://finvallo.com/{u}</loc><lastmod>{STAND}</lastmod><changefreq>weekly</changefreq><priority>{"0.8" if u.count("/")<=3 else "0.6"}</priority></url>\n' for u in urls)
     s=s.replace('</urlset>',add+'</urlset>'); open(p,'w').write(s)
@@ -463,7 +463,7 @@ def llms(cards,priv):
         s=s.replace('Unabhängiger Finanzvergleich für Österreich (und Ratgeber für Deutschland). 77 Kredit-, Charge-, Debit- und Prepaid-Karten',f'Unabhängiger Finanzvergleich für Österreich und Deutschland. 77 Karten in Österreich und {n} in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten)')
         s=re.sub(r'77 Karten in Österreich und \d+ in Deutschland',f'77 Karten in Österreich und {n} in Deutschland',s)
         top=priv[:15 if fn=='llms.txt' else 60]
-        blk='\n## Deutschland: Kreditkarten\n'+f'- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller {n} Karten, Stand {STAND_DE}\n- [Bestenlisten Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/): beste Karten nach Kategorie\n- [Bewertungsmethodik Deutschland](https://finvallo.com/de/kreditkarten/methodik/)\n- [Faktencheck Deutschland](https://finvallo.com/de/kreditkarten/faktencheck/): Quellen je Karte\n- [Business-Kreditkarten Deutschland](https://finvallo.com/de/kreditkarten/business/)\n- [Anbieter Deutschland](https://finvallo.com/de/kreditkarten/anbieter/)\n- [Daten als JSON](https://finvallo.com/de/daten/kreditkarten.json)\n'
+        blk='\n## Deutschland: Kreditkarten\n'+f'- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller {n} Karten, Stand {STAND_DE}\n- [Bestenlisten Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/): beste Karten nach Kategorie\n- [Bewertungsmethodik Deutschland](https://finvallo.com/de/kreditkarten/methodik/)\n- [Business-Kreditkarten Deutschland](https://finvallo.com/de/kreditkarten/business/)\n- [Anbieter Deutschland](https://finvallo.com/de/kreditkarten/anbieter/)\n- [Daten als JSON](https://finvallo.com/de/daten/kreditkarten.json)\n'
         L,_=cat_lists(cards)
         blk+=''.join(f'- [{c["h"]} in Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/{c["k"]}/): Platz 1 {L[c["k"]][0]["titel"]}\n' for c in CATS if L[c['k']])
         blk+=''.join(f'- [{c["titel"]}](https://finvallo.com/de/kreditkarten/{c["slug"]}/): Platz {c["rank"]}, {de1(c["stars"])}/5 ({c["note"]}); Jahresgebühr {feeT(c)}, Ausland {fxT(c)}, {TIER[c["tier"]][1] if c.get("tier") is not None else ""}\n' for c in top)
@@ -525,7 +525,7 @@ def main():
     sitemap(cards,prov); llms(cards,priv); rechner(cards,prov)
     print('extras ok')
 
-# ---------- Bestenlisten, Methodik, Faktencheck (DE) ----------
+# ---------- Bestenlisten, Methodik (DE) ----------
 CATS=[
  dict(k='reisen',t='Reisen',h='Die besten Karten für Reisen',d='Hier zählen Reiseversicherung und Auslandsgebühren am meisten.',f=lambda c:c['typ']!='Prepaid',w={'Reiseversicherung':30,'Zahlen im Ausland':25,'Jahresgebühr':15,'Kartenart & Akzeptanz':10,'Extras':10,'Bargeld':10}),
  dict(k='gratis',t='Ohne Jahresgebühr',h='Die besten Karten ohne Jahresgebühr',d='Nur Karten, die dauerhaft nichts kosten. Bewertet wie in der Gesamtwertung.',f=lambda c:c.get('fee')==0,w=None),
@@ -534,7 +534,7 @@ CATS=[
  dict(k='cashback',t='Cashback',h='Die besten Karten mit Cashback',d='Nur Karten, die auf normale Einkäufe Geld zurückgeben. Am meisten zählt, wie viel bei 1.000 € Umsatz im Monat pro Jahr zurückkommt, mit allen Höchstgrenzen. Partner- und Reiserabatte zählen hier nicht.',f=lambda c:c.get('sammel') is not None and c.get('sammelKind')=='cash',w={'Sammelwert nach Jahresgebühr':70,'Zahlen im Ausland':10,'Kartenart & Akzeptanz':10,'Reiseversicherung':10}),
  dict(k='lounge',t='Lounge-Zugang',h='Die besten Karten mit Lounge-Zugang',d='Nur Karten mit kostenlosen Lounge-Besuchen. Am meisten zählt, wie gut der Lounge-Zugang ist: wie viele Besuche im Jahr und ob eine Begleitperson gratis mitkommt.',f=lambda c:bool(c['ex'].get('lg')),w={'Lounge-Zugang':60,'Reiseversicherung':15,'Jahresgebühr':15,'Zahlen im Ausland':10}),
  dict(k='premium',t='Premium',h='Die besten Premiumkarten',d='Top-Karten mit Lounges oder Premium-Reiseschutz. Die Jahresgebühr zählt hier weniger.',f=lambda c:c['klasse']=='Premium',w={'Reiseversicherung':30,'Extras':25,'Zahlen im Ausland':15,'Jahresgebühr':10,'Kartenart & Akzeptanz':10,'Bargeld':10}),
- dict(k='studium',f_at=lambda c:bool(re.search(r'Student|Maturant',c['titel'])),t='Studierende',h='Die besten Karten für Studierende und junge Leute',d='Karten, die für Studierende, Azubis oder junge Kund:innen günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.',f=lambda c:youth(c) is not None,w=None),
+ dict(k='studium',f_at=lambda c:bool(re.search(r'Student|Maturant',c['titel'])),t='Studierende',h='Die besten Karten für Studierende und junge Leute',d='Karten, die für Studierende, Azubis oder junge Kunden günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.',f=lambda c:youth(c) is not None,w=None),
  dict(k='debit',t='Debit & App-Banken',h='Die besten Debitkarten und App-Banken',d='Karten, die sofort vom Konto abbuchen. Kosten im Ausland zählen hier mehr.',f=lambda c:c['typ'] in ('Debit','Prepaid'),w={'Jahresgebühr':30,'Zahlen im Ausland':25,'Extras':15,'Reiseversicherung':15,'Alltag & Flexibilität':15}),
 ]
 YOUTH=r'(unter (?:2|3)\d(?: Jahren|-Jährige| in Ausbildung)?|bis (?:1|2)\d Jahre|bis zum (?:1|2)\d\. Geburtstag|in Ausbildung|Studierende|Student|Young|StartKonto|Azubi)'
@@ -692,7 +692,7 @@ def methodik_page(cards,priv):
     rb=''.join(f'<h3 style="margin-top:22px">{a}</h3><p class="note">{b}</p><div class="tbl"><table><tbody>{rows(L)}</tbody></table></div>' for a,b,L in rules)
     exrows=''.join(f'<tr><td><b>{E(p["k"])}</b><br><small class="mut">{E(p["v"])}</small></td><td>{p["w"]} %</td><td>{de1(p["s"])}</td></tr>' for p in ex['score']['parts'])
     fq=[('Wie bewertet Finvallo Kreditkarten in Deutschland?','Jede Karte bekommt in sieben Kriterien nach festen Regeln 1 bis 5 Sterne: Jahresgebühr (25 %), Reiseversicherung (20 %), Zahlen im Ausland (15 %), Kartenart, Alltag, Bargeld und Extras (je 10 %). Die Gesamtnote ist der gewichtete Durchschnitt.'),
-        ('Woher kommen die Daten?','Aus den Preis- und Leistungsverzeichnissen, Produktseiten und Versicherungsbedingungen der deutschen Anbieter. Werte, die wir nur bei Vergleichsportalen finden, markieren wir mit „Sek.“.'),
+        ('Woher kommen die Daten?','Aus den Preis- und Leistungsverzeichnissen, Produktseiten und Versicherungsbedingungen der deutschen Anbieter. Jede Kartenseite nennt die Quelle und den Stand der Daten.'),
         ('Beeinflussen Provisionen die Bewertung?','Nein. Ob wir mit einem Anbieter eine Partnerschaft haben, spielt für Sterne und Reihenfolge keine Rolle.')]
     ld=graph(rel,t,d,[('Deutschland','de/'),('Kreditkarten','de/kreditkarten/'),('Methodik',rel)],[{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}])
     alt=f'\n<link rel="alternate" hreflang="de-DE" href="https://finvallo.com/{rel}"><link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/kreditkarten/methodik/">'
@@ -705,33 +705,13 @@ def methodik_page(cards,priv):
 <h2>Was die Sterne bedeuten</h2><div class="tbl"><table><tbody>{rows([("ab 4,5 Sternen","Sehr gut"),("ab 4,0 Sternen","Gut"),("ab 3,5 Sternen","Befriedigend"),("ab 3,0 Sternen","Ausreichend"),("unter 3,0 Sternen","Mangelhaft")])}</tbody></table></div>
 <h2>Beispiel: {E(ex["titel"])}</h2><p class="note">So kommt die Karte auf {de1(ex["stars"])} Sterne.</p><div class="tbl"><table><thead><tr><th>Kriterium</th><th>Gewicht</th><th>Sterne</th></tr></thead><tbody>{exrows}<tr><td><b>Gesamt</b></td><td>100 %</td><td><b>{de1(ex["stars"])}</b></td></tr></tbody></table></div>
 <h2>Was die Sterne nicht zeigen</h2><div class="prose"><p>Teure Premiumkarten verlieren durch die Jahresgebühr Sterne, auch wenn sich Guthaben und Lounges für Vielreisende lohnen können. Zinsen für Teilzahlung zählen nicht mit, weil sie nur anfallen, wenn du nicht alles zahlst. Für deinen eigenen Fall nimm den <a href="{P}at/kreditkarten/rechner/?land=DE">Kostenrechner</a> und die <a href="../bestenlisten/">Bestenlisten</a>.</p></div>
-<h2>Woher die Daten kommen</h2><div class="prose"><p>Zuerst zählen die deutschen Preis- und Leistungsverzeichnisse, Verträge, Versicherungsbedingungen und Produktseiten der Anbieter. Haben wir einen Wert nur von einem Vergleichsportal oder Fachblog, steht „Sek.“ daneben. Konditionen aus Österreich übernehmen wir nicht. Alle Quellen stehen im <a href="../faktencheck/">Faktencheck</a>.</p></div>
+<h2>Woher die Daten kommen</h2><div class="prose"><p>Zuerst zählen die deutschen Preis- und Leistungsverzeichnisse, Verträge, Versicherungsbedingungen und Produktseiten der Anbieter. Konditionen aus Österreich übernehmen wir nicht. Die Quelle steht auf jeder Kartenseite.</p></div>
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div>
 </main>
 {footer(P)}''')
     fa=R+'at/kreditkarten/methodik/index.html'; sa=open(fa).read()
     if 'hreflang="de-DE" href="https://finvallo.com/de/kreditkarten/methodik/"' not in sa:
         sa=sa.replace('<link rel="canonical" href="https://finvallo.com/at/kreditkarten/methodik/">','<link rel="canonical" href="https://finvallo.com/at/kreditkarten/methodik/">'+alt,1); open(fa,'w').write(sa)
-def faktencheck_page(cards):
-    rel='de/kreditkarten/faktencheck/'; P='../../../'
-    t='Faktencheck Kreditkarten Deutschland: alle Quellen | Finvallo'
-    d=f'Woher die Daten der {len(cards)} Kreditkarten in Deutschland stammen: Preisverzeichnisse, Stand und wo Vergleichsportale veraltet waren.'
-    corr=''.join(f'<div class="corr"><div class="f">{E(a)} <span class="tag">Korrektur</span></div><span>{E(b)}</span></div>' for a,b in KORREKTUREN)
-    rows=''.join(f'<tr><td><a class="lnk" href="../{c["slug"]}/">{E(c["titel"])}</a></td><td>{ext(c.get("preis") or c.get("quelle"),"Preisverzeichnis" if c.get("preis") else "Produktseite")}</td><td>{E(c.get("stand") or "–")}</td><td>{E(", ".join(SEKN.get(x,x) for x in c["sek"]) or "–")}</td></tr>' for c in sorted(cards,key=lambda c:c['titel'].lower()))
-    nsek=sum(1 for c in cards if c['sek'])
-    ld=graph(rel,t,d,[('Deutschland','de/'),('Kreditkarten','de/kreditkarten/'),('Faktencheck',rel)])
-    write(rel,head(t,d,rel,P,ld)+f'''{HDR(P,rel)}
-<div class="wrap"><main id="app">
-<h1>Faktencheck: Kreditkarten in Deutschland</h1><p class="lede">Für jede Karte zeigen wir, aus welchem Dokument die Werte stammen und welche Angaben nur aus Sekundärquellen kommen.</p>
-<div class="facts prose"><p><b>Kurz gesagt:</b> Wir haben {len(cards)} Karten mit den Preis- und Leistungsverzeichnissen der Anbieter geprüft (Stand {STAND_DE}). Bei {len(cards)-nsek} Karten stammen alle bewertungsrelevanten Werte direkt vom Anbieter, bei {nsek} Karten ist mindestens ein Wert mit „Sek.“ markiert. Vergleichsportale waren bei mehreren Karten veraltet.</p></div>
-<h2>Wo Vergleichsportale veraltet waren</h2><div style="display:grid;gap:10px">{corr}</div>
-<h2>Quellen je Karte</h2><div class="tbl wide"><table><thead><tr><th>Karte</th><th>Quelle</th><th>Stand</th><th>Nur Sekundärquelle</th></tr></thead><tbody>{rows}</tbody></table></div>
-</main>
-{footer(P)}''')
-SEKN={'fee':'Jahresgebühr','fee1':'1. Jahr','fx':'Ausland','fxText':'Ausland','cash':'Bargeld','cashText':'Bargeld','pay':'Apple/Google Pay','auto':'Abbuchung','insText':'Versicherung','tier':'Versicherung','bonus':'Bonus','cbText':'Cashback','soll':'Zins','effz':'Zins','zinsfrei':'zinsfreie Tage','rahmen':'Kreditrahmen','lgText':'Lounge','creditsText':'Guthaben','konto':'Konto','cashInterest':'Bargeldzinsen','feeNote':'Gebührenhinweis','giro':'Konto nötig','netz':'Kartennetz'}
-
-
-# ---------- Bestenlisten für beide Länder ----------
 def at_cards():
     rj=json.loads(re.search(r'<script id="data" type="application/json">(.*?)</script>',open(R+'at/kreditkarten/rechner/index.html').read(),re.S).group(1))
     urls={c['id']:c for c in json.load(open(R+'at/daten/kreditkarten.json'))['karten']}
