@@ -509,3 +509,7 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
 .tabnext{display:none}
 .tabs-on .tabnext{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
 .tabs-on .tabnext .btn:only-child{margin-left:auto}
+/* Auf einen Blick: hervorgehoben, vor dem Abschnittsmenü */
+.facts.glance{background:var(--blue-soft);border-color:var(--blue);border-left:4px solid var(--blue)}
+.facts.glance h2{color:var(--blue-text)}
+.facts.glance .prose p{color:var(--ink)}

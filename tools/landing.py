@@ -78,7 +78,7 @@ def footer(P,hdr,year,stand):
 <div class="hp-foot-brand"><a class="brand" href="{P or './'}">{mark(hdr)}<b>fin<span>vallo</span></b></a><p>Unabhängiger Finanzvergleich für Österreich und Deutschland.</p><div class="hp-foot-lands"><a href="{P}at/">{FLAG['AT']} Österreich</a><a href="{P}de/">{FLAG['DE']} Deutschland</a></div></div>
 <div><h4>Vergleiche</h4><a href="{P}at/kreditkarten/">Kreditkarten Österreich</a><a href="{P}de/">Kreditkarten Deutschland</a><a href="{P}at/kreditkarten/bestenlisten/">Bestenlisten</a><a href="{P}at/kreditkarten/business/">Business-Kreditkarten</a><a href="{P}at/kreditkarten/rechner/">Kartenrechner</a></div>
 <div><h4>Ratgeber</h4><a href="{P}at/ratgeber/">Ratgeber Österreich</a><a href="{P}de/ratgeber/">Ratgeber Deutschland</a><a href="{P}at/ratgeber/kartentypen/">Kartentypen</a><a href="{P}at/ratgeber/teilzahlung/">Teilzahlung</a><a href="{P}at/ratgeber/lounges/">Lounges</a></div>
-<div><h4>Unternehmen</h4><a href="{P}ueber-uns/">Über uns</a><a href="{P}at/kreditkarten/methodik/">So bewerten wir</a><a href="{P}at/kreditkarten/faktencheck/">Faktencheck</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a></div>
+<div><h4>Unternehmen</h4><a href="{P}ueber-uns/">Über uns</a><a href="{P}at/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a></div>
 <div><h4>Rechtliches</h4><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></div>
 </div>
 <div class="hp-foot-legal"><span>© {year} Finvallo · Stand {stand}</span><span>Keine Finanzberatung. Konditionen vor Abschluss beim Anbieter prüfen. Mit * markierte Links sind Affiliate-Links. Bewertung unabhängig von Provisionen, keine bezahlten Platzierungen.</span></div>
@@ -110,7 +110,7 @@ def topcards(P,d,land,names=None,base='at/kreditkarten/'):
 def trust(P):
     return sec('So bewerten wir','Transparenz statt Werbeplätze: Unsere Regeln sind öffentlich.',f'''<div class="hp-trust">
 <a href="{P}at/kreditkarten/methodik/"><span class="hp-ic">{ic(I['chart'])}</span><b>Feste, offene Regeln</b><span class="hp-muted">Sieben gewichtete Kriterien, für jede Karte gleich angewendet.</span><small>Zur Methodik →</small></a>
-<a href="{P}at/kreditkarten/faktencheck/"><span class="hp-ic">{ic(I['search'])}</span><b>Geprüft beim Anbieter</b><span class="hp-muted">Konditionen aus Preisblatt und Anbieterseite, mit Quellenangabe.</span><small>Zum Faktencheck →</small></a>
+<a href="{P}at/kreditkarten/methodik/"><span class="hp-ic">{ic(I['search'])}</span><b>Geprüft beim Anbieter</b><span class="hp-muted">Konditionen aus Preisblatt und Anbieterseite, mit Quellenangabe.</span><small>So bewerten wir →</small></a>
 <a href="{P}so-verdienen-wir-geld/"><span class="hp-ic">{ic(I['shield'])}</span><b>Provision ohne Einfluss</b><span class="hp-muted">Affiliate-Links sind gekennzeichnet und ändern keine Bewertung.</span><small>So verdienen wir Geld →</small></a></div>''')
 SHIELD=ic(I['shield'])+' Unabhängig bewertet'
 AT_GUIDES=[('at/ratgeber/kostenlose-kreditkarte/','Vergleich','Kostenlose Kreditkarte in Österreich','Welche Karten wirklich nichts kosten und wo die Haken liegen.'),
@@ -171,7 +171,7 @@ def ROOT_FAQ(t): return [
  ('Warum muss ich ein Land wählen?','Banken, Preise und Bedingungen sind in Österreich und Deutschland verschieden, und viele Karten gibt es nur in einem der beiden Länder. Deshalb vergleichen wir jedes Land getrennt und übernehmen keine Werte von einem Land ins andere.'),
  ('Wie bewertet Finvallo Kreditkarten?','Jede Karte wird nach sieben fest gewichteten Kriterien bewertet: Jahresgebühr (25 %), Reiseversicherung (20 %), Zahlen im Ausland (15 %) sowie Kartenart, Alltag, Bargeld und Extras (je 10 %). Die Regeln sind öffentlich.'),
  ('Welche Kreditkarte ist in Österreich die beste?',f'Laut Finvallo-Bewertung ist die {t[0]["titel"]} mit {de(t[0]["stars"])} von 5 Sternen die bestbewertete Kreditkarte, vor der {t[1]["titel"]} und der {t[2]["titel"]}. Welche Karte zu dir passt, hängt davon ab, wie du sie nutzt.'),
- ('Wie aktuell sind die Konditionen?','Wir prüfen die Konditionen regelmäßig direkt beim Anbieter und im Preisblatt. Jede Seite zeigt den Stand der Daten, Abweichungen dokumentieren wir im Faktencheck.'),
+ ('Wie aktuell sind die Konditionen?','Wir prüfen die Konditionen regelmäßig direkt beim Anbieter und im Preisblatt. Jede Seite zeigt den Stand der Daten.'),
  ('Ist Finvallo eine Finanzberatung?','Nein. Finvallo vergleicht und erklärt, ersetzt aber keine persönliche Beratung. Prüfe die Konditionen vor dem Abschluss beim Anbieter.')]
 def b_at(P,hdr):
     t,tc=topcards(P,AT,'Österreich',AT_TOP,'at/kreditkarten/')

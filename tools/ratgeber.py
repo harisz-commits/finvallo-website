@@ -208,7 +208,7 @@ def build(land):
             ('Wechselkurse und Gebühren','<div class="prose"><p>Visa und Mastercard rechnen zu ihren eigenen Tageskursen um, die Unterschiede sind meist klein. Den Ausschlag gibt das Auslandseinsatzentgelt deiner Bank: von 0 % bis über 2 %. Mehr dazu in <a href="../fremdwaehrung/">Gebühren im Ausland verstehen</a>.</p></div>'),
             (f'So verteilen sich die Karten in {N}',f'<div class="tbl"><table><thead><tr><th>Netz</th><th>Karten im Vergleich</th></tr></thead><tbody>'+''.join(f'<tr><td>{k}</td><td>{v}</td></tr>' for k,v in [('Visa',nets['Visa']),('Mastercard',nets['Mastercard']),('American Express',nets['Amex']),('Visa oder Mastercard wählbar',nets['beide'])] if v)+'</tbody></table></div>'),
             ('Die besten Karten je Netz',''.join(f'<h3>{n}</h3>'+table([c for c in RC if f(c)][:3],[COL['karte'],COL['fee'],COL['fx'],COL['stars']],P) for n,f in [('Visa',lambda c:c['netz']=='Visa'),('Mastercard',lambda c:c['netz']=='Mastercard'),('American Express',lambda c:'American' in c['netz'])] if any(f(c) for c in RC)))],
-      faq=[('Ist Visa oder Mastercard besser?','Für dich als Kund:in gibt es kaum Unterschiede bei Akzeptanz und Kurs. Entscheidend sind die Gebühren und Leistungen der Karte.'),
+      faq=[('Ist Visa oder Mastercard besser?','Für dich als Kunde gibt es kaum Unterschiede bei Akzeptanz und Kurs. Entscheidend sind die Gebühren und Leistungen der Karte.'),
            ('Warum nimmt nicht jeder American Express?','Händler zahlen für Amex meist höhere Gebühren als für Visa oder Mastercard. Deshalb verzichten vor allem kleinere Geschäfte darauf.'),
            ('Lohnt sich American Express trotzdem?','Für Vielreisende oft ja: Punkteprogramm, Guthaben und Versicherungen können die Jahresgebühr aufwiegen. Als einzige Karte ist sie wegen der Akzeptanz aber nicht ideal.')],
       related=['fremdwaehrung','punkte','kostenlose-kreditkarte'])
@@ -280,7 +280,7 @@ PAIRS={('at','punkte-sammeln-at'):('de','punkte-sammeln-de'),('de','punkte-samme
 WHY_AMEX={'at':('punkte-sammeln-at','Österreich'),'de':('punkte-sammeln-de','Deutschland')}
 def why_amex(land):
     slug,N=WHY_AMEX[land]
-    return (f'<h2 id="bestenliste">Warum steht Amex in der Bestenliste nicht auf Platz 1?</h2><div class="prose"><p>Beide Rechnungen stimmen, sie gehen nur von verschiedenen Nutzer:innen aus. '
+    return (f'<h2 id="bestenliste">Warum steht Amex in der Bestenliste nicht auf Platz 1?</h2><div class="prose"><p>Beide Rechnungen stimmen, sie gehen nur von verschiedenen Nutzern aus. '
             f'Unsere <a href="../../kreditkarten/bestenlisten/punkte/">Bestenliste Meilen &amp; Punkte</a> bewertet jeden Punkt vorsichtig mit 1 Cent, rechnet mit 1.000 € Umsatz im Monat und zieht Jahresgebühr und Aufpreise ab. Sie zeigt also, was nach der Gebühr übrig bleibt. '
             f'So passt sie für die meisten, die Punkte für Gutscheine oder Economy-Flüge einlösen. Dort liegen Karten mit niedriger Gebühr vorne, die teure Gold Card und Platinum Card landen weiter hinten. Wer lieber Geld zurück will, findet die <a href="../../kreditkarten/bestenlisten/cashback/">Bestenliste Cashback</a>.</p>'
             f'<p>Dieser Ratgeber rechnet dagegen mit 1 bis 2 Cent pro Punkt und dem Turbo-Bonus. Diesen Wert erreichst du nur, wenn du die Punkte gezielt in Business- oder First-Class-Flüge über Partnerprogramme tauschst. '
