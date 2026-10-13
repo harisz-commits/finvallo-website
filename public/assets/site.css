@@ -503,3 +503,9 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
 .resbox .tbl{margin-top:14px;max-height:420px;overflow:auto}
 .resbox table{font-size:14px}
 @media (max-width:520px){.resbox table{font-size:12.5px}.resbox td,.resbox th{padding:8px 6px}.res b{font-size:20px}}
+/* Tabs auf Kartenseiten (nur mit JS aktiv) */
+.tabs-on section.tab-hidden{display:none}
+.tabs-on .secnav a{cursor:pointer}
+.tabnext{display:none}
+.tabs-on .tabnext{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.tabs-on .tabnext .btn:only-child{margin-left:auto}

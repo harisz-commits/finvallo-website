@@ -1,3 +1,4 @@
+import re
 # Sammelwert für die Bestenliste „Meilen & Punkte“: was eine Karte bei normalem Umsatz zurückbringt.
 # tier2 = (Höchstwert €/Jahr zur vollen Rate, Rate darüber)
 # rate = Wert in % vom allgemeinen Kartenumsatz (1 Punkt/Meile = 1 Cent, Hilton-Punkt = 0,4 Cent),
@@ -28,7 +29,7 @@ DE={
  'Turkish Airlines Miles&Smiles Mastercard Gold':dict(rate=0.5,txt='1 Meile je 2 €'),
  'Klarna Plus':dict(rate=0.5,txt='0,5 % Cashback'),'Klarna Premium':dict(rate=1.0,txt='1 % Cashback'),'Klarna Max':dict(rate=1.5,txt='1,5 % Cashback'),
  'Eurowings Kreditkarte Classic':dict(rate=0.5,txt='1 Prämienmeile je 2 €'),'Eurowings Kreditkarte Premium':dict(rate=0.5,txt='1 Prämienmeile je 2 €'),
- 'Amazon Visa':dict(rate=0.5,txt='0,5 % in Amazon-Punkten (1 % bei Amazon)'),
+ 'Amazon Visa':dict(kind='cash',rate=0.5,txt='0,5 % in Amazon-Punkten (1 % bei Amazon)'),
  'IKEA Family Kreditkarte':dict(rate=1.0,cap=30,txt='1 % als IKEA-Guthaben, max. 30 €/Jahr'),
  'Miles & More Gold Credit Card':dict(rate=0.5,txt='1 Meile je 2 €'),'Miles & More Blue Credit Card':dict(rate=0.5,txt='1 Meile je 2 €'),'Miles & More MyFlex Credit Card':dict(rate=0.5,txt='1 Meile je 2 €'),
  'TARGOBANK Gold-Karte':dict(rate=1.0,cap=100,txt='1 % Cashback, max. 100 €/Jahr'),
@@ -52,6 +53,12 @@ DE={
  'Magenta Pay Visa Debitkarte':dict(rate=1.0,txt='1 % in Coins'),
  'Monese Mastercard Cashback':dict(rate=0.5,cap=30,txt='0,5 %, max. 2,50 €/Monat'),
 }
+def kind(m):
+    if m.get('kind'): return m['kind']
+    t=m.get('txt','')
+    if re.search(r'Meile|Miles',t,re.I): return 'miles'
+    if re.search(r'Membership|Hilton|°Punkt|RevPoint|Punkt je|Bonuspunkt|Punkte',t): return 'points'
+    return 'cash'
 def value(land,titel,spend=REF):
     m=(AT if land=='at' else DE).get(titel)
     if not m or not m.get('rate'): return None
@@ -66,3 +73,10 @@ def note(v):
     for lim,s in [(180,5.0),(120,4.5),(90,4.0),(60,3.5),(36,3.0)]:
         if v>=lim: return s
     return 2.5
+
+def net_note(v):
+    """Netto-Sammelwert (Sammelwert minus Jahresgebühr) in Sterne."""
+    if v is None: return None
+    for lim,s_ in [(150,5.0),(100,4.5),(60,4.0),(30,3.5),(0,3.0),(-50,2.5),(-150,2.0)]:
+        if v>=lim: return s_
+    return 1.5
