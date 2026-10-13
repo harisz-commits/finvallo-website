@@ -14,23 +14,13 @@ def pct(x):
 TIERN={0:'keine',1:'Basis-Reiseschutz',2:'mit Reiserücktritt',3:'umfassend (inkl. Mietwagen)',4:'Premium'}
 # ---------- Daten ----------
 def cards(land):
+    import karten
+    if not hasattr(cards,'D'): cards.D=karten.prepare()
     out=[]
-    if land=='at':
-        rj=json.loads(re.search(r'<script id="data" type="application/json">(.*?)</script>',open(R+'at/kreditkarten/rechner/index.html').read(),re.S).group(1))
-        urls={c['id']:c for c in json.load(open(R+'at/daten/kreditkarten.json'))['karten']}
-        for c in rj['cards']:
-            if c.get('land')!='AT' or c['id'] not in urls: continue
-            u=urls[c['id']]
-            out.append(dict(titel=u['titel'],url=u['url'].replace('https://finvallo.com/',''),fee=c.get('fee'),fx=c.get('fx'),fxText=c.get('fxText'),cashText=c.get('cashText'),
-              stars=c.get('stars'),tier=c.get('tier'),typ=c['typ'],netz=c.get('netz') or '',giro=c.get('giro'),auto=c.get('auto'),art=c.get('art','Privat'),
-              lg=c.get('lg') if c.get('lgf') else None,cb=c.get('cb') or c.get('earn'),ml=c.get('ml'),klasse=c.get('klasse'),bestand=c.get('bestand'),cash=c.get('cash')))
-    else:
-        import gen_de
-        cs=gen_de.load(); gen_de.ratecards(cs)
-        for c in cs:
-            out.append(dict(titel=c['titel'],url=f'de/kreditkarten/{c["slug"]}/',fee=c.get('fee'),fx=c.get('fx'),fxText=gen_de.fxT(c),cashText=gen_de.cashT(c),
-              stars=c.get('stars'),tier=c.get('tier'),typ=c['typ'],netz=c.get('netz') or '',giro=c.get('giro'),auto=c.get('auto'),art=c['art'],
-              lg=c.get('lgText') if c['ex'].get('lg') else None,cb=c.get('cbText') if c['ex'].get('cb') else None,ml=c['ex'].get('ml'),klasse=c['klasse'],bestand=c.get('nurfuer'),cash=c.get('cash')))
+    for c in cards.D[land][0]:
+        out.append(dict(titel=c['titel'],url=f'{land}/kreditkarten/{c["slug"]}/',fee=c.get('fee'),fx=c.get('fx'),fxText=karten.fxT(c),cashText=karten.cashT(c),
+          stars=c.get('stars'),tier=c.get('tier'),typ=c['typ'],netz=c.get('netz') or '',giro=c.get('giro'),auto=c.get('auto'),art=c['art'],
+          lg=c.get('lgText') if c['ex'].get('lg') else None,cb=c.get('earnText') or (c.get('cbText') if c['ex'].get('cb') else None),ml=c['ex'].get('ml'),klasse=c['klasse'],bestand=c.get('nurfuer'),cash=c.get('cash')))
     return [c for c in out if c['art']=='Privat' and not c.get('bestand')]
 def rated(L): return sorted([c for c in L if c.get('stars') is not None],key=lambda c:(-c['stars'],c['fee'] if c['fee'] is not None else 1e9))
 def link(c,P): return f'<a class="lnk" href="{P}{c["url"]}">{E(c["titel"])}</a>'

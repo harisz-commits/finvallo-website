@@ -67,7 +67,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Platinum_Card_Informationen.pdf",
   "stand": "Platinum Card Informationen (PDF 06/2026)",
   "sek": [],
-  "notiz": "Neben Platinum_Card_Informationen.pdf (06/2026) verlinkt Amex auch PlatinumCardInformationen_2026.pdf (03/2026). Beim Restaurantguthaben nennt die Produktseite 150 € jährlich."
+  "notiz": "Neben Platinum_Card_Informationen.pdf (06/2026) verlinkt Amex auch PlatinumCardInformationen_2026.pdf (03/2026). Beim Restaurantguthaben nennt die Produktseite 150 € jährlich.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "american-express-gold-card",
@@ -137,7 +138,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Gold_Card_Informationen.pdf",
   "stand": "Gold Card aus Metall Informationen (PDF 08/2026)",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "american-express-gold-card-rose",
@@ -207,7 +209,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Gold_Card_Informationen.pdf",
   "stand": "Gold Card aus Metall Informationen (PDF 08/2026)",
   "sek": [],
-  "notiz": "Gleiche Konditionen und gleiches PLV wie die Gold Card aus Metall, nur ein anderes Kartendesign (roséfarbenes Metall)."
+  "notiz": "Gleiche Konditionen und gleiches PLV wie die Gold Card aus Metall, nur ein anderes Kartendesign (roséfarbenes Metall).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "american-express-card",
@@ -273,7 +276,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/American_Express_Card_Informationen.pdf",
   "stand": "American Express Card Informationen (PDF 06/2026)",
   "sek": [],
-  "notiz": "Nachfolger der Green Card. Green_Card_Informationen.pdf ist identisch mit American_Express_Card_Informationen.pdf."
+  "notiz": "Nachfolger der Green Card. Green_Card_Informationen.pdf ist identisch mit American_Express_Card_Informationen.pdf.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "american-express-green-card",
@@ -326,7 +330,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Green_Card_Informationen.pdf",
   "stand": "06/2026",
   "sek": [],
-  "notiz": "Die Green Card ist nicht mehr im Amex-Kartenportfolio (alle-kreditkarten zeigt 9 Privatkarten ohne Green Card). Ihre alte Produkt-URL liefert 404, und Green_Card_Informationen.pdf ist inhaltlich die American Express Card. Bitte als „ersetzt durch American Express Card“ führen."
+  "notiz": "Die Green Card ist nicht mehr im Amex-Kartenportfolio (alle-kreditkarten zeigt 9 Privatkarten ohne Green Card). Ihre alte Produkt-URL liefert 404, und Green_Card_Informationen.pdf ist inhaltlich die American Express Card. Bitte als „ersetzt durch American Express Card“ führen.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "american-express-blue-card",
@@ -392,7 +397,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Blue_Card_Informationen.pdf",
   "stand": "Blue Card Informationen (PDF 06/2026)",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "payback-american-express",
@@ -459,7 +465,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Payback_Card_Informationen.pdf",
   "stand": "PAYBACK Card Informationen (PDF 06/2026)",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "dm-payback-american-express",
@@ -525,7 +532,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Payback_Card_Informationen.pdf",
   "stand": "PAYBACK Card Informationen (PDF 06/2026, gilt auch für die dm-Variante)",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "bmw-card-american-express",
@@ -591,7 +599,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/BMW_Card_Informationen.pdf",
   "stand": "BMW Card Informationen (PDF 06/2026)",
   "sek": [],
-  "notiz": "Die Kartenübersicht nennt noch „20 Euro Startguthaben“ und „ab 4.000 € Jahresumsatz kostenfrei, sonst 20 €“ (veraltet). Produktseite und PLV nennen 44 € Jahresgebühr und 44 € Startguthaben. Alte Konditionen für Anträge vor 07.05.2025 stehen in BMW_Card_Informationen_bis_06_05_2025.pdf."
+  "notiz": "Die Kartenübersicht nennt noch „20 Euro Startguthaben“ und „ab 4.000 € Jahresumsatz kostenfrei, sonst 20 €“ (veraltet). Produktseite und PLV nennen 44 € Jahresgebühr und 44 € Startguthaben. Alte Konditionen für Anträge vor 07.05.2025 stehen in BMW_Card_Informationen_bis_06_05_2025.pdf.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "bmw-premium-card-carbon",
@@ -659,7 +668,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/BMW_Carbon_Card_Informationen.pdf",
   "stand": "BMW Premium Card Carbon Informationen (PDF 06/2026)",
   "sek": [],
-  "notiz": "Die Kartenübersicht (alle-kreditkarten) nennt 100 € Startguthaben, die Produktseite 150 €. Eingetragen ist der Wert der Produktseite. tier=4 trotz fehlender Reiseunfall- und Reisekomfort-Versicherung, wegen der Summen auf Platinum-Niveau und des Priority Pass."
+  "notiz": "Die Kartenübersicht (alle-kreditkarten) nennt 100 € Startguthaben, die Produktseite 150 €. Eingetragen ist der Wert der Produktseite. tier=4 trotz fehlender Reiseunfall- und Reisekomfort-Versicherung, wegen der Summen auf Platinum-Niveau und des Priority Pass.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "american-express-business-platinum-card",
@@ -729,7 +739,8 @@
   "sek": [
    "bonus"
   ],
-  "notiz": "Die Mindestumsatz-Bedingung für das 600-€-Startguthaben steht nicht im HTML (per JS nachgeladen); 15.000 €/6 Monate stammt von capitalo/ftd. Die Website wirbt mit „bis zu 440 € Mobilitätsguthaben“ und „bis zu 600 € für Co-Working/Telefonservice“, das PLV listet die Einzelbeträge."
+  "notiz": "Die Mindestumsatz-Bedingung für das 600-€-Startguthaben steht nicht im HTML (per JS nachgeladen); 15.000 €/6 Monate stammt von capitalo/ftd. Die Website wirbt mit „bis zu 440 € Mobilitätsguthaben“ und „bis zu 600 € für Co-Working/Telefonservice“, das PLV listet die Einzelbeträge.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "american-express-business-gold-card",
@@ -795,7 +806,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Gold_Card_Informationen_NEU.pdf",
   "stand": "Business Gold Leistungsübersicht 06.2026",
   "sek": [],
-  "notiz": "tier=2 ist ein Grenzfall: kein Reiserücktritt, dafür Auslandskranken und Mietwagen-Kasko. Die Bedingung für das 150-€-Startguthaben wird nur per JS nachgeladen."
+  "notiz": "tier=2 ist ein Grenzfall: kein Reiserücktritt, dafür Auslandskranken und Mietwagen-Kasko. Die Bedingung für das 150-€-Startguthaben wird nur per JS nachgeladen.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "american-express-business-green-card",
@@ -861,7 +873,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Green_Card_Informationen.pdf",
   "stand": "Business Green Leistungsübersicht 06.2026",
   "sek": [],
-  "notiz": "Entspricht der „Business Card“ aus dem Auftrag; im Business-Vergleich heißt sie „American Express Business Card“."
+  "notiz": "Entspricht der „Business Card“ aus dem Auftrag; im Business-Vergleich heißt sie „American Express Business Card“.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "amazon-business-american-express-card",
@@ -926,7 +939,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amazon_Business_Amex_Card_Informationen.pdf",
   "stand": "Amazon Business Amex Informationen (PDF 06/2026)",
   "sek": [],
-  "notiz": "Laut PLV kostet die Amazon Business Card 30 € pro Jahr ohne Hinweis auf ein freies erstes Jahr. Die Produktseite nennt „Im 1. Jahr beitragsfrei“."
+  "notiz": "Laut PLV kostet die Amazon Business Card 30 € pro Jahr ohne Hinweis auf ein freies erstes Jahr. Die Produktseite nennt „Im 1. Jahr beitragsfrei“.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "amazon-business-prime-american-express-card",
@@ -993,7 +1007,8 @@
   "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amazon_Business_Amex_Card_Informationen.pdf",
   "stand": "Amazon Business Amex Informationen (PDF 06/2026)",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "payback-visa-kreditkarte",
@@ -1064,7 +1079,8 @@
    "pay",
    "payText"
   ],
-  "notiz": "PLV und Kartenbedingungen (Fassung 01.03.2024) enthalten keinen Sollzins. Die Karte wird komplett per Lastschrift ausgeglichen. Apple Pay/Google Pay nur über Vergleichsportale bestätigt (reisetopia u. a.)."
+  "notiz": "PLV und Kartenbedingungen (Fassung 01.03.2024) enthalten keinen Sollzins. Die Karte wird komplett per Lastschrift ausgeglichen. Apple Pay/Google Pay nur über Vergleichsportale bestätigt (reisetopia u. a.).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "payback-visa-guthabenbasis",
@@ -1131,7 +1147,8 @@
    "payText",
    "cbText"
   ],
-  "notiz": "Auf payback.de nicht mehr eigenständig beworben, aber PLV (07/2025) und Datenschutzhinweis sind online. Vermutlich gibt es die Karte vor allem als Alternative bei abgelehnter Kreditkarte; bitte prüfen. Finanzfluss nennt „1. Jahr kostenlos“, offiziell nicht bestätigt, deshalb nicht übernommen."
+  "notiz": "Auf payback.de nicht mehr eigenständig beworben, aber PLV (07/2025) und Datenschutzhinweis sind online. Vermutlich gibt es die Karte vor allem als Alternative bei abgelehnter Kreditkarte; bitte prüfen. Finanzfluss nennt „1. Jahr kostenlos“, offiziell nicht bestätigt, deshalb nicht übernommen.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "payback-visa-flex-plus",
@@ -1184,7 +1201,8 @@
   "preis": "https://bw-bank.de/ibpaybackbedingungen",
   "stand": "Bedingungen Fassung 01.03.2024",
   "sek": [],
-  "notiz": "Flex+ (mit Teilzahlung) wird nicht mehr angeboten. Auf payback.de gibt es nur noch die PAYBACK Visa Kreditkarte (29 €, Charge), und das aktuelle PLV hat keinen Sollzins. Flex+ steht nur noch im Titel der alten Kartenbedingungen (03/2024)."
+  "notiz": "Flex+ (mit Teilzahlung) wird nicht mehr angeboten. Auf payback.de gibt es nur noch die PAYBACK Visa Kreditkarte (29 €, Charge), und das aktuelle PLV hat keinen Sollzins. Flex+ steht nur noch im Titel der alten Kartenbedingungen (03/2024).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "adac-kreditkarte",
@@ -1250,7 +1268,8 @@
   "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
   "stand": "PLV Version 1.1, Stand 01.07.2026 (ab 28.10.2026 Version 1.2)",
   "sek": [],
-  "notiz": "Nur für ADAC-Mitglieder (Basis, Plus oder Premium). Ab 28.10.2026 gilt ein neues PLV (Version 1.2) mit Sollzins 14,89 % und eff. 15,95 %, die übrigen Entgelte bleiben gleich. Alte ADAC-Karten (Gold, mobilKarte Gold 2/3 %, Gold 5 %, Classic, Silber, ClubmobilKarte) gibt es nur noch für Bestandskunden."
+  "notiz": "Nur für ADAC-Mitglieder (Basis, Plus oder Premium). Ab 28.10.2026 gilt ein neues PLV (Version 1.2) mit Sollzins 14,89 % und eff. 15,95 %, die übrigen Entgelte bleiben gleich. Alte ADAC-Karten (Gold, mobilKarte Gold 2/3 %, Gold 5 %, Classic, Silber, ClubmobilKarte) gibt es nur noch für Bestandskunden.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "adac-kreditkarte-paket-schutz",
@@ -1315,7 +1334,8 @@
   "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
   "stand": "PLV Version 1.1, Stand 01.07.2026 (ab 28.10.2026 Version 1.2)",
   "sek": [],
-  "notiz": "Nur für ADAC-Mitglieder (Basis, Plus oder Premium). Ab 28.10.2026 gilt ein neues PLV (Version 1.2) mit Sollzins 14,89 % und eff. 15,95 %, die übrigen Entgelte bleiben gleich. Alte ADAC-Karten (Gold, mobilKarte Gold 2/3 %, Gold 5 %, Classic, Silber, ClubmobilKarte) gibt es nur noch für Bestandskunden."
+  "notiz": "Nur für ADAC-Mitglieder (Basis, Plus oder Premium). Ab 28.10.2026 gilt ein neues PLV (Version 1.2) mit Sollzins 14,89 % und eff. 15,95 %, die übrigen Entgelte bleiben gleich. Alte ADAC-Karten (Gold, mobilKarte Gold 2/3 %, Gold 5 %, Classic, Silber, ClubmobilKarte) gibt es nur noch für Bestandskunden.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "adac-kreditkarte-paket-sparen",
@@ -1380,7 +1400,8 @@
   "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
   "stand": "PLV Version 1.1, Stand 01.07.2026 (ab 28.10.2026 Version 1.2)",
   "sek": [],
-  "notiz": "Nur für ADAC-Mitglieder (Basis, Plus oder Premium). Ab 28.10.2026 gilt ein neues PLV (Version 1.2) mit Sollzins 14,89 % und eff. 15,95 %, die übrigen Entgelte bleiben gleich. Alte ADAC-Karten (Gold, mobilKarte Gold 2/3 %, Gold 5 %, Classic, Silber, ClubmobilKarte) gibt es nur noch für Bestandskunden."
+  "notiz": "Nur für ADAC-Mitglieder (Basis, Plus oder Premium). Ab 28.10.2026 gilt ein neues PLV (Version 1.2) mit Sollzins 14,89 % und eff. 15,95 %, die übrigen Entgelte bleiben gleich. Alte ADAC-Karten (Gold, mobilKarte Gold 2/3 %, Gold 5 %, Classic, Silber, ClubmobilKarte) gibt es nur noch für Bestandskunden.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "adac-kreditkarte-paket-reise",
@@ -1447,7 +1468,8 @@
   "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
   "stand": "PLV Version 1.1, Stand 01.07.2026 (ab 28.10.2026 Version 1.2)",
   "sek": [],
-  "notiz": "Nur für ADAC-Mitglieder (Basis, Plus oder Premium). Ab 28.10.2026 gilt ein neues PLV (Version 1.2) mit Sollzins 14,89 % und eff. 15,95 %, die übrigen Entgelte bleiben gleich. Alte ADAC-Karten (Gold, mobilKarte Gold 2/3 %, Gold 5 %, Classic, Silber, ClubmobilKarte) gibt es nur noch für Bestandskunden. Die Gebührenfreiheit für Bargeld aus Guthaben steht in der Produktinformation Paket Reise."
+  "notiz": "Nur für ADAC-Mitglieder (Basis, Plus oder Premium). Ab 28.10.2026 gilt ein neues PLV (Version 1.2) mit Sollzins 14,89 % und eff. 15,95 %, die übrigen Entgelte bleiben gleich. Alte ADAC-Karten (Gold, mobilKarte Gold 2/3 %, Gold 5 %, Classic, Silber, ClubmobilKarte) gibt es nur noch für Bestandskunden. Die Gebührenfreiheit für Bargeld aus Guthaben steht in der Produktinformation Paket Reise.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "adac-kreditkarte-paket-platin",
@@ -1514,6 +1536,7 @@
   "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
   "stand": "PLV Version 1.1, Stand 01.07.2026 (ab 28.10.2026 Version 1.2)",
   "sek": [],
-  "notiz": "Nur für ADAC-Mitglieder (Basis, Plus oder Premium). Ab 28.10.2026 gilt ein neues PLV (Version 1.2) mit Sollzins 14,89 % und eff. 15,95 %, die übrigen Entgelte bleiben gleich. Alte ADAC-Karten (Gold, mobilKarte Gold 2/3 %, Gold 5 %, Classic, Silber, ClubmobilKarte) gibt es nur noch für Bestandskunden. „Platin“ ist nur der Paketname. Die Karte hat keine Lounge und keine Platinum-typischen Extras, darum klasse=Premium nur wegen der Paketstufe; eventuell eher „Gold“."
+  "notiz": "Nur für ADAC-Mitglieder (Basis, Plus oder Premium). Ab 28.10.2026 gilt ein neues PLV (Version 1.2) mit Sollzins 14,89 % und eff. 15,95 %, die übrigen Entgelte bleiben gleich. Alte ADAC-Karten (Gold, mobilKarte Gold 2/3 %, Gold 5 %, Classic, Silber, ClubmobilKarte) gibt es nur noch für Bestandskunden. „Platin“ ist nur der Paketname. Die Karte hat keine Lounge und keine Platinum-typischen Extras, darum klasse=Premium nur wegen der Paketstufe; eventuell eher „Gold“.",
+  "geprueft": "2026-10-12"
  }
 ]

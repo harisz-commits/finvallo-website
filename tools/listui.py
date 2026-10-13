@@ -4,7 +4,7 @@ Läuft in build.sh nach cleanup.py über alle Seiten mit Kartenlisten (AT und DE
 """
 import glob, hashlib, html as H, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import gen_de as G
+import karten as G
 
 R = G.R
 STARS = ['*', '**', '***']
@@ -59,15 +59,8 @@ def footnotes(a):
 
 # ---------- Filter-Daten ----------
 def card_index():
-    import json
-    idx = {}
-    at = {c['url'].rstrip('/').split('/')[-1]: c for c in json.load(open(R + 'at/daten/kreditkarten.json'))['karten']}
-    for c in G.at_cards():
-        j = at.get(c['slug'], {})
-        c['netz'] = j.get('netz'); c['pay'] = j.get('pay')
-        idx[('at', c['slug'])] = c
-    for c in G.load(): idx[('de', c['slug'])] = c
-    return idx
+    D = G.prepare()
+    return {(land, c['slug']): c for land in D for c in D[land][0]}
 
 def flags(c, a):
     f = []

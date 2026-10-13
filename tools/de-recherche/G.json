@@ -65,7 +65,8 @@
    "cbText",
    "pay"
   ],
-  "notiz": "Primär gelesen: Entgeltinformation Girokonto (Stand 01.01.2025). Saveback-Details (1 %, 15 €-Deckel, Sparplan ab 50 €) nur aus Portalen bestätigt; Produktseite ist JS-lastig und lieferte keinen Text. Aktuelle Preisübersicht (PDF) nicht gefunden."
+  "notiz": "Primär gelesen: Entgeltinformation Girokonto (Stand 01.01.2025). Saveback-Details (1 %, 15 €-Deckel, Sparplan ab 50 €) nur aus Portalen bestätigt; Produktseite ist JS-lastig und lieferte keinen Text. Aktuelle Preisübersicht (PDF) nicht gefunden.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "trading-212-card",
@@ -132,7 +133,8 @@
   "sek": [
    "cbText"
   ],
-  "notiz": "trading212.com blockiert Abruf (403); Gebühren aus dem offiziellen Help Centre (DE). Cashback-Änderung zum 07.08.2026 nur über broker-test.at bestätigt. Höhe der physischen Kartengebühr im Help Centre nicht beziffert. Ausgabe durch Paynetics."
+  "notiz": "trading212.com blockiert Abruf (403); Gebühren aus dem offiziellen Help Centre (DE). Cashback-Änderung zum 07.08.2026 nur über broker-test.at bestätigt. Höhe der physischen Kartengebühr im Help Centre nicht beziffert. Ausgabe durch Paynetics.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "unitplus-mastercard",
@@ -198,7 +200,8 @@
   "preis": "https://www.unitplus.eu/kosten",
   "stand": "Kostenübersicht, abgerufen 10/2026",
   "sek": [],
-  "notiz": "Kartenherausgeber auf der Website nicht genannt (Partnerbank UniCredit für Verwahrung; AGB von Aion Bank verlinkt). Apple/Google Pay laut offiziellen UnitPlus-FAQ."
+  "notiz": "Kartenherausgeber auf der Website nicht genannt (Partnerbank UniCredit für Verwahrung; AGB von Aion Bank verlinkt). Apple/Google Pay laut offiziellen UnitPlus-FAQ.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "kraken-krak-card",
@@ -262,7 +265,8 @@
   "preis": "https://support.kraken.com/de/articles/kraken-card-faqs",
   "stand": "Kraken Support FAQ, abgerufen 10/2026",
   "sek": [],
-  "notiz": "Kartenherausgeber in den FAQ nicht genannt (Payward Europe Solutions Ltd., Irland, als EU-Gesellschaft). Produkt-URL krak.app/de/card nicht verifiziert. Laut Portalen seit 03/2026 auch deutsche IBAN."
+  "notiz": "Kartenherausgeber in den FAQ nicht genannt (Payward Europe Solutions Ltd., Irland, als EU-Gesellschaft). Produkt-URL krak.app/de/card nicht verifiziert. Laut Portalen seit 03/2026 auch deutsche IBAN.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "bbva-debitkarte",
@@ -330,7 +334,8 @@
    "rahmen",
    "netz"
   ],
-  "notiz": "bbva.de blockiert direkte Abrufe (WAF); PLV-Inhalte (Kartengebühr, FX 0, Apple Pay, Dispo 9,95 %, 3 % Neukundenzins) und Bargeldregel (150 €/2 €, Fremdwährung 2 €) über Suchmaschinen-Auszüge der offiziellen BBVA-PDFs bestätigt, nicht vollständig selbst gelesen. Cashback-Aktion nur bei konto.org. Effektivzins des Dispo unbekannt."
+  "notiz": "bbva.de blockiert direkte Abrufe (WAF); PLV-Inhalte (Kartengebühr, FX 0, Apple Pay, Dispo 9,95 %, 3 % Neukundenzins) und Bargeldregel (150 €/2 €, Fremdwährung 2 €) über Suchmaschinen-Auszüge der offiziellen BBVA-PDFs bestätigt, nicht vollständig selbst gelesen. Cashback-Aktion nur bei konto.org. Effektivzins des Dispo unbekannt.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "bitpanda-card",
@@ -398,7 +403,8 @@
   "preis": "https://support.bitpanda.com/hc/en-us/articles/360018933120",
   "stand": "Produktseite und Support-Artikel, abgerufen 10/2026",
   "sek": [],
-  "notiz": "Produktseite (DE) gelesen. Bargeldgebühr 2 %/mind. 2 € aus Suchauszug des offiziellen Support-Artikels (Direktabruf 403). Herausgeber: Produktseite nennt noch Contis (UAB Finansinės paslaugos Contis) – vermutlich veraltet, da Bitpanda 2025 den Kartenanbieter gewechselt hat. Google Pay nicht genannt."
+  "notiz": "Produktseite (DE) gelesen. Bargeldgebühr 2 %/mind. 2 € aus Suchauszug des offiziellen Support-Artikels (Direktabruf 403). Herausgeber: Produktseite nennt noch Contis (UAB Finansinės paslaugos Contis) – vermutlich veraltet, da Bitpanda 2025 den Kartenanbieter gewechselt hat. Google Pay nicht genannt.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "crypto-com-visa-midnight",
@@ -463,7 +469,8 @@
   "preis": "https://help.crypto.com/en/articles/5977463-crypto-com-prepaid-visa-card-fees-and-limits-europe-applicable-to-europe-residential-address-users-only",
   "stand": "Help Center 'Fees and Limits (Europe)' vom 31.07.2026",
   "sek": [],
-  "notiz": "Kartenname laut Help Center 'Midnight'; Level-Up-Stufe 'Basic'."
+  "notiz": "Kartenname laut Help Center 'Midnight'; Level-Up-Stufe 'Basic'.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "crypto-com-visa-ruby",
@@ -529,7 +536,8 @@
   "preis": "https://help.crypto.com/en/articles/5977463-crypto-com-prepaid-visa-card-fees-and-limits-europe-applicable-to-europe-residential-address-users-only",
   "stand": "Help Center 'Fees and Limits (Europe)' vom 31.07.2026",
   "sek": [],
-  "notiz": "fee = 3,99 € × 12 (Jahresabo 39,90 € günstiger). Produktseite wirbt mit '0 % FX weltweit', Help Center nennt 2 % über 400 €/Monat außerhalb EU/UK."
+  "notiz": "fee = 3,99 € × 12 (Jahresabo 39,90 € günstiger). Produktseite wirbt mit '0 % FX weltweit', Help Center nennt 2 % über 400 €/Monat außerhalb EU/UK.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "crypto-com-visa-indigo-jade",
@@ -595,7 +603,8 @@
   "preis": "https://help.crypto.com/en/articles/5977463-crypto-com-prepaid-visa-card-fees-and-limits-europe-applicable-to-europe-residential-address-users-only",
   "stand": "Help Center 'Fees and Limits (Europe)' vom 31.07.2026",
   "sek": [],
-  "notiz": "fee = 24,99 € × 12; Jahresabo 249,90 €. Private-Stufe (Icy/Rose/Obsidian, ab 45.000 € CRO-Lockup, kein Abo) nicht als eigene Karte erfasst. Lounge-Bedingungen verweisen teils auf US-Kreditkarte."
+  "notiz": "fee = 24,99 € × 12; Jahresabo 249,90 €. Private-Stufe (Icy/Rose/Obsidian, ab 45.000 € CRO-Lockup, kein Abo) nicht als eigene Karte erfasst. Lounge-Bedingungen verweisen teils auf US-Kreditkarte.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "curve-pay",
@@ -663,7 +672,8 @@
   "sek": [
    "feeNote"
   ],
-  "notiz": "fx auf 2,99 % gesetzt, da nur die ersten 250 €/Monat frei sind. Physische Kartengebühr nur über finanzfluss (5,99 €)."
+  "notiz": "fx auf 2,99 % gesetzt, da nur die ersten 250 €/Monat frei sind. Physische Kartengebühr nur über finanzfluss (5,99 €).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "curve-pay-x",
@@ -728,7 +738,8 @@
   "preis": "https://help.curve.com/en_gb/fees-HkkKBu2Lu",
   "stand": "Help Center 'Fees', aktualisiert 24.05.2026",
   "sek": [],
-  "notiz": "Ob das Bargeld-Freikontingent auch für Inlandsabhebungen gilt, ist auf der Planseite ('Foreign ATM withdrawals') unklar."
+  "notiz": "Ob das Bargeld-Freikontingent auch für Inlandsabhebungen gilt, ist auf der Planseite ('Foreign ATM withdrawals') unklar.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "curve-pay-pro",
@@ -793,7 +804,8 @@
   "preis": "https://help.curve.com/en_gb/fees-HkkKBu2Lu",
   "stand": "Help Center 'Fees', aktualisiert 24.05.2026",
   "sek": [],
-  "notiz": "fee = 9,99 € × 12; mit Jahreszahlung 99,90 €."
+  "notiz": "fee = 9,99 € × 12; mit Jahreszahlung 99,90 €.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "curve-pay-pro-plus",
@@ -860,7 +872,8 @@
   "sek": [
    "lgText"
   ],
-  "notiz": "fee = 17,99 € × 12; mit Jahreszahlung 179,90 €. Lounge-Details nur aus kortio.no (03/2026)."
+  "notiz": "fee = 17,99 € × 12; mit Jahreszahlung 179,90 €. Lounge-Details nur aus kortio.no (03/2026).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "magenta-pay",
@@ -938,7 +951,8 @@
    "herausgeber",
    "konto"
   ],
-  "notiz": "Offizielle Seiten (magenta.pay, telekompayments.com) blockieren automatisierten Abruf (403); Preisverzeichnis-PDF nicht gefunden. Alle Werte aus monsterdealz.de (Stand 26.09.2026) bzw. mydealz – unbedingt manuell prüfen. Magenta Pay ist die umbenannte payzy-App der OTE-Gruppe, kein Produkt der Telekom Deutschland."
+  "notiz": "Offizielle Seiten (magenta.pay, telekompayments.com) blockieren automatisierten Abruf (403); Preisverzeichnis-PDF nicht gefunden. Alle Werte aus monsterdealz.de (Stand 26.09.2026) bzw. mydealz – unbedingt manuell prüfen. Magenta Pay ist die umbenannte payzy-App der OTE-Gruppe, kein Produkt der Telekom Deutschland.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "sumup-pay-mastercard",
@@ -1004,7 +1018,8 @@
   "preis": "https://www.sumup.com/de-de/pay/legal/fee-schedule/",
   "stand": "Kostenübersicht SumUp Pay, abgerufen 10/2026",
   "sek": [],
-  "notiz": "Cash-Kodierung: 200 € nach 3 Gratis-Abhebungen = 2 % = 4 €. Genaue Cashback-Sätze je Händler nur in den Cashback-Programmbedingungen; finanzfluss nennt 5 % bei ausgewählten Geschäften, 2 % in Supermärkten."
+  "notiz": "Cash-Kodierung: 200 € nach 3 Gratis-Abhebungen = 2 % = 4 €. Genaue Cashback-Sätze je Händler nur in den Cashback-Programmbedingungen; finanzfluss nennt 5 % bei ausgewählten Geschäften, 2 % in Supermärkten.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "sumup-business-mastercard",
@@ -1065,7 +1080,8 @@
   "preis": null,
   "stand": "Produktseite, abgerufen 10/2026",
   "sek": [],
-  "notiz": "Ergänzt (Business-Variante). Fremdwährungsentgelt und Anzahl Gratis-Abhebungen auf der Produktseite nicht beziffert; aktuelle Business-Gebührenübersicht nicht gefunden (nur alte PDFs von 2020)."
+  "notiz": "Ergänzt (Business-Variante). Fremdwährungsentgelt und Anzahl Gratis-Abhebungen auf der Produktseite nicht beziffert; aktuelle Business-Gebührenübersicht nicht gefunden (nur alte PDFs von 2020).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "monese-pay-as-you-go",
@@ -1130,7 +1146,8 @@
   "preis": "https://monese.com/fees-and-limits/deutschland-personal-fees-and-limits-03-07-2026",
   "stand": "Fees and Limits Deutschland 03.07.2026 (gültig ab 04.05.2026)",
   "sek": [],
-  "notiz": "Monese seit 10/2024 im Besitz von Pockit; in DE weiterhin angeboten (neue Konditionen ab 04.05.2026)."
+  "notiz": "Monese seit 10/2024 im Besitz von Pockit; in DE weiterhin angeboten (neue Konditionen ab 04.05.2026).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "monese-everyday",
@@ -1195,7 +1212,8 @@
   "preis": "https://monese.com/fees-and-limits/deutschland-personal-fees-and-limits-03-07-2026",
   "stand": "Fees and Limits Deutschland 03.07.2026 (gültig ab 04.05.2026)",
   "sek": [],
-  "notiz": "Ergänzt (nicht bei finanzfluss gelistet). fee = 2,95 € × 12; Jahreszahlung 29,95 €."
+  "notiz": "Ergänzt (nicht bei finanzfluss gelistet). fee = 2,95 € × 12; Jahreszahlung 29,95 €.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "monese-cashback",
@@ -1260,7 +1278,8 @@
   "preis": "https://monese.com/fees-and-limits/deutschland-personal-fees-and-limits-03-07-2026",
   "stand": "Fees and Limits Deutschland 03.07.2026 (gültig ab 04.05.2026)",
   "sek": [],
-  "notiz": "fee = 7,95 € × 12; Jahreszahlung 79,95 €. Cashback-Satz aus Monese Cashback Terms (21.10.2025)."
+  "notiz": "fee = 7,95 € × 12; Jahreszahlung 79,95 €. Cashback-Satz aus Monese Cashback Terms (21.10.2025).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "monese-premium",
@@ -1324,7 +1343,8 @@
   "preis": "https://monese.com/fees-and-limits/deutschland-personal-fees-and-limits-03-07-2026",
   "stand": "Fees and Limits Deutschland 03.07.2026 (gültig ab 04.05.2026)",
   "sek": [],
-  "notiz": "fee = 14,95 € × 12; Jahreszahlung 124,95 €. Weitere Premium-Leistungen auf der Preisseite nicht vollständig ausgelesen."
+  "notiz": "fee = 14,95 € × 12; Jahreszahlung 124,95 €. Weitere Premium-Leistungen auf der Preisseite nicht vollständig ausgelesen.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "volkswagen-bank-visa-card",
@@ -1393,7 +1413,8 @@
   "preis": "https://www.volkswagenbank.de/content/dam/bluelabel/valid/www-volkswagenbank-de/dokumente/allgemeines/preis-und-leistungsverzeichnis.pdf",
   "stand": "PLV Volkswagen Bank/Audi Bank 30.07.2026",
   "sek": [],
-  "notiz": "Focus Money 42/2025: Testsieger Kategorie Charge-Karten. Herausgeber Volkswagen Bank GmbH (= Anbieter). Gleiches Produkt auch unter der Marke Audi Bank (gemeinsames PLV). Sollzins 13,80 % nur bei vereinbarter Rückzahlung in Teilbeträgen. Variante mit Auslandsreise-Krankenversicherung (43 €) und Visa Card mobil laut PLV nicht mehr im Angebot. Visa Prepaid Card nur mit My First Giro (Jugend-/Basiskonto) nicht erfasst."
+  "notiz": "Focus Money 42/2025: Testsieger Kategorie Charge-Karten. Herausgeber Volkswagen Bank GmbH (= Anbieter). Gleiches Produkt auch unter der Marke Audi Bank (gemeinsames PLV). Sollzins 13,80 % nur bei vereinbarter Rückzahlung in Teilbeträgen. Variante mit Auslandsreise-Krankenversicherung (43 €) und Visa Card mobil laut PLV nicht mehr im Angebot. Visa Prepaid Card nur mit My First Giro (Jugend-/Basiskonto) nicht erfasst.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "volkswagen-bank-visa-card-pur",
@@ -1458,7 +1479,8 @@
   "preis": "https://www.volkswagenbank.de/content/dam/bluelabel/valid/www-volkswagenbank-de/dokumente/allgemeines/preis-und-leistungsverzeichnis.pdf",
   "stand": "PLV Volkswagen Bank/Audi Bank 30.07.2026",
   "sek": [],
-  "notiz": "Ergänzt. fee = Kontoführung 3 € × 12. Auslandseinsatzentgelt und Bargeldregeln für Visa Card pur analog Visa Card angenommen (Produktseite nennt 4 Gratis-Abhebungen für beide Karten); Gleiches Produkt auch unter der Marke Audi Bank (gemeinsames PLV). Sollzins 13,80 % nur bei vereinbarter Rückzahlung in Teilbeträgen. Variante mit Auslandsreise-Krankenversicherung (43 €) und Visa Card mobil laut PLV nicht mehr im Angebot. Visa Prepaid Card nur mit My First Giro (Jugend-/Basiskonto) nicht erfasst."
+  "notiz": "Ergänzt. fee = Kontoführung 3 € × 12. Auslandseinsatzentgelt und Bargeldregeln für Visa Card pur analog Visa Card angenommen (Produktseite nennt 4 Gratis-Abhebungen für beide Karten); Gleiches Produkt auch unter der Marke Audi Bank (gemeinsames PLV). Sollzins 13,80 % nur bei vereinbarter Rückzahlung in Teilbeträgen. Variante mit Auslandsreise-Krankenversicherung (43 €) und Visa Card mobil laut PLV nicht mehr im Angebot. Visa Prepaid Card nur mit My First Giro (Jugend-/Basiskonto) nicht erfasst.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "mercedes-credit-card-silber",
@@ -1522,7 +1544,8 @@
    "feeNote",
    "zinsfrei"
   ],
-  "notiz": "Ehemals Mercedes-Benz Bank, seit 2016 von BW-Bank betreut. BW-Bank-Seite richtet sich an 'Inhaber der Mercedes Credit Card', zeigt weder Preise noch Antrag – Verfügbarkeit für Neukunden unklar, ggf. eingestellt oder nur über Mercedes-Benz-Vertrieb. Preise nur von konto.org (Stand 13.07.2026). Mercedes-Benz Bank selbst bietet keine eigene Kreditkarte mehr an (Website nicht erreichbar, nicht verifiziert)."
+  "notiz": "Ehemals Mercedes-Benz Bank, seit 2016 von BW-Bank betreut. BW-Bank-Seite richtet sich an 'Inhaber der Mercedes Credit Card', zeigt weder Preise noch Antrag – Verfügbarkeit für Neukunden unklar, ggf. eingestellt oder nur über Mercedes-Benz-Vertrieb. Preise nur von konto.org (Stand 13.07.2026). Mercedes-Benz Bank selbst bietet keine eigene Kreditkarte mehr an (Website nicht erreichbar, nicht verifiziert).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "mercedes-credit-card-gold",
@@ -1589,6 +1612,7 @@
    "tier",
    "insText"
   ],
-  "notiz": "Ehemals Mercedes-Benz Bank, seit 2016 von BW-Bank betreut. BW-Bank-Seite richtet sich an 'Inhaber der Mercedes Credit Card', zeigt weder Preise noch Antrag – Verfügbarkeit für Neukunden unklar, ggf. eingestellt oder nur über Mercedes-Benz-Vertrieb. Preise nur von konto.org (Stand 13.07.2026). Mercedes-Benz Bank selbst bietet keine eigene Kreditkarte mehr an (Website nicht erreichbar, nicht verifiziert)."
+  "notiz": "Ehemals Mercedes-Benz Bank, seit 2016 von BW-Bank betreut. BW-Bank-Seite richtet sich an 'Inhaber der Mercedes Credit Card', zeigt weder Preise noch Antrag – Verfügbarkeit für Neukunden unklar, ggf. eingestellt oder nur über Mercedes-Benz-Vertrieb. Preise nur von konto.org (Stand 13.07.2026). Mercedes-Benz Bank selbst bietet keine eigene Kreditkarte mehr an (Website nicht erreichbar, nicht verifiziert).",
+  "geprueft": "2026-10-12"
  }
 ]

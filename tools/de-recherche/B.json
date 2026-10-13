@@ -58,7 +58,8 @@
   "preis": "https://www.easybank.de/resource/blob/123020/e828ed43452aa5ec5d39ff98b5efd2a5/preisverzeichnis-easybank-kreditkarte-data.pdf",
   "stand": "PLV 04/2026 (012 585 LV BV PRV 0426)",
   "sek": [],
-  "notiz": "Ehemals Barclays Visa. Wichtig: kostenlose Vollzahlung nur manuell (Überweisung/Soforteinzug); 100 %-Lastschrift 2 €/Monat. Sollzins laut Produktseite 19,64 % (Portal nannte 20,91 % effektiv, veraltet)."
+  "notiz": "Ehemals Barclays Visa. Wichtig: kostenlose Vollzahlung nur manuell (Überweisung/Soforteinzug); 100 %-Lastschrift 2 €/Monat. Sollzins laut Produktseite 19,64 % (Portal nannte 20,91 % effektiv, veraltet).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "easybank-kreditkarte-gold",
@@ -117,7 +118,8 @@
   "preis": "https://www.easybank.de/resource/blob/123008/33084be362fbecdcd098c70d38244d19/preisverzeichnis-easybank-kreditkarte-gold-data.pdf",
   "stand": "PLV 04/2026 (002 452 LV YU PRV 0426)",
   "sek": [],
-  "notiz": "Widerspruch: Produktseite 'bis zu drei Partnerkarten gebührenfrei', PLV nennt 29 €/Jahr. Kein Startbonus auf der Seite gefunden."
+  "notiz": "Widerspruch: Produktseite 'bis zu drei Partnerkarten gebührenfrei', PLV nennt 29 €/Jahr. Kein Startbonus auf der Seite gefunden.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "easybank-kreditkarte-platinum",
@@ -180,7 +182,8 @@
   "sek": [
    "bonus"
   ],
-  "notiz": "Startbonus-Bedingungen auf Produktseite, Betrag nur bei capitalo.de (50 €). Neukunden erhalten seit 17.08.2026 nur noch Visa. Versicherungsbedingungen gültig ab 31.07.2026."
+  "notiz": "Startbonus-Bedingungen auf Produktseite, Betrag nur bei capitalo.de (50 €). Neukunden erhalten seit 17.08.2026 nur noch Visa. Versicherungsbedingungen gültig ab 31.07.2026.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "eurowings-kreditkarte-classic",
@@ -243,7 +246,8 @@
   "preis": "https://www.easybank.de/resource/blob/140380/b50246d6517f2b68e2e269b86cc47037/preisverzeichnis-eurowings-kreditkarte-classic-ab-230426-data.pdf",
   "stand": "PLV gültig ab 23.04.2026 (109 571 LB GW PRV 0426)",
   "sek": [],
-  "notiz": "Wird weiter für Neukunden angeboten (easybank.de). tier=2 obwohl nur Rücktritt/Abbruch (keine Auslandskranken) – ggf. auf 1 senken."
+  "notiz": "Wird weiter für Neukunden angeboten (easybank.de). tier=2 obwohl nur Rücktritt/Abbruch (keine Auslandskranken) – ggf. auf 1 senken.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "eurowings-kreditkarte-premium",
@@ -306,7 +310,8 @@
   "preis": "https://www.easybank.de/resource/blob/140382/b07cf091714e2f674879132ccf1fc2fc/preisverzeichnis-eurowings-kreditkarte-premium-ab-230426-data.pdf",
   "stand": "PLV gültig ab 23.04.2026 (120 590 LB EW PRV 0426)",
   "sek": [],
-  "notiz": "Eine 'Gold'-Variante gibt es nicht; Premium ist die höhere Stufe. Wird für Neukunden angeboten."
+  "notiz": "Eine 'Gold'-Variante gibt es nicht; Premium ist die höhere Stufe. Wird für Neukunden angeboten.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "consorsbank-credit-card-gold-light",
@@ -364,7 +369,8 @@
   "preis": "https://www.consorsbank.de/content/dam/de-cb/b2c/content/pdf/transversal/agb/CB.80.089_403-OL_PLV-Depot-Ver.K-TG.K-Girokonto-NK.pdf",
   "stand": "PLV Stand 07/2026 (CB.80.089_403)",
   "sek": [],
-  "notiz": "fee=0, aber Kontomodell kostet ohne Bedingung 4 €/Monat."
+  "notiz": "fee=0, aber Kontomodell kostet ohne Bedingung 4 €/Monat.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "consorsbank-visa-card-gold",
@@ -422,7 +428,8 @@
   "preis": "https://www.consorsbank.de/content/dam/de-cb/b2c/content/pdf/transversal/agb/CB.80.089_403-OL_PLV-Depot-Ver.K-TG.K-Girokonto-NK.pdf",
   "stand": "PLV Stand 07/2026 (CB.80.089_403)",
   "sek": [],
-  "notiz": "Altkunden (bis 08.07.2022) 60 €/Jahr; Neukunden 9 €/Monat."
+  "notiz": "Altkunden (bis 08.07.2022) 60 €/Jahr; Neukunden 9 €/Monat.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "consorsbank-visa-card-debit",
@@ -478,7 +485,8 @@
   "preis": "https://www.consorsbank.de/content/dam/de-cb/b2c/content/pdf/transversal/agb/CB.80.089_403-OL_PLV-Depot-Ver.K-TG.K-Girokonto-NK.pdf",
   "stand": "PLV Stand 07/2026 (CB.80.089_403)",
   "sek": [],
-  "notiz": null
+  "notiz": null,
+  "geprueft": "2026-10-12"
  },
  {
   "key": "consors-finanz-mastercard",
@@ -537,7 +545,8 @@
   "sek": [
    "cashInterest"
   ],
-  "notiz": "Kein aktuelles PLV öffentlich auffindbar (Portal-PLV-Link verweigert Zugriff). Werte von der Produktseite (Konditionstabelle). Verzinsung Bargeld ab Tag 1 nur aus Portal."
+  "notiz": "Kein aktuelles PLV öffentlich auffindbar (Portal-PLV-Link verweigert Zugriff). Werte von der Produktseite (Konditionstabelle). Verzinsung Bargeld ab Tag 1 nur aus Portal.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "amazon-visa",
@@ -599,7 +608,8 @@
   "preis": "https://www.openbankpay.com/assets/CF_DE/de-DE/documents/v1/CB.AMZ.DE.TC.GENERAL_SPECIAL.pdf",
   "stand": "AGB/PLV v1 (Openbank Pay), abgerufen 10/2026",
   "sek": [],
-  "notiz": "Zinia heißt jetzt Openbank Pay. Sollzins nicht im PLV angegeben (nur 18,25 % effektiv). Bonus-Höhe unklar; offer=true wegen beworbener 'attraktiver Startgutschrift'."
+  "notiz": "Zinia heißt jetzt Openbank Pay. Sollzins nicht im PLV angegeben (nur 18,25 % effektiv). Bonus-Höhe unklar; offer=true wegen beworbener 'attraktiver Startgutschrift'.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "ikea-family-kreditkarte",
@@ -660,7 +670,8 @@
   "preis": "https://ikea-finanzprodukte.de/-/media/germany/ikea-finanzprodukte-de/dokumente/ikeafamilykreditkarte/ikanobank-ikea-family-kreditkarte-preisverzeichnis_17102025.pdf",
   "stand": "PLV gültig ab 07/2025, Stand 17.10.2025",
   "sek": [],
-  "notiz": "Apple/Google Pay auf Anbieterseite nicht erwähnt (Portal: keine Wallets). Sollzins 14,71 % gilt für Einkäufe außerhalb IKEA und Bargeld; zinsfreie Tage 'mindestens 30'. Alte IKEA Kreditkarte/Bezahlkarte und Rote Mastercard nicht mehr beantragbar."
+  "notiz": "Apple/Google Pay auf Anbieterseite nicht erwähnt (Portal: keine Wallets). Sollzins 14,71 % gilt für Einkäufe außerhalb IKEA und Bargeld; zinsfreie Tage 'mindestens 30'. Alte IKEA Kreditkarte/Bezahlkarte und Rote Mastercard nicht mehr beantragbar.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "tui-card-classic",
@@ -719,7 +730,8 @@
   "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/TUICardBedingungen.pdf",
   "stand": "PLV Stand 06.10.2025 (Dokument HD1025-01, 22/07/26)",
   "sek": [],
-  "notiz": "Commerzbank-Kooperationskarte. Apple/Google Pay nicht erwähnt. Teilzahlung über TUI FlexiFinanz optional (Sollzins ab 10,03 %)."
+  "notiz": "Commerzbank-Kooperationskarte. Apple/Google Pay nicht erwähnt. Teilzahlung über TUI FlexiFinanz optional (Sollzins ab 10,03 %).",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "tui-card-gold",
@@ -777,7 +789,8 @@
   "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/TUICardBedingungen.pdf",
   "stand": "PLV Stand 06.10.2025 (Dokument HD1025-01, 22/07/26)",
   "sek": [],
-  "notiz": "Commerzbank-Kooperationskarte. Apple/Google Pay nicht erwähnt."
+  "notiz": "Commerzbank-Kooperationskarte. Apple/Google Pay nicht erwähnt.",
+  "geprueft": "2026-10-12"
  },
  {
   "key": "tui-card-titan",
@@ -835,6 +848,7 @@
   "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/TUICardBedingungen.pdf",
   "stand": "PLV Stand 06.10.2025 (Dokument HD1025-01, 22/07/26)",
   "sek": [],
-  "notiz": "Laut einigen Portalen nicht mehr für Neukunden – auf tui.com aber weiterhin mit 'Hier beantragen' angeboten (Okt. 2026), daher aktiv. Klasse Premium wegen Preis/Namen, Versicherungsumfang aber nur tier 2."
+  "notiz": "Laut einigen Portalen nicht mehr für Neukunden – auf tui.com aber weiterhin mit 'Hier beantragen' angeboten (Okt. 2026), daher aktiv. Klasse Premium wegen Preis/Namen, Versicherungsumfang aber nur tier 2.",
+  "geprueft": "2026-10-12"
  }
 ]
