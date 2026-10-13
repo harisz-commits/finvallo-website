@@ -50,6 +50,9 @@ TEXT = [
     (r' ?Jede Korrektur (?:steht|dokumentieren wir) mit Quelle im ?(?:<a [^>]*>Faktencheck</a>)?\s?\.', ''),
     (r' und dokumentieren Änderungen im (?:<a [^>]*>)?Faktencheck(?:</a>)?\.', '.'),
     (r'Recherche \d\d\.\d\d\.\d{4} · Faktencheck (\d\d\.\d\d\.\d{4})', r'Stand \1'),
+    (r'Inland laut Anbieter widersprüchlich', 'Inland beim Anbieter prüfen'),
+    (r'Folgejahrespreis beim Anbieter widersprüchlich \((\d+)/(\d+) €\)', r'Folgejahrespreis \1 bis \2 €, beim Anbieter prüfen'),
+    (r'Alterswortlaut 75 widersprüchlich\.', 'Altersgrenze 75 im Vertrag prüfen.'),
     # „unklar“
     (r'Ausland unklar', 'Ausland beim Anbieter prüfen'), (r'Geltung für DE unklar', 'Geltung für Deutschland beim Anbieter prüfen'),
     (r'Kartennetz noch nicht bestätigt', 'Kartennetz beim Anbieter prüfen'),

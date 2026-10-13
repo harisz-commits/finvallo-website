@@ -513,3 +513,19 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
 .facts.glance{background:var(--blue-soft);border-color:var(--blue);border-left:4px solid var(--blue)}
 .facts.glance h2{color:var(--blue-text)}
 .facts.glance .prose p{color:var(--ink)}
+/* Kartenliste: Filter und Fußnoten */
+.filt{display:grid;gap:12px;margin:14px 0}
+.filt .fq input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.filt .frow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.filt select{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;min-width:0}
+.filt .fbot{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.filt button.lnk{background:none;border:0;padding:0;cursor:pointer;font:inherit}
+.filt .chip{color:var(--ink);font-family:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.item[hidden]{display:none}
+.stats sup,.fns sup{font-size:.7em;color:var(--blue-text);margin-left:1px}
+.fns{display:grid;gap:4px;font-size:13.5px;color:var(--muted);line-height:1.45}
+.fns p{margin:0}
+.blt td.nw{white-space:nowrap}
+.blt table{min-width:640px}
+.blt th{white-space:nowrap}
