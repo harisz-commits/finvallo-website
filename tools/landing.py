@@ -190,7 +190,7 @@ def b_at(P,hdr):
     fq,ld=faqblock([q for q in ROOT_FAQ(t) if not q[0].startswith('Warum muss')])
     return (hero(f'{FLAG["AT"]} Österreich · unabhängig bewertet','Kreditkarten in Österreich unabhängig vergleichen.',
         f'{nA} Kredit-, Debit- und Prepaid-Karten von {anbA} Anbietern, mit Gebühren, Versicherung und Bewertung.',
-        f'<a class="btn primary" href="{P}at/kreditkarten/">Kreditkarten vergleichen {ic(I["arrow"])}</a><a class="btn ghost" href="#testsieger">Testsieger ansehen</a>',art(t[0],'AT'))
+        f'<a class="btn primary" href="{P}at/kreditkarten/">Alle Kreditkarten {ic(I["arrow"])}</a><a class="btn ghost" href="{P}at/kreditkarten/bestenlisten/">Bestenlisten</a><a class="btn ghost" href="#testsieger">Testsieger ansehen</a>',art(t[0],'AT'))
       + stats([(nA,'Kreditkarten verglichen'),(anbA,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(9,'Bestenlisten nach Kategorie')])
       + tc
       + sec('Alles für Österreich','Vergleiche, Werkzeuge und Ratgeber.',f'<div class="hp-tiles">{tiles}</div>')
@@ -227,7 +227,7 @@ def b_de(P,hdr):
     fq,ld=faqblock(faq)
     if DD:
         st=stats([(nD,'Kreditkarten verglichen'),(anbD,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(9,'Bestenlisten nach Kategorie')])
-        cta=f'<a class="btn primary" href="{P}de/kreditkarten/">Kreditkarten vergleichen {ic(I["arrow"])}</a><a class="btn ghost" href="#testsieger">Testsieger ansehen</a>'
+        cta=f'<a class="btn primary" href="{P}de/kreditkarten/">Alle Kreditkarten {ic(I["arrow"])}</a><a class="btn ghost" href="{P}de/kreditkarten/bestenlisten/">Bestenlisten</a><a class="btn ghost" href="#testsieger">Testsieger ansehen</a>'
         p=f'{nD} Kreditkarten von {anbD} Anbietern, mit Gebühren, Versicherung und Bewertung.'
     else:
         st=stats([(len(DE_GUIDES)+1,'Ratgeber für Deutschland'),(7,'offene Bewertungskriterien'),(0,'bezahlte Platzierungen'),('100 %','kostenlos')])

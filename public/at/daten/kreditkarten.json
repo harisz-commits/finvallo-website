@@ -777,7 +777,7 @@
    "fee1": 16.5,
    "fx": 1.65,
    "fxText": "1,65 %",
-   "cashText": "Inland laut Anbieter widersprüchlich; Ausland 3 €",
+   "cashText": "Inland beim Anbieter prüfen; Ausland 3 €",
    "zins": null,
    "effz": null,
    "rahmen": null,
@@ -1251,7 +1251,7 @@
    ],
    "cons": [
     "Hohe Fremdwährungskosten (1,65 % + 1 % Kursaufschlag)",
-    "Folgejahrespreis beim Anbieter widersprüchlich (52/54 €)"
+    "Folgejahrespreis 52 bis 54 €, beim Anbieter prüfen"
    ],
    "quelle": "https://www.paylife.at/resource/blob/68424/ebcacfdca27703ddc0ff94d35bbe3fe7/preisblatt-paylife-kreditkarten-aut-dt-data.pdf",
    "preis": "https://www.paylife.at/resource/blob/68424/ebcacfdca27703ddc0ff94d35bbe3fe7/preisblatt-paylife-kreditkarten-aut-dt-data.pdf",
