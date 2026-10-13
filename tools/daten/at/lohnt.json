@@ -139,7 +139,8 @@
     "program": "VIENNA Lounge und SKY Lounge Flughafen Wien",
     "visits": "unbegrenzt",
     "guests_free": 0,
-    "hinweis": "für Haupt- und Zusatzkarteninhaber, nur in Wien"
+    "hinweis": "für Haupt- und Zusatzkarteninhaber, nur in Wien",
+    "scope": "wien"
    },
    "punkte_pro_100": 1,
    "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
@@ -265,7 +266,8 @@
     "program": "VIENNA Lounge und SKY Lounge Flughafen Wien",
     "visits": "unbegrenzt",
     "guests_free": "unbegrenzt",
-    "hinweis": "1 Begleitperson kostenlos, nur in Wien"
+    "hinweis": "1 Begleitperson kostenlos, nur in Wien",
+    "scope": "wien"
    },
    "extra": [
     {
@@ -285,7 +287,8 @@
     "program": "VIENNA Lounge und SKY Lounge Flughafen Wien",
     "visits": 4,
     "guests_free": 0,
-    "hinweis": "4 Zutritte im Jahr für alle Karten und Begleitpersonen zusammen"
+    "hinweis": "4 Zutritte im Jahr für alle Karten und Begleitpersonen zusammen",
+    "scope": "wien"
    },
    "quellen": [
     "https://www.cardcomplete.com/privatkarten/kartenuebersicht/platinum-card/"
@@ -298,7 +301,8 @@
     "program": "VIENNA Lounge und SKY Lounge Flughafen Wien",
     "visits": 2,
     "guests_free": 0,
-    "hinweis": "2 Zutritte im Jahr, danach ermäßigt"
+    "hinweis": "2 Zutritte im Jahr, danach ermäßigt",
+    "scope": "wien"
    },
    "extra": [
     {
@@ -340,7 +344,8 @@
     "program": "Diners Club Lounges",
     "visits": 4,
     "guests_free": 0,
-    "hinweis": "4 Zutritte bei mindestens 3.600 € Umsatz in 365 Tagen"
+    "hinweis": "4 Zutritte bei mindestens 3.600 € Umsatz in 365 Tagen",
+    "min_umsatz": 3600
    },
    "punkte_pro_100": 0.5,
    "punkte_hinweis": "1 Bonuspunkt je 8 € = 4 Miles & More Meilen, 1 Meile = 1 Cent",

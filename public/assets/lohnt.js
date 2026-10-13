@@ -12,9 +12,10 @@
     var q = function (s) { return box.querySelector(s); };
     var all = function (s) { return [].slice.call(box.querySelectorAll(s)); };
     function calc() {
-      var lv = Math.min(num(q('[data-in="lounge"]')), lim(D.visits));
+      var spend = num(q('[data-in="spend"]'));
+      var lv = D.minsp && spend * 12 < D.minsp ? 0 : Math.min(num(q('[data-in="lounge"]')), lim(D.visits));
       var gv = Math.min(num(q('[data-in="guests"]')), lv, lim(D.guests));
-      var pts = num(q('[data-in="spend"]')) * 12 / 100 * D.pp100; if (D.pmax) pts = Math.min(pts, D.pmax);
+      var pts = spend * 12 / 100 * D.pp100; if (D.pmax) pts = Math.min(pts, D.pmax);
       var v = (lv + gv) * D.lounge + pts;
       all('[data-credit]').forEach(function (c) { if (c.checked) v += D.credits[+c.dataset.credit].v; });
       var w = q('[data-welcome]'); if (w && w.checked) v += D.welcome;
@@ -27,7 +28,7 @@
       else {
         var more = Math.ceil(-net / D.lounge), free = lim(D.visits) - lv;
         t.textContent = 'Bei dieser Nutzung kostet dich die Karte ' + eur(-net) + ' im Jahr mehr, als sie bringt.' +
-          (D.visits !== 0 && more <= free ? ' Mit etwa ' + more + ' Lounge-Besuchen mehr wäre sie im Plus.' : ' Eine günstigere Karte passt besser zu dir.');
+          (D.minsp && spend * 12 < D.minsp ? ' Die Lounge-Besuche sind erst ab ' + eur(D.minsp) + ' Umsatz im Jahr kostenlos.' : D.visits !== 0 && more <= free ? ' Mit etwa ' + more + ' Lounge-Besuchen mehr wäre sie im Plus.' : ' Eine günstigere Karte passt besser zu dir.');
       }
     }
     box.addEventListener('input', calc); box.addEventListener('change', calc);
@@ -39,12 +40,12 @@
     var D = JSON.parse(hub.getAttribute('data-lohnt-hub'));
     var q = function (s) { return hub.querySelector(s); };
     function calc() {
-      var lounge = num(q('[data-in="lounge"]')), guests = num(q('[data-in="guests"]')), spend = num(q('[data-in="spend"]'));
+      var wien = num(q('[data-in="wien"]')), lounge = num(q('[data-in="lounge"]')), guests = num(q('[data-in="guests"]')), spend = num(q('[data-in="spend"]'));
       var lvl = +q('[data-in="vers"]').value, wel = q('[data-welcome]').checked;
       var want = [].slice.call(hub.querySelectorAll('[data-item]')).filter(function (c) { return c.checked; }).map(function (c) { return c.dataset.item; });
       var res = {};
       D.cards.forEach(function (c) {
-        var lv = Math.min(lounge, lim(c.visits)), gv = Math.min(guests, lv, lim(c.guests));
+        var lv = c.minsp && spend * 12 < c.minsp ? 0 : Math.min(c.wien ? wien : wien + lounge, lim(c.visits)), gv = Math.min(guests, lv, lim(c.guests));
         var pts = spend * 12 / 100 * c.pp100; if (c.pmax) pts = Math.min(pts, c.pmax);
         var v = (lv + gv) * D.lounge + pts + c.fix + (wel ? c.welcome : 0);
         want.forEach(function (k) { if (c.it[k]) v += c.it[k]; });
