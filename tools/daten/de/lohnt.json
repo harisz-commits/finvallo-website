@@ -2,61 +2,280 @@
  "annahmen": {
   "lounge_eur": 30,
   "lounge_quelle": "Das ist der Preis eines Einzelbesuchs mit Priority Pass (30 € laut prioritypass.com, Stand Oktober 2026).",
-  "vers": {"1": 30, "2": 105, "3": 130, "4": 160},
+  "vers": {
+   "1": 30,
+   "2": 105,
+   "3": 130,
+   "4": 160
+  },
   "vers_quelle": "Vergleichbare Jahrespolizzen für eine Person: Auslandsreise-Krankenversicherung ab ca. 25 bis 31 € (DKV, ERGO), Kombination aus Krankenversicherung und Reiserücktritt bis 3.000 € ab ca. 105 € (ERGO RundumSorglos), umfassender Jahresschutz bis ca. 159 € (HanseMerkur Platin).",
-  "quellen": ["https://www.prioritypass.com/de-DE/join-prioritypass", "https://www.ergo-reiseversicherung.de/de/reiseversicherungen/jahresreiseversicherung/rundumsorglos-schutz", "https://www.ergo.de/de/Produkte/Reiseversicherung/ReisekrankenversicherungDKV", "https://m.hmrv.de/documents/168711/1021945/RV+255T-DE+%28PT-RKS+PK25+JSP%29.pdf/4bedff02-90b0-b487-e0f5-396046cc332c"]
+  "quellen": [
+   "https://www.prioritypass.com/de-DE/join-prioritypass",
+   "https://www.ergo-reiseversicherung.de/de/reiseversicherungen/jahresreiseversicherung/rundumsorglos-schutz",
+   "https://www.ergo.de/de/Produkte/Reiseversicherung/ReisekrankenversicherungDKV",
+   "https://m.hmrv.de/documents/168711/1021945/RV+255T-DE+%28PT-RKS+PK25+JSP%29.pdf/4bedff02-90b0-b487-e0f5-396046cc332c"
+  ],
+  "abos": {
+   "ChatGPT Go": {
+    "eur_monat": 7.99,
+    "quelle": "https://apps.apple.com/de/app/id6448311069"
+   },
+   "Headspace": {
+    "eur_monat": 12.99,
+    "quelle": "https://apps.apple.com/de/app/id493145008"
+   },
+   "MasterClass": {
+    "eur_monat": 10.83,
+    "quelle": "https://apps.apple.com/de/app/id1273867416",
+    "hinweis": "nur als Jahresabo für 129,99 €"
+   },
+   "Financial Times Standard Digital": {
+    "eur_monat": 45.0,
+    "quelle": "https://apps.apple.com/de/app/id1200842933"
+   },
+   "Financial Times Premium Digital": {
+    "eur_monat": 69.0,
+    "quelle": "https://apps.apple.com/de/app/id1200842933"
+   },
+   "Uber One": {
+    "eur_monat": 4.99,
+    "quelle": "https://www.uber.com/de/de/u/uber-one/"
+   },
+   "Wolt+": {
+    "eur_monat": 4.99,
+    "quelle": "https://explore.wolt.com/de/deu/wolt-plus"
+   }
+  },
+  "abos_stand": "2026-10-13"
  },
  "karten": [
-  {"slug": "american-express-platinum-card", "geprueft": "2026-10-13",
+  {
+   "slug": "american-express-platinum-card",
+   "geprueft": "2026-10-13",
    "credits": [
-    {"name": "Online-Reiseguthaben", "eur": 200, "hinweis": "1× pro Jahr für eine Online-Buchung über American Express Travel ab 200 €"},
-    {"name": "Restaurantguthaben", "eur": 150, "hinweis": "bei teilnehmenden Restaurants in Deutschland und im Ausland, nach Aktivierung"},
-    {"name": "SIXT ride Fahrtguthaben", "eur": 200, "hinweis": "8 × 25 € für Flughafentransfer oder Chauffeurfahrt"},
-    {"name": "LODENFREY Shoppingguthaben", "eur": 100, "hinweis": "2 × 50 €, nur LODENFREY München oder online, ab 200 € Einkauf"},
-    {"name": "Lounge on the Go", "eur": 120, "hinweis": "6 × 20 € Verzehrguthaben an den Flughäfen Frankfurt und München"}],
-   "lounge": {"program": "Priority Pass und American Express Lounges", "visits": 50, "guests_free": 50, "hinweis": "50 Besuche im Jahr inklusive Gäste, pro Besuch 1 Gast kostenlos"},
-   "punkte_pro_100": 1, "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
-   "welcome": {"text": "bis 340 € Startguthaben bei 10.000 € Umsatz in den ersten 6 Monaten", "eur": 340},
-   "quellen": ["https://www.americanexpress.com/de-de/kreditkarte/platinum-card/", "https://www.americanexpress.com/de-de/vorteile/platinum-card/angebotsbedingungen/index.html"]},
-  {"slug": "american-express-gold-card", "geprueft": "2026-10-13",
+    {
+     "name": "Online-Reiseguthaben",
+     "eur": 200,
+     "hinweis": "1× pro Jahr für eine Online-Buchung über American Express Travel ab 200 €"
+    },
+    {
+     "name": "Restaurantguthaben",
+     "eur": 150,
+     "hinweis": "bei teilnehmenden Restaurants in Deutschland und im Ausland, nach Aktivierung"
+    },
+    {
+     "name": "SIXT ride Fahrtguthaben",
+     "eur": 200,
+     "hinweis": "8 × 25 € für Flughafentransfer oder Chauffeurfahrt"
+    },
+    {
+     "name": "LODENFREY Shoppingguthaben",
+     "eur": 100,
+     "hinweis": "2 × 50 €, nur LODENFREY München oder online, ab 200 € Einkauf"
+    },
+    {
+     "name": "Lounge on the Go",
+     "eur": 120,
+     "hinweis": "6 × 20 € Verzehrguthaben an den Flughäfen Frankfurt und München"
+    }
+   ],
+   "lounge": {
+    "program": "Priority Pass und American Express Lounges",
+    "visits": 50,
+    "guests_free": 50,
+    "hinweis": "50 Besuche im Jahr inklusive Gäste, pro Besuch 1 Gast kostenlos"
+   },
+   "punkte_pro_100": 1,
+   "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
+   "welcome": {
+    "text": "bis 340 € Startguthaben bei 10.000 € Umsatz in den ersten 6 Monaten",
+    "eur": 340
+   },
+   "quellen": [
+    "https://www.americanexpress.com/de-de/kreditkarte/platinum-card/",
+    "https://www.americanexpress.com/de-de/vorteile/platinum-card/angebotsbedingungen/index.html"
+   ]
+  },
+  {
+   "slug": "american-express-gold-card",
+   "geprueft": "2026-10-13",
    "credits": [
-    {"name": "SIXT+ Auto-Abo-Guthaben", "eur": 240, "hinweis": "20 € pro Monat, nur bei einem SIXT+ Auto-Abo"},
-    {"name": "SIXT rent Mietwagenguthaben", "eur": 50, "hinweis": "2 × 25 € für Online-Mietwagenbuchungen"},
-    {"name": "FREENOW Taxiguthaben", "eur": 60, "hinweis": "5 € pro Monat, nur in Deutschland"},
-    {"name": "LODENFREY Shoppingguthaben", "eur": 100, "hinweis": "2 × 50 €, nur LODENFREY München oder online, ab 200 € Einkauf"}],
-   "punkte_pro_100": 1, "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
-   "welcome": {"text": "bis 200 € Startguthaben bei 5.000 € Umsatz in den ersten 6 Monaten", "eur": 200},
-   "quellen": ["https://www.americanexpress.com/de-de/kreditkarte/goldcard/", "https://www.americanexpress.com/de-de/vorteile/gold-metall/angebots-bedingungen/"]},
-  {"slug": "revolut-ultra", "geprueft": "2026-10-13",
-   "lounge": {"program": "DragonPass", "visits": "unbegrenzt", "guests_free": 0, "hinweis": "für dich unbegrenzt, Gäste kosten extra"},
-   "punkte_pro_100": 1, "punkte_hinweis": "1 RevPoint je €, 1 RevPoint = 1 Cent",
-   "subs_names": ["ChatGPT Go", "WeWork", "MasterClass", "Uber One", "NordVPN Complete", "Headspace", "ClassPass", "Financial Times Premium Digital", "Super Duolingo", "Freeletics", "The Athletic"],
-   "extra": [{"name": "Jahreszahlung", "eur": 0, "hinweis": "Bei jährlicher Zahlung 650 € statt 65 € pro Monat"}],
-   "quellen": ["https://www.revolut.com/de-DE/ultra-plan/", "https://www.revolut.com/de-DE/legal/dragonpass-lounges/"]},
-  {"slug": "revolut-metal", "geprueft": "2026-10-13",
-   "punkte_pro_100": 0.5, "punkte_hinweis": "1 RevPoint je 2 €, 1 RevPoint = 1 Cent",
-   "subs_names": ["ChatGPT Go", "WeWork", "Uber One", "MasterClass", "NordVPN Plus", "Headspace", "ClassPass", "Financial Times Standard Digital", "Super Duolingo"],
-   "extra": [{"name": "Jahreszahlung", "eur": 0, "hinweis": "Bei jährlicher Zahlung 155 € statt 15,99 € pro Monat"}],
-   "quellen": ["https://www.revolut.com/de-DE/metal/"]},
-  {"slug": "n26-metal", "geprueft": "2026-10-13",
-   "lounge": {"program": "DragonPass", "visits": 1, "guests_free": 0, "hinweis": "der erste Besuch im Jahr ist kostenlos"},
-   "extra": [{"name": "1 % Cashback außerhalb Europas", "hinweis": "auf Kartenzahlungen außerhalb von EWR, UK und Schweiz"}],
-   "quellen": ["https://n26.com/de-de/metal", "https://n26.com/de-de/reisevorteile"]},
-  {"slug": "miles-und-more-gold-credit-card", "geprueft": "2026-10-13",
-   "credits": [{"name": "Wolt+ Mitgliedschaft", "eur": 59.88, "hinweis": "4,99 € pro Monat, nur wenn du bei Wolt bestellst"}],
-   "punkte_pro_100": 0.5, "punkte_hinweis": "1 Meile je 2 €, 1 Meile = 1 Cent",
-   "welcome": {"text": "20.000 Meilen und 4 Lufthansa Business Lounge Voucher bei Antrag bis 30.11.2026", "eur": 320},
-   "quellen": ["https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten/miles-and-more-gold-credit-card.html"]},
-  {"slug": "eurowings-kreditkarte-premium", "geprueft": "2026-10-13",
-   "punkte_pro_100": 0.5, "punkte_hinweis": "1 Meile je 2 €, 1 Meile = 1 Cent",
-   "extra": [{"name": "Kostenlose Sitzplatzwahl und Sportgepäck bei Eurowings", "hinweis": "bei Buchung über eurowings.com mit der Karte"}],
-   "welcome": {"text": "3.000 Willkommensmeilen", "eur": 30},
-   "quellen": ["https://www.easybank.de/easybank-de/kreditkarten/eurowings-kreditkarte-premium"]},
-  {"slug": "deutsche-bank-mastercard-platin", "geprueft": "2026-10-13",
-   "lounge": {"program": "Priority Pass", "visits": "unbegrenzt", "guests_free": 0, "hinweis": "für dich kostenfrei, Begleitpersonen 20 € pro Besuch"},
-   "quellen": ["https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf"]},
-  {"slug": "targobank-premium-karte", "geprueft": "2026-10-13",
-   "punkte_pro_100": 1, "punkte_max": 200, "punkte_hinweis": "1 Punkt je €, 100 Punkte = 1 €, Reise und Restaurant doppelt",
-   "quellen": ["https://www.targobank.de/de/konto-karten/kreditkarte-premium.html"]}
+    {
+     "name": "SIXT+ Auto-Abo-Guthaben",
+     "eur": 240,
+     "hinweis": "20 € pro Monat, nur bei einem SIXT+ Auto-Abo"
+    },
+    {
+     "name": "SIXT rent Mietwagenguthaben",
+     "eur": 50,
+     "hinweis": "2 × 25 € für Online-Mietwagenbuchungen"
+    },
+    {
+     "name": "FREENOW Taxiguthaben",
+     "eur": 60,
+     "hinweis": "5 € pro Monat, nur in Deutschland"
+    },
+    {
+     "name": "LODENFREY Shoppingguthaben",
+     "eur": 100,
+     "hinweis": "2 × 50 €, nur LODENFREY München oder online, ab 200 € Einkauf"
+    }
+   ],
+   "punkte_pro_100": 1,
+   "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
+   "welcome": {
+    "text": "bis 200 € Startguthaben bei 5.000 € Umsatz in den ersten 6 Monaten",
+    "eur": 200
+   },
+   "quellen": [
+    "https://www.americanexpress.com/de-de/kreditkarte/goldcard/",
+    "https://www.americanexpress.com/de-de/vorteile/gold-metall/angebots-bedingungen/"
+   ]
+  },
+  {
+   "slug": "revolut-ultra",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "DragonPass",
+    "visits": "unbegrenzt",
+    "guests_free": 0,
+    "hinweis": "für dich unbegrenzt, Gäste kosten extra"
+   },
+   "punkte_pro_100": 1,
+   "punkte_hinweis": "1 RevPoint je €, 1 RevPoint = 1 Cent",
+   "subs_names": [
+    "ChatGPT Go",
+    "WeWork",
+    "MasterClass",
+    "Uber One",
+    "NordVPN Complete",
+    "Headspace",
+    "ClassPass",
+    "Financial Times Premium Digital",
+    "Super Duolingo",
+    "Freeletics",
+    "The Athletic"
+   ],
+   "extra": [
+    {
+     "name": "Jahreszahlung",
+     "eur": 0,
+     "hinweis": "Bei jährlicher Zahlung 650 € statt 65 € pro Monat"
+    }
+   ],
+   "quellen": [
+    "https://www.revolut.com/de-DE/ultra-plan/",
+    "https://www.revolut.com/de-DE/legal/dragonpass-lounges/"
+   ]
+  },
+  {
+   "slug": "revolut-metal",
+   "geprueft": "2026-10-13",
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 RevPoint je 2 €, 1 RevPoint = 1 Cent",
+   "subs_names": [
+    "ChatGPT Go",
+    "WeWork",
+    "Uber One",
+    "MasterClass",
+    "NordVPN Plus",
+    "Headspace",
+    "ClassPass",
+    "Financial Times Standard Digital",
+    "Super Duolingo"
+   ],
+   "extra": [
+    {
+     "name": "Jahreszahlung",
+     "eur": 0,
+     "hinweis": "Bei jährlicher Zahlung 155 € statt 15,99 € pro Monat"
+    }
+   ],
+   "quellen": [
+    "https://www.revolut.com/de-DE/metal/"
+   ]
+  },
+  {
+   "slug": "n26-metal",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "DragonPass",
+    "visits": 1,
+    "guests_free": 0,
+    "hinweis": "der erste Besuch im Jahr ist kostenlos"
+   },
+   "extra": [
+    {
+     "name": "1 % Cashback außerhalb Europas",
+     "hinweis": "auf Kartenzahlungen außerhalb von EWR, UK und Schweiz"
+    }
+   ],
+   "quellen": [
+    "https://n26.com/de-de/metal",
+    "https://n26.com/de-de/reisevorteile"
+   ]
+  },
+  {
+   "slug": "miles-und-more-gold-credit-card",
+   "geprueft": "2026-10-13",
+   "credits": [
+    {
+     "name": "Wolt+ Mitgliedschaft",
+     "eur": 59.88,
+     "hinweis": "4,99 € pro Monat, nur wenn du bei Wolt bestellst"
+    }
+   ],
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 Meile je 2 €, 1 Meile = 1 Cent",
+   "welcome": {
+    "text": "20.000 Meilen und 4 Lufthansa Business Lounge Voucher bei Antrag bis 30.11.2026",
+    "eur": 320
+   },
+   "quellen": [
+    "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten/miles-and-more-gold-credit-card.html"
+   ]
+  },
+  {
+   "slug": "eurowings-kreditkarte-premium",
+   "geprueft": "2026-10-13",
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 Meile je 2 €, 1 Meile = 1 Cent",
+   "extra": [
+    {
+     "name": "Kostenlose Sitzplatzwahl und Sportgepäck bei Eurowings",
+     "hinweis": "bei Buchung über eurowings.com mit der Karte"
+    }
+   ],
+   "welcome": {
+    "text": "3.000 Willkommensmeilen",
+    "eur": 30
+   },
+   "quellen": [
+    "https://www.easybank.de/easybank-de/kreditkarten/eurowings-kreditkarte-premium"
+   ]
+  },
+  {
+   "slug": "deutsche-bank-mastercard-platin",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "Priority Pass",
+    "visits": "unbegrenzt",
+    "guests_free": 0,
+    "hinweis": "für dich kostenfrei, Begleitpersonen 20 € pro Besuch"
+   },
+   "quellen": [
+    "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf"
+   ]
+  },
+  {
+   "slug": "targobank-premium-karte",
+   "geprueft": "2026-10-13",
+   "punkte_pro_100": 1,
+   "punkte_max": 200,
+   "punkte_hinweis": "1 Punkt je €, 100 Punkte = 1 €, Reise und Restaurant doppelt",
+   "quellen": [
+    "https://www.targobank.de/de/konto-karten/kreditkarte-premium.html"
+   ]
+  }
  ]
 }
