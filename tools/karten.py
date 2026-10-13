@@ -46,7 +46,7 @@ def load_de():
         out[c['slug']]=c
     return list(out.values())
 def load_at():
-    cs=json.load(open(SP+'/daten/at/karten.json'))
+    cs=[c for c in json.load(open(SP+'/daten/at/karten.json')) if c.get('status','aktiv')=='aktiv']
     for c in cs:
         c.setdefault('ex',{}); c.setdefault('sek',[]); c.setdefault('geprueft','2026-10-11'); c['land']='at'
     return cs
