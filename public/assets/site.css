@@ -536,7 +536,7 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
 .lprof span{font-weight:700}
 .good{color:var(--green)} .bad{color:var(--red)}
 .lcalc{display:grid;gap:10px;margin-top:22px}
-.lcalc .lgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.lcalc .lgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
 .lcalc label{display:grid;gap:6px;font-size:14.5px;color:var(--muted)}
 .lcalc input[type=number]{padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
 .lcalc .lc{display:flex;gap:10px;align-items:center;color:var(--ink)}
@@ -549,3 +549,9 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
 .ltab td.nw{white-space:nowrap;vertical-align:top;font-weight:600}
 .ltab td small{display:block;margin-top:4px;line-height:1.4}
 .catcard.top{background:var(--blue-soft);border-color:var(--blue)}
+.lcalc select{padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit}
+.lchecks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 16px}
+.lchecks .lc{font-size:14.5px}
+.lfilter{margin:0 0 22px}
+.lnet{font-weight:800;font-size:15px}
+.catcard.dim{opacity:.6}
