@@ -555,3 +555,5 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
 .lfilter{margin:0 0 22px}
 .lnet{font-weight:800;font-size:15px}
 .catcard.dim{opacity:.6}
+/* iPhone zoomt beim Antippen von Feldern unter 16px Schrift; 16px verhindert das, ohne das Zoomen zu sperren */
+input,select,textarea{font-size:max(16px,1em)!important}

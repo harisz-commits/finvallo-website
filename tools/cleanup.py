@@ -183,7 +183,9 @@ def main():
         if f.endswith('.txt'):
             s = '\n'.join(l for l in s.split('\n') if 'faktencheck/' not in l and 'Faktencheck' not in l)
         s = urls(s)
-        if f.endswith('kreditkarten/rechner/index.html'): s = spa(s)
+        if f.endswith('kreditkarten/rechner/index.html'):
+            s = spa(s)
+            if 'id="nozoom"' not in s: s = s.replace('<style>', '<style id="nozoom">input,select,textarea{font-size:max(16px,1em)!important}</style>\n<style>', 1)
         if f.endswith('.html'): s = html(s)
         if f.endswith('daten/kreditkarten.json'):
             d = json.loads(s)
