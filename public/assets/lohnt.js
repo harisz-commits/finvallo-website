@@ -5,15 +5,15 @@
   var D = JSON.parse(box.getAttribute('data-lohnt'));
   var q = function (s) { return box.querySelector(s); };
   var all = function (s) { return [].slice.call(box.querySelectorAll(s)); };
-  var eur = function (v) { return Math.round(v).toLocaleString('de-AT') + ' €'; };
+  var eur = function (v) { return Math.round(v).toLocaleString('de-DE') + ' €'; };
   function num(el) { var v = parseFloat(String(el.value).replace(',', '.')); return isFinite(v) && v > 0 ? v : 0; }
   function calc() {
-    var lounge = num(q('[data-in="lounge"]')), guests = num(q('[data-in="guests"]')), spend = num(q('[data-in="spend"]'));
+    var lounge = num(q('[data-in="lounge"]')), guests = num(q('[data-in="guests"]')), spend = num(q('[data-in="spend"]')), sub = q('[data-in="subs"]');
     var lv = D.visits === null ? lounge : Math.min(lounge, D.visits);
     var gv = Math.min(guests, lv, D.guests === 'unbegrenzt' ? Infinity : D.guests);
-    var v = lv * D.lounge + gv * D.lounge + spend * 12 / 100 * D.pp100;
+    var pts = spend * 12 / 100 * D.pp100; if (D.pmax) pts = Math.min(pts, D.pmax);
+    var v = lv * D.lounge + gv * D.lounge + pts + (sub ? num(sub) * 12 : 0);
     all('[data-credit]').forEach(function (c) { if (c.checked) v += D.credits[+c.dataset.credit].v; });
-    all('[data-sub]').forEach(function (c) { if (c.checked) v += D.subs[+c.dataset.sub].v; });
     var w = q('[data-welcome]'); if (w && w.checked) v += D.welcome;
     if (q('[data-vers]').checked) v += D.vers;
     var net = v - D.fee;

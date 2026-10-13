@@ -13,11 +13,11 @@ from score import eur
 R = K.R; SP = K.SP; E = K.E
 PROFILE = [
     dict(k='selten', t='Du reist ein- bis zweimal im Jahr', d='4 Lounge-Besuche, 1.000 € Kartenumsatz im Monat, Guthaben nutzt du nicht, eine Reiseversicherung brauchst du ohnehin.',
-         p=dict(credits=False, lounge=4, guests=0, spend=1000, vers=True, subs=False)),
+         p=dict(credits=False, lounge=4, guests=0, spend=1000, vers=True)),
     dict(k='geniesser', t='Du nutzt alle Guthaben', d='Restaurant-, Reise- und Entertainment-Guthaben voll genutzt, 6 Lounge-Besuche, 1.500 € Umsatz im Monat, Reiseversicherung nötig.',
-         p=dict(credits=True, lounge=6, guests=0, spend=1500, vers=True, subs=False)),
-    dict(k='viel', t='Du fliegst oft', d='20 Lounge-Besuche im Jahr, davon 6 mit Begleitung, 2.500 € Umsatz im Monat, Guthaben und Abos genutzt, Reiseversicherung nötig.',
-         p=dict(credits=True, lounge=20, guests=6, spend=2500, vers=True, subs=True)),
+         p=dict(credits=True, lounge=6, guests=0, spend=1500, vers=True)),
+    dict(k='viel', t='Du fliegst oft', d='20 Lounge-Besuche im Jahr, davon 6 mit Begleitung, 2.500 € Umsatz im Monat, Guthaben genutzt, Reiseversicherung nötig.',
+         p=dict(credits=True, lounge=20, guests=6, spend=2500, vers=True)),
 ]
 
 def load(land):
@@ -38,48 +38,61 @@ def value(c, x, A, p):
     gf = (x.get('lounge') or {}).get('guests_free') or 0
     gv = min(p['guests'], lv, math.inf if gf == 'unbegrenzt' else gf)
     if gv: parts.append((f'{gv} Begleitpersonen in der Lounge', gv * A['lounge_eur']))
-    if p['spend'] and x.get('punkte_pro_100'): parts.append(('Punkte oder Meilen', p['spend'] * 12 / 100 * x['punkte_pro_100']))
+    if p['spend'] and x.get('punkte_pro_100'): parts.append(('Punkte oder Meilen', min(p['spend'] * 12 / 100 * x['punkte_pro_100'], x.get('punkte_max') or 1e9)))
     if p['vers'] and c.get('tier'): parts.append(('Reiseversicherung (statt eigener Jahrespolizze)', A['vers'][str(c['tier'])]))
-    if p['subs']:
-        for s in x.get('subs') or []: parts.append((s['name'], s['eur_month'] * 12))
     for e in x.get('extra') or []:
         if e.get('immer'): parts.append((e['name'], e['eur']))
     return sum(v for _, v in parts), parts
 
-def need_visits(c, x, A, credits):
-    """Wie viele Lounge-Besuche braucht es, bis die Karte die Jahresgebühr wieder hereinholt?"""
-    base, _ = value(c, x, A, dict(credits=credits, lounge=0, guests=0, spend=1000, vers=True, subs=False))
-    rest = (c['fee'] or 0) - base
-    if rest <= 0: return 0
-    n = math.ceil(rest / A['lounge_eur'])
-    return n if n <= free_visits(x) else None
+def breakeven(c, x, A, credits):
+    """('ok',0) | ('lounge',n) | ('spend',€ pro Monat) | ('no',None): ab wann holt die Karte die Jahresgebühr herein?"""
+    fee = c['fee'] or 0
+    base, _ = value(c, x, A, dict(credits=credits, lounge=0, guests=0, spend=1000, vers=True))
+    if base >= fee: return ('ok', 0)
+    rest = fee - base
+    if free_visits(x):
+        n = math.ceil(rest / A['lounge_eur'])
+        if n <= free_visits(x) and n <= 60: return ('lounge', n)
+    pp = x.get('punkte_pro_100') or 0
+    if pp:
+        for sp in range(1000, 10001, 250):
+            v, _ = value(c, x, A, dict(credits=credits, lounge=0, guests=0, spend=sp, vers=True))
+            if v >= fee: return ('spend', sp)
+    return ('no', None)
 
 def verdict(c, x, A):
     fee = c['fee'] or 0
     cr = sum(g['eur'] for g in x.get('credits') or [])
-    n1, n0 = need_visits(c, x, A, True), need_visits(c, x, A, False)
     s = []
-    if cr: s.append(f'Die Guthaben sind zusammen {eur(cr)} € im Jahr wert' + (', mehr als die Jahresgebühr' if cr >= fee else f', die Jahresgebühr beträgt {eur(fee)} €') + '.')
-    if n1 == 0: s.append('Nutzt du die Guthaben voll und brauchst ohnehin eine Reiseversicherung, hast du die Jahresgebühr schon ohne Lounge-Besuch wieder herein.')
-    elif n1: s.append(f'Mit allen Guthaben, der Reiseversicherung und 1.000 € Umsatz im Monat lohnt sie sich ab etwa {n1} Lounge-Besuchen im Jahr.')
-    if cr and n0 is not None and n0 != n1: s.append(f'Ohne die Guthaben brauchst du etwa {n0} Lounge-Besuche.' if n0 else 'Selbst ohne Guthaben reicht die Reiseversicherung mit den Punkten aus.')
-    if n1 is None and n0 is None: s.append('Mit den enthaltenen Lounge-Besuchen allein holst du die Jahresgebühr nicht herein. Sie lohnt sich nur, wenn du Abos, Status oder Versicherung sehr gut nutzt.')
+    if cr: s.append(f'Die Guthaben sind zusammen {eur(cr)} € im Jahr wert, die Jahresgebühr beträgt {eur(fee)} €.')
+    k1, v1 = breakeven(c, x, A, True)
+    base = 'Mit ' + ('allen Guthaben, ' if cr else '') + 'der Reiseversicherung und 1.000 € Kartenumsatz im Monat'
+    if k1 == 'ok': s.append(base + ' holst du die Jahresgebühr schon herein, auch ohne Lounge-Besuch.' if free_visits(x) else base + ' holst du die Jahresgebühr herein.')
+    elif k1 == 'lounge': s.append(f'{base} lohnt sie sich ab etwa {v1} Lounge-Besuchen im Jahr.')
+    elif k1 == 'spend': s.append(f'Mit {"allen Guthaben und " if cr else ""}der Reiseversicherung lohnt sie sich ab etwa {eur(v1)} € Kartenumsatz im Monat.')
+    else: s.append('Mit Guthaben, Versicherung, Punkten und Lounges allein holst du die Jahresgebühr kaum herein. Sie lohnt sich nur, wenn du weitere Vorteile wie Abos oder Status wirklich nutzt.')
+    if cr:
+        k0, v0 = breakeven(c, x, A, False)
+        if (k0, v0) != (k1, v1):
+            s.append('Ohne die Guthaben ' + ({'ok': 'reicht das trotzdem.', 'lounge': f'brauchst du etwa {v0} Lounge-Besuche.', 'spend': f'brauchst du etwa {eur(v0 or 0)} € Umsatz im Monat.', 'no': 'lohnt sie sich kaum.'}[k0]))
+    if x.get('subs_names'): s.append('Dazu kommen Partner-Abos, die nur zählen, wenn du sie sonst selbst bezahlen würdest.')
     return ' '.join(s)
 
 def short(c, x, A):
-    n1 = need_visits(c, x, A, True)
-    if n1 == 0: return 'Lohnt sich schon, wenn du die Guthaben voll nutzt'
-    if n1: return f'Lohnt sich ab etwa {n1} Lounge-Besuchen im Jahr' + (' mit allen Guthaben' if x.get('credits') else '')
-    return 'Lohnt sich nur bei sehr intensiver Nutzung'
+    k, v = breakeven(c, x, A, True)
+    return {'ok': 'Lohnt sich schon bei normaler Nutzung' + (' mit allen Guthaben' if x.get('credits') else ''),
+            'lounge': f'Lohnt sich ab etwa {v} Lounge-Besuchen im Jahr' + (' mit allen Guthaben' if x.get('credits') else ''),
+            'spend': f'Lohnt sich ab etwa {eur(v or 0)} € Umsatz im Monat',
+            'no': 'Lohnt sich nur bei sehr intensiver Nutzung'}[k]
 
 CSS_DONE = False
 def calc_html(c, x, A):
     data = dict(fee=c['fee'] or 0, lounge=A['lounge_eur'], visits=None if free_visits(x) == math.inf else free_visits(x), guests=(x.get('lounge') or {}).get('guests_free') or 0,
                 pp100=x.get('punkte_pro_100') or 0, vers=A['vers'].get(str(c.get('tier')), 0) if c.get('tier') else 0,
-                credits=[dict(n=g['name'], v=g['eur']) for g in x.get('credits') or []], subs=[dict(n=s['name'], v=s['eur_month'] * 12) for s in x.get('subs') or []],
+                credits=[dict(n=g['name'], v=g['eur']) for g in x.get('credits') or []], pmax=x.get('punkte_max') or None,
                 welcome=(x.get('welcome') or {}).get('eur') or 0)
     cr = ''.join(f'<label class="lc"><input type="checkbox" data-credit="{i}" checked> {E(g["name"])} <b>{eur(g["eur"])} €</b></label>' for i, g in enumerate(x.get('credits') or []))
-    sb = ''.join(f'<label class="lc"><input type="checkbox" data-sub="{i}"> {E(s["name"])} <b>{eur(s["eur_month"] * 12)} €</b></label>' for i, s in enumerate(x.get('subs') or []))
+    sb = (f'<label>Partner-Abos, die du sonst selbst zahlen würdest (€ pro Monat)<input type="number" min="0" step="1" value="0" data-in="subs"></label><p class="note" style="margin:0">Enthalten: {E(", ".join(x["subs_names"]))}.</p>') if x.get('subs_names') else ''
     wl = f'<label class="lc"><input type="checkbox" data-welcome> Willkommensbonus im ersten Jahr <b>{eur(data["welcome"])} €</b></label>' if data['welcome'] else ''
     return f'''<div class="box lcalc" data-lohnt='{html.escape(json.dumps(data), quote=True)}' hidden>
   <h2 style="margin-top:0">Rechne mit deinen Zahlen</h2>
@@ -103,9 +116,9 @@ def card_page(land, c, x, A, P, prov):
     for g in x.get('credits') or []: rows += f'<tr><td>{E(g["name"])}</td><td class="nw">{eur(g["eur"])} €</td><td>{E(g.get("hinweis") or g.get("scope") or "")}</td></tr>'
     lg = x.get('lounge') or {}
     if lg.get('visits'): rows += f'<tr><td>Lounge-Besuche ({E(lg.get("program") or "")})</td><td class="nw">je ≈ {eur(A["lounge_eur"])} €</td><td>{"unbegrenzt" if lg["visits"] == "unbegrenzt" else str(lg["visits"]) + " pro Jahr"}{"; " + E(lg["hinweis"]) if lg.get("hinweis") else ""}</td></tr>'
-    if x.get('punkte_pro_100'): rows += f'<tr><td>Punkte oder Meilen</td><td class="nw">{eur(x["punkte_pro_100"])} € je 100 € Umsatz</td><td>{E(x.get("punkte_hinweis") or "1 Punkt oder Meile = 1 Cent")}</td></tr>'
+    if x.get('punkte_pro_100'): rows += f'<tr><td>Punkte oder Meilen</td><td class="nw">{eur(x["punkte_pro_100"])} € je 100 € Umsatz</td><td>{E(x.get("punkte_hinweis") or "1 Punkt oder Meile = 1 Cent")}{f", höchstens {eur(x.get('punkte_max') or 0)} € im Jahr" if x.get("punkte_max") else ""}</td></tr>'
     if c.get('tier'): rows += f'<tr><td>Reiseversicherung ({E(K.TIER[c["tier"]][1])})</td><td class="nw">≈ {eur(A["vers"][str(c["tier"])])} €</td><td>so viel kostet eine vergleichbare eigene Jahrespolizze</td></tr>'
-    for s in x.get('subs') or []: rows += f'<tr><td>{E(s["name"])}</td><td class="nw">{eur(s["eur_month"] * 12)} €</td><td>{eur(s["eur_month"])} € pro Monat, zählt nur, wenn du es sonst selbst zahlen würdest</td></tr>'
+    if x.get('subs_names'): rows += f'<tr><td>Partner-Abos</td><td class="nw">je nach Nutzung</td><td>{E(", ".join(x["subs_names"]))}. Zählt nur, was du sonst selbst bezahlen würdest.</td></tr>'
     for e in x.get('extra') or []: rows += f'<tr><td>{E(e["name"])}</td><td class="nw">{eur(e["eur"]) + " €" if e.get("eur") else "–"}</td><td>{E(e.get("hinweis") or "")}</td></tr>'
     if (x.get('welcome') or {}).get('text'): rows += f'<tr><td>Willkommensbonus</td><td class="nw">{eur(x["welcome"]["eur"]) + " €" if x["welcome"].get("eur") else "–"}</td><td>{E(x["welcome"]["text"])}, nur im ersten Jahr</td></tr>'
     prof = ''
@@ -156,7 +169,8 @@ def hub(land, cards, X, A, P):
     d = f'Ab wann sich Premium-Kreditkarten in {N} lohnen: Guthaben, Lounges, Versicherung und Punkte gegen die Jahresgebühr gerechnet. Mit Rechner.'
     tiles = ''.join(f'<a class="catcard" href="{c["slug"]}/"><span class="ct">{eur(c["fee"] or 0)} € im Jahr</span><b>{E(c["titel"])}</b><span>{E(short(c, X[c["slug"]], A))}</span><small>Rechnung ansehen →</small></a>'
                     for c in sorted(cards, key=lambda c: c['fee'] or 0))
-    win = ''.join(f'<div class="lprof"><b>{E(pr["t"])}</b><small>{E(pr["d"])}</small><span>Am meisten bringt die <a class="lnk" href="{b[0]["slug"]}/">{E(b[0]["titel"])}</a>: {"+" if b[1] >= 0 else "−"}{eur(round(abs(b[1])))} € pro Jahr</span></div>' for pr, b in winners(land, cards, X, A))
+    win = ''.join((f'<div class="lprof"><b>{E(pr["t"])}</b><small>{E(pr["d"])}</small><span>Am meisten bringt die <a class="lnk" href="{b[0]["slug"]}/">{E(b[0]["titel"])}</a>: +{eur(round(b[1]))} € pro Jahr nach Jahresgebühr</span></div>' if b[1] >= 0 else
+                   f'<div class="lprof"><b>{E(pr["t"])}</b><small>{E(pr["d"])}</small><span>Hier lohnt sich keine Premiumkarte. Nimm besser eine <a class="lnk" href="../gratis/">Karte ohne Jahresgebühr</a>.</span></div>') for pr, b in winners(land, cards, X, A))
     fq = [('Lohnt sich eine Premium-Kreditkarte?', 'Nur, wenn du die enthaltenen Vorteile wirklich nutzt. Wir rechnen Guthaben, Lounge-Besuche, Punkte und Reiseversicherung gegen die Jahresgebühr. Für die meisten Menschen ohne viele Flugreisen ist eine kostenlose Karte günstiger.'),
           ('Wie viel ist ein Lounge-Besuch wert?', f'Wir rechnen mit {eur(A["lounge_eur"])} € pro Besuch. {A.get("lounge_quelle", "")}'.strip())]
     ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Bestenlisten', f'{land}/kreditkarten/bestenlisten/'), ('Lohnt sich das?', rel)],
@@ -178,7 +192,8 @@ def hub(land, cards, X, A, P):
     return rel
 
 def top_block(land, cards, X, A):
-    win = ''.join(f'<a class="catcard" href="lohnt-sich/{b[0]["slug"]}/"><span class="ct">{E(pr["t"])}</span><b>{E(b[0]["titel"])}</b><span>{"+" if b[1] >= 0 else "−"}{eur(round(abs(b[1])))} € pro Jahr nach Jahresgebühr</span><small>Rechnung ansehen →</small></a>' for pr, b in winners(land, cards, X, A))
+    win = ''.join((f'<a class="catcard" href="lohnt-sich/{b[0]["slug"]}/"><span class="ct">{E(pr["t"])}</span><b>{E(b[0]["titel"])}</b><span>+{eur(round(b[1]))} € pro Jahr nach Jahresgebühr</span><small>Rechnung ansehen →</small></a>' if b[1] >= 0 else
+                   f'<a class="catcard" href="gratis/"><span class="ct">{E(pr["t"])}</span><b>Eine Karte ohne Jahresgebühr</b><span>Keine Premiumkarte holt hier ihre Gebühr herein.</span><small>Zu den Gratis-Karten →</small></a>') for pr, b in winners(land, cards, X, A))
     return (f'<!--lohnt--><h2>Top-Karten, je nachdem wie du sie nutzt</h2><p class="note" style="margin-top:-6px">Premiumkarten lohnen sich erst ab einer bestimmten Nutzung. '
             f'<a class="lnk" href="lohnt-sich/">Ab wann lohnt sich welche Karte? →</a></p><div class="catgrid">{win}</div><h2>Bestenlisten nach Kategorie</h2><!--/lohnt-->')
 

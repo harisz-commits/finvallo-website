@@ -120,6 +120,17 @@ Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/a
 - [Vollständige Kartendaten als Text](https://finvallo.com/llms-full.txt)
 - [Kartendaten als JSON](https://finvallo.com/at/daten/kreditkarten.json)
 
+## Deutschland: Ab wann lohnt sich eine Premiumkarte?
+- [Ab wann lohnt sich die American Express Platinum Card?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/american-express-platinum-card/): Die Guthaben sind zusammen 770 € im Jahr wert, die Jahresgebühr beträgt 720 €. Mit allen Guthaben, der Reiseversicherung und 1.000 € Kartenumsatz im Monat holst du die Jahresgebühr schon herein, auch ohne Lounge-Besuch. Ohne die Guthaben brauchst du etwa 15 Lounge-Besuche.
+- [Ab wann lohnt sich die American Express Gold Card?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/american-express-gold-card/): Die Guthaben sind zusammen 450 € im Jahr wert, die Jahresgebühr beträgt 240 €. Mit allen Guthaben, der Reiseversicherung und 1.000 € Kartenumsatz im Monat holst du die Jahresgebühr herein. Ohne die Guthaben brauchst du etwa 1.250 € Umsatz im Monat.
+- [Ab wann lohnt sich die Revolut Ultra?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/revolut-ultra/): Mit der Reiseversicherung und 1.000 € Kartenumsatz im Monat lohnt sie sich ab etwa 19 Lounge-Besuchen im Jahr. Dazu kommen Partner-Abos, die nur zählen, wenn du sie sonst selbst bezahlen würdest.
+- [Ab wann lohnt sich die Revolut Metal?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/revolut-metal/): Mit der Reiseversicherung lohnt sie sich ab etwa 2.750 € Kartenumsatz im Monat. Dazu kommen Partner-Abos, die nur zählen, wenn du sie sonst selbst bezahlen würdest.
+- [Ab wann lohnt sich die N26 Metal?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/n26-metal/): Mit Guthaben, Versicherung, Punkten und Lounges allein holst du die Jahresgebühr kaum herein. Sie lohnt sich nur, wenn du weitere Vorteile wie Abos oder Status wirklich nutzt.
+- [Ab wann lohnt sich die Miles & More Gold Credit Card?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/miles-und-more-gold-credit-card/): Die Guthaben sind zusammen 59,88 € im Jahr wert, die Jahresgebühr beträgt 138 €. Mit allen Guthaben, der Reiseversicherung und 1.000 € Kartenumsatz im Monat holst du die Jahresgebühr herein.
+- [Ab wann lohnt sich die Eurowings Kreditkarte Premium?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/eurowings-kreditkarte-premium/): Mit der Reiseversicherung und 1.000 € Kartenumsatz im Monat holst du die Jahresgebühr herein.
+- [Ab wann lohnt sich die Deutsche Bank Mastercard Platin?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/deutsche-bank-mastercard-platin/): Mit der Reiseversicherung und 1.000 € Kartenumsatz im Monat lohnt sie sich ab etwa 7 Lounge-Besuchen im Jahr.
+- [Ab wann lohnt sich die TARGOBANK Premium-Karte?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/targobank-premium-karte/): Mit der Reiseversicherung und 1.000 € Kartenumsatz im Monat holst du die Jahresgebühr herein.
+
 ## Finanzrechner
 - [Zinseszinsrechner & Sparrechner (Deutschland)](https://finvallo.com/de/rechner/zinseszins/)
 - [Kreditrechner (Deutschland)](https://finvallo.com/de/rechner/kreditrechner/)
