@@ -101,7 +101,7 @@ def sec(h,sub,inner,alt=False,id_=''):
     return f'<section class="hp-sec{" hp-alt" if alt else ""}"{i}><div class="hp-w"><h2 class="hp-h">{h}</h2><p class="hp-sub">{sub}</p>{inner}</div></section>'
 def topcards(P,d,land,names=None,base='at/kreditkarten/'):
     t=top3(d,names); n=len(d['karten']); stand='.'.join(reversed(d['stand'].split('-')))
-    best=[('gratis','Ohne Jahresgebühr'),('reisen','Für Reisen'),('ausland','Im Ausland zahlen'),('punkte','Punkte & Meilen'),('lounge','Lounge-Zugang'),('premium','Premium'),('studium','Für Studierende'),('debit','Debitkarten')]
+    best=[('gratis','Ohne Jahresgebühr'),('reisen','Für Reisen'),('ausland','Im Ausland zahlen'),('punkte','Meilen & Punkte'),('cashback','Cashback'),('lounge','Lounge-Zugang'),('premium','Premium'),('studium','Für Studierende'),('debit','Debitkarten')]
     chips=''
     if os.path.isdir(R+base+'bestenlisten'):
         chips='<div class="hp-chips"><span>Beste Karte nach Kategorie:</span><div class="chips">'+''.join(f'<a class="chip" href="{P}{base}bestenlisten/{s}/">{x}</a>' for s,x in best if os.path.isdir(R+base+'bestenlisten/'+s))+'</div></div>'
@@ -191,7 +191,7 @@ def b_at(P,hdr):
     return (hero(f'{FLAG["AT"]} Österreich · unabhängig bewertet','Kreditkarten in Österreich unabhängig vergleichen.',
         f'{nA} Kredit-, Debit- und Prepaid-Karten von {anbA} Anbietern, mit Gebühren, Versicherung und Bewertung.',
         f'<a class="btn primary" href="{P}at/kreditkarten/">Kreditkarten vergleichen {ic(I["arrow"])}</a><a class="btn ghost" href="#testsieger">Testsieger ansehen</a>',art(t[0],'AT'))
-      + stats([(nA,'Kreditkarten verglichen'),(anbA,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(8,'Bestenlisten nach Kategorie')])
+      + stats([(nA,'Kreditkarten verglichen'),(anbA,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(9,'Bestenlisten nach Kategorie')])
       + tc
       + sec('Alles für Österreich','Vergleiche, Werkzeuge und Ratgeber.',f'<div class="hp-tiles">{tiles}</div>')
       + trust(P)
@@ -226,7 +226,7 @@ def b_de(P,hdr):
      ('Ist Finvallo eine Finanzberatung?','Nein. Finvallo vergleicht und erklärt, ersetzt aber keine persönliche Beratung. Prüfe die Konditionen vor dem Abschluss beim Anbieter.')]
     fq,ld=faqblock(faq)
     if DD:
-        st=stats([(nD,'Kreditkarten verglichen'),(anbD,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(8,'Bestenlisten nach Kategorie')])
+        st=stats([(nD,'Kreditkarten verglichen'),(anbD,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(9,'Bestenlisten nach Kategorie')])
         cta=f'<a class="btn primary" href="{P}de/kreditkarten/">Kreditkarten vergleichen {ic(I["arrow"])}</a><a class="btn ghost" href="#testsieger">Testsieger ansehen</a>'
         p=f'{nD} Kreditkarten von {anbD} Anbietern, mit Gebühren, Versicherung und Bewertung.'
     else:
