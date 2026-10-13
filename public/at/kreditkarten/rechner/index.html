@@ -604,7 +604,7 @@ function summary(c){
   if(c.fee1!=null) s.push(`Im ersten Jahr zahlst du nur ${eur(c.fee1)}.`);
   if(c.feeNote) s.push(`Hinweis: ${c.feeNote}.`);
   if(c.fx===0) s.push('Zahlungen in fremder Währung kosten nichts extra.'); else if(c.fx!=null) s.push(`Zahlungen in fremder Währung kosten ${c.fxText}.`);
-  if(c.cashText) s.push(`Bargeld beheben kostet: ${c.cashText}.`);
+  if(c.cashText) s.push(/^kostenlos$/i.test(c.cashText)?'Bargeld beheben kostet 0 %.':/^(\d|ca\.|Inland)/.test(c.cashText)?`Bargeld beheben kostet ${c.cashText}.`:`Bargeld beheben: ${c.cashText}.`);
   if(c.tier!=null) s.push(c.tier===0?'Eine Reiseversicherung ist nicht dabei.':`Dabei ist: ${S.tierLabel[c.tier]}.`);
   if(c.lg && c.lgf) s.push(`Lounge: ${c.lg}.`);
   if(c.cb) s.push(`Extra: ${c.cb}.`);
@@ -699,7 +699,7 @@ function detail(id){
   <h2>Vorteile und Nachteile</h2>
   <div class="pc"><div class="box pro"><h3>Das spricht dafür</h3>${c.pros.length?`<ul class="checks">${c.pros.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:'<p class="note">Noch keine bestätigten Vorteile.</p>'}</div>
   <div class="box con"><h3>Das spricht dagegen</h3>${c.cons.length?`<ul class="checks neg">${c.cons.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:'<p class="note">Keine bekannten Nachteile.</p>'}</div></div>
-  <h2>Für wen passt die Karte?</h2><div class="info"><span class="ic">i</span><div><p style="margin:0 0 8px">${esc(fit)}</p>${warn?`<p style="margin:0">${esc(warn)}</p>`:''}</div></div>
+  <h2>Für wen ist die Karte geeignet?</h2><div class="info"><span class="ic">i</span><div><p style="margin:0 0 8px">${esc(fit)}</p>${warn?`<p style="margin:0">${esc(warn)}</p>`:''}</div></div>
   <h2>So funktioniert die Karte</h2><div class="prose"><p>${esc(howText(c))}</p></div>
   </section>
   <section id="s-kond"><h2>Konditionen im Überblick</h2>${condTable(c)}
