@@ -545,3 +545,6 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
 .lres{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px;padding-top:12px;border-top:1px dashed var(--line)}
 .lres small{display:block;color:var(--muted);font-size:13px}
 .lres b{font-size:20px}
+.ltab{max-height:none}
+.ltab td.nw{white-space:nowrap;vertical-align:top;font-weight:600}
+.ltab td small{display:block;margin-top:4px;line-height:1.4}
