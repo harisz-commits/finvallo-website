@@ -21,29 +21,67 @@
     "quelle": "https://apps.apple.com/at/app/id6448311069"
    },
    "Headspace": {
-    "eur_monat": 12.99,
-    "quelle": "https://apps.apple.com/at/app/id493145008"
+    "eur_monat": 4.83,
+    "quelle": "https://help.headspace.com/hc/en-us/articles/360048571933-What-happens-if-I-leave-my-current-employer",
+    "hinweis": "Jahresabo 57,99 €"
    },
    "MasterClass": {
     "eur_monat": 10.83,
     "quelle": "https://apps.apple.com/at/app/id1273867416",
-    "hinweis": "nur als Jahresabo für 129,99 €"
+    "hinweis": "Jahresabo 129,99 €"
    },
    "Financial Times Standard Digital": {
-    "eur_monat": 45.0,
-    "quelle": "https://apps.apple.com/at/app/id1200842933"
+    "eur_monat": 35.75,
+    "quelle": "https://apps.apple.com/at/app/id1200842933",
+    "hinweis": "günstigstes FT-Abo: Standard Digital, Jahresabo 429 €"
    },
    "Financial Times Premium Digital": {
-    "eur_monat": 69.0,
-    "quelle": "https://apps.apple.com/at/app/id1200842933"
-   },
-   "Uber One": {
-    "eur_monat": 6.99,
-    "quelle": "https://www.uber.com/at/de/u/uber-one/"
+    "eur_monat": 35.75,
+    "quelle": "https://apps.apple.com/at/app/id1200842933",
+    "hinweis": "gerechnet mit dem günstigsten FT-Abo: Standard Digital, Jahresabo 429 €"
    },
    "Wolt+": {
     "eur_monat": 4.99,
     "quelle": "https://explore.wolt.com/de/aut/wolt-plus"
+   },
+   "Super Duolingo": {
+    "eur_monat": 7.5,
+    "quelle": "https://apps.apple.com/at/app/id570060128",
+    "hinweis": "Jahresabo 89,99 €"
+   },
+   "Freeletics": {
+    "eur_monat": 6.67,
+    "quelle": "https://apps.apple.com/at/app/id654810212",
+    "hinweis": "Jahresabo 79,99 €"
+   },
+   "The Athletic": {
+    "eur_monat": 7.99,
+    "quelle": "https://apps.apple.com/at/app/id1135216317"
+   },
+   "NordVPN Plus": {
+    "eur_monat": 3.99,
+    "quelle": "https://trusted.de/nordvpn-kosten",
+    "hinweis": "günstigster Plus-Tarif bei 2 Jahren Laufzeit"
+   },
+   "NordVPN Complete": {
+    "eur_monat": 3.99,
+    "quelle": "https://trusted.de/nordvpn-kosten",
+    "hinweis": "gerechnet mit dem günstigsten Plus-Tarif"
+   },
+   "ClassPass (20 Credits)": {
+    "eur_monat": 30,
+    "quelle": "https://smartliving-de.beehiiv.com/p/is-classpass-worth-it-in-germany",
+    "hinweis": "20 Credits zu je etwa 1,50 €"
+   },
+   "ClassPass (10 Credits)": {
+    "eur_monat": 15,
+    "quelle": "https://smartliving-de.beehiiv.com/p/is-classpass-worth-it-in-germany",
+    "hinweis": "10 Credits zu je etwa 1,50 €"
+   },
+   "Uber One": {
+    "eur_monat": 5.83,
+    "quelle": "https://www.uber.com/at/de/u/uber-one/",
+    "hinweis": "Jahresabo 69,90 €"
    }
   },
   "abos_stand": "2026-10-13"
@@ -130,11 +168,11 @@
    "punkte_hinweis": "1 RevPoint je €, 1 RevPoint = 1 Cent",
    "subs_names": [
     "ChatGPT Go",
-    "WeWork",
+    "WeWork (nur im Ausland)",
     "MasterClass",
     "NordVPN Complete",
     "Headspace",
-    "ClassPass",
+    "ClassPass (20 Credits)",
     "Financial Times Premium Digital",
     "Wolt+",
     "Freeletics",
@@ -163,11 +201,11 @@
    "punkte_hinweis": "1 RevPoint je 2 €, 1 RevPoint = 1 Cent",
    "subs_names": [
     "ChatGPT Go",
-    "WeWork",
+    "WeWork (nur im Ausland)",
     "MasterClass",
     "NordVPN Plus",
     "Headspace",
-    "ClassPass",
+    "ClassPass (10 Credits)",
     "Financial Times Standard Digital",
     "Wolt+",
     "Super Duolingo"
