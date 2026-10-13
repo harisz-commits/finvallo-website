@@ -50,7 +50,7 @@
         want.forEach(function (k) { if (c.it[k]) v += c.it[k]; });
         var low = lvl > 0 && c.tier < lvl;
         if (lvl > 0 && !low) v += D.vers[String(lvl)];
-        res[c.s] = { net: v - c.fee, low: low };
+        res[c.s] = { net: v - c.fee, val: v, fee: c.fee, low: low };
       });
       [].slice.call(document.querySelectorAll('.catgrid')).forEach(function (g) {
         var tiles = [].slice.call(g.querySelectorAll('[data-card]'));
@@ -63,6 +63,7 @@
           var r = res[t.dataset.card], n = t.querySelector('[data-net]');
           n.hidden = false; n.className = 'lnet ' + (r.net >= 0 ? 'good' : 'bad');
           n.textContent = sign(r.net) + ' pro Jahr' + (r.low ? ' · Versicherung schwächer als gewünscht' : '');
+          t.querySelector('[data-def]').textContent = 'Deine Vorteile ' + eur(r.val) + ', Jahresgebühr ' + r.fee.toLocaleString('de-DE', { maximumFractionDigits: 2 }) + ' €';
           t.classList.toggle('dim', r.low);
           g.appendChild(t);
         });
