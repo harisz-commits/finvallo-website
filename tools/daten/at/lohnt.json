@@ -2,72 +2,347 @@
  "annahmen": {
   "lounge_eur": 30,
   "lounge_quelle": "Das ist der Preis eines Einzelbesuchs mit Priority Pass. Ohne Karte kostet die SKY Lounge am Flughafen Wien 49 €, die VIENNA Lounge 59 € (viennaairport.com).",
-  "vers": {"1": 50, "2": 150, "3": 220, "4": 300},
+  "vers": {
+   "1": 50,
+   "2": 150,
+   "3": 220,
+   "4": 300
+  },
   "vers_quelle": "Vergleichbare Jahrespolizzen für eine Person in Österreich: Jahres-Auslandskranken ab 49 € (HanseMerkur), mit Storno ab 95 € für Reisen bis 1.000 € (HanseMerkur) bzw. 216 € bis 3.600 € (ÖAMTC), umfassender Jahresreiseschutz 239 € (Allianz Top), mit höheren Summen 349 € (Allianz Top PLUS).",
-  "quellen": ["https://www.viennaairport.com/lounges", "https://www.hansemerkur.at/reiseversicherungen/jahresversicherungen", "https://www.oeamtc.at/versicherung/reise-versicherungen/weltreise-krankenschutz/", "https://www.allianz.at/de_AT/privatkunden/vorsorge-gesundheit/reiseversicherung.html"]
+  "quellen": [
+   "https://www.viennaairport.com/lounges",
+   "https://www.hansemerkur.at/reiseversicherungen/jahresversicherungen",
+   "https://www.oeamtc.at/versicherung/reise-versicherungen/weltreise-krankenschutz/",
+   "https://www.allianz.at/de_AT/privatkunden/vorsorge-gesundheit/reiseversicherung.html"
+  ],
+  "abos": {
+   "ChatGPT Go": {
+    "eur_monat": 7.99,
+    "quelle": "https://apps.apple.com/at/app/id6448311069"
+   },
+   "Headspace": {
+    "eur_monat": 12.99,
+    "quelle": "https://apps.apple.com/at/app/id493145008"
+   },
+   "MasterClass": {
+    "eur_monat": 10.83,
+    "quelle": "https://apps.apple.com/at/app/id1273867416",
+    "hinweis": "nur als Jahresabo für 129,99 €"
+   },
+   "Financial Times Standard Digital": {
+    "eur_monat": 45.0,
+    "quelle": "https://apps.apple.com/at/app/id1200842933"
+   },
+   "Financial Times Premium Digital": {
+    "eur_monat": 69.0,
+    "quelle": "https://apps.apple.com/at/app/id1200842933"
+   },
+   "Uber One": {
+    "eur_monat": 6.99,
+    "quelle": "https://www.uber.com/at/de/u/uber-one/"
+   },
+   "Wolt+": {
+    "eur_monat": 4.99,
+    "quelle": "https://explore.wolt.com/de/aut/wolt-plus"
+   }
+  },
+  "abos_stand": "2026-10-13"
  },
  "karten": [
-  {"slug": "american-express-platinum-card", "geprueft": "2026-10-13",
+  {
+   "slug": "american-express-platinum-card",
+   "geprueft": "2026-10-13",
    "credits": [
-    {"name": "Gourmet-Gutschrift Österreich", "eur": 180, "hinweis": "2 × 90 € im Jahr in über 100 teilnehmenden Restaurants in Österreich, nach Registrierung"},
-    {"name": "Gourmet-Gutschrift Ausland", "eur": 180, "hinweis": "2 × 90 € im Jahr in über 2.000 Restaurants in 16 Ländern"},
-    {"name": "Entertainment-Gutschrift", "eur": 180, "hinweis": "15 € pro Monat für Netflix, Prime Video, Amazon Music, Kindle oder Audible"}],
-   "lounge": {"program": "Priority Pass, Centurion und Wiener Lounges", "visits": "unbegrenzt", "guests_free": "unbegrenzt", "hinweis": "pro Besuch 1 Gast kostenlos"},
-   "punkte_pro_100": 1, "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
-   "extra": [{"name": "Hotel- und Mietwagenstatus", "hinweis": "u. a. Marriott Bonvoy Gold, Hilton Honors Gold, SIXT ONE Platinum, Hertz Gold Plus Five Star"},
-             {"name": "Preis ab 31.12.2026", "hinweis": "Die Jahresgebühr steigt dann auf 717,60 € (59,80 € pro Monat)"}],
-   "quellen": ["https://www.americanexpress.com/de-at/kreditkarten/platinum-card/", "https://www.americanexpress.com/de-at/vorteile/platinum-card/dining/", "https://www.americanexpress.com/de-at/vorteile/platinum-card/lifestyle/entertainment/index.html", "https://www.americanexpress.com/de-at/vorteile/platinum-card/reisen/"]},
-  {"slug": "american-express-gold-card", "geprueft": "2026-10-13",
-   "lounge": {"program": "VIENNA Lounge und SKY Lounge Flughafen Wien", "visits": "unbegrenzt", "guests_free": 0, "hinweis": "für Haupt- und Zusatzkarteninhaber, nur in Wien"},
-   "punkte_pro_100": 1, "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
-   "extra": [{"name": "Teilnahme an Membership Rewards", "eur": -30, "immer": true, "hinweis": "kostet 30 € im Jahr extra"}],
-   "quellen": ["https://www.americanexpress.com/de-at/kreditkarten/gold-card/"]},
-  {"slug": "revolut-ultra", "geprueft": "2026-10-13",
-   "lounge": {"program": "Collinson-Lounge-Pässe in der App", "visits": "unbegrenzt", "guests_free": 0, "hinweis": "für dich unbegrenzt, Gäste kosten extra"},
-   "punkte_pro_100": 1, "punkte_hinweis": "1 RevPoint je €, 1 RevPoint = 1 Cent",
-   "subs_names": ["ChatGPT Go", "WeWork", "MasterClass", "NordVPN Complete", "Headspace", "ClassPass", "Financial Times Premium Digital", "Wolt+", "Freeletics", "The Athletic"],
-   "extra": [{"name": "Jahreszahlung", "hinweis": "bei jährlicher Zahlung 600 € statt 60 € pro Monat"},
-             {"name": "Storno aus beliebigem Grund", "hinweis": "bis 70 % der Kosten, höchstens 5.000 € im Jahr"}],
-   "quellen": ["https://www.revolut.com/de-AT/ultra-plan/", "https://www.revolut.com/de-AT/lounges/", "https://www.revolut.com/de-AT/travel-insurance/"]},
-  {"slug": "revolut-metal", "geprueft": "2026-10-13",
-   "punkte_pro_100": 0.5, "punkte_hinweis": "1 RevPoint je 2 €, 1 RevPoint = 1 Cent",
-   "subs_names": ["ChatGPT Go", "WeWork", "MasterClass", "NordVPN Plus", "Headspace", "ClassPass", "Financial Times Standard Digital", "Wolt+", "Super Duolingo"],
-   "extra": [{"name": "Jahreszahlung", "hinweis": "bei jährlicher Zahlung 175 € statt 17,99 € pro Monat"}],
-   "quellen": ["https://www.revolut.com/de-AT/metal/"]},
-  {"slug": "n26-metal", "geprueft": "2026-10-13",
-   "lounge": {"program": "DragonPass", "visits": 1, "guests_free": 0, "hinweis": "der erste Besuch im Jahr ist kostenlos"},
-   "extra": [{"name": "Handyversicherung", "hinweis": "Diebstahl und Unfallschaden bis 2.000 €"}],
-   "quellen": ["https://n26.com/de-at/metal"]},
-  {"slug": "bank-austria-world-elite", "geprueft": "2026-10-13",
-   "lounge": {"program": "Priority Pass", "visits": "unbegrenzt", "guests_free": 12, "hinweis": "12 Gastbesuche im Jahr kostenlos, danach 30 €"},
-   "extra": [{"name": "FastTrack Flughafen Wien", "hinweis": "12 × kostenlos (bis 31.12.2026)"}],
-   "quellen": ["https://www.bankaustria.at/mastercard-world-elite.jsp"]},
-  {"slug": "card-complete-world-traveller-black", "geprueft": "2026-10-13",
-   "lounge": {"program": "VIENNA Lounge und SKY Lounge Flughafen Wien", "visits": "unbegrenzt", "guests_free": "unbegrenzt", "hinweis": "1 Begleitperson kostenlos, nur in Wien"},
-   "extra": [{"name": "FastTrack Flughafen Wien", "hinweis": "4 × im Jahr kostenlos"}],
-   "quellen": ["https://www.cardcomplete.com/privatkarten/kartenuebersicht/mastercard-world-traveller-black-card/", "https://www.cardcomplete.com/service/vip-lounges-am-flughafen-wien/"]},
-  {"slug": "card-complete-platinum", "geprueft": "2026-10-13",
-   "lounge": {"program": "VIENNA Lounge und SKY Lounge Flughafen Wien", "visits": 4, "guests_free": 0, "hinweis": "4 Zutritte im Jahr für alle Karten und Begleitpersonen zusammen"},
-   "quellen": ["https://www.cardcomplete.com/privatkarten/kartenuebersicht/platinum-card/"]},
-  {"slug": "paylife-black", "geprueft": "2026-10-13",
-   "lounge": {"program": "VIENNA Lounge und SKY Lounge Flughafen Wien", "visits": 2, "guests_free": 0, "hinweis": "2 Zutritte im Jahr, danach ermäßigt"},
-   "extra": [{"name": "Black Bonustravel", "hinweis": "ein Gratis-Hin- und Rückflug in Europa ab 7.500 € Kartenumsatz im Jahr"},
-             {"name": "FastTrack Flughafen Wien", "hinweis": "kostenlos"}],
-   "quellen": ["https://www.paylife.at/paylife/privat/service/paylife-black-vorteile"]},
-  {"slug": "paylife-platinum", "geprueft": "2026-10-13",
-   "lounge": {"program": "Priority Pass", "visits": 5, "guests_free": 0, "hinweis": "5 Zutritte im Jahr für dich und Begleitung zusammen"},
-   "extra": [{"name": "FastTrack Flughafen Wien", "hinweis": "kostenlos"}],
-   "quellen": ["https://www.paylife.at/paylife/privat/kreditkarten/platinum"]},
-  {"slug": "diners-club-gold", "geprueft": "2026-10-13",
-   "lounge": {"program": "Diners Club Lounges", "visits": 4, "guests_free": 0, "hinweis": "4 Zutritte bei mindestens 3.600 € Umsatz in 365 Tagen"},
-   "punkte_pro_100": 0.5, "punkte_hinweis": "1 Bonuspunkt je 8 € = 4 Miles & More Meilen, 1 Meile = 1 Cent",
-   "extra": [{"name": "Umtausch in Meilen", "eur": -25, "immer": true, "hinweis": "kostet 25 € im Jahr"}],
-   "quellen": ["https://www.cardcomplete.com/diners-club/privatkarten/gold-card/", "https://www.cardcomplete.com/diners-club/vorteile/miles-more/"]},
-  {"slug": "erste-bank-und-sparkassen-austrian-miles-und-more-premiumcard", "geprueft": "2026-10-13",
-   "lounge": {"program": "Priority Pass", "visits": 4, "guests_free": 0, "hinweis": "4 Zutritte im Jahr, Begleitpersonen nutzen sie mit"},
-   "punkte_pro_100": 0.67, "punkte_hinweis": "1 Meile je 1,50 €, 1 Meile = 1 Cent",
-   "welcome": {"text": "5.000 Meilen bei Antrag bis 31.10.2026", "eur": 50},
-   "extra": [{"name": "FastTrack Flughafen Wien", "hinweis": "4 × im Jahr kostenlos"}],
-   "quellen": ["https://www.sparkasse.at/erstebank/privatkunden/konto-karten/s-kreditkarten/s-mastercard/miles-more-kreditkarten/austrian-miles-more-premiumcard"]}
+    {
+     "name": "Gourmet-Gutschrift Österreich",
+     "eur": 180,
+     "hinweis": "2 × 90 € im Jahr in über 100 teilnehmenden Restaurants in Österreich, nach Registrierung"
+    },
+    {
+     "name": "Gourmet-Gutschrift Ausland",
+     "eur": 180,
+     "hinweis": "2 × 90 € im Jahr in über 2.000 Restaurants in 16 Ländern"
+    },
+    {
+     "name": "Entertainment-Gutschrift",
+     "eur": 180,
+     "hinweis": "15 € pro Monat für Netflix, Prime Video, Amazon Music, Kindle oder Audible"
+    }
+   ],
+   "lounge": {
+    "program": "Priority Pass, Centurion und Wiener Lounges",
+    "visits": "unbegrenzt",
+    "guests_free": "unbegrenzt",
+    "hinweis": "pro Besuch 1 Gast kostenlos"
+   },
+   "punkte_pro_100": 1,
+   "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
+   "extra": [
+    {
+     "name": "Hotel- und Mietwagenstatus",
+     "hinweis": "u. a. Marriott Bonvoy Gold, Hilton Honors Gold, SIXT ONE Platinum, Hertz Gold Plus Five Star"
+    },
+    {
+     "name": "Preis ab 31.12.2026",
+     "hinweis": "Die Jahresgebühr steigt dann auf 717,60 € (59,80 € pro Monat)"
+    }
+   ],
+   "quellen": [
+    "https://www.americanexpress.com/de-at/kreditkarten/platinum-card/",
+    "https://www.americanexpress.com/de-at/vorteile/platinum-card/dining/",
+    "https://www.americanexpress.com/de-at/vorteile/platinum-card/lifestyle/entertainment/index.html",
+    "https://www.americanexpress.com/de-at/vorteile/platinum-card/reisen/"
+   ]
+  },
+  {
+   "slug": "american-express-gold-card",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "VIENNA Lounge und SKY Lounge Flughafen Wien",
+    "visits": "unbegrenzt",
+    "guests_free": 0,
+    "hinweis": "für Haupt- und Zusatzkarteninhaber, nur in Wien"
+   },
+   "punkte_pro_100": 1,
+   "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
+   "extra": [
+    {
+     "name": "Teilnahme an Membership Rewards",
+     "eur": -30,
+     "immer": true,
+     "hinweis": "kostet 30 € im Jahr extra"
+    }
+   ],
+   "quellen": [
+    "https://www.americanexpress.com/de-at/kreditkarten/gold-card/"
+   ]
+  },
+  {
+   "slug": "revolut-ultra",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "Collinson-Lounge-Pässe in der App",
+    "visits": "unbegrenzt",
+    "guests_free": 0,
+    "hinweis": "für dich unbegrenzt, Gäste kosten extra"
+   },
+   "punkte_pro_100": 1,
+   "punkte_hinweis": "1 RevPoint je €, 1 RevPoint = 1 Cent",
+   "subs_names": [
+    "ChatGPT Go",
+    "WeWork",
+    "MasterClass",
+    "NordVPN Complete",
+    "Headspace",
+    "ClassPass",
+    "Financial Times Premium Digital",
+    "Wolt+",
+    "Freeletics",
+    "The Athletic"
+   ],
+   "extra": [
+    {
+     "name": "Jahreszahlung",
+     "hinweis": "bei jährlicher Zahlung 600 € statt 60 € pro Monat"
+    },
+    {
+     "name": "Storno aus beliebigem Grund",
+     "hinweis": "bis 70 % der Kosten, höchstens 5.000 € im Jahr"
+    }
+   ],
+   "quellen": [
+    "https://www.revolut.com/de-AT/ultra-plan/",
+    "https://www.revolut.com/de-AT/lounges/",
+    "https://www.revolut.com/de-AT/travel-insurance/"
+   ]
+  },
+  {
+   "slug": "revolut-metal",
+   "geprueft": "2026-10-13",
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 RevPoint je 2 €, 1 RevPoint = 1 Cent",
+   "subs_names": [
+    "ChatGPT Go",
+    "WeWork",
+    "MasterClass",
+    "NordVPN Plus",
+    "Headspace",
+    "ClassPass",
+    "Financial Times Standard Digital",
+    "Wolt+",
+    "Super Duolingo"
+   ],
+   "extra": [
+    {
+     "name": "Jahreszahlung",
+     "hinweis": "bei jährlicher Zahlung 175 € statt 17,99 € pro Monat"
+    }
+   ],
+   "quellen": [
+    "https://www.revolut.com/de-AT/metal/"
+   ]
+  },
+  {
+   "slug": "n26-metal",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "DragonPass",
+    "visits": 1,
+    "guests_free": 0,
+    "hinweis": "der erste Besuch im Jahr ist kostenlos"
+   },
+   "extra": [
+    {
+     "name": "Handyversicherung",
+     "hinweis": "Diebstahl und Unfallschaden bis 2.000 €"
+    }
+   ],
+   "quellen": [
+    "https://n26.com/de-at/metal"
+   ]
+  },
+  {
+   "slug": "bank-austria-world-elite",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "Priority Pass",
+    "visits": "unbegrenzt",
+    "guests_free": 12,
+    "hinweis": "12 Gastbesuche im Jahr kostenlos, danach 30 €"
+   },
+   "extra": [
+    {
+     "name": "FastTrack Flughafen Wien",
+     "hinweis": "12 × kostenlos (bis 31.12.2026)"
+    }
+   ],
+   "quellen": [
+    "https://www.bankaustria.at/mastercard-world-elite.jsp"
+   ]
+  },
+  {
+   "slug": "card-complete-world-traveller-black",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "VIENNA Lounge und SKY Lounge Flughafen Wien",
+    "visits": "unbegrenzt",
+    "guests_free": "unbegrenzt",
+    "hinweis": "1 Begleitperson kostenlos, nur in Wien"
+   },
+   "extra": [
+    {
+     "name": "FastTrack Flughafen Wien",
+     "hinweis": "4 × im Jahr kostenlos"
+    }
+   ],
+   "quellen": [
+    "https://www.cardcomplete.com/privatkarten/kartenuebersicht/mastercard-world-traveller-black-card/",
+    "https://www.cardcomplete.com/service/vip-lounges-am-flughafen-wien/"
+   ]
+  },
+  {
+   "slug": "card-complete-platinum",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "VIENNA Lounge und SKY Lounge Flughafen Wien",
+    "visits": 4,
+    "guests_free": 0,
+    "hinweis": "4 Zutritte im Jahr für alle Karten und Begleitpersonen zusammen"
+   },
+   "quellen": [
+    "https://www.cardcomplete.com/privatkarten/kartenuebersicht/platinum-card/"
+   ]
+  },
+  {
+   "slug": "paylife-black",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "VIENNA Lounge und SKY Lounge Flughafen Wien",
+    "visits": 2,
+    "guests_free": 0,
+    "hinweis": "2 Zutritte im Jahr, danach ermäßigt"
+   },
+   "extra": [
+    {
+     "name": "Black Bonustravel",
+     "hinweis": "ein Gratis-Hin- und Rückflug in Europa ab 7.500 € Kartenumsatz im Jahr"
+    },
+    {
+     "name": "FastTrack Flughafen Wien",
+     "hinweis": "kostenlos"
+    }
+   ],
+   "quellen": [
+    "https://www.paylife.at/paylife/privat/service/paylife-black-vorteile"
+   ]
+  },
+  {
+   "slug": "paylife-platinum",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "Priority Pass",
+    "visits": 5,
+    "guests_free": 0,
+    "hinweis": "5 Zutritte im Jahr für dich und Begleitung zusammen"
+   },
+   "extra": [
+    {
+     "name": "FastTrack Flughafen Wien",
+     "hinweis": "kostenlos"
+    }
+   ],
+   "quellen": [
+    "https://www.paylife.at/paylife/privat/kreditkarten/platinum"
+   ]
+  },
+  {
+   "slug": "diners-club-gold",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "Diners Club Lounges",
+    "visits": 4,
+    "guests_free": 0,
+    "hinweis": "4 Zutritte bei mindestens 3.600 € Umsatz in 365 Tagen"
+   },
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 Bonuspunkt je 8 € = 4 Miles & More Meilen, 1 Meile = 1 Cent",
+   "extra": [
+    {
+     "name": "Umtausch in Meilen",
+     "eur": -25,
+     "immer": true,
+     "hinweis": "kostet 25 € im Jahr"
+    }
+   ],
+   "quellen": [
+    "https://www.cardcomplete.com/diners-club/privatkarten/gold-card/",
+    "https://www.cardcomplete.com/diners-club/vorteile/miles-more/"
+   ]
+  },
+  {
+   "slug": "erste-bank-und-sparkassen-austrian-miles-und-more-premiumcard",
+   "geprueft": "2026-10-13",
+   "lounge": {
+    "program": "Priority Pass",
+    "visits": 4,
+    "guests_free": 0,
+    "hinweis": "4 Zutritte im Jahr, Begleitpersonen nutzen sie mit"
+   },
+   "punkte_pro_100": 0.67,
+   "punkte_hinweis": "1 Meile je 1,50 €, 1 Meile = 1 Cent",
+   "welcome": {
+    "text": "5.000 Meilen bei Antrag bis 31.10.2026",
+    "eur": 50
+   },
+   "extra": [
+    {
+     "name": "FastTrack Flughafen Wien",
+     "hinweis": "4 × im Jahr kostenlos"
+    }
+   ],
+   "quellen": [
+    "https://www.sparkasse.at/erstebank/privatkunden/konto-karten/s-kreditkarten/s-mastercard/miles-more-kreditkarten/austrian-miles-more-premiumcard"
+   ]
+  }
  ]
 }

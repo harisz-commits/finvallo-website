@@ -83,7 +83,7 @@ def profiles(c, x, A):
                         p=dict(credits=True, subs=True, lounge=n, guests=g, spend=2500)))
     if c.get('tier') and len(out) < 3:
         w = A['vers'][str(c['tier'])]
-        out.append(dict(t='Du bräuchtest sonst eine Reiseversicherung', d=f'Statt einer eigenen Jahrespolizze (etwa {eur(w)} €) nutzt du die Reiseversicherung der Karte ({K.TIER[c["tier"]][1]})' + (f', dazu {min(4, lg)} Lounge-Besuche' if lg else '') + (', 1.000 € Umsatz im Monat' if pp else '') + '.', n='',
+        out.append(dict(t='Du bräuchtest sonst eine Reiseversicherung', d=f'Statt einer eigenen Jahrespolizze (etwa {eur(w)} €) nutzt du die Reiseversicherung der Karte ({K.TIER[c["tier"]][1]})' + (', dazu ' + namelist([w for w in (f'{min(4, lg)} Lounge-Besuche' if lg else '', '1.000 € Umsatz im Monat' if pp else '') if w]) if lg or pp else '') + '.', n='',
                         p=dict(lounge=min(4, lg), spend=1000, vers=True)))
     for o in out: o['p'].setdefault('vers', False)
     return out
@@ -128,7 +128,7 @@ def verdict(c, x, A):
     sb = priced(x, A)
     if sb and k1 != 'ok':
         ks, vs = breakeven(c, x, A, True, False, True)
-        s.append(f'Würdest du alle Partner-Abos sonst selbst bezahlen (zusammen etwa {eur(sum(g["eur"] for g in sb))} € im Jahr), ' + {'ok': 'holst du die Jahresgebühr damit schon herein.', 'lounge': ('reicht ein Lounge-Besuch.' if vs == 1 else f'reichen etwa {vs} Lounge-Besuche.'), 'spend': f'reichen etwa {eur(vs or 0)} € Umsatz im Monat.', 'no': 'reicht auch das nicht.'}[ks])
+        s.append(f'Würdest du alle Partner-Abos sonst selbst bezahlen (zusammen etwa {eur(round(sum(g["eur"] for g in sb)))} € im Jahr), ' + {'ok': 'holst du die Jahresgebühr damit schon herein.', 'lounge': ('reicht ein Lounge-Besuch.' if vs == 1 else f'reichen etwa {vs} Lounge-Besuche.'), 'spend': f'reichen etwa {eur(vs or 0)} € Umsatz im Monat.', 'no': 'reicht auch das nicht.'}[ks])
     elif x.get('subs_names') and not sb: s.append('Dazu kommen Partner-Abos, die nur zählen, wenn du sie sonst selbst bezahlen würdest.')
     return ' '.join(s)
 
@@ -180,7 +180,7 @@ def card_page(land, c, x, A, P, prov):
     if x.get('punkte_pro_100'): rows += f'<tr><td>Punkte oder Meilen</td><td class="nw">{eur(x["punkte_pro_100"])} € je 100 € Umsatz</td><td>{E(x.get("punkte_hinweis") or "1 Punkt oder Meile = 1 Cent")}{f", höchstens {eur(x.get('punkte_max') or 0)} € im Jahr" if x.get("punkte_max") else ""}</td></tr>'
     if c.get('tier'): rows += f'<tr><td>Reiseversicherung ({E(K.TIER[c["tier"]][1])})</td><td class="nw">≈ {eur(A["vers"][str(c["tier"])])} €</td><td>so viel kostet eine vergleichbare eigene Jahrespolizze</td></tr>'
     sb = subs(x, A); ps = [g for g in sb if g['eur']]
-    if ps: rows += f'<tr><td>Partner-Abos</td><td class="nw">bis {eur(sum(g["eur"] for g in ps))} €</td><td>{E("; ".join(g["name"] + " " + eur(g["monat"]) + " € pro Monat" for g in ps))}. Zählt nur, was du sonst selbst bezahlen würdest.</td></tr>'
+    if ps: rows += f'<tr><td>Partner-Abos</td><td class="nw">bis {eur(round(sum(g["eur"] for g in ps)))} €</td><td>{E("; ".join(g["name"] + " " + (A["abos"][g["name"]].get("hinweis") or eur(g["monat"]) + " € pro Monat") for g in ps))}. Zählt nur, was du sonst selbst bezahlen würdest.</td></tr>'
     np_ = [g['name'] for g in sb if not g['eur']]
     if np_: rows += f'<tr><td>{"Weitere " if ps else ""}Partner-Abos</td><td class="nw">je nach Nutzung</td><td>{E(", ".join(np_))}. Zählt nur, was du sonst selbst bezahlen würdest.</td></tr>'
     for e in x.get('extra') or []: rows += f'<tr><td>{E(e["name"])}</td><td class="nw">{eur(e["eur"]) + " €" if e.get("eur") else "–"}</td><td>{E(e.get("hinweis") or "")}</td></tr>'
@@ -194,7 +194,7 @@ def card_page(land, c, x, A, P, prov):
           ('Zählt der Willkommensbonus mit?', 'Nur im ersten Jahr. Für die Frage, ob sich die Karte dauerhaft lohnt, rechnen wir ohne Bonus.')]
     ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Bestenlisten', f'{land}/kreditkarten/bestenlisten/'), ('Top-Karten', f'{land}/kreditkarten/bestenlisten/lohnt-sich/'), (c['titel'], rel)],
                  [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in fq]}], date=x.get('geprueft') or c['geprueft'])
-    src = ' · '.join(K.ext(u) for u in x.get('quellen') or [])
+    src = ' · '.join(K.ext(u) for u in dict.fromkeys((x.get('quellen') or []) + [(A['abos'][g['name']]['quelle']) for g in priced(x, A) if A['abos'][g['name']].get('quelle')]))
     body = f'''{K.HDR(P, rel)}
 <div class="wrap"><main id="app">
 <div class="crumb"><span><a href="../../">Bestenlisten</a> › <a href="../">Top-Karten</a> › {E(c["titel"])}</span><span>Stand {K.dmy(x.get("geprueft") or c["geprueft"])}</span></div>
@@ -292,7 +292,7 @@ def hub(land, cards, X, A, P):
 <h2>Top-Karten ab {TOP} € im Jahr</h2><div class="catgrid">{"".join(tile(c) for c in top)}</div>
 {f'<h2>Weitere Premiumkarten</h2><div class="catgrid">{"".join(tile(c) for c in rest)}</div>' if rest else ''}
 <h2>Welche Karte passt zu dir?</h2><div class="lprofs">{win}</div>
-<h2>So rechnen wir</h2><div class="prose"><p>Guthaben zählen mit ihrem Nennwert, aber nur, wenn du sie auch einlöst. Ein Lounge-Besuch zählt mit {eur(A["lounge_eur"])} €. Punkte und Meilen zählen mit 1 Cent. Die Reiseversicherung zählt mit dem Preis einer vergleichbaren eigenen Jahrespolizze: {", ".join(f"{K.TIER[int(k)][1]} {eur(v)} €" for k, v in A["vers"].items() if int(k) > 0)}. Abos zählen nur, wenn du sie sonst selbst bezahlen würdest. Willkommensboni gelten nur im ersten Jahr und bleiben deshalb außen vor.</p></div>
+<h2>So rechnen wir</h2><div class="prose"><p>Guthaben zählen mit ihrem Nennwert, aber nur, wenn du sie auch einlöst. Ein Lounge-Besuch zählt mit {eur(A["lounge_eur"])} €. Punkte und Meilen zählen mit 1 Cent. Die Reiseversicherung zählt mit dem Preis einer vergleichbaren eigenen Jahrespolizze: {", ".join(f"{K.TIER[int(k)][1]} {eur(v)} €" for k, v in A["vers"].items() if int(k) > 0)}. Abos zählen nur, wenn du sie sonst selbst bezahlen würdest, und zwar mit ihrem regulären Monatspreis beim Anbieter oder im App Store (Stand {K.dmy(A.get("abos_stand") or K.L["stand"])}). Abos ohne festen Preis zählen nicht. Willkommensboni gelten nur im ersten Jahr und bleiben deshalb außen vor.</p></div>
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in fq)}</div>
 </main>
 {K.footer(P)}'''

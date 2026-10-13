@@ -20,6 +20,7 @@ Für jede Karte das Preisverzeichnis (`preis`) und die Produktseite (`quelle`) d
 - Lounge (`lgText`, `ex.lg`), Cashback/Punkte/Meilen (`cbText`, `earnText`, `ex.cb`, `ex.ml`; Sammelraten in `tools/sammeln.py`)
 - Aktionen (`bonus`, bei AT `offer` mit `end` = TT.MM.JJJJ). Abgelaufene Aktionen entfernen und `fee1` anpassen.
 - „Ab wann lohnt sich“: Guthaben, Lounge-Regeln, Abos und Willkommensboni in `tools/daten/at/lohnt.json` und `tools/daten/de/lohnt.json` ebenfalls prüfen und dort `geprueft` setzen.
+- Abo-Preise in `annahmen.abos` (regulärer Monatspreis, Quelle) prüfen und `annahmen.abos_stand` setzen. Abos ohne bestätigten Preis bekommen keinen Eintrag; sie werden dann nicht mitgerechnet.
 - Gibt es die Karte nicht mehr: bei DE `"status": "eingestellt"`, bei AT `"status": "eingestellt"` setzen (die Seite fällt dann weg).
 
 Regeln:
