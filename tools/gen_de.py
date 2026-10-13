@@ -316,7 +316,7 @@ def card_page(c,cards,nrated):
   <h2>Vorteile und Nachteile</h2>
   <div class="pc"><div class="box pro"><h3>Das spricht dafür</h3><ul class="checks">{"".join(f"<li>{E(x)}</li>" for x in pc) or "<li>–</li>"}</ul></div>
   <div class="box con"><h3>Das spricht dagegen</h3><ul class="checks neg">{"".join(f"<li>{E(x)}</li>" for x in kc) or "<li>–</li>"}</ul></div></div>
-  <h2>Für wen passt die Karte?</h2><div class="info"><span class="ic">i</span><div><p style="margin:0 0 8px">{E(" ".join(a))}</p>{"<p style='margin:0'>"+E(" ".join(b))+"</p>" if b else ""}</div></div>
+  <h2>Für wen ist die Karte geeignet?</h2><div class="info"><span class="ic">i</span><div><p style="margin:0 0 8px">{E(" ".join(a))}</p>{"<p style='margin:0'>"+E(" ".join(b))+"</p>" if b else ""}</div></div>
   <h2>So funktioniert die Karte</h2><div class="prose"><p>{E(how)}</p></div>
   </section>
   <section id="s-kond"><h2>Konditionen im Überblick</h2>{cond(c)}</section>
@@ -369,8 +369,7 @@ def list_page(cards,priv,biz):
     body=f'''{HDR(P,rel)}
 <div class="wrap"><main id="app">
 <h1>Kreditkarten Vergleich Deutschland</h1>
-  <p class="lede">{n} Kredit-, Charge-, Debit- und Prepaidkarten von {na} Anbietern. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p><div class="facts prose"><p>{kurz}</p></div>
-  <p class="upd">Zuletzt geprüft: {STAND_DE}</p>
+  <p class="lede">{n} Kredit-, Charge-, Debit- und Prepaidkarten von {na} Anbietern. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>
   <details class="box howscore"><summary><span><b>So entstehen die Sterne</b><br><small>7 Kriterien, feste Regeln, offene Gewichtung</small></span><span class="lnk">anzeigen</span></summary>
     <div class="wbars">{"".join(f'<div class="wbar"><span>{k}</span><span class="t"><i style="width:{w*4}%"></i></span><em>{w} %</em></div>' for k,w in [("Jahresgebühr",25),("Reiseversicherung",20),("Zahlen im Ausland",15),("Kartenart &amp; Akzeptanz",10),("Alltag &amp; Flexibilität",10),("Bargeld",10),("Extras",10)])}</div>
     <p class="note">Jedes Kriterium bekommt nach festen Regeln 1 bis 5 Sterne. Die Gesamtnote ist der gewichtete Durchschnitt. Ab 4,5 Sternen gilt eine Karte als sehr gut. Fehlende Angaben zählen mit 2,5 Sternen, damit sie keinen Vorteil bringen.</p>

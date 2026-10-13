@@ -23,8 +23,21 @@ def short(label, raw):
     if m: return m.group(1), t.rstrip('.') + '.'
     return None, None
 
+def earn(a):
+    """Langen Sammel-Text in der Kachel kürzen; der volle Text bleibt einmal in den Punkten."""
+    m = re.search(r'(<div class="earn"><span>[^<]*</span><b>)(.*?)(</b></div>)', a)
+    if not m: return a, None
+    full = H.unescape(m.group(2))
+    if len(full) <= 60: return a, None
+    sh = re.split(r';|\. |, ausgenommen', re.sub(r' \([^)]*\)', '', full))[0].strip()
+    if len(sh) > 60: sh = sh[:57].rsplit(' ', 1)[0] + ' …'
+    a = a[:m.start(2)] + H.escape(sh, quote=False) + a[m.end(2):]
+    in_list = re.search(r'<li>' + re.escape(m.group(2)) + r'</li>', a)
+    return a, None if in_list else full
+
 def footnotes(a):
     if 'class="fns"' in a: return a
+    a, extra = earn(a)
     notes = []
     def rep(m):
         lab, cls, raw = m.group(1), m.group(2), m.group(3)
@@ -34,6 +47,7 @@ def footnotes(a):
         notes.append((mark, LABEL.get(lab, lab), note))
         return f'<div><small>{lab}</small><b{cls}>{H.escape(s, quote=False)}<sup>{mark}</sup></b></div>'
     a = re.sub(r'<div><small>([^<]*)</small><b([^>]*)>(.*?)</b></div>', rep, a)
+    if extra: notes.append((STARS[len(notes)], 'Sammeln', extra.rstrip('.') + '.'))
     if not notes: return a
     fn = '<div class="fns">' + ''.join(f'<p><sup>{mk}</sup> {H.escape(lb)}: {H.escape(nt, quote=False)}</p>' for mk, lb, nt in notes) + '</div>'
     i = a.find('<ul class="checks"')
@@ -108,6 +122,8 @@ def main():
             land = rel.split('/')[0]
             s = re.sub(r'<article class="item".*?</article>', lambda m: footnotes(tag(m.group(0), land, idx)), s, flags=re.S)
         if rel in ('at/kreditkarten/index.html', 'de/kreditkarten/index.html'):
+            s = re.sub(r'<div class="facts prose"><p><b>Kurz gesagt:</b>.*?</p></div>', '', s, count=1, flags=re.S)
+            s = re.sub(r'\n  <p class="upd">Zuletzt geprüft: [^<]*</p>', '', s, count=1)
             s = re.sub(r'<div class="box filt" id="filt".*?</div>\n  </div>\n  ', '', s, flags=re.S)
             n = s.count('<article class="item"')
             s = s.replace('<details class="box howscore">', bar(n) + '<details class="box howscore">', 1)

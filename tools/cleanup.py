@@ -53,6 +53,14 @@ TEXT = [
     (r'Inland laut Anbieter widersprüchlich', 'Inland beim Anbieter prüfen'),
     (r'Folgejahrespreis beim Anbieter widersprüchlich \((\d+)/(\d+) €\)', r'Folgejahrespreis \1 bis \2 €, beim Anbieter prüfen'),
     (r'Alterswortlaut 75 widersprüchlich\.', 'Altersgrenze 75 im Vertrag prüfen.'),
+    (r'Für wen passt die Karte\?', 'Für wen ist die Karte geeignet?'),
+    # Bargeld-Sätze grammatisch: „kostet Kostenlos“ -> „kostet 0 %“, Wortangaben als Doppelpunkt-Form
+    (r'(Bargeld (?:beheben|abheben)) kostet:? [Kk]ostenlos\b', r'\1 kostet 0 %'),
+    (r'Das kostet: [Kk]ostenlos\.', 'Bargeld beheben kostet 0 %.'),
+    (r'(Bargeld (?:beheben|abheben)\?(?:</summary><p>|", "acceptedAnswer": \{"@type": "Answer", "text": "))Bargeld beheben kostet 0 %\.', r'\1Ja, Bargeld beheben kostet 0 %.'),
+    (r'(Bargeld (?:beheben|abheben)) kostet:? (?=(?!Inland\b)[A-ZÄÖÜ])', r'\1: '),
+    (r'(Bargeld (?:beheben|abheben)) kostet: (?=\d)', r'\1 kostet '),
+    (r'Das kostet: (?=(?!Inland\b)[A-ZÄÖÜ])', 'Die Bedingungen: '),
     # „unklar“
     (r'Ausland unklar', 'Ausland beim Anbieter prüfen'), (r'Geltung für DE unklar', 'Geltung für Deutschland beim Anbieter prüfen'),
     (r'Kartennetz noch nicht bestätigt', 'Kartennetz beim Anbieter prüfen'),
@@ -152,6 +160,7 @@ def spa(s):
         (". Status: ${esc(c.status||'')}</p>", ".</p>"),
         ("? '<span class=\"sek\" title=\"Nur aus Sekundärquelle\">Sek.</span>' : ''", "? '' : ''"),
         ("${x.sek?'<span class=\"sek\">Sek.</span>':''}", ''),
+        ("s.push(`Bargeld beheben kostet: ${c.cashText}.`);", "s.push(/^kostenlos$/i.test(c.cashText)?'Bargeld beheben kostet 0 %.':/^(\\d|ca\\.|Inland)/.test(c.cashText)?`Bargeld beheben kostet ${c.cashText}.`:`Bargeld beheben: ${c.cashText}.`);"),
     ]
     for x, y in js: s = s.replace(x, y)
     return s
