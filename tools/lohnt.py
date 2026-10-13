@@ -11,6 +11,7 @@ import karten as K
 from score import eur
 
 R = K.R; SP = K.SP; E = K.E
+TOP = 300
 PROFILE = [
     dict(k='selten', t='Du reist ein- bis zweimal im Jahr', d='4 Lounge-Besuche, 1.000 € Kartenumsatz im Monat, Guthaben nutzt du nicht.',
          p=dict(credits=False, lounge=4, guests=0, spend=1000, vers=False)),
@@ -133,12 +134,12 @@ def card_page(land, c, x, A, P, prov):
     fq = [(f'Ab wann lohnt sich die {c["titel"]}?', vt),
           ('Wie rechnet Finvallo?', f'Wir zählen nur Vorteile, die du wirklich nutzt: Guthaben zum Nennwert, einen Lounge-Besuch mit {eur(A["lounge_eur"])} €, Punkte und Meilen mit 1 Cent und die Reiseversicherung mit dem Preis einer vergleichbaren eigenen Jahrespolizze. Davon ziehen wir die Jahresgebühr ab. Die Reiseversicherung zählt nur, wenn du sonst eine eigene bräuchtest.'),
           ('Zählt der Willkommensbonus mit?', 'Nur im ersten Jahr. Für die Frage, ob sich die Karte dauerhaft lohnt, rechnen wir ohne Bonus.')]
-    ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Bestenlisten', f'{land}/kreditkarten/bestenlisten/'), ('Lohnt sich das?', f'{land}/kreditkarten/bestenlisten/lohnt-sich/'), (c['titel'], rel)],
+    ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Bestenlisten', f'{land}/kreditkarten/bestenlisten/'), ('Top-Karten', f'{land}/kreditkarten/bestenlisten/lohnt-sich/'), (c['titel'], rel)],
                  [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in fq]}], date=x.get('geprueft') or c['geprueft'])
     src = ' · '.join(K.ext(u) for u in x.get('quellen') or [])
     body = f'''{K.HDR(P, rel)}
 <div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../../">Bestenlisten</a> › <a href="../">Lohnt sich das?</a> › {E(c["titel"])}</span><span>Stand {K.dmy(x.get("geprueft") or c["geprueft"])}</span></div>
+<div class="crumb"><span><a href="../../">Bestenlisten</a> › <a href="../">Top-Karten</a> › {E(c["titel"])}</span><span>Stand {K.dmy(x.get("geprueft") or c["geprueft"])}</span></div>
 <h1>Ab wann lohnt sich die {E(c["titel"])}?</h1>
 <p class="lede">Die Karte kostet {eur(c["fee"] or 0)} € im Jahr. Ob sich das rechnet, hängt davon ab, welche Vorteile du wirklich nutzt.</p>
 <section class="facts box glance" aria-label="Kurzantwort"><h2 style="margin-top:0">Kurzantwort</h2><div class="prose"><p>{E(vt)}</p></div></section>
@@ -146,7 +147,7 @@ def card_page(land, c, x, A, P, prov):
 <h2>Drei typische Fälle</h2><div class="lprofs">{prof}</div>
 {calc_html(c, x, A)}
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in fq)}</div>
-<p class="note" style="margin-top:18px"><a class="lnk" href="../../../{c["slug"]}/">Alle Konditionen der {E(c["titel"])} →</a> · <a class="lnk" href="../">Andere Premiumkarten vergleichen →</a></p>
+<p class="note" style="margin-top:18px"><a class="lnk" href="../../../{c["slug"]}/">Alle Konditionen der {E(c["titel"])} →</a> · <a class="lnk" href="../">Alle Top-Karten →</a></p>
 {f'<p class="src">Quellen: {src}</p>' if src else ''}
 </main>
 {K.footer(P)}'''
@@ -170,25 +171,27 @@ def winners(land, cards, X, A):
 
 def hub(land, cards, X, A, P):
     N = K.L['name']; rel = f'{land}/kreditkarten/bestenlisten/lohnt-sich/'
-    t = f'Lohnt sich eine Premium-Kreditkarte? {N} 2026 | Finvallo'
-    d = f'Ab wann sich Premium-Kreditkarten in {N} lohnen: Guthaben, Lounges, Versicherung und Punkte gegen die Jahresgebühr gerechnet. Mit Rechner.'
-    tiles = ''.join(f'<a class="catcard" href="{c["slug"]}/"><span class="ct">{eur(c["fee"] or 0)} € im Jahr</span><b>{E(c["titel"])}</b><span>{E(short(c, X[c["slug"]], A))}</span><small>Rechnung ansehen →</small></a>'
-                    for c in sorted(cards, key=lambda c: c['fee'] or 0))
+    t = f'Top-Kreditkarten {N} 2026: Premiumkarten im Vergleich | Finvallo'
+    d = f'Die Top-Kreditkarten in {N} ab {TOP} € im Jahr und weitere Premiumkarten: ab wann sie sich lohnen, mit Guthaben, Lounges und Punkten gerechnet.'
+    tile = lambda c: f'<a class="catcard" href="{c["slug"]}/"><span class="ct">{eur(c["fee"] or 0)} € im Jahr</span><b>{E(c["titel"])}</b><span>{E(short(c, X[c["slug"]], A))}</span><small>Rechnung ansehen →</small></a>'
+    top = sorted([c for c in cards if (c['fee'] or 0) >= TOP], key=lambda c: -(c['fee'] or 0))
+    rest = sorted([c for c in cards if (c['fee'] or 0) < TOP], key=lambda c: -(c['fee'] or 0))
     win = ''.join((f'<div class="lprof"><b>{E(pr["t"])}</b><small>{E(pr["d"])}</small><span>Am meisten bringt die <a class="lnk" href="{b[0]["slug"]}/">{E(b[0]["titel"])}</a>: +{eur(round(b[1]))} € pro Jahr nach Jahresgebühr</span></div>' if b[1] >= 0 else
                    f'<div class="lprof"><b>{E(pr["t"])}</b><small>{E(pr["d"])}</small><span>Hier lohnt sich keine Premiumkarte. Nimm besser eine <a class="lnk" href="../gratis/">Karte ohne Jahresgebühr</a>.</span></div>') for pr, b in winners(land, cards, X, A))
     fq = [('Lohnt sich eine Premium-Kreditkarte?', 'Nur, wenn du die enthaltenen Vorteile wirklich nutzt. Wir rechnen Guthaben, Lounge-Besuche, Punkte und Reiseversicherung gegen die Jahresgebühr. Für die meisten Menschen ohne viele Flugreisen ist eine kostenlose Karte günstiger.'),
           ('Wie viel ist ein Lounge-Besuch wert?', f'Wir rechnen mit {eur(A["lounge_eur"])} € pro Besuch. {A.get("lounge_quelle", "")}'.strip())]
-    ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Bestenlisten', f'{land}/kreditkarten/bestenlisten/'), ('Lohnt sich das?', rel)],
+    ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Bestenlisten', f'{land}/kreditkarten/bestenlisten/'), ('Top-Karten', rel)],
                  [{"@type": "ItemList", "name": f"Premium-Kreditkarten {N}: ab wann sie sich lohnen", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": c['titel'], "url": f"https://finvallo.com/{rel}{c['slug']}/"} for i, c in enumerate(cards)]},
                   {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in fq]}])
     other = f'{"de" if land == "at" else "at"}/kreditkarten/bestenlisten/lohnt-sich/'
     body = f'''{K.HDR(P, rel, other)}
 <div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../">Bestenlisten</a> › Lohnt sich das?</span><span>Stand {K.dmy(K.L["stand"])}</span></div>
-<h1>Ab wann lohnt sich eine Premium-Kreditkarte?</h1>
-<p class="lede">Premiumkarten kosten viel, bringen aber Guthaben, Lounges und Versicherungen mit. Wir rechnen für jede Karte aus, ab welcher Nutzung sich die Jahresgebühr bezahlt macht.</p>
-<h2>Top-Karten, je nachdem wie du sie nutzt</h2><div class="lprofs">{win}</div>
-<h2>Alle Premiumkarten in {N}</h2><div class="catgrid">{tiles}</div>
+<div class="crumb"><span><a href="../">Bestenlisten</a> › Top-Karten</span><span>Stand {K.dmy(K.L["stand"])}</span></div>
+<h1>Top-Kreditkarten in {N}</h1>
+<p class="lede">Premiumkarten kosten viel, bringen aber Guthaben, Lounges und Versicherungen mit. Für jede Karte rechnen wir aus, ab welcher Nutzung sich die Jahresgebühr bezahlt macht.</p>
+<h2>Top-Karten ab {TOP} € im Jahr</h2><div class="catgrid">{"".join(tile(c) for c in top)}</div>
+{f'<h2>Weitere Premiumkarten</h2><div class="catgrid">{"".join(tile(c) for c in rest)}</div>' if rest else ''}
+<h2>Welche Karte passt zu dir?</h2><div class="lprofs">{win}</div>
 <h2>So rechnen wir</h2><div class="prose"><p>Guthaben zählen mit ihrem Nennwert, aber nur, wenn du sie auch einlöst. Ein Lounge-Besuch zählt mit {eur(A["lounge_eur"])} €. Punkte und Meilen zählen mit 1 Cent. Die Reiseversicherung zählt mit dem Preis einer vergleichbaren eigenen Jahrespolizze: {", ".join(f"{K.TIER[int(k)][1]} {eur(v)} €" for k, v in A["vers"].items() if int(k) > 0)}. Abos zählen nur, wenn du sie sonst selbst bezahlen würdest. Willkommensboni gelten nur im ersten Jahr und bleiben deshalb außen vor.</p></div>
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in fq)}</div>
 </main>
@@ -197,10 +200,10 @@ def hub(land, cards, X, A, P):
     return rel
 
 def top_block(land, cards, X, A):
-    win = ''.join((f'<a class="catcard" href="lohnt-sich/{b[0]["slug"]}/"><span class="ct">{E(pr["t"])}</span><b>{E(b[0]["titel"])}</b><span>+{eur(round(b[1]))} € pro Jahr nach Jahresgebühr</span><small>Rechnung ansehen →</small></a>' if b[1] >= 0 else
-                   f'<a class="catcard" href="gratis/"><span class="ct">{E(pr["t"])}</span><b>Eine Karte ohne Jahresgebühr</b><span>Keine Premiumkarte holt hier ihre Gebühr herein.</span><small>Zu den Gratis-Karten →</small></a>') for pr, b in winners(land, cards, X, A))
-    return (f'<!--lohnt--><h2>Top-Karten, je nachdem wie du sie nutzt</h2><p class="note" style="margin-top:-6px">Premiumkarten lohnen sich erst ab einer bestimmten Nutzung. '
-            f'<a class="lnk" href="lohnt-sich/">Ab wann lohnt sich welche Karte? →</a></p><div class="catgrid">{win}</div><h2>Bestenlisten nach Kategorie</h2><!--/lohnt-->')
+    top = sorted([c for c in cards if (c['fee'] or 0) >= TOP], key=lambda c: -(c['fee'] or 0))
+    names = ', '.join(c['titel'].replace('American Express', 'Amex') for c in top[:3])
+    return (f'<!--lohnt--><a class="catcard top" href="lohnt-sich/"><span class="ct">Top-Karten</span><b>Premiumkarten ab {TOP} € im Jahr</b>'
+            f'<span>{E(names)}{" und mehr" if len(cards) > 3 else ""}: ab wann sie sich lohnen</span><small>{len(cards)} Karten · ansehen →</small></a><!--/lohnt-->')
 
 def main():
     DATA = K.prepare()
@@ -226,7 +229,7 @@ def main():
             open(f, 'w').write(t)
         f = R + f'{land}/kreditkarten/bestenlisten/index.html'; s = open(f).read()
         s = re.sub(r'<!--lohnt-->.*?<!--/lohnt-->', '', s, flags=re.S)
-        s = s.replace('<div class="catgrid">', top_block(land, cards, X, A) + '<div class="catgrid">', 1)
+        s = s.replace('<div class="catgrid">', '<div class="catgrid">' + top_block(land, cards, X, A), 1)
         open(f, 'w').write(s)
         lines[land] = [f'- [Ab wann lohnt sich die {c["titel"]}?](https://finvallo.com/{land}/kreditkarten/bestenlisten/lohnt-sich/{c["slug"]}/): {verdict(c, X[c["slug"]], A)}' for c in cards]
     # Sitemap

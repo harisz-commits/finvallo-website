@@ -548,3 +548,4 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
 .ltab{max-height:none}
 .ltab td.nw{white-space:nowrap;vertical-align:top;font-weight:600}
 .ltab td small{display:block;margin-top:4px;line-height:1.4}
+.catcard.top{background:var(--blue-soft);border-color:var(--blue)}
