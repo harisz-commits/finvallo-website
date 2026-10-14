@@ -1,0 +1,21 @@
+{
+ "hinweis": "Manuelle AT↔DE-Paare mit abweichendem Slug (Pfade ohne führenden Schrägstrich). Gleicher Pfad nach at/ bzw. de/ wird automatisch gepaart.",
+ "paare": [
+  [
+   "at/ratgeber/punkte-sammeln-at/",
+   "de/ratgeber/punkte-sammeln-de/"
+  ],
+  [
+   "at/kreditkarten/advanzia-bank-free-mastercard-gold/",
+   "de/kreditkarten/advanzia-bank-gebuehrenfrei-mastercard-gold/"
+  ],
+  [
+   "at/kreditkarten/wise-karte/",
+   "de/kreditkarten/wise-debitkarte/"
+  ],
+  [
+   "at/kreditkarten/advanzia-bank-hilton-honors-kreditkarte/",
+   "de/kreditkarten/hilton-honors-kreditkarte/"
+  ]
+ ]
+}

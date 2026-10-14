@@ -2,7 +2,8 @@
 (function () {
   var box = document.getElementById('filt'), list = document.getElementById('list');
   if (!box || !list) return;
-  var items = [].slice.call(list.querySelectorAll('article.item'));
+  var items = [].slice.call(document.querySelectorAll('.list article.item'));
+  var special = document.querySelector('.list[data-special]');
   items.forEach(function (it, i) { it.dataset.ord = i; });
   var q = box.querySelector('[data-q]'), typ = box.querySelector('[data-typ]'), netz = box.querySelector('[data-netz]'),
       sort = box.querySelector('[data-sort]'), count = box.querySelector('[data-count]'), reset = box.querySelector('[data-reset]');
@@ -25,8 +26,9 @@
     else if (s === 'net') arr.sort(function (a, b) { return ((+a.dataset.low || 0) - (+b.dataset.low || 0)) || (nv(b) - nv(a)) || a.dataset.ord - b.dataset.ord; });
     else if (s === 'name') arr.sort(function (a, b) { return norm(a.dataset.q).localeCompare(norm(b.dataset.q), 'de'); });
     else arr.sort(function (a, b) { return a.dataset.ord - b.dataset.ord; });
-    arr.forEach(function (it) { list.appendChild(it); });
-    count.textContent = n === 1 ? '1 Karte' : n + ' Karten';
+    arr.forEach(function (it) { it.parentNode.appendChild(it); });
+    var m = special ? [].filter.call(special.querySelectorAll('article.item'), function (it) { return !it.hidden; }).length : 0;
+    count.textContent = (n === 1 ? '1 Karte' : n + ' Karten') + (m ? ', davon ' + m + ' für bestimmte Kundengruppen' : '');
     var active = on.length || typ.value || netz.value || t || s !== 'rank';
     reset.hidden = !active;
   }

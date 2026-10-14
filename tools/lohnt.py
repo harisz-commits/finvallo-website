@@ -51,7 +51,7 @@ def value(c, x, A, p):
     gv = min(p.get('guests') or 0, lv, guests_free(x))
     if gv: parts.append((f'{gv} Begleitpersonen in der Lounge', gv * A['lounge_eur']))
     if p['spend'] and x.get('punkte_pro_100'): parts.append(('Punkte oder Meilen', min(p['spend'] * 12 / 100 * x['punkte_pro_100'], x.get('punkte_max') or 1e9)))
-    if p.get('vers') and c.get('tier'): parts.append(('Reiseversicherung (statt eigener Jahrespolizze)', A['vers'][str(c['tier'])]))
+    if p.get('vers') and c.get('tier'): parts.append((f'Reiseversicherung (statt eigener {K.t("jahrespolizze")})', A['vers'][str(c['tier'])]))
     for e in x.get('extra') or []:
         if e.get('immer'): parts.append((e['name'], e['eur']))
     return sum(v for _, v in parts), parts
@@ -89,7 +89,7 @@ def profiles(c, x, A):
                         p=dict(credits=True, subs=True, lounge=n, guests=g, spend=2500)))
     if c.get('tier') and len(out) < 3:
         w = A['vers'][str(c['tier'])]
-        out.append(dict(t='Du bräuchtest sonst eine Reiseversicherung', d=f'Statt einer eigenen Jahrespolizze (etwa {eur(w)} €) nutzt du die Reiseversicherung der Karte ({K.TIER[c["tier"]][1]})' + (', dazu ' + namelist([w for w in (f'{min(4, lg)} Lounge-Besuche{lw(x)}' if lg else '', '1.000 € Umsatz im Monat' if pp else '') if w]) if lg or pp else '') + '.', n='',
+        out.append(dict(t='Du bräuchtest sonst eine Reiseversicherung', d=f'Statt einer eigenen {K.t("jahrespolizze")} (etwa {eur(w)} €) nutzt du die Reiseversicherung der Karte ({K.TIER[c["tier"]][1]})' + (', dazu ' + namelist([w for w in (f'{min(4, lg)} Lounge-Besuche{lw(x)}' if lg else '', '1.000 € Umsatz im Monat' if pp else '') if w]) if lg or pp else '') + '.', n='',
                         p=dict(lounge=min(4, lg), spend=1000, vers=True)))
     for o in out: o['p'].setdefault('vers', False)
     return out
@@ -172,22 +172,42 @@ def calc_html(c, x, A):
                 credits=[dict(n=g['name'], v=g['eur']) for g in x.get('credits') or []] + [dict(n=g['name'], v=g['eur']) for g in ps], pmax=x.get('punkte_max') or None,
                 welcome=(x.get('welcome') or {}).get('eur') or 0, minsp=(x.get('lounge') or {}).get('min_umsatz') or 0)
     nc = len(x.get('credits') or [])
-    cr = ''.join(f'<label class="lc"><input type="checkbox" data-credit="{i}" checked> {E(g["name"])} <b>{eur(g["eur"])} €</b></label>' for i, g in enumerate(x.get('credits') or []))
-    if ps: cr += '<p class="note" style="margin:6px 0 0">Partner-Abos: Hake nur an, was du sonst selbst bezahlen würdest.</p>' + ''.join(f'<label class="lc"><input type="checkbox" data-credit="{nc + i}"> {E(g["name"])} <b>{eur(g["eur"])} €</b></label>' for i, g in enumerate(ps))
+    PR = profiles(c, x, A); mid = PR[len(PR) // 2]['p'] if PR else dict(lounge=0, spend=1000, vers=False)
+    on_cr, on_sb = bool(mid.get('credits')), bool(mid.get('subs'))
+    I = dict(spend=mid.get('spend') or 0, lounge=mid.get('lounge') or 0, guests=mid.get('guests') or 0, welcome=False, vers=bool(mid.get('vers') and data['vers']),
+             credits=[i for i in range(nc) if on_cr] + [nc + i for i in range(len(ps)) if on_sb])
+    cr = ''.join(f'<label class="lc"><input type="checkbox" data-credit="{i}" name="credit{i}"{" checked" if on_cr else ""}> {E(g["name"])} <b>{eur(g["eur"])} €</b></label>' for i, g in enumerate(x.get('credits') or []))
+    if ps: cr += '<p class="note" style="margin:6px 0 0">Partner-Abos: Hake nur an, was du sonst selbst bezahlen würdest.</p>' + ''.join(f'<label class="lc"><input type="checkbox" data-credit="{nc + i}" name="credit{nc + i}"{" checked" if on_sb else ""}> {E(g["name"])} <b>{eur(g["eur"])} €</b></label>' for i, g in enumerate(ps))
     if np_: cr += f'<p class="note" style="margin:0">{"Weitere " if ps else ""}Partner-Abos ohne festen Preis, die wir nicht mitrechnen: {E(", ".join(np_))}.</p>'
-    wl = f'<label class="lc"><input type="checkbox" data-welcome> Willkommensbonus im ersten Jahr <b>{eur(data["welcome"])} €</b></label>' if data['welcome'] else ''
-    vs = f'<label class="lc"><input type="checkbox" data-vers> Ich bräuchte sonst eine eigene Reiseversicherung <b>{eur(data["vers"])} €</b></label>' if data['vers'] else ''
+    wl = f'<label class="lc"><input type="checkbox" data-welcome name="welcome"> Willkommensbonus im ersten Jahr <b>{eur(data["welcome"])} €</b></label>' if data['welcome'] else ''
+    vs = f'<label class="lc"><input type="checkbox" data-vers name="vers"{" checked" if I["vers"] else ""}> Ich bräuchte sonst eine eigene Reiseversicherung <b>{eur(data["vers"])} €</b></label>' if data['vers'] else ''
     ins = ''.join(w for w in (
-        f'<label>Lounge-Besuche{lw(x)} im Jahr<input type="number" min="0" max="200" value="6" data-in="lounge"></label>' if lg else '',
-        '<label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-in="guests"></label>' if lg and gf else '',
-        '<label>Kartenumsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-in="spend"></label>' if pp else '') if w)
-    return f'''<div class="box lcalc" data-lohnt='{html.escape(json.dumps(data), quote=True)}' hidden>
+        f'<label>Lounge-Besuche{lw(x)} im Jahr<input type="number" min="0" max="200" value="{I['lounge']}" data-in="lounge" name="lounge"></label>' if lg else '',
+        f'<label>davon mit Begleitung<input type="number" min="0" max="200" value="{I["guests"]}" data-in="guests" name="guests"></label>' if lg and gf else '',
+        f'<label>Kartenumsatz pro Monat (€)<input type="number" min="0" step="100" value="{I["spend"]}" data-in="spend" name="spend"></label>' if pp else '') if w)
+    if not lg: I['lounge'] = I['guests'] = 0
+    if not (lg and gf): I['guests'] = 0
+    if not pp: I['spend'] = 0
+    r = prerender(data, I)
+    ex = f'<p class="note calc-ex"><b>Beispiel:</b> Vorgerechnet für den Fall „{E(PR[len(PR) // 2]["t"])}“: {E(PR[len(PR) // 2]["d"])} Ändere die Werte, dann rechnet der Rechner neu.</p>' if PR and r else ''
+    return f'''<form class="box lcalc" data-lohnt='{html.escape(json.dumps(data), quote=True)}' onsubmit="return false">
   <h2 style="margin-top:0">Rechne mit deinen Zahlen</h2>
   {f'<div class="lgrid">{ins}</div>' if ins else ''}
   {cr}{wl}{vs}
-  <div class="lres"><div><small>Wert deiner Vorteile</small><b data-out="val">–</b></div><div><small>Jahresgebühr</small><b>{eur(data["fee"])} €</b></div><div><small>Ergebnis pro Jahr</small><b data-out="net">–</b></div></div>
-  <p class="note" data-out="txt"></p>
-</div>'''
+  <div class="lres"><div><small>Wert deiner Vorteile</small><b data-out="val">{E(r["val"]) if r else "–"}</b></div><div><small>Jahresgebühr</small><b>{eur(data["fee"])} €</b></div><div><small>Ergebnis pro Jahr</small><b data-out="net"{(' class="good"' if r["good"] else ' class="bad"') if r else ""}>{E(r["net"]) if r else "–"}</b></div></div>
+  <p class="note" data-out="txt">{E(r["txt"]) if r else ""}</p>
+  {ex}
+</form>'''
+
+def prerender(D, I):
+    """B12: Ergebnis für den mittleren Fall mit der Logik aus assets/lohnt.js (über Node)."""
+    import subprocess
+    try:
+        o = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'prerender-lohnt.js')], input=json.dumps([dict(key='x', D=D, I=I)]), capture_output=True, text=True, check=True)
+        return json.loads(o.stdout)['x']
+    except Exception as e:
+        print('Vorrendern nicht möglich (node fehlt?):', e); return None
+
 
 def card_page(land, c, x, A, P, prov):
     N = K.L['name']; rel = f'{land}/kreditkarten/bestenlisten/lohnt-sich/{c["slug"]}/'
@@ -195,13 +215,13 @@ def card_page(land, c, x, A, P, prov):
     if len(t) > 70: t = f'Lohnt sich die {c["titel"]}? | Finvallo'
     vt = verdict(c, x, A)
     d = f'Ab wann lohnt sich die {c["titel"]} in {N}? {short(c, x, A)}. Mit Rechner für deine Nutzung.'
-    if len(d) > 156: d = d[:150].rsplit(' ', 1)[0] + ' …'
+    d = K.fit_desc(d)
     rows = ''
     for g in x.get('credits') or []: rows += f'<tr><td>{E(g["name"])}</td><td class="nw">{eur(g["eur"])} €</td><td>{E(g.get("hinweis") or g.get("scope") or "")}</td></tr>'
     lg = x.get('lounge') or {}
     if lg.get('visits'): rows += f'<tr><td>Lounge-Besuche ({E(lg.get("program") or "")})</td><td class="nw">je ≈ {eur(A["lounge_eur"])} €</td><td>{"unbegrenzt" if lg["visits"] == "unbegrenzt" else str(lg["visits"]) + " pro Jahr"}{"; " + E(lg["hinweis"]) if lg.get("hinweis") else ""}</td></tr>'
     if x.get('punkte_pro_100'): rows += f'<tr><td>Punkte oder Meilen</td><td class="nw">{eur(x["punkte_pro_100"])} € je 100 € Umsatz</td><td>{E(x.get("punkte_hinweis") or "1 Punkt oder Meile = 1 Cent")}{f", höchstens {eur(x.get('punkte_max') or 0)} € im Jahr" if x.get("punkte_max") else ""}</td></tr>'
-    if c.get('tier'): rows += f'<tr><td>Reiseversicherung ({E(K.TIER[c["tier"]][1])})</td><td class="nw">≈ {eur(A["vers"][str(c["tier"])])} €</td><td>so viel kostet eine vergleichbare eigene Jahrespolizze</td></tr>'
+    if c.get('tier'): rows += f'<tr><td>Reiseversicherung ({E(K.TIER[c["tier"]][1])})</td><td class="nw">≈ {eur(A["vers"][str(c["tier"])])} €</td><td>so viel kostet eine vergleichbare eigene {K.t("jahrespolizze")}</td></tr>'
     sb = subs(x, A); ps = [g for g in sb if g['eur']]
     if ps: rows += f'<tr><td>Partner-Abos</td><td class="nw">bis {eur(round(sum(g["eur"] for g in ps)))} €</td><td>{E("; ".join(g["name"] + ": " + (A["abos"][g["name"]].get("hinweis") or eur(g["monat"]) + " € pro Monat") for g in ps))}. Zählt nur, was du sonst selbst bezahlen würdest.</td></tr>'
     np_ = [g['name'] for g in sb if not g['eur']]
@@ -212,8 +232,14 @@ def card_page(land, c, x, A, P, prov):
     for pr in PR:
         v, parts = value(c, x, A, pr['p']); net = v - (c['fee'] or 0)
         prof += f'<div class="lprof"><b>{E(pr["t"])}</b><small>{E((pr["d"] + " " + pr["n"]).strip())}</small><span class="{"good" if net >= 0 else "bad"}">{"+" if net >= 0 else "−"}{eur(round(abs(net)))} € pro Jahr</span></div>'
-    fq = [(f'Ab wann lohnt sich die {c["titel"]}?', vt),
-          ('Wie rechnet Finvallo?', f'Wir zählen nur Vorteile, die du wirklich nutzt: Guthaben zum Nennwert, einen Lounge-Besuch mit {eur(A["lounge_eur"])} €, Punkte und Meilen mit 1 Cent und die Reiseversicherung mit dem Preis einer vergleichbaren eigenen Jahrespolizze. Davon ziehen wir die Jahresgebühr ab. Die Reiseversicherung zählt nur, wenn du sonst eine eigene bräuchtest.' + (' Partner-Abos zählen mit dem günstigsten regulären Tarif des Anbieters, aber nur, wenn du sie sonst selbst bezahlen würdest.' if x.get('subs_names') else '')),
+    T = c['titel']; fee = c['fee'] or 0
+    lg_ = (x.get('lounge') or {}).get('visits')
+    parts = [p for p, h in ((f'die Guthaben der {T} zum Nennwert', x.get('credits')), (f'jeden Lounge-Besuch mit {eur(A["lounge_eur"])} €', lg_), ('Punkte und Meilen mit 1 Cent', x.get('punkte_pro_100')),
+             (f'die Reiseversicherung mit dem Preis einer vergleichbaren eigenen {K.t("jahrespolizze")} (etwa {eur(A["vers"][str(c["tier"])])} €), aber nur, wenn du sonst eine eigene bräuchtest' if c.get('tier') else '', c.get('tier')),
+             ('Partner-Abos mit dem günstigsten regulären Tarif des Anbieters, wenn du sie sonst selbst bezahlen würdest', x.get('subs_names'))) if h]
+    how_ = f'Bei der {T} zählen wir nur Vorteile, die du wirklich nutzt: ' + '; '.join(parts) + f'. Davon ziehen wir die Jahresgebühr von {eur(fee)} € ab.' if parts else f'Bei der {T} ziehen wir die Jahresgebühr von {eur(fee)} € von den Vorteilen ab, die du wirklich nutzt.'
+    fq = [(f'Ab wann lohnt sich die {T}?', vt if T in vt else f'Die {T} kostet {eur(fee)} € im Jahr. ' + vt),
+          (f'Wie rechnet Finvallo bei der {T}?', how_),
           ('Zählt der Willkommensbonus mit?', 'Nur im ersten Jahr. Für die Frage, ob sich die Karte dauerhaft lohnt, rechnen wir ohne Bonus.')]
     ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Bestenlisten', f'{land}/kreditkarten/bestenlisten/'), ('Top-Karten', f'{land}/kreditkarten/bestenlisten/lohnt-sich/'), (c['titel'], rel)],
                  [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in fq]}], date=x.get('geprueft') or c['geprueft'])
@@ -297,7 +323,7 @@ def vers_info():
 
 def vers_field(attr):
     sel = '<option value="0">nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
-    return f'<div class="fld"><span class="flab">Reiseversicherung {vers_info()}</span><select data-{attr}="vers" aria-label="Reiseversicherung">{sel}</select></div>'
+    return f'<div class="fld"><span class="flab">Reiseversicherung {vers_info()}</span><select data-{attr}="vers" name="vers" aria-label="Reiseversicherung">{sel}</select></div>'
 
 def filter_html(cards, X, A):
     data, opts = hub_data(cards, X, A)
@@ -337,7 +363,7 @@ def hub(land, cards, X, A, P):
 {filter_html(cards, X, A)}
 <div class="catgrid">{"".join(tile(c) for c in top + rest)}</div>
 <h2>Welche Karte passt zu dir?</h2><div class="lprofs">{win}</div>
-<h2>So rechnen wir</h2><div class="prose"><p>Guthaben zählen mit ihrem Nennwert, aber nur, wenn du sie auch einlöst. Ein Lounge-Besuch zählt mit {eur(A["lounge_eur"])} €{'. Manche Karten gelten nur für die Lounges am Flughafen Wien, dort zählen nur deine Besuche in Wien' if any(wien_only(x) for x in X.values()) else ''}. Punkte und Meilen zählen mit 1 Cent. Die Reiseversicherung zählt mit dem Preis einer vergleichbaren eigenen Jahrespolizze: {", ".join(f"{K.TIER[int(k)][1]} {eur(v)} €" for k, v in A["vers"].items() if int(k) > 0)}. Abos zählen nur, wenn du sie sonst selbst bezahlen würdest, und zwar mit dem günstigsten regulären Tarif des Anbieters, Jahresabos auf den Monat umgerechnet (Stand {K.dmy(A.get("abos_stand") or K.L["stand"])}). Abos ohne festen Preis zählen nicht. Willkommensboni gelten nur im ersten Jahr und bleiben deshalb außen vor.</p></div>
+<h2>So rechnen wir</h2><div class="prose"><p>Guthaben zählen mit ihrem Nennwert, aber nur, wenn du sie auch einlöst. Ein Lounge-Besuch zählt mit {eur(A["lounge_eur"])} €{'. Manche Karten gelten nur für die Lounges am Flughafen Wien, dort zählen nur deine Besuche in Wien' if any(wien_only(x) for x in X.values()) else ''}. Punkte und Meilen zählen mit 1 Cent. Die Reiseversicherung zählt mit dem Preis einer vergleichbaren eigenen {K.t("jahrespolizze")}: {", ".join(f"{K.TIER[int(k)][1]} {eur(v)} €" for k, v in A["vers"].items() if int(k) > 0)}. Abos zählen nur, wenn du sie sonst selbst bezahlen würdest, und zwar mit dem günstigsten regulären Tarif des Anbieters, Jahresabos auf den Monat umgerechnet (Stand {K.dmy(A.get("abos_stand") or K.L["stand"])}). Abos ohne festen Preis zählen nicht. Willkommensboni gelten nur im ersten Jahr und bleiben deshalb außen vor.</p></div>
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in fq)}</div>
 </main>
 {K.footer(P)}'''

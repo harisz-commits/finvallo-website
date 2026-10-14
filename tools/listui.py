@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import karten as G
 
 R = G.R
-STARS = ['*', '**', '***']
+STARS = ['¹', '²', '³', '⁴']   # Fußnoten mit hochgestellten Ziffern; * ist für Affiliate-Links reserviert
 LABEL = {'Zahlung Ausland': 'Zahlung im Ausland', 'Bargeld Inland': 'Bargeld im Inland', 'Jahresgebühr': 'Jahresgebühr'}
 
 def short(label, raw):
@@ -28,6 +28,7 @@ def earn(a):
     m = re.search(r'(<div class="earn"><span>[^<]*</span><b>)(.*?)(</b></div>)', a)
     if not m: return a, None
     full = H.unescape(m.group(2))
+    return a, None   # B15.4: keine Kürzung mehr, der volle Text bleibt stehen
     if len(full) <= 60: return a, None
     sh = re.split(r';|\. |, ausgenommen', re.sub(r' \([^)]*\)', '', full))[0].strip()
     if len(sh) > 60: sh = sh[:57].rsplit(' ', 1)[0] + ' …'
@@ -39,8 +40,12 @@ def footnotes(a):
     if 'class="fns"' in a: return a
     a, extra = earn(a)
     notes = []
+    slug = (re.search(r'<h3 class="iname"><a href="([^"]+)"', a) or [None, None])[1]
     def rep(m):
         lab, cls, raw = m.group(1), m.group(2), m.group(3)
+        t_ = H.unescape(re.sub(r'<[^>]+>', '', raw)).strip()
+        if lab.startswith('Bargeld') and slug and not re.match(r'^(ca\. )?\d|^(Kostenlos|kostenlos|–|Inland\b)', t_):
+            return f'<div><small>{lab}</small><b{cls}><a class="lnk" href="{slug}#s-kond" title="{H.escape(t_)}">Details</a></b></div>'
         s, note = short(lab, raw)
         if not s: return m.group(0)
         mark = STARS[len(notes)]
@@ -89,7 +94,7 @@ def tag(a, land, idx):
     attrs = f' data-f="{flags(c, a)}" data-typ="{c.get("typ") or ""}" data-netz="{H.escape((c.get("netz") or "").lower())}" data-fee="{fee}" data-q="{q}"'
     return re.sub(r'^(<article class="item" id="[^"]*")>', lambda x: x.group(1) + attrs + '>', a)
 
-def bar(n):
+def bar(n, m=0):
     chips = [('fee0', 'Ohne Jahresgebühr'), ('fx0', '0 % im Ausland'), ('cash0', 'Gratis Bargeld'), ('ins', 'Reiseversicherung'),
              ('cb', 'Cashback &amp; Punkte'), ('ml', 'Meilen'), ('lg', 'Lounge'), ('pay', 'Apple Pay / Google Pay')]
     opt = lambda xs: ''.join(f'<option value="{v}">{t}</option>' for v, t in xs)
@@ -99,7 +104,7 @@ def bar(n):
     <div class="frow"><select data-typ aria-label="Kartenart">{opt([("", "Alle Kartenarten"), ("Kreditkarte", "Kreditkarte mit Teilzahlung"), ("Charge", "Charge-Karte"), ("Debit", "Debitkarte"), ("Prepaid", "Prepaid-Karte")])}</select>
     <select data-netz aria-label="Kartennetzwerk">{opt([("", "Alle Kartennetzwerke"), ("visa", "Visa"), ("mastercard", "Mastercard"), ("american express", "American Express"), ("diners", "Diners Club")])}</select>
     <select data-sort aria-label="Sortierung">{opt([("rank", "Nach Bewertung"), ("fee", "Günstigste zuerst"), ("name", "Nach Name")])}</select></div>
-    <div class="fbot"><b data-count>{n} Karten</b><button type="button" class="lnk" data-reset hidden>Filter zurücksetzen</button></div>
+    <div class="fbot"><b data-count>{n} Karten{f', davon {m} für bestimmte Kundengruppen' if m else ''}</b><button type="button" class="lnk" data-reset hidden>Filter zurücksetzen</button></div>
   </div>
   '''
 
@@ -119,7 +124,9 @@ def main():
             s = re.sub(r'\n  <p class="upd">Zuletzt geprüft: [^<]*</p>', '', s, count=1)
             s = re.sub(r'<div class="box filt" id="filt".*?</div>\n  </div>\n  ', '', s, flags=re.S)
             n = s.count('<article class="item"')
-            s = s.replace('<details class="box howscore">', bar(n) + '<details class="box howscore">', 1)
+            i = s.find('<div class="list" data-special>')
+            m = s[i:].count('<article class="item"') if i >= 0 else 0
+            s = s.replace('<details class="box howscore">', bar(n, m) + '<details class="box howscore">', 1)
             s = re.sub(r'<script src="[^"]*assets/filter\.js[^"]*" defer></script>', '', s)
             s = s.replace('</body>', f'<script src="../../assets/filter.js?v={v}" defer></script>\n</body>', 1)
         if s != s0: open(f, 'w', encoding='utf-8').write(s)

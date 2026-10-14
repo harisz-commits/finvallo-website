@@ -4,11 +4,12 @@ MARK='<svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGrad
 DOWN='<svg class="ic-down" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
 BURGER='<svg class="ic-burger" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'
 
-AT_MAIN=[('at/kreditkarten/','Kreditkarten'),('at/kreditkarten/bestenlisten/','Bestenlisten'),('at/ratgeber/','Ratgeber'),('at/kreditkarten/anbieter/','Anbieter'),('at/rechner/','Rechner')]
-AT_MORE=[('at/kreditkarten/business/','Business-Kreditkarten'),('at/kreditkarten/methodik/','So bewerten wir'),('at/','Übersicht Österreich')]
-DE_MAIN=[('de/kreditkarten/','Kreditkarten'),('de/kreditkarten/bestenlisten/','Bestenlisten'),('de/ratgeber/','Ratgeber'),('de/kreditkarten/anbieter/','Anbieter'),('de/rechner/','Rechner')]
-DE_MORE=[('de/kreditkarten/business/','Business-Kreditkarten'),('de/kreditkarten/methodik/','So bewerten wir'),('de/','Übersicht Deutschland')]
-INFO=[('ueber-uns/','Über Finvallo'),('so-verdienen-wir-geld/','So verdienen wir Geld')]
+# Hauptnavigation und „Mehr“ ohne Überschneidung (jeder Link nur einmal im DOM).
+AT_MAIN=[('at/kreditkarten/','Kreditkarten'),('at/kreditkarten/bestenlisten/','Bestenlisten'),('at/ratgeber/','Ratgeber'),('at/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
+AT_MORE=[('at/kreditkarten/business/','Business-Kreditkarten'),('at/kreditkarten/alle/','Alle Karten nach Anbieter'),('at/kreditkarten/methodik/','So entstehen die Sterne'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
+DE_MAIN=[('de/kreditkarten/','Kreditkarten'),('de/kreditkarten/bestenlisten/','Bestenlisten'),('de/ratgeber/','Ratgeber'),('de/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
+DE_MORE=[('de/kreditkarten/business/','Business-Kreditkarten'),('de/kreditkarten/alle/','Alle Karten nach Anbieter'),('de/kreditkarten/methodik/','So entstehen die Sterne'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
+INFO=[]
 
 def active(rel, items):
     # longest matching prefix wins; card pages fall under Kreditkarten
@@ -31,8 +32,7 @@ def build(rel, P, land):
         c=f' class="{cls}"' if cls else ''
         return f'<a{c} href="{P}{h}"{ac}>{t}</a>'
     nav=''.join(a(h,t) for h,t in main)
-    pop=''.join(a(h,t,'m-main') for h,t in main)+''.join(a(h,t) for h,t in more)
-    pop+='<span class="lbl">Finvallo</span>'+''.join(a(h,t) for h,t in INFO)
+    pop=''.join(a(h,t) for h,t in more)
     return (f'<a class="skip" href="#app">Zum Inhalt springen</a><header class="hdr"><div class="wrap">\n'
             f'<a class="brand" href="{P or "./"}" aria-label="finvallo – zur Startseite">{MARK}<b>fin<span>vallo</span></b></a>\n'
             f'<nav class="nav" aria-label="Hauptmenü">{nav}</nav>\n{land}\n'

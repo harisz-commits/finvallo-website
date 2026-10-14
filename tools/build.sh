@@ -16,3 +16,5 @@ V=$(sha256sum public/assets/site.css | cut -c1-8)
 find public -name '*.html' -exec sed -i -E "s#(assets/site\.css)\?v=[a-z0-9]+\"#\1?v=$V\"#g" {} +
 rm -rf tools/__pycache__
 echo "fertig, css v=$V"
+# SEO-Prüfung (C26); bricht bei Fehlern mit Exit-Code 1 ab
+if command -v node >/dev/null; then node scripts/seo-check.mjs; fi

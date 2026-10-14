@@ -638,3 +638,12 @@ input,select,textarea{font-size:max(16px,1em)!important}
 .source-line,.checked-line,.updated-line{margin:4px 0 14px;font-size:14px;color:var(--muted)}
 .prose img.founder{width:120px;height:120px;border-radius:50%;object-fit:cover}
 .korrekturen p{font-size:14.5px;color:var(--muted)}
+/* Mobil: Hauptnavigation als Leiste unter dem Kopf (kein doppeltes Menü) */
+@media (max-width:920px){
+  .hdr .wrap{flex-wrap:wrap;height:auto;min-height:64px;padding-top:10px;padding-bottom:0;row-gap:4px}
+  .hdr .nav{display:flex;order:5;width:100%;overflow-x:auto;scrollbar-width:none;margin:0 -6px;padding-bottom:6px}
+  .hdr .nav::-webkit-scrollbar{display:none}
+  .hdr .nav a{padding:7px 10px;font-size:14px}
+  .menu-pop{top:calc(108px + env(safe-area-inset-top,0px))}
+}
+@media (max-width:920px){.secnav{top:calc(98px + env(safe-area-inset-top,0px))}.menu-pop{top:calc(98px + env(safe-area-inset-top,0px))!important}}

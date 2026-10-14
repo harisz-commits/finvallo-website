@@ -53,15 +53,18 @@ def score(c):
     x=c.get('fx')
     if x is None: add('Zahlen im Ausland',MISSING,'keine bestätigten Daten',False)
     else: add('Zahlen im Ausland',s_fx(x),'0 %' if x==0 else f'{pct(x)} pro Zahlung in US-Dollar')
-    # Alltag
-    vals=[];txt=[]
-    if c.get('giro') is not None:
-        vals.append(2.5 if c['giro'] else 5.0); txt.append('Konto beim Anbieter nötig' if c['giro'] else 'kein Konto beim Anbieter nötig')
-    if c.get('auto') is not None:
-        vals.append(5.0 if c['auto'] else 3.0); txt.append('automatische Abbuchung' if c['auto'] else 'Rechnung selbst überweisen')
-    if c.get('pay'):
-        vals.append(5.0); txt.append('Apple Pay / Google Pay')
-    if vals: add('Alltag & Flexibilität',sum(vals)/len(vals),', '.join(txt))
+    # Alltag: drei Punkte; was nicht bestätigt ist, zählt wie überall mit MISSING (2,5)
+    vals=[];txt=[];conf=0
+    g=c.get('giro')
+    if g is None: vals.append(MISSING); txt.append('Konto beim Anbieter nicht bestätigt')
+    else: vals.append(2.5 if g else 5.0); txt.append('Konto beim Anbieter nötig' if g else 'kein Konto beim Anbieter nötig'); conf+=1
+    a=c.get('auto')
+    if a is None: vals.append(MISSING); txt.append('Abbuchung nicht bestätigt')
+    else: vals.append(5.0 if a else 3.0); txt.append('automatische Abbuchung' if a else 'Rechnung selbst überweisen'); conf+=1
+    p=c.get('pay')
+    if p is None: vals.append(MISSING); txt.append('Apple Pay / Google Pay nicht bestätigt')
+    else: vals.append(5.0 if p else 1.0); txt.append('Apple Pay / Google Pay' if p else 'kein Apple Pay / Google Pay'); conf+=1
+    if conf: add('Alltag & Flexibilität',sum(vals)/len(vals),', '.join(txt))
     else: add('Alltag & Flexibilität',MISSING,'keine bestätigten Daten',False)
     v=cash200(c.get('cash'))
     if v is None: add('Bargeld',MISSING,'keine bestätigten Daten',False)

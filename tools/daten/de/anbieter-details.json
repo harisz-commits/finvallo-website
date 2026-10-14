@@ -1,0 +1,758 @@
+{
+ "hinweis": "Zusatzinfos je Anbieter für die Anbieterseiten. Nur belegte Angaben mit Quelle eintragen (kritik nur mit Quelle). Leere Felder werden nicht angezeigt. Anbieter mit nur einer Karte und ohne Zusatzinfos bekommen keine eigene Seite (301 auf die Kartenseite).",
+ "felder": [
+  "gruendung",
+  "lizenz_aufsicht",
+  "einlagensicherung",
+  "kundenservice",
+  "besonderheiten",
+  "kritik",
+  "fuer_wen",
+  "quellen"
+ ],
+ "anbieter": {
+  "1822direkt": {
+   "gruendung": "Die 1822direkt wurde 1996 gegründet und ist ein Unternehmen der Frankfurter Sparkasse mit Sitz in Frankfurt am Main (Friesstraße 20).",
+   "lizenz_aufsicht": "Anbieter ist die 1822direkt Gesellschaft der Frankfurter Sparkasse mbH; das Impressum nennt die Europäische Zentralbank und die BaFin als Aufsicht. Konten laufen unter BLZ/BIC der Frankfurter Sparkasse (500 502 01, HELADEF1822).",
+   "einlagensicherung": "Institutsbezogenes Sicherungssystem der Sparkassen-Finanzgruppe, seit 3. Juli 2015 als Einlagensicherungssystem nach EinSiG anerkannt; greift die Institutssicherung nicht, besteht ein Erstattungsanspruch bis 100.000 Euro.",
+   "kundenservice": "Telefon-Banking, Online-Banking, 1822TAN+ App, E-Mail bzw. Kontaktformular sowie digitaler Assistent im Hilfe-Center.",
+   "besonderheiten": "Angeboten werden Visa Classic (36 € p.a.) und Visa Gold (72 € p.a.), jeweils im ersten Jahr kostenlos. Die Visa Gold enthält u. a. Reiserücktritts-, Verkehrs-Rechtsschutz- (Ausland) und Unfallversicherung für öffentliche Verkehrsmittel und Hotels.",
+   "kritik": "",
+   "fuer_wen": "Die Kreditkarten gibt es nur in Verbindung mit dem GiroDirekt-Konto der 1822direkt; Bonität vorausgesetzt.",
+   "quellen": [
+    "https://www.1822direkt.de/impressum/",
+    "https://www.1822direkt.de/ueber-uns/",
+    "https://www.1822direkt.de/ueber-uns/einlagensicherheit/",
+    "https://www.1822direkt.de/girokonto/kreditkarte/",
+    "https://www.1822direkt.de/hilfe-center/",
+    "https://www.biallo.de/anbieter/1822direkt/"
+   ]
+  },
+  "adac": {
+   "gruendung": "Die ADAC Kreditkarte wird seit September 2024 in Kooperation zwischen der ADAC Finanzdienste GmbH und der Partnerbank Solaris SE (Sitz Berlin) angeboten; kartenausgebende Bank ist die Solaris SE.",
+   "lizenz_aufsicht": "Die Solaris SE verfügt über eine Vollbanklizenz; als zuständige Aufsichtsbehörden nennt ihr Impressum die BaFin und die Europäische Zentralbank.",
+   "einlagensicherung": "Für das optionale Tagesgeldkonto (nur für ADAC-Kreditkarteninhaber) gibt der ADAC eine Einlagensicherung bis 100.000 € an; Kontoführer ist die Solaris SE.",
+   "kundenservice": "ADAC Kreditkarten-App und Online-Banking (Solaris), Kontaktformulare von ADAC und Solaris, telefonischer Kontakt sowie FAQ.",
+   "besonderheiten": "2 % Tankrabatt weltweit, auch auf E-Ladeumsätze; Grundkarte 1 Jahr kostenlos, danach 1,90 €/Monat, optional zubuchbare Pakete (Schutz, Sparen, Reise, Platin).",
+   "kritik": "",
+   "fuer_wen": "Die Karte ist exklusiv für ADAC-Mitglieder; der Antrag erfolgt online mit Identifizierung per VideoIdent oder POSTIDENT.",
+   "quellen": [
+    "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
+    "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/partner-solaris/",
+    "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/kontakt/",
+    "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/tagesgeldkonto/",
+    "https://www.solarisgroup.com/de/imprint/"
+   ]
+  },
+  "advanzia": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "amazon": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "american-express": {
+   "gruendung": "American Express wurde 1850 in den USA gegründet. Herausgeber der Karten in Deutschland ist die American Express Europe S.A. mit Sitz in Madrid, die über eine Zweigniederlassung in Frankfurt am Main (Güterplatz 1) tätig ist.",
+   "lizenz_aufsicht": "Die American Express Europe S.A. hat eine Erlaubnis der Banco de España (Referenznummer 6.837) zur Erbringung von Zahlungsdiensten und ist über die deutsche Zweigniederlassung (HRB 112342, Frankfurt) tätig; Beschwerden nach ZAG sind laut Impressum auch bei der BaFin möglich.",
+   "einlagensicherung": "",
+   "kundenservice": "Telefon, sichere Nachricht im Online-Service-Bereich und Amex App.",
+   "besonderheiten": "Die American Express Europe S.A. ist zugleich Kartenherausgeber und Betreiber des Bonusprogramms Membership Rewards.",
+   "kritik": "Die Verbraucherzentrale Baden-Württemberg klagte vor dem LG Frankfurt am Main (Az. 3-10 O 149/24), weil das Kartenkonto einer Kundin trotz Beanstandung einer Zahlung als nicht autorisiert belastet wurde; das Verfahren endete am 1. Juli 2025 mit einem Vergleich, in dem sich American Express zur Unterlassung verpflichtete.",
+   "fuer_wen": "",
+   "quellen": [
+    "https://www.americanexpress.com/de/legal/impressum.html",
+    "https://www.americanexpress.com/de/kundenservice/",
+    "https://www.americanexpress.com/de/kundenservice/digital/amex-deutschland.html",
+    "https://www.americanexpress.com/china/en/aboutamex/corpinfo_history.shtml",
+    "https://www.verbraucherzentrale.de/verbandsklagen/klage-gegen-american-express-europe-101568"
+   ]
+  },
+  "bank-dimare": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bank-norwegian": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bbva": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bitpanda": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bunq": {
+   "gruendung": "bunq wurde 2012 von Ali Niknam gestartet; Betreiber ist die bunq B.V. mit Sitz in Amsterdam (Niederlande), in Deutschland mit einer Niederlassung (HRB 293822, München) vertreten.",
+   "lizenz_aufsicht": "bunq B.V. ist eine niederländische Bank unter Aufsicht der De Nederlandsche Bank (DNB); das Impressum nennt zusätzlich die BaFin für das Deutschlandgeschäft.",
+   "einlagensicherung": "Niederländische Einlagensicherung (Deposit Guarantee Scheme, DGS) bis 100.000 € pro Person für verifizierte Konten.",
+   "kundenservice": "Chat in der bunq App (laut bunq schnellster Weg), Hilfe-Center, SOS-Hotline für Notfälle und Kontakt über X.",
+   "besonderheiten": "Mit einem aktiven Konto erhält man laut AGB kostenlos eine digitale Mastercard-Kreditkarte; weitere Karten sind je nach Abo kostenpflichtig.",
+   "kritik": "",
+   "fuer_wen": "Die Karten sind an ein bunq-Konto mit Abo-Modell gebunden und werden über die bunq App verwaltet.",
+   "quellen": [
+    "https://www.bunq.com/de-de/about/imprint",
+    "https://www.bunq.com/de-de/about",
+    "https://www.bunq.com/de-de/documents/personal-account-terms-conditions",
+    "https://www.bunq.com/de-de/contact"
+   ]
+  },
+  "c24": {
+   "gruendung": "Die C24 Bank GmbH erhielt 2020 die Banklizenz und ist eine Bank aus dem CHECK24-Umfeld mit Sitz in Frankfurt am Main (Neue Mainzer Straße 14-18).",
+   "lizenz_aufsicht": "Die C24 Bank GmbH hat eine deutsche Banklizenz (KWG-Zulassung) und wird von der BaFin beaufsichtigt (BaFin-ID 10156362).",
+   "einlagensicherung": "Gesetzliche Einlagensicherung über die Entschädigungseinrichtung deutscher Banken GmbH bis 100.000 Euro.",
+   "kundenservice": "Telefon, C24 App und Online-Hilfe-Center.",
+   "besonderheiten": "Zu allen Kontomodellen gehört eine C24 Mastercard; Smart (0 €), Plus (5,90 €/Monat) und Max (9,90 €/Monat, Metallkarte) unterscheiden sich u. a. beim Cashback (0,05 % bis 1 %).",
+   "kritik": "",
+   "fuer_wen": "Die Karte ist an ein C24-Girokonto gebunden.",
+   "quellen": [
+    "https://api.c24.de/api/documents/pre_contract/download/",
+    "https://c24.de/preise",
+    "https://c24.de/kontakt",
+    "https://www.it-finanzmagazin.de/check24-c24-bank-neobank-106600/"
+   ]
+  },
+  "comdirect": {
+   "gruendung": "comdirect wurde 1994 als Tochter der Commerzbank gegründet und wird seit der Verschmelzung im November 2020 als Marke der Commerzbank AG mit Sitz in Quickborn fortgeführt.",
+   "lizenz_aufsicht": "Anbieter ist die Commerzbank AG; zuständige Aufsichtsbehörden sind die Europäische Zentralbank und die BaFin.",
+   "einlagensicherung": "Gesetzliche Einlagensicherung über die Entschädigungseinrichtung deutscher Banken bis 100.000 Euro pro Person, zusätzlich freiwilliger Einlagensicherungsfonds des Bundesverbandes deutscher Banken.",
+   "kundenservice": "Telefon, E-Mail, Kontaktformular und comdirect App.",
+   "besonderheiten": "Die Visa-Kreditkarte ist im Girokonto Extra und Plus inbegriffen, mit 0 % Sollzins bei monatlicher Abrechnung und ohne Auslandseinsatzentgelt außerhalb des Euroraums; die kostenlose Visa-Debitkarte berechnet dort 1,75 %.",
+   "kritik": "",
+   "fuer_wen": "Die Visa-Kreditkarte gibt es optional zum comdirect Girokonto.",
+   "quellen": [
+    "https://www.comdirect.de/cms/hilfe-service-impressum.html",
+    "https://www.comdirect.de/cms/ueberuns/de/unternehmen/index.html",
+    "https://www.comdirect.de/cms/sicherheit-einlagensicherungsfonds.html",
+    "https://www.comdirect.de/konto/karten.html"
+   ]
+  },
+  "commerzbank": {
+   "gruendung": "Die Commerzbank wurde am 26. Februar 1870 als „Commerz- und Disconto-Bank in Hamburg“ gegründet; Sitz ist heute Frankfurt am Main.",
+   "lizenz_aufsicht": "Die Commerzbank AG wird von der Europäischen Zentralbank und der BaFin beaufsichtigt.",
+   "einlagensicherung": "Gesetzliche Einlagensicherung über die Entschädigungseinrichtung deutscher Banken bis 100.000 Euro pro Person, zusätzlich freiwilliger Einlagensicherungsfonds des Bundesverbandes deutscher Banken.",
+   "kundenservice": "Filialen, Telefon- und Videoberatung nach Termin, Chat nach Anmeldung im Kundenbereich, Online Banking und Banking App.",
+   "besonderheiten": "Neben Classic-, Gold- und Premium-Kreditkarte bietet die Commerzbank eine Mastercard Debit und eine Prepaid-Karte an; zur Classic-Kreditkarte ist ein Reise-Sorglos-Paket als Upgrade buchbar.",
+   "kritik": "Auf Klage der Verbraucherzentrale Hamburg erklärte der BGH im Februar 2025 (Az. XI ZR 183/23) Klauseln im Preis- und Leistungsverzeichnis der Commerzbank zu Entgelten für Guthaben auf Sparkonten für unzulässig; das OLG Frankfurt verpflichtete die Bank anschließend, betroffene Kunden zu informieren (Az. 3 U 286/22).",
+   "fuer_wen": "Für den Online-Antrag sind ein Commerzbank-Girokonto und Online-Banking-Zugang nötig; das Angebot richtet sich an volljährige Steuerinländer mit Wohnsitz in Deutschland, Bonität vorausgesetzt.",
+   "quellen": [
+    "https://www.commerzbank.de/konzern/newsroom/pressemitteilungen/150-jahre-commerzbank.html",
+    "https://www.commerzbank.de/konzern/wer-wir-sind/geschichte/",
+    "https://www.comdirect.de/cms/hilfe-service-impressum.html",
+    "https://www.comdirect.de/cms/sicherheit-einlagensicherungsfonds.html",
+    "https://www.commerzbank.de/service/",
+    "https://www.commerzbank.de/privatkunden/kreditkarten/classic-kreditkarte/",
+    "https://www.vzhh.de/themen/finanzen/sparen-geldanlage/negativzinsen-unzulaessig-geld-zurueckfordern"
+   ]
+  },
+  "consors-finanz": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "consorsbank": {
+   "gruendung": "Die Consorsbank wurde 1994 als „Consors“ in Nürnberg gegründet und 2002 von BNP Paribas übernommen; heute ist sie eine Marke der BNP Paribas S.A. Niederlassung Deutschland mit Sitz in Nürnberg.",
+   "lizenz_aufsicht": "Anbieter ist die BNP Paribas S.A. Niederlassung Deutschland (französische Aktiengesellschaft); das Impressum nennt EZB, BaFin, Banque de France, ACPR und AMF als zuständige Aufsichtsbehörden.",
+   "einlagensicherung": "Französische Einlagensicherung Fonds de Garantie des Dépôts et de Résolution (FGDR) bis 100.000 Euro pro Einleger; Einlagen bei allen Marken der BNP Paribas S.A. Niederlassung Deutschland werden zusammengerechnet.",
+   "kundenservice": "Telefon, E-Mail, Chat über die Website sowie Consorsbank App.",
+   "besonderheiten": "Zum Girokonto wählt man eine von drei Karten: Visa Card Debit und Credit Card Gold Light kostenlos, Visa Card Gold für 9 Euro im Monat; eine girocard ist kostenlos ergänzbar.",
+   "kritik": "",
+   "fuer_wen": "Die Karten werden bei Eröffnung des Consorsbank Girokontos gewählt; die Kontoführung ist für unter 31-Jährige oder ab 700 Euro monatlichem Geldeingang kostenlos.",
+   "quellen": [
+    "https://www.consorsbank.de/web/Service/Impressum",
+    "https://www.wealthmanagement.bnpparibas.de/content/dam/de-wm/editorial/Common/PDF/AGB/Informationsbogen-f_r-den-Einleger_gesetzliche-Einlagensicherung.pdf",
+    "https://www.consorsbank.de/web/Girokonto",
+    "https://www.biallo.de/anbieter/consorsbank/",
+    "https://www.biallo.de/anbieter/consorsbank/kontakt/"
+   ]
+  },
+  "crypto-com": {
+   "gruendung": "Im EWR wird die Crypto.com Visa Card von der Foris MT Limited mit Sitz in St. Julian's (Malta) ausgegeben.",
+   "lizenz_aufsicht": "Die Foris MT Limited ist von der Malta Financial Services Authority (MFSA) als E-Geld-Institut zugelassen und gibt die Karte als Visa Principal Member aus; Krypto-Dienste erbringt die Foris DAX MT Limited mit MiCA-Zulassung der MFSA.",
+   "einlagensicherung": "",
+   "kundenservice": "Online-Hilfe-Center (help.crypto.com).",
+   "besonderheiten": "Die Karte ist eine Visa-Prepaidkarte; das zugehörige Cash Account stellt ebenfalls die Foris MT Limited bereit.",
+   "kritik": "",
+   "fuer_wen": "Die Karte setzt ein Konto in der Crypto.com App voraus.",
+   "quellen": [
+    "https://crypto.com/eea/pay",
+    "https://crypto.com/en-de/levelup/basic",
+    "https://help.crypto.com/en/articles/3511424-api"
+   ]
+  },
+  "curve": {
+   "gruendung": "Curve ist ein Londoner Fintech; im November 2025 bestätigten Curve und die Lloyds Banking Group die Übernahme durch Lloyds. Karten im EWR gibt die Curve Europe UAB mit Sitz in Vilnius (Litauen) aus.",
+   "lizenz_aufsicht": "Die Curve Europe UAB ist von der Bank of Lithuania als E-Geld-Institut zugelassen (Lizenz Nr. 73 vom 22. Oktober 2020); im Vereinigten Königreich gibt die von der FCA regulierte Curve UK Limited die Karte aus.",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "Curve bündelt mehrere bestehende Zahlungskarten in einer Mastercard und der Curve Pay App; Funktionen wie „Go Back in Time“ erlauben das nachträgliche Umbuchen von Zahlungen auf eine andere Karte.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://www.curve.com/plans/",
+    "https://tech.eu/2025/11/19/curve-confirms-sale-to-lloyds/"
+   ]
+  },
+  "deutsche-bank": {
+   "gruendung": "Die Deutsche Bank wurde 1870 gegründet; die Deutsche Bank AG hat ihren Hauptsitz in Frankfurt am Main.",
+   "lizenz_aufsicht": "Die Deutsche Bank AG (HRB 30 000, Frankfurt) wird von der Europäischen Zentralbank und der BaFin beaufsichtigt.",
+   "einlagensicherung": "Gesetzliche Einlagensicherung über die Entschädigungseinrichtung deutscher Banken bis 100.000 Euro pro Einleger, zusätzlich Einlagensicherungsfonds des Bundesverbandes deutscher Banken.",
+   "kundenservice": "Filialen, Telefon, Beratungstermine sowie Online-Banking und Deutsche Bank App.",
+   "besonderheiten": "Mit Mastercard Gold und Mastercard Travel gibt es 6 % Rückvergütung auf Reisen, die über den Reisebüro-Partner PTG gebucht werden (bezogen auf den Nettoreisepreis, Gutschrift ca. 6 Wochen nach der Reise). Die Mastercard Platin ist nur telefonisch oder in einer Filiale beantragbar.",
+   "kritik": "Der BGH gab am 30. Juni 2020 einer Klage des vzbv gegen die Deutsche Bank statt: Das Entgelt für das Basiskonto von 8,99 Euro pro Monat plus 1,50 Euro je beleghafter oder telefonischer Überweisung ist unzulässig.",
+   "fuer_wen": "Kreditkarten ab 18 Jahren, Bonität vorausgesetzt.",
+   "quellen": [
+    "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
+    "https://www.deutsche-bank.de/pk/lp/rechtliche-hinweise.html",
+    "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/sparen-anlegen/Informationsbogen-fuer-Einleger.pdf",
+    "https://www.deutsche-bank.de/pk/service-und-kontakt/services.html",
+    "https://www.db.com/who-we-are/history/index",
+    "https://www.vzbv.de/urteile/bgh-staerkt-rechte-von-finanziell-schwaecheren-verbrauchern"
+   ]
+  },
+  "deutschland-kreditkarte": {
+   "gruendung": "Die Deutschland-Kreditkarte ist ein Co-Branding-Angebot der PaySol GmbH & Co. KG (Dresden), auf dem Markt seit November 2011; kartenausgebende Bank ist die Hanseatic Bank GmbH & Co KG in Hamburg.",
+   "lizenz_aufsicht": "Die Karten werden von der Hanseatic Bank herausgegeben, die von der BaFin und der Europäischen Zentralbank beaufsichtigt wird.",
+   "einlagensicherung": "",
+   "kundenservice": "Kontaktformular der Hanseatic Bank und E-Mail an den Kartenservice der Hanseatic Bank.",
+   "besonderheiten": "Es handelt sich um Visa-Kreditkarten (Classic und Gold); laut Anbieter mit bis zu 4.000 € Startlimit (Classic), Bonität vorausgesetzt.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://www.deutschland-kreditkarte.de/classic",
+    "https://www.deutschland-kreditkarte.de/ueber-uns.html",
+    "https://www.deutschland-kreditkarte.de/kontakt.html",
+    "https://www.hanseaticbank.de/services/impressum"
+   ]
+  },
+  "dkb": {
+   "gruendung": "Die Deutsche Kreditbank AG (DKB) wurde 1990 gegründet, hat ihren Sitz in Berlin und ist ein Unternehmen der BayernLB.",
+   "lizenz_aufsicht": "Für die Zulassung zuständig ist die Europäische Zentralbank; das Impressum nennt daneben die BaFin als Aufsichtsbehörde.",
+   "einlagensicherung": "Gesetzliche Einlagensicherung über die Entschädigungseinrichtung deutscher Banken bis 100.000 Euro, zusätzlich freiwillig über den Einlagensicherungsfonds des Bundesverbandes Öffentlicher Banken Deutschlands (ESF).",
+   "kundenservice": "KI-Support in DKB-App und Web-Banking mit Weiterleitung zum Kontaktformular sowie FAQ.",
+   "besonderheiten": "Mit der DKB Visa Kreditkarte kann man laut DKB weltweit kostenlos bezahlen und an Automaten fast überall kostenlos Geld abheben.",
+   "kritik": "",
+   "fuer_wen": "Die Visa Kreditkarte wird immer über ein DKB-Girokonto abgerechnet; ein Konto bei einer anderen Bank ist als Abrechnungskonto nicht möglich.",
+   "quellen": [
+    "https://www.dkb.de/ueber-uns/impressum",
+    "https://www.dkb.de/ueber-uns",
+    "https://www.dkb.de/fragen-antworten/wie-sind-meine-einlagen-abgesichert",
+    "https://www.dkb.de/kreditkarte",
+    "https://www.dkb.de/privatkunden/service"
+   ]
+  },
+  "easybank": {
+   "gruendung": "easybank ist eine Marke der österreichischen BAWAG P.S.K. (Sitz Wien); das deutsche Privatkundengeschäft (früher Barclaycard/Barclays Consumer Bank Europe, Hamburg) wurde Anfang 2025 an die BAWAG Group verkauft und tritt seit Februar 2026 als easybank auf.",
+   "lizenz_aufsicht": "Kartenanbieter ist die BAWAG AG Niederlassung Deutschland (Hamburg); als Aufsicht nennt das Impressum die österreichische FMA, die Europäische Zentralbank und die BaFin.",
+   "einlagensicherung": "Einlagensicherung AUSTRIA Ges.m.b.H. bis 100.000 €, darüber hinaus Einlagensicherungsfonds des Bundesverbands deutscher Banken.",
+   "kundenservice": "Chat und Anruf über die easybank App, Postfach, Telefon und E-Mail.",
+   "besonderheiten": "Die easybank Kreditkarte ist eine Revolving-Kreditkarte mit Teilzahlungsfunktion; wegen des Markenwechsels werden bis Ende 2027 alle Kreditkarten ausgetauscht.",
+   "kritik": "",
+   "fuer_wen": "Für den Antrag ist ein Girokonto bei einer deutschen Bank erforderlich.",
+   "quellen": [
+    "https://www.easybank.de/easybank-de/impressum",
+    "https://www.easybank.de/easybank-de/kreditkarten/easybank-kreditkarte",
+    "https://www.easybank.de/easybank-de/hilfe-und-kontakt/kontakt",
+    "https://www.easybank.de/easybank-de/einlagensicherung/",
+    "https://www.bawaggroup.com/resource/blob/123938/2b52ec6a4a4dac82ab43a161309f75fd/pressemitteilung-start-easybank-2--data.pdf"
+   ]
+  },
+  "eurowings": {
+   "gruendung": "Die Eurowings Kreditkarten werden von easybank angeboten, einer Marke der BAWAG; Vertragspartner ist die BAWAG AG Niederlassung Deutschland in Hamburg.",
+   "lizenz_aufsicht": "Die BAWAG AG Niederlassung Deutschland wird laut Impressum von der österreichischen FMA, der Europäischen Zentralbank und der BaFin beaufsichtigt.",
+   "einlagensicherung": "",
+   "kundenservice": "Chat und Anruf über die easybank App, Postfach, Telefon und E-Mail.",
+   "besonderheiten": "Mit der Karte sammelt man Miles & More Meilen (Classic: 1 Meile je 2 € Umsatz) und erhält Eurowings-Vorteile wie Fastlane an fünf großen deutschen Flughäfen und kostenlose Sportgepäck-Mitnahme.",
+   "kritik": "",
+   "fuer_wen": "Für den Antrag ist eine Miles & More Servicekartennummer nötig.",
+   "quellen": [
+    "https://www.easybank.de/easybank-de/kreditkarten/eurowings-kreditkarte-classic",
+    "https://www.easybank.de/easybank-de/impressum",
+    "https://www.easybank.de/easybank-de/hilfe-und-kontakt/kontakt",
+    "https://www.bawaggroup.com/resource/blob/123938/2b52ec6a4a4dac82ab43a161309f75fd/pressemitteilung-start-easybank-2--data.pdf"
+   ]
+  },
+  "hanseatic-bank": {
+   "gruendung": "Die Hanseatic Bank geht auf 1969 zurück, als der Otto Versand in Hamburg den Grundstein legte; Société Générale hält 75 %, die Otto Group 25 % der Anteile.",
+   "lizenz_aufsicht": "Die Hanseatic Bank GmbH & Co KG (Hamburg) wird von der BaFin und der Europäischen Zentralbank beaufsichtigt.",
+   "einlagensicherung": "Gesetzliche Einlagensicherung über die Entschädigungseinrichtung deutscher Banken bis 100.000 Euro pro Person, zusätzlich Einlagensicherungsfonds des Bundesverbandes deutscher Banken.",
+   "kundenservice": "Kontaktformular, Online Banking „Meine Hanseatic Bank“ und App „Hanseatic Bank Mobile“ (auch zur Kartensperre).",
+   "besonderheiten": "Die GenialCard ist eine Kreditkarte ohne Girokonto bei der Hanseatic Bank; Rückzahlung in Raten möglich, die kleinste Rate beträgt 3 % der Ausgaben (mindestens 20 €), Bonität vorausgesetzt.",
+   "kritik": "",
+   "fuer_wen": "Die GenialCard setzt kein Girokonto bei der Hanseatic Bank voraus.",
+   "quellen": [
+    "https://www.hanseaticbank.de/ueber-uns",
+    "https://www.hanseaticbank.de/services/impressum",
+    "https://www.hanseaticbank.de/services/kontakt",
+    "https://www.hanseaticbank.de/geldanlage/einlagensicherung",
+    "https://www.hanseaticbank.de/kreditkarte/genialcard"
+   ]
+  },
+  "hilton": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "hypovereinsbank": {
+   "gruendung": "Die HypoVereinsbank ist eine Marke der UniCredit Bank GmbH mit Sitz in München (Arabellastraße 12) und gehört zur UniCredit-Gruppe.",
+   "lizenz_aufsicht": "Die UniCredit Bank GmbH wird von der Europäischen Zentralbank und der BaFin beaufsichtigt.",
+   "einlagensicherung": "Gesetzliche Einlagensicherung über die Entschädigungseinrichtung deutscher Banken bis 100.000 Euro pro Einleger, zusätzlich Einlagensicherungsfonds des Bundesverbandes deutscher Banken.",
+   "kundenservice": "Filialen, Beratungstermine, HVB Online Banking und Mobile Banking App sowie 24/7-Sperrhotlines.",
+   "besonderheiten": "Die HVB Mastercard ist in Verbindung mit dem HVB ExklusivKonto kostenlos und enthält einen 24-Stunden-Notfallservice inklusive Medical Helpline.",
+   "kritik": "",
+   "fuer_wen": "Voraussetzung sind ein HVB-Girokonto mit regelmäßigen Gehaltseingängen, Bonität und ein Mindestalter von 18 Jahren für die Hauptkarte.",
+   "quellen": [
+    "https://www.hypovereinsbank.de/hvb/footer/impressum",
+    "https://www.hypovereinsbank.de/hvb/ueber-uns/das-unternehmen",
+    "https://www.hypovereinsbank.de/content/dam/hypovereinsbank/shared/pdf/Footer/Informationsbogen-Einlagensicherung.pdf",
+    "https://www.hypovereinsbank.de/hvb/kontaktwege",
+    "https://www.hypovereinsbank.de/hvb/privatkunden/banking-im-alltag/karten/mastercard"
+   ]
+  },
+  "ikea": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "ing": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "instabank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "klarna": {
+   "gruendung": "Klarna wurde 2005 in Stockholm gegründet (zunächst unter dem Namen „Kreditor“, seit 2010 Klarna). In Deutschland tritt das Unternehmen über die Klarna Bank AB, German Branch, mit Sitz in Berlin auf.",
+   "lizenz_aufsicht": "Anbieter ist die Klarna Bank AB (publ), ein von der schwedischen Finanzaufsicht Finansinspektionen zugelassenes Kreditinstitut. Bei der BaFin ist sie für grenzüberschreitende Finanzdienstleistungen in Deutschland registriert.",
+   "einlagensicherung": "Das Klarna-Konto ist durch das schwedische Einlagensicherungssystem bis 100.000 € pro Kunde abgesichert; die Auszahlung im Entschädigungsfall erfolgt über die Entschädigungseinrichtung deutscher Banken (EdB).",
+   "kundenservice": "Chat in der Klarna App rund um die Uhr; nicht autorisierte Transaktionen lassen sich zusätzlich telefonisch melden.",
+   "besonderheiten": "Die Klarna Card wurde 2025 zusammen mit kostenpflichtigen Mitgliedschaften eingeführt. Sie ist eine Visa-Karte und wahlweise als Debit- oder Kreditkarte erhältlich; die Mitgliedschaften kosten laut Klarna zwischen 0 € und 44,99 € pro Monat.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://www.klarna.com/de/impressum/",
+    "https://www.klarna.com/de/uber-uns/",
+    "https://www.klarna.com/de/klarna-card/",
+    "https://www.klarna.com/de/kundenservice/wie-kann-ich-den-kundenservice-erreichen/"
+   ]
+  },
+  "kraken": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "magenta-pay": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "mercedes-credit-card": {
+   "gruendung": "Die Mercedes Credit Card wird von der BW-Bank (Baden-Württembergische Bank) mit Sitz in Stuttgart herausgegeben. Die BW-Bank ist eine unselbstständige Anstalt der Landesbank Baden-Württemberg (LBBW).",
+   "lizenz_aufsicht": "Herausgeberin ist die BW-Bank bzw. die Landesbank Baden-Württemberg. Als Aufsichtsbehörden nennt das Impressum die Europäische Zentralbank (EZB) und die BaFin.",
+   "einlagensicherung": "Einlagen bei der LBBW und ihrer Anstalt BW-Bank sind durch das Sicherungssystem der Sparkassen-Finanzgruppe geschützt, das als Einlagensicherungssystem nach dem EinSiG anerkannt ist; gesetzlich gilt ein Anspruch bis 100.000 € pro Einleger.",
+   "kundenservice": "Mercedes Credit Card Service per Telefon und E-Mail sowie der Kartenservice Online; daneben allgemeiner BW-Bank-Service per Telefon, Text-Chat und in Filialen.",
+   "besonderheiten": "Die Karte ist eine Visa-Karte und wird in den Varianten Silber und Gold angeboten. Bargeldauszahlungen im EU-Ausland sind laut BW-Bank gebührenfrei, außerhalb des EU-Preisrahmens fällt ein Auslandseinsatzentgelt an.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://www.bw-bank.de/de/home/privatkunden/kreditkarte/mercedescard.html",
+    "https://www.bw-bank.de/de/home/toolbar/impressum.html",
+    "https://www.bw-bank.de/de/home/toolbar/rechtliche-hinweise/einlagensicherung.html"
+   ]
+  },
+  "miles-and-more": {
+   "gruendung": "Die Lufthansa Miles & More Credit Cards werden von der Deutsche Bank AG mit Hauptsitz in Frankfurt am Main herausgegeben. Zuvor wurden die Karten von der DKB ausgegeben.",
+   "lizenz_aufsicht": "Kartenausgebende Bank ist die Deutsche Bank AG; zuständige Aufsichtsbehörden sind die Europäische Zentralbank (EZB) und die BaFin.",
+   "einlagensicherung": "Einlagen bei der Deutsche Bank AG sind über die Entschädigungseinrichtung deutscher Banken bis 100.000 € pro Einleger gesetzlich gesichert und zusätzlich durch den Einlagensicherungsfonds des Bundesverbandes deutscher Banken geschützt.",
+   "kundenservice": "Credit Card Service per Telefon (Montag bis Freitag) und Kontaktformular, Kartensperrung jederzeit; Verwaltung über das Kreditkarten-Banking und die Miles & More App.",
+   "besonderheiten": "Die Karten sind Mastercard-Kreditkarten mit Meilengutschrift im Miles & More Programm. Nach dem Wechsel von der DKB zur Deutschen Bank erhalten Kunden eine neue Karte mit neuer Servicekartennummer.",
+   "kritik": "",
+   "fuer_wen": "Die Produktlinie richtet sich an Meilensammler im Miles & More Programm; einzelne Karten sind an den Lufthansa-Status (Frequent Traveller, Senator, HON Circle) gekoppelt.",
+   "quellen": [
+    "https://www.miles-and-more-kreditkarte.com/de/impressum.html",
+    "https://www.miles-and-more-kreditkarte.com/de/service.html",
+    "https://www.miles-and-more-kreditkarte.com/de/kontakt.html",
+    "https://www.miles-and-more-kreditkarte.com/de/service/fragen-antworten/sonstiges/aendert-sich-meine-servicekartennummer-im-zuge-des-wechsels-von-der-dkb-zur-deutschen-bank.html",
+    "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser_Informationsbogen_Einleger_AG.pdf"
+   ]
+  },
+  "monese": {
+   "gruendung": "Monese ist ein Londoner Fintech (Monese Ltd, registriert in England und Wales). Im Oktober 2024 wurde Monese vom britischen Fintech Pockit übernommen.",
+   "lizenz_aufsicht": "Für Kunden im EWR wird die Mastercard-Debitkarte von der PPS EU SA ausgegeben, einem von der belgischen Nationalbank zugelassenen E-Geld-Institut; die Monese EU SA ist deren registrierter Agent.",
+   "einlagensicherung": "",
+   "kundenservice": "Chat in der Monese App; daneben Support per E-Mail.",
+   "besonderheiten": "Monese ist keine Bank: Kundengelder werden als E-Geld getrennt verwahrt (Safeguarding) und sind nicht durch eine Einlagensicherung gedeckt.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://monese.com/legal",
+    "https://monese.com/our-pricing-eu/",
+    "https://www.uktech.news/news/pockit-acquires-monese-after-lending-it-cash-20241010"
+   ]
+  },
+  "n26": {
+   "gruendung": "N26 wurde 2013 in Berlin gegründet; Sitz der N26 Bank SE ist Berlin.",
+   "lizenz_aufsicht": "Konto und Karten stellt die N26 Bank SE bereit, die 2016 eine deutsche Vollbanklizenz erhielt. Zuständige Aufsichtsbehörde laut Impressum ist die BaFin.",
+   "einlagensicherung": "Einlagen sind über die deutsche gesetzliche Einlagensicherung bis 100.000 € pro Kunde geschützt.",
+   "kundenservice": "Chat in der App (bzw. Besucher-Chat ohne Login); telefonischer Support nur für Premiumkonten (Go, Smart, Metal).",
+   "besonderheiten": "N26 war nach eigenen Angaben die erste Digitalbank mit deutscher Vollbanklizenz.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://n26.com/de-de/impressum",
+    "https://n26.com/de-de/ueber-n26",
+    "https://support.n26.com/en-eu/app-and-features/app/how-to-contact-n26"
+   ]
+  },
+  "norisbank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "olb": {
+   "gruendung": "Die Oldenburgische Landesbank AG (OLB) wurde 1869 gegründet und hat ihren Sitz in Oldenburg. Seit dem 2. Januar 2026 gehört sie zur TARGO Deutschland GmbH, einer Tochter der Crédit Mutuel Alliance Fédérale.",
+   "lizenz_aufsicht": "Die Karten gibt die Oldenburgische Landesbank AG selbst heraus. Zuständige Aufsicht sind die BaFin und die Europäische Zentralbank (EZB).",
+   "einlagensicherung": "Die OLB gehört der gesetzlichen Einlagensicherung an und ist zusätzlich dem Einlagensicherungsfonds des Bundesverbandes deutscher Banken angeschlossen; für Privatpersonen gilt dort seit 1.1.2025 eine Sicherungsgrenze von maximal 3 Mio. €.",
+   "kundenservice": "Filialen vor Ort, Digitale Filiale mit Videoberatung und Chat sowie die OLB Banking App.",
+   "besonderheiten": "Die OLB bietet Mastercard-Karten von Prepaid bis World Elite an. Die Übernahme durch die Crédit-Mutuel-Holding, zu der auch die TARGOBANK gehört, wurde am 2. Januar 2026 vollzogen.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://www.olb.de/impressum",
+    "https://www.olb.de/olb/unternehmen/die-bank/ueber-uns",
+    "https://www.olb.de/anlegen/anlegen-und-sparen/einlagensicherungsfonds",
+    "https://www.olb.de/",
+    "https://www.olb.de/konten-und-karten/kartenvergleich"
+   ]
+  },
+  "openbank": {
+   "gruendung": "Openbank ist die deutsche Bank der Santander-Gruppe mit Sitz in Mönchengladbach; die frühere Santander Consumer Bank AG wurde 2026 in Openbank Deutschland AG umbenannt. Sie ist eine 100-prozentige Tochter der spanischen Banco Santander.",
+   "lizenz_aufsicht": "Die Karten gibt die Openbank Deutschland AG heraus, ein deutsches Kreditinstitut. Sie unterliegt unter anderem der Aufsicht von BaFin und Europäischer Zentralbank (EZB).",
+   "einlagensicherung": "Einlagen sind über die Entschädigungseinrichtung deutscher Banken (EdB) bis 100.000 € pro Person gesetzlich geschützt. Zusätzlich ist die Bank Mitglied im Einlagensicherungsfonds des Bundesverbandes deutscher Banken (für natürliche Personen seit 1.1.2025 bis 3 Mio. €).",
+   "kundenservice": "Digital per App und Online-Banking, telefonisch, per Video und in Filialen.",
+   "besonderheiten": "Die BestCard Basic ist eine Visa-Kreditkarte ohne Jahresgebühr; für den Einsatz in Fremdwährung fällt ein Auslandseinsatzentgelt von 1,85 % an. Openbank betreibt nach eigenen Angaben 119 Filialen in Deutschland.",
+   "kritik": "",
+   "fuer_wen": "Die BestCard Basic passt zu Nutzern, die eine Kreditkarte ohne Jahresgebühr suchen und selten in Fremdwährung zahlen.",
+   "quellen": [
+    "https://www.openbank.de/content/openbank/de/de/home/impressum.html",
+    "https://www.openbank.de/ueber-uns/",
+    "https://www.santander.de/privatkunden/facts/",
+    "https://www.openbank.de/banking-und-service/einlagensicherung/",
+    "https://www.openbank.de/content/openbank/de/de/home/produkte/konten-und-karten/karten/kostenlose-kreditkarte.html"
+   ]
+  },
+  "payback": {
+   "gruendung": "Die PAYBACK Visa Karte wird von der BW-Bank (Baden-Württembergische Bank, Stuttgart) in Kooperation mit der PAYBACK GmbH (München) herausgegeben. Die BW-Bank ist eine unselbstständige Anstalt der Landesbank Baden-Württemberg.",
+   "lizenz_aufsicht": "Kartenausgebende Bank ist die BW-Bank bzw. die Landesbank Baden-Württemberg; Aufsichtsbehörden sind die Europäische Zentralbank (EZB) und die BaFin. Die PAYBACK GmbH ist für das Bonusprogramm zuständig.",
+   "einlagensicherung": "Guthaben bei der LBBW/BW-Bank ist durch das Sicherungssystem der Sparkassen-Finanzgruppe geschützt; die gesetzliche Sicherungsobergrenze beträgt 100.000 € pro Einleger.",
+   "kundenservice": "Hilfebereich (FAQ) und Kontaktseite auf payback.de.",
+   "besonderheiten": "Mit der Karte gibt es 1 PAYBACK-Punkt je 5 € Umsatz; die Jahresgebühr beträgt 29 €. Bargeld an Automaten außerhalb Deutschlands ist gebührenfrei, im Inland kostet es 2 % (mindestens 5 €).",
+   "kritik": "",
+   "fuer_wen": "Die Karte richtet sich an PAYBACK-Teilnehmer, die auch mit Kartenzahlungen Punkte sammeln wollen.",
+   "quellen": [
+    "https://www.payback.de/visa",
+    "https://www.payback.de/info/impressum",
+    "https://www.bw-bank.de/de/home/toolbar/impressum.html",
+    "https://www.bw-bank.de/content/dam/myif/bwbank/work/dokumente/pdf/public/onlinedienste/paybackvisa-informationsbogen-einleger.pdf"
+   ]
+  },
+  "postbank": {
+   "gruendung": "Die Postbank ist eine Niederlassung der Deutsche Bank AG mit Sitz in Bonn; Sitz der Deutsche Bank AG ist Frankfurt am Main.",
+   "lizenz_aufsicht": "Die Kreditkarten gibt die Postbank als Niederlassung der Deutsche Bank AG heraus. Aufsichtsbehörden sind die Europäische Zentralbank (EZB) und die BaFin.",
+   "einlagensicherung": "Die Postbank ist der Entschädigungseinrichtung deutscher Banken zugeordnet (bis 100.000 € pro Einleger) und als Niederlassung der Deutsche Bank AG Mitglied im Einlagensicherungsfonds des Bundesverbands deutscher Banken.",
+   "kundenservice": "Filialen und Telefon-Banking; Kartensperrung telefonisch.",
+   "besonderheiten": "Die Postbank bietet Mastercard-Kreditkarten (Standard, Gold, Platinum) sowie Business-Karten an.",
+   "kritik": "Der Bundesgerichtshof erklärte am 27.04.2021 (XI ZR 26/20) auf Klage des vzbv die AGB-Klauseln der Postbank für unwirksam, nach denen Schweigen als Zustimmung zu Vertrags- und Entgeltänderungen galt.",
+   "fuer_wen": "",
+   "quellen": [
+    "https://www.postbank.de/privatkunden/footer/impressum.html",
+    "https://www.postbank.de/privatkunden/produkte/wertpapiere-sparen/sparen/einlagensicherung.html",
+    "https://www.postbank.de/privatkunden/kontakt.html",
+    "https://www.vzbv.de/urteile/folgen-des-bgh-urteils-banken-muessen-geld-erstatten"
+   ]
+  },
+  "revolut": {
+   "gruendung": "Für Kunden in Deutschland ist die Revolut Bank UAB mit Sitz in Vilnius (Litauen) zuständig. Sie handelt über die Revolut Bank UAB, Zweigniederlassung Deutschland, in Berlin.",
+   "lizenz_aufsicht": "Konto und Karten stellt die Revolut Bank UAB bereit, eine litauische Bank unter Aufsicht der Europäischen Zentralbank (EZB) und der Bank of Lithuania. Für die Zweigniederlassung in Deutschland ist zusätzlich die BaFin zuständig.",
+   "einlagensicherung": "Einlagen bei der Revolut Bank UAB sind über die litauische staatliche Einrichtung „Einlagen- und Investitionsversicherung“ bis 100.000 € pro Einleger abgesichert.",
+   "kundenservice": "Chat in der App sowie E-Mail.",
+   "besonderheiten": "Revolut ist in Deutschland mit einer litauischen EU-Banklizenz über eine Berliner Zweigniederlassung tätig; die Einlagensicherung richtet sich daher nach dem litauischen System.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://cdn.revolut.com/terms_and_conditions/pdf/imprint_ae40ccff_1.0.3_1785272324_en.pdf",
+    "https://cdn.revolut.com/terms_and_conditions/pdf/informationen_f_r_einleger_11912297_1.0.0_1776155038_de.pdf"
+   ]
+  },
+  "sparkasse": {
+   "gruendung": "„Sparkasse“ ist keine einzelne Bank, sondern eine Gruppe von bundesweit 337 eigenständigen, regional tätigen Instituten (Stand August 2026) mit kommunalen Trägern. Konditionen und Kartenpreise legt jede Sparkasse selbst fest, sie unterscheiden sich daher je nach Sparkasse.",
+   "lizenz_aufsicht": "Die Karten werden von der jeweiligen örtlichen Sparkasse ausgegeben, die als Kreditinstitut der deutschen Bankenaufsicht unterliegt.",
+   "einlagensicherung": "Einlagen sind durch das Sicherungssystem der Sparkassen-Finanzgruppe geschützt, das nach § 43 EinSiG als Einlagensicherungssystem amtlich anerkannt ist; gesetzlich gesichert sind gedeckte Einlagen bis 100.000 €.",
+   "kundenservice": "Geschäftsstellen vor Ort (bundesweit über 10.500) und die App „Sparkasse“; weitere Kanäle unterscheiden sich je nach Sparkasse.",
+   "besonderheiten": "Für Sparkassen gilt das Regionalprinzip: Ihr Geschäftsgebiet entspricht in der Regel dem Gebiet ihres kommunalen Trägers. Beispiel Berliner Sparkasse: Für Kreditkarten ist ein Girokonto bei der Sparkasse Voraussetzung.",
+   "kritik": "Auf eine Musterfeststellungsklage des vzbv entschied der BGH am 3. Juni 2025, dass die Berliner Sparkasse auf Basis einer Zustimmungsfiktionsklausel eingeführte oder erhöhte Entgelte nicht erheben durfte und sie erstatten muss.",
+   "fuer_wen": "Am Beispiel der Berliner Sparkasse richten sich die Karten an Kunden mit Girokonto bei der jeweiligen Sparkasse.",
+   "quellen": [
+    "https://www.dsgv.de/s-finanzgruppe/organisation-und-struktur/sparkassen.html",
+    "https://www.dsgv.de/sicherungssystem.html",
+    "https://www.sparkasse.de/ueber-uns.html",
+    "https://www.berliner-sparkasse.de/de/home/privatkunden/kreditkarte/visa-basis.html",
+    "https://www.verbraucherzentrale.nrw/verfahren/berliner-sparkasse"
+   ]
+  },
+  "sumup": {
+   "gruendung": "SumUp wurde 2012 in London und Berlin gegründet. Für die Kontoprodukte ist die SumUp Limited mit Sitz in Dublin (Irland) zuständig.",
+   "lizenz_aufsicht": "SumUp Limited ist ein E-Geld-Institut unter Aufsicht der Central Bank of Ireland (Referenz C195030) und gibt die Mastercards aus.",
+   "einlagensicherung": "",
+   "kundenservice": "Chat nach Login, Kontakt über die SumUp App und das Support Center; telefonischer Support abhängig vom Anliegen, kein Support per E-Mail.",
+   "besonderheiten": "SumUp ist keine Bank: Kundengelder werden getrennt verwahrt, aber nicht durch eine Einlagensicherung garantiert. Das Geschäftskonto hat keine Kontoführungsgebühr und enthält eine kostenlose geschäftliche Mastercard.",
+   "kritik": "",
+   "fuer_wen": "Das Geschäftskonto mit Mastercard richtet sich an Selbstständige und kleine Unternehmen, insbesondere SumUp-Händler.",
+   "quellen": [
+    "https://www.sumup.com/de-de/impressum/",
+    "https://www.sumup.com/de-de/geschaeftskonto/",
+    "https://www.sumup.com/de-de/kontakt/",
+    "https://www.blick.ch/wirtschaft/finanzspritze-start-up-sumup-erhaelt-285-millionen-euro-id19231147.html"
+   ]
+  },
+  "targobank": {
+   "gruendung": "Die Ursprünge der TARGOBANK reichen bis 1926 zurück; Sitz der TARGOBANK AG ist Düsseldorf. Sie gehört zur französischen Genossenschaftsbank Crédit Mutuel Alliance Fédérale.",
+   "lizenz_aufsicht": "Die Kreditkarten gibt die TARGOBANK AG selbst heraus. Zuständige Aufsicht sind die Europäische Zentralbank (EZB) und die BaFin.",
+   "einlagensicherung": "Einlagen sind über die gesetzliche Einlagensicherung bis 100.000 € pro Kunde und zusätzlich über den Einlagensicherungsfonds des Bundesverbandes deutscher Banken geschützt.",
+   "kundenservice": "Filialen, Telefon-Banking und Online-/Mobile-Banking.",
+   "besonderheiten": "Unter der Holding TARGO Deutschland GmbH ist seit Anfang 2026 auch die Oldenburgische Landesbank (OLB) angesiedelt. Die TARGOBANK-Kreditkarten sind Visa-Karten.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://www.targobank.de/de/service/impressum.html",
+    "https://www.targobank.de/de/ueber-uns/geschichte/index.html",
+    "https://www.targobank.de/de/ueber-uns/targobank/index.html",
+    "https://www.targobank.de/de/sparen-geldanlage/tagesgeld.html",
+    "https://www.targobank.de/de/service/kontakt.html",
+    "https://www.targobank.de/de/konto-karten/kreditkarte-classic.html"
+   ]
+  },
+  "tf-bank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "tomorrow": {
+   "gruendung": "Tomorrow wurde 2018 gegründet; Sitz der Tomorrow GmbH ist Hamburg.",
+   "lizenz_aufsicht": "Tomorrow ist keine Bank: Das Konto mit Visa-Debitkarte wird in Zusammenarbeit mit der Solaris SE (Berlin) angeboten, die als lizenziertes Institut unter BaFin-Aufsicht steht.",
+   "einlagensicherung": "Guthaben bei der Solaris SE sind über die deutsche Einlagensicherung bis 100.000 € pro Kunde und Bank geschützt (alle Konten bei Solaris zusammen).",
+   "kundenservice": "E-Mail und Live-Chat; Rückruf-Service nur im Kontomodell Plus.",
+   "besonderheiten": "Laut Tomorrow fließen Einlagen nicht in fossile Brennstoffe, Rüstung oder Massentierhaltung; das Unternehmen ist als B Corporation zertifiziert. Die Kontomodelle kosten 0 € (Now, mit Bedingungen), 8,90 € (Change) und 17,90 € (Plus) pro Monat.",
+   "kritik": "",
+   "fuer_wen": "Tomorrow richtet sich an Nutzer, die ein nachhaltig ausgerichtetes Girokonto mit Visa-Debitkarte suchen.",
+   "quellen": [
+    "https://www.tomorrow.one/de-DE/impressum/",
+    "https://www.tomorrow.one/de-DE/ueber-uns/",
+    "https://www.tomorrow.one/de-DE/konten/"
+   ]
+  },
+  "trade-republic": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "trading-212": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "tui": {
+   "gruendung": "Die TUI Card ist eine Kooperations-Kreditkarte, die von der Commerzbank AG mit Sitz in Frankfurt am Main herausgegeben wird.",
+   "lizenz_aufsicht": "Herausgeberin der Karte ist die Commerzbank AG.",
+   "einlagensicherung": "",
+   "kundenservice": "Kreditkarten-Service der Commerzbank per Telefon und E-Mail.",
+   "besonderheiten": "Die TUI Card wird nicht mehr an Neukunden ausgegeben. Bestandskunden können ihre Karte zu den bestehenden Bedingungen weiter nutzen.",
+   "kritik": "",
+   "fuer_wen": "Die Karte ist nur noch für Bestandskunden relevant, da keine Neuausgabe mehr erfolgt.",
+   "quellen": [
+    "https://www.tui.com/tui-card/",
+    "https://www.commerzbank.de/portal/media/efw-dokumente/TUICardBedingungen.pdf"
+   ]
+  },
+  "turkish-airlines": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "unitplus": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "vivid": {
+   "gruendung": "Vivid wurde 2019 in Berlin gegründet; weitere Standorte sind unter anderem Amsterdam, Luxemburg und Limassol.",
+   "lizenz_aufsicht": "Zahlungsdienste und E-Geld erbringt die Vivid Money S.A. in Luxemburg, ein von der CSSF beaufsichtigtes E-Geld-Institut; Anlage- und Kryptodienste laufen über die Vivid Money B.V. (Niederlande, Aufsicht AFM).",
+   "einlagensicherung": "",
+   "kundenservice": "Kontaktformular mit Antwort per E-Mail sowie Hilfezentrum.",
+   "besonderheiten": "Kundengelder werden getrennt vom Vermögen der Vivid Money S.A. verwahrt; nur der Teil auf dem Kundengeldkonto bei Natixis ist über die französische Einlagensicherung (FGDR) bis 100.000 € pro Kunde abgesichert. Die Tarife kosten 0 € bzw. 4,90 € (Standard), 6,90 € (Plus) und 7,90 € (Prime) pro Monat.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://vivid.money/de-de/imprint/",
+    "https://vivid.money/de-de/personal/",
+    "https://vivid.money/de-de/about-us/"
+   ]
+  },
+  "volksbank": {
+   "gruendung": "„Volksbank“ steht für eine Gruppe eigenständiger Genossenschaftsbanken; Ende 2025 gab es 646 selbstständige Genossenschaftsbanken (inklusive Sparda-, PSD- und Spezialinstituten). Konditionen und Kartenpreise legt jede Bank selbst fest, sie unterscheiden sich daher je nach Volksbank.",
+   "lizenz_aufsicht": "Die Karten werden von der jeweiligen örtlichen Volksbank bzw. Raiffeisenbank ausgegeben, die als Kreditinstitut der deutschen Bankenaufsicht unterliegt.",
+   "einlagensicherung": "Einlagen sind über die als Einlagensicherungssystem amtlich anerkannte BVR Institutssicherung GmbH sowie die freiwillige Sicherungseinrichtung des BVR geschützt.",
+   "kundenservice": "Filialen der jeweiligen Bank sowie die VR Banking App; weitere Kanäle je nach Bank.",
+   "besonderheiten": "Beide Sicherungssysteme sind institutsbezogen und sollen Insolvenzen der angeschlossenen Banken verhindern. Beispiel Berliner Volksbank: Die ClassicCard ist mit Girokonto bei der Bank gebührenfrei.",
+   "kritik": "",
+   "fuer_wen": "Am Beispiel der Berliner Volksbank richten sich die Karten an Kunden mit Girokonto bei der jeweiligen Bank.",
+   "quellen": [
+    "https://berichte.bvr.de/jahresbericht-2025/ergebnisse/unser-jahr-in-zahlen/",
+    "https://www.bvr.de/p.nsf/0/9BAD2857099ACC21C12588EC002A090D/$file/2026.06.30%20BVR-SE%20f%C3%BCr%20Internet.pdf",
+    "https://www.vr.de/privatkunden.html",
+    "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte.html"
+   ]
+  },
+  "volkswagen-bank": {
+   "gruendung": "Die Volkswagen Bank GmbH wurde 1949 als Teil des Volkswagen Konzerns gegründet und hat ihren Sitz in Braunschweig.",
+   "lizenz_aufsicht": "Die Visa Card gibt die Volkswagen Bank GmbH heraus. Zuständige Aufsicht sind die Europäische Zentralbank (EZB) und die BaFin.",
+   "einlagensicherung": "Einlagen sind über die gesetzliche Einlagensicherung und zusätzlich über die freiwillige Einlagensicherung des Bundesverbands deutscher Banken geschützt.",
+   "kundenservice": "Telefon, E-Mail und Filialen.",
+   "besonderheiten": "Die Volkswagen Visa Card bietet bis zu 30 Tage Zinsfreiheit; Bargeld an Geldautomaten der Volkswagen Bank ist kostenlos. Für die Karte wird ein Girokonto als Referenzkonto benötigt.",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": [
+    "https://www.volkswagenbank.de/de/impressum.html",
+    "https://www.volkswagenbank.de/de/ueber-uns.html",
+    "https://www.volkswagenbank.de/de/kontakt.html",
+    "https://www.volkswagenbank.de/girokonto-kreditkarte/kreditkarte.html"
+   ]
+  },
+  "webcent": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "wise": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  }
+ }
+}

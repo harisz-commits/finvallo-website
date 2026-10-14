@@ -6,30 +6,39 @@
   function num(el) { if (!el) return 0; var v = parseFloat(String(el.value).replace(',', '.')); return isFinite(v) && v > 0 ? v : 0; }
   var lim = function (v) { return v === null ? Infinity : v; };
 
+  /* Ergebnis auf der Kartenseite; I: spend, lounge, guests (Zahlen), credit(i), welcome, vers (Haken). */
+  function result(D, I) {
+    var spend = I.spend;
+    var lv = D.minsp && spend * 12 < D.minsp ? 0 : Math.min(I.lounge, lim(D.visits));
+    var gv = Math.min(I.guests, lv, lim(D.guests));
+    var pts = spend * 12 / 100 * D.pp100; if (D.pmax) pts = Math.min(pts, D.pmax);
+    var v = (lv + gv) * D.lounge + pts;
+    D.credits.forEach(function (c, i) { if (I.credit(i)) v += c.v; });
+    if (I.welcome) v += D.welcome;
+    if (I.vers) v += D.vers;
+    var net = v - D.fee, txt;
+    if (net >= 0) txt = 'Bei dieser Nutzung holst du die Jahresgebühr wieder herein und hast ' + eur(net) + ' im Jahr mehr, als die Karte kostet.';
+    else {
+      var more = Math.ceil(-net / D.lounge), free = lim(D.visits) - lv;
+      txt = 'Bei dieser Nutzung kostet dich die Karte ' + eur(-net) + ' im Jahr mehr, als sie bringt.' +
+        (D.minsp && spend * 12 < D.minsp ? ' Die Lounge-Besuche sind erst ab ' + eur(D.minsp) + ' Umsatz im Jahr kostenlos.' : D.visits !== 0 && more <= free ? ' Mit etwa ' + more + ' Lounge-Besuchen mehr wäre sie im Plus.' : ' Eine günstigere Karte passt besser zu dir.');
+    }
+    return { val: eur(v), net: sign(net), good: net >= 0, txt: txt };
+  }
+  /* Im Build (Node): nur die Rechnung bereitstellen, tools/lohnt.py rechnet damit den mittleren Fall vor. */
+  if (typeof document === 'undefined') { module.exports = { result: result }; return; }
+
   var box = document.querySelector('[data-lohnt]');
   if (box) (function () {
     var D = JSON.parse(box.getAttribute('data-lohnt'));
     var q = function (s) { return box.querySelector(s); };
-    var all = function (s) { return [].slice.call(box.querySelectorAll(s)); };
     function calc() {
-      var spend = num(q('[data-in="spend"]'));
-      var lv = D.minsp && spend * 12 < D.minsp ? 0 : Math.min(num(q('[data-in="lounge"]')), lim(D.visits));
-      var gv = Math.min(num(q('[data-in="guests"]')), lv, lim(D.guests));
-      var pts = spend * 12 / 100 * D.pp100; if (D.pmax) pts = Math.min(pts, D.pmax);
-      var v = (lv + gv) * D.lounge + pts;
-      all('[data-credit]').forEach(function (c) { if (c.checked) v += D.credits[+c.dataset.credit].v; });
-      var w = q('[data-welcome]'); if (w && w.checked) v += D.welcome;
-      var s = q('[data-vers]'); if (s && s.checked) v += D.vers;
-      var net = v - D.fee;
-      q('[data-out="val"]').textContent = eur(v);
-      var n = q('[data-out="net"]'); n.textContent = sign(net); n.className = net >= 0 ? 'good' : 'bad';
-      var t = q('[data-out="txt"]');
-      if (net >= 0) t.textContent = 'Bei dieser Nutzung holst du die Jahresgebühr wieder herein und hast ' + eur(net) + ' im Jahr mehr, als die Karte kostet.';
-      else {
-        var more = Math.ceil(-net / D.lounge), free = lim(D.visits) - lv;
-        t.textContent = 'Bei dieser Nutzung kostet dich die Karte ' + eur(-net) + ' im Jahr mehr, als sie bringt.' +
-          (D.minsp && spend * 12 < D.minsp ? ' Die Lounge-Besuche sind erst ab ' + eur(D.minsp) + ' Umsatz im Jahr kostenlos.' : D.visits !== 0 && more <= free ? ' Mit etwa ' + more + ' Lounge-Besuchen mehr wäre sie im Plus.' : ' Eine günstigere Karte passt besser zu dir.');
-      }
+      var r = result(D, { spend: num(q('[data-in="spend"]')), lounge: num(q('[data-in="lounge"]')), guests: num(q('[data-in="guests"]')),
+        credit: function (i) { var c = q('[data-credit="' + i + '"]'); return !!(c && c.checked); },
+        welcome: !!(q('[data-welcome]') && q('[data-welcome]').checked), vers: !!(q('[data-vers]') && q('[data-vers]').checked) });
+      q('[data-out="val"]').textContent = r.val;
+      var n = q('[data-out="net"]'); n.textContent = r.net; n.className = r.good ? 'good' : 'bad';
+      q('[data-out="txt"]').textContent = r.txt;
     }
     box.addEventListener('input', calc); box.addEventListener('change', calc);
     box.hidden = false; calc();

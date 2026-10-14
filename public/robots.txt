@@ -2,32 +2,52 @@
 User-agent: *
 Allow: /
 
-# Ausdrücklich erlaubt: KI-Suche und KI-Assistenten
+# Ausdrücklich erlaubt: KI-Suche und KI-Assistenten (Impressum und Datenschutz ausgenommen)
 User-agent: GPTBot
 Allow: /
+Disallow: /impressum/
+Disallow: /datenschutz/
 User-agent: OAI-SearchBot
 Allow: /
 User-agent: ChatGPT-User
 Allow: /
 User-agent: ClaudeBot
 Allow: /
+Disallow: /impressum/
+Disallow: /datenschutz/
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /impressum/
+Disallow: /datenschutz/
 User-agent: Claude-User
 Allow: /
+Disallow: /impressum/
+Disallow: /datenschutz/
 User-agent: anthropic-ai
 Allow: /
+Disallow: /impressum/
+Disallow: /datenschutz/
 User-agent: PerplexityBot
 Allow: /
+Disallow: /impressum/
+Disallow: /datenschutz/
 User-agent: Perplexity-User
 Allow: /
+Disallow: /impressum/
+Disallow: /datenschutz/
 User-agent: Google-Extended
 Allow: /
+Disallow: /impressum/
+Disallow: /datenschutz/
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /impressum/
+Disallow: /datenschutz/
 User-agent: Bingbot
 Allow: /
 User-agent: CCBot
 Allow: /
+Disallow: /impressum/
+Disallow: /datenschutz/
 
 Sitemap: https://finvallo.com/sitemap.xml
