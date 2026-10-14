@@ -244,6 +244,27 @@ def generic_patch(s, rel):
     return p
 
 # ---------- Ablauf ----------
+METH = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daten', 'methodik.json'), encoding='utf-8'))
+def methodik(s, land):
+    """B19: Grenzwerte wie im Code (score.py vergleicht mit <=), Marker für die offene Regel, Slots und Gültigkeitsdatum."""
+    s = re.sub(r'(<(?:span|td)>)bis (?!einschließlich)([\d,]+ (?:%|€))(</(?:span|td)>)', r'\1bis einschließlich \2\3', s)
+    T = '<!-- TODO Methodik -->'
+    for a in ('Fehlt uns für ein Kriterium eine bestätigte Angabe', 'Fehlt eine bestätigte Angabe, zählt', 'Was wir nicht wissen, zählt'):
+        if a in s and T + a not in s: s = s.replace(a, T + a, 1)
+    s = re.sub(r'<!--warum-->.*?<!--/warum-->', '', s, flags=re.S)
+    w = (METH.get('warum_gewichte') or '').strip()
+    blk = f'<!--warum--><h2>Warum diese Gewichte</h2><div class="prose"><p>{E(w)}</p></div><!--/warum-->' if w else '<!--warum--><!-- Slot „Warum diese Gewichte“: Text in tools/daten/methodik.json --><!--/warum-->'
+    s = s.replace('<h2>Die Regeln je Kriterium</h2>', blk + '<h2>Die Regeln je Kriterium</h2>', 1)
+    calc = f'../../../{land}/rechner/teilzahlung/'
+    s = s.replace('<h2>Was die Sterne nicht zeigen</h2>', '<h2>Was nicht in die Bewertung einfließt</h2>', 1)
+    hint = 'Zinsen für Teilzahlung zählen nicht mit, weil sie nur anfallen, wenn du nicht alles zahlst.'
+    if hint in s and 'rechner/teilzahlung/' not in s:
+        s = s.replace(hint, hint + f' Was sie kosten, zeigt der <a href="{calc}">Teilzahlungsrechner</a>.', 1)
+    s = re.sub(r'<p class="note meth-since">.*?</p>', '', s)
+    if METH.get('gueltig_seit'):
+        s = re.sub(r'(<p class="lede">.*?</p>)', r'\1' + f'<p class="note meth-since">Methodik gültig seit {dmy(METH["gueltig_seit"])}.</p>', s, count=1, flags=re.S)
+    return s
+
 def main():
     import ratgeber as RG
     DATA = K.prepare()
@@ -266,6 +287,7 @@ def main():
         for attr in ('name="description"', 'property="og:description"'):
             s = re.sub(rf'(<meta {attr} content=")([^"]*)(">)', lambda m: m.group(1) + E(K.fit_desc(H.unescape(m.group(2)))) + m.group(3), s, count=1)
         if rel == 'ueber-uns/': s = ueber(s)
+        if rel in ('at/kreditkarten/methodik/', 'de/kreditkarten/methodik/'): s = methodik(s, rel[:2])
         if rel == 'impressum/':
             ph = SITE.get('phone') or ''
             s = re.sub(r'<!--phone-->.*?<!--/phone-->', '<!--phone-->' + (f'<br>Telefon: <a href="tel:{E(re.sub(r"[^+0-9]", "", ph))}">{E(ph)}</a>' if ph else '') + '<!--/phone-->', s)
