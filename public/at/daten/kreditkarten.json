@@ -567,7 +567,7 @@
     "Bargeld am Automaten kostet 3 %, mind. 4 €",
     "Keine Reiseversicherung inklusive"
    ],
-   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
+   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/classic-card-ohne-versicherungsschutz/",
    "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-11",
    "geprueft": "2026-10-11",
@@ -610,7 +610,7 @@
     "Fremdwährungsgebühr: 1,65 % + 1,5 % Kursaufschlag",
     "Bargeld am Automaten kostet 3 %, mind. 4 €"
    ],
-   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
+   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/classic-card-mit-versicherungsschutz/",
    "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-11",
    "geprueft": "2026-10-11",
@@ -654,7 +654,7 @@
     "Fremdwährungsgebühr: 1,65 % + 1,5 % Kursaufschlag",
     "Bargeld am Automaten kostet 3 %, mind. 4 €"
    ],
-   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
+   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/gold-card/",
    "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-11",
    "geprueft": "2026-10-11",
@@ -700,7 +700,7 @@
     "Fremdwährungsgebühr: 1,65 % + 1,5 % Kursaufschlag",
     "Bargeld am Automaten kostet 3 %, mind. 4 €"
    ],
-   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
+   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/platinum-card/",
    "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-11",
    "geprueft": "2026-10-11",
@@ -746,7 +746,7 @@
     "Fremdwährungsgebühr: 1,65 % + 1,5 % Kursaufschlag",
     "Bargeld am Automaten kostet 3 %, mind. 4 €"
    ],
-   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
+   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/mastercard-world-traveller-gold-card/",
    "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-11",
    "geprueft": "2026-10-11",
@@ -794,7 +794,7 @@
     "Bargeld am Automaten kostet 3 %, mind. 4 €",
     "„Unbegrenzt“ steht nur in der Kurzbeschreibung der Anbieterseite – Details beim Anbieter prüfen"
    ],
-   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
+   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/mastercard-world-traveller-black-card/",
    "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-11",
    "geprueft": "2026-10-11",
@@ -838,7 +838,7 @@
     "Fremdwährungsgebühr: 1,65 % + 1,5 % Kursaufschlag",
     "Bargeld am Automaten kostet 3 %, mind. 4 €"
    ],
-   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
+   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/studenten-card/",
    "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-11",
    "geprueft": "2026-10-11",
@@ -883,7 +883,7 @@
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt"
    ],
-   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
+   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/prepaid-card/",
    "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-14",
    "geprueft": "2026-10-14",
@@ -1709,7 +1709,7 @@
     "Nur mit Konto beim Anbieter",
     "Keine Reiseversicherung inklusive"
    ],
-   "quelle": "https://www.raiffeisen.at/ooe/de/privatkunden/karte/kreditkarte.html",
+   "quelle": "https://www.r-card-service.at/de/privat/kreditkarten/classic.html",
    "preis": "https://www.r-card-service.at/content/dam/rbi/cardservice/dokumente/kreditkartentausch/2025-05-16-RBI-Kreditkarten-Preis_Leistungsuebersicht-(BaFG).pdf.coredownload.pdf",
    "stand": "2026-10-11",
    "geprueft": "2026-10-11",
@@ -1753,7 +1753,7 @@
     "Bargeld am Automaten kostet 0,35 € + 3 %",
     "Nur mit Konto beim Anbieter"
    ],
-   "quelle": "https://www.raiffeisen.at/ooe/de/privatkunden/karte/kreditkarte.html",
+   "quelle": "https://www.r-card-service.at/de/privat/kreditkarten/gold.html",
    "preis": "https://www.r-card-service.at/content/dam/rbi/cardservice/dokumente/kreditkartentausch/2025-05-16-RBI-Kreditkarten-Preis_Leistungsuebersicht-(BaFG).pdf.coredownload.pdf",
    "stand": "2026-10-11",
    "geprueft": "2026-10-11",
@@ -1798,7 +1798,7 @@
     "Bargeld am Automaten kostet 0,35 € + 3 %",
     "Nur mit Konto beim Anbieter"
    ],
-   "quelle": "https://www.raiffeisen.at/ooe/de/privatkunden/karte/kreditkarte.html",
+   "quelle": "https://www.r-card-service.at/de/privat/kreditkarten/platinum.html",
    "preis": "https://www.r-card-service.at/content/dam/rbi/cardservice/dokumente/kreditkartentausch/2025-05-16-RBI-Kreditkarten-Preis_Leistungsuebersicht-(BaFG).pdf.coredownload.pdf",
    "stand": "2026-10-11",
    "geprueft": "2026-10-11",
@@ -2608,8 +2608,8 @@
     "Bargeld am Automaten kostet 0,35 € + 3 % (in Fremdwährung zusätzlich 1,35 %)",
     "Nur mit Konto beim Anbieter"
    ],
-   "quelle": "https://www.raiffeisen.at/ooe/de/privatkunden/karte/kreditkarte.html",
-   "preis": null,
+   "quelle": "https://www.bankdirekt.at/de/produkte/giro-und-karten/kreditkarte.html",
+   "preis": "https://www.bankdirekt.at/de/service/konditionen.html",
    "stand": "2026-10-14",
    "geprueft": "2026-10-14",
    "versicherung": null,
@@ -2652,8 +2652,8 @@
     "Bargeld am Automaten kostet 0,35 € + 3 % (in Fremdwährung zusätzlich 1,35 %)",
     "Nur mit Konto beim Anbieter"
    ],
-   "quelle": "https://www.raiffeisen.at/ooe/de/privatkunden/karte/kreditkarte.html",
-   "preis": null,
+   "quelle": "https://www.bankdirekt.at/de/produkte/giro-und-karten/kreditkarte.html",
+   "preis": "https://www.bankdirekt.at/de/service/konditionen.html",
    "stand": "2026-10-14",
    "geprueft": "2026-10-14",
    "versicherung": "Reiseversicherung inkl. Storno",
@@ -2696,8 +2696,8 @@
     "Bargeld am Automaten kostet 0,35 € + 3 % (in Fremdwährung zusätzlich 1,35 %)",
     "Nur mit Konto beim Anbieter"
    ],
-   "quelle": "https://www.raiffeisen.at/ooe/de/privatkunden/karte/kreditkarte.html",
-   "preis": null,
+   "quelle": "https://www.bankdirekt.at/de/produkte/giro-und-karten/kreditkarte.html",
+   "preis": "https://www.bankdirekt.at/de/service/konditionen.html",
    "stand": "2026-10-14",
    "geprueft": "2026-10-14",
    "versicherung": "Umfassender Reiseschutz",

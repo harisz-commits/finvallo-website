@@ -12,64 +12,98 @@
  ],
  "anbieter": {
   "advanzia": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
+   "gruendung": "2005 gegründet, Sitz in Munsbach (Luxemburg).",
+   "lizenz_aufsicht": "Luxemburgische Bank (Advanzia Bank S.A.), beaufsichtigt von der Commission de Surveillance du Secteur Financier (CSSF).",
+   "einlagensicherung": "Die Kreditkarte ist kein Einlagenkonto. Advanzia bietet laut eigener Website zusätzlich ein Einlagenkonto an, das von der staatlichen Einlagensicherung gedeckt ist.",
    "kundenservice": "",
-   "besonderheiten": "",
+   "besonderheiten": "Advanzia ist laut eigener Angabe auf Kreditkarten spezialisiert und neben Deutschland u. a. in Luxemburg, Österreich, Spanien und Italien tätig; in Österreich wird die free Mastercard Gold über free.at angeboten.",
    "kritik": "",
    "fuer_wen": "",
-   "quellen": []
+   "quellen": [
+    "https://www.advanzia.com/en/about-us",
+    "https://www.advanzia.com/en/legal",
+    "https://www.advanzia.com/en/private-customers"
+   ]
   },
   "american-express": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
+   "gruendung": "American Express entstand am 8. März 1850 in den USA; seit 1929 in Österreich vertreten, die erste American Express Karte in Österreich gab es 1985.",
+   "lizenz_aufsicht": "Kartenherausgeberin ist die American Express Europe S.A. – Austrian Branch (Wien), Zweigniederlassung einer spanischen Aktiengesellschaft mit Sitz in Madrid; Erlaubnis der Banco de España zur Erbringung von Zahlungsdiensten, in Österreich ist zusätzlich die FMA zuständig.",
+   "einlagensicherung": "American Express Europe S.A. hält laut Impressum eine Erlaubnis für Zahlungsdienste; die Karten sind kein Einlagenkonto.",
+   "kundenservice": "Telefonischer Kundenservice, Online Services und die Amex App.",
+   "besonderheiten": "American Express gibt die Karten im eigenen Kartennetz heraus; neben eigenen Karten gibt es in Österreich Co-Branding-Karten mit BMW.",
    "kritik": "",
    "fuer_wen": "",
-   "quellen": []
+   "quellen": [
+    "https://www.americanexpress.com/at/legal/impressum.html",
+    "https://www.americanexpress.com/de-at/firma/unternehmensinformation/",
+    "https://www.americanexpress.com/at/legal/terms-and-conditions/"
+   ]
   },
   "bank-austria": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
+   "gruendung": "Sitz in Wien; die UniCredit Bank Austria AG gehört zu 99,996 % der italienischen UniCredit S.p.A.",
+   "lizenz_aufsicht": "Österreichisches Kreditinstitut (UniCredit Bank Austria AG) unter Aufsicht der Finanzmarktaufsicht (FMA). Die Kreditkarten gibt die Bank seit 2025 selbst aus (zuvor über card complete).",
+   "einlagensicherung": "Die UniCredit Bank Austria ist Mitglied der Einlagensicherung AUSTRIA; Einlagen sind bis 100.000 € pro Kunde gesichert.",
+   "kundenservice": "Filialen, MobileBanking App, Chatbot und Hilfe-&-Kontakt-Bereich auf der Website.",
+   "besonderheiten": "Alle aktuellen Privatkarten sind Mastercard-Kreditkarten (Classic, Gold, Gold Student, Platinum, World; World Elite im Private Banking). Seit 2025 bietet die Bank Kartenausgabe und Händlerakzeptanz selbst an.",
    "kritik": "",
    "fuer_wen": "",
-   "quellen": []
+   "quellen": [
+    "https://www.bankaustria.at/kreditkarte-beantragen.jsp",
+    "https://www.bankaustria.at/rechtliches-impressum.jsp",
+    "https://www.bankaustria.at/en/about-us-press-releases_81168.jsp",
+    "https://www.einlagensicherung.at/de/ba-list.php"
+   ]
   },
   "bank-direkt": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
+   "gruendung": "Bank Direkt ist die Direktbank der Raiffeisenlandesbank Oberösterreich AG (Sitz Linz), deren Geschichte laut eigener Angabe bis 1900 zurückreicht.",
+   "lizenz_aufsicht": "Anbieterin ist die Raiffeisenlandesbank Oberösterreich AG (österreichisches Kreditinstitut unter Aufsicht der FMA und OeNB); die Kreditkarten selbst stammen von der Raiffeisen Bank International AG.",
+   "einlagensicherung": "Die Raiffeisenlandesbank Oberösterreich ist Mitglied der Österreichischen Raiffeisen-Sicherungseinrichtung eGen (ÖRS); Einlagen sind bis 100.000 € pro Einleger und Kreditinstitut gesichert.",
+   "kundenservice": "Telefonischer Kundenservice (auch samstags), E-Mail, Kontaktformular und Mein ELBA; persönliche Termine in Linz nur nach Vereinbarung.",
+   "besonderheiten": "Classic, Gold und Platinum gibt es als Mastercard oder Visa; die Karten sind dieselben Raiffeisen-Kreditkarten (RBI) mit Bank-Direkt-Konditionen.",
    "kritik": "",
-   "fuer_wen": "",
-   "quellen": []
+   "fuer_wen": "Für Kundinnen und Kunden mit Bank Direkt Girokonto, weil dieses für die Bestellung einer Bank Direkt Kreditkarte vorausgesetzt wird.",
+   "quellen": [
+    "https://www.bankdirekt.at/de/produkte/giro-und-karten/kreditkarte.html",
+    "https://www.bankdirekt.at/de/home/agb-und-impressum.html",
+    "https://www.bankdirekt.at/de/ueber-uns/kontakt.html",
+    "https://www.bankdirekt.at/de/service/konditionen.html",
+    "https://www.raiffeisen.at/ooe/rlb/de/meine-bank/standorte-und-ansprechpartner/125-rlb.html",
+    "https://www.raiffeisen-einlagensicherung.at/de/einlagensicherung.html",
+    "https://www.raiffeisen-einlagensicherung.at/de/einlagensicherung/_jcr_content/root/responsivegrid/contentcontainer/contentbox/downloadlist_copy.download.html/0/Liste%20der%20Raiffeisenbanken.pdf"
+   ]
   },
   "bank99": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
-   "kritik": "",
-   "fuer_wen": "",
-   "quellen": []
+   "gruendung": "Sitz in Wien; seit April 2020 am Markt, Ende 2021 Übernahme des Privatkundengeschäfts der ING in Österreich. Eigentümer sind die Österreichische Post AG (90 %) und die Schelhammer Capital Bank AG (10 %).",
+   "lizenz_aufsicht": "Österreichische Bank (bank99 AG); im Impressum werden EZB und FMA als zuständige Aufsichtsbehörden genannt. Bei den Kreditkarten tritt bank99 nur als Vermittlerin auf, der Vertrag kommt mit der card complete Service Bank AG zustande.",
+   "einlagensicherung": "Die bank99 ist Mitglied der Einlagensicherung AUSTRIA; Einlagen sind bis 100.000 € pro Kunde gesichert. Die Kreditkarte selbst ist kein Einlagenkonto.",
+   "kundenservice": "Telefonischer Kundenservice, rund 1.700 Post-Geschäftsstellen und die App; für Kreditkartenfragen der Kundenservice von card complete.",
+   "besonderheiten": "Angeboten werden die Mastercard-Modelle Classic ohne Versicherung, Gold und Platinum von card complete.",
+   "kritik": "Da die Karten von card complete ausgegeben werden, gilt die AK-Rückerstattungsaktion nach dem OGH-Urteil 5 Ob 191/24k zum Fremdwährungs-Bearbeitungsentgelt auch für diese Karten (betrifft laut AK alle von card complete ausgegebenen Kreditkarten).",
+   "fuer_wen": "Für Kontokundinnen und -kunden der bank99, weil die Kreditkarte zu einem bank99-Konto bestellt wird.",
+   "quellen": [
+    "https://bank99.at/kreditkarten",
+    "https://bank99.at/impressum",
+    "https://bank99.at/ueber-uns",
+    "https://bank99.at/kontakt",
+    "https://www.einlagensicherung.at/de/ba-list.php",
+    "https://wien.arbeiterkammer.at/cardcomplete"
+   ]
   },
   "bawag": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
-   "kritik": "",
-   "fuer_wen": "",
-   "quellen": []
+   "gruendung": "Sitz in Wien; die BAWAG P.S.K. gehört zur börsennotierten BAWAG Group AG mit Sitz in Wien.",
+   "lizenz_aufsicht": "Österreichische Bank (BAWAG P.S.K. Bank für Arbeit und Wirtschaft und Österreichische Postsparkasse AG); zuständige Aufsichtsbehörden sind die Europäische Zentralbank (EZB) und die Finanzmarktaufsicht (FMA).",
+   "einlagensicherung": "Die BAWAG P.S.K. ist Mitglied der Einlagensicherung AUSTRIA; Einlagen sind bis 100.000 € pro Kunde gesichert.",
+   "kundenservice": "Filialen, Telefon und E-Mail, Chat auf der Website sowie eBanking und BAWAG App.",
+   "besonderheiten": "Die Kreditkarten (WEISS, GOLD, GOLD für Studenten) sind Mastercard-Karten. Zur BAWAG P.S.K. gehören auch die Marken easybank und PayLife.",
+   "kritik": "Der VKI hat im Auftrag des Sozialministeriums eine Verbandsklage gegen die easybank (heute BAWAG P.S.K.) gewonnen; der OGH erklärte u. a. Entgeltklauseln zur Co-branded MasterCard für gesetzwidrig. 2022 einigten sich VKI und BAWAG P.S.K. auf Rückerstattungen (u. a. Ersatzkartenentgelt, Manipulationsentgelt für Fremdwährungs-/Nicht-EU-Transaktionen).",
+   "fuer_wen": "Für Kundinnen und Kunden mit BAWAG-Konto, weil die Kreditkarte zum BAWAG-Konto im eBanking beantragt wird.",
+   "quellen": [
+    "https://www.bawag.at/bawag/impressum",
+    "https://www.bawag.at/bawag/privatkunden/kreditkarte",
+    "https://www.bawaggroup.com/de/ueber-uns",
+    "https://www.einlagensicherung.at/de/ba-list.php",
+    "https://vki.at/system/files/2022-03/2022-03-22_PA_BAWAG_Entgeltrueckerstattung.pdf"
+   ]
   },
   "bitpanda": {
    "gruendung": "",
@@ -92,94 +126,148 @@
    "quellen": []
   },
   "card-complete": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
-   "kritik": "",
+   "gruendung": "Sitz in Wien; laut eigener Angabe seit mehr als 40 Jahren am österreichischen Kartenmarkt. Seit September 2025 hält die EAVISTA Beteiligungsverwaltungs GmbH 75,1 % (zuvor UniCredit Bank Austria 50,1 % und Raiffeisen Bank International 25 %), 24,9 % hält die AVZ Privatstiftung.",
+   "lizenz_aufsicht": "Österreichisches Kreditinstitut (card complete Service Bank AG) gemäß Bankwesengesetz, beaufsichtigt von der Finanzmarktaufsicht (FMA).",
+   "einlagensicherung": "card complete ist Mitglied der Einlagensicherung AUSTRIA; die angebotenen Produkte sind Kredit- und Prepaid-Karten, kein Spar- oder Girokonto.",
+   "kundenservice": "Telefonischer Kundenservice an Werktagen, Kontaktformular, 24-Stunden-Sperrhotline sowie die App bzw. das Portal complete Control.",
+   "besonderheiten": "card complete gibt Kreditkarten von Visa, Mastercard und exklusiv Diners Club aus und betreibt auch Kartenakzeptanz für Händler. Die Kreditkartenportfolios von Bank Austria und Raiffeisen Bank International gehen laut Ankündigung von 2025 an diese Banken zurück; andere Portfolios (z. B. ÖAMTC, Miles & More, Diners Club) bleiben bei card complete.",
+   "kritik": "Der OGH (5 Ob 191/24k) hat nach einer Verbandsklage der AK das Bearbeitungsentgelt für Fremdwährungstransaktionen von 1,65 % in Kombination mit einem Wechselkursabschlag als intransparent und unzulässig beurteilt. AK und card complete haben eine Rückerstattungsaktion für Privatkarten vereinbart (Visa/Mastercard ab 1. August 2018, Diners Club ab 1. März 2015).",
    "fuer_wen": "",
-   "quellen": []
+   "quellen": [
+    "https://www.cardcomplete.com/impressum/",
+    "https://www.cardcomplete.com/ueber-card-complete/unternehmen/",
+    "https://www.cardcomplete.com/service/kontakt/",
+    "https://www.cardcomplete.com/rueckzahlungsersuchen/",
+    "https://wien.arbeiterkammer.at/cardcomplete",
+    "https://www.bankaustria.at/en/about-us-press-releases_81168.jsp",
+    "https://www.leadersnet.at/news/86800,card-complete-bekommt-neue-mehrheitseigentuemerin.html",
+    "https://www.einlagensicherung.at/de/ba-list.php"
+   ]
   },
   "diners-club": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
-   "kritik": "",
+   "gruendung": "Diners Club International wurde 1950 gegründet; in Österreich ist die Marke seit den 1960er-Jahren vertreten.",
+   "lizenz_aufsicht": "In Österreich gibt die card complete Service Bank AG (Wien) die Diners Club Karten aus; österreichisches Kreditinstitut unter Aufsicht der Finanzmarktaufsicht (FMA).",
+   "einlagensicherung": "Die Diners Club Karten sind Kreditkarten und kein Einlagenkonto; die Herausgeberin card complete ist Mitglied der Einlagensicherung AUSTRIA.",
+   "kundenservice": "Telefonische Hotline für Diners Club Privatkarten und eigene Diners-Sperrnummern über card complete sowie das Online-E-Konto.",
+   "besonderheiten": "Diners Club läuft im eigenen Kartennetz; card complete ist in Österreich exklusive Herausgeberin der Marke.",
+   "kritik": "Die AK-Verbandsklage gegen card complete (OGH 5 Ob 191/24k) zum Bearbeitungsentgelt für Fremdwährungstransaktionen umfasst auch Diners Club Karten; Rückerstattung für Transaktionen ab 1. März 2015.",
    "fuer_wen": "",
-   "quellen": []
+   "quellen": [
+    "https://www.cardcomplete.com/diners-club/uber-diners-club/",
+    "https://www.cardcomplete.com/diners-club/privatkarten/classic-card/",
+    "https://www.cardcomplete.com/ueber-card-complete/unternehmen/",
+    "https://www.cardcomplete.com/service/kontakt/",
+    "https://www.cardcomplete.com/rueckzahlungsersuchen/",
+    "https://wien.arbeiterkammer.at/cardcomplete"
+   ]
   },
   "easybank": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
-   "kritik": "",
-   "fuer_wen": "",
-   "quellen": []
+   "gruendung": "easybank ist eine Marke der BAWAG P.S.K. mit Sitz in Wien.",
+   "lizenz_aufsicht": "Anbieterin ist die BAWAG P.S.K. (österreichische Bank); zuständige Aufsichtsbehörden sind die Europäische Zentralbank (EZB) und die Finanzmarktaufsicht (FMA).",
+   "einlagensicherung": "Die BAWAG P.S.K. (Marke easybank) ist Mitglied der Einlagensicherung AUSTRIA; Einlagen sind bis 100.000 € pro Kunde gesichert.",
+   "kundenservice": "Direktbank ohne Filialservice: Kundenservice Center per E-Mail und Telefon, Chat auf der Website sowie eBanking und App.",
+   "besonderheiten": "Die easy kreditkarte und easy kreditkarte gold haben eine Teilzahlungsfunktion; die Gold-Karte enthält eine Reiseschutzversicherung.",
+   "kritik": "Der VKI hat eine Verbandsklage gegen die easybank gewonnen; der OGH erklärte u. a. Entgeltklauseln zur Co-branded MasterCard für gesetzwidrig. 2022 vereinbarten VKI und BAWAG P.S.K. Rückerstattungen für betroffene Kundinnen und Kunden.",
+   "fuer_wen": "Für easybank-Kontokundinnen und -kunden, weil die günstigen Kartenkonditionen an easybank-Girokonten (easy gratis, easy plus) geknüpft sind.",
+   "quellen": [
+    "https://www.easybank.at/easybank/impressum",
+    "https://www.easybank.at/easybank/kreditkarten",
+    "https://www.einlagensicherung.at/de/ba-list.php",
+    "https://vki.at/system/files/2022-03/2022-03-22_PA_BAWAG_Entgeltrueckerstattung.pdf"
+   ]
   },
   "erste": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
+   "gruendung": "1819 als „Erste Oesterreichische Spar-Casse“ in Wien gegründet; Sitz der Erste Bank der oesterreichischen Sparkassen AG ist Wien.",
+   "lizenz_aufsicht": "Österreichisches konzessioniertes Kreditinstitut; zuständige Aufsichtsbehörden sind die Europäische Zentralbank (EZB) und die Finanzmarktaufsicht (FMA).",
+   "einlagensicherung": "Einlagen sind über die Sparkassen-Haftungs GmbH (Haftungsverbund, seit 1.1.2019 als Einlagensicherungssystem anerkannt) bis 100.000 € pro Kunde und Bank gesichert.",
+   "kundenservice": "Filialen, Online-Banking George und George-App (inkl. Kartensperre und Kontakt zur Kundenbetreuung) sowie telefonisches 24h-Service.",
+   "besonderheiten": "Smartcard und Premiumcard gibt es jeweils als Mastercard oder Visa; die Austrian Miles & More Premiumcard ist eine Co-Branding-Karte.",
    "kritik": "",
-   "fuer_wen": "",
-   "quellen": []
+   "fuer_wen": "Für Kundinnen und Kunden mit Girokonto bei Erste Bank oder Sparkasse, weil die Kartenentgelte vom Girokonto abgebucht werden.",
+   "quellen": [
+    "https://www.sparkasse.at/erstebank/privatkunden/konto-karten/s-kreditkarten",
+    "https://www.sparkasse.at/erstebank/wir-ueber-uns/impressum",
+    "https://www.sparkasse.at/erstebank/wir-ueber-uns",
+    "https://www.sparkasse.at/content/dam/at/spk-erstebank/rechtliches/MIFID-oesterreich.pdf"
+   ]
   },
   "n26": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
+   "gruendung": "2013 in Berlin gegründet, Sitz in Berlin.",
+   "lizenz_aufsicht": "Deutsche Bank mit Vollbanklizenz (N26 Bank SE), beaufsichtigt von der Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin).",
+   "einlagensicherung": "Guthaben auf dem N26 Konto ist laut N26 bis 100.000 € durch die deutsche Einlagensicherung geschützt.",
+   "kundenservice": "Support über die App und Internet-Chat sowie das Online-Hilfecenter.",
+   "besonderheiten": "Die Karten zu den N26 Konten sind Mastercard-Debitkarten, auch die Metal-Karte ist laut N26 keine Kreditkarte.",
    "kritik": "",
-   "fuer_wen": "",
-   "quellen": []
+   "fuer_wen": "Für Personen, die ein N26 Konto nutzen, weil die Karte eine Debitkarte zum Konto ist und keine eigenständige Kreditkarte.",
+   "quellen": [
+    "https://n26.com/de-at/impressum",
+    "https://n26.com/de-at/ueber-n26",
+    "https://n26.com/de-at/metal",
+    "https://n26.com/de-at/blog/einlagensicherung-warum-dein-geld-auf-dem-girokonto-sicher-ist"
+   ]
   },
   "oberbank": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
+   "gruendung": "1869 als „Bank für Oberösterreich und Salzburg“ in Linz gegründet; Sitz in Linz.",
+   "lizenz_aufsicht": "Österreichisches Kreditinstitut (Oberbank AG) unter Aufsicht der Finanzmarktaufsicht (FMA).",
+   "einlagensicherung": "Die Oberbank ist Mitglied der Einlagensicherung AUSTRIA; Einlagen sind bis 100.000 € pro Kunde gesichert.",
+   "kundenservice": "Filialen und persönliche Berater, Oberbank Kundenportal und App sowie die digitale Filiale oDirekt.",
+   "besonderheiten": "Die Oberbank Mastercard Klassik und Gold gibt die Oberbank selbst aus; zusätzlich vertreibt sie PayLife-Karten der BAWAG P.S.K. (GoldPlus, Black, Platinum).",
    "kritik": "",
    "fuer_wen": "",
-   "quellen": []
+   "quellen": [
+    "https://www.oberbank.at/geschichte",
+    "https://www.oberbank.at/web/oberbank/e-commerce-gesetz",
+    "https://www.oberbank.at/kreditkarten",
+    "https://www.oberbank.at/documents/20373/28034/ipk_obkfactsheet.pdf",
+    "https://www.einlagensicherung.at/de/ba-list.php"
+   ]
   },
   "paylife": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
+   "gruendung": "PayLife ist eine Marke der BAWAG P.S.K. mit Sitz in Wien.",
+   "lizenz_aufsicht": "Kartenherausgeberin ist die BAWAG P.S.K. (österreichische Bank); zuständige Aufsichtsbehörden sind die Europäische Zentralbank (EZB) und die Finanzmarktaufsicht (FMA).",
+   "einlagensicherung": "Die PayLife-Karten sind Kreditkarten und kein Einlagenkonto; die BAWAG P.S.K. (Marken u. a. easybank, PayLife) ist Mitglied der Einlagensicherung AUSTRIA.",
+   "kundenservice": "PayLife Service Center per Telefon und E-Mail, Chat auf der Website, Serviceportal und PayLife App (Anruf direkt aus der App möglich).",
+   "besonderheiten": "PayLife-Karten werden auch über andere Banken vertrieben, etwa die Oberbank (PayLife GoldPlus, Black und Platinum mit Anbieter PayLife/BAWAG P.S.K.).",
    "kritik": "",
    "fuer_wen": "",
-   "quellen": []
+   "quellen": [
+    "https://www.paylife.at/paylife/impressum",
+    "https://www.paylife.at/paylife/privat/service/kontakt",
+    "https://www.oberbank.at/kreditkarten",
+    "https://www.einlagensicherung.at/de/ba-list.php"
+   ]
   },
   "raiffeisen": {
-   "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
-   "kundenservice": "",
-   "besonderheiten": "",
+   "gruendung": "Kartenherausgeberin ist die Raiffeisen Bank International AG mit Sitz in Wien; seit der Fusion mit ihrer früheren Mutter RZB im März 2017 ist sie Zentralinstitut der Raiffeisen Bankengruppe Österreich.",
+   "lizenz_aufsicht": "Die Raiffeisenbanken vermitteln die Kreditkarten nur; ausgegeben werden sie von der Raiffeisen Bank International AG, einem österreichischen Kreditinstitut unter Aufsicht der Finanzmarktaufsicht (FMA) und der Oesterreichischen Nationalbank.",
+   "einlagensicherung": "Die Raiffeisen Bank International ist Mitglied der Österreichischen Raiffeisen-Sicherungseinrichtung eGen (ÖRS); Einlagen sind bis 100.000 € pro Einleger und Kreditinstitut gesichert. Die Kreditkarte selbst ist kein Einlagenkonto.",
+   "kundenservice": "Beratung in der Raiffeisenbank, Bestellung über Mein ELBA sowie Kartenverwaltung über das Portal von Raiffeisen Card Service.",
+   "besonderheiten": "Classic, Gold und Platinum gibt es jeweils als Visa oder Mastercard; Gold und Platinum enthalten eine Reiseversicherung.",
    "kritik": "",
-   "fuer_wen": "",
-   "quellen": []
+   "fuer_wen": "Für Kundinnen und Kunden mit Raiffeisen-Girokonto, weil die Kreditkarten zum Raiffeisen-Konto angeboten und die Umsätze vom Bankkonto abgebucht werden.",
+   "quellen": [
+    "https://www.raiffeisen.at/de/privatkunden/karte/kreditkarte.html",
+    "https://www.raiffeisen.at/de/privatkunden/karte/kreditkarte/_jcr_content/root/responsivegrid/contentcontainer_648251558/contentbox/downloadlist.download.html/0/Produktinformationsblatt%20Kreditkarte.pdf",
+    "https://www.r-card-service.at/de/impressum.html",
+    "https://www.r-card-service.at/de/privat/kreditkarten.html",
+    "https://rbinternational.com/content/dam/rbi/ho/home/rbi-group/about-us/Factsheet_Q12024_DE.pdf.coredownload.pdf",
+    "https://www.raiffeisen-einlagensicherung.at/de/einlagensicherung.html",
+    "https://www.raiffeisen-einlagensicherung.at/de/einlagensicherung/_jcr_content/root/responsivegrid/contentcontainer/contentbox/downloadlist_copy.download.html/0/Liste%20der%20Raiffeisenbanken.pdf"
+   ]
   },
   "revolut": {
    "gruendung": "",
-   "lizenz_aufsicht": "",
-   "einlagensicherung": "",
+   "lizenz_aufsicht": "Litauische Bank (UAB „Revolut Bank“). Die ursprüngliche Banklizenz erteilte 2018 die Europäische Zentralbank (an die damalige Revolut Technologies UAB), wie die Bank of Lithuania mitteilte.",
+   "einlagensicherung": "UAB „Revolut Bank“ ist Mitglied des litauischen Einlagensicherungssystems (VĮ „Indėlių ir investicijų draudimas“); gesichert sind bis 100.000 € pro Einleger und Kreditinstitut.",
    "kundenservice": "",
    "besonderheiten": "",
    "kritik": "",
    "fuer_wen": "",
-   "quellen": []
+   "quellen": [
+    "https://www.iidraudimas.lt/en/deposit-insurance-0/list-of-members/",
+    "https://www.iidraudimas.lt/en/deposit-insurance-0/deposit-insurance/",
+    "https://www.intellinews.com/lithuanian-central-bank-issues-banking-licence-to-fast-growing-fintech-company-revolut-153776/"
+   ]
   },
   "santander": {
    "gruendung": "",
