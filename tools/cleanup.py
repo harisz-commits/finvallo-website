@@ -136,6 +136,17 @@ def html(s):
     s = re.sub(r'<section class="facts box glance".*?</section>', glance, s, flags=re.S)
     return s
 
+# ---------- Favicons: PNG/ICO für Safari, Google-Suche und Homescreen ----------
+ICONS = ('<link rel="icon" href="/favicon.ico" sizes="48x48">'
+         '<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">'
+         '<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">'
+         '<link rel="manifest" href="/site.webmanifest">')
+def icons(s):
+    s = re.sub(r'<!--icons-->.*?<!--/icons-->', '', s)
+    m = re.search(r'<link rel="icon" href="[^"]*favicon\.svg[^"]*"[^>]*>', s)
+    if not m: return s
+    return s[:m.end()] + '<!--icons-->' + ICONS + '<!--/icons-->' + s[m.end():]
+
 # ---------- Kreditkarten-Finder (AT-SPA) ----------
 def spa(s):
     a = s.index('<script id="data" type="application/json">') + len('<script id="data" type="application/json">')
@@ -186,7 +197,7 @@ def main():
         if f.endswith('kreditkarten/rechner/index.html'):
             s = spa(s)
             if 'id="nozoom"' not in s: s = s.replace('<style>', '<style id="nozoom">input,select,textarea{font-size:max(16px,1em)!important}</style>\n<style>', 1)
-        if f.endswith('.html'): s = html(s)
+        if f.endswith('.html'): s = html(s); s = icons(s)
         if f.endswith('daten/kreditkarten.json'):
             d = json.loads(s)
             for c in d.get('karten', []):
