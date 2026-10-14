@@ -464,7 +464,7 @@ def list_item(c,P,base=''):
     return f'''<article class="item" id="it-{c.get("id") or c["slug"]}">
     <div class="ihead"><div style="display:flex;gap:10px;align-items:center">{rank}{'<span class="reco">★ Bestbewertet</span>' if c.get('rank')==1 else ''}</div></div>
     <div class="irow">{face(c)}<div style="min-width:0"><h3 class="iname"><a href="{base}{c["slug"]}/">{E(c["titel"])}</a></h3><div class="iprov">{E(c["anbieter"])}</div>{starrow(c)}</div></div>
-    <div class="tags">{f'<a class="tag best" href="{base}bestenlisten/{BEST[c["slug"]][2]}/">🏆 Platz {BEST[c["slug"]][0]+1} für {E(BEST[c["slug"]][1])}</a>' if c["slug"] in BEST else ''}<span class="tag typ">▭ {E(TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung",""))}</span><span class="tag kl">{E(c["klasse"])}</span>{'<span class="tag out">+ Girokonto</span>' if c.get('giro') else ''}{f'<span class="tag out">{E(c["netz"])}</span>' if c.get('netz') else ''}</div>
+    <div class="tags">{f'<a class="tag best" href="{base}bestenlisten/{BEST[c["slug"]][2]}/">🏆 Platz {BEST[c["slug"]][0]+1} für {E(BEST[c["slug"]][1])}</a>' if c["slug"] in BEST else ''}<span class="tag typ">▭ {E(TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung",""))}</span><span class="tag kl">{E({"Std":"Standard"}.get(c["klasse"],c["klasse"]))}</span>{'<span class="tag out">+ Girokonto</span>' if c.get('giro') else ''}{f'<span class="tag out">{E(c["netz"])}</span>' if c.get('netz') else ''}</div>
     <div class="stats"><div><small>Jahresgebühr</small>{st(c.get("fee")==0,fee)}</div><div><small>Zahlung Ausland</small>{st(c.get("fx")==0,fxT(c) if c.get("fx") is not None else "–")}</div><div><small>Bargeld Inland</small>{st(v==0,cash)}</div></div>
     {offer(c)}
     {f'<div class="earn"><span>Sammeln</span><b>{E(earn)}</b></div>' if earn else ""}
@@ -593,7 +593,7 @@ def datafile(cards):
     out=[]
     for c in cards:
         out.append({k:c.get(k) for k in ['id','slug','anbieter','herausgeber','name','titel','art','typ','klasse','netz','fee','fee1','feeNote','fx','fxText','cashText','soll','effz','rahmen','giro','auto','pay','tier','stars','note','rank','pros','cons','quelle','preis','stand','geprueft']}
-                   |{'versicherung':TIER[c['tier']][1] if c.get('tier') is not None else None,'url':f'https://finvallo.com/{L["code"]}/kreditkarten/{c["slug"]}/'})
+                   |{'klasse':{'Std':'Standard'}.get(c.get('klasse'),c.get('klasse')),'versicherung':TIER[c['tier']][1] if c.get('tier') is not None else None,'url':f'https://finvallo.com/{L["code"]}/kreditkarten/{c["slug"]}/'})
     os.makedirs(R+f'{L["code"]}/daten',exist_ok=True)
     json.dump({'quelle':f'https://finvallo.com/{L["code"]}/kreditkarten/','stand':L['stand'],'lizenz':'Frei nutzbar mit Quellenangabe Finvallo','karten':out},open(R+f'{L["code"]}/daten/kreditkarten.json','w'),ensure_ascii=False,indent=1)
 
