@@ -1,4 +1,4 @@
-# Finvallo – alle Suchmaschinen und KI-Assistenten sind willkommen.
+# Finvallo - alle Suchmaschinen und KI-Assistenten sind willkommen.
 User-agent: *
 Allow: /
 

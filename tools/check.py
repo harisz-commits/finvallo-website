@@ -69,6 +69,7 @@ for f in pages:
     body_ = re.sub(r'<script.*?</script>|<p class="src">.*?</p>', '', s[s.find('<body'):], flags=re.S)
     ds = set(re.findall(r'(?:Stand:|[Gg]eprüft am|geprüft bis|Aktualisiert am)\s*(\d{2}\.\d{2}\.\d{4})', re.sub(r'<[^>]+>', ' ', body_)))
     if len(ds) > 1: err.append(f'{rel}: mehrere Prüfdaten {sorted(ds)}')
+    if re.search('[\u2013\u2014\u2212]', s): err.append(f'{rel}: langer Strich (– — −) statt Bindestrich')
     t = re.search(r'<title>(.*?)</title>', s)
     if t: titles.setdefault(t.group(1), []).append(rel)
     d = re.search(r'<meta name="description" content="(.*?)"', s)
