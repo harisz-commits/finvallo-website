@@ -56,6 +56,9 @@ for f in pages:
         for m in re.finditer(r'[a-zäöüß][A-ZÄÖÜ]{2,}|\d(?!\d)[A-Za-zÄÖÜäöü]{2,}', tx):
             w = re.search(r'\S*$', tx[:m.start() + 1]).group(0) + tx[m.start() + 1:m.end()]
             if not any(a_ in tx[max(0, m.start() - 8):m.end() + 8] for a_ in GLUE_OK): err.append(f'{rel}: zusammengeklebt „{tx[max(0, m.start() - 10):m.end() + 10].strip()}“'); break
+    # B17.3: höchstens 35 Navigations-/Footer-Links (außerhalb von <main>)
+    outside = re.sub(r'<main\b.*?</main>', '', s[s.find('<body'):], flags=re.S)
+    if len(re.findall(r'<a\s', outside)) > 35: err.append(f'{rel}: {len(re.findall(r"<a\s", outside))} Links außerhalb von <main>')
     # B14.4: höchstens ein Prüf-/Stand-Datum je Seite
     body_ = re.sub(r'<script.*?</script>|<p class="src">.*?</p>', '', s[s.find('<body'):], flags=re.S)
     ds = set(re.findall(r'(?:Stand:|[Gg]eprüft am|geprüft bis|Aktualisiert am)\s*(\d{2}\.\d{2}\.\d{4})', re.sub(r'<[^>]+>', ' ', body_)))
