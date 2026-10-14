@@ -29,6 +29,7 @@ def card_data(land, cards):
         d = dict(fee=c.get('fee'), fx=c.get('fx'), cash=c.get('cash'), effz=c.get('effz'), tier=c.get('tier') or 0)
         if c.get('fee1') is not None and c.get('fee1') != c.get('fee'): d['fee1'] = c['fee1']
         if c.get('cashAus'): d['cashA'] = c['cashAus']
+        if c.get('cashText') and (c.get('cash') or [''])[0] == 'freeN': d['ct'] = re.sub(r'\s*\(.*?\)', '', c['cashText']).split(';')[0][:90]
         if c.get('cashFx'): d['cfx'] = c['cashFx']
         if x:
             d['pct'] = x.get('punkte_pro_100') or 0
@@ -36,7 +37,10 @@ def card_data(land, cards):
             if x.get('punkte_hinweis'): d['ph'] = x['punkte_hinweis']
             d['fix'] = [[g['name'], g['eur']] for g in x.get('extra') or [] if g.get('immer')]
             if (x.get('welcome') or {}).get('eur'): d['wel'] = [x['welcome']['eur'], x['welcome'].get('text') or '']
-            cr = sum(g['eur'] for g in x.get('credits') or [])
+            cr = sum(g['eur'] for g in x.get('credits') or [] if not g.get('ausland'))
+            crx = sum(g['eur'] for g in x.get('credits') or [] if g.get('ausland'))
+            if cr: d['crn'] = ', '.join(g['name'] for g in x.get('credits') or [] if not g.get('ausland'))
+            if crx: d['crx'] = round(crx, 2); prov.setdefault('crx', []).append(crx)
             sb = sum(g['eur'] for g in LO.priced(x, A))
             if cr: d['cr'] = round(cr, 2); prov['cr'].append(LO.tag(c))
             if sb: d['sb'] = round(sb, 2); prov['sb'].append(LO.tag(c))
@@ -50,17 +54,21 @@ def card_data(land, cards):
         if lg and lg.get('visits'):
             d['lg'] = dict(v=lim(lg['visits']), g=lim(lg.get('guests_free') or 0), w=1 if lg.get('scope') == 'wien' else 0, m=lg.get('min_umsatz') or 0)
         out[c['slug']] = d
-    tags = {k: ', '.join(dict.fromkeys(v)) for k, v in prov.items()}
+    tags = {k: ', '.join(dict.fromkeys(v)) for k, v in prov.items() if k != 'crx'}
+    if prov.get('crx'): tags['crx'] = max(prov['crx'])
     return dict(cards=out, lounge=A.get('lounge_eur', 30), vers=A.get('vers', {}), tiers={str(k): K.TIER[k][1] for k in range(1, 5)}), tags
 
 def box(land, tags, wien, page=False):
     sel = '<option value="0">nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
     lounge = ('<label>Lounge Wien pro Jahr<input type="number" min="0" max="200" value="0" data-r="wien"></label><label>Lounge Ausland pro Jahr<input type="number" min="0" max="200" value="0" data-r="lounge"></label>'
-              if wien else '<label>Lounge-Besuche pro Jahr<input type="number" min="0" max="200" value="0" data-r="lounge"></label>')
+              '<label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-r="guests"></label>'
+              if wien else '<label>Lounge-Besuche pro Jahr<input type="number" min="0" max="200" value="0" data-r="lounge"></label><label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-r="guests"></label>')
     cb = ''
-    if tags.get('cr'): cb += f'<label class="lc"><input type="checkbox" data-r="cr"><span>Guthaben der Karte voll nutzen <span class="mut">(nur {E(tags["cr"])})</span></span></label>'
-    if tags.get('sb'): cb += f'<label class="lc"><input type="checkbox" data-r="sb"><span>Partner-Abos nutzen, die du sonst selbst zahlen würdest <span class="mut">(nur {E(tags["sb"])})</span></span></label>'
-    cb += '<label class="lc"><input type="checkbox" data-r="wel"><span>Willkommensbonus mitrechnen <span class="mut">(nur im 1. Jahr)</span></span></label>'
+    if tags.get('cr'):
+        x = f'; Gourmet nur in Österreich, weitere {eur(tags["crx"])} € im Ausland möglich' if tags.get('crx') else ''
+        cb += f'<label class="lc"><input type="checkbox" data-r="cr"><span>Guthaben der Karte nutzen <span class="mut">(nur {E(tags["cr"])}{x})</span></span></label>'
+    if tags.get('sb'): cb += f'<label class="lc"><input type="checkbox" data-r="sb"><span>Partner-Abos nutzen, die du sonst selbst zahlen würdest <span class="mut">(nur {E(tags["sb"])}, gerechnet mit 60 % Nutzung)</span></span></label>'
+    cb += '<label class="lc"><input type="checkbox" data-r="wel"><span>Erstes Jahr rechnen <span class="mut">(mit Willkommensbonus und Aktionspreis)</span></span></label>'
     filt = ('<div class="lgrid rfilt"><label>Kartenart<select data-f="typ"><option value="">Alle Kartenarten</option><option value="Kreditkarte">Kreditkarte mit Teilzahlung</option><option value="Charge">Charge-Karte</option><option value="Debit">Debitkarte</option><option value="Prepaid">Prepaid-Karte</option></select></label>'
             '<label>Kartennetzwerk<select data-f="netz"><option value="">Alle Kartennetzwerke</option><option value="visa">Visa</option><option value="mastercard">Mastercard</option><option value="american express">American Express</option><option value="diners">Diners Club</option></select></label>'
             '<label>Jahresgebühr<select data-f="fee"><option value="">egal</option><option value="0">nur ohne Jahresgebühr</option><option value="100">bis 100 €</option><option value="300">bis 300 €</option></select></label></div>') if page else ''
@@ -69,14 +77,13 @@ def box(land, tags, wien, page=False):
     tag, cls = ('div', 'box lcalc rbox rpage') if page else ('details', 'box lcalc rbox')
     return f'''<!--rechnen--><{tag} class="{cls}" id="rbox"{' data-page="1"' if page else ''} hidden>
     {head}
-    <div class="lgrid"><label>Umsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-r="spend"></label>
-    <label>davon in Fremdwährung pro Jahr (€)<input type="number" min="0" step="100" value="1000" data-r="fxs"></label>
-    <label>Welches Jahr?<select data-r="jahr"><option value="0">Folgejahre (Normalpreis)</option><option value="1">1. Jahr (mit Aktion)</option></select></label>
-    <label>Bargeld Inland: Abhebungen pro Jahr<input type="number" min="0" max="300" value="0" data-r="cin"></label>
-    <label>Bargeld Ausland: Abhebungen pro Jahr<input type="number" min="0" max="300" value="0" data-r="cn"></label>
-    <label>Betrag je Abhebung (€)<input type="number" min="0" step="50" value="200" data-r="ca"></label>
-    {lounge}<label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-r="guests"></label>
-    <label>Reiseversicherung<select data-r="vers">{sel}</select></label></div>
+    <div class="lgrid two"><label>Umsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-r="spend"></label>
+    <label>Fremdwährung pro Jahr (€)<input type="number" min="0" step="100" value="1000" data-r="fxs"></label>
+    <label>Bargeld Inland: Anzahl pro Jahr<input type="number" min="0" max="300" value="0" data-r="cin"></label>
+    <label>Betrag je Abhebung Inland (€)<input type="number" min="0" step="50" value="200" data-r="cia"></label>
+    <label>Bargeld Ausland: Anzahl pro Jahr<input type="number" min="0" max="300" value="0" data-r="cn"></label>
+    <label>Betrag je Abhebung Ausland (€)<input type="number" min="0" step="50" value="200" data-r="ca"></label>
+    {lounge}{LO.vers_field('r')}</div>
     <div class="lchecks">{cb}</div>
     {filt}
     <p class="note" style="margin:0">Wir rechnen Punkte und Meilen mit 1 Cent, Hotelpunkte mit 0,4 Cent, einen Lounge-Besuch mit 30 € und die Reiseversicherung mit dem Preis einer eigenen Jahrespolizze. Fremdwährung heißt: Zahlungen und Abhebungen außerhalb des Euroraums. Unter jeder Karte siehst du, wie das Ergebnis zustande kommt.</p>
@@ -91,14 +98,14 @@ def page(land, cards, D, tags):
     d = f'Kreditkarten-Rechner {N}: {len(cards)} Karten mit Jahresgebühr, Auslandsgebühr, Bargeld, Cashback, Lounge und Versicherung für deine Nutzung durchgerechnet.'
     if len(d) > 158: d = d[:150].rsplit(' ', 1)[0] + ' …'
     def item(c):
-        st = f'<div class="stats"><div><small>Jahresgebühr</small><b>{"0 €" if c.get("fee") == 0 else (eur(c["fee"]) + " €") if c.get("fee") is not None else "–"}</b></div><div><small>Ausland</small><b>{E(K.k_fx(c))}</b></div><div><small>Bargeld</small><b>{E(K.k_cash(c))}</b></div></div>'
+        st = f'<div class="stats"><div><small>Jahresgebühr</small><b>{"0 €" if c.get("fee") == 0 else (eur(c["fee"]) + " €") if c.get("fee") is not None else "–"}</b></div><div><small>Zahlung Ausland</small><b>{E(K.k_fx(c))}</b></div><div><small>Bargeld Inland</small><b>{E(K.k_cash(c))}</b></div></div>'
         return (f'<article class="item ritem" data-typ="{c.get("typ") or ""}" data-netz="{E((c.get("netz") or "").lower())}" data-fee="{c["fee"] if c.get("fee") is not None else 99999}">'
                 f'<div class="rhead"><span class="rk" data-rank></span><div style="min-width:0"><h3 class="iname"><a href="../{c["slug"]}/">{E(c["titel"])}</a></h3><div class="iprov">{E(c["anbieter"])}</div></div>'
                 f'<label class="rcmpl"><input type="checkbox" data-cmp> Vergleichen</label></div>{st}<div class="ires" data-res hidden></div></article>')
     fq = [('Wie rechnet der Kreditkarten-Rechner?', 'Er zählt, was dir die Karte im Jahr bringt (Cashback, Punkte und Meilen, Lounge-Besuche, Reiseversicherung, Guthaben und Abos, die du wirklich nutzt) und zieht ab, was sie kostet (Jahresgebühr, Gebühren für Zahlungen in Fremdwährung und für Bargeld). Unter jeder Karte steht die ganze Rechnung.'),
           ('Was ist mit Fremdwährung gemeint?', 'Zahlungen und Abhebungen in einer anderen Währung als Euro, zum Beispiel im Urlaub außerhalb des Euroraums oder in Online-Shops, die in Dollar oder Pfund abrechnen. Im Euroraum fällt keine Fremdwährungsgebühr an.'),
           ('Warum stehen manche Karten weiter hinten, obwohl das Ergebnis gut ist?', 'Wenn für eine Karte eine Gebühr nicht bekannt ist oder ihre Reiseversicherung schwächer ist als die gewünschte, steht sie hinter den Karten mit vollständiger Rechnung. Das ist an der Karte gekennzeichnet.'),
-          ('Zählt der Willkommensbonus?', 'Nur, wenn du ihn anhakst. Er gilt meistens nur im ersten Jahr. Für die Frage, ob sich eine Karte dauerhaft lohnt, rechne mit den Folgejahren.')]
+          ('Zählt der Willkommensbonus?', 'Nur, wenn du „Erstes Jahr rechnen“ anhakst. Dann zählen der Willkommensbonus und ein Aktionspreis für das erste Jahr. Ohne Haken rechnet der Rechner mit dem Normalpreis der Folgejahre.')]
     ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Rechner', rel)],
                  [{"@type": "WebApplication", "name": f"Kreditkarten-Rechner {N}", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}},
                   {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in fq]}])

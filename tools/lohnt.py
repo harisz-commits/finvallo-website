@@ -285,6 +285,20 @@ def hub_data(cards, X, A):
     opts = sorted(keys.items(), key=lambda kv: (kv[1][0], kv[0].lower()))
     return dict(cards=out, lounge=A['lounge_eur'], vers=A['vers']), [(k, ', '.join(dict.fromkeys(v))) for k, v in opts]
 
+INFO = [('Basis-Reiseschutz', 'Vor allem eine Auslandsreise-Krankenversicherung, oft nur mit niedrigen Summen oder nur, wenn du die Reise mit der Karte bezahlt hast.'),
+        ('Reiseversicherung inkl. Storno', 'Dazu eine Stornoversicherung: Sie zahlt die Reisekosten, wenn du die Reise aus einem wichtigen Grund nicht antreten kannst, etwa bei Krankheit.'),
+        ('Umfassender Reiseschutz', 'Krankenversicherung, Storno, Reiseabbruch, Gepäck und meist eine Unfallversicherung, mit höheren Summen.'),
+        ('Premium-Reiseschutz', 'Wie umfassend, aber mit hohen Summen und oft mit Mietwagen-Schutz, Familie und Mitreisenden.')]
+
+def vers_info():
+    """Kleines Info-Feld, das die Stufen der Reiseversicherung erklärt."""
+    return ('<details class="tip"><summary aria-label="Was bedeuten die Stufen?">i</summary><div class="pop"><b>Die Stufen der Reiseversicherung</b>'
+            + ''.join(f'<p><b>{E(t)}:</b> {E(d)}</p>' for t, d in INFO) + '<p class="mut">Was eine Karte genau abdeckt, steht auf ihrer Seite unter „Versicherung“.</p></div></details>')
+
+def vers_field(attr):
+    sel = '<option value="0">nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
+    return f'<div class="fld"><span class="flab">Reiseversicherung {vers_info()}</span><select data-{attr}="vers" aria-label="Reiseversicherung">{sel}</select></div>'
+
 def filter_html(cards, X, A):
     data, opts = hub_data(cards, X, A)
     sel = '<option value="0">nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
@@ -295,7 +309,7 @@ def filter_html(cards, X, A):
   <div class="lgrid">{'<label>Lounge Wien pro Jahr<input type="number" min="0" max="200" value="0" data-in="wien"></label><label>Lounge Ausland pro Jahr<input type="number" min="0" max="200" value="0" data-in="lounge"></label>' if any(wien_only(x) for x in X.values()) else '<label>Lounge-Besuche im Jahr<input type="number" min="0" max="200" value="0" data-in="lounge"></label>'}
   <label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-in="guests"></label>
   <label>Umsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-in="spend"></label>
-  <label>Reiseversicherung<select data-in="vers">{sel}</select></label></div>
+  {vers_field('in')}</div>
   {f'<p class="note" style="margin:6px 0 0"><b>Guthaben und Abos, die du nutzen würdest</b> (Abos nur, wenn du sie sonst selbst bezahlen würdest)</p><div class="lchecks">{cb}</div>' if cb else ''}
   <label class="lc"><input type="checkbox" data-welcome> Willkommensbonus im ersten Jahr mitrechnen</label>
 </div>'''

@@ -30,7 +30,7 @@ def table(rows,cols,P):
     return f'<div class="tbl wide"><table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table></div>'
 COL=dict(karte=('Karte',lambda c,P:link(c,P)),
          fee=('Jahresgebühr',lambda c,P:'kostenlos' if c['fee']==0 else (f'{eur(c["fee"])} €' if c['fee'] is not None else '–')),
-         fx=('Ausland',lambda c,P:E(c['fxText'] if c['fx'] not in (0,None) else ('0 %' if c['fx']==0 else '–'))[:60]),
+         fx=('Zahlung Ausland',lambda c,P:E(c['fxText'] if c['fx'] not in (0,None) else ('0 %' if c['fx']==0 else '–'))[:60]),
          cash=('Bargeld',lambda c,P:E((c['cashText'] or '–')[:60])),
          ins=('Reiseversicherung',lambda c,P:TIERN.get(c['tier'],'–') if c['tier'] is not None else '–'),
          stars=('Bewertung',lambda c,P:f'{de1(c["stars"])} ★' if c.get('stars') is not None else '–'),
