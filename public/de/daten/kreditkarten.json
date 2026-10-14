@@ -296,7 +296,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 25,
+   "rank": 24,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -506,7 +506,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 47,
+   "rank": 46,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -557,7 +557,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 66,
+   "rank": 65,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -607,7 +607,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 71,
+   "rank": 70,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -709,7 +709,7 @@
    "tier": 3,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 22,
+   "rank": 21,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -760,7 +760,7 @@
    "tier": 0,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 18,
+   "rank": 17,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -1024,7 +1024,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 24,
+   "rank": 23,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -1173,7 +1173,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 34,
+   "rank": 33,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -1273,9 +1273,9 @@
    "auto": true,
    "pay": null,
    "tier": 0,
-   "stars": 3.6,
+   "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 61,
+   "rank": 74,
    "pros": [
     "Keine Jahresgebühr",
     "1 % Bonus auf den Umsatz als IKEA Aktionskarte (max. 30 € pro Jahr); 10 € Aktionskarte nach 6 erfolgreichen Lastschrifteinzügen",
@@ -1325,9 +1325,9 @@
    "auto": true,
    "pay": null,
    "tier": 2,
-   "stars": 4.0,
-   "note": "Gut",
-   "rank": 21,
+   "stars": 3.9,
+   "note": "Befriedigend",
+   "rank": 28,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Reiseversicherung inkl. Storno",
@@ -1377,9 +1377,9 @@
    "auto": true,
    "pay": null,
    "tier": 2,
-   "stars": 4.1,
+   "stars": 4.0,
    "note": "Gut",
-   "rank": 17,
+   "rank": 20,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -1427,9 +1427,9 @@
    "auto": true,
    "pay": null,
    "tier": 2,
-   "stars": 3.8,
+   "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 45,
+   "rank": 58,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -1913,7 +1913,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 62,
+   "rank": 61,
    "pros": [
     "Keine Jahresgebühr",
     "1 Meile pro 2 € Kartenumsatz; Meilen verfallen nach den normalen Miles & More Regeln",
@@ -2252,7 +2252,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 53,
+   "rank": 52,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "5 % Reisebonus auf Buchungen über Partner Urlaubsplus",
@@ -2303,7 +2303,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 41,
+   "rank": 40,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "5 % Reisebonus auf Buchungen über Partner Urlaubsplus",
@@ -2531,7 +2531,7 @@
    "tier": 0,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 19,
+   "rank": 18,
    "pros": [
     "Im 1. Jahr 0 € statt 24 €",
     "Keine Fremdwährungsgebühr",
@@ -2786,7 +2786,7 @@
    "tier": 3,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 56,
+   "rank": 55,
    "pros": [
     "Umfassender Reiseschutz",
     "1 Bonuspunkt pro 1 € (2 Punkte bei Reise/Restaurant), max. 20.000 Punkte/Jahr; 100 Punkte = 1 €, Einlösung ab 9.000 Punkten",
@@ -3071,7 +3071,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 57,
+   "rank": 56,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Priority-Pass-Mitgliedschaft inklusive",
@@ -3456,7 +3456,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 38,
+   "rank": 37,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -3602,7 +3602,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 40,
+   "rank": 39,
    "pros": [
     "Im 1. Jahr 0 € statt 72 €",
     "Bargeld ohne Automatengebühr",
@@ -3701,7 +3701,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 39,
+   "rank": 38,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Reiseschutz ohne Karteneinsatzpflicht",
@@ -3800,7 +3800,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 55,
+   "rank": 54,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Bis zu 7 % Rückerstattung nur auf Reisebuchungen über den ReisebuchungsService der Sparkasse (kein Cashback auf normale Einkäufe)",
@@ -3944,7 +3944,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 63,
+   "rank": 62,
    "pros": [
     "Keine Jahresgebühr",
     "Bis 4 % (Classic) bzw. 10 % (Gold) Reisebonus nur bei Buchung über vr-meinereise.de/Urlaubsplus – kein Cashback auf normale Einkäufe",
@@ -3993,7 +3993,7 @@
    "tier": 2,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 20,
+   "rank": 19,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Reiseversicherung inkl. Storno",
@@ -4137,7 +4137,7 @@
    "tier": null,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 68,
+   "rank": 67,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Kein Fremdwährungsentgelt",
@@ -4933,7 +4933,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 64,
+   "rank": 63,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "1 PAYBACK °Punkt pro 5 € Umsatz (ca. 0,2 %), zusätzlich die regulären Punkte bei PAYBACK-Partnern; kein Punkteverfall",
@@ -5080,7 +5080,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 65,
+   "rank": 64,
    "pros": [
     "Im 1. Jahr 0 € statt 46,80 €",
     "Kein Girokonto beim Anbieter nötig",
@@ -5180,7 +5180,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 54,
+   "rank": 53,
    "pros": [
     "Im 1. Jahr 0 € statt 70,80 €",
     "Reiseversicherung inkl. Storno",
@@ -5232,7 +5232,7 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 42,
+   "rank": 41,
    "pros": [
     "Im 1. Jahr 0 € statt 118,80 €",
     "Umfassender Reiseschutz",
@@ -5284,7 +5284,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 48,
+   "rank": 47,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -5437,7 +5437,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 43,
+   "rank": 42,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5686,7 +5686,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 33,
+   "rank": 32,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -5893,7 +5893,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 69,
+   "rank": 68,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5942,7 +5942,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 58,
+   "rank": 57,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -5995,7 +5995,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 49,
+   "rank": 48,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -6097,7 +6097,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 70,
+   "rank": 69,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6198,7 +6198,7 @@
    "tier": 2,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 72,
+   "rank": 71,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6252,7 +6252,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 73,
+   "rank": 72,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Kurs + 0,5 % 'Schutz vor Wechselkursschwankungen'); laut Preisblatt beim Free-Tarif nur für 1.000 € pro Jahr, danach 1,5 %)",
@@ -6398,7 +6398,7 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 44,
+   "rank": 43,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Kurs + 0,5 % 'Schutz vor Wechselkursschwankungen'))",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6798,7 +6798,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 51,
+   "rank": 50,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (ca. 0,47 % Umrechnungsgebühr EUR→USD zum Devisenmittelkurs (variabel, abhängig von Währung/Betrag; Stand 12.10.2026 per Wise-Preisrechner); 0 % bei Zahlung aus vorhandenem USD-Guthaben)",
@@ -6850,7 +6850,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 36,
+   "rank": 35,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -6901,7 +6901,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 37,
+   "rank": 36,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -6953,7 +6953,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 50,
+   "rank": 49,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7002,7 +7002,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 27,
+   "rank": 26,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7053,7 +7053,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 23,
+   "rank": 22,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7102,7 +7102,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 46,
+   "rank": 45,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7154,7 +7154,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 74,
+   "rank": 73,
    "pros": [
     "Keine Jahresgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7205,7 +7205,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 52,
+   "rank": 51,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7364,7 +7364,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 67,
+   "rank": 66,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7577,7 +7577,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 35,
+   "rank": 34,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7626,7 +7626,7 @@
    "auto": true,
    "pay": null,
    "tier": 0,
-   "stars": 3.7,
+   "stars": 3.6,
    "note": "Befriedigend",
    "rank": null,
    "pros": [
@@ -8020,7 +8020,7 @@
    "tier": 2,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 28,
+   "rank": 27,
    "pros": [
     "Niedrige Fremdwährungskosten (1,5 % außerhalb des Euroraums)",
     "Reiseversicherung inkl. Storno",
@@ -8067,7 +8067,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 26,
+   "rank": 25,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -8116,9 +8116,9 @@
    "auto": true,
    "pay": null,
    "tier": 0,
-   "stars": 3.8,
+   "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 32,
+   "rank": 44,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",

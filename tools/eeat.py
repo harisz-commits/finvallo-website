@@ -248,9 +248,7 @@ METH = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '
 def methodik(s, land):
     """B19: Grenzwerte wie im Code (score.py vergleicht mit <=), Marker für die offene Regel, Slots und Gültigkeitsdatum."""
     s = re.sub(r'(<(?:span|td)>)bis (?!einschließlich)([\d,]+ (?:%|€))(</(?:span|td)>)', r'\1bis einschließlich \2\3', s)
-    T = '<!-- TODO Methodik -->'
-    for a in ('Fehlt uns für ein Kriterium eine bestätigte Angabe', 'Fehlt eine bestätigte Angabe, zählt', 'Was wir nicht wissen, zählt'):
-        if a in s and T + a not in s: s = s.replace(a, T + a, 1)
+    s = s.replace('<!-- TODO Methodik -->', '')
     s = re.sub(r'<!--warum-->.*?<!--/warum-->', '', s, flags=re.S)
     w = (METH.get('warum_gewichte') or '').strip()
     blk = f'<!--warum--><h2>Warum diese Gewichte</h2><div class="prose"><p>{E(w)}</p></div><!--/warum-->' if w else '<!--warum--><!-- Slot „Warum diese Gewichte“: Text in tools/daten/methodik.json --><!--/warum-->'
