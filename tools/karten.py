@@ -824,13 +824,17 @@ def bestenlisten(cards,lists,other_lists):
         if not X: continue
         c=X[0]; s_=cat_stars(c,cat['w'])
         tiles+=f'<a class="catcard" href="{cat["k"]}/"><span class="ct">{E(cat["t"])}</span><b>{E(c["titel"])}</b><span>{stars(s_)} {de1(s_)}</span><small>{top_of(len(X))} · Liste ansehen →</small></a>'
+    from collections import Counter
+    firsts=Counter(lists[c['k']][0]['titel'] for c in CATS if lists[c['k']]); nl=sum(1 for c in CATS if lists[c['k']])
+    mt_,mc_=firsts.most_common(1)[0] if firsts else ('',0)
+    kurz=f'<div class="facts prose"><p><b>Kurz gesagt:</b> {nl} Bestenlisten für {N}, jede mit eigenen Gewichten. '+(f'Am häufigsten auf Platz 1 steht die {E(mt_)} ({mc_} von {nl} Listen).' if mc_>1 else f'Jede Liste hat eine andere Karte auf Platz 1.')+'</p></div>' if nl else ''
     t=f'Beste Kreditkarten {N} 2026 nach Kategorie | Finvallo'
     d=f'Die besten Kreditkarten in {N} für Reisen, ohne Jahresgebühr, ohne Auslandsgebühr, Meilen, Cashback, Lounges, Premium, Studierende und Debit.'
     ld=graph(base,t,d,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Bestenlisten',base)],[{"@type":"ItemList","name":f"Bestenlisten Kreditkarten {N}","itemListElement":[{"@type":"ListItem","position":i+1,"name":cat['h']+' in '+N,'url':f"https://finvallo.com/{base}{cat['k']}/"} for i,cat in enumerate(CATS) if lists[cat['k']]]}])
     why='''<h2>Warum steht eine Karte hier woanders als in der Gesamtwertung?</h2><div class="prose"><p>Die <a href="../">Gesamtwertung</a> gewichtet alle sieben Kriterien gleich für alle Karten. In den Bestenlisten zählt, was in der jeweiligen Kategorie wichtig ist. Eine teure Premiumkarte mit hohem Sammelwert kann deshalb bei „Meilen &amp; Punkte“ weit oben stehen und in der Gesamtwertung weiter hinten, weil dort die Jahresgebühr stärker zählt. Jede Liste zeigt ihre Gewichte.</p></div>'''
     write(base,head(t,d,base,P,ld,alt=alt(base))+f'''{HDR(P,base,swap(base))}
 <div class="wrap"><main id="app">
-<h1>Beste Kreditkarten in {N} nach Kategorie</h1><p class="lede">Manche Karten sind in einer Disziplin viel stärker als in der Gesamtwertung. Für jede Kategorie gewichten wir die Kriterien anders. Die Gewichte stehen jeweils dabei. Stand: {S}.</p><div class="catgrid">{tiles}</div>
+<h1>Beste Kreditkarten in {N} nach Kategorie</h1><p class="lede">Manche Karten sind in einer Disziplin viel stärker als in der Gesamtwertung. Für jede Kategorie gewichten wir die Kriterien anders. Die Gewichte stehen jeweils dabei. Stand: {S}.</p>{kurz}<div class="catgrid">{tiles}</div>
 {why}
 </main>
 {footer(P)}''')

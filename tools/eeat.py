@@ -287,6 +287,9 @@ def main():
         for attr in ('name="description"', 'property="og:description"'):
             s = re.sub(rf'(<meta {attr} content=")([^"]*)(">)', lambda m: m.group(1) + E(K.fit_desc(H.unescape(m.group(2)))) + m.group(3), s, count=1)
         if rel == 'ueber-uns/': s = ueber(s)
+        s = re.sub(r'\n?<link rel="alternate" type="application/json"[^>]*>', '', s)
+        if re.match(r'(at|de)/kreditkarten/(?:(?:alle|business|rechner)/|bestenlisten/(?:[a-z-]+/)?)?$', rel):
+            s = re.sub(r'(<link rel="canonical"[^>]*>)', lambda m: m.group(1) + f'\n<link rel="alternate" type="application/json" href="/{rel[:2]}/daten/kreditkarten.json" title="Kartendaten als JSON">', s, count=1)
         if rel in ('at/kreditkarten/methodik/', 'de/kreditkarten/methodik/'): s = methodik(s, rel[:2])
         if rel == 'impressum/':
             ph = SITE.get('phone') or ''
@@ -380,7 +383,27 @@ def main():
         t = open(p, encoding='utf-8').read()
         add = 'Betrieben von Haris (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/'
         if add not in t: t = re.sub(r'^(> .*)$', lambda m: m.group(1) + ' ' + add, t, count=1, flags=re.M)
+        # C25: einheitlicher Abschnitt „Zitieren“, Titel der Volltext-Datei mit dem jüngsten Prüfdatum
+        t = t.replace(' Bitte bei Zitaten die jeweilige Seiten-URL als Quelle angeben.', '')
+        t = re.sub(r'\n## Zitieren\n[^\n]*\n', '\n', t)
+        t = t.replace('\n## ', '\n## Zitieren\nBeim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.\n\n## ', 1)
+        if fn == 'llms-full.txt':
+            mx = max(c['geprueft'] for land in cards for c in cards[land].values() if c.get('geprueft'))
+            t = re.sub(r'\A# .*', f'# Finvallo – alle Kreditkarten in Österreich und Deutschland (Stand {dmy(mx)})', t, count=1)
         open(p, 'w', encoding='utf-8').write(t)
+    # C25.3: Volltext aufteilen, sobald er größer als 300 KB wird
+    full = R + 'llms-full.txt'
+    for x in ('llms-full-at.txt', 'llms-full-de.txt'):
+        if os.path.exists(R + x): os.remove(R + x)
+    if os.path.getsize(full) > 300 * 1024:
+        t = open(full, encoding='utf-8').read(); i = t.find('\n## Deutschland: Kreditkarten')
+        if i > 0:
+            open(R + 'llms-full-at.txt', 'w', encoding='utf-8').write(t[:i] + '\n')
+            open(R + 'llms-full-de.txt', 'w', encoding='utf-8').write(t.split('\n', 1)[0] + '\n' + t[i:])
+            lt = open(R + 'llms.txt', encoding='utf-8').read()
+            if 'llms-full-at.txt' not in lt:
+                lt = lt.rstrip() + '\n\n## Volltext\n- [Alle Karten Österreich](https://finvallo.com/llms-full-at.txt)\n- [Alle Karten Deutschland](https://finvallo.com/llms-full-de.txt)\n'
+                open(R + 'llms.txt', 'w', encoding='utf-8').write(lt)
     print('E-E-A-T:', n)
 
 if __name__ == '__main__': main()
