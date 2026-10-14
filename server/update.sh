@@ -15,3 +15,5 @@ elif [ "$ALT" != "$NEU" ]; then
   fi
   git -C "$DIR" diff --name-only "$ALT" "$NEU" -- public | python3 "$DIR/server/indexnow.py"
 fi
+# nginx-Konfiguration angleichen (Weiterleitungen, Cache-Header); ändert nur, wenn etwas fehlt
+python3 "$DIR/server/nginx-sync.py"
