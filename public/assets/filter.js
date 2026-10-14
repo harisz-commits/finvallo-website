@@ -7,6 +7,7 @@
   var q = box.querySelector('[data-q]'), typ = box.querySelector('[data-typ]'), netz = box.querySelector('[data-netz]'),
       sort = box.querySelector('[data-sort]'), count = box.querySelector('[data-count]'), reset = box.querySelector('[data-reset]');
   var chips = [].slice.call(box.querySelectorAll('[data-flag]'));
+  function nv(x) { var v = parseFloat(x.dataset.net); return isNaN(v) ? -1e9 : v; }
   function norm(s) { return (s || '').toLowerCase(); }
   function apply() {
     var on = chips.filter(function (c) { return c.getAttribute('aria-pressed') === 'true'; }).map(function (c) { return c.dataset.flag; });
@@ -21,6 +22,7 @@
     });
     var s = sort.value, arr = items.slice();
     if (s === 'fee') arr.sort(function (a, b) { return (+a.dataset.fee) - (+b.dataset.fee) || a.dataset.ord - b.dataset.ord; });
+    else if (s === 'net') arr.sort(function (a, b) { return ((+a.dataset.low || 0) - (+b.dataset.low || 0)) || (nv(b) - nv(a)) || a.dataset.ord - b.dataset.ord; });
     else if (s === 'name') arr.sort(function (a, b) { return norm(a.dataset.q).localeCompare(norm(b.dataset.q), 'de'); });
     else arr.sort(function (a, b) { return a.dataset.ord - b.dataset.ord; });
     arr.forEach(function (it) { list.appendChild(it); });
@@ -37,5 +39,6 @@
     q.value = ''; typ.value = ''; netz.value = ''; sort.value = 'rank'; apply();
   });
   box.hidden = false;
+  window.finvalloFilter = apply;
   apply();
 })();
