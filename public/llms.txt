@@ -1,6 +1,6 @@
 # Finvallo
 
-> Unabhängiger Finanzvergleich für Österreich und Deutschland. 77 Karten in Österreich und 165 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Stand: 14.10.2026. Betrieben von Haris (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/
+> Unabhängiger Finanzvergleich für Österreich und Deutschland. 77 Karten in Österreich und 162 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Stand: 14.10.2026. Betrieben von Haris (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/
 
 Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/at/ und /de/). Konditionen aus Deutschland gelten nicht für Österreich.
 
@@ -61,7 +61,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Firmenkreditkarten: das musst du wissen (Österreich)](https://finvallo.com/at/ratgeber/business/): Worauf Selbstständige und Firmen bei Firmenkreditkarten in Österreich achten sollten: Haftung, Abrechnung, Mitarbeiterkarten und Kosten.
 
 ## Deutschland: Kreditkarten
-- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 165 Karten, Stand 14.10.2026
+- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 162 Karten, Stand 14.10.2026
 - [Alle Karten nach Anbieter](https://finvallo.com/de/kreditkarten/alle/)
 - [Bestenlisten Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/): beste Karten nach Kategorie
 - [Bewertungsmethodik Deutschland](https://finvallo.com/de/kreditkarten/methodik/)
@@ -101,7 +101,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Punkte, Meilen und Cashback: der Einstieg (Deutschland)](https://finvallo.com/de/ratgeber/punkte/): Punkte, Meilen oder Cashback? Welche Programme es in Deutschland gibt (Membership Rewards, Miles & More, Payback) und wie viel sie bringen.
 - [Lohnt sich Punktesammeln mit Kreditkarte in Deutschland? (Deutschland)](https://finvallo.com/de/ratgeber/punkte-sammeln-de/): Amex-Boni bis 85.000 Punkte, 13 Transferpartner, Miles & More und Payback: was sich in Deutschland wirklich lohnt.
 - [Lounge-Zugang mit der Kreditkarte (Deutschland)](https://finvallo.com/de/ratgeber/lounges/): Welche Kreditkarten in Deutschland kostenlosen Zugang zu Flughafen-Lounges geben: Priority Pass, Besuche pro Jahr und Begleitpersonen.
-- [Visa, Mastercard oder American Express? (Deutschland)](https://finvallo.com/de/ratgeber/visa-mastercard-amex/): Visa, Mastercard oder American Express: Akzeptanz, Wechselkurse und Gebühren im Vergleich, mit Zahlen aus 137 Karten in Deutschland.
+- [Visa, Mastercard oder American Express? (Deutschland)](https://finvallo.com/de/ratgeber/visa-mastercard-amex/): Visa, Mastercard oder American Express: Akzeptanz, Wechselkurse und Gebühren im Vergleich, mit Zahlen aus 134 Karten in Deutschland.
 - [Kreditkarte für Mietwagen und Kaution (Deutschland)](https://finvallo.com/de/ratgeber/mietwagen-kaution/): Warum Autovermieter eine Kreditkarte für die Kaution wollen, was mit Debitkarten passiert und welche Karten in Deutschland Mietwagenschutz enthalten.
 - [Kreditkarte ohne Schufa: was wirklich geht (Deutschland)](https://finvallo.com/de/ratgeber/ohne-bonitaetspruefung/): Kreditkarte ohne Schufa? Was seriös geht, welche Debit- und Prepaid-Karten es in Deutschland ohne Kreditprüfung gibt und wovor du dich hüten solltest.
 - [Kredit-, Charge-, Debit- oder Prepaid-Karte? (Deutschland)](https://finvallo.com/de/ratgeber/kartentypen/): Kreditkarte, Charge-Karte, Debitkarte oder Prepaid-Karte: die vier Kartentypen in Deutschland einfach erklärt, mit Vor- und Nachteilen.

@@ -191,9 +191,9 @@ def ld_merge(s, extra=(), patch=None):
         except Exception: continue
         for x in (d.get('@graph') if isinstance(d, dict) and '@graph' in d else d if isinstance(d, list) else [d]):
             if isinstance(x, dict): x.pop('@context', None); items.append(x)
-    out = [dict(ORG), dict(PERSON)]
-    ids = {ORG['@id'], PERSON['@id']}; once = set()
-    for x in items:
+    # doppelte Knoten: der zuletzt erzeugte gewinnt (neuere Builds hängen ihre Daten hinten an)
+    ids = {ORG['@id'], PERSON['@id']}; once = set(); keep = []
+    for x in reversed(items):
         t = x.get('@type'); i = x.get('@id')
         if i and i in ids: continue
         if t in ('Organization', 'Person') and not i: continue
@@ -202,8 +202,8 @@ def ld_merge(s, extra=(), patch=None):
             once.add(t)
         if t == 'Product' and (i or '').endswith('#product'): continue
         if i: ids.add(i)
-        out.append(x)
-    out += list(extra)
+        keep.append(x)
+    out = [dict(ORG), dict(PERSON)] + keep[::-1] + list(extra)
     if patch: patch(out)
     g = json.dumps({"@context": "https://schema.org", "@graph": out}, ensure_ascii=False).replace('</', '<\\/')
     s = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', s, flags=re.S)
@@ -299,6 +299,7 @@ def main():
         if rel == 'de/':
             dd = f'Unabhängiger Finanzvergleich für Deutschland: {K.card_count("de", "all")} Kreditkarten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner.'
             s = re.sub(r'Kreditkarten in Deutschland: unabhängige Ratgeber zu Punkten, Meilen, Auslandsgebühren, Reiseversicherung und Kartentypen\. Der Kartenvergleich folgt\.', dd, s)
+            s = re.sub(r'Unabhängiger Finanzvergleich für Deutschland: \d+ Kreditkarten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner\.', dd, s)
         parts = rel.split('/')
         land = parts[0] if parts[0] in ('at', 'de') else None
         title = (re.search(r'<title>(.*?)</title>', s, re.S) or [None, ''])[1]

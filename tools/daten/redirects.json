@@ -24,8 +24,12 @@
  "/de/kreditkarten/anbieter/tf-bank/": "/de/kreditkarten/tf-bank-mastercard-gold/",
  "/de/kreditkarten/anbieter/trade-republic/": "/de/kreditkarten/trade-republic-karte/",
  "/de/kreditkarten/anbieter/trading-212/": "/de/kreditkarten/trading-212-card/",
+ "/de/kreditkarten/anbieter/tui/": "/de/kreditkarten/alle/",
  "/de/kreditkarten/anbieter/turkish-airlines/": "/de/kreditkarten/turkish-airlines-milesundsmiles-mastercard-gold/",
  "/de/kreditkarten/anbieter/unitplus/": "/de/kreditkarten/unitplus-mastercard/",
  "/de/kreditkarten/anbieter/webcent/": "/de/kreditkarten/web-cent-mastercard-gold-gmx-web-de/",
- "/de/kreditkarten/anbieter/wise/": "/de/kreditkarten/wise-debitkarte/"
+ "/de/kreditkarten/anbieter/wise/": "/de/kreditkarten/wise-debitkarte/",
+ "/de/kreditkarten/tui-card-classic/": "/de/kreditkarten/",
+ "/de/kreditkarten/tui-card-gold/": "/de/kreditkarten/",
+ "/de/kreditkarten/tui-card-titan/": "/de/kreditkarten/"
 }

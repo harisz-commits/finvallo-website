@@ -675,7 +675,7 @@
  },
  {
   "key": "tui-card-classic",
-  "status": "aktiv",
+  "status": "eingestellt",
   "anbieter": "TUI",
   "herausgeber": "Commerzbank AG",
   "p": "tui",
@@ -731,11 +731,12 @@
   "stand": "PLV Stand 06.10.2025 (Dokument HD1025-01, 22/07/26)",
   "sek": [],
   "notiz": "Commerzbank-Kooperationskarte. Apple/Google Pay nicht erwähnt. Teilzahlung über TUI FlexiFinanz optional (Sollzins ab 10,03 %).",
-  "geprueft": "2026-10-12"
+  "geprueft": "2026-10-12",
+  "status_quelle": "https://www.tui.com/tui-card/"
  },
  {
   "key": "tui-card-gold",
-  "status": "aktiv",
+  "status": "eingestellt",
   "anbieter": "TUI",
   "herausgeber": "Commerzbank AG",
   "p": "tui",
@@ -790,11 +791,12 @@
   "stand": "PLV Stand 06.10.2025 (Dokument HD1025-01, 22/07/26)",
   "sek": [],
   "notiz": "Commerzbank-Kooperationskarte. Apple/Google Pay nicht erwähnt.",
-  "geprueft": "2026-10-12"
+  "geprueft": "2026-10-12",
+  "status_quelle": "https://www.tui.com/tui-card/"
  },
  {
   "key": "tui-card-titan",
-  "status": "aktiv",
+  "status": "eingestellt",
   "anbieter": "TUI",
   "herausgeber": "Commerzbank AG",
   "p": "tui",
@@ -849,6 +851,7 @@
   "stand": "PLV Stand 06.10.2025 (Dokument HD1025-01, 22/07/26)",
   "sek": [],
   "notiz": "Laut einigen Portalen nicht mehr für Neukunden – auf tui.com aber weiterhin mit 'Hier beantragen' angeboten (Okt. 2026), daher aktiv. Klasse Premium wegen Preis/Namen, Versicherungsumfang aber nur tier 2.",
-  "geprueft": "2026-10-12"
+  "geprueft": "2026-10-12",
+  "status_quelle": "https://www.tui.com/tui-card/"
  }
 ]

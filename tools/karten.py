@@ -653,6 +653,10 @@ def anbieter_pages(cards,prov):
 {footer(P2)}''')
 def write_redirects():
     """301-Regeln aus REDIRECTS: tools/daten/redirects.json, server/redirects.conf (nginx, im Server-Block eingebunden) und public/.htaccess (Apache)."""
+    for a,b in list(ENTF.items()):
+        if os.path.isdir(R+a.strip('/')): del ENTF[a]   # Seite gibt es wieder
+        elif a not in REDIRECTS: REDIRECTS[a]=b
+    json.dump(dict(sorted(ENTF.items())),open(ENTF_P,'w'),ensure_ascii=False,indent=1)
     json.dump(dict(sorted(REDIRECTS.items())),open(os.path.join(SP,'daten','redirects.json'),'w'),ensure_ascii=False,indent=1)
     open(os.path.join(R,'..','server','redirects.conf'),'w').write('# automatisch erzeugt von tools/karten.py – nicht von Hand ändern\n'+''.join(f'location = {a} {{ return 301 {b}; }}\n' for a,b in sorted(REDIRECTS.items())))
     open(R+'.htaccess','w').write('# automatisch erzeugt von tools/karten.py (für Apache-Hosting)\nRewriteEngine On\nRewriteCond %{HTTP_HOST} ^www\\.finvallo\\.com$ [NC]\nRewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]\nRewriteCond %{HTTPS} off\nRewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]\n'+''.join(f'Redirect 301 {a} https://finvallo.com{b}\n' for a,b in sorted(REDIRECTS.items()))+'ErrorDocument 404 /404.html\n')
@@ -1016,16 +1020,21 @@ def prepare():
         if c['art']=='Privat' and c['titel'] in at:
             PAIR[('de',c['slug'])]=at[c['titel']]; PAIR[('at',at[c['titel']])]=c['slug']
     return DATA
+# Entfernte Seiten behalten dauerhaft ihren 301 (tools/daten/entfernt.json, wird von write_redirects übernommen)
+ENTF_P=os.path.join(SP,'daten','entfernt.json')
+ENTF=json.load(open(ENTF_P)) if os.path.exists(ENTF_P) else {}
 def clean_old(land,cards):
     keep={c['slug'] for c in cards}|RESERVED
     for d in os.listdir(R+f'{land}/kreditkarten/'):
         f=R+f'{land}/kreditkarten/{d}'
-        if os.path.isdir(f) and d not in keep: shutil.rmtree(f); print('entfernt',land,d)
+        if os.path.isdir(f) and d not in keep: shutil.rmtree(f); ENTF[f'/{land}/kreditkarten/{d}/']=f'/{land}/kreditkarten/'; print('entfernt',land,d)
     a=R+f'{land}/kreditkarten/anbieter/'
     if os.path.isdir(a):
         ps=PROVPAGE.get(land) or {c['p'] for c in cards}
         for d in os.listdir(a):
-            if os.path.isdir(a+d) and d not in ps: shutil.rmtree(a+d); print('entfernt',land,'anbieter',d)
+            if os.path.isdir(a+d) and d not in ps:
+                shutil.rmtree(a+d); print('entfernt',land,'anbieter',d)
+                if f'/{land}/kreditkarten/anbieter/{d}/' not in REDIRECTS: ENTF[f'/{land}/kreditkarten/anbieter/{d}/']=f'/{land}/kreditkarten/alle/'
         if os.path.exists(a+'index.html'): os.remove(a+'index.html')
 def main():
     global BEST

@@ -29,8 +29,12 @@ Redirect 301 /de/kreditkarten/anbieter/norisbank/ https://finvallo.com/de/kredit
 Redirect 301 /de/kreditkarten/anbieter/tf-bank/ https://finvallo.com/de/kreditkarten/tf-bank-mastercard-gold/
 Redirect 301 /de/kreditkarten/anbieter/trade-republic/ https://finvallo.com/de/kreditkarten/trade-republic-karte/
 Redirect 301 /de/kreditkarten/anbieter/trading-212/ https://finvallo.com/de/kreditkarten/trading-212-card/
+Redirect 301 /de/kreditkarten/anbieter/tui/ https://finvallo.com/de/kreditkarten/alle/
 Redirect 301 /de/kreditkarten/anbieter/turkish-airlines/ https://finvallo.com/de/kreditkarten/turkish-airlines-milesundsmiles-mastercard-gold/
 Redirect 301 /de/kreditkarten/anbieter/unitplus/ https://finvallo.com/de/kreditkarten/unitplus-mastercard/
 Redirect 301 /de/kreditkarten/anbieter/webcent/ https://finvallo.com/de/kreditkarten/web-cent-mastercard-gold-gmx-web-de/
 Redirect 301 /de/kreditkarten/anbieter/wise/ https://finvallo.com/de/kreditkarten/wise-debitkarte/
+Redirect 301 /de/kreditkarten/tui-card-classic/ https://finvallo.com/de/kreditkarten/
+Redirect 301 /de/kreditkarten/tui-card-gold/ https://finvallo.com/de/kreditkarten/
+Redirect 301 /de/kreditkarten/tui-card-titan/ https://finvallo.com/de/kreditkarten/
 ErrorDocument 404 /404.html
