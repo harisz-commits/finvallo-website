@@ -11,7 +11,9 @@
   var pct = function (v) { return v.toLocaleString('de-DE', { maximumFractionDigits: 2 }) + ' %'; };
   var sign = function (v) { return (v >= 0 ? '+' : '−') + eur(Math.abs(v)); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
-  var items = [].slice.call(document.querySelectorAll('#list article.item'));
+  var PAGE = !!box.dataset.page;
+  if (PAGE && /[?&]land=DE/i.test(location.search) && /\/at\//.test(location.pathname)) { location.replace(location.pathname.replace('/at/', '/de/')); return; }
+  var items = [].slice.call(document.querySelectorAll('#list article.item, #rlist article.item'));
   var sort = document.querySelector('#filt [data-sort]');
   if (sort && !sort.querySelector('option[value="net"]')) { var o = document.createElement('option'); o.value = 'net'; o.textContent = 'Nach deinem Ergebnis'; sort.appendChild(o); }
 
@@ -34,7 +36,7 @@
   }
 
   function calc(c) {
-    var S = num('spend') * 12, F = Math.min(num('fxs'), S || Infinity), n = num('cn'), a = num('ca');
+    var S = num('spend') * 12, F = Math.min(num('fxs'), S || Infinity), n = num('cn'), ni = num('cin'), a = num('ca'), y1 = (q('jahr') || {}).value === '1';
     var w = num('wien'), l = num('lounge'), g = num('guests'), lvl = +(q('vers') || { value: 0 }).value;
     var rows = [], plus = 0, minus = 0, inc = false;
     var add = function (t, v, d) { rows.push([t, v, d || '']); if (v >= 0) plus += v; else minus -= v; };
@@ -66,12 +68,19 @@
     if (lvl > 0 && !low) add('Reiseversicherung', D.vers[String(lvl)], 'statt eigener Polizze (' + D.tiers[String(lvl)] + ')');
     if (low) rows.push(['Reiseversicherung', 0, c.tier ? 'schwächer als gewünscht' : 'nicht enthalten', 1]);
     /* Kosten */
+    if (c.wel && q('wel') && q('wel').checked) add('Willkommensbonus', c.wel[0], c.wel[1]);
     if (c.fee === null || c.fee === undefined) return null;
-    add('Jahresgebühr', -c.fee);
+    var fee = y1 && c.fee1 !== undefined ? c.fee1 : c.fee;
+    add(y1 && c.fee1 !== undefined ? 'Jahresgebühr im 1. Jahr' : 'Jahresgebühr', -fee, y1 && c.fee1 !== undefined ? 'danach ' + eur2(c.fee) + ' im Jahr' : '');
     if (F) {
       if (c.fx === null || c.fx === undefined) { rows.push(['Fremdwährung', 0, 'Gebühr unbekannt, nicht gerechnet', 1]); inc = true; }
       else if (c.fx) add('Fremdwährungsgebühr', -F * c.fx / 100, pct(c.fx) + ' auf ' + eur(F));
       else rows.push(['Fremdwährungsgebühr', 0, '0 % auf ' + eur(F)]);
+    }
+    if (ni) {
+      var ci = cash(c, ni, a);
+      if (ci.v) add('Bargeld im Inland', -ci.v, ci.t); else rows.push(['Bargeld im Inland', 0, ci.t, ci.warn || ci.unk]);
+      if (ci.unk) inc = true;
     }
     if (n) {
       var cs = cash(c, n, a);
@@ -84,6 +93,7 @@
 
   function render(it, r) {
     var b = it.querySelector('[data-res]');
+    it._r = r;
     if (!r) { b.innerHTML = '<p class="note" style="margin:0">Jahresgebühr unbekannt, deshalb kein Ergebnis.</p>'; b.hidden = false; it.dataset.net = ''; it.dataset.low = 1; return; }
     it.dataset.net = Math.round(r.net); it.dataset.low = r.low ? 1 : 0;
     var rows = r.rows.map(function (x) {
@@ -95,7 +105,52 @@
     b.hidden = false;
   }
 
+  /* Kreditkarten-Rechner: Filter, Rangliste, Vergleich */
+  var list = document.getElementById('rlist');
+  function fv(k) { var e = box.querySelector('[data-f="' + k + '"]'); return e ? e.value : ''; }
+  function pageList() {
+    var typ = fv('typ'), netz = fv('netz'), fmax = fv('fee'), n = 0;
+    var arr = items.slice().sort(function (x, y) { return ((+x.dataset.low || 0) - (+y.dataset.low || 0)) || ((parseFloat(y.dataset.net) || -1e9) - (parseFloat(x.dataset.net) || -1e9)); });
+    arr.forEach(function (it) {
+      var ok = (!typ || it.dataset.typ === typ) && (!netz || (it.dataset.netz || '').indexOf(netz) >= 0) && (fmax === '' || +it.dataset.fee <= +fmax);
+      it.hidden = !ok; if (ok) { n++; it.querySelector('[data-rank]').textContent = n; } list.appendChild(it);
+    });
+    document.querySelector('[data-rcount]').textContent = n === 1 ? '1 Karte' : n + ' Karten';
+  }
+  var bar = document.getElementById('rcmpbar'), cmp = document.getElementById('rcmp');
+  function picked() { return items.filter(function (it) { var c = it.querySelector('[data-cmp]'); return c && c.checked; }); }
+  function cmpBar() {
+    if (!bar) return;
+    var p = picked(); bar.hidden = !p.length;
+    bar.querySelector('[data-cmpn]').textContent = p.length + (p.length === 1 ? ' Karte' : ' Karten') + ' ausgewählt' + (p.length < 2 ? ' (wähle mindestens 2)' : '');
+    bar.querySelector('[data-cmpgo]').disabled = p.length < 2;
+    items.forEach(function (it) { var c = it.querySelector('[data-cmp]'); if (c) c.disabled = !c.checked && p.length >= 4; });
+    if (!cmp.hidden) cmpShow();
+  }
+  function cmpShow() {
+    var p = picked().filter(function (it) { return it._r; });
+    if (p.length < 2) { cmp.hidden = true; return; }
+    var labels = [];
+    p.forEach(function (it) { it._r.rows.forEach(function (x) { if (labels.indexOf(x[0]) < 0) labels.push(x[0]); }); });
+    var cell = function (v) { return v ? '<b class="' + (v > 0 ? 'good' : 'bad') + '">' + sign(v) + '</b>' : '<span class="mut">–</span>'; };
+    var h = '<div class="rcmphead"><h2 style="margin:0">Vergleich</h2><button type="button" class="lnk" data-cmpx>Schließen</button></div><div class="tbl"><table><thead><tr><th></th>' +
+      p.map(function (it) { return '<th>' + esc(it.querySelector('h3').textContent) + '</th>'; }).join('') + '</tr></thead><tbody>' +
+      labels.map(function (l) { return '<tr><td>' + esc(l) + '</td>' + p.map(function (it) { var x = it._r.rows.filter(function (r) { return r[0] === l; })[0]; return '<td class="nw">' + (x ? (x[1] ? cell(x[1]) : '<span class="mut">' + (x[3] ? '!' : '0 €') + '</span>') : '<span class="mut">–</span>') + '</td>'; }).join('') + '</tr>'; }).join('') +
+      '<tr class="sum"><td>Ergebnis pro Jahr</td>' + p.map(function (it) { return '<td class="nw">' + cell(it._r.net) + '</td>'; }).join('') + '</tr></tbody></table></div>';
+    cmp.innerHTML = h; cmp.hidden = false;
+    cmp.querySelector('[data-cmpx]').onclick = function () { cmp.hidden = true; };
+  }
+  if (bar) {
+    items.forEach(function (it) { var c = it.querySelector('[data-cmp]'); if (c) c.addEventListener('change', cmpBar); });
+    bar.querySelector('[data-cmpgo]').addEventListener('click', function () { cmpShow(); cmp.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    bar.querySelector('[data-cmpclr]').addEventListener('click', function () { items.forEach(function (it) { var c = it.querySelector('[data-cmp]'); if (c) c.checked = false; }); cmp.hidden = true; cmpBar(); });
+  }
+
+  var last = '';
+  function state() { return [].map.call(box.querySelectorAll('input,select'), function (e) { return e.type === 'checkbox' ? e.checked : e.value; }).join('|') + (box.open ? 'o' : ''); }
   function run() {
+    var st = state(); if (st === last) return; last = st;
+    if (PAGE) { items.forEach(function (it) { var m = it.querySelector('h3.iname a'), c = D.cards[m.getAttribute('href').replace(/\/$/, '').split('/').pop()]; if (c) render(it, calc(c)); }); pageList(); if (cmp && !cmp.hidden) cmpShow(); return; }
     if (!box.open) { items.forEach(function (it) { var b = it.querySelector('[data-res]'); if (b) b.hidden = true; delete it.dataset.net; }); if (sort && sort.value === 'net') { sort.value = 'rank'; } if (window.finvalloFilter) window.finvalloFilter(); return; }
     items.forEach(function (it) {
       var m = it.querySelector('h3.iname a'); if (!m) return;
@@ -107,4 +162,5 @@
   }
   box.addEventListener('input', run); box.addEventListener('change', run); box.addEventListener('toggle', run);
   box.hidden = false;
+  if (PAGE) run();
 })();
