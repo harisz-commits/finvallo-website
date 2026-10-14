@@ -46,7 +46,7 @@ DATES={
     ('at','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-12'),
     ('at','kreditkarte-beantragen'): dict(published='2026-10-12', updated='2026-10-12'),
     ('at','lounges'): dict(published='2026-10-11', updated='2026-10-11'),
-    ('at','mietwagen-kaution'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('at','mietwagen-kaution'): dict(published='2026-10-12', updated='2026-10-14'),
     ('at','ohne-bonitaetspruefung'): dict(published='2026-10-12', updated='2026-10-12'),
     ('at','punkte-sammeln-at'): dict(published='2026-10-12', updated='2026-10-12'),
     ('at','punkte'): dict(published='2026-10-11', updated='2026-10-11'),
@@ -59,7 +59,7 @@ DATES={
     ('de','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','kreditkarte-beantragen'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','lounges'): dict(published='2026-10-12', updated='2026-10-12'),
-    ('de','mietwagen-kaution'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','mietwagen-kaution'): dict(published='2026-10-12', updated='2026-10-14'),
     ('de','ohne-bonitaetspruefung'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','punkte-sammeln-de'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','punkte'): dict(published='2026-10-12', updated='2026-10-12'),
@@ -236,6 +236,7 @@ def build(land):
     # E) Mietwagen & Kaution
     rent=[c for c in credit if (c['tier'] or 0)>=3]
     rent=sorted(rent,key=lambda c:(c['fee'] if c['fee'] is not None else 1e9))
+    kau=sorted([c for c in credit if re.search(r'visa|mastercard',c['netz'],re.I)],key=lambda c:(c['fee'] if c['fee'] is not None else 1e9,-(c.get('stars') or 0)))
     art(land,'mietwagen-kaution',
       h1='Kreditkarte für Mietwagen und Kaution',
       mt=f'Mietwagen-Kaution mit Kreditkarte ({N}) | Finvallo',
@@ -244,6 +245,7 @@ def build(land):
       kurz=f'Autovermieter blockieren für die Kaution meist mehrere hundert Euro auf einer echten Kreditkarte, die auf den Namen der fahrenden Person läuft. Debit- und Prepaid-Karten werden oft abgelehnt oder nur gegen teure Zusatzversicherung akzeptiert. {len(rent)} Kreditkarten in unserem {N}-Vergleich enthalten einen umfassenden Reiseschutz inklusive Mietwagen-Absicherung, die günstigste davon ist die {rent[0]["titel"]}.' if rent else 'Autovermieter blockieren für die Kaution meist mehrere hundert Euro auf einer echten Kreditkarte.',
       secs=[('So funktioniert die Kaution','<div class="prose"><p>Beim Abholen reserviert der Vermieter einen Betrag auf deiner Karte, meist zwischen 300 und 1.500 €. Das Geld wird nicht abgebucht, aber dein Kreditrahmen ist in dieser Höhe blockiert. Nach der Rückgabe wird die Reservierung aufgehoben, das kann einige Tage dauern. Plane deshalb genug Rahmen ein, vor allem im Urlaub.</p></div>'),
             ('Warum Debitkarten oft nicht reichen','<div class="prose"><p>Bei einer Debitkarte wird der Betrag direkt vom Konto reserviert. Viele Vermieter akzeptieren das nicht, weil sie im Schadensfall eine Kreditkarte mit Kreditrahmen wollen. Manche nehmen Debitkarten nur, wenn du ihre Vollkasko ohne Selbstbehalt dazubuchst. Lies die Bedingungen deiner Buchung vorher genau.</p></div>'),
+            ('Karten, die für Kautionen geeignet sind',(table(kau[:10],[COL['karte'],COL['typ'],COL['netz'],COL['fee']],P)+f'<p class="note">Kredit- und Charge-Karten mit Visa oder Mastercard, also mit Kreditrahmen und der breitesten Akzeptanz, sortiert nach Jahresgebühr. Hier stehen die 10 günstigsten der {len(kau)} passenden aus unserem {N}-Vergleich. Ob der Vermieter die Karte annimmt, prüfst du am besten vorher.</p>') if kau else '<p>Aktuell keine passende Karte in unserem Vergleich.</p>'),
             ('Karten mit Mietwagen-Versicherung',(table(rent[:10],[COL['karte'],COL['fee'],COL['ins'],COL['stars']],P)+f'<p class="note">Kredit- und Charge-Karten mit umfassendem oder Premium-Reiseschutz, sortiert nach Jahresgebühr. Was genau versichert ist, steht auf jeder Kartenseite.</p>') if rent else '<p>Aktuell keine Karte mit Mietwagenschutz in unserem Vergleich.</p>'),
             ('Checkliste vor der Abholung','<div class="prose"><ul><li>Echte Kredit- oder Charge-Karte mit Hochprägung oder Name auf der Karte</li><li>Karte lautet auf die Person im Mietvertrag</li><li>Genug freier Kreditrahmen für die Kaution</li><li>Führerschein und Ausweis</li><li>Mietwagen mit der Karte bezahlt, damit deren Versicherung greift</li></ul></div>')],
       faq=[('Kann ich einen Mietwagen mit Debitkarte mieten?','Manchmal, aber oft nur mit Aufpreis oder Zusatzversicherung. Sicherer ist eine echte Kreditkarte.'),
