@@ -3,10 +3,11 @@
 Prüft: interne Links und hreflang-Ziele, JSON-LD, doppelte Titel, Länge der Beschreibungen,
 Sitemap-Einträge und interne Begriffe, die nicht öffentlich sichtbar sein dürfen.
 """
-import glob, json, os, re, sys
+import glob, html as H, json, os, re, sys
 from urllib.parse import urljoin, urlparse
 R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public') + '/'
 INTERN = re.compile(r'hochgeladen|Faktencheck|Prüfkandidat|Prüfstatus|Sekundärquelle|[Cc]apitalo|Screenshot|Excel|Kund:innen|class="sek"|Vorprüfung')
+GLUE_OK = ('1822direkt', 'ChatGPT', 'NordVPN', 'eSIM', 'PayPal', 'MasterCard', 'iPhone', 'iOS', 'myFlex', 'WiFi', 'BahnCard', 'eBay')
 LATER = {'assets/haris.jpg'}   # Foto wird nachgeliefert (bis dahin per onerror ausgeblendet)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import karten as K
@@ -48,6 +49,13 @@ for f in pages:
             j = json.loads(m)
             if not (isinstance(j, dict) and j.get('@context')): err.append(f'{rel}: JSON-LD ohne @context')
         except Exception as e: err.append(f'{rel}: JSON-LD ungültig ({e})')
+    # B15.1: zusammenklebende Wörter (Label und Wert ohne Leerzeichen)
+    if not spa:
+        tx = re.sub(r'</?(?:p|div|li|ul|ol|h[1-6]|tr|td|th|table|section|article|aside|nav|header|footer|main|br|summary|details|label|option|select|dt|dd|button|form|small|b)\b[^>]*>', '\n', re.sub(r'<(script|style)\b.*?</\1>', '', s[s.find('<body'):], flags=re.S))
+        tx = re.sub(r'https?://\S+|\b[\w.-]+\.(?:com|net|de|at)\b', '', H.unescape(re.sub(r'<[^>]+>', '', tx)))
+        for m in re.finditer(r'[a-zäöüß][A-ZÄÖÜ]{2,}|\d(?!\d)[A-Za-zÄÖÜäöü]{2,}', tx):
+            w = re.search(r'\S*$', tx[:m.start() + 1]).group(0) + tx[m.start() + 1:m.end()]
+            if not any(a_ in tx[max(0, m.start() - 8):m.end() + 8] for a_ in GLUE_OK): err.append(f'{rel}: zusammengeklebt „{tx[max(0, m.start() - 10):m.end() + 10].strip()}“'); break
     # B14.4: höchstens ein Prüf-/Stand-Datum je Seite
     body_ = re.sub(r'<script.*?</script>|<p class="src">.*?</p>', '', s[s.find('<body'):], flags=re.S)
     ds = set(re.findall(r'(?:Stand:|[Gg]eprüft am|geprüft bis|Aktualisiert am)\s*(\d{2}\.\d{2}\.\d{4})', re.sub(r'<[^>]+>', ' ', body_)))

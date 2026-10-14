@@ -48,7 +48,6 @@
     "Teilzahlung ist teuer: 22,60 % Soll / 25,09 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Teilzahlung (3 %, mind. 30 €) ist Standard – Vollzahlung nur per Überweisung",
-    "Bargeld und TF Sofortgeld ab Buchungstag verzinst (22,60 % Soll)",
     "Kein Lastschrifteinzug",
     "Hoher Zins 25,09 % eff."
    ],
@@ -102,7 +101,6 @@
     "Teilzahlung ist teuer: 22,32 % Soll / 24,69 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Zinsen ab Transaktionstag, wenn nicht die volle Rechnung bezahlt wird",
-    "Bargeld wird ab Tag 1 mit 24,69 % eff. verzinst",
     "Nur eine Advanzia-Karte pro Person",
     "Mindestzahlung 3 % (mind. 30 €) bis zum 20. – volle Zahlung muss man aktiv sicherstellen"
    ],
@@ -156,7 +154,6 @@
     "Teilzahlung ist teuer: 22,32 % Soll / 24,69 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Zinsen ab Transaktionstag, wenn nicht die volle Rechnung bezahlt wird",
-    "Bargeld wird ab Tag 1 mit 24,69 % eff. verzinst",
     "Nur eine Advanzia-Karte pro Person",
     "Nur mit GMX- oder WEB.DE-Konto; bestehende Advanzia-Kunden erst 6 Monate nach Kündigung"
    ],
@@ -210,7 +207,6 @@
     "Teilzahlung ist teuer: 22,32 % Soll / 24,69 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "72 € Jahresgebühr (6 €/Monat)",
-    "Bargeld ab Tag 1 mit 24,69 % eff. verzinst",
     "Bestehende Advanzia-Karte muss gekündigt werden",
     "Kein Lounge-Zugang"
    ],
@@ -257,15 +253,13 @@
     "Volle Abbuchung per Lastschrift möglich",
     "1 Meile pro 2 € Umsatz",
     "0 % Auslandseinsatz",
-    "Keine Abhebegebühr",
-    "Reiseversicherung mit Rücktritt inklusive"
+    "Keine Abhebegebühr"
    ],
    "cons": [
     "Teilzahlung ist teuer: 22,32 % Soll / 24,69 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "96 € Jahresgebühr (8 €/Monat)",
     "Keine Lounge, kein Status-Vorteil",
-    "Bargeld ab Tag 1 mit 24,69 % eff. verzinst",
     "Nur eine Advanzia-Karte pro Person"
    ],
    "quelle": "https://milesandsmiles.kartegold.de/",
@@ -302,7 +296,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 23,
+   "rank": 25,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -364,9 +358,7 @@
     "Kein Cashback; bis zu 7 % Reiserabatt bei Urlaubsplus",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "Bargeld weltweit gratis, auch in Deutschland",
-    "0 % Fremdwährung",
-    "Reiseversicherung mit Rücktritt (5.000 €) inklusive"
+    "0 % Fremdwährung"
    ],
    "cons": [
     "Teilzahlung ist teuer: 18,02 % Soll / 27,87 % effektiv",
@@ -409,7 +401,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 83,
+   "rank": 85,
    "pros": [
     "Keine Jahresgebühr",
     "Wechselnder Monatsrabatt in einer Kategorie (z. B. Oktober 2026: 5 % auf Sportausrüstung), max. 50 €/Monat und 300 €/Jahr, Abzug von der nächsten Rechnung",
@@ -425,9 +417,7 @@
     "Teilzahlung ist teuer: 18,90 % Soll / 20,63 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Fremdwährungsgebühr: 2,49 %",
-    "Bargeld am Automaten kostet 2,69 % im In- und Ausland, Zinsen ab Tag 1; Tageslimit 500 €",
-    "Keine zinsfreien Tage – Zinsen ab dem ersten Tag",
-    "2,49 % Fremdwährungsgebühr"
+    "Keine zinsfreien Tage – Zinsen ab dem ersten Tag"
    ],
    "quelle": "https://instabank.de/kreditkarte",
    "preis": "https://instabank.de/vollstandige-preisliste",
@@ -463,7 +453,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 84,
+   "rank": 82,
    "pros": [
     "Keine Jahresgebühr",
     "Kein allgemeines Cashback; Extra Club mit Partner-Rabatten (z. B. 10 % Zalando-Gutscheine, 15 % YOOX), Reise-Cashback und Mietwagenrabatten",
@@ -471,7 +461,6 @@
     "Volle Abbuchung per Lastschrift möglich",
     "0 € Jahresgebühr",
     "Bis ca. 8 Wochen zinsfrei",
-    "Lastschrift möglich",
     "Extra Club Partner-Rabatte",
     "Apple Pay und Google Pay"
    ],
@@ -479,7 +468,6 @@
     "Teilzahlung ist teuer: 21,99 % Soll / 24,60 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Fremdwährungsgebühr: 2,99 % auf Fremdwährungsumsätze",
-    "Bargeld am Automaten kostet 3 % (mind. 3 €) im In- und Ausland; Quasi-Bargeld (E-Geld) 5,95 % (mind. 5,95 €); Barverfügungen werden verzinst",
     "2,99 % Fremdwährungsentgelt",
     "3 % (mind. 3 €) fürs Geldabheben",
     "Hoher Zins 24,60 % eff."
@@ -625,7 +613,6 @@
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "0,5 % Cashback auf jeden Klarna-Kauf (Punkte, einlösbar als Geld oder Meilen/Hotelpunkte); doppeltes Cashback bei ausgewählten Shops in der App",
     "Kein Girokonto beim Anbieter nötig",
-    "0,5 % Cashback",
     "4 Gratis-Abhebungen pro Monat",
     "Käuferschutz und verlängerte Garantie",
     "1 GB Reise-eSIM pro Monat",
@@ -634,8 +621,7 @@
    "cons": [
     "Keine Reiseversicherung inklusive",
     "9,99 € Monatsgebühr",
-    "Cashback-Punkte verfallen bei Kündigung",
-    "Keine Reiseversicherung"
+    "Cashback-Punkte verfallen bei Kündigung"
    ],
    "quelle": "https://www.klarna.com/de/klarna-card/",
    "preis": "https://cdn.klarna.com/1.0/shared/content/legal/terms/0/de_de/list_of_prices_and_sevices",
@@ -732,7 +718,6 @@
     "Unbegrenzter kostenloser Zugang zu über 1.500 Flughafen-Lounges",
     "18 Abos inklusive (Klarna: Wert 2.160 €/Jahr), Flexkonto 2,70 % eff.",
     "Kein Girokonto beim Anbieter nötig",
-    "1,5 % Cashback",
     "Unbegrenzt Lounge-Zugang (1.500+ Lounges)"
    ],
    "cons": [
@@ -793,7 +778,6 @@
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Teilzahlung 3 % voreingestellt (19,64 % Sollzins)",
     "Automatische 100 %-Lastschrift kostet 2 €/Monat",
-    "Bargeld ab Tag 1 verzinst",
     "Überweisung vom Kartenkonto 7,50 €"
    ],
    "quelle": "https://www.easybank.de/easybank-de/kreditkarten/easybank-kreditkarte",
@@ -847,8 +831,7 @@
     "Fremdwährungsgebühr: 1,99 % (in Euro gebührenfrei)",
     "1,99 % Fremdwährungsentgelt außerhalb Euro",
     "Teilzahlung voreingestellt (19,64 % Sollzins)",
-    "Partnerkarte 29 €/Jahr laut PLV",
-    "Bargeld ab Tag 1 verzinst"
+    "Partnerkarte 29 €/Jahr laut PLV"
    ],
    "quelle": "https://www.easybank.de/easybank-de/kreditkarten/kreditkarte-gold",
    "preis": "https://www.easybank.de/resource/blob/123008/33084be362fbecdcd098c70d38244d19/preisverzeichnis-easybank-kreditkarte-gold-data.pdf",
@@ -901,8 +884,7 @@
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Teilzahlung voreingestellt (19,64 % Sollzins)",
     "Keine Lounge-Zugänge",
-    "Seit 17.08.2026 kein Visa/Mastercard-Doppel mehr",
-    "Bargeld ab Tag 1 verzinst"
+    "Seit 17.08.2026 kein Visa/Mastercard-Doppel mehr"
    ],
    "quelle": "https://www.easybank.de/easybank-de/kreditkarten/kreditkarte-platinum",
    "preis": "https://www.easybank.de/resource/blob/123014/0bb3dac7ce3ce8312675fde4d2e5b24a/preisverzeichnis-easybank-kreditkarte-platinum-data.pdf",
@@ -953,9 +935,7 @@
     "Teilzahlung ist teuer: 19,64 % Soll / 21,51 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Fremdwährungsgebühr: 1,99 % (in Euro gebührenfrei)",
-    "Bargeld am Automaten kostet Inland 4 %, mind. 5,95 €; Ausland gebührenfrei (in Fremdwährung 1,99 %); Zinsen ab Buchungstag",
     "1,99 % außerhalb Euro",
-    "Bargeld im Inland 4 %, mind. 5,95 €",
     "Teilzahlung voreingestellt (19,64 %)"
    ],
    "quelle": "https://www.easybank.de/easybank-de/kreditkarten/eurowings-kreditkarte-classic",
@@ -1007,8 +987,6 @@
    "cons": [
     "Teilzahlung ist teuer: 19,64 % Soll / 21,51 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
-    "Bargeld am Automaten kostet Inland 4 %, mind. 5,95 €; Ausland gebührenfrei; Zinsen ab Buchungstag",
-    "Bargeld im Inland 4 %, mind. 5,95 €",
     "Teilzahlung voreingestellt (19,64 %)",
     "Eurowings-Vorteile nicht von easybank garantiert"
    ],
@@ -1046,20 +1024,18 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 26,
+   "rank": 24,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
     "Weltweit 0 % Fremdwährungsentgelt",
-    "Bargeld weltweit gebührenfrei",
     "Echte Kreditkarte (Kaution Hotel/Mietwagen)",
     "Visa Luxury Hotel Collection",
     "Wechsel zu Visa Card Gold monatlich möglich"
    ],
    "cons": [
     "Nur mit Konto beim Anbieter (Consorsbank! Girokonto: 0 € bei mind. 700 € Geldeingang/Monat oder unter 31 Jahren, sonst 4 €/Monat)",
-    "Nur mit Consorsbank Girokonto",
     "Konto 4 €/Monat ohne 700 € Geldeingang (ab 31 J.)",
     "Partnerkarte 2 €/Monat",
     "Keine Versicherungen"
@@ -1111,7 +1087,6 @@
    ],
    "cons": [
     "Nur mit Konto beim Anbieter (Consorsbank! Girokonto: 0 € bei mind. 700 € Geldeingang/Monat oder unter 31 Jahren, sonst 4 €/Monat)",
-    "Nur mit Consorsbank Girokonto",
     "9 €/Monat",
     "Mietwagen nur Selbstbehalt-Absicherung (1.500 €)",
     "Partnerkarte 2 €/Monat"
@@ -1150,13 +1125,11 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 85,
+   "rank": 84,
    "pros": [
     "Keine Jahresgebühr",
     "Bargeld ohne Automatengebühr",
-    "Kostenlos zum Girokonto",
-    "Bargeld im EWR ab 50 € gratis",
-    "Bargeld im Supermarkt bis 200 €"
+    "Kostenlos zum Girokonto"
    ],
    "cons": [
     "Fremdwährungsgebühr: 2,10 % (Fremdwährung und außerhalb EWR)",
@@ -1164,7 +1137,6 @@
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "2,10 % Fremdwährungsentgelt",
     "Abhebung unter 50 € kostet 1,95 €",
-    "Nur mit Consorsbank Girokonto",
     "Keine Kaution bei Mietwagen"
    ],
    "quelle": "https://www.consorsbank.de/web/Girokonto",
@@ -1201,7 +1173,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 33,
+   "rank": 34,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -1215,10 +1187,8 @@
    "cons": [
     "Teilzahlung ist teuer: 19,13 % Soll / 20,90 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
-    "Bargeld am Automaten kostet 3,95 € pro Abhebung unter 300 €, ab 300 € kostenlos (Inland und Ausland laut Produktseite gleich)",
     "Abhebung unter 300 € kostet 3,95 €",
-    "Hoher Sollzins 19,13 %",
-    "Bargeld vermutlich ab Tag 1 verzinst"
+    "Hoher Sollzins 19,13 %"
    ],
    "quelle": "https://www.consorsfinanz.de/karte-kredite/mastercard",
    "preis": null,
@@ -1262,14 +1232,12 @@
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
     "1 % Punkte bei Amazon.de, 0,5 % sonst",
-    "Kein neues Girokonto nötig",
     "Sofort nutzbar bei Amazon.de"
    ],
    "cons": [
     "Teilzahlung ist teuer: 18,25 % effektiv",
     "Bargeld am Automaten kostet 3,9 % (mind. 1,50 €) in der EU in Euro; 5,4 % (mind. 1,50 €) in Fremdwährung weltweit",
     "1,5 % Auslandseinsatzentgelt",
-    "Bargeld 3,9 % (mind. 1,50 €)",
     "Kein Apple Pay",
     "Überweisung aufs Referenzkonto 2 €"
    ],
@@ -1307,7 +1275,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 62,
+   "rank": 61,
    "pros": [
     "Keine Jahresgebühr",
     "1 % Bonus auf den Umsatz als IKEA Aktionskarte (max. 30 € pro Jahr); 10 € Aktionskarte nach 6 erfolgreichen Lastschrifteinzügen",
@@ -1322,8 +1290,6 @@
     "Teilzahlung ist teuer: 14,71 % Soll / 15,75 % effektiv",
     "Fremdwährungsgebühr: 1,8 % (Nicht-Euro-Länder)",
     "Bargeld am Automaten kostet Im EWR 2,5 %, mind. 3,99 €; außerhalb EWR 2,5 %, mind. 4,99 €; an Ikano-Automaten kostenlos",
-    "1,8 % Auslandseinsatzentgelt",
-    "Bargeld 2,5 %, mind. 3,99 €",
     "Teilzahlung voreingestellt",
     "Bonus max. 30 €/Jahr, nur als IKEA-Gutschein"
    ],
@@ -1368,7 +1334,6 @@
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
     "Reiserücktritt ohne Selbstbehalt (TUI-Reisen)",
-    "Kein Auslandseinsatzentgelt",
     "TUI fly Sitzplatzreservierung (soweit bei TUI buchbar)",
     "TUI CARS: bis zu 2 Miettage gratis",
     "5 % Rabatt auf TUI experiences"
@@ -1377,7 +1342,6 @@
     "Teilzahlung ist teuer: 10,03 % Soll / 10,50 % effektiv",
     "Bargeld am Automaten kostet Commerzbank-Automaten in Deutschland kostenlos, an Automaten sonstiger Banken (In- und Ausland) 5,20 €",
     "Versicherung nur für TUI-/airtours-Buchungen",
-    "Bargeld an Fremdautomaten 5,20 €",
     "Keine Auslandskrankenversicherung",
     "Hohe Jahresgebühr 99,90 €"
    ],
@@ -1422,10 +1386,8 @@
     "Reiseversicherung inkl. Storno",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "Bargeld weltweit kostenlos",
     "30 kg Freigepäck auf TUI fly",
-    "Reisekranken + Gepäck + Unfall (TUI-Reisen)",
-    "Kein Auslandseinsatzentgelt"
+    "Reisekranken + Gepäck + Unfall (TUI-Reisen)"
    ],
    "cons": [
     "Teilzahlung ist teuer: 10,03 % Soll / 10,50 % effektiv",
@@ -1482,7 +1444,6 @@
    "cons": [
     "Teilzahlung ist teuer: 10,03 % Soll / 10,50 % effektiv",
     "Hohe Jahresgebühr (279,90 €)",
-    "Sehr hohe Jahresgebühr 279,90 €",
     "Versicherung nur für TUI-/airtours-Buchungen",
     "Keine Mietwagenversicherung/Lounge"
    ],
@@ -1520,7 +1481,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 119,
+   "rank": 118,
    "pros": [
     "Kein Girokonto beim Anbieter nötig",
     "Girokonto bei der Deutschen Bank nicht nötig",
@@ -1532,9 +1493,7 @@
     "Fremdwährungsgebühr: 2,25 % (1,75 % Auslandseinsatzentgelt, mind. 1,50 €, + 0,50 % Währungsumrechnungsentgelt)",
     "Bargeld am Automaten kostet 2,5 %, mind. 5,75 € am Geldautomaten im Inland und in Euro im EWR (Schalter 3 %, mind. 5,75 €); außerhalb EWR/Fremdwährung zzgl. 1,75 % (mind. 1,50 €) und 0,50 % Umrechnungsentgelt",
     "Keine Reiseversicherung inklusive",
-    "2,25 % Gesamtaufschlag bei Fremdwährung",
-    "Bargeld 2,5 %, mind. 5,75 €",
-    "Keine Reiseversicherung"
+    "2,25 % Gesamtaufschlag bei Fremdwährung"
    ],
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
@@ -1584,7 +1543,6 @@
     "Fremdwährungsgebühr: 2,25 % (1,75 % Auslandseinsatzentgelt, mind. 1,50 €, + 0,50 % Währungsumrechnungsentgelt)",
     "Bargeld am Automaten kostet 2,5 %, mind. 5,75 € am Geldautomaten im Inland und in Euro im EWR (Schalter 3 %, mind. 5,75 €); außerhalb EWR/Fremdwährung zzgl. 1,75 % (mind. 1,50 €) und 0,50 % Umrechnungsentgelt",
     "2,25 % Gesamtaufschlag bei Fremdwährung",
-    "Bargeld 2,5 %, mind. 5,75 €",
     "Kein Reiserücktritt trotz Gold-Preis",
     "82 € ohne BestKonto"
    ],
@@ -1635,7 +1593,6 @@
    ],
    "cons": [
     "Bargeld am Automaten kostet 2,5 %, mind. 5,75 € am Geldautomaten im Inland und in Euro im EWR (Schalter 3 %, mind. 5,75 €); in Fremdwährung zzgl. 0,50 % Umrechnungsentgelt (kein Zuschlag von 1,75 %)",
-    "Bargeld 2,5 %, mind. 5,75 € auch im Ausland",
     "Versicherung nur bei Zahlung der Reise mit der Karte",
     "Keine Mietwagenversicherung"
    ],
@@ -1685,8 +1642,7 @@
     "Fremdwährungsgebühr: 2,25 % (1,75 % Auslandseinsatzentgelt, mind. 1,50 €, + 0,50 % Währungsumrechnungsentgelt)",
     "Bargeld am Automaten kostet 2,5 %, mind. 5,75 € am Geldautomaten im Inland und in Euro im EWR (Schalter 3 %, mind. 5,75 €); außerhalb EWR/Fremdwährung zzgl. 1,75 % (mind. 1,50 €) und 0,50 % Umrechnungsentgelt",
     "Nur telefonisch oder in der Filiale beantragbar",
-    "2,25 % Gesamtaufschlag bei Fremdwährung",
-    "Bargeld 2,5 %, mind. 5,75 €"
+    "2,25 % Gesamtaufschlag bei Fremdwährung"
    ],
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
@@ -1732,8 +1688,7 @@
     "Hohe Jahresgebühr (600 €)",
     "Fremdwährungsgebühr: 2,25 % (1,75 % Auslandseinsatzentgelt, mind. 1,50 €, + 0,50 % Währungsumrechnungsentgelt)",
     "Bargeld am Automaten kostet 2,5 %, mind. 5,75 € am Geldautomaten im Inland und in Euro im EWR (Schalter 3 %, mind. 5,75 €); außerhalb EWR/Fremdwährung zzgl. 1,75 % (mind. 1,50 €) und 0,50 % Umrechnungsentgelt",
-    "Kein Online-Antrag",
-    "600 € Jahresgebühr"
+    "Kein Online-Antrag"
    ],
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
@@ -1778,8 +1733,7 @@
    "cons": [
     "Fremdwährungsgebühr: 2,25 % (1,75 % Auslandseinsatzentgelt, mind. 1,50 €, + 0,50 % Währungsumrechnungsentgelt)",
     "Bargeld am Automaten kostet 2,5 %, mind. 5,75 € am Geldautomaten im Inland und in Euro im EWR (Schalter 3 %, mind. 5,75 €); außerhalb EWR/Fremdwährung zzgl. 1,75 % (mind. 1,50 €) und 0,50 % Umrechnungsentgelt",
-    "2,25 % Gesamtaufschlag bei Fremdwährung",
-    "Bargeld 2,5 %, mind. 5,75 €"
+    "2,25 % Gesamtaufschlag bei Fremdwährung"
    ],
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
    "preis": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
@@ -1866,14 +1820,11 @@
     "Wolt+ kostenlos (spart 4,99 €/Monat), Marriott Bonvoy Silver Elite, 5x pro Jahr 1 GB Datenvolumen über Flexiroam",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "Meilen verfallen nicht",
     "Reiserücktritt, Mietwagen und Auslandskranken",
-    "2 Abhebungen pro Jahr im Ausland ohne Transaktionsentgelt",
-    "Wolt+ inklusive"
+    "2 Abhebungen pro Jahr im Ausland ohne Transaktionsentgelt"
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,95 % (Mastercard-Kurs)",
-    "1,95 % Auslandseinsatzentgelt",
     "Bargeld im Inland 2 %, mind. 5 €",
     "Kein Gepäckschutz",
     "Selbstbeteiligung 10 % (mind. 100 €) bei Reiserücktritt"
@@ -1918,7 +1869,6 @@
     "6 Monate Wolt+ kostenlos (danach 4,99 €/Monat, verlängert sich automatisch)",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "Meilen verfallen nicht",
     "Kartenpreis auch in Meilen zahlbar",
     "Beliebiges Referenzkonto",
     "Apple Pay und Google Pay"
@@ -1927,7 +1877,6 @@
     "Fremdwährungsgebühr: 1,95 % (Mastercard-Kurs)",
     "Keine Reiseversicherung inklusive",
     "66 € pro Jahr ohne Versicherungen",
-    "1,95 % Auslandseinsatzentgelt",
     "Bargeld 2 %, mind. 5 €"
    ],
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten/miles-and-more-blue-credit-card.html",
@@ -1964,7 +1913,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 63,
+   "rank": 62,
    "pros": [
     "Keine Jahresgebühr",
     "1 Meile pro 2 € Kartenumsatz; Meilen verfallen nach den normalen Miles & More Regeln",
@@ -1978,7 +1927,6 @@
     "Teilzahlung voreingestellt (mind. 10 %)",
     "Komplettausgleich nur per Überweisung",
     "15,90 % Sollzins",
-    "1,95 % Auslandseinsatzentgelt",
     "Keine unbegrenzte Meilengültigkeit"
    ],
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten/miles-and-more-myflex-credit-card.html",
@@ -2027,8 +1975,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,95 % (Mastercard-Kurs)",
-    "Setzt Lufthansa-Vielfliegerstatus voraus",
-    "1,95 % Auslandseinsatzentgelt"
+    "Setzt Lufthansa-Vielfliegerstatus voraus"
    ],
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten-fuer-vielfliegende/lufthansa-frequent-traveller-credit-card.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
@@ -2077,8 +2024,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,95 % (Mastercard-Kurs)",
-    "Setzt Lufthansa-Vielfliegerstatus voraus",
-    "1,95 % Auslandseinsatzentgelt"
+    "Setzt Lufthansa-Vielfliegerstatus voraus"
    ],
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten-fuer-vielfliegende/lufthansa-senator-credit-card.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
@@ -2127,8 +2073,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,95 % (Mastercard-Kurs)",
-    "Setzt Lufthansa-Vielfliegerstatus voraus",
-    "1,95 % Auslandseinsatzentgelt"
+    "Setzt Lufthansa-Vielfliegerstatus voraus"
    ],
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/privatkunden/kreditkarten-fuer-vielfliegende/lufthansa-hon-circle-credit-card.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
@@ -2175,7 +2120,6 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,95 % (Mastercard-Kurs)",
-    "1,95 % Auslandseinsatzentgelt",
     "Versicherung nur für Geschäftsreisen"
    ],
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/selbststaendige.html",
@@ -2222,8 +2166,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,95 % (Mastercard-Kurs)",
-    "Keine Reiseversicherung inklusive",
-    "1,95 % Auslandseinsatzentgelt"
+    "Keine Reiseversicherung inklusive"
    ],
    "quelle": "https://www.miles-and-more-kreditkarte.com/de/selbststaendige.html",
    "preis": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/legal/preis-und-leistungsverzeichnis.pdf",
@@ -2273,7 +2216,6 @@
     "Bargeld am Automaten kostet 2,5 %, mind. 5 € am Geldautomaten im In- und Ausland (Schalter 3 %, mind. 5 €); außerhalb EWR/Fremdwährung zzgl. 1,85 % + 0,50 %; mit Giro extra plus Automaten im Ausland ohne Postbank-Entgelt; Tageslimit 1.000 €",
     "Keine Reiseversicherung inklusive",
     "2,35 % Gesamtaufschlag bei Fremdwährung",
-    "Bargeld 2,5 %, mind. 5 €",
     "Keine Teilzahlung"
    ],
    "quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/kreditkarten/mastercard.html",
@@ -2324,7 +2266,6 @@
     "Fremdwährungsgebühr: 2,35 % (1,85 % Auslandseinsatzentgelt + 0,50 % Währungsumrechnungsentgelt)",
     "Bargeld am Automaten kostet 2,5 %, mind. 5 € am Geldautomaten im In- und Ausland (Schalter 3 %, mind. 5 €); außerhalb EWR/Fremdwährung zzgl. 1,85 % + 0,50 %; mit Giro extra plus Automaten im Ausland ohne Postbank-Entgelt; Tageslimit 1.000 €",
     "2,35 % Gesamtaufschlag bei Fremdwährung",
-    "Bargeld 2,5 %, mind. 5 €",
     "Auslandskranken nur 62 Tage",
     "Kein Gepäck- und Mietwagenschutz"
    ],
@@ -2377,7 +2318,6 @@
     "Bargeld am Automaten kostet 2,5 %, mind. 5 € am Geldautomaten im In- und Ausland (Schalter 3 %, mind. 5 €); außerhalb EWR/Fremdwährung zzgl. 1,85 % + 0,50 %; mit Giro extra plus Automaten im Ausland ohne Postbank-Entgelt; Tageslimit 1.000 €",
     "Lounge-Besuche kosten 33,32 € je Person",
     "2,35 % Gesamtaufschlag bei Fremdwährung",
-    "Bargeld 2,5 %, mind. 5 €",
     "Keine Mietwagen-Vollkasko"
    ],
    "quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/kreditkarten/mastercard-platinum.html",
@@ -2497,7 +2437,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 105,
+   "rank": 103,
    "pros": [
     "Keine Jahresgebühr",
     "Kostenlos zum Girokonto",
@@ -2506,7 +2446,6 @@
    "cons": [
     "Fremdwährungsgebühr: 2,25 % (1,75 % Auslandseinsatzentgelt + 0,50 % Währungsumrechnungsentgelt)",
     "Nur mit Konto beim Anbieter (Top-Girokonto: 3,90 €/Monat, 0 € unter 30 Jahren oder ab 500 € monatlichem Geldeingang)",
-    "Nur mit norisbank Girokonto und Geldeingang",
     "2,25 % Aufschlag bei Fremdwährung",
     "Bargeld im Inland 2,5 %, mind. 6 €"
    ],
@@ -2556,8 +2495,6 @@
     "Teilzahlung ist teuer: 15,56 % Soll / 16,72 % effektiv",
     "Fremdwährungsgebühr: 1,85 % Auslandseinsatzentgelt (Visa-Kurs)",
     "Bargeld am Automaten kostet 3,5 %, mind. 5,75 € je Abhebung im In- und Ausland (zzgl. 1,85 % in Fremdwährung)",
-    "1,85 % Auslandseinsatzentgelt",
-    "Bargeld 3,5 %, mind. 5,75 €",
     "Teilzahlung mit 16,72 % eff. Zins"
    ],
    "quelle": "https://www.openbank.de/content/openbank/de/de/home/produkte/konten-und-karten/karten/kostenlose-kreditkarte.html",
@@ -2748,7 +2685,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 104,
+   "rank": 105,
    "pros": [
     "Keine Jahresgebühr",
     "5 % Reisebonus über Partner Urlaubsplus",
@@ -2761,9 +2698,7 @@
     "Teilzahlung ist teuer: 15,24 % Soll / 16,35 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Fremdwährungsgebühr: 3,85 % (1,85 % Auslandseinsatzentgelt + 2 % Kurszuschlag)",
-    "Bargeld am Automaten kostet An fremden Automaten 3,5 %, mind. 5,95 € zzgl. Sollzinsen ab Tag 1; an TARGOBANK-Automaten in Deutschland und an der Ladenkasse gebührenfrei (Sollzinsen fallen an); Tageslimit 250 €",
     "3,85 % Aufschlag bei Fremdwährung",
-    "Bargeld wird ab Tag 1 verzinst",
     "16,35 % eff. Zins bei Teilzahlung"
    ],
    "quelle": "https://www.targobank.de/de/konto-karten/kreditkarte-classic.html",
@@ -2815,8 +2750,7 @@
     "Fremdwährungsgebühr: 3,85 % (1,85 % Auslandseinsatzentgelt + 2 % Kurszuschlag)",
     "Bargeld am Automaten kostet 3,5 %, mind. 5,95 € zzgl. Sollzinsen; mit Gratis-Cash (TARGOBANK-Girokonto mit 600 € Geldeingang) 4 Abhebungen/Monat in Deutschland und unbegrenzt im Ausland gebührenfrei",
     "Keine Reiseversicherung inklusive",
-    "3,85 % Aufschlag bei Fremdwährung",
-    "Bargeld ab Tag 1 verzinst"
+    "3,85 % Aufschlag bei Fremdwährung"
    ],
    "quelle": "https://www.targobank.de/de/konto-karten/kreditkarte-gold.html",
    "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
@@ -2868,7 +2802,6 @@
     "Fremdwährungsgebühr: 3,85 % (1,85 % Auslandseinsatzentgelt + 2 % Kurszuschlag)",
     "Bargeld am Automaten kostet 3,5 %, mind. 5,95 € zzgl. Sollzinsen; mit Gratis-Cash (TARGOBANK-Girokonto mit 600 € Geldeingang) 4 Abhebungen/Monat in Deutschland und unbegrenzt im Ausland gebührenfrei",
     "3,85 % Aufschlag bei Fremdwährung",
-    "Bargeld ab Tag 1 verzinst",
     "Selbstbehalt 20 % bei Reiserücktritt"
    ],
    "quelle": "https://www.targobank.de/de/konto-karten/kreditkarte-premium.html",
@@ -2913,8 +2846,7 @@
    "cons": [
     "Teilzahlung ist teuer: 15,24 % Soll / 16,35 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
-    "Fremdwährungsgebühr: 3,85 % (1,85 % Auslandseinsatzentgelt + 2 % Kurszuschlag)",
-    "Bargeld am Automaten kostet 3,5 %, mind. 5,95 € zzgl. Sollzinsen (Annahme wie Privatkarten)"
+    "Fremdwährungsgebühr: 3,85 % (1,85 % Auslandseinsatzentgelt + 2 % Kurszuschlag)"
    ],
    "quelle": "https://www.targobank.de/",
    "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
@@ -2958,8 +2890,7 @@
    "cons": [
     "Teilzahlung ist teuer: 15,24 % Soll / 16,35 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
-    "Fremdwährungsgebühr: 3,85 % (1,85 % Auslandseinsatzentgelt + 2 % Kurszuschlag)",
-    "Bargeld am Automaten kostet 3,5 %, mind. 5,95 € zzgl. Sollzinsen (Annahme wie Privatkarten)"
+    "Fremdwährungsgebühr: 3,85 % (1,85 % Auslandseinsatzentgelt + 2 % Kurszuschlag)"
    ],
    "quelle": "https://www.targobank.de/",
    "preis": "https://www.targobank.de/de/download/Preisubersicht.pdf",
@@ -3004,7 +2935,6 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,75 % (außerhalb Euroland; in EWR-Währungen zzgl. 0,59 % Umrechnungsentgelt)",
-    "Bargeld am Automaten kostet 1,95 %, mind. 5,98 € am Automaten im Inland und Ausland (zzgl. 1,75 % Auslandseinsatzentgelt außerhalb Euroland, ggf. Betreiberentgelt); am Schalter 3 %, mind. 5,98 €",
     "Nur mit Konto beim Anbieter (Commerzbank GiroKonto (4,90 €/Monat; 0 € ab 50.000 € Vermögen))",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
@@ -3058,8 +2988,7 @@
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "3,50 € pro Monat zusätzlich zum GiroKonto",
-    "Bargeld 1,95 %, mind. 5,98 €",
-    "1,5 % Auslandseinsatzentgelt"
+    "Bargeld 1,95 %, mind. 5,98 €"
    ],
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/mastercard-debit/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
@@ -3104,12 +3033,9 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,75 % (außerhalb Euroland; in EWR-Währungen zzgl. 0,59 % Umrechnungsentgelt)",
-    "Bargeld am Automaten kostet 1,95 %, mind. 5,98 € am Automaten im Inland und Ausland (zzgl. 1,75 % Auslandseinsatzentgelt außerhalb Euroland, ggf. Betreiberentgelt); am Schalter 3 %, mind. 5,98 €",
     "Nur mit Konto beim Anbieter (Commerzbank GiroKonto (4,90 €/Monat; 0 € ab 50.000 € Vermögen))",
     "Keine Reiseversicherung inklusive",
-    "Nur mit Commerzbank-Girokonto",
-    "Bargeld 1,95 %, mind. 5,98 €",
-    "1,75 % Auslandseinsatzentgelt"
+    "Bargeld 1,95 %, mind. 5,98 €"
    ],
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/classic-kreditkarte/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
@@ -3148,18 +3074,14 @@
    "rank": 57,
    "pros": [
     "Reiseversicherung inkl. Storno",
-    "Reiseversicherung ohne Karteneinsatzpflicht",
     "Priority-Pass-Mitgliedschaft inklusive",
     "Bargeldlimit 1.000 € pro Tag",
     "Monatlich kündbar"
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,75 % (außerhalb Euroland; in EWR-Währungen zzgl. 0,59 % Umrechnungsentgelt)",
-    "Bargeld am Automaten kostet 1,95 %, mind. 5,98 € am Automaten im Inland und Ausland (zzgl. 1,75 % Auslandseinsatzentgelt außerhalb Euroland, ggf. Betreiberentgelt); am Schalter 3 %, mind. 5,98 €",
     "Nur mit Konto beim Anbieter (Commerzbank GiroKonto (4,90 €/Monat; 0 € ab 50.000 € Vermögen))",
-    "Nur mit Commerzbank-Girokonto",
     "Bargeld 1,95 %, mind. 5,98 €",
-    "1,75 % Auslandseinsatzentgelt",
     "Keine Gepäck- und Mietwagenversicherung"
    ],
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/gold-kreditkarte/",
@@ -3208,10 +3130,8 @@
    "cons": [
     "Hohe Jahresgebühr (154,80 €)",
     "Fremdwährungsgebühr: 1,75 % (außerhalb Euroland; in EWR-Währungen zzgl. 0,59 % Umrechnungsentgelt)",
-    "Bargeld am Automaten kostet 12 Abhebungen p. a. im Inland und 25 im Ausland kostenlos, danach 1,95 %, mind. 5,98 € (Ausland zzgl. 1,75 % Auslandseinsatzentgelt)",
     "Nur mit Konto beim Anbieter (Commerzbank PremiumKonto (12,90 €/Monat, Pflicht))",
     "Nur mit PremiumKonto (12,90 €/Monat)",
-    "1,75 % Auslandseinsatzentgelt",
     "Keine Mietwagenversicherung"
    ],
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/premium-kreditkarte/",
@@ -3248,7 +3168,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 82,
+   "rank": 83,
    "pros": [
     "Keine Jahresgebühr",
     "Kostenlos für junge Leute bis 27",
@@ -3256,11 +3176,9 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,75 % (außerhalb Euroland; in EWR-Währungen zzgl. 0,59 % Umrechnungsentgelt)",
-    "Bargeld am Automaten kostet 1,95 %, mind. 5,98 € am Automaten im Inland und Ausland (zzgl. 1,75 % Auslandseinsatzentgelt außerhalb Euroland, ggf. Betreiberentgelt); am Schalter 3 %, mind. 5,98 €",
     "Nur mit Konto beim Anbieter (Commerzbank StartKonto (0 €, bis 27 Jahre))",
     "Nur 18–27 Jahre mit StartKonto",
-    "Bargeld 1,95 %, mind. 5,98 €",
-    "1,75 % Auslandseinsatzentgelt"
+    "Bargeld 1,95 %, mind. 5,98 €"
    ],
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/young-visa/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
@@ -3305,10 +3223,7 @@
    "cons": [
     "Bargeld am Automaten kostet 1,95 %, mind. 5,98 € im In- und Ausland",
     "Nur mit Konto beim Anbieter (Commerzbank Geschäftskonto (Pflicht))",
-    "Keine Reiseversicherung inklusive",
-    "Nur mit Commerzbank-Geschäftskonto",
-    "Keine Versicherungen",
-    "Bargeld 1,95 %, mind. 5,98 €"
+    "Keine Reiseversicherung inklusive"
    ],
    "quelle": "https://www.commerzbank.de/unternehmerkunden/firmenkreditkarten/businesscard/",
    "preis": "https://www.commerzbank.de/unternehmerkunden/firmenkreditkarten/businesscard/",
@@ -3348,14 +3263,12 @@
    "pros": [
     "Niedrige Fremdwährungskosten (1,5 % (außerhalb Euroland; EWR-Währungen zzgl. 0,59 %))",
     "0,55 % Umsatzrückvergütung auf Händlerumsätze des Vorjahres",
-    "0,55 % Umsatzrückvergütung",
     "Auslandsreise-Krankenversicherung",
     "Im PremiumGeschäftskonto inklusive"
    ],
    "cons": [
     "Bargeld am Automaten kostet 1,95 %, mind. 5,98 € im In- und Ausland",
     "Nur mit Konto beim Anbieter (Commerzbank Geschäftskonto (Pflicht))",
-    "Nur mit Commerzbank-Geschäftskonto",
     "1,5 % Auslandseinsatzentgelt",
     "Kein Reiserücktritt"
    ],
@@ -3396,7 +3309,6 @@
    "rank": 77,
    "pros": [
     "Keine Fremdwährungsgebühr",
-    "Kein Auslandseinsatzentgelt",
     "3-Raten-Service 1× im Monat kostenlos",
     "Verlängerte Herstellergarantie (Gruppenversicherung)",
     "Im Girokonto Extra/Plus inklusive"
@@ -3405,7 +3317,6 @@
     "Bargeld am Automaten kostet 4,90 € pro Abhebung am Automaten im In- und Ausland (ggf. zzgl. Betreiberentgelt); am Bankschalter 3 %, mind. 5,90 €",
     "Nur mit Konto beim Anbieter (comdirect Girokonto Aktiv (0 € bei 700 € Geldeingang/Monat oder 3 Apple-/Google-Pay-Zahlungen/Monat oder 1 Trade/Sparplan oder unter 28 in Ausbildung, sonst 4,90 €/Monat))",
     "Keine Reiseversicherung inklusive",
-    "Nur mit comdirect-Girokonto",
     "4,90 € pro Bargeldabhebung",
     "Reiseversicherung nur gegen Aufpreis (Reise-Sorglos-Paket 7,90 €/Monat)"
    ],
@@ -3550,16 +3461,12 @@
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
     "Nur Partner-Cashback (kein Cashback auf normale Einkäufe): ausgewählte Partnershops über die DKB-App (bis zu 7 %)",
-    "Kein Auslandseinsatzentgelt",
-    "Weltweit kostenlos Bargeld am Automaten",
     "Digitaler Kiosk: 3 Zeitungen/Zeitschriften pro Monat",
     "Notfallkarte und -bargeld kostenlos"
    ],
    "cons": [
     "Nur mit Konto beim Anbieter (DKB Girokonto (0 € bei mind. 700 € Geldeingang/Monat oder unter 28 Jahren, sonst 4,50 €/Monat))",
     "Keine Reiseversicherung inklusive",
-    "Nur mit DKB-Girokonto",
-    "Keine Versicherungen",
     "Mindestabhebung 50 €"
    ],
    "quelle": "https://www.dkb.de/kreditkarte",
@@ -3596,7 +3503,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 130,
+   "rank": 129,
    "pros": [
     "Bargeld ohne Automatengebühr",
     "Nur Partner-Cashback über das ING-Portal DealWise, kein Cashback auf normale Einkäufe",
@@ -3610,7 +3517,6 @@
     "Nur mit Konto beim Anbieter (ING Girokonto (0 € ab 1.000 € Geldeingang/Monat oder unter 28, sonst 4,90 €/Monat))",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
-    "2,20 % Auslandseinsatzentgelt in Fremdwährung",
     "Konto 4,90 €/Monat unter 1.000 € Geldeingang",
     "Mindestabhebung 50 € (Kleinbetrags-Option 10 €/Monat)"
    ],
@@ -3653,7 +3559,6 @@
     "Im 1. Jahr 0 € statt 36 €",
     "Bargeld ohne Automatengebühr",
     "1. Jahr kostenlos",
-    "Bargeld ab 50 € in Deutschland und Euroland kostenlos",
     "Online-Käuferschutz",
     "Apple Pay und Google Pay"
    ],
@@ -3661,9 +3566,7 @@
     "Fremdwährungsgebühr: 2,25 % (Fremdwährung sowie Euro außerhalb des EWR)",
     "Nur mit Konto beim Anbieter (1822direkt GiroDirekt (0 € bei 700 € Geldeingang/Monat oder unter 30 Jahren, sonst 4,90 €/Monat))",
     "Keine Reiseversicherung inklusive",
-    "Nur mit 1822direkt-Girokonto",
-    "2,25 % Fremdwährungsentgelt",
-    "Keine Versicherungen"
+    "2,25 % Fremdwährungsentgelt"
    ],
    "quelle": "https://www.1822direkt.de/girokonto/kreditkarte/",
    "preis": "https://www.1822direkt.de/fileadmin/Home/Dokumente/PDF/PDF/pv_gesamt_1822direkt.pdf",
@@ -3707,13 +3610,11 @@
     "1. Jahr kostenlos",
     "Reiserücktrittsversicherung",
     "Familie mitversichert",
-    "Visa Luxury Hotel Collection",
-    "Bargeld ab 50 € in Deutschland und Euroland kostenlos"
+    "Visa Luxury Hotel Collection"
    ],
    "cons": [
     "Fremdwährungsgebühr: 2,25 % (Fremdwährung sowie Euro außerhalb des EWR)",
     "Nur mit Konto beim Anbieter (1822direkt GiroDirekt (0 € bei 700 € Geldeingang/Monat oder unter 30 Jahren, sonst 4,90 €/Monat))",
-    "Nur mit 1822direkt-Girokonto",
     "2,25 % Fremdwährungsentgelt",
     "Keine Auslandskrankenversicherung",
     "Versicherung nur bei Zahlung mit der Karte"
@@ -3763,10 +3664,8 @@
     "Fremdwährungsgebühr: 1,75 % bei Zahlungen in Fremdwährung",
     "Nur mit Konto beim Anbieter (HVB PlusKonto (9,90 €/Monat; für Neukunden 0 € bei 1.000 € Geldeingang in 2 von 3 Monaten))",
     "Keine Reiseversicherung inklusive",
-    "Nur mit HVB-Girokonto",
     "1,75 % Fremdwährungsentgelt",
-    "2,50 € pro Abhebung an fremden Automaten",
-    "Keine Versicherungen"
+    "2,50 € pro Abhebung an fremden Automaten"
    ],
    "quelle": "https://www.hypovereinsbank.de/hvb/privatkunden/banking-im-alltag/karten/mastercard",
    "preis": "https://www.hypovereinsbank.de/content/dam/hypovereinsbank/shared/pdf/Produktprofile/HVB-Mastercard-Kreditkarte-Produktprofil.pdf",
@@ -3814,7 +3713,6 @@
    "cons": [
     "Fremdwährungsgebühr: 1,75 % bei Zahlungen in Fremdwährung",
     "Nur mit Konto beim Anbieter (HVB PlusKonto (9,90 €/Monat; für Neukunden 0 € bei 1.000 € Geldeingang in 2 von 3 Monaten))",
-    "Nur mit HVB-Girokonto",
     "1,75 % Fremdwährungsentgelt",
     "2,50 € pro Abhebung an fremden Automaten (PlusKonto)",
     "Keine Mietwagenversicherung"
@@ -3853,7 +3751,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 118,
+   "rank": 119,
    "pros": [
     "Bis zu 7 % Rückerstattung nur auf Reisebuchungen über den ReisebuchungsService der Sparkasse (kein Cashback auf normale Einkäufe)",
     "Bargeld im Ausland kostenlos",
@@ -3866,8 +3764,6 @@
     "Bargeld am Automaten kostet Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) – Beispiel Berliner Sparkasse",
     "Nur mit Konto beim Anbieter (Girokonto der Sparkasse (Beispiel Berliner Sparkasse: Giro Individual 2,95 €/Monat zzgl. Postenpreise, Giro Digital 4,95 €/Monat, Giro Pauschal 8,95 €/Monat))",
     "Keine Reiseversicherung inklusive",
-    "Nur mit Girokonto der Sparkasse",
-    "Bargeld im Inland 2 %, mind. 7,50 €",
     "1,9 % Fremdwährungsentgelt"
    ],
    "quelle": "https://www.berliner-sparkasse.de/de/home/privatkunden/kreditkarte/visa-card.html",
@@ -3918,8 +3814,6 @@
     "Fremdwährungsgebühr: 1,9 % (Berliner Sparkasse; je Sparkasse verschieden)",
     "Bargeld am Automaten kostet Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) – Beispiel Berliner Sparkasse",
     "Nur mit Konto beim Anbieter (Girokonto der Sparkasse (Beispiel Berliner Sparkasse: Giro Individual 2,95 €/Monat zzgl. Postenpreise, Giro Digital 4,95 €/Monat, Giro Pauschal 8,95 €/Monat))",
-    "Nur mit Girokonto der Sparkasse",
-    "Bargeld im Inland 2 %, mind. 7,50 €",
     "1,9 % Fremdwährungsentgelt",
     "Reiserücktritt nur bei Zahlung mit Karte"
    ],
@@ -3970,7 +3864,6 @@
     "Nur mit Konto beim Anbieter (Girokonto der Sparkasse (Beispiel Berliner Sparkasse: Giro Individual 2,95 €/Monat zzgl. Postenpreise, Giro Digital 4,95 €/Monat, Giro Pauschal 8,95 €/Monat))",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
-    "Nur mit Girokonto der Sparkasse",
     "Bei Mietwagen/Hotel-Kaution oft nicht akzeptiert"
    ],
    "quelle": "https://www.berliner-sparkasse.de/de/home/privatkunden/kreditkarte/visa-basis.html",
@@ -4015,8 +3908,7 @@
    ],
    "cons": [
     "Bargeld am Automaten kostet Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) – Beispiel Berliner Sparkasse",
-    "Nur mit Konto beim Anbieter (Geschäftsgirokonto der Sparkasse)",
-    "Nur mit Geschäftskonto der Sparkasse"
+    "Nur mit Konto beim Anbieter (Geschäftsgirokonto der Sparkasse)"
    ],
    "quelle": "https://www.berliner-sparkasse.de/",
    "preis": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
@@ -4052,7 +3944,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 61,
+   "rank": 63,
    "pros": [
     "Keine Jahresgebühr",
     "Bis 4 % (Classic) bzw. 10 % (Gold) Reisebonus nur bei Buchung über vr-meinereise.de/Urlaubsplus – kein Cashback auf normale Einkäufe",
@@ -4064,7 +3956,6 @@
     "Fremdwährungsgebühr: 1,8 %",
     "Bargeld am Automaten kostet Inland 2 %; im Ausland ohne Bankentgelt (ggf. Betreiberentgelt)",
     "Nur mit Konto beim Anbieter (Girokonto der Berliner Volksbank (3,95 €/Monat, ClassicCard inklusive))",
-    "Nur mit Girokonto der Volksbank (3,95 €/Monat)",
     "Fremdwährungsentgelt",
     "Keine Reiseversicherung"
    ],
@@ -4116,7 +4007,6 @@
    "cons": [
     "Bargeld am Automaten kostet Im Ausland kostenlos seitens der Bank; Inland 2 %, mind. 7,50 €",
     "Nur mit Konto beim Anbieter (Girokonto der Berliner Volksbank (3,95 €/Monat, ClassicCard inklusive))",
-    "Nur mit Girokonto der Volksbank",
     "Inlands-Abhebung kostenpflichtig",
     "Versicherungssummen nicht transparent online"
    ],
@@ -4211,8 +4101,7 @@
     "Nur mit Konto beim Anbieter (OLB Girokonto (z. B. smartDigital 5 €/Monat, 0 € ab 1.000 € Durchschnittsguthaben; smartDialog 7,50 €/Monat inkl. Mastercard Standard, bis 25 Jahre 0 €))",
     "Keine Reiseversicherung inklusive",
     "1,75 % Fremdwährungsentgelt",
-    "Bargeld 2 %, mind. 5 €",
-    "Nur mit OLB-Girokonto"
+    "Bargeld 2 %, mind. 5 €"
    ],
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
@@ -4257,7 +4146,6 @@
    ],
    "cons": [
     "Nur mit Konto beim Anbieter (OLB Girokonto (z. B. smartDigital 5 €/Monat, 0 € ab 1.000 € Durchschnittsguthaben; smartDialog 7,50 €/Monat inkl. Mastercard Standard, bis 25 Jahre 0 €))",
-    "Nur mit OLB-Girokonto",
     "Inlands-Abhebung 2 %, mind. 5 €"
    ],
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
@@ -4303,7 +4191,6 @@
    "cons": [
     "Hohe Jahresgebühr (198 €)",
     "Nur mit Konto beim Anbieter (OLB Girokonto (z. B. smartDigital 5 €/Monat, 0 € ab 1.000 € Durchschnittsguthaben; smartDialog 7,50 €/Monat inkl. Mastercard Standard, bis 25 Jahre 0 €))",
-    "Nur mit OLB-Girokonto",
     "Hohe Monatsgebühr"
    ],
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
@@ -4356,10 +4243,7 @@
     "Hohe Jahresgebühr (720 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (Inland wie Ausland, zzgl. 2 % bei Fremdwährung); max. 1.500 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
-    "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "720 € Jahresgebühr",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €"
+    "American Express wird seltener akzeptiert als Visa oder Mastercard"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/platinum-card/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Platinum_Card_Informationen.pdf",
@@ -4411,10 +4295,7 @@
     "Hohe Jahresgebühr (240 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (Inland wie Ausland, zzgl. 2 % bei Fremdwährung); max. 1.500 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
-    "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "240 € Jahresgebühr",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €"
+    "American Express wird seltener akzeptiert als Visa oder Mastercard"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/goldcard/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Gold_Card_Informationen.pdf",
@@ -4466,10 +4347,7 @@
     "Hohe Jahresgebühr (240 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (Inland wie Ausland, zzgl. 2 % bei Fremdwährung); max. 1.500 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
-    "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "240 € Jahresgebühr",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €"
+    "American Express wird seltener akzeptiert als Visa oder Mastercard"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/gold-rose/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Gold_Card_Informationen.pdf",
@@ -4510,7 +4388,6 @@
     "Membership Rewards Classic inklusive (für Neukunden ab 01/2026): 1 Punkt pro 1 € Umsatz",
     "Kein Girokonto beim Anbieter nötig",
     "ab 9.000 € Jahresumsatz im Folgejahr kostenlos",
-    "Membership Rewards inklusive",
     "1 Zusatzkarte inklusive",
     "Reisekomfort- und Verkehrsmittel-Unfallversicherung"
    ],
@@ -4518,8 +4395,6 @@
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (Inland wie Ausland, zzgl. 2 % bei Fremdwährung); max. 750 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
     "keine Reiserücktritts- oder Auslandskrankenversicherung"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/american-express-card/",
@@ -4560,7 +4435,6 @@
    "pros": [
     "Keine Jahresgebühr",
     "Kein Girokonto beim Anbieter nötig",
-    "dauerhaft keine Jahresgebühr",
     "1 Zusatzkarte kostenlos",
     "Apple Pay und Google Pay"
    ],
@@ -4568,8 +4442,6 @@
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 750 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
     "Punkte nur gegen 30 €/Jahr",
     "kaum Versicherungen"
    ],
@@ -4607,7 +4479,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 102,
+   "rank": 104,
    "pros": [
     "Keine Jahresgebühr",
     "1 PAYBACK °Punkt pro 3 € Umsatz (ca. 0,33 %), keine Punkte für Tankstellenumsätze; zusätzlich die regulären Punkte bei PAYBACK-Partnern",
@@ -4621,8 +4493,6 @@
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 750 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
     "keine Punkte an Tankstellen",
     "Vertrag endet automatisch mit der PAYBACK-Teilnahme"
    ],
@@ -4660,7 +4530,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 103,
+   "rank": 102,
    "pros": [
     "Keine Jahresgebühr",
     "1 °Punkt pro 3 € Umsatz, bei dm automatisch 2 °Punkte pro 3 € (ca. 0,67 %); keine Punkte an Tankstellen",
@@ -4674,8 +4544,6 @@
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 750 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
     "Willkommensbonus kleiner als bei der normalen PAYBACK Amex"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/dm-payback-karte/",
@@ -4725,10 +4593,7 @@
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 3 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 750 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
     "Keine Reiseversicherung inklusive",
-    "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 3 %, mind. 5 €",
-    "keine Reiseversicherung"
+    "American Express wird seltener akzeptiert als Visa oder Mastercard"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/bmw-card/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/BMW_Card_Informationen.pdf",
@@ -4770,7 +4635,6 @@
     "Membership Rewards inklusive: 1 Punkt pro 1 €, bei BMW-Händlern, SIXT und ausgewählten Tankstellen in DE 2 Punkte pro 1 €",
     "2 Priority Pass (Haupt- und 1 Zusatzkarteninhaber) kostenlos, zusammen max. 50 Besuche pro Kalenderjahr; Gäste nicht kostenlos",
     "Kein Girokonto beim Anbieter nötig",
-    "2× Priority Pass",
     "4 Zusatzkarten inklusive",
     "Leasing-Rückgabeschutz und Autoschlüssel-Versicherung",
     "Mietwagen-Vollkasko",
@@ -4780,10 +4644,7 @@
     "Hohe Jahresgebühr (500 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 1.500 €/7 Tage; Bargeld erst frühestens 6 Monate nach Kartenausstellung nach Freischaltung",
-    "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "500 € Jahresgebühr",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €"
+    "American Express wird seltener akzeptiert als Visa oder Mastercard"
    ],
    "quelle": "https://www.americanexpress.com/de-de/kreditkarte/bmw-carbon/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/BMW_Carbon_Card_Informationen.pdf",
@@ -4835,10 +4696,7 @@
     "Hohe Jahresgebühr (850 €)",
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 950 €/7 Tage; erst nach Anmeldung, frühestens 6 Monate nach Kartenausstellung",
-    "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "850 € Jahresgebühr",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €"
+    "American Express wird seltener akzeptiert als Visa oder Mastercard"
    ],
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/business-platinum/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Platinum_Card_Informationen_NEU.pdf",
@@ -4890,8 +4748,6 @@
     "Fremdwährungsgebühr: 2 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 950 €/7 Tage",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
     "keine Reiserücktrittsversicherung"
    ],
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/business-gold/",
@@ -4941,9 +4797,7 @@
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2 % bei Fremdwährung); max. 750 €/7 Tage",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
     "Zusatzkarten je 30 €/Jahr",
-    "Punkte nur gegen Aufpreis",
-    "2 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €"
+    "Punkte nur gegen Aufpreis"
    ],
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/business-green/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Green_Card_Informationen.pdf",
@@ -4992,10 +4846,7 @@
     "Fremdwährungsgebühr: 2,5 % (zzgl. Amex-Wechselkurs)",
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2,5 % bei Fremdwährung); max. 750 €/7 Tage",
     "Keine Reiseversicherung inklusive",
-    "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "2,5 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €",
-    "keine Reiseversicherung"
+    "American Express wird seltener akzeptiert als Visa oder Mastercard"
    ],
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/amazon-business-card/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amazon_Business_Amex_Card_Informationen.pdf",
@@ -5046,9 +4897,7 @@
     "Bargeld am Automaten kostet 4 %, mind. 5 € (zzgl. 2,5 % bei Fremdwährung); max. 750 €/7 Tage",
     "Keine Reiseversicherung inklusive",
     "American Express wird seltener akzeptiert als Visa oder Mastercard",
-    "nur mit Amazon Business Prime",
-    "2,5 % Auslandseinsatzentgelt",
-    "Bargeld 4 %, mind. 5 €"
+    "nur mit Amazon Business Prime"
    ],
    "quelle": "https://www.americanexpress.com/de-de/business/kreditkarte/amazon-business-prime-card/",
    "preis": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amazon_Business_Amex_Card_Informationen.pdf",
@@ -5089,18 +4938,14 @@
     "Keine Fremdwährungsgebühr",
     "1 PAYBACK °Punkt pro 5 € Umsatz (ca. 0,2 %), zusätzlich die regulären Punkte bei PAYBACK-Partnern; kein Punkteverfall",
     "Kein Girokonto beim Anbieter nötig",
-    "kein Auslandseinsatzentgelt",
     "weltweit gebührenfrei Bargeld im Ausland",
-    "kein Punkteverfall",
     "Apple Pay und Google Pay"
    ],
    "cons": [
     "Keine Reiseversicherung inklusive",
     "29 € Jahresgebühr",
     "Bargeld im Inland 2 %, mind. 5 €",
-    "niedrige Sammelrate (1 °P pro 5 €)",
-    "keine Versicherungen",
-    "Bargeldlimit 250 € pro Tag"
+    "niedrige Sammelrate (1 °P pro 5 €)"
    ],
    "quelle": "https://www.payback.de/visa",
    "preis": "https://www.bw-bank.de/content/dam/myif/bwbank/work/dokumente/pdf/public/onlinedienste/paybackvisa-preis-leistungsverzeichnis.pdf",
@@ -5141,16 +4986,13 @@
     "Bargeld ohne Automatengebühr",
     "PAYBACK °Punkte auf Kartenumsätze (Sammelrate laut Finanzfluss 1 °P pro 5 €)",
     "Kein Girokonto beim Anbieter nötig",
-    "Bargeld am Automaten kostenlos",
-    "keine Kreditprüfung nötig (Guthabenbasis)",
-    "PAYBACK °Punkte"
+    "keine Kreditprüfung nötig (Guthabenbasis)"
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,75 %",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "29 € Jahresgebühr für eine Prepaidkarte",
-    "1,75 % Auslandseinsatzentgelt",
     "muss vorab aufgeladen werden"
    ],
    "quelle": "https://www.payback.de/visa",
@@ -5202,9 +5044,7 @@
     "Fremdwährungsgebühr: 1,75 %",
     "Bargeld am Automaten kostet Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 % bei Fremdwährung); Limit 1.000 € (Inland) bzw. 2.000 € (Ausland) pro Monat",
     "Keine Reiseversicherung inklusive",
-    "nur für ADAC-Mitglieder",
-    "1,75 % Auslandseinsatzentgelt",
-    "Bargeld im Inland 3 %, mind. 7,50 €"
+    "nur für ADAC-Mitglieder"
    ],
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
    "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
@@ -5253,9 +5093,7 @@
     "Teilzahlung ist teuer: 15,14 % Soll / 16,24 % effektiv",
     "Fremdwährungsgebühr: 1,75 %",
     "Bargeld am Automaten kostet Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 % bei Fremdwährung); Limit 1.000 € (Inland) bzw. 2.000 € (Ausland) pro Monat",
-    "nur für ADAC-Mitglieder",
-    "1,75 % Auslandseinsatzentgelt",
-    "Bargeld im Inland 3 %, mind. 7,50 €"
+    "nur für ADAC-Mitglieder"
    ],
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
    "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
@@ -5297,7 +5135,6 @@
     "2 % Tankrabatt weltweit auf Tankstellen- und E-Ladeumsätze bis 150 € pro Monat (also max. 3 €/Monat); bis zu 30 % Cashback über den ADAC-Cashback-Shop; 5 % auf Ferienmietwagen und 10 % auf Clubmobile der ADAC Autovermietung",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "2 % Tankrabatt weltweit",
     "Online-Cashback-Shop",
     "Mietwagen-Rabatte"
    ],
@@ -5307,8 +5144,7 @@
     "Bargeld am Automaten kostet Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 % bei Fremdwährung); Limit 1.000 € (Inland) bzw. 2.000 € (Ausland) pro Monat",
     "Keine Reiseversicherung inklusive",
     "Tankrabatt auf 150 € Umsatz pro Monat gedeckelt",
-    "nur für ADAC-Mitglieder",
-    "1,75 % Auslandseinsatzentgelt"
+    "nur für ADAC-Mitglieder"
    ],
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
    "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
@@ -5358,11 +5194,9 @@
    "cons": [
     "Teilzahlung ist teuer: 15,14 % Soll / 16,24 % effektiv",
     "Fremdwährungsgebühr: 1,75 %",
-    "Bargeld am Automaten kostet Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 %); aus eigenem Guthaben gebührenfrei, das Auslandseinsatzentgelt wird erstattet",
     "nur für ADAC-Mitglieder",
     "Auslandskranken nur 45 Tage je Reise",
-    "keine Mietwagen-Vollkasko bzw. kein Selbstbehalt-Schutz",
-    "1,75 % Auslandseinsatzentgelt"
+    "keine Mietwagen-Vollkasko bzw. kein Selbstbehalt-Schutz"
    ],
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
    "preis": "https://www.solarisgroup.com/adac-information/preis-leistungsverzeichnis-adac-kreditkarte",
@@ -5407,16 +5241,13 @@
     "Volle Abbuchung per Lastschrift möglich",
     "alle Pakete Reise, Sparen und Schutz",
     "Reiserücktritt für bis zu 6 Personen",
-    "Mietwagen-Selbstbehalt bis 3.000 € versichert",
-    "2 % Tankrabatt"
+    "Mietwagen-Selbstbehalt bis 3.000 € versichert"
    ],
    "cons": [
     "Teilzahlung ist teuer: 15,14 % Soll / 16,24 % effektiv",
     "Fremdwährungsgebühr: 1,75 %",
-    "Bargeld am Automaten kostet Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 %); aus eigenem Guthaben gebührenfrei, das Auslandseinsatzentgelt wird erstattet",
     "nur für ADAC-Mitglieder",
     "118,80 € pro Jahr ab dem 2. Jahr",
-    "1,75 % Auslandseinsatzentgelt",
     "keine Lounge"
    ],
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
@@ -5505,7 +5336,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 93,
+   "rank": 92,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5519,8 +5350,7 @@
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Nur 3 Gratisabhebungen in Euro pro Monat",
-    "1,7 % Gebühr für Abhebungen in Fremdwährung",
-    "Keine Versicherungen"
+    "1,7 % Gebühr für Abhebungen in Fremdwährung"
    ],
    "quelle": "https://n26.com/de-de/konten-vergleichen",
    "preis": "https://docs.n26.com/legal/01+DE/01+Account/de/13account-pricelist-de.pdf",
@@ -5561,7 +5391,6 @@
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Reiseversicherung inkl. Storno",
-    "Reiseversicherung von Allianz inklusive",
     "Abhebungen in Fremdwährung kostenlos",
     "1 % Reise-Cashback außerhalb EWR/CH/UK (Aktion, 12 Monate nach Anmeldung)",
     "3 Gratis-Trades pro Monat",
@@ -5669,8 +5498,7 @@
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "0,1 % Cashback auf alle Einkäufe mit der Business Mastercard (laut PLV)",
     "0,1 % Cashback auf alle Kartenzahlungen",
-    "Kontoführung kostenlos",
-    "Keine Fremdwährungsgebühr bei Zahlungen"
+    "Kontoführung kostenlos"
    ],
    "cons": [
     "Nur mit Konto beim Anbieter (N26 Business Standard (0 €))",
@@ -5717,8 +5545,7 @@
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
-    "Physische Business Mastercard",
-    "Keine Fremdwährungsgebühr bei Zahlungen"
+    "Physische Business Mastercard"
    ],
    "cons": [
     "Nur mit Konto beim Anbieter (N26 Business Smart (4,90 €/Monat))",
@@ -5766,7 +5593,6 @@
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Reiseversicherung inkl. Storno",
-    "Reiseversicherung inklusive",
     "Abhebungen in Fremdwährung kostenlos"
    ],
    "cons": [
@@ -5816,7 +5642,6 @@
     "Reiseversicherung inkl. Storno",
     "0,5 % Cashback auf alle Kartenzahlungen, monatlich ausgezahlt, ohne Obergrenze; zusätzlich 1 % außerhalb EWR/UK/CH (Aktion, 12 Monate)",
     "0,5 % Cashback auf alle Kartenzahlungen ohne Obergrenze",
-    "+1 % außerhalb EWR/UK/CH (Aktion)",
     "Metallkarte",
     "Reise-, Handy- und Einkaufsversicherung"
    ],
@@ -5861,7 +5686,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 32,
+   "rank": 33,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -5929,8 +5754,7 @@
     "Nur mit Konto beim Anbieter (C24 Pluskonto (5,90 €/Monat))",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
-    "Monatsgebühr 5,90 €",
-    "Keine Reiseversicherung"
+    "Monatsgebühr 5,90 €"
    ],
    "quelle": "https://c24.de/preise",
    "preis": "https://api.c24.de/api/documents/price_service_list/download/",
@@ -5983,7 +5807,6 @@
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Monatsgebühr 9,90 €",
-    "Keine Reiseversicherung",
     "Cashback als Smily-Punkte"
    ],
    "quelle": "https://c24.de/preise",
@@ -6020,7 +5843,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 129,
+   "rank": 130,
    "pros": [
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Nachhaltiges Konto (Klimaschutzbeitrag)",
@@ -6238,8 +6061,7 @@
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "0,5 % Wechselaufschlag am Wochenende",
-    "Nur 200 € Gratis-Abhebung pro Monat",
-    "Keine Reiseversicherung"
+    "Nur 200 € Gratis-Abhebung pro Monat"
    ],
    "quelle": "https://www.revolut.com/de-DE/our-pricing-plans/",
    "preis": "https://cdn.revolut.com/terms_and_conditions/pdf/pers_nliche_geb_hren_plus_a420656e_1.6.0_1739875223_de.pdf",
@@ -6491,8 +6313,7 @@
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "0,5 % Fremdwährungsaufschlag",
-    "Jede Abhebung kostet (0,99 €, ab der 6. 2,99 €)",
-    "Keine Versicherungen"
+    "Jede Abhebung kostet (0,99 €, ab der 6. 2,99 €)"
    ],
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
@@ -6541,8 +6362,7 @@
     "Nur mit Konto beim Anbieter (bunq Pro (9,99 € pro Monat (25 Konten)))",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
-    "0,5 % Fremdwährungsaufschlag",
-    "Keine Reiseversicherung"
+    "0,5 % Fremdwährungsaufschlag"
    ],
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
@@ -6738,8 +6558,7 @@
     "Nur mit Konto beim Anbieter (bunq Pro Business (13,99 € pro Monat (25 Konten)))",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
-    "0,5 % Fremdwährungsaufschlag",
-    "Keine Reiseversicherung"
+    "0,5 % Fremdwährungsaufschlag"
    ],
    "quelle": "https://www.bunq.com/de/pricing",
    "preis": "https://static.bunq.com/website/documents/bunq-information-sheet-pricing-de-de.pdf",
@@ -6825,7 +6644,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 92,
+   "rank": 93,
    "pros": [
     "Niedrige Fremdwährungskosten (1 % Währungsaufschlag auf den Wechselkurs bei Kartenzahlungen außerhalb EUR)",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6943,7 +6762,6 @@
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "1 % Fremdwährungsaufschlag",
-    "Keine Versicherungen",
     "Abhebungen unter 50 € kosten 3 %"
    ],
    "quelle": "https://vivid.money/de-de/personal/",
@@ -6980,7 +6798,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 50,
+   "rank": 51,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (ca. 0,47 % Umrechnungsgebühr EUR→USD zum Devisenmittelkurs (variabel, abhängig von Währung/Betrag; Stand 12.10.2026 per Wise-Preisrechner); 0 % bei Zahlung aus vorhandenem USD-Guthaben)",
@@ -7032,13 +6850,12 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 35,
+   "rank": 36,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
     "1 % Saveback auf Kartenumsätze als Sparplan-Investment, max. 15 € pro Monat (bis 1.500 € Umsatz); Voraussetzung: aktiver Sparplan ab 50 € pro Monat; zusätzlich Round-up möglich",
-    "Bargeld ab 100 € weltweit gebührenfrei",
     "Zinsen auf Kontoguthaben",
     "Saveback 1 % ins Depot"
    ],
@@ -7084,13 +6901,12 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 36,
+   "rank": 37,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
     "Seit 07.08.2026: 1,5 % Cashback, max. 15 € pro Monat (ca. 1.000 € Umsatz), nur wenn ein monatliches Abo über die Karte läuft UND 'Cashback Investing' aktiviert ist; sonst 0 %. Cashback wird ins Depot investiert",
-    "Keine Fremdwährungsgebühr auf Kartenzahlungen",
     "400 € Bargeld pro Monat kostenlos",
     "Zinsen auf nicht investiertes Guthaben",
     "Round-up ins Depot"
@@ -7137,22 +6953,20 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 46,
+   "rank": 50,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
     "0,1 % Cashback auf jede Kartenzahlung",
     "Kartenguthaben wird über ZinsPlus verzinst (ca. 2,6 % p. a.)",
-    "Guthaben als Sondervermögen geschützt",
-    "0,1 % Cashback"
+    "Guthaben als Sondervermögen geschützt"
    ],
    "cons": [
     "Nur mit Konto beim Anbieter (UnitPlus Depot mit ZinsPlus (keine Fixgebühr, 0,50 % p. a. der Anlagesumme))",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Bargeld kostet 2 € pro Abhebung",
     "Physische Karte 20 €",
-    "0,50 % p. a. Nutzungsgebühr auf das Guthaben",
-    "Kein klassisches Girokonto"
+    "0,50 % p. a. Nutzungsgebühr auf das Guthaben"
    ],
    "quelle": "https://www.unitplus.eu/bankkarte",
    "preis": "https://www.unitplus.eu/kosten",
@@ -7195,7 +7009,6 @@
     "Bargeld ohne Automatengebühr",
     "Cashback in EUR oder Bitcoin nach 30-Tage-Durchschnittsguthaben: ab ca. 200 € 0,5 %, ab 1.000 € 1 %, ab 10.000 € 1,5 %, ab 50.000 € 2 %; unter 200 € 0 %",
     "Keine Gebühren für Karte und Fremdwährung",
-    "Bargeld ohne Krak-Gebühr",
     "Zahlung aus über 600 Fiat- und Krypto-Guthaben",
     "Cashback wahlweise in Bitcoin"
    ],
@@ -7240,15 +7053,13 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 25,
+   "rank": 23,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
     "Aktion: 3,75 % Cashback auf Kartenumsätze in den ersten 6 Monaten, max. 400 € Umsatz pro Monat, insgesamt max. 90 €",
-    "Kostenloses Girokonto mit Zinsen",
-    "Bargeld ab 150 € kostenlos",
-    "Bargeld per App bei Handelspartnern einzahlen"
+    "Kostenloses Girokonto mit Zinsen"
    ],
    "cons": [
     "Nur mit Konto beim Anbieter (BBVA Girokonto (0 €))",
@@ -7291,7 +7102,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 51,
+   "rank": 46,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7305,7 +7116,6 @@
     "Bargeld am Automaten kostet 2 % des Betrags, mind. 2 € (Inland und Ausland); höchste VIP-Stufe unbegrenzt kostenlos; zzgl. möglicher Automatengebühren",
     "Nur mit Konto beim Anbieter (Bitpanda-Konto (0 €))",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
-    "Bargeld 2 %, mind. 2 €",
     "Cashback nur bei Zahlung mit Krypto (steuerpflichtiger Tausch)",
     "Spread/Handelsgebühr bei Zahlung mit Krypto",
     "Nur für Bürger der Eurozone, nicht bei Bankident-Verifizierung"
@@ -7518,7 +7328,6 @@
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Nur 250 € gebührenfreier Fremdwährungsumsatz pro Monat, danach 2,99 %",
     "Wochenendaufschlag 1,5 %",
-    "Bargeld 2 %, mind. 2 €",
     "Gebühren der hinterlegten Kartenbank für Bargeld (MCC wird weitergegeben) möglich"
    ],
    "quelle": "https://www.curve.com/plans",
@@ -7768,7 +7577,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 34,
+   "rank": 35,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7971,7 +7780,6 @@
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Großhandelskurs))",
     "Bargeld ohne Automatengebühr",
     "0,5 % Cashback auf Kartenkäufe bis 500 € pro Monat (max. 2,50 €/Monat)",
-    "0,5 % Cashback",
     "500 € Bargeld pro Monat frei",
     "10 Inlandsüberweisungen pro Monat frei",
     "Nur 0,5 % Fremdwährungsentgelt"
@@ -8033,7 +7841,6 @@
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "14,95 € pro Monat",
-    "Keine Versicherungen oder Cashback trotz hoher Gebühr",
     "E-Geld-Konto ohne Einlagensicherung"
    ],
    "quelle": "https://monese.com/our-pricing-eu/",
@@ -8076,7 +7883,6 @@
     "Kein Girokonto beim Anbieter nötig",
     "5–8 % Rückvergütung auf Reisebuchungen über das Reise-Center",
     "2 % Rabatt bei VW-Konzernpartnern",
-    "Bis 20 % Rabatt bei Europcar",
     "Bis 30 Tage zinsfrei",
     "Beliebiges Girokonto als Referenzkonto",
     "Ratenzahlungs-Service für Einzelumsätze"
@@ -8085,9 +7891,6 @@
     "Fremdwährungsgebühr: 1,75 % in Fremdwährung",
     "Bargeld am Automaten kostet Euroraum: 3 %, mind. 5 €; mit Volkswagen-Girokonto als Einzugskonto die ersten 4 Abhebungen pro Abrechnungsmonat kostenlos, danach 2 €; Fremdwährung 3 % + 1,75 %; VW-Bank-Automaten kostenlos",
     "Keine Reiseversicherung inklusive",
-    "1,75 % Auslandseinsatzentgelt",
-    "Bargeld 3 %, mind. 5 € (ohne VW-Girokonto)",
-    "Keine Versicherungen",
     "Jahresgebühr 33 €"
    ],
    "quelle": "https://www.volkswagenbank.de/girokonto-kreditkarte/kreditkarte.html",
@@ -8135,8 +7938,6 @@
     "Fremdwährungsgebühr: 1,75 % in Fremdwährung",
     "Nur mit Konto beim Anbieter (Volkswagen Girokonto (3 €/Monat))",
     "Keine Reiseversicherung inklusive",
-    "Nur mit kostenpflichtigem VW-Girokonto (3 €/Monat)",
-    "1,75 % Auslandseinsatzentgelt",
     "Keine Rabatte/Partnervorteile der Visa Card"
    ],
    "quelle": "https://www.volkswagenbank.de/girokonto-kreditkarte/girokonto.html",
@@ -8266,7 +8067,7 @@
    "tier": 0,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 24,
+   "rank": 26,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -8317,7 +8118,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 37,
+   "rank": 32,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -8424,8 +8225,7 @@
     "Reiseversicherung inkl. Storno",
     "Kein Girokonto beim Anbieter nötig",
     "Bis zu 44 Tage zinsfrei",
-    "Apple Pay, Google Pay und Garmin Pay",
-    "Bargeld bis 500 € pro Tag im Inland, 1.000 € im Ausland"
+    "Apple Pay, Google Pay und Garmin Pay"
    ],
    "cons": [
     "Die Rechnung wird nicht abgebucht, du musst sie selbst pünktlich überweisen",

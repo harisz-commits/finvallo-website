@@ -1,0 +1,5 @@
+{
+ "hinweis": "Länderspezifische Begriffe. Im Code über karten.t(schluessel, land).",
+ "at": {"polizze": "Polizze", "jahrespolizze": "Jahrespolizze", "beheben": "beheben", "behebung": "Behebung", "behebungen": "Behebungen"},
+ "de": {"polizze": "Police", "jahrespolizze": "Jahrespolice", "beheben": "abheben", "behebung": "Abhebung", "behebungen": "Abhebungen"}
+}

@@ -130,6 +130,14 @@ def land_links(s, rel):
     head, body = s[:s.find('<body')], s[s.find('<body'):]
     return head + re.sub(r'<a [^>]*href="([^"]*)"[^>]*>', fix, body)
 
+# ---------- zusammenklebende Wörter (B15.1) ----------
+GLUE = re.compile(r'(</(?:span|b|a|em|strong|small|sup|i)>)(<(?:span|b|a|em|strong|small|i)[\s>])')
+def unglue(s):
+    """Leerzeichen zwischen benachbarten Inline-Elementen, damit Text nicht zusammenklebt (Layout per Flex/Grid bleibt gleich)."""
+    i = s.find('<body')
+    parts = re.split(r'(<script\b.*?</script>|<style\b.*?</style>)', s[i:], flags=re.S)
+    return s[:i] + ''.join(p if p.startswith(('<script', '<style')) else GLUE.sub(r'\1 \2', p) for p in parts)
+
 # ---------- hreflang (B11) ----------
 XD = {'', 'at/', 'de/', 'at/kreditkarten/', 'de/kreditkarten/', 'at/ratgeber/', 'de/ratgeber/', 'at/rechner/', 'de/rechner/',
       'at/kreditkarten/bestenlisten/', 'de/kreditkarten/bestenlisten/'}
@@ -240,6 +248,7 @@ def main():
         s = re.sub(r'(<a href="[^"]*ueber-uns/"[^>]*>)Über uns(</a>)', r'\1Über Finvallo\2', s)
         s = no_stand(s)
         s = land_links(s, rel)
+        s = unglue(s)
         for attr in ('name="description"', 'property="og:description"'):
             s = re.sub(rf'(<meta {attr} content=")([^"]*)(">)', lambda m: m.group(1) + E(K.fit_desc(H.unescape(m.group(2)))) + m.group(3), s, count=1)
         if rel == 'ueber-uns/': s = ueber(s)

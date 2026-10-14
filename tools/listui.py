@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import karten as G
 
 R = G.R
-STARS = ['*', '**', '***']
+STARS = ['¹', '²', '³', '⁴']   # Fußnoten mit hochgestellten Ziffern; * ist für Affiliate-Links reserviert
 LABEL = {'Zahlung Ausland': 'Zahlung im Ausland', 'Bargeld Inland': 'Bargeld im Inland', 'Jahresgebühr': 'Jahresgebühr'}
 
 def short(label, raw):
@@ -28,6 +28,7 @@ def earn(a):
     m = re.search(r'(<div class="earn"><span>[^<]*</span><b>)(.*?)(</b></div>)', a)
     if not m: return a, None
     full = H.unescape(m.group(2))
+    return a, None   # B15.4: keine Kürzung mehr, der volle Text bleibt stehen
     if len(full) <= 60: return a, None
     sh = re.split(r';|\. |, ausgenommen', re.sub(r' \([^)]*\)', '', full))[0].strip()
     if len(sh) > 60: sh = sh[:57].rsplit(' ', 1)[0] + ' …'
@@ -39,8 +40,12 @@ def footnotes(a):
     if 'class="fns"' in a: return a
     a, extra = earn(a)
     notes = []
+    slug = (re.search(r'<h3 class="iname"><a href="([^"]+)"', a) or [None, None])[1]
     def rep(m):
         lab, cls, raw = m.group(1), m.group(2), m.group(3)
+        t_ = H.unescape(re.sub(r'<[^>]+>', '', raw)).strip()
+        if lab.startswith('Bargeld') and slug and not re.match(r'^(ca\. )?\d|^(Kostenlos|kostenlos|–|Inland\b)', t_):
+            return f'<div><small>{lab}</small><b{cls}><a class="lnk" href="{slug}#s-kond" title="{H.escape(t_)}">Details</a></b></div>'
         s, note = short(lab, raw)
         if not s: return m.group(0)
         mark = STARS[len(notes)]

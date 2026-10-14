@@ -114,7 +114,7 @@ Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/a
 - [N26 Go](https://finvallo.com/at/kreditkarten/n26-go/): Typ: Debit; Netz: Mastercard; Jahresgebühr: 118,80 €; Fremdwährung: 0 %; Bargeld: Unbegrenzt kostenlos, auch in Fremdwährung; Reiseversicherung: Umfassender Reiseschutz; Bewertung: 4,0/5 (Gut); geprüft am 14.10.2026
 - [Revolut Premium](https://finvallo.com/at/kreditkarten/revolut-premium/): Typ: Debit; Netz: Visa/Mastercard; Jahresgebühr: 119,88 €; Fremdwährung: 0 %; Bargeld: Bis 400 € pro Monat kostenlos, danach 2 %, mind. 1 €; Reiseversicherung: Reiseversicherung inkl. Storno; Sammelrate: 1 RevPoint je 4 €; Bewertung: 4,0/5 (Gut); geprüft am 14.10.2026
 - [Revolut Metal](https://finvallo.com/at/kreditkarten/revolut-metal/): Typ: Debit; Netz: Visa/Mastercard; Jahresgebühr: 215,88 €; Fremdwährung: 0 %; Bargeld: Bis 800 € pro Monat kostenlos, danach 2 %, mind. 1 €; Reiseversicherung: Umfassender Reiseschutz; Sammelrate: 1 RevPoint je 2 €; Bewertung: 4,0/5 (Gut); geprüft am 14.10.2026
-- [Santander Card](https://finvallo.com/at/kreditkarten/santander-card/): Typ: Kreditkarte; Netz: beim Anbieter prüfen; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: Kostenlos; Reiseversicherung: Keine Reiseversicherung; Zins: 18 % Soll / 19,56 % effektiv; Sammelrate: 1 % Cashback, max. 50 €/Jahr; Bewertung: 3,9/5 (Befriedigend); geprüft am 11.10.2026
+- [Bitpanda Karte](https://finvallo.com/at/kreditkarten/bitpanda-karte/): Typ: Debit; Netz: beim Anbieter prüfen; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 2 %, mind. 2 € pro Abhebung; Reiseversicherung: beim Anbieter prüfen; Bewertung: 3,9/5 (Befriedigend); geprüft am 14.10.2026
 
 ## Optional
 - [Vollständige Kartendaten als Text](https://finvallo.com/llms-full.txt)

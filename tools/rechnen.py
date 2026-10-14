@@ -56,7 +56,7 @@ def card_data(land, cards):
         out[c['slug']] = d
     tags = {k: ', '.join(dict.fromkeys(v)) for k, v in prov.items() if k != 'crx'}
     if prov.get('crx'): tags['crx'] = max(prov['crx'])
-    return dict(cards=out, lounge=A.get('lounge_eur', 30), vers=A.get('vers', {}), tiers={str(k): K.TIER[k][1] for k in range(1, 5)}), tags
+    return dict(cards=out, lounge=A.get('lounge_eur', 30), vers=A.get('vers', {}), tiers={str(k): K.TIER[k][1] for k in range(1, 5)}, polizze=K.t('polizze', land)), tags
 
 def box(land, tags, wien, page=False):
     sel = '<option value="0">nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
@@ -86,7 +86,7 @@ def box(land, tags, wien, page=False):
     {lounge}{LO.vers_field('r')}</div>
     <div class="lchecks">{cb}</div>
     {filt}
-    <p class="note" style="margin:0">Wir rechnen Punkte und Meilen mit 1 Cent, Hotelpunkte mit 0,4 Cent, einen Lounge-Besuch mit 30 € und die Reiseversicherung mit dem Preis einer eigenen Jahrespolizze. Fremdwährung heißt: Zahlungen und Abhebungen außerhalb des Euroraums. Unter jeder Karte siehst du, wie das Ergebnis zustande kommt.</p>
+    <p class="note" style="margin:0">Wir rechnen Punkte und Meilen mit 1 Cent, Hotelpunkte mit 0,4 Cent, einen Lounge-Besuch mit 30 € und die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)}. Fremdwährung heißt: Zahlungen und Abhebungen außerhalb des Euroraums. Unter jeder Karte siehst du, wie das Ergebnis zustande kommt.</p>
   </{tag}><!--/rechnen-->
   '''
 
@@ -96,7 +96,7 @@ def page(land, cards, D, tags):
     wien = any((d.get('lg') or {}).get('w') for d in D['cards'].values())
     t = f'Kreditkarten-Rechner {N}: Was kostet und bringt deine Karte? | Finvallo'
     d = f'Kreditkarten-Rechner {N}: {len(cards)} Karten mit Jahresgebühr, Auslandsgebühr, Bargeld, Cashback, Lounge und Versicherung für deine Nutzung durchgerechnet.'
-    if len(d) > 158: d = d[:150].rsplit(' ', 1)[0] + ' …'
+    d = K.fit_desc(d)
     def item(c):
         st = f'<div class="stats"><div><small>Jahresgebühr</small><b>{"0 €" if c.get("fee") == 0 else (eur(c["fee"]) + " €") if c.get("fee") is not None else "–"}</b></div><div><small>Zahlung Ausland</small><b>{E(K.k_fx(c))}</b></div><div><small>Bargeld Inland</small><b>{E(K.k_cash(c))}</b></div></div>'
         return (f'<article class="item ritem" data-typ="{c.get("typ") or ""}" data-netz="{E((c.get("netz") or "").lower())}" data-fee="{c["fee"] if c.get("fee") is not None else 99999}">'
@@ -121,7 +121,7 @@ def page(land, cards, D, tags):
 <div class="box rcmp" id="rcmp" hidden></div>
 <div class="fbot" style="margin:6px 0 10px"><b data-rcount>{len(cards)} Karten</b><span class="mut">sortiert nach deinem Ergebnis</span></div>
 <div id="rlist" class="rlist">{"".join(item(c) for c in cards)}</div>
-<h2>So rechnen wir</h2><div class="prose"><p>Cashback, Punkte und Meilen zählen mit ihrem Wert in Euro: ein Punkt oder eine Meile mit 1 Cent, Hotelpunkte mit 0,4 Cent, jeweils bis zur Obergrenze der Karte. Ein Bonusprogramm mit Teilnahmegebühr zählt nur, wenn es sich bei deinem Umsatz lohnt. Ein Lounge-Besuch zählt mit 30 €, die Reiseversicherung mit dem Preis einer eigenen Jahrespolizze in der gewünschten Stufe. Davon ziehen wir die Jahresgebühr, die Gebühr auf Zahlungen in Fremdwährung und die Kosten für Bargeld ab. Bei Kreditkarten ohne Automatengebühr rechnen wir einen Monat Zinsen auf das abgehobene Geld.</p></div>
+<h2>So rechnen wir</h2><div class="prose"><p>Cashback, Punkte und Meilen zählen mit ihrem Wert in Euro: ein Punkt oder eine Meile mit 1 Cent, Hotelpunkte mit 0,4 Cent, jeweils bis zur Obergrenze der Karte. Ein Bonusprogramm mit Teilnahmegebühr zählt nur, wenn es sich bei deinem Umsatz lohnt. Ein Lounge-Besuch zählt mit 30 €, die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)} in der gewünschten Stufe. Davon ziehen wir die Jahresgebühr, die Gebühr auf Zahlungen in Fremdwährung und die Kosten für Bargeld ab. Bei Kreditkarten ohne Automatengebühr rechnen wir einen Monat Zinsen auf das abgehobene Geld.</p></div>
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in fq)}</div>
 <p class="note" style="margin-top:18px"><a class="lnk" href="../">Alle Kreditkarten im Vergleich →</a> · <a class="lnk" href="../bestenlisten/lohnt-sich/">Premiumkarten: ab wann sie sich lohnen →</a></p>
 </main>

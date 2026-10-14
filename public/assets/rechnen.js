@@ -65,7 +65,7 @@
     if (c.sb && q('sb') && q('sb').checked) add('Partner-Abos', c.sb * 0.6, '60 % von ' + eur(c.sb) + ', zum günstigsten regulären Preis');
     /* Reiseversicherung */
     var low = lvl > 0 && c.tier < lvl;
-    if (lvl > 0 && !low) add('Reiseversicherung', D.vers[String(lvl)], 'statt eigener Polizze (' + D.tiers[String(lvl)] + ')');
+    if (lvl > 0 && !low) add('Reiseversicherung', D.vers[String(lvl)], 'statt eigener ' + (D.polizze || 'Polizze') + ' (' + D.tiers[String(lvl)] + ')');
     if (low) rows.push(['Reiseversicherung', 0, c.tier ? 'schwächer als gewünscht' : 'nicht enthalten', 1]);
     /* Kosten */
     if (c.wel && y1) add('Willkommensbonus', c.wel[0], c.wel[1]);

@@ -104,6 +104,21 @@ def zinsT(c):
     if c.get('effz'): return f'{pct(c["effz"])} effektiv'
     return c.get('zins')
 TYPLAB={'Kreditkarte':'Kreditkarte mit Teilzahlung','Charge':'Charge-Karte','Debit':'Debitkarte','Prepaid':'Prepaid-Karte'}
+TOPICS=[('girokonto','konto beim anbieter','geschäftskonto','hausbank'),('reiseversicherung','versicherungen'),
+        ('fremdwährungsgebühr','auslandseinsatzentgelt','fremdwährungskosten'),('jahresgebühr',),('membership rewards',),
+        ('unbegrenzt gültig','verfallen nicht'),('wolt+',),('^bargeld','^weltweit kostenlos bargeld')]
+def dedupe(xs):
+    """Doppelte Punkte entfernen: gleich nach Normalisierung (Kleinschreibung, ohne Satzzeichen) oder gleiches Thema mit gleicher Aussage."""
+    out=[]; seen=set(); topics={}
+    for x in xs:
+        n=re.sub(r'[^\wäöüß%€ ]','',x.lower()); n=re.sub(r'\s+',' ',n).strip()
+        if n in seen or any(n in o or o in n for o in seen if len(o)>12 and len(n)>12): continue
+        t=next((i for i,ws in enumerate(TOPICS) if any(re.search(re.escape(w).replace('\\^','^'),x.lower()) for w in ws)),None)
+        neg=bool(re.match(r'(keine?|nur|ohne)\b',x.lower()))
+        if t is not None and (t,neg) in topics: continue
+        if t is not None: topics[(t,neg)]=x
+        seen.add(n); out.append(x)
+    return out
 def pros(c):
     p=[]
     f=c.get('fee')
@@ -186,9 +201,9 @@ def ratecards(cards):
     for c in cards:
         c['ex'].setdefault('offer',bool(c.get('offer') or (c.get('fee1')==0 and c.get('fee'))))
         sc=score(c); c['score']=sc; c['stars']=sc['stars']; c['note']=note(sc['stars'])
-        c['pros']=pros(c); c['cons']=cons(c)
+        c['pros']=dedupe(pros(c)); c['cons']=dedupe(cons(c))
     priv=[c for c in cards if c['art']=='Privat' and c['stars'] is not None and not c.get('nurfuer')]
-    priv.sort(key=lambda c:(-c['stars'],c['fee'] if c['fee'] is not None else 1e9,-(c['score']['total'] or 0),c['titel']))
+    priv.sort(key=lambda c:(-c['stars'],c['fee'] if c['fee'] is not None else 1e9,c['titel'].lower()))
     for c in cards: c['rank']=None
     for i,c in enumerate(priv): c['rank']=i+1
     return priv
@@ -388,7 +403,7 @@ def card_page(c,cards,nrated,prov):
     d=f'{c["titel"]} in {L["name"]}: {", ".join(x for x in bits if x)}.'+(f' Bewertung {de1(c["stars"])}/5.' if c.get('stars') else '')+' Alle Kosten, Vor- und Nachteile.'
     if len(d)>155: d=d.replace(' Alle Kosten, Vor- und Nachteile.',' Kosten, Vor- und Nachteile.')
     if len(d)>155: d=d.replace(' Kosten, Vor- und Nachteile.','')
-    if len(d)>155: d=d[:152].rsplit(' ',1)[0]+' …'
+    d=fit_desc(d)
     pc=c['pros']; kc=c['cons']; gp=c['geprueft']
     ld_card={"@type":"CreditCard","@id":f"https://finvallo.com/{rel}#card","name":c['titel'],"url":f"https://finvallo.com/{rel}",
       "provider":{"@type":"BankOrCreditUnion","name":c.get('herausgeber') or c['anbieter'],"url":c.get('quelle')},"areaServed":{"@type":"Country","name":L['name']},
@@ -471,7 +486,7 @@ def list_item(c,P,base=''):
     <ul class="checks">{"".join(f"<li>{E(x)}</li>" for x in c["pros"][:4])}</ul>
     <div class="acts"><a class="btn primary block" href="{E(c.get("quelle"))}" target="_blank" rel="noopener">Zum Anbieter ↗</a><a class="btn ghost block" href="{base}{c["slug"]}/">Details ansehen</a></div>
   </article>'''
-TXT={'de':dict(list_t='Kreditkarten Vergleich Deutschland 2026 – unabhängig | Finvallo',biz_t='Business-Kreditkarten Deutschland 2026 im Vergleich | Finvallo',
+TXT={'de':dict(list_t='Kreditkarten-Vergleich Deutschland 2026 – unabhängig | Finvallo',biz_t='Business-Kreditkarten Deutschland 2026 im Vergleich | Finvallo',
                biz_lede=lambda n:f'{n} Karten für Selbstständige und Firmen, bewertet nach denselben sieben Kriterien wie Privatkarten.',biz_h='Business-Kreditkarten in Deutschland'),
      'at':dict(list_t='Kreditkarten-Vergleich Österreich 2026 | Finvallo',biz_t='Firmenkreditkarten Österreich 2026 im Vergleich | Finvallo',
                biz_lede=lambda n:'Für Selbstständige, Freiberufler und Firmen gelten andere Maßstäbe: Kosten und Abrechnung zählen mehr, Reiseschutz weniger. Wir bewerten Firmenkarten nach denselben sieben Kriterien wie Privatkarten, aber in einer eigenen Liste.',biz_h='Business- und Firmenkarten')}
@@ -488,7 +503,7 @@ def list_page(cards,priv,biz):
     special=[c for c in cards if c['art']=='Privat' and c.get('nurfuer')]
     body=f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/")}
 <div class="wrap"><main id="app">
-<h1>Kreditkarten Vergleich {N}</h1>
+<h1>Kreditkarten-Vergleich {N}</h1>
   <p class="lede">{n} Kredit-, Charge-, Debit- und Prepaidkarten von {na} Anbietern. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>
   <details class="box howscore"><summary><span><b>So entstehen die Sterne</b><br><small>7 Kriterien, feste Regeln, offene Gewichtung</small></span><span class="lnk">anzeigen</span></summary>
     <div class="wbars">{"".join(f'<div class="wbar"><span>{k}</span><span class="t"><i style="width:{w*4}%"></i></span><em>{w} %</em></div>' for k,w in [("Jahresgebühr",25),("Reiseversicherung",20),("Zahlen im Ausland",15),("Kartenart &amp; Akzeptanz",10),("Alltag &amp; Flexibilität",10),("Bargeld",10),("Extras",10)])}</div>
@@ -554,7 +569,7 @@ def anbieter_pages(cards,prov):
         v=sorted(v,key=lambda c:(-(c.get('stars') or 0),c['titel']))
         t2=f'{nm} Kreditkarten im Vergleich 2026 | Finvallo' if code=='at' else f'{nm} Kreditkarten in Deutschland 2026 | Finvallo'
         d2=f'{nm}: {len(v)} {"Karte" if len(v)==1 else "Karten"} im Vergleich, mit Jahresgebühr, Auslandsgebühr, Versicherung und Bewertung.'+(f' {pv["text"]}' if pv.get('text') else '')
-        if len(d2)>158: d2=d2[:155].rsplit(' ',1)[0]+'…'
+        d2=fit_desc(d2)
         b=best(v); fees=[c['fee'] for c in v if c.get('fee') is not None]
         facts=''.join(f'<div class="r"><span>{k}</span><span>{E(x)}</span></div>' for k,x in [('Anbietertyp',pv.get('typ')),('Sitz',pv.get('sitz')),('Karten im Vergleich',str(len(v))),
               ('Bester Score',f'{de1(b["stars"])} Sterne – {b["name"] if b.get("name") and b["titel"].endswith(b["name"]) else b["titel"]}' if b else None),
@@ -716,7 +731,7 @@ def k_guest(c): return 'gratis' if re.search(r'(Gast|Gäste|Begleitperson)\w* (k
 def k_prog(c): return re.split(r' \(|;',c.get('sammelTxt') or '–')[0].replace('°Punkt','PAYBACK-Punkt')
 def k_val(c): return f'≈ {eur(round(c["sammelEur"]))} €' if c.get('sammelEur') is not None else '–'
 def k_net(c): return '–' if c.get('sammelNet') is None else f'{"+" if c["sammelNet"]>=0 else "−"}{eur(round(abs(c["sammelNet"])))} €'
-def k_youth(c): return 'Studierende' if re.search(r'Student|Maturant',c['titel']) else ((youth(c) or '–')[:40])
+def k_youth(c): return 'Studierende' if re.search(r'Student|Maturant',c['titel']) else (youth(c) or '–')
 COLS={
  'reisen':[('Versicherung',k_ins),('Zahlung Ausland',k_fx),('Jahresgebühr',k_fee)],
  'gratis':[('Zahlung Ausland',k_fx),('Bargeld',k_cash),('Versicherung',k_ins)],
@@ -895,6 +910,10 @@ def fit_desc(t,lim=155):
         else: out=x[:lim-1].rsplit(' ',1)[0].rstrip(' ,:–')+'.'
     if not out.endswith(('.','!','?')): out=out.rstrip(' ,:;–')+'.'
     return out
+TERMS=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten','terms.json')))
+def t(key,land=None):
+    """Länderspezifischer Begriff aus daten/terms.json (z. B. Polizze/Police, beheben/abheben)."""
+    return TERMS[land or L['code']][key]
 COUNTS={}
 def card_count(land,scope='all'):
     """Einzige Quelle für Kartenanzahlen (alle Texte, Meta, FAQ, llms.txt, JSON-Export).
