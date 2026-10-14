@@ -97,7 +97,7 @@ def bar(n):
     <label class="fq"><span class="sr">Suche</span><input type="search" data-q placeholder="Karte oder Bank suchen" autocomplete="off"></label>
     <div class="chips">{"".join(f'<button type="button" class="chip" data-flag="{k}" aria-pressed="false">{t}</button>' for k, t in chips)}</div>
     <div class="frow"><select data-typ aria-label="Kartenart">{opt([("", "Alle Kartenarten"), ("Kreditkarte", "Kreditkarte mit Teilzahlung"), ("Charge", "Charge-Karte"), ("Debit", "Debitkarte"), ("Prepaid", "Prepaid-Karte")])}</select>
-    <select data-netz aria-label="Kartennetz">{opt([("", "Alle Netze"), ("visa", "Visa"), ("mastercard", "Mastercard"), ("american express", "American Express"), ("diners", "Diners Club")])}</select>
+    <select data-netz aria-label="Kartenmarke">{opt([("", "Alle Kartenmarken"), ("visa", "Visa"), ("mastercard", "Mastercard"), ("american express", "American Express"), ("diners", "Diners Club")])}</select>
     <select data-sort aria-label="Sortierung">{opt([("rank", "Nach Bewertung"), ("fee", "Günstigste zuerst"), ("name", "Nach Name")])}</select></div>
     <div class="fbot"><b data-count>{n} Karten</b><button type="button" class="lnk" data-reset hidden>Filter zurücksetzen</button></div>
   </div>
