@@ -57,7 +57,7 @@ for f in pages:
                     if len(a_) > 120: FAQ.setdefault(a_, set()).add(rel[:-10] if rel.endswith('index.html') else rel)
     # B15.1: zusammenklebende Wörter (Label und Wert ohne Leerzeichen)
     if not spa:
-        tx = re.sub(r'</?(?:p|div|li|ul|ol|h[1-6]|tr|td|th|table|section|article|aside|nav|header|footer|main|br|summary|details|label|option|select|dt|dd|button|form|small|b)\b[^>]*>', '\n', re.sub(r'<(script|style)\b.*?</\1>', '', s[s.find('<body'):], flags=re.S))
+        tx = re.sub(r'</?(?:p|div|li|ul|ol|h[1-6]|tr|td|th|table|section|article|aside|nav|header|footer|main|br|summary|details|label|option|select|dt|dd|button|form|small|b)\b[^>]*>', '\n', re.sub(r'<(script|style|svg)\b.*?</\1>', '', s[s.find('<body'):], flags=re.S))
         tx = re.sub(r'https?://\S+|\b[\w.-]+\.(?:com|net|de|at)\b', '', H.unescape(re.sub(r'<[^>]+>', '', tx)))
         for m in re.finditer(r'[a-zäöüß][A-ZÄÖÜ]{2,}|\d(?!\d)[A-Za-zÄÖÜäöü]{2,}', tx):
             w = re.search(r'\S*$', tx[:m.start() + 1]).group(0) + tx[m.start() + 1:m.end()]

@@ -6,9 +6,9 @@ STAND='2026-10-12'; STAND_DE='12.10.2026'
 E=lambda s: html.escape(str(s))
 LN={'at':('Österreich','de-AT','de_AT'),'de':('Deutschland','de-DE','de_DE')}
 def inp(id,label,val,suffix='',help=''):
-    return f'<label>{label}<span class="inw"><input id="{id}" type="text" inputmode="decimal" value="{val}" autocomplete="off">{f"<em>{suffix}</em>" if suffix else ""}</span>{f"<small class=mut>{help}</small>" if help else ""}</label>'
+    return f'<label>{label}<span class="inw"><input id="{id}" name="{id}" type="text" inputmode="decimal" value="{val}" autocomplete="off">{f"<em>{suffix}</em>" if suffix else ""}</span>{f"<small class=mut>{help}</small>" if help else ""}</label>'
 def sel(id,label,opts):
-    return f'<label>{label}<select id="{id}">'+''.join(f'<option value="{v}"{" selected" if s else ""}>{t}</option>' for v,t,s in opts)+'</select></label>'
+    return f'<label>{label}<select id="{id}" name="{id}">'+''.join(f'<option value="{v}"{" selected" if s else ""}>{t}</option>' for v,t,s in opts)+'</select></label>'
 DISCLAIMER='<div class="box disc"><b>Hinweis:</b> Alle Berechnungen sind Beispielrechnungen ohne Gewähr. Trotz sorgfältiger Prüfung können Fehler passieren, und Banken runden oder rechnen im Detail oft anders. Das Ergebnis ersetzt keine Beratung. Prüfe wichtige Entscheidungen mit den Unterlagen deiner Bank.</div>'
 CALCS={}
 def calc(slug,**kw): CALCS[slug]=kw
@@ -23,21 +23,21 @@ def define(land):
 set('o1',FinCalc.eur(r.end));set('o2',FinCalc.eur(r.paid));set('o3',FinCalc.eur(r.interest));
 FinCalc.bars(q('chart'),r.years.map(x=>({year:x.year,a:x.paid,b:x.interest})),['a','b'],['var(--card2)','var(--blue)']);
 q('tab').innerHTML='<table><thead><tr><th>Jahr</th><th>Eingezahlt</th><th>Zinsen</th><th>Kapital</th></tr></thead><tbody>'+r.years.map(x=>`<tr><td>${x.year}</td><td>${FinCalc.eur(x.paid,0)}</td><td>${FinCalc.eur(x.interest,0)}</td><td><b>${FinCalc.eur(x.balance,0)}</b></td></tr>`).join('')+'</tbody></table>';''',
-      how='<p>Der Rechner simuliert jeden Monat: Die Sparrate kommt dazu, dann wird das Guthaben verzinst. Aus dem Jahreszins wird der passende Monatszins berechnet, sodass nach zwölf Monaten genau der angegebene Jahreszins herauskommt (konformer Zins). Mit Dynamik steigt die Sparrate jedes Jahr um den angegebenen Prozentsatz.</p><p><b>Beispiel:</b> 10.000 € Startkapital, 200 € im Monat, 5 % Zins, 20 Jahre: Du zahlst 58.000 € ein und hast am Ende rund 108.025 €, davon rund 50.025 € Zinsen.</p><p>Steuern, Inflation und Kosten sind nicht abgezogen. Bei Aktien und ETFs ist die Rendite nicht garantiert und schwankt von Jahr zu Jahr.</p>',
+      how='<p>Der Rechner simuliert jeden Monat: Die Sparrate kommt dazu, dann wird das Guthaben verzinst. Aus dem Jahreszins wird der passende Monatszins berechnet, sodass nach zwölf Monaten mit Zinseszins genau der angegebene Jahreszins herauskommt. Das nennt man konformen Zins: Bei 5 % im Jahr sind das rund 0,41 % im Monat, nicht 5 / 12 = 0,42 %. Mit Dynamik steigt die Sparrate jedes Jahr um den angegebenen Prozentsatz.</p><p>Steuern, Inflation und Kosten sind nicht abgezogen. Bei Aktien und ETFs ist die Rendite nicht garantiert und schwankt von Jahr zu Jahr.</p>',
       faq=[('Was ist der Zinseszins?','Zinsen, die auf bereits erhaltene Zinsen gezahlt werden. Je länger du sparst, desto stärker wächst das Kapital dadurch.'),
-           ('Welche Rendite ist realistisch?','Tagesgeld und Festgeld bringen aktuell feste Zinsen. Breit gestreute Aktien-ETFs haben historisch langfristig rund 6 bis 8 % pro Jahr gebracht, aber mit starken Schwankungen und ohne Garantie.'),
-           ('Sind Steuern berücksichtigt?','Nein. Das Ergebnis ist vor Steuern. Für Steuern auf Kapitalerträge gibt es unseren Kapitalertragsteuer-Rechner.')])
+           ('Welche Rendite ist realistisch?','Festgeld bringt feste Zinsen, Tagesgeld variable. Breit gestreute Aktien-ETFs haben historisch langfristig rund 6 bis 8 % pro Jahr gebracht, aber mit starken Schwankungen und ohne Garantie.'),
+           ('Sind Steuern berücksichtigt?','Nein. Das Ergebnis ist vor Steuern.'+(' In Österreich fallen auf Zinsen von Bankguthaben 25 % KESt an, auf Erträge aus Fonds, ETFs, Aktien und Anleihen 27,5 % KESt.' if land=='at' else '')+' Für Steuern auf Kapitalerträge gibt es unseren '+('KESt-Rechner.' if land=='at' else 'Abgeltungsteuer-Rechner.'))])
     calc('kreditrechner',icon='bank',t='Kreditrechner',mt='Kreditrechner: Rate, Zinsen, Tilgungsplan | Finvallo',
       desc='Kreditrechner: Monatsrate, Gesamtzinsen, effektiven Jahreszins und Tilgungsplan für einen Ratenkredit berechnen. Oder die Laufzeit aus einer Wunschrate.',
       lede='Was kostet ein Kredit pro Monat und insgesamt? Mit Tilgungsplan.',
-      form=inp('K','Kreditbetrag','10.000','€')+inp('i','Sollzins pro Jahr','6','%')+sel('mode','Berechnen',[('rate','Monatsrate aus Laufzeit',True),('months','Laufzeit aus Monatsrate',False)])+inp('n','Laufzeit','60','Monate')+inp('A','Wunschrate','200','€','nur für „Laufzeit aus Monatsrate“'),
+      form=inp('K','Kreditbetrag','20.000','€')+inp('i','Sollzins pro Jahr','6','%')+sel('mode','Berechnen',[('rate','Monatsrate aus Laufzeit',True),('months','Laufzeit aus Monatsrate',False)])+inp('n','Laufzeit','60','Monate')+inp('A','Wunschrate','200','€','nur für „Laufzeit aus Monatsrate“'),
       out='<div class="res"><div><small>Monatsrate</small><b id="o1">–</b></div><div><small>Laufzeit</small><b id="o2">–</b></div><div><small>Zinsen gesamt</small><b id="o3">–</b></div><div><small>Effektiver Jahreszins</small><b id="o4">–</b></div></div><div class="tbl" id="tab"></div>',
       js='''const K=n('K'),i=n('i')/100;let A,N;
 if(v('mode')==='rate'){N=Math.round(n('n'));A=FinCalc.annuity(K,i,N);}else{A=n('A');N=FinCalc.annuityMonths(K,i,A);}
 if(!isFinite(N)){set('o1',FinCalc.eur(A));set('o2','nie');set('o3','–');set('o4',FinCalc.pct(FinCalc.effective(i)));q('tab').innerHTML='<p class="note">Die Rate ist kleiner als die monatlichen Zinsen. So wird der Kredit nie abbezahlt.</p>';return;}
 const s=FinCalc.schedule(K,i,A);set('o1',FinCalc.eur(A));set('o2',FinCalc.months(s.months));set('o3',FinCalc.eur(s.interest));set('o4',FinCalc.pct(FinCalc.effective(i)));
 q('tab').innerHTML='<table><thead><tr><th>Jahr</th><th>Zinsen</th><th>Tilgung</th><th>Restschuld</th></tr></thead><tbody>'+s.years.map(x=>`<tr><td>${x.year}</td><td>${FinCalc.eur(x.interest)}</td><td>${FinCalc.eur(x.principal)}</td><td><b>${FinCalc.eur(x.rest)}</b></td></tr>`).join('')+'</tbody></table>';''',
-      how='<p>Gerechnet wird ein Annuitätendarlehen: Die Monatsrate bleibt gleich, der Zinsanteil sinkt und der Tilgungsanteil steigt. Die Monatsrate ergibt sich aus <i>Rate = Betrag × q × (1+q)<sup>n</sup> / ((1+q)<sup>n</sup> − 1)</i> mit q = Sollzins / 12 und n = Laufzeit in Monaten. Der effektive Jahreszins ist hier (1 + Sollzins/12)<sup>12</sup> − 1, ohne Gebühren.</p><p><b>Beispiel:</b> 10.000 € zu 6 % Sollzins über 60 Monate: 193,33 € pro Monat, insgesamt 1.599,68 € Zinsen, effektiv 6,17 %.</p><p>Bearbeitungsgebühren, Restschuldversicherungen und Sondertilgungen sind nicht enthalten. Die letzte Rate ist bei Banken oft etwas kleiner.</p>',
+      how='<p>Gerechnet wird ein Annuitätendarlehen: Die Monatsrate bleibt gleich, der Zinsanteil sinkt und der Tilgungsanteil steigt. Die Monatsrate ergibt sich aus <i>Rate = Betrag × q × (1+q)<sup>n</sup> / ((1+q)<sup>n</sup> − 1)</i> mit q = Sollzins / 12 und n = Laufzeit in Monaten. Der effektive Jahreszins ist hier (1 + Sollzins/12)<sup>12</sup> − 1, ohne Gebühren.</p><p>Bearbeitungsgebühren, Restschuldversicherungen und Sondertilgungen sind nicht enthalten. Die letzte Rate ist bei Banken oft etwas kleiner.</p>',
       faq=[('Was ist der Unterschied zwischen Sollzins und effektivem Jahreszins?','Der Sollzins ist der vereinbarte Zinssatz. Der effektive Jahreszins rechnet die monatliche Zinsbelastung und vorgeschriebene Kosten mit ein und ist deshalb besser zum Vergleichen.'),
            ('Kürzere oder längere Laufzeit?','Eine längere Laufzeit senkt die Monatsrate, erhöht aber die Zinsen insgesamt.')])
     calc('teilzahlung',icon='card',t='Teilzahlungsrechner für Kreditkarten',mt='Teilzahlungsrechner Kreditkarte: Zinsen & Dauer | Finvallo',
@@ -47,7 +47,7 @@ q('tab').innerHTML='<table><thead><tr><th>Jahr</th><th>Zinsen</th><th>Tilgung</t
       out='<div class="res"><div><small>Dauer bis abbezahlt</small><b id="o1">–</b></div><div><small>Zinsen gesamt</small><b id="o2">–</b></div><div><small>Zahlst du insgesamt</small><b id="o3">–</b></div></div><p class="note" id="o4"></p>',
       js='''const r=FinCalc.revolving({balance:n('B'),eff:n('e')/100,pct:n('p')/100,min:n('m')});set('o1',FinCalc.months(r.months));set('o2',FinCalc.eur(r.interest));set('o3',FinCalc.eur(r.paid));
 q('o4').textContent=isFinite(r.interest)?`Zahlst du die Rechnung dagegen vollständig, fallen bei Einkäufen 0 € Zinsen an. Die Teilzahlung kostet dich also ${FinCalc.eur(r.interest)} extra.`:'Die Mindestrate ist kleiner als die monatlichen Zinsen. So wird der Betrag nie kleiner.';''',
-      how='<p>Jeden Monat werden Zinsen auf den offenen Betrag berechnet (Monatszins aus dem effektiven Jahreszins), dann zahlst du die Mindestrate: den Prozentsatz vom offenen Betrag, aber mindestens den Mindestbetrag. Weil die Rate mit dem Betrag schrumpft, dauert es lange, bis alles bezahlt ist.</p><p><b>Beispiel:</b> 2.000 € offen, 22 % effektiv, 3 % Mindestrate, mindestens 20 €: Es dauert 10 Jahre und 9 Monate und kostet rund 1.931 € Zinsen. Du zahlst also fast das Doppelte.</p><p>Banken rechnen oft taggenau und nach Buchungsdatum, deshalb weichen echte Abrechnungen etwas ab.</p>',
+      how='<p>Jeden Monat werden Zinsen auf den offenen Betrag berechnet (Monatszins aus dem effektiven Jahreszins), dann zahlst du die Mindestrate: den Prozentsatz vom offenen Betrag, aber mindestens den Mindestbetrag. Weil die Rate mit dem Betrag schrumpft, dauert es lange, bis alles bezahlt ist.</p><p>Banken rechnen oft taggenau und nach Buchungsdatum, deshalb weichen echte Abrechnungen etwas ab.</p>',
       faq=[('Wie vermeide ich Zinsen bei der Kreditkarte?','Stell die Rückzahlung auf 100 % oder zahl die ganze Rechnung bis zum Fälligkeitstag. Dann fallen für Einkäufe keine Zinsen an.'),
            ('Welche Karten haben keine Teilzahlung?','Charge-Karten buchen die ganze Rechnung einmal im Monat ab. Mehr dazu im Ratgeber Teilzahlung.')],
       links=[('../../ratgeber/teilzahlung/','Ratgeber: Teilzahlung'),('../../kreditkarten/','Kreditkarten vergleichen')])
@@ -59,15 +59,15 @@ q('o4').textContent=isFinite(r.interest)?`Zahlst du die Rechnung dagegen vollst�
       js='''const K=n('K'),r=n('r')/100;
 if(v('mode')==='months'){const W=n('W'),x=FinCalc.withdrawMonths(K,r,W);q('l1').textContent='Reicht für';set('o1',isFinite(x.months)?FinCalc.months(x.months):'unbegrenzt');set('o2',isFinite(x.months)?FinCalc.eur(x.total):'–');q('o3').textContent=isFinite(x.months)?'':'Die Erträge sind höher als die Entnahme. Das Kapital wird so nicht aufgebraucht.';}
 else{const N=Math.round(n('y')*12),W=FinCalc.withdrawAmount(K,r,N);q('l1').textContent='Mögliche Entnahme pro Monat';set('o1',FinCalc.eur(W));set('o2',FinCalc.eur(W*N));q('o3').textContent=`Nach ${n('y')} Jahren ist das Kapital aufgebraucht.`;}''',
-      how='<p>Die Entnahme erfolgt jeweils zu Monatsbeginn, danach wird das restliche Kapital mit dem Monatszins verzinst, der genau der angegebenen Jahresrendite entspricht. Die mögliche Entnahme für eine feste Dauer folgt aus der Rentenbarwertformel für vorschüssige Zahlungen.</p><p><b>Beispiel:</b> 200.000 € Kapital, 4 % Rendite, 25 Jahre: Du kannst rund 1.044 € pro Monat entnehmen.</p><p>Steuern, Kosten, Inflation und Schwankungen der Rendite sind nicht berücksichtigt. Fällt die Rendite in schlechten Jahren, reicht das Geld kürzer.</p>',
+      how='<p>Die Entnahme erfolgt jeweils zu Monatsbeginn, danach wird das restliche Kapital mit dem Monatszins verzinst, der genau der angegebenen Jahresrendite entspricht. Die mögliche Entnahme für eine feste Dauer folgt aus der Rentenbarwertformel für vorschüssige Zahlungen.</p><p>Steuern, Kosten, Inflation und Schwankungen der Rendite sind nicht berücksichtigt. Fällt die Rendite in schlechten Jahren, reicht das Geld kürzer.</p>',
       faq=[('Was ist die 4-Prozent-Regel?','Eine Faustregel aus den USA: Im ersten Jahr 4 % des Depots entnehmen und den Betrag dann mit der Inflation anpassen. Sie basiert auf historischen US-Daten und ist keine Garantie.')])
     calc('inflationsrechner',icon='pie',t='Inflationsrechner',mt='Inflationsrechner: Kaufkraft berechnen | Finvallo',
       desc='Inflationsrechner: Wie viel ist dein Geld in einigen Jahren noch wert, und wie viel brauchst du später für die gleiche Kaufkraft?',
       lede='Wie viel ist dein Geld in einigen Jahren noch wert?',
-      form=inp('a','Betrag heute','1.000','€')+inp('i','Inflationsrate pro Jahr','2','%')+inp('y','Zeitraum','10','Jahre'),
+      form=inp('a','Betrag heute','10.000','€')+inp('i','Inflationsrate pro Jahr','3','%')+inp('y','Zeitraum','10','Jahre'),
       out='<div class="res"><div><small>Kaufkraft danach</small><b id="o1">–</b></div><div><small>Nötiger Betrag für gleiche Kaufkraft</small><b id="o2">–</b></div><div><small>Kaufkraftverlust</small><b id="o3">–</b></div></div>',
       js='''const x=FinCalc.inflation(n('a'),n('i')/100,n('y'));set('o1',FinCalc.eur(x.real));set('o2',FinCalc.eur(x.needed));set('o3',FinCalc.pct(1-x.real/n('a')));''',
-      how='<p>Kaufkraft = Betrag / (1 + Inflationsrate)<sup>Jahre</sup>. Der nötige Betrag für dieselbe Kaufkraft ist Betrag × (1 + Inflationsrate)<sup>Jahre</sup>.</p><p><b>Beispiel:</b> 1.000 € bei 2 % Inflation über 10 Jahre: Sie sind dann noch rund 820 € wert, für dieselbe Kaufkraft bräuchtest du rund 1.219 €.</p><p>Der Rechner nimmt eine gleichbleibende Inflation an. In Wirklichkeit schwankt sie von Jahr zu Jahr.</p>',
+      how='<p>Kaufkraft = Betrag / (1 + Inflationsrate)<sup>Jahre</sup>. Der nötige Betrag für dieselbe Kaufkraft ist Betrag × (1 + Inflationsrate)<sup>Jahre</sup>.</p><p>Der Rechner nimmt eine gleichbleibende Inflation an. In Wirklichkeit schwankt sie von Jahr zu Jahr.</p>',
       faq=[('Wie hoch ist die Inflation?',f'Das veröffentlicht {"das Statistische Bundesamt (Destatis)" if land=="de" else "die Statistik Austria"} jeden Monat. Das Inflationsziel der Europäischen Zentralbank liegt bei 2 % pro Jahr.')])
     calc('renditerechner',icon='chart',t='Renditerechner',mt='Renditerechner: jährliche Rendite berechnen | Finvallo',
       desc='Renditerechner: jährliche Rendite (CAGR) und Gesamtrendite aus Anfangswert, Endwert und Anlagedauer berechnen.',
@@ -75,37 +75,64 @@ else{const N=Math.round(n('y')*12),W=FinCalc.withdrawAmount(K,r,N);q('l1').textC
       form=inp('a','Anfangswert','10.000','€')+inp('b','Endwert','15.000','€')+inp('y','Anlagedauer','5','Jahre'),
       out='<div class="res"><div><small>Rendite pro Jahr</small><b id="o1">–</b></div><div><small>Gesamtrendite</small><b id="o2">–</b></div><div><small>Gewinn</small><b id="o3">–</b></div></div>',
       js='''const a=n('a'),b=n('b'),y=n('y');set('o1',FinCalc.pct(FinCalc.cagr(a,b,y)));set('o2',FinCalc.pct(b/a-1));set('o3',FinCalc.eur(b-a));''',
-      how='<p>Die jährliche Rendite ist der durchschnittliche Zuwachs pro Jahr mit Zinseszins: (Endwert / Anfangswert)<sup>1/Jahre</sup> − 1. Man nennt sie auch CAGR.</p><p><b>Beispiel:</b> Aus 10.000 € werden in 5 Jahren 15.000 €: Das sind 50 % insgesamt und rund 8,45 % pro Jahr.</p><p>Gilt nur für eine Einmalanlage ohne Zu- und Abflüsse. Bei Sparplänen ist die Rechnung komplizierter.</p>',
+      how='<p>Die jährliche Rendite ist der durchschnittliche Zuwachs pro Jahr mit Zinseszins: (Endwert / Anfangswert)<sup>1/Jahre</sup> − 1. Man nennt sie auch CAGR.</p><p>Gilt nur für eine Einmalanlage ohne Zu- und Abflüsse. Bei Sparplänen ist die Rechnung komplizierter.</p>',
       faq=[('Warum ist die Jahresrendite kleiner als Gesamtrendite durch Jahre?','Wegen des Zinseszinses: Die Erträge eines Jahres bringen im nächsten Jahr selbst Erträge.')])
     if land=='de':
         calc('kapitalertragsteuer',icon='shield',t='Abgeltungsteuer-Rechner',mt='Abgeltungsteuer-Rechner 2026 mit Freibetrag | Finvallo',
           desc='Abgeltungsteuer berechnen: 25 % plus Solidaritätszuschlag und Kirchensteuer, mit Sparerpauschbetrag von 1.000 € bzw. 2.000 €.',
           lede='Wie viel Steuer zahlst du in Deutschland auf Zinsen, Dividenden und Kursgewinne?',
-          form=inp('g','Kapitalerträge im Jahr','2.500','€')+sel('fb','Sparerpauschbetrag',[('1000','1.000 € (ledig)',True),('2000','2.000 € (zusammen veranlagt)',False),('0','schon ausgeschöpft',False)])+sel('k','Kirchensteuer',[('0','keine',True),('0.08','8 % (Bayern, Baden-Württemberg)',False),('0.09','9 % (übrige Bundesländer)',False)]),
+          form=inp('g','Kapitalerträge im Jahr','1.000','€')+sel('fb','Sparerpauschbetrag',[('1000','1.000 € (ledig)',False),('2000','2.000 € (zusammen veranlagt)',False),('0','schon ausgeschöpft',True)])+sel('k','Kirchensteuer',[('0','keine',True),('0.08','8 % (Bayern, Baden-Württemberg)',False),('0.09','9 % (übrige Bundesländer)',False)]),
           out='<div class="res"><div><small>Steuern gesamt</small><b id="o1">–</b></div><div><small>Netto-Ertrag</small><b id="o2">–</b></div><div><small>davon Abgeltungsteuer</small><b id="o3">–</b></div><div><small>Soli / Kirchensteuer</small><b id="o4">–</b></div></div>',
           js='''const x=FinCalc.taxDE({gain:n('g'),allowance:+v('fb'),church:+v('k')});set('o1',FinCalc.eur(x.total));set('o2',FinCalc.eur(x.net));set('o3',FinCalc.eur(x.abg));set('o4',FinCalc.eur(x.soli)+' / '+FinCalc.eur(x.kist));''',
-          how='<p>Auf Kapitalerträge über dem Sparerpauschbetrag fallen 25 % Abgeltungsteuer an, darauf 5,5 % Solidaritätszuschlag. Mit Kirchensteuer sinkt die Abgeltungsteuer leicht, weil die Kirchensteuer abziehbar ist: Abgeltungsteuer = Erträge / (4 + Kirchensteuersatz). Insgesamt sind das 26,375 % ohne, 27,82 % mit 8 % und 27,99 % mit 9 % Kirchensteuer.</p><p><b>Beispiel:</b> 2.400 € Erträge, ledig, ohne Kirchensteuer: 1.400 € sind steuerpflichtig. Darauf fallen 350 € Abgeltungsteuer und 19,25 € Soli an, zusammen 369,25 €.</p><p>Nicht berücksichtigt: Teilfreistellung bei Fonds und ETFs, Vorabpauschale, Verlustverrechnung, Günstigerprüfung und ausländische Quellensteuer.</p>',
+          how='<p>Auf Kapitalerträge über dem Sparerpauschbetrag fallen 25 % Abgeltungsteuer an, darauf 5,5 % Solidaritätszuschlag. Mit Kirchensteuer sinkt die Abgeltungsteuer leicht, weil die Kirchensteuer abziehbar ist: Abgeltungsteuer = Erträge / (4 + Kirchensteuersatz). Insgesamt sind das 26,375 % ohne, 27,82 % mit 8 % und 27,99 % mit 9 % Kirchensteuer.</p><p>Nicht berücksichtigt: Teilfreistellung bei Fonds und ETFs, Vorabpauschale, Verlustverrechnung, Günstigerprüfung und ausländische Quellensteuer.</p>',
           faq=[('Wie hoch ist der Sparerpauschbetrag?','1.000 € pro Person und Jahr, 2.000 € bei Zusammenveranlagung. Dafür stellst du bei deiner Bank einen Freistellungsauftrag.'),
                ('Gilt das auch für ETFs?','Grundsätzlich ja. Bei Aktien-ETFs sind aber 30 % der Erträge steuerfrei (Teilfreistellung). Das rechnet dieser einfache Rechner nicht mit.')])
     else:
         calc('kapitalertragsteuer',icon='shield',t='KESt-Rechner (Kapitalertragsteuer)',mt='KESt-Rechner Österreich: 25 % und 27,5 % | Finvallo',
           desc='Kapitalertragsteuer in Österreich berechnen: 25 % auf Zinsen von Sparkonten, 27,5 % auf Dividenden, Kursgewinne, Fonds und Anleihen.',
           lede='Wie viel KESt zahlst du in Österreich auf deine Kapitalerträge?',
-          form=inp('g','Kapitalerträge im Jahr','2.500','€')+sel('rt','Art der Erträge',[('0.275','Dividenden, Kursgewinne, Fonds, ETFs, Anleihen (27,5 %)',True),('0.25','Zinsen von Sparbuch, Tagesgeld, Festgeld bei Banken (25 %)',False)]),
+          form=inp('g','Kapitalerträge im Jahr','1.000','€')+sel('rt','Art der Erträge',[('0.275','Dividenden, Kursgewinne, Fonds, ETFs, Anleihen (27,5 %)',True),('0.25','Zinsen von Sparbuch, Tagesgeld, Festgeld bei Banken (25 %)',False)]),
           out='<div class="res"><div><small>KESt</small><b id="o1">–</b></div><div><small>Netto-Ertrag</small><b id="o2">–</b></div></div>',
           js='''const x=FinCalc.taxAT({gain:n('g'),rate:+v('rt')});set('o1',FinCalc.eur(x.total));set('o2',FinCalc.eur(x.net));''',
-          how='<p>In Österreich gibt es keinen Freibetrag für Kapitalerträge. Zinsen aus Geldeinlagen bei Banken, also Sparbuch, Tagesgeld und Festgeld, werden mit 25 % besteuert. Für Dividenden, Kursgewinne, Fonds, ETFs und Anleihen gilt der Sondersteuersatz von 27,5 %. Bei inländischen Banken wird die KESt automatisch abgezogen.</p><p><b>Beispiel:</b> 2.500 € Dividenden und Kursgewinne: 687,50 € KESt, netto bleiben 1.812,50 €.</p><p>Nicht berücksichtigt: Verlustausgleich, Regelbesteuerungsoption und ausländische Quellensteuer. Bei ausländischen Brokern musst du die Erträge oft selbst in der Steuererklärung angeben.</p>',
+          how='<p>In Österreich gibt es keinen Freibetrag für Kapitalerträge. Zinsen aus Geldeinlagen bei Banken, also Sparbuch, Tagesgeld und Festgeld, werden mit 25 % besteuert. Für Dividenden, Kursgewinne, Fonds, ETFs und Anleihen gilt der Sondersteuersatz von 27,5 %. Bei inländischen Banken wird die KESt automatisch abgezogen.</p><p>Nicht berücksichtigt: Verlustausgleich, Regelbesteuerungsoption und ausländische Quellensteuer. Bei ausländischen Brokern musst du die Erträge oft selbst in der Steuererklärung angeben.</p>',
           faq=[('Gibt es in Österreich einen Freibetrag für Kapitalerträge?','Nein, anders als in Deutschland gibt es keinen Sparerfreibetrag.'),
                ('Muss ich die KESt selbst zahlen?','Bei österreichischen Banken und Brokern wird sie automatisch abgezogen. Bei ausländischen Anbietern meist nicht, dann gibst du die Erträge in der Steuererklärung an.')])
     rates=[('0.19','19 % (Regelsatz)',True),('0.07','7 % (ermäßigt)',False)] if land=='de' else [('0.20','20 % (Normalsatz)',True),('0.13','13 % (ermäßigt)',False),('0.10','10 % (ermäßigt)',False)]
     calc('mehrwertsteuer',icon='calc',t='Mehrwertsteuer-Rechner',mt=f'Mehrwertsteuer-Rechner {N}: Brutto & Netto | Finvallo',
       desc=f'Mehrwertsteuer in {N} berechnen: Brutto zu Netto und Netto zu Brutto mit {"19 % und 7 %" if land=="de" else "20 %, 13 % und 10 %"}.',
       lede='Brutto in Netto umrechnen oder umgekehrt.',
-      form=inp('a','Betrag','100','€')+sel('from',f'Der Betrag ist',[('brutto','brutto (inkl. MwSt)',True),('netto','netto (ohne MwSt)',False)])+sel('rt','Steuersatz',rates),
+      form=inp('a','Betrag','100','€')+sel('from',f'Der Betrag ist',[('brutto','brutto (inkl. MwSt)',False),('netto','netto (ohne MwSt)',True)])+sel('rt','Steuersatz',rates),
       out='<div class="res"><div><small>Netto</small><b id="o1">–</b></div><div><small>Mehrwertsteuer</small><b id="o2">–</b></div><div><small>Brutto</small><b id="o3">–</b></div></div>',
       js='''const x=FinCalc.vat({amount:n('a'),rate:+v('rt'),from:v('from')});set('o1',FinCalc.eur(x.net));set('o2',FinCalc.eur(x.vat));set('o3',FinCalc.eur(x.gross));''',
-      how=f'<p>Netto zu Brutto: Netto × (1 + Steuersatz). Brutto zu Netto: Brutto / (1 + Steuersatz). In {N} gelten {"19 % als Regelsatz und 7 % zum Beispiel für viele Lebensmittel und Bücher" if land=="de" else "20 % als Normalsatz, 10 % zum Beispiel für Lebensmittel, Bücher und Mieten und 13 % zum Beispiel für Blumen, Theater oder Beherbergung"}.</p><p><b>Beispiel:</b> {"119 € brutto bei 19 % sind 100 € netto und 19 € MwSt." if land=="de" else "120 € brutto bei 20 % sind 100 € netto und 20 € USt."}</p>',
+      how=f'<p>Netto zu Brutto: Netto × (1 + Steuersatz). Brutto zu Netto: Brutto / (1 + Steuersatz). In {N} gelten {"19 % als Regelsatz und 7 % zum Beispiel für viele Lebensmittel und Bücher" if land=="de" else "20 % als Normalsatz, 10 % zum Beispiel für Lebensmittel, Bücher und Mieten und 13 % zum Beispiel für Blumen, Theater oder Beherbergung"}.</p>',
       faq=[('Was ist der Unterschied zwischen Brutto und Netto?','Brutto enthält die Mehrwertsteuer, netto nicht.')])
+# B12: Beispielsatz zu den Standardwerten, Zahlen aus dem vorgerechneten Ergebnis (o = id → Text)
+EX={'zinseszins':lambda o,l:f'10.000 € Startkapital, 200 € Sparrate zu Monatsbeginn, 5 % Zins pro Jahr und 20 Jahre Laufzeit: Du zahlst {o["o2"]} ein und hast am Ende {o["o1"]}, davon {o["o3"]} Zinsen und Erträge.',
+    'kreditrechner':lambda o,l:f'Ein Kredit über 20.000 € zu 6 % Sollzins und 60 Monaten Laufzeit kostet {o["o1"]} im Monat und insgesamt {o["o3"]} Zinsen, der effektive Jahreszins ohne Gebühren liegt bei {o["o4"]}.',
+    'teilzahlung':lambda o,l:f'Zahlst du 2.000 € offenen Kreditkartenbetrag bei 22 % effektivem Jahreszins mit 3 % Mindestrate (mindestens 20 €) ab, dauert das {o["o1"]} und kostet {o["o2"]} Zinsen.',
+    'entnahmeplan':lambda o,l:f'Entnimmst du aus 200.000 € Kapital bei 4 % Rendite jeden Monat 1.000 €, reicht das Geld für {o["o1"]}, insgesamt sind das {o["o2"]}.',
+    'inflationsrechner':lambda o,l:f'10.000 € sind bei 3 % Inflation nach 10 Jahren nur noch {o["o1"]} wert, für dieselbe Kaufkraft bräuchtest du dann {o["o2"]}.',
+    'renditerechner':lambda o,l:f'Werden aus 10.000 € in 5 Jahren 15.000 €, sind das {o["o2"]} Gesamtrendite und {o["o1"]} Rendite pro Jahr.',
+    'kapitalertragsteuer':lambda o,l:(f'Auf 1.000 € Dividenden und Kursgewinne fallen in Österreich {o["o1"]} KESt (27,5 %) an, netto bleiben {o["o2"]}.' if l=='at' else
+        f'Auf 1.000 € Kapitalerträge über dem Sparerpauschbetrag fallen ohne Kirchensteuer {o["o3"]} Abgeltungsteuer (25 %) und {o["o4"].split(" / ")[0]} Soli (5,5 %) an, zusammen {o["o1"]}, netto bleiben {o["o2"]}.'),
+    'mehrwertsteuer':lambda o,l:f'100 € netto ergeben mit {"19 % MwSt" if l=="de" else "20 % USt"} {o["o3"]} brutto, die Steuer beträgt {o["o2"]}.'}
+def defaults(form):
+    d={m.group(1):m.group(2) for m in re.finditer(r'<input id="([^"]+)"[^>]*value="([^"]*)"',form)}
+    for m in re.finditer(r'<select id="([^"]+)"[^>]*>(.*?)</select>',form):
+        o=re.search(r'<option value="([^"]*)" selected',m.group(2)) or re.search(r'<option value="([^"]*)"',m.group(2)); d[m.group(1)]=o.group(1)
+    return d
+def prerender(calcs):
+    """Rechnet alle Rechner mit Standardwerten über tools/prerender.js (dieselbe Logik wie im Browser)."""
+    import subprocess
+    jobs=[{'key':k,'js':c['js'],'vals':defaults(c['form'])} for k,c in calcs.items()]
+    try: r=subprocess.run(['node',os.path.join(os.path.dirname(os.path.abspath(__file__)),'prerender.js')],input=json.dumps(jobs),capture_output=True,text=True,check=True)
+    except Exception as e: print('Vorrendern nicht möglich (node fehlt?):',e); return {}
+    return json.loads(r.stdout)
+def fill(out,res):
+    for id_,x in res.items():
+        inner=x['html'] if x['html'] else E(x['text'])
+        out=re.sub(rf'(<(\w+)\b[^>]*\bid="{id_}"[^>]*>).*?(</\2>)',lambda m:m.group(1)+inner+m.group(3),out,count=1,flags=re.S)
+    return out
 ICONS={'chart':'<path d="M3 17l5.5-5.5 4 4L21 7M15 7h6v6"/>','bank':'<path d="M3 9.5L12 4l9 5.5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/>','card':'<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6 15h4"/>','coin':'<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5"/>','pie':'<path d="M12 3v9h9a9 9 0 1 1-9-9z"/>','shield':'<path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/>','calc':'<rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 14.5h.01M12 14.5h.01M16 14.5h.01"/>'}
 def ic(k): return f'<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[k]}</svg>'
 def page(land,rel,title,desc,body,ld_extra,alt):
@@ -157,8 +184,11 @@ def page(land,rel,title,desc,body,ld_extra,alt):
 '''
     os.makedirs(R+rel,exist_ok=True); open(R+rel+'index.html','w').write(h)
 def build(land):
-    CALCS.clear(); define(land); N=LN[land][0]
+    CALCS.clear(); define(land); N=LN[land][0]; PRE=prerender(CALCS)
     for slug,c in CALCS.items():
+        o={k:v['text'] for k,v in PRE.get(slug,{}).items()}
+        try: exs=f'<p class="note calc-ex"><b>Beispiel:</b> {E(EX[slug](o,land))}</p>' if o else ''
+        except KeyError: exs=''
         rel=f'{land}/rechner/{slug}/'
         fq=c.get('faq',[])
         links=''.join(f'<a class="btn ghost" href="{u}">{t} →</a>' for u,t in c.get('links',[]))
@@ -166,7 +196,8 @@ def build(land):
         body=f'''<div class="crumb"><span><a href="../">Rechner</a> › {E(c["t"])}</span><span>Stand {STAND_DE}</span></div>
 <h1>{E(c["t"])}</h1><p class="lede">{E(c["lede"])}</p>
 <form class="box calcbox" id="f" onsubmit="return false"><div class="calc">{c["form"]}</div></form>
-<section class="box resbox" aria-live="polite"><h2 style="margin-top:0">Ergebnis</h2>{c["out"]}</section>
+<section class="box resbox" aria-live="polite"><h2 style="margin-top:0">Ergebnis</h2>{fill(c["out"],PRE.get(slug,{}))}</section>
+{exs}
 {DISCLAIMER}
 <h2>So rechnet der Rechner</h2><div class="prose">{c["how"]}</div>
 {f'<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">{links}</div>' if links else ''}

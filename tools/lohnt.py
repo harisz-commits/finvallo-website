@@ -172,22 +172,42 @@ def calc_html(c, x, A):
                 credits=[dict(n=g['name'], v=g['eur']) for g in x.get('credits') or []] + [dict(n=g['name'], v=g['eur']) for g in ps], pmax=x.get('punkte_max') or None,
                 welcome=(x.get('welcome') or {}).get('eur') or 0, minsp=(x.get('lounge') or {}).get('min_umsatz') or 0)
     nc = len(x.get('credits') or [])
-    cr = ''.join(f'<label class="lc"><input type="checkbox" data-credit="{i}" checked> {E(g["name"])} <b>{eur(g["eur"])} €</b></label>' for i, g in enumerate(x.get('credits') or []))
-    if ps: cr += '<p class="note" style="margin:6px 0 0">Partner-Abos: Hake nur an, was du sonst selbst bezahlen würdest.</p>' + ''.join(f'<label class="lc"><input type="checkbox" data-credit="{nc + i}"> {E(g["name"])} <b>{eur(g["eur"])} €</b></label>' for i, g in enumerate(ps))
+    PR = profiles(c, x, A); mid = PR[len(PR) // 2]['p'] if PR else dict(lounge=0, spend=1000, vers=False)
+    on_cr, on_sb = bool(mid.get('credits')), bool(mid.get('subs'))
+    I = dict(spend=mid.get('spend') or 0, lounge=mid.get('lounge') or 0, guests=mid.get('guests') or 0, welcome=False, vers=bool(mid.get('vers') and data['vers']),
+             credits=[i for i in range(nc) if on_cr] + [nc + i for i in range(len(ps)) if on_sb])
+    cr = ''.join(f'<label class="lc"><input type="checkbox" data-credit="{i}" name="credit{i}"{" checked" if on_cr else ""}> {E(g["name"])} <b>{eur(g["eur"])} €</b></label>' for i, g in enumerate(x.get('credits') or []))
+    if ps: cr += '<p class="note" style="margin:6px 0 0">Partner-Abos: Hake nur an, was du sonst selbst bezahlen würdest.</p>' + ''.join(f'<label class="lc"><input type="checkbox" data-credit="{nc + i}" name="credit{nc + i}"{" checked" if on_sb else ""}> {E(g["name"])} <b>{eur(g["eur"])} €</b></label>' for i, g in enumerate(ps))
     if np_: cr += f'<p class="note" style="margin:0">{"Weitere " if ps else ""}Partner-Abos ohne festen Preis, die wir nicht mitrechnen: {E(", ".join(np_))}.</p>'
-    wl = f'<label class="lc"><input type="checkbox" data-welcome> Willkommensbonus im ersten Jahr <b>{eur(data["welcome"])} €</b></label>' if data['welcome'] else ''
-    vs = f'<label class="lc"><input type="checkbox" data-vers> Ich bräuchte sonst eine eigene Reiseversicherung <b>{eur(data["vers"])} €</b></label>' if data['vers'] else ''
+    wl = f'<label class="lc"><input type="checkbox" data-welcome name="welcome"> Willkommensbonus im ersten Jahr <b>{eur(data["welcome"])} €</b></label>' if data['welcome'] else ''
+    vs = f'<label class="lc"><input type="checkbox" data-vers name="vers"{" checked" if I["vers"] else ""}> Ich bräuchte sonst eine eigene Reiseversicherung <b>{eur(data["vers"])} €</b></label>' if data['vers'] else ''
     ins = ''.join(w for w in (
-        f'<label>Lounge-Besuche{lw(x)} im Jahr<input type="number" min="0" max="200" value="6" data-in="lounge"></label>' if lg else '',
-        '<label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-in="guests"></label>' if lg and gf else '',
-        '<label>Kartenumsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-in="spend"></label>' if pp else '') if w)
-    return f'''<div class="box lcalc" data-lohnt='{html.escape(json.dumps(data), quote=True)}' hidden>
+        f'<label>Lounge-Besuche{lw(x)} im Jahr<input type="number" min="0" max="200" value="{I['lounge']}" data-in="lounge" name="lounge"></label>' if lg else '',
+        f'<label>davon mit Begleitung<input type="number" min="0" max="200" value="{I["guests"]}" data-in="guests" name="guests"></label>' if lg and gf else '',
+        f'<label>Kartenumsatz pro Monat (€)<input type="number" min="0" step="100" value="{I["spend"]}" data-in="spend" name="spend"></label>' if pp else '') if w)
+    if not lg: I['lounge'] = I['guests'] = 0
+    if not (lg and gf): I['guests'] = 0
+    if not pp: I['spend'] = 0
+    r = prerender(data, I)
+    ex = f'<p class="note calc-ex"><b>Beispiel:</b> Vorgerechnet für den Fall „{E(PR[len(PR) // 2]["t"])}“: {E(PR[len(PR) // 2]["d"])} Ändere die Werte, dann rechnet der Rechner neu.</p>' if PR and r else ''
+    return f'''<form class="box lcalc" data-lohnt='{html.escape(json.dumps(data), quote=True)}' onsubmit="return false">
   <h2 style="margin-top:0">Rechne mit deinen Zahlen</h2>
   {f'<div class="lgrid">{ins}</div>' if ins else ''}
   {cr}{wl}{vs}
-  <div class="lres"><div><small>Wert deiner Vorteile</small><b data-out="val">–</b></div><div><small>Jahresgebühr</small><b>{eur(data["fee"])} €</b></div><div><small>Ergebnis pro Jahr</small><b data-out="net">–</b></div></div>
-  <p class="note" data-out="txt"></p>
-</div>'''
+  <div class="lres"><div><small>Wert deiner Vorteile</small><b data-out="val">{E(r["val"]) if r else "–"}</b></div><div><small>Jahresgebühr</small><b>{eur(data["fee"])} €</b></div><div><small>Ergebnis pro Jahr</small><b data-out="net"{(' class="good"' if r["good"] else ' class="bad"') if r else ""}>{E(r["net"]) if r else "–"}</b></div></div>
+  <p class="note" data-out="txt">{E(r["txt"]) if r else ""}</p>
+  {ex}
+</form>'''
+
+def prerender(D, I):
+    """B12: Ergebnis für den mittleren Fall mit der Logik aus assets/lohnt.js (über Node)."""
+    import subprocess
+    try:
+        o = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'prerender-lohnt.js')], input=json.dumps([dict(key='x', D=D, I=I)]), capture_output=True, text=True, check=True)
+        return json.loads(o.stdout)['x']
+    except Exception as e:
+        print('Vorrendern nicht möglich (node fehlt?):', e); return None
+
 
 def card_page(land, c, x, A, P, prov):
     N = K.L['name']; rel = f'{land}/kreditkarten/bestenlisten/lohnt-sich/{c["slug"]}/'
@@ -303,7 +323,7 @@ def vers_info():
 
 def vers_field(attr):
     sel = '<option value="0">nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
-    return f'<div class="fld"><span class="flab">Reiseversicherung {vers_info()}</span><select data-{attr}="vers" aria-label="Reiseversicherung">{sel}</select></div>'
+    return f'<div class="fld"><span class="flab">Reiseversicherung {vers_info()}</span><select data-{attr}="vers" name="vers" aria-label="Reiseversicherung">{sel}</select></div>'
 
 def filter_html(cards, X, A):
     data, opts = hub_data(cards, X, A)

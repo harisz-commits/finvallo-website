@@ -60,35 +60,54 @@ def card_data(land, cards):
 
 def box(land, tags, wien, page=False):
     sel = '<option value="0">nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
-    lounge = ('<label>Lounge Wien pro Jahr<input type="number" min="0" max="200" value="0" data-r="wien"></label><label>Lounge Ausland pro Jahr<input type="number" min="0" max="200" value="0" data-r="lounge"></label>'
-              '<label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-r="guests"></label>'
-              if wien else '<label>Lounge-Besuche pro Jahr<input type="number" min="0" max="200" value="0" data-r="lounge"></label><label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-r="guests"></label>')
+    lounge = ('<label>Lounge Wien pro Jahr<input type="number" min="0" max="200" value="0" data-r="wien" name="wien"></label><label>Lounge Ausland pro Jahr<input type="number" min="0" max="200" value="0" data-r="lounge" name="lounge"></label>'
+              '<label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-r="guests" name="guests"></label>'
+              if wien else '<label>Lounge-Besuche pro Jahr<input type="number" min="0" max="200" value="0" data-r="lounge" name="lounge"></label><label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-r="guests" name="guests"></label>')
     cb = ''
     if tags.get('cr'):
         x = f'; Gourmet nur in Österreich, weitere {eur(tags["crx"])} € im Ausland möglich' if tags.get('crx') else ''
-        cb += f'<label class="lc"><input type="checkbox" data-r="cr"><span>Guthaben der Karte nutzen <span class="mut">(nur {E(tags["cr"])}{x})</span></span></label>'
-    if tags.get('sb'): cb += f'<label class="lc"><input type="checkbox" data-r="sb"><span>Partner-Abos nutzen, die du sonst selbst zahlen würdest <span class="mut">(nur {E(tags["sb"])}, gerechnet mit 60 % Nutzung)</span></span></label>'
-    cb += '<label class="lc"><input type="checkbox" data-r="wel"><span>Erstes Jahr rechnen <span class="mut">(mit Willkommensbonus und Aktionspreis)</span></span></label>'
-    filt = ('<div class="lgrid rfilt"><label>Kartenart<select data-f="typ"><option value="">Alle Kartenarten</option><option value="Kreditkarte">Kreditkarte mit Teilzahlung</option><option value="Charge">Charge-Karte</option><option value="Debit">Debitkarte</option><option value="Prepaid">Prepaid-Karte</option></select></label>'
-            '<label>Kartennetzwerk<select data-f="netz"><option value="">Alle Kartennetzwerke</option><option value="visa">Visa</option><option value="mastercard">Mastercard</option><option value="american express">American Express</option><option value="diners">Diners Club</option></select></label>'
-            '<label>Jahresgebühr<select data-f="fee"><option value="">egal</option><option value="0">nur ohne Jahresgebühr</option><option value="100">bis 100 €</option><option value="300">bis 300 €</option></select></label></div>') if page else ''
+        cb += f'<label class="lc"><input type="checkbox" data-r="cr" name="cr"><span>Guthaben der Karte nutzen <span class="mut">(nur {E(tags["cr"])}{x})</span></span></label>'
+    if tags.get('sb'): cb += f'<label class="lc"><input type="checkbox" data-r="sb" name="sb"><span>Partner-Abos nutzen, die du sonst selbst zahlen würdest <span class="mut">(nur {E(tags["sb"])}, gerechnet mit 60 % Nutzung)</span></span></label>'
+    cb += '<label class="lc"><input type="checkbox" data-r="wel" name="wel"><span>Erstes Jahr rechnen <span class="mut">(mit Willkommensbonus und Aktionspreis)</span></span></label>'
+    filt = ('<div class="lgrid rfilt"><label>Kartenart<select data-f="typ" name="typ"><option value="">Alle Kartenarten</option><option value="Kreditkarte">Kreditkarte mit Teilzahlung</option><option value="Charge">Charge-Karte</option><option value="Debit">Debitkarte</option><option value="Prepaid">Prepaid-Karte</option></select></label>'
+            '<label>Kartennetzwerk<select data-f="netz" name="netz"><option value="">Alle Kartennetzwerke</option><option value="visa">Visa</option><option value="mastercard">Mastercard</option><option value="american express">American Express</option><option value="diners">Diners Club</option></select></label>'
+            '<label>Jahresgebühr<select data-f="fee" name="fee"><option value="">egal</option><option value="0">nur ohne Jahresgebühr</option><option value="100">bis 100 €</option><option value="300">bis 300 €</option></select></label></div>') if page else ''
     head = ('<h2 style="margin:0 0 4px">Deine Nutzung</h2><p class="note" style="margin:0 0 12px">Die Liste unten rechnet bei jeder Änderung sofort neu.</p>' if page else
             '<summary><b>Persönlich rechnen</b><span>Was bringt dir jede Karte im Jahr? Trag deine Nutzung ein.</span></summary>')
-    tag, cls = ('div', 'box lcalc rbox rpage') if page else ('details', 'box lcalc rbox')
-    return f'''<!--rechnen--><{tag} class="{cls}" id="rbox"{' data-page="1"' if page else ''} hidden>
+    tag, cls = ('form', 'box lcalc rbox rpage') if page else ('details', 'box lcalc rbox')
+    return f'''<!--rechnen--><{tag} class="{cls}" id="rbox"{' data-page="1" onsubmit="return false"' if page else ' hidden'}>
     {head}
-    <div class="lgrid two"><label>Umsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-r="spend"></label>
-    <label>Fremdwährung pro Jahr (€)<input type="number" min="0" step="100" value="1000" data-r="fxs"></label>
-    <label>Bargeld Inland: Anzahl pro Jahr<input type="number" min="0" max="300" value="0" data-r="cin"></label>
-    <label>Betrag je Abhebung Inland (€)<input type="number" min="0" step="50" value="200" data-r="cia"></label>
-    <label>Bargeld Ausland: Anzahl pro Jahr<input type="number" min="0" max="300" value="0" data-r="cn"></label>
-    <label>Betrag je Abhebung Ausland (€)<input type="number" min="0" step="50" value="200" data-r="ca"></label>
+    <div class="lgrid two"><label>Umsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-r="spend" name="spend"></label>
+    <label>Fremdwährung pro Jahr (€)<input type="number" min="0" step="100" value="1200" data-r="fxs" name="fxs"></label>
+    <label>Bargeld Inland: Anzahl pro Jahr<input type="number" min="0" max="300" value="2" data-r="cin" name="cin"></label>
+    <label>Betrag je Abhebung Inland (€)<input type="number" min="0" step="50" value="200" data-r="cia" name="cia"></label>
+    <label>Bargeld Ausland: Anzahl pro Jahr<input type="number" min="0" max="300" value="0" data-r="cn" name="cn"></label>
+    <label>Betrag je Abhebung Ausland (€)<input type="number" min="0" step="50" value="200" data-r="ca" name="ca"></label>
     {lounge}{LO.vers_field('r')}</div>
     <div class="lchecks">{cb}</div>
     {filt}
     <p class="note" style="margin:0">Wir rechnen Punkte und Meilen mit 1 Cent, Hotelpunkte mit 0,4 Cent, einen Lounge-Besuch mit 30 € und die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)}. Fremdwährung heißt: Zahlungen und Abhebungen außerhalb des Euroraums. Unter jeder Karte siehst du, wie das Ergebnis zustande kommt.</p>
   </{tag}><!--/rechnen-->
   '''
+
+def prerendered(cards, D, item, form):
+    """B12: Liste mit den Standardwerten des Formulars vorgerechnet und sortiert (Logik aus assets/rechnen.js über Node)."""
+    import subprocess
+    vals = {m.group(2): m.group(1) for m in re.finditer(r'value="([^"]*)" data-r="(\w+)"', form)}
+    try:
+        r = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'prerender-karten.js')], input=json.dumps({'D': D, 'vals': vals, 'on': []}), capture_output=True, text=True, check=True)
+        res = json.loads(r.stdout)
+    except Exception as e:
+        print('Vorrendern nicht möglich (node fehlt?):', e); return ''.join(item(c) for c in cards)
+    order = sorted(cards, key=lambda c: ((res.get(c['slug']) or {}).get('low', 1), -((res.get(c['slug']) or {}).get('net') if (res.get(c['slug']) or {}).get('net') is not None else -1e9)))
+    out = []
+    for i, c in enumerate(order, 1):
+        x = res.get(c['slug']); h = item(c)
+        if x:
+            h = h.replace('<article class="item ritem"', f'<article class="item ritem" data-net="{x["net"] if x["net"] is not None else ""}" data-low="{x["low"]}"', 1)
+            h = h.replace('<span class="rk" data-rank></span>', f'<span class="rk" data-rank>{i}</span>', 1).replace('<div class="ires" data-res hidden></div>', f'<div class="ires" data-res>{x["html"]}</div>', 1)
+        out.append(h)
+    return ''.join(out)
 
 def page(land, cards, D, tags):
     """Kreditkarten-Rechner: alle Karten nach deinem Ergebnis, mit Rechnung und Vergleich."""
@@ -119,8 +138,9 @@ def page(land, cards, D, tags):
 {box(land, tags, wien, page=True)}
 <div class="rcmpbar" id="rcmpbar" hidden><span data-cmpn></span><button type="button" class="btn primary" data-cmpgo>Vergleichen</button><button type="button" class="lnk" data-cmpclr>Auswahl löschen</button></div>
 <div class="box rcmp" id="rcmp" hidden></div>
+<p class="note calc-ex"><b>Beispiel:</b> Die Liste ist für 1.000 € Kartenumsatz im Monat vorgerechnet, davon 1.200 € im Jahr in Fremdwährung (10 %), 2 Abhebungen zu je 200 € im Inland und ohne Reiseversicherung. Ändere die Werte oben, dann rechnet sie für dich neu.</p>
 <div class="fbot" style="margin:6px 0 10px"><b data-rcount>{len(cards)} Karten</b><span class="mut">sortiert nach deinem Ergebnis</span></div>
-<div id="rlist" class="rlist">{"".join(item(c) for c in cards)}</div>
+<div id="rlist" class="rlist">{prerendered(cards, D, item, box(land, tags, wien, page=True))}</div>
 <h2>So rechnen wir</h2><div class="prose"><p>Cashback, Punkte und Meilen zählen mit ihrem Wert in Euro: ein Punkt oder eine Meile mit 1 Cent, Hotelpunkte mit 0,4 Cent, jeweils bis zur Obergrenze der Karte. Ein Bonusprogramm mit Teilnahmegebühr zählt nur, wenn es sich bei deinem Umsatz lohnt. Ein Lounge-Besuch zählt mit 30 €, die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)} in der gewünschten Stufe. Davon ziehen wir die Jahresgebühr, die Gebühr auf Zahlungen in Fremdwährung und die Kosten für Bargeld ab. Bei Kreditkarten ohne Automatengebühr rechnen wir einen Monat Zinsen auf das abgehobene Geld.</p></div>
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in fq)}</div>
 <p class="note" style="margin-top:18px"><a class="lnk" href="../">Alle Kreditkarten im Vergleich →</a> · <a class="lnk" href="../bestenlisten/lohnt-sich/">Premiumkarten: ab wann sie sich lohnen →</a></p>
