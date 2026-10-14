@@ -37,6 +37,37 @@ COL=dict(karte=('Karte',lambda c,P:link(c,P)),
          netz=('Netz',lambda c,P:E(c['netz'])),typ=('Typ',lambda c,P:E(c['typ'])),
          lg=('Lounge',lambda c,P:E((c['lg'] or '')[:90])),cb=('Sammeln',lambda c,P:E((c['cb'] or '')[:90])))
 # ---------- Seite ----------
+# Datum je Ratgeber (wie Frontmatter): published, updated (beim nächsten inhaltlichen Edit pflegen),
+# optional corrections=[dict(date='JJJJ-MM-TT', note='…')] → Abschnitt „Korrekturen“ am Ende des Artikels.
+DATES={
+    ('at','business'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','fremdwaehrung'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('at','kreditkarte-beantragen'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('at','lounges'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','mietwagen-kaution'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('at','ohne-bonitaetspruefung'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('at','punkte-sammeln-at'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('at','punkte'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','reiseversicherung'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','teilzahlung'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','visa-mastercard-amex'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','business'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('de','fremdwaehrung'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('de','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','kreditkarte-beantragen'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','lounges'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','mietwagen-kaution'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','ohne-bonitaetspruefung'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','punkte-sammeln-de'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','punkte'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','reiseversicherung'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('de','teilzahlung'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('de','visa-mastercard-amex'): dict(published='2026-10-12', updated='2026-10-12'),
+}
+def dates(): return DATES
 ARTS={}   # (land,slug) -> dict
 def art(land,slug,**kw): ARTS[(land,slug)]=kw
 def head(land,slug,a,P,ld,alt):
@@ -75,7 +106,7 @@ def footer(land,P):
 <span><b>finvallo</b> · Unabhängiger Finanzvergleich für {L}</span>
 <span>Stand {STAND_DE} · Bewertung unabhängig von Provisionen, keine bezahlten Platzierungen · Mit * markierte Links sind Affiliate-Links.</span>
 <span>Keine Finanzberatung. Konditionen vor Abschluss beim Anbieter prüfen.</span>
-<nav aria-label="Fußzeile"><a href="{P}{land}/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a><a href="{P}ueber-uns/">Über uns</a><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></nav>
+<nav aria-label="Fußzeile"><a href="{P}{land}/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a><a href="{P}ueber-uns/">Über Finvallo</a><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></nav>
 </footer>
 </div>
 </body>

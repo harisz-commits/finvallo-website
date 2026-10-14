@@ -149,7 +149,7 @@ def page(land,rel,title,desc,body,ld_extra,alt):
 <footer>
 <span><b>finvallo</b> · Unabhängiger Finanzvergleich für {N}</span>
 <span>Stand {STAND_DE} · Rechner ohne Gewähr · Keine Finanz- oder Steuerberatung.</span>
-<nav aria-label="Fußzeile"><a href="{P}{land}/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a><a href="{P}ueber-uns/">Über uns</a><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></nav>
+<nav aria-label="Fußzeile"><a href="{P}{land}/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a><a href="{P}ueber-uns/">Über Finvallo</a><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></nav>
 </footer>
 </div>
 </body>

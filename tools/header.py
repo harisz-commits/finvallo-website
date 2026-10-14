@@ -8,7 +8,7 @@ AT_MAIN=[('at/kreditkarten/','Kreditkarten'),('at/kreditkarten/bestenlisten/','B
 AT_MORE=[('at/kreditkarten/business/','Business-Kreditkarten'),('at/kreditkarten/methodik/','So bewerten wir'),('at/','Übersicht Österreich')]
 DE_MAIN=[('de/kreditkarten/','Kreditkarten'),('de/kreditkarten/bestenlisten/','Bestenlisten'),('de/ratgeber/','Ratgeber'),('de/kreditkarten/anbieter/','Anbieter'),('de/rechner/','Rechner')]
 DE_MORE=[('de/kreditkarten/business/','Business-Kreditkarten'),('de/kreditkarten/methodik/','So bewerten wir'),('de/','Übersicht Deutschland')]
-INFO=[('ueber-uns/','Über uns'),('so-verdienen-wir-geld/','So verdienen wir Geld')]
+INFO=[('ueber-uns/','Über Finvallo'),('so-verdienen-wir-geld/','So verdienen wir Geld')]
 
 def active(rel, items):
     # longest matching prefix wins; card pages fall under Kreditkarten
