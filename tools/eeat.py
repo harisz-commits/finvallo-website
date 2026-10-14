@@ -130,6 +130,37 @@ def land_links(s, rel):
     head, body = s[:s.find('<body')], s[s.find('<body'):]
     return head + re.sub(r'<a [^>]*href="([^"]*)"[^>]*>', fix, body)
 
+# ---------- hreflang (B11) ----------
+XD = {'', 'at/', 'de/', 'at/kreditkarten/', 'de/kreditkarten/', 'at/ratgeber/', 'de/ratgeber/', 'at/rechner/', 'de/rechner/',
+      'at/kreditkarten/bestenlisten/', 'de/kreditkarten/bestenlisten/'}
+def partner(rel):
+    if rel in MAP: return MAP[rel]
+    me = rel.split('/')[0]
+    if me not in ('at', 'de'): return None
+    o = ('de' if me == 'at' else 'at') + rel[2:]
+    return o if os.path.exists(R + o + 'index.html') else None
+
+def alternates(rel):
+    if rel == '': return {'de-AT': 'at/', 'de-DE': 'de/', 'x-default': ''}
+    o = partner(rel)
+    if not o: return {}
+    at, de = (rel, o) if rel.startswith('at/') else (o, rel)
+    d = {'de-AT': at, 'de-DE': de}
+    if rel in XD: d['x-default'] = ''
+    return d
+
+def set_hreflang(s, rel):
+    s = re.sub(r'\n?<link rel="alternate" hreflang="[^"]*" href="[^"]*">', '', s)
+    alt = alternates(rel)
+    if not alt: return s
+    tags = ''.join(f'<link rel="alternate" hreflang="{k}" href="https://finvallo.com/{v}">' for k, v in alt.items())
+    return re.sub(r'(<link rel="canonical" href="[^"]*">)', lambda m: m.group(1) + '\n' + tags, s, count=1)
+
+def git_date(path):
+    import subprocess
+    try: return subprocess.run(['git', 'log', '-1', '--format=%cs', '--', path], capture_output=True, text=True, cwd=os.path.join(R, '..')).stdout.strip() or None
+    except Exception: return None
+
 # ---------- 5. JSON-LD ----------
 def ld_merge(s, extra=(), patch=None):
     blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S)
@@ -188,6 +219,7 @@ def generic_patch(s, rel):
             out.append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
         for x in out:
             if x.get('@type') in ('WebPage', 'AboutPage', 'CollectionPage') and 'publisher' in x: x['publisher'] = {"@id": ORG['@id']}
+            if rel == '' and x.get('@type') == 'WebSite': x.update({"name": "Finvallo", "url": "https://finvallo.com/", "inLanguage": ["de-AT", "de-DE"], "publisher": {"@id": ORG['@id']}}); x.pop('potentialAction', None)
     return p
 
 # ---------- Ablauf ----------
@@ -197,6 +229,7 @@ def main():
     cards = {land: {c['slug']: c for c in DATA[land][0]} for land in DATA}
     rdates = RG.dates()
     n = {'author': 0, 'quelle': 0, 'liste': 0, 'ratgeber': 0}
+    global LASTMOD, NOINDEX; LASTMOD, NOINDEX = {}, {}
     for f in sorted(glob.glob(R + '**/*.html', recursive=True)):
         rel = f[len(R):]
         rel = '' if rel == 'index.html' else rel[:-len('index.html')] if rel.endswith('index.html') else rel
@@ -233,6 +266,7 @@ def main():
             s = re.sub(r'<p class="source-line">.*?</p>', '', s)
             s = s.replace('<h2>Konditionen im Überblick</h2>', '<h2>Konditionen im Überblick</h2>' + line, 1); n['quelle'] += 1
             s = put_author(s, author_box(land, title), ['<h2>Ähnliche Karten</h2>']); n['author'] += 1
+            LASTMOD[rel] = c['geprueft']
             url = f'https://finvallo.com/{rel}'
             prod = {"@type": "Product", "@id": url + "#product", "name": c['titel'], "brand": {"@type": "Brand", "name": c['anbieter']}, "url": url}
             if c.get('stars'): prod["review"] = {"@type": "Review", "author": AUTH, "datePublished": c['geprueft'], "reviewRating": {"@type": "Rating", "ratingValue": c['stars'], "bestRating": 5, "worstRating": 1}}
@@ -249,6 +283,7 @@ def main():
                     lx = {x['slug']: x for x in json.load(open(lp))['karten']} if os.path.exists(lp) else {}
                     mx = (lx.get(parts[4]) or {}).get('geprueft') or mx
                 s = list_dates(s, mx); n['liste'] += 1
+                LASTMOD[rel] = mx
             hub = rel in (f'{land}/kreditkarten/', f'{land}/kreditkarten/bestenlisten/', f'{land}/kreditkarten/alle/', f'{land}/kreditkarten/business/')
             if parts[2] == 'bestenlisten' and not hub:
                 s = put_author(s, author_box(land, title), []); n['author'] += 1
@@ -256,7 +291,7 @@ def main():
         elif land and len(parts) == 4 and parts[1] == 'ratgeber' and parts[2]:
             d = rdates.get((land, parts[2]), {})
             upd = d.get('updated'); pub = d.get('published') or upd
-            if upd: s = date_line(s, f'<p class="updated-line">Aktualisiert am {dmy(upd)}</p>', 'updated-line')
+            if upd: s = date_line(s, f'<p class="updated-line">Aktualisiert am {dmy(upd)}</p>', 'updated-line'); LASTMOD[rel] = upd
             corr = d.get('corrections') or []
             s = re.sub(r'<!--korr-->.*?<!--/korr-->', '', s, flags=re.S)
             if corr:
@@ -276,7 +311,23 @@ def main():
                 if upd: art["dateModified"] = upd
             patch = rp
         s = ld_merge(s, extra, patch)
+        s = set_hreflang(s, rel)
+        if rel not in LASTMOD:
+            if land:
+                linked = set(re.findall(r'href="(?:\.\./)*(?:(?:at|de)/kreditkarten/)?([a-z0-9-]+)/"', s)) & set(cards[land])
+                LASTMOD[rel] = max(cards[land][x]['geprueft'] for x in linked) if linked else K.LANDS[land]['stand']
+            else:
+                LASTMOD[rel] = git_date(f'public/{rel}index.html' if rel else 'public/index.html') or max(K.LANDS[l]['stand'] for l in K.LANDS)
+        NOINDEX[rel] = 'noindex' in (re.search(r'<meta name="robots" content="([^"]*)"', s) or [None, ''])[1]
         if s != s0: open(f, 'w', encoding='utf-8').write(s)
+    # Sitemap (B11, B14, B20.8): alle indexierbaren Seiten, lastmod aus Inhaltsdaten, hreflang-Paare, keine 301-Quellen
+    redir = set(json.load(open(os.path.join(K.SP, 'daten', 'redirects.json'))).keys()) if os.path.exists(os.path.join(K.SP, 'daten', 'redirects.json')) else set()
+    rows = []
+    for rel in sorted(LASTMOD, key=lambda r: (r.count('/'), r)):
+        if NOINDEX.get(rel) or rel.endswith('.html') or ('/' + rel) in redir: continue
+        alt = ''.join(f'<xhtml:link rel="alternate" hreflang="{k}" href="https://finvallo.com/{v}"/>' for k, v in alternates(rel).items())
+        rows.append(f'<url><loc>https://finvallo.com/{rel}</loc><lastmod>{LASTMOD[rel]}</lastmod>{alt}</url>')
+    open(R + 'sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + '\n'.join(rows) + '\n</urlset>\n')
     # llms.txt
     for fn in ('llms.txt', 'llms-full.txt'):
         p = R + fn

@@ -18,6 +18,7 @@ for _l in ('at', 'de'):
 err = []
 pages = glob.glob(R + '**/index.html', recursive=True) + [R + '404.html']
 titles = {}
+HREF = {}
 for f in pages:
     rel = f[len(R):]
     s = open(f, encoding='utf-8').read()
@@ -38,11 +39,19 @@ for f in pages:
         txt = re.sub(r'<script type="application/ld\+json">.*?</script>', '', s, flags=re.S)
         m = INTERN.search(re.sub(r'<script.*?</script>', '', txt, flags=re.S))
         if m: err.append(f'{rel}: interner Begriff „{m.group(0)}“')
-    for a in re.findall(r'hreflang="de-..". href="https://finvallo.com/([^"]*)"', s):
+    alts = dict(re.findall(r'<link rel="alternate" hreflang="(de-AT|de-DE)" href="https://finvallo.com/([^"]*)">', s))
+    HREF[rel[:-10] if rel.endswith('index.html') else rel] = alts
+    for a in alts.values():
         if not os.path.exists(R + a + 'index.html'): err.append(f'{rel}: hreflang-Ziel fehlt {a}')
     for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S):
-        try: json.loads(m)
+        try:
+            j = json.loads(m)
+            if not (isinstance(j, dict) and j.get('@context')): err.append(f'{rel}: JSON-LD ohne @context')
         except Exception as e: err.append(f'{rel}: JSON-LD ungültig ({e})')
+    # B14.4: höchstens ein Prüf-/Stand-Datum je Seite
+    body_ = re.sub(r'<script.*?</script>|<p class="src">.*?</p>', '', s[s.find('<body'):], flags=re.S)
+    ds = set(re.findall(r'(?:Stand:|[Gg]eprüft am|geprüft bis|Aktualisiert am)\s*(\d{2}\.\d{2}\.\d{4})', re.sub(r'<[^>]+>', ' ', body_)))
+    if len(ds) > 1: err.append(f'{rel}: mehrere Prüfdaten {sorted(ds)}')
     t = re.search(r'<title>(.*?)</title>', s)
     if t: titles.setdefault(t.group(1), []).append(rel)
     d = re.search(r'<meta name="description" content="(.*?)"', s)
@@ -58,6 +67,10 @@ for f in pages:
             n = int(m.group(1))
             if n >= 20 and n not in ALLOWED[lc] and not txt[max(0, m.start() - 8):m.start()].endswith('Trading '):
                 err.append(f'{rel}: Kartenanzahl {m.group(0)} stammt nicht aus card_count()')
+# B11: hreflang symmetrisch (jede genannte Seite nennt dieselben Partner)
+for r, alts in HREF.items():
+    for t in alts.values():
+        if HREF.get(t, {}) != alts: err.append(f'hreflang nicht symmetrisch: {r} ↔ {t}')
 for t, v in titles.items():
     if len(v) > 1: err.append(f'doppelter Titel „{t}“: {", ".join(v[:3])}')
 sm = re.findall(r'<loc>https://finvallo.com/([^<]*)</loc>', open(R + 'sitemap.xml').read())
