@@ -524,16 +524,38 @@ def biz_page(biz):
     d=f'{len(biz)} Business- und Firmenkreditkarten in {L["name"]} unabhängig verglichen: Kosten, Abrechnung, Extras und Bewertung.'
     biz=sorted(biz,key=lambda c:(-(c.get('stars') or 0),c.get('fee') or 0))
     ld=graph(rel,t,d,[(L['name'],f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Business',rel)])
-    items=[]
-    for c in biz:
-        r=c.get('rank'); c['rank']=None; items.append(list_item(c,P,'../')); c['rank']=r
-    w=json.load(open(SP+f'/daten/{code}/business.json')).get('weitere') if os.path.exists(SP+f'/daten/{code}/business.json') else []
+    def items(X):
+        out=[]
+        for c in X:
+            r=c.get('rank'); c['rank']=None; out.append(list_item(c,P,'../')); c['rank']=r
+        return ''.join(out)
+    BJ=json.load(open(SP+f'/daten/{code}/business.json')) if os.path.exists(SP+f'/daten/{code}/business.json') else {}
+    w=BJ.get('weitere') or []
+    intro=BJ.get('einleitung')   # Text liefert der Auftraggeber; ohne Text wird nichts angezeigt
+    kc=[c for c in biz if c['typ'] in ('Kreditkarte','Charge')]; dc=[c for c in biz if c['typ'] not in ('Kreditkarte','Charge')]
+    free=[c for c in biz if c.get('fee')==0]
+    mit=[c for c in biz if any(re.search(r'(Zusatz|Mitarbeiter)karten?',x) and re.search(r'kostenlos|inklusive|gratis|0 €',x) for x in (c.get('pros') or [])+(c.get('extra') or []))]
+    nogiro=[c for c in biz if c.get('giro') is False]
+    nl=lambda X: ', '.join(c['titel'] for c in X[:-1])+' und '+X[-1]['titel'] if len(X)>1 else X[0]['titel']
+    fq=[]
+    if free: fq.append(('Welche Firmenkarte hat keine Jahresgebühr?',f'Ohne Jahresgebühr: {nl(free[:6])}.'+(f' Am besten bewertet davon ist die {max(free,key=lambda c:c.get("stars") or 0)["titel"]}.' if len(free)>1 else '')))
+    else: fq.append(('Welche Firmenkarte hat keine Jahresgebühr?','In unserem Vergleich hat derzeit keine Firmenkarte eine Jahresgebühr von 0 €.'))
+    if mit: fq.append(('Welche Firmenkarten haben kostenlose Mitarbeiterkarten?',f'Laut Anbieter mit kostenlosen Zusatz- oder Mitarbeiterkarten: {nl(mit[:6])}. Die Bedingungen stehen auf der jeweiligen Kartenseite.'))
+    if nogiro: fq.append(('Welche Firmenkarten gibt es ohne Firmenkonto beim Anbieter?',f'Ohne Konto beim Anbieter bekommst du: {nl(nogiro[:6])}.'))
+    first=kc[0] if kc else biz[0]
+    kurz=f'<b>Kurz gesagt:</b> {len(biz)} Firmenkarten im Vergleich. Am besten bewertet ist die {first["titel"]}'+(f' mit {de1(first["stars"])} Sternen' if first.get('stars') else '')+'.'+(f' {len(free)} {"Karte kostet" if len(free)==1 else "Karten kosten"} keine Jahresgebühr.' if free else '')
+    ld=graph(rel,t,d,[(L['name'],f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Business',rel)],[{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}])
     body=f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/business/")}
 <div class="wrap"><main id="app">
-<h1>{TXT[code]["biz_h"]}</h1><p class="lede">{E(TXT[code]["biz_lede"](len(biz)))}</p>
+<h1>{TXT[code]["biz_h"]}</h1>
+<div class="facts prose"><p>{kurz}</p></div>
+<p class="lede">{E(TXT[code]["biz_lede"](len(biz)))}</p>
+{f'<div class="prose">{intro}</div>' if intro else ''}
 <p class="note">Mehr zu Haftung und Abrechnung im <a href="{P}{code}/ratgeber/business/">Ratgeber Firmenkreditkarten</a>.</p>
-<h2>Bewertete Firmenkarten</h2><div class="list">{"".join(items)}</div>
+<h2>Business-Kredit- und Charge-Karten</h2><div class="list">{items(kc)}</div>
+{f'<h2>Business-Debitkarten und Konten</h2><div class="list">{items(dc)}</div>' if dc else ''}
 {f'<h2>Weitere Business-Angebote</h2><p class="note" style="margin-top:-6px">Diese Angebote kurz im Überblick. Details und aktuelle Preise beim Anbieter.</p>{qa(w)}' if w else ''}
+<h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div>
 </main>
 {footer(P)}'''
     write(rel,head(t,d,rel,P,ld,alt=alt_links('at/kreditkarten/business/','de/kreditkarten/business/'))+body)
@@ -582,6 +604,7 @@ def anbieter_pages(cards,prov):
 <div class="wrap"><main id="app">
 <div class="crumb"><span><a href="../../alle/">Alle Karten</a> › {E(nm)}</span><span>Stand {dmy(max(c['geprueft'] for c in v))}</span></div>
   <div class="dh" style="grid-template-columns:64px 1fr"><span class="plogo" style="width:64px;height:64px;font-size:20px">{initials(nm)}</span><div>{f'<span class="tag">{E(pv["typ"])}</span>' if pv.get('typ') else ''}<h1 style="margin-top:8px">{E(nm)}: Kreditkarten</h1></div></div>
+  <div class="facts prose" style="margin-top:12px"><p><b>Kurz gesagt:</b> {E(nm)} hat {len(v)} {"Karte" if len(v)==1 else "Karten"} im Finvallo-Vergleich für {N}.{f' Am besten bewertet ist die {E(b["titel"])} mit {de1(b["stars"])} Sternen.' if b and len(v)>1 else (f' Sie hat {de1(b["stars"])} Sterne.' if b else '')}{(' ' + E(fq[1][1])) if len(fq)>1 and len(v)>1 else ''}</p></div>
   <div class="feat">{feat}</div>
   {f'<a class="btn primary block" style="margin-top:16px" href="{E(pv["web"])}" target="_blank" rel="noopener">Zum Anbieter ↗</a>' if pv.get('web') else ''}
     <div class="cond" style="margin-top:18px"><div class="gh">Auf einen Blick</div>{facts}</div>

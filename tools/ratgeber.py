@@ -41,7 +41,7 @@ COL=dict(karte=('Karte',lambda c,P:link(c,P)),
 # optional corrections=[dict(date='JJJJ-MM-TT', note='…')] → Abschnitt „Korrekturen“ am Ende des Artikels.
 DATES={
     ('at','business'): dict(published='2026-10-11', updated='2026-10-11'),
-    ('at','fremdwaehrung'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','fremdwaehrung'): dict(published='2026-10-11', updated='2026-10-14'),
     ('at','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
     ('at','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-12'),
     ('at','kreditkarte-beantragen'): dict(published='2026-10-12', updated='2026-10-12'),
@@ -250,6 +250,26 @@ def build(land):
            ('Wie hoch ist die Kaution beim Mietwagen?','Meist 300 bis 1.500 €, bei Premiumautos mehr. Der Betrag wird reserviert und nach der Rückgabe wieder freigegeben.'),
            ('Ersetzt die Kreditkarte die Vollkasko des Vermieters?','Manche Karten erstatten den Selbstbehalt oder bieten eine eigene Vollkasko, wenn du den Wagen mit der Karte bezahlst. Die Bedingungen unterscheiden sich stark.')],
       related=['reiseversicherung','kartentypen','visa-mastercard-amex'])
+    if land=='at':
+        # AT-Fremdwährung mit derselben Struktur wie DE; Werte aus den Kartendaten
+        HB=('Bank Austria Classic','Erste Bank und Sparkassen Smartcard','Raiffeisen Classic','BAWAG Weiß','card complete Classic ohne Versicherung')
+        hb=[c for c in C if c['titel'] in HB]
+        fx0=[c for c in credit if c['fx']==0][:10]
+        fxs=sorted(c['fx'] for c in hb if c['fx'])
+        art('at','fremdwaehrung',h1='Gebühren im Ausland verstehen',mt='Kreditkarte im Ausland: Gebühren verstehen (AT) | Finvallo',
+          desc='Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“: So vermeidest du unnötige Gebühren mit der Kreditkarte, wenn du aus Österreich verreist.',
+          lede='Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“.',
+          kurz=f'Innerhalb des Euroraums kostet das Zahlen mit der Karte nichts extra. Außerhalb verlangen die Karten der großen österreichischen Banken in unserem Vergleich {pct(fxs[0])} bis {pct(fxs[-1])}. {len([c for c in credit if c["fx"]==0])} Kredit- und Charge-Karten in unserem Vergleich verlangen dafür 0 %.' if fxs else None,
+          secs=[('Was beim Zahlen in Fremdwährung anfällt','<div class="prose"><p>Zahlst du in einer fremden Währung, verlangen viele Banken zwei Dinge: ein Bearbeitungsentgelt, oft 1,5 bis 1,65 %, und einen Aufschlag auf den Wechselkurs, oft 1 bis 2 %. Zusammen sind das schnell 2,5 bis über 3 %. Achte deshalb immer auf beides.</p></div><div class="cond"><div class="r"><span>Urlaub in den USA, 1.000 € Ausgaben</span> <span></span></div><div class="r"><span>Karte mit 0 %</span> <span>0 €</span></div><div class="r"><span>Karte mit 1,5 %</span> <span>15 €</span></div><div class="r"><span>Karte mit 1,65 % + 1,5 %</span> <span>31,50 €</span></div></div>'),
+                ('Typische Gebühren bei Hausbanken',table(hb,[COL['karte'],COL['fee'],COL['fx'],COL['cash']],P)+'<p class="note">Je Bank die günstigste Standardkarte aus unserem Vergleich. Bei card complete und Bank Austria ist der Kursaufschlag eingerechnet.</p>' if hb else ''),
+                ('Karten ohne Auslandsgebühr',table(fx0,[COL['karte'],COL['fee'],COL['cash'],COL['stars']],P)+f'<p class="note"><a class="lnk" href="{best}ausland/">Zur Bestenliste: ohne Auslandsgebühr →</a></p>'),
+                ('Die Falle „in Euro zahlen?“','<div class="info"><span class="ic">!</span><div><p style="margin:0">Fragt dich ein Terminal oder Geldautomat im Ausland, ob du in Euro statt in der Landeswährung zahlen willst, lehne ab. Bei der Umrechnung durch den Händler ist der Kurs fast immer schlechter als bei deiner Bank.</p></div></div>'),
+                ('Bargeld im Ausland','<div class="prose"><p>Beim Beheben im Ausland fallen bis zu drei Kosten an: das Bearbeitungsentgelt für die Fremdwährung, eine Bargeldgebühr deiner Bank und eine Gebühr des Automatenbetreibers. Viele gebührenfreie Karten erstatten nur die eigenen Gebühren, nicht die des Betreibers. Was jede Karte für das Beheben verlangt, steht in den Tabellen oben und auf der jeweiligen Kartenseite.</p></div>'),
+                ('Das Urteil zu card complete','<div class="prose"><p>Der Oberste Gerichtshof hat 2026 entschieden, dass card complete Bearbeitungsentgelt und Kursaufschlag in älteren Verträgen nicht doppelt verrechnen durfte. Die Arbeiterkammer sieht ein ähnliches Muster bei PayLife und BAWAG und bietet einen Musterbrief an.</p></div>')],
+          faq=[('Kostet das Zahlen mit Kreditkarte in Euro-Ländern extra?','Nein. Zahlungen in Euro innerhalb des Euroraums kosten wie im Inland, meist also nichts.'),
+               ('Wie hoch ist die Gebühr für Fremdwährung bei österreichischen Banken?',f'Bei den Standardkarten der großen Banken in unserem Vergleich {pct(fxs[0])} bis {pct(fxs[-1])}, je nachdem ob ein Kursaufschlag dazukommt. Karten ohne Auslandsgebühr verlangen 0 %.' if fxs else 'Das hängt von der Bank ab.'),
+               ('Soll ich am Automaten im Ausland Euro oder Landeswährung wählen?','Immer die Landeswährung. Die Umrechnung in Euro durch den Automaten ist fast immer teurer.')],
+          related=['kostenlose-kreditkarte','visa-mastercard-amex','reiseversicherung'])
     if land=='de':
         lou=[c for c in RC if c['lg']]
         art('de','lounges',h1='Lounge-Zugang mit der Kreditkarte',mt='Lounge-Zugang mit Kreditkarte in Deutschland | Finvallo',
