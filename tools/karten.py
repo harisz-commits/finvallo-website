@@ -593,7 +593,7 @@ def datafile(cards):
     out=[]
     for c in cards:
         out.append({k:c.get(k) for k in ['id','slug','anbieter','herausgeber','name','titel','art','typ','klasse','netz','fee','fee1','feeNote','fx','fxText','cashText','soll','effz','rahmen','giro','auto','pay','tier','stars','note','rank','pros','cons','quelle','preis','stand','geprueft']}
-                   |{'versicherung':TIER[c['tier']][1] if c.get('tier') is not None else None,'url':f'https://finvallo.com/{L["code"]}/kreditkarten/{c["slug"]}/'})
+                   |{'klasse':{'Std':'Standard'}.get(c.get('klasse'),c.get('klasse')),'versicherung':TIER[c['tier']][1] if c.get('tier') is not None else None,'url':f'https://finvallo.com/{L["code"]}/kreditkarten/{c["slug"]}/'})
     os.makedirs(R+f'{L["code"]}/daten',exist_ok=True)
     json.dump({'quelle':f'https://finvallo.com/{L["code"]}/kreditkarten/','stand':L['stand'],'lizenz':'Frei nutzbar mit Quellenangabe Finvallo','karten':out},open(R+f'{L["code"]}/daten/kreditkarten.json','w'),ensure_ascii=False,indent=1)
 
