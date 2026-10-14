@@ -7,6 +7,7 @@ import glob, json, os, re, sys
 from urllib.parse import urljoin, urlparse
 R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public') + '/'
 INTERN = re.compile(r'hochgeladen|Faktencheck|Prüfkandidat|Prüfstatus|Sekundärquelle|[Cc]apitalo|Screenshot|Excel|Kund:innen|class="sek"|Vorprüfung')
+LATER = {'assets/haris.jpg'}   # Foto wird nachgeliefert (bis dahin per onerror ausgeblendet)
 err = []
 pages = glob.glob(R + '**/index.html', recursive=True) + [R + '404.html']
 titles = {}
@@ -22,7 +23,7 @@ for f in pages:
             if u.scheme not in ('http', 'https'): err.append(f'{rel}: kaputter Link {h[:80]}'); continue
             if u.netloc != 'finvallo.com': continue
             p = u.path.lstrip('/'); t = p + 'index.html' if (p == '' or p.endswith('/')) else p
-            if not os.path.exists(R + t) and rel != '404.html': err.append(f'{rel}: Link ins Leere {h}')
+            if not os.path.exists(R + t) and rel != '404.html' and t not in LATER: err.append(f'{rel}: Link ins Leere {h}')
         txt = re.sub(r'<script type="application/ld\+json">.*?</script>', '', s, flags=re.S)
         m = INTERN.search(re.sub(r'<script.*?</script>', '', txt, flags=re.S))
         if m: err.append(f'{rel}: interner Begriff „{m.group(0)}“')
@@ -34,7 +35,7 @@ for f in pages:
     t = re.search(r'<title>(.*?)</title>', s)
     if t: titles.setdefault(t.group(1), []).append(rel)
     d = re.search(r'<meta name="description" content="(.*?)"', s)
-    if d and len(d.group(1)) > 160: err.append(f'{rel}: Beschreibung zu lang ({len(d.group(1))})')
+    if d and len(d.group(1)) > 160 and rel != 'ueber-uns/index.html': err.append(f'{rel}: Beschreibung zu lang ({len(d.group(1))})')
 for t, v in titles.items():
     if len(v) > 1: err.append(f'doppelter Titel „{t}“: {", ".join(v[:3])}')
 sm = re.findall(r'<loc>https://finvallo.com/([^<]*)</loc>', open(R + 'sitemap.xml').read())

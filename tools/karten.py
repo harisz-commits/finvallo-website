@@ -250,7 +250,7 @@ def footer(P):
 <span><b>finvallo</b> · Unabhängiger Finanzvergleich für {L['name']}</span>
 <span>Stand {dmy(L['stand'])} · Bewertung unabhängig von Provisionen, keine bezahlten Platzierungen · Mit * markierte Links sind Affiliate-Links.</span>
 <span>Keine Finanzberatung. Konditionen vor Abschluss beim Anbieter prüfen.</span>
-<nav aria-label="Fußzeile"><a href="{P}{L['code']}/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a><a href="{P}ueber-uns/">Über uns</a><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></nav>
+<nav aria-label="Fußzeile"><a href="{P}{L['code']}/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a><a href="{P}ueber-uns/">Über Finvallo</a><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></nav>
 </footer>
 </div>
 </body>

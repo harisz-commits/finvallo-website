@@ -78,7 +78,7 @@ def footer(P,hdr,year,stand):
 <div class="hp-foot-brand"><a class="brand" href="{P or './'}">{mark(hdr)}<b>fin<span>vallo</span></b></a><p>Unabhängiger Finanzvergleich für Österreich und Deutschland.</p><div class="hp-foot-lands"><a href="{P}at/">{FLAG['AT']} Österreich</a><a href="{P}de/">{FLAG['DE']} Deutschland</a></div></div>
 <div><h4>Vergleiche</h4><a href="{P}at/kreditkarten/">Kreditkarten Österreich</a><a href="{P}de/">Kreditkarten Deutschland</a><a href="{P}at/kreditkarten/bestenlisten/">Bestenlisten</a><a href="{P}at/kreditkarten/business/">Business-Kreditkarten</a><a href="{P}at/kreditkarten/rechner/">Kartenrechner</a></div>
 <div><h4>Ratgeber</h4><a href="{P}at/ratgeber/">Ratgeber Österreich</a><a href="{P}de/ratgeber/">Ratgeber Deutschland</a><a href="{P}at/ratgeber/kartentypen/">Kartentypen</a><a href="{P}at/ratgeber/teilzahlung/">Teilzahlung</a><a href="{P}at/ratgeber/lounges/">Lounges</a></div>
-<div><h4>Unternehmen</h4><a href="{P}ueber-uns/">Über uns</a><a href="{P}at/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a></div>
+<div><h4>Unternehmen</h4><a href="{P}ueber-uns/">Über Finvallo</a><a href="{P}at/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a></div>
 <div><h4>Rechtliches</h4><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></div>
 </div>
 <div class="hp-foot-legal"><span>© {year} Finvallo · Stand {stand}</span><span>Keine Finanzberatung. Konditionen vor Abschluss beim Anbieter prüfen. Mit * markierte Links sind Affiliate-Links. Bewertung unabhängig von Provisionen, keine bezahlten Platzierungen.</span></div>

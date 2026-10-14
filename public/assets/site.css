@@ -630,3 +630,11 @@ input,select,textarea{font-size:max(16px,1em)!important}
 .tip .pop p{margin:6px 0 0}
 .tip>summary{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:18px;height:18px;min-height:0;padding:0;margin:0;background:transparent;box-shadow:none;border-radius:50%;font-size:11px;line-height:1;font-weight:700}
 .tip>summary::after,.tip>summary::before{content:none!important;display:none!important}
+/* Autorenbox, Quell- und Prüfzeilen */
+.author-box{display:flex;gap:14px;align-items:flex-start;margin:26px 0 18px;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.author-box img{flex:none;width:48px;height:48px;border-radius:50%;object-fit:cover;background:var(--card2,var(--bg))}
+.author-box p{margin:0;line-height:1.5}
+.author-box .author-links{margin-top:8px;font-size:14px;color:var(--muted)}
+.source-line,.checked-line,.updated-line{margin:4px 0 14px;font-size:14px;color:var(--muted)}
+.prose img.founder{width:120px;height:120px;border-radius:50%;object-fit:cover}
+.korrekturen p{font-size:14.5px;color:var(--muted)}
