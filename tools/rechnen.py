@@ -73,7 +73,7 @@ def box(land, tags, wien, page=False):
             '<label>Kartennetzwerk<select data-f="netz" name="netz"><option value="">Alle Kartennetzwerke</option><option value="visa">Visa</option><option value="mastercard">Mastercard</option><option value="american express">American Express</option><option value="diners">Diners Club</option></select></label>'
             '<label>Jahresgebühr<select data-f="fee" name="fee"><option value="">egal</option><option value="0">nur ohne Jahresgebühr</option><option value="100">bis 100 €</option><option value="300">bis 300 €</option></select></label></div>') if page else ''
     head = ('<h2 style="margin:0 0 4px">Deine Nutzung</h2><p class="note" style="margin:0 0 12px">Die Liste unten rechnet bei jeder Änderung sofort neu.</p>' if page else
-            '<summary><b>Persönlich rechnen</b><span>Was bringt dir jede Karte im Jahr? Trag deine Nutzung ein.</span></summary>')
+            '<summary><b>Welche Karte ist die beste für dich?</b><span>Trag ein, wie viel du mit Karte zahlst, wie oft du reist und Bargeld abhebst. Wir rechnen für jede Karte aus, was sie dir im Jahr bringt, und sortieren die beste für dich nach oben.</span><em class="rgo">Jetzt für dich rechnen</em></summary>')
     tag, cls = ('form', 'box lcalc rbox rpage') if page else ('details', 'box lcalc rbox')
     return f'''<!--rechnen--><{tag} class="{cls}" id="rbox"{' data-page="1" onsubmit="return false"' if page else ' hidden'}>
     {head}

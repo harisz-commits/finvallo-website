@@ -263,6 +263,11 @@ def methodik(s, land):
         s = re.sub(r'(<p class="lede">.*?</p>)', r'\1' + f'<p class="note meth-since">Methodik gültig seit {dmy(METH["gueltig_seit"])}.</p>', s, count=1, flags=re.S)
     return s
 
+DASH = str.maketrans({'\u2013': '-', '\u2014': '-', '\u2212': '-'})
+def undash(t):
+    """Nur den normalen Bindestrich verwenden (keine Halbgeviert-, Geviert- oder Minuszeichen)."""
+    return t.translate(DASH)
+
 def main():
     import ratgeber as RG
     DATA = K.prepare()
@@ -366,6 +371,7 @@ def main():
             else:
                 LASTMOD[rel] = git_date(f'public/{rel}index.html' if rel else 'public/index.html') or max(K.LANDS[l]['stand'] for l in K.LANDS)
         NOINDEX[rel] = 'noindex' in (re.search(r'<meta name="robots" content="([^"]*)"', s) or [None, ''])[1]
+        s = undash(s)
         if s != s0: open(f, 'w', encoding='utf-8').write(s)
     # Sitemap (B11, B14, B20.8): alle indexierbaren Seiten, lastmod aus Inhaltsdaten, hreflang-Paare, keine 301-Quellen
     redir = set(json.load(open(os.path.join(K.SP, 'daten', 'redirects.json'))).keys()) if os.path.exists(os.path.join(K.SP, 'daten', 'redirects.json')) else set()
@@ -403,6 +409,9 @@ def main():
             if 'llms-full-at.txt' not in lt:
                 lt = lt.rstrip() + '\n\n## Volltext\n- [Alle Karten Österreich](https://finvallo.com/llms-full-at.txt)\n- [Alle Karten Deutschland](https://finvallo.com/llms-full-de.txt)\n'
                 open(R + 'llms.txt', 'w', encoding='utf-8').write(lt)
+    for fn in glob.glob(R + 'llms*.txt') + glob.glob(R + '*/daten/*.json'):
+        t = open(fn, encoding='utf-8').read(); u = undash(t)
+        if u != t: open(fn, 'w', encoding='utf-8').write(u)
     print('E-E-A-T:', n)
 
 if __name__ == '__main__': main()

@@ -1,4 +1,4 @@
-/* Finvallo Rechner – gemeinsame Rechenfunktionen. Reine Funktionen, damit sie getestet werden können. */
+/* Finvallo Rechner - gemeinsame Rechenfunktionen. Reine Funktionen, damit sie getestet werden können. */
 (function(root){
   const F = {};
   // Monatszins aus effektivem Jahreszins (konformer Zins)
@@ -79,8 +79,8 @@
   F.taxAT = function({gain, rate=0.275}){ const t = Math.max(0,gain)*rate; return {taxable: Math.max(0,gain), total: t, net: gain - t}; };
   F.vat = function({amount, rate, from}){ return from === 'netto' ? {net: amount, vat: amount*rate, gross: amount*(1+rate)} : {gross: amount, net: amount/(1+rate), vat: amount - amount/(1+rate)}; };
   // Formatierung
-  F.eur = (x, d=2) => isFinite(x) ? x.toLocaleString('de-DE', {minimumFractionDigits: d, maximumFractionDigits: d}) + ' €' : '–';
-  F.pct = (x, d=2) => isFinite(x) ? (x*100).toLocaleString('de-DE', {minimumFractionDigits: d, maximumFractionDigits: d}) + ' %' : '–';
+  F.eur = (x, d=2) => isFinite(x) ? x.toLocaleString('de-DE', {minimumFractionDigits: d, maximumFractionDigits: d}) + ' €' : '-';
+  F.pct = (x, d=2) => isFinite(x) ? (x*100).toLocaleString('de-DE', {minimumFractionDigits: d, maximumFractionDigits: d}) + ' %' : '-';
   F.num = v => { let t = String(v).trim().replace(/\s|€|%/g,'');
     if (t.includes(',')) t = t.replace(/\./g,'').replace(',','.');            // 1.234,56
     else if (/^\-?\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g,'');     // 10.000 = zehntausend

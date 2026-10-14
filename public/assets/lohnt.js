@@ -2,7 +2,7 @@
    [data-lohnt] = Rechner auf der Kartenseite, [data-lohnt-hub] = Filter auf der Übersicht der Top-Karten. */
 (function () {
   var eur = function (v) { return Math.round(v).toLocaleString('de-DE') + ' €'; };
-  var sign = function (v) { return (v >= 0 ? '+' : '−') + eur(Math.abs(v)); };
+  var sign = function (v) { return (v >= 0 ? '+' : '-') + eur(Math.abs(v)); };
   function num(el) { if (!el) return 0; var v = parseFloat(String(el.value).replace(',', '.')); return isFinite(v) && v > 0 ? v : 0; }
   var lim = function (v) { return v === null ? Infinity : v; };
 

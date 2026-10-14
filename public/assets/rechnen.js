@@ -4,7 +4,7 @@
   var eur = function (v) { return Math.round(v).toLocaleString('de-DE') + ' €'; };
   var eur2 = function (v) { return v.toLocaleString('de-DE', { minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 }) + ' €'; };
   var pct = function (v) { return v.toLocaleString('de-DE', { maximumFractionDigits: 2 }) + ' %'; };
-  var sign = function (v) { return (v >= 0 ? '+' : '−') + eur(Math.abs(v)); };
+  var sign = function (v) { return (v >= 0 ? '+' : '-') + eur(Math.abs(v)); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
 
   /* Bargeldkosten für n Abhebungen zu je a € im Jahr. */
@@ -145,10 +145,10 @@
     if (p.length < 2) { cmp.hidden = true; return; }
     var labels = [];
     p.forEach(function (it) { it._r.rows.forEach(function (x) { if (labels.indexOf(x[0]) < 0) labels.push(x[0]); }); });
-    var cell = function (v) { return v ? '<b class="' + (v > 0 ? 'good' : 'bad') + '">' + sign(v) + '</b>' : '<span class="mut">–</span>'; };
+    var cell = function (v) { return v ? '<b class="' + (v > 0 ? 'good' : 'bad') + '">' + sign(v) + '</b>' : '<span class="mut">-</span>'; };
     var h = '<div class="rcmphead"><h2 style="margin:0">Vergleich</h2><button type="button" class="lnk" data-cmpx>Schließen</button></div><div class="tbl"><table><thead><tr><th></th>' +
       p.map(function (it) { return '<th>' + esc(it.querySelector('h3').textContent) + '</th>'; }).join('') + '</tr></thead><tbody>' +
-      labels.map(function (l) { return '<tr><td>' + esc(l) + '</td>' + p.map(function (it) { var x = it._r.rows.filter(function (r) { return r[0] === l; })[0]; return '<td class="nw">' + (x ? (x[1] ? cell(x[1]) : '<span class="mut">' + (x[3] ? '!' : '0 €') + '</span>') : '<span class="mut">–</span>') + '</td>'; }).join('') + '</tr>'; }).join('') +
+      labels.map(function (l) { return '<tr><td>' + esc(l) + '</td>' + p.map(function (it) { var x = it._r.rows.filter(function (r) { return r[0] === l; })[0]; return '<td class="nw">' + (x ? (x[1] ? cell(x[1]) : '<span class="mut">' + (x[3] ? '!' : '0 €') + '</span>') : '<span class="mut">-</span>') + '</td>'; }).join('') + '</tr>'; }).join('') +
       '<tr class="sum"><td>Ergebnis pro Jahr</td>' + p.map(function (it) { return '<td class="nw">' + cell(it._r.net) + '</td>'; }).join('') + '</tr></tbody></table></div>';
     cmp.innerHTML = h; cmp.hidden = false;
     cmp.querySelector('[data-cmpx]').onclick = function () { cmp.hidden = true; };
