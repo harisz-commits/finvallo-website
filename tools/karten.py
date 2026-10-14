@@ -626,7 +626,7 @@ def methodik_page(cards,priv):
 <h2>Die Regeln je Kriterium</h2>{rb}
 <h2>Was die Sterne bedeuten</h2><div class="tbl"><table><tbody>{rows([("ab 4,5 Sternen","Sehr gut"),("ab 4,0 Sternen","Gut"),("ab 3,5 Sternen","Befriedigend"),("ab 3,0 Sternen","Ausreichend"),("unter 3,0 Sternen","Mangelhaft")])}</tbody></table></div>
 <h2>Beispiel: {E(ex["titel"])}</h2><p class="note">So kommt die Karte auf {de1(ex["stars"])} Sterne.</p><div class="tbl"><table><thead><tr><th>Kriterium</th><th>Gewicht</th><th>Sterne</th></tr></thead><tbody>{exrows}<tr><td><b>Gesamt</b></td><td>100 %</td><td><b>{de1(ex["stars"])}</b></td></tr></tbody></table></div>
-<h2>Was die Sterne nicht zeigen</h2><div class="prose"><p>Teure Premiumkarten verlieren durch die Jahresgebühr Sterne, auch wenn sich Guthaben und Lounges für Vielreisende lohnen können. Zinsen für Teilzahlung zählen nicht mit, weil sie nur anfallen, wenn du nicht alles zahlst. Für deinen eigenen Fall nimm den <a href="{P}at/kreditkarten/rechner/?land=DE">Kostenrechner</a> und die <a href="../bestenlisten/">Bestenlisten</a>.</p></div>
+<h2>Was die Sterne nicht zeigen</h2><div class="prose"><p>Teure Premiumkarten verlieren durch die Jahresgebühr Sterne, auch wenn sich Guthaben und Lounges für Vielreisende lohnen können. Zinsen für Teilzahlung zählen nicht mit, weil sie nur anfallen, wenn du nicht alles zahlst. Für deinen eigenen Fall nimm den <a href="{P}de/kreditkarten/rechner/">Kreditkarten-Rechner</a> und die <a href="../bestenlisten/">Bestenlisten</a>.</p></div>
 <h2>Woher die Daten kommen</h2><div class="prose"><p>Zuerst zählen die deutschen Preis- und Leistungsverzeichnisse, Verträge, Versicherungsbedingungen und Produktseiten der Anbieter. Konditionen aus Österreich übernehmen wir nicht. Die Quelle und das Datum der letzten Prüfung stehen auf jeder Kartenseite.</p></div>
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div>
 </main>
@@ -818,7 +818,8 @@ def sitemap(DATA):
         urls+=[(f'{base}{c["slug"]}/',c['geprueft'],'0.7') for c in cards]
         urls+=[(f'{base}anbieter/{x}/',max(c['geprueft'] for c in cards if c['p']==x),'0.6') for x in sorted({c['p'] for c in cards})]
         add+=''.join(f'<url><loc>https://finvallo.com/{u}</loc><lastmod>{d}</lastmod><changefreq>weekly</changefreq><priority>{pr}</priority></url>\n' for u,d,pr in urls)
-    if 'https://finvallo.com/at/kreditkarten/rechner/' not in s: add+=f'<url><loc>https://finvallo.com/at/kreditkarten/rechner/</loc><lastmod>{st}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n'
+    for lc in ('at','de'):
+        if f'https://finvallo.com/{lc}/kreditkarten/rechner/' not in s: add+=f'<url><loc>https://finvallo.com/{lc}/kreditkarten/rechner/</loc><lastmod>{st}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n'
     s=s.replace('</urlset>',add+'</urlset>'); open(p,'w').write(s)
 def llm_line(c,base):
     bits=[f'Typ: {c["typ"]}',f'Netz: {c.get("netz") or "beim Anbieter prüfen"}',
@@ -871,37 +872,6 @@ def quick_answers(DL,dpriv,AL,apriv):
         if DL.get(k): c=DL[k][0]; out+=f'- {q} Deutschland: {c["titel"]} – https://finvallo.com/de/kreditkarten/{c["slug"]}/\n'
         if AL.get(k): c=AL[k][0]; out+=f'- {q} Österreich: {c["titel"]} – https://finvallo.com/at/kreditkarten/{c["slug"]}/\n'
     return out
-def spa_card(c,cid,p):
-    ex=c['ex']
-    return {'id':cid,'anbieter':c['anbieter'],'p':p,'name':c.get('name') or c['titel'],'typ':c['typ'],'klasse':'Std+' if c['klasse']=='Std' else c['klasse'],'netz':c.get('netz') or None,'art':'Geschäftlich' if c['art']=='Business' else 'Privat',
-      'fee':c.get('fee'),'fee1':c.get('fee1'),'feeNote':c.get('feeNote'),'price':c.get('price',c.get('fee')),'period':c.get('period') or 'Jahr','fx':c.get('fx'),'fxText':fxT(c),'cash':c.get('cash'),'cashText':cashT(c),'cashNote':c.get('cashNote'),
-      'zins':zinsT(c),'zf':c.get('zinsfrei'),'rahmen':c.get('rahmen'),'giro':c.get('giro'),'auto':c.get('auto'),'teilz':c['typ']=='Kreditkarte','cb':c.get('cbText') if ex.get('cb') else None,'ml':bool(ex.get('ml')),
-      'lg':c.get('lgText') if (ex.get('lg') or ex.get('lgm')) else None,'lgf':bool(ex.get('lg')),'ft':c.get('ftText') or ('FastTrack' if ex.get('ft') else None),'pay':c.get('pay'),'bonus':c.get('bonus'),'credits':bool(ex.get('credits')),'bestand':c.get('nurfuer'),
-      'vers':c.get('prof'),'prof':c.get('prof'),'tier':c.get('tier'),'vorteile':c.get('vorteile') or '; '.join(c['pros'][:3]),'quelle':c.get('quelle'),'extra':c.get('extra') or [],'con':c.get('cons_extra') or [],'sek':[],
-      'effz':c.get('effz'),'bonitaet':c['typ'] in ('Kreditkarte','Charge'),'kaution':c['typ'] in ('Kreditkarte','Charge'),'lounge':{'s':c['lounge'],'v':''} if c.get('lounge') is not None else None,'score':c['score'],'stars':c.get('stars'),'note':c.get('note'),
-      'pros':c['pros'],'cons':c['cons'],'rank':c.get('rank'),'vorteilRows':c.get('vorteilRows') or [],'land':c['land'].upper(),'preis':c.get('preis'),'earn':c.get('earnText') or (c.get('cbText') if ex.get('cb') else None),'offer':c.get('offer') if offer(c) else None}
-def rechner(DATA):
-    p=R+'at/kreditkarten/rechner/index.html'; s=open(p).read()
-    m=re.search(r'(<script id="data" type="application/json">)(.*?)(</script>)',s,re.S)
-    d=json.loads(m.group(2))
-    at,atprov=DATA['at']; de,deprov=DATA['de']
-    d['cards']=[spa_card(c,c['id'],c['p']) for c in at]
-    for k,v in atprov.items():
-        old=d['providers'].get(k,{})
-        d['providers'][k]=old|{x:v.get(x) for x in ('name','typ','sitz','web','text')}|{'slug':k,'cards':[c['id'] for c in at if c['p']==k]}
-    d['providers']={k:v for k,v in d['providers'].items() if not k.startswith('de-') and k in atprov}
-    for i,c in enumerate(sorted(de,key=lambda c:(c.get('rank') or 999,c['titel']))):
-        c['rid']=f'DE{i+1:03d}'; d['cards'].append(spa_card(c,c['rid'],'de-'+c['p']))
-    byp={}
-    for c in de: byp.setdefault(c['p'],[]).append(c)
-    for k,v in byp.items():
-        d['providers']['de-'+k]={'name':v[0]['anbieter'],'typ':'Bank','sitz':'','web':v[0].get('quelle'),'text':f'Kartenanbieter in Deutschland. {len(v)} Karten im Finvallo-Vergleich.','slug':'de-'+k,'cards':[c['rid'] for c in v]}
-    if '<link rel="canonical"' not in s:
-        s=s.replace('<meta name="viewport" content="width=device-width, initial-scale=1">','<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="description" content="Kreditkarten-Rechner für Österreich und Deutschland: Jahreskosten, Auslandsgebühren und Bargeld für deine Nutzung berechnen und Karten vergleichen.">\n<link rel="canonical" href="https://finvallo.com/at/kreditkarten/rechner/">',1)
-    s=s.replace("let ui = {land:LS.get('ka-land','AT')","let ui = {land:(['AT','DE'].includes(new URLSearchParams(location.search).get('land'))?new URLSearchParams(location.search).get('land'):LS.get('ka-land','AT'))")
-    m=re.search(r'(<script id="data" type="application/json">)(.*?)(</script>)',s,re.S)
-    s=s[:m.start(2)]+json.dumps(d,ensure_ascii=False).replace('</','<\\/')+s[m.end(2):]; open(p,'w').write(s)
-
 # ---------- Ablauf ----------
 BEST={}
 def prepare():
@@ -944,7 +914,7 @@ def main():
         bestenlisten(cards,lists,LISTS['de' if land=='at' else 'at'][0])
         if land=='de': methodik_page(cards,priv)
         print(L['name'],'Karten',len(cards),'bewertet',len(priv),'business',len(biz),'Stand',L['stand'])
-    patch_tabs(); sitemap(DATA); llms(DATA); rechner(DATA)
+    patch_tabs(); sitemap(DATA); llms(DATA)
     return DATA
 
 if __name__=='__main__': main()

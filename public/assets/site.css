@@ -597,3 +597,24 @@ input,select,textarea{font-size:max(16px,1em)!important}
 .ires tr.sum td{font-weight:700}
 .ires .note{padding:10px 14px}
 .ires>details>summary span small{font-weight:400;font-size:12.5px}
+/* Kreditkarten-Rechner (Seite) */
+.rpage{margin:14px 0 18px}
+.rfilt{padding-top:12px;border-top:1px dashed var(--line)}
+.rlist{display:grid;gap:12px}
+.ritem .rhead{display:flex;gap:12px;align-items:center}
+.ritem .rk{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;background:var(--card2,var(--bg));border:1px solid var(--line)}
+.ritem .rhead>div{flex:1}
+.ritem .iname{margin:0;font-size:17px}
+.ritem .stats{margin-top:10px}
+.rcmpl{display:flex;gap:6px;align-items:center;font-size:14px;color:var(--muted);white-space:nowrap;cursor:pointer}
+.rcmpl input{width:18px;height:18px;accent-color:var(--blue)}
+.rcmpbar{position:sticky;bottom:12px;z-index:5;display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:12px 16px;margin:10px 0;border:1px solid var(--blue);border-radius:16px;background:var(--card);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.rcmpbar [data-cmpn]{font-weight:700;margin-right:auto}
+.rcmpbar button.lnk{background:none;border:0;cursor:pointer;font:inherit}
+.rcmpbar .btn[disabled]{opacity:.5;cursor:not-allowed}
+.rcmp{margin:12px 0}
+.rcmphead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.rcmphead button{background:none;border:0;cursor:pointer;font:inherit}
+.rcmp td.nw{text-align:right;white-space:nowrap}
+.rcmp tr.sum td{font-weight:700}
+[hidden]{display:none!important}

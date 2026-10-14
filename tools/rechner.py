@@ -183,8 +183,8 @@ q('f').addEventListener('input',run);q('f').addEventListener('change',run);run()
         page(land,rel,mt,c['desc'],body,ld,True)
     # Übersicht
     rel=f'{land}/rechner/'
-    tiles=f'<a class="hp-tile" href="../kreditkarten/rechner/" onclick="this.href=\'../../at/kreditkarten/rechner/?land={land.upper()}\'"><span class="hp-ic">{ic("card")}</span><span><b>Kreditkarten-Kostenrechner</b><small>Was kostet dich eine Karte bei deiner Nutzung?</small></span></a>'
-    tiles=f'<a class="hp-tile" href="../../at/kreditkarten/rechner/?land={land.upper()}"><span class="hp-ic">{ic("card")}</span><span><b>Kreditkarten-Kostenrechner</b><small>Was kostet dich eine Karte bei deiner Nutzung?</small></span></a>'
+    tiles=f'<a class="hp-tile" href="../kreditkarten/rechner/"><span class="hp-ic">{ic("card")}</span><span><b>Kreditkarten-Kostenrechner</b><small>Was kostet dich eine Karte bei deiner Nutzung?</small></span></a>'
+    tiles=f'<a class="hp-tile" href="../../{land}/kreditkarten/rechner/"><span class="hp-ic">{ic("card")}</span><span><b>Kreditkarten-Kostenrechner</b><small>Was kostet dich eine Karte bei deiner Nutzung?</small></span></a>'
     tiles+=''.join(f'<a class="hp-tile" href="{s}/"><span class="hp-ic">{ic(c["icon"])}</span><span><b>{E(c["t"])}</b><small>{E(c["lede"])}</small></span></a>' for s,c in CALCS.items())
     body=f'''<h1>Finanzrechner für {N}</h1><p class="lede">Kostenlose Rechner für Sparen, Kredite, Kreditkarten und Steuern. Ohne Anmeldung, die Berechnung läuft direkt in deinem Browser.</p>
 <div class="hp-tiles" style="margin-top:18px">{tiles}</div>

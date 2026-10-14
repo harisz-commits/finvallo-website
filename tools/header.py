@@ -46,7 +46,6 @@ def land_default(P):
 def run():
   for f in sorted(glob.glob(ROOT+'/**/*.html',recursive=True)):
       relf=os.path.relpath(f,ROOT)
-      if relf=='at/kreditkarten/rechner/index.html': continue   # JS app with own header
       s=open(f).read()
       if relf=='404.html': rel='404/'; P='/'
       else:
