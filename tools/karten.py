@@ -1049,6 +1049,9 @@ def main():
         if land=='de': methodik_page(cards,priv)
         print(L['name'],'Karten',len(cards),'bewertet',len(priv),'business',len(biz),'Stand',L['stand'])
     patch_tabs(); sitemap(DATA); llms(DATA); write_redirects()
+    # Für scripts/seo-check.mjs (A6): erlaubte Kartenanzahlen je Land aus card_count() und den Bestenlisten
+    json.dump({land:sorted({card_count(land,x) for x in ('all','private','business','rated','special')}|{len(v) for v in LISTS[land][0].values()}) for land in ('at','de')},
+              open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten','zaehler.json'),'w'),indent=1)
     return DATA
 
 if __name__=='__main__': main()
