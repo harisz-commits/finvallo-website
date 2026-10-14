@@ -1,0 +1,575 @@
+{
+ "hinweis": "Zusatzinfos je Anbieter für die Anbieterseiten. Nur belegte Angaben mit Quelle eintragen (kritik nur mit Quelle). Leere Felder werden nicht angezeigt. Anbieter mit nur einer Karte und ohne Zusatzinfos bekommen keine eigene Seite (301 auf die Kartenseite).",
+ "felder": [
+  "gruendung",
+  "lizenz_aufsicht",
+  "einlagensicherung",
+  "kundenservice",
+  "besonderheiten",
+  "kritik",
+  "fuer_wen",
+  "quellen"
+ ],
+ "anbieter": {
+  "1822direkt": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "adac": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "advanzia": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "amazon": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "american-express": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bank-dimare": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bank-norwegian": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bbva": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bitpanda": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bunq": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "c24": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "comdirect": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "commerzbank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "consors-finanz": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "consorsbank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "crypto-com": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "curve": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "deutsche-bank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "deutschland-kreditkarte": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "dkb": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "easybank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "eurowings": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "hanseatic-bank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "hilton": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "hypovereinsbank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "ikea": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "ing": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "instabank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "klarna": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "kraken": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "magenta-pay": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "mercedes-credit-card": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "miles-and-more": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "monese": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "n26": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "norisbank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "olb": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "openbank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "payback": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "postbank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "revolut": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "sparkasse": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "sumup": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "targobank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "tf-bank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "tomorrow": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "trade-republic": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "trading-212": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "tui": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "turkish-airlines": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "unitplus": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "vivid": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "volksbank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "volkswagen-bank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "webcent": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "wise": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  }
+ }
+}

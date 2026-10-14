@@ -1,0 +1,225 @@
+{
+ "hinweis": "Zusatzinfos je Anbieter für die Anbieterseiten. Nur belegte Angaben mit Quelle eintragen (kritik nur mit Quelle). Leere Felder werden nicht angezeigt. Anbieter mit nur einer Karte und ohne Zusatzinfos bekommen keine eigene Seite (301 auf die Kartenseite).",
+ "felder": [
+  "gruendung",
+  "lizenz_aufsicht",
+  "einlagensicherung",
+  "kundenservice",
+  "besonderheiten",
+  "kritik",
+  "fuer_wen",
+  "quellen"
+ ],
+ "anbieter": {
+  "advanzia": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "american-express": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bank-austria": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bank-direkt": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bank99": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bawag": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bitpanda": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "bunq": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "card-complete": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "diners-club": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "easybank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "erste": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "n26": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "oberbank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "paylife": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "raiffeisen": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "revolut": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "santander": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "tf-bank": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "trade-republic": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  },
+  "wise": {
+   "gruendung": "",
+   "lizenz_aufsicht": "",
+   "einlagensicherung": "",
+   "kundenservice": "",
+   "besonderheiten": "",
+   "kritik": "",
+   "fuer_wen": "",
+   "quellen": []
+  }
+ }
+}

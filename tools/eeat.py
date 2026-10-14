@@ -130,6 +130,19 @@ def land_links(s, rel):
     head, body = s[:s.find('<body')], s[s.find('<body'):]
     return head + re.sub(r'<a [^>]*href="([^"]*)"[^>]*>', fix, body)
 
+# ---------- interne Links auf 301-Quellen direkt aufs Ziel ----------
+RD = json.load(open(os.path.join(K.SP, 'daten', 'redirects.json'))) if os.path.exists(os.path.join(K.SP, 'daten', 'redirects.json')) else {}
+def follow_redirects(s, rel):
+    if not RD: return s
+    def fix(m):
+        h = m.group(1)
+        if h.startswith(('http', 'mailto', '#')): return m.group(0)
+        t = h if h.startswith('/') else '/' + os.path.normpath(os.path.join(rel, h)).replace(chr(92), '/') + ('/' if h.endswith('/') else '')
+        if t in RD: return m.group(0).replace(f'href="{h}"', 'href="' + os.path.relpath(R + RD[t].lstrip('/'), R + rel).replace(chr(92), '/') + '/"', 1)
+        return m.group(0)
+    i = s.find('<body')
+    return s[:i] + re.sub(r'<a [^>]*href="([^"#?]*)"[^>]*>', fix, s[i:])
+
 # ---------- zusammenklebende Wörter (B15.1) ----------
 GLUE = re.compile(r'(</(?:span|b|a|em|strong|small|sup|i)>)(<(?:span|b|a|em|strong|small|i)[\s>])')
 def unglue(s):
@@ -248,6 +261,7 @@ def main():
         s = re.sub(r'(<a href="[^"]*ueber-uns/"[^>]*>)Über uns(</a>)', r'\1Über Finvallo\2', s)
         s = no_stand(s)
         s = land_links(s, rel)
+        s = follow_redirects(s, rel)
         s = unglue(s)
         for attr in ('name="description"', 'property="og:description"'):
             s = re.sub(rf'(<meta {attr} content=")([^"]*)(">)', lambda m: m.group(1) + E(K.fit_desc(H.unescape(m.group(2)))) + m.group(3), s, count=1)

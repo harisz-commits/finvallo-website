@@ -415,7 +415,7 @@ def card_page(c,cards,nrated,prov):
           "positiveNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":x} for i,x in enumerate(pc[:5])]},
           "negativeNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":x} for i,x in enumerate(kc[:5])]}}
     fq=faq(c)
-    ld=graph(rel,t,d,[(L['name'],f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Anbieter',f'{code}/kreditkarten/anbieter/'),(c['anbieter'],f'{code}/kreditkarten/anbieter/{c["p"]}/'),(c['titel'],rel)],
+    ld=graph(rel,t,d,[(L['name'],f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Alle Karten',f'{code}/kreditkarten/alle/')]+([(c['anbieter'],f'{code}/kreditkarten/anbieter/{c["p"]}/')] if c['p'] in PROVPAGE.get(code,()) else [])+[(c['titel'],rel)],
              [ld_card,{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}],date=gp)
     rk=f', Platz {c["rank"]} von {nrated} bewerteten Privatkarten in {L["name"]}' if c.get('rank') else ''
     glance=summary(c)+(f'Finvallo bewertet sie mit {de1(c["stars"])} von 5 Sternen{rk}. ' if c.get('stars') else '')+f'Stand: {dmy(gp)}.'
@@ -433,7 +433,7 @@ def card_page(c,cards,nrated,prov):
     other=pair_rel(c)
     body=f'''{HDR(P,rel,other or ("de" if code=="at" else "at")+"/kreditkarten/")}
 <div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../anbieter/">Anbieter</a> › <a href="../anbieter/{c["p"]}/">{E(c["anbieter"])}</a></span><span class="ok">✓ Geprüft am {dmy(gp)}</span></div>
+<div class="crumb"><span><a href="../alle/">Alle Karten</a> › {f'<a href="../anbieter/{c["p"]}/">{E(c["anbieter"])}</a>' if c['p'] in PROVPAGE.get(code,()) else E(c["anbieter"])}</span><span class="ok">✓ Geprüft am {dmy(gp)}</span></div>
   <div class="dh">{face(c)}<div style="min-width:0"><div class="tags">{best}<span class="tag typ">{TYPLAB.get(c["typ"],c["typ"])}</span><span class="by">von {E(c["anbieter"])}</span></div>
     <h1>{E(c["titel"])}</h1>{starrow(c)}</div></div>
   <div class="feat">{feats(c)}</div>{f'<p class="note"><b>Hinweis:</b> {E(c["nurfuer"])}.</p>' if c.get('nurfuer') else ''}
@@ -462,7 +462,7 @@ def card_page(c,cards,nrated,prov):
   <section id="s-faq"><h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div></section>
   {f"<h2>Hinweis der Redaktion</h2><p class='note'>{E(c['notiz'])}</p>" if c.get('notiz_public') else ""}
   {f"<h2>Ähnliche Karten</h2><div class='grid2'>{mini}</div>" if mini else ""}
-  <div class="box" style="margin-top:22px"><h3>Über {E(c["anbieter"])}</h3>{f'<p style="color:var(--muted);margin:0 0 12px">{E(pv["text"])}</p>' if pv.get("text") else ""}<a class="lnk" href="../anbieter/{c["p"]}/">Alle Karten von {E(c["anbieter"])} →</a></div>
+  <div class="box" style="margin-top:22px"><h3>Über {E(c["anbieter"])}</h3>{f'<p style="color:var(--muted);margin:0 0 12px">{E(pv["text"])}</p>' if pv.get("text") else ""}{f'<a class="lnk" href="../anbieter/{c["p"]}/">Alle Karten von {E(c["anbieter"])} →</a>' if c['p'] in PROVPAGE.get(code,()) else f'<a class="lnk" href="../alle/">Alle Karten nach Anbieter →</a>'}</div>
   <p class="src" style="margin-top:18px">Hauptquelle: {ext(c.get("quelle"))}{" · Preisverzeichnis: "+ext(c.get("preis")) if c.get("preis") and c.get("preis")!=c.get("quelle") else ""}{" ("+E(c["stand"])+")" if c.get("stand") else ""}.</p>
 </main>
 {footer(P)}'''
@@ -543,63 +543,71 @@ def prow_card(c,base):
             f'<small>{TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung","")} · {"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €/Jahr") if c.get("fee") is not None else "Preis beim Anbieter"}</small>'
             f'<small>{(de1(c["stars"])+" ★ "+c["note"]) if c.get("stars") else "nicht bewertet"}</small></span><span class="mut">›</span></a>')
 def anbieter_pages(cards,prov):
-    code=L['code']; N=L['name']
+    """Anbieterseiten. Die frühere Übersicht /anbieter/ leitet auf /alle/ um (gleicher Inhalt mit Tabelle).
+    Anbieter mit nur einer Karte und ohne Zusatzinfos bekommen keine Seite, sondern einen 301 auf die Kartenseite."""
+    code=L['code']; N=L['name']; DT=details(code)
     by={}
     for c in cards: by.setdefault(c['p'],[]).append(c)
-    rel=f'{code}/kreditkarten/anbieter/'; P='../../../'
-    t=f'Kreditkarten-Anbieter in {N} | Finvallo'
-    d=f'Alle Kreditkarten-Anbieter in {N} im Überblick: Banken, Kartenherausgeber und Neobanken mit ihren Karten, Gebühren und Bewertungen.'
+    rel=f'{code}/kreditkarten/anbieter/'
+    REDIRECTS[f'/{rel}']=f'/{code}/kreditkarten/alle/'
     def best(v): r=[x for x in v if x.get('stars')]; return max(r,key=lambda x:x['stars']) if r else None
-    order=sorted(by.items(),key=lambda kv:(-(best(kv[1]) or {}).get('stars',0) if best(kv[1]) else 0,kv[1][0]['anbieter'].lower()))
-    rows=''
-    for p,v in order:
-        pv=prov.get(p) or {}; b=best(v)
-        meta=' · '.join(x for x in [pv.get('typ'),pv.get('sitz'),f'{len(v)} {"Karte" if len(v)==1 else "Karten"}'] if x)
-        rows+=(f'<a class="prow" href="{p}/"><span class="plogo">{initials(pv.get("name") or v[0]["anbieter"])}</span><span style="min-width:0"><b>{E(pv.get("name") or v[0]["anbieter"])}</b><small>{E(meta)}</small>'
-               +(f'<small>Beste Karte: {E(b["name"] if b.get("name") and b["titel"].endswith(b["name"]) else b["titel"])} ({de1(b["stars"])} ★)</small>' if b else '')+'</span><span class="mut">›</span></a>')
-    write(rel,head(t,d,rel,P,graph(rel,t,d,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Anbieter',rel)]),alt=alt_links('at/kreditkarten/anbieter/','de/kreditkarten/anbieter/'))+f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/anbieter/")}
-<div class="wrap"><main id="app">
-<h1>Kreditkarten-Anbieter in {N}</h1><p class="lede">{len(by)} Anbieter mit ihren Karten. Antippen für Details, Gebühren und alle Produkte.</p>
-  <div class="plist">{rows}</div>
-</main>
-{footer(P)}''')
     for p,v in by.items():
-        pv=prov.get(p) or {}; nm=pv.get('name') or v[0]['anbieter']
+        pv=prov.get(p) or {}; nm=pv.get('name') or v[0]['anbieter']; dt=DT.get(p) or {}
         rel2=f'{rel}{p}/'; P2='../../../../'
-        v=sorted(v,key=lambda c:(-(c.get('stars') or 0),c['titel']))
+        if p not in PROVPAGE.get(code,()):
+            REDIRECTS[f'/{rel2}']=f'/{code}/kreditkarten/{v[0]["slug"]}/'; continue
+        v=sorted(v,key=lambda c:(-(c.get('stars') or 0),c.get('fee') if c.get('fee') is not None else 1e9,c['titel'].lower()))
         t2=f'{nm} Kreditkarten im Vergleich 2026 | Finvallo' if code=='at' else f'{nm} Kreditkarten in Deutschland 2026 | Finvallo'
-        d2=f'{nm}: {len(v)} {"Karte" if len(v)==1 else "Karten"} im Vergleich, mit Jahresgebühr, Auslandsgebühr, Versicherung und Bewertung.'+(f' {pv["text"]}' if pv.get('text') else '')
-        d2=fit_desc(d2)
+        d2=fit_desc(f'{nm}: {len(v)} {"Karte" if len(v)==1 else "Karten"} im Vergleich, mit Jahresgebühr, Auslandsgebühr, Versicherung und Bewertung.'+(f' {pv["text"]}' if pv.get('text') else ''))
         b=best(v); fees=[c['fee'] for c in v if c.get('fee') is not None]
-        facts=''.join(f'<div class="r"><span>{k}</span><span>{E(x)}</span></div>' for k,x in [('Anbietertyp',pv.get('typ')),('Sitz',pv.get('sitz')),('Karten im Vergleich',str(len(v))),
+        facts=''.join(f'<div class="r"><span>{k}</span><span>{E(x)}</span></div>' for k,x in [('Anbietertyp',pv.get('typ')),('Sitz',pv.get('sitz') or dt.get('sitz')),('Karten im Vergleich',str(len(v))),
               ('Bester Score',f'{de1(b["stars"])} Sterne – {b["name"] if b.get("name") and b["titel"].endswith(b["name"]) else b["titel"]}' if b else None),
               ('Jahresgebühren',(('kostenlos' if max(fees)==0 else f'{eur(min(fees))} € bis {eur(max(fees))} €') if len(set(fees))>1 or max(fees)==0 else f'{eur(fees[0])} €') if fees else None)] if x)
         feat=''.join(x for x in [f'<span>📍 {E(pv["sitz"])}</span>' if pv.get('sitz') else '',f'<span class="b">▭ {len(v)} {"Karte" if len(v)==1 else "Karten"}</span>',f'<span class="g">★ bis {de1(b["stars"])}</span>' if b else ''])
-        ld2=graph(rel2,t2,d2,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Anbieter',rel),(nm,rel2)],
-                  [{"@type":"ItemList","name":f"Kreditkarten von {nm}","itemListElement":[{"@type":"ListItem","position":i+1,"name":c['titel'],"url":f"https://finvallo.com/{code}/kreditkarten/{c['slug']}/"} for i,c in enumerate(v)]}],
+        about=''.join(f'<p><b>{lab}:</b> {E(dt[k])}</p>' for k,lab in DETAIL_LABELS if dt.get(k))
+        src=' · '.join(ext(u) for u in dt.get('quellen') or [])
+        giro=[c for c in v if c.get('giro')]
+        if not giro: ga=f'Nein. Für {"keine der Karten" if len(v)>1 else "die Karte"} von {nm} brauchst du ein Girokonto beim Anbieter.'
+        elif len(giro)==len(v): ga=f'Ja. {"Alle Karten" if len(v)>1 else "Die Karte"} von {nm} gibt es nur mit einem Konto beim Anbieter' + (f' ({giro[0]["konto"]})' if giro[0].get('konto') else '') + '.'
+        else: ga=f'Nur für {", ".join(c["titel"] for c in giro)}. Die anderen Karten von {nm} bekommst du auch ohne Konto beim Anbieter.'
+        fq=[(f'Braucht man ein Konto bei {nm}?',ga)]
+        if fees:
+            mn=min(fees); cheap=[c for c in v if c.get('fee')==mn]
+            fq.append((f'Welche Karte von {nm} ist die günstigste?',(f'Die {cheap[0]["titel"]}' if len(cheap)==1 else 'Die '+', '.join(c['titel'] for c in cheap[:-1])+' und die '+cheap[-1]['titel'])+(' kostet keine Jahresgebühr.' if mn==0 else f' mit {eur(mn)} € Jahresgebühr.' if len(cheap)==1 else f' mit je {eur(mn)} € Jahresgebühr.')))
+        ld2=graph(rel2,t2,d2,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Alle Karten',f'{code}/kreditkarten/alle/'),(nm,rel2)],
+                  [{"@type":"ItemList","name":f"Kreditkarten von {nm}","itemListElement":[{"@type":"ListItem","position":i+1,"name":c['titel'],"url":f"https://finvallo.com/{code}/kreditkarten/{c['slug']}/"} for i,c in enumerate(v)]},
+                   {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}],
                   date=max(c['geprueft'] for c in v))
         write(rel2,head(t2,d2,rel2,P2,ld2)+f'''{HDR(P2,rel2,("de" if code=="at" else "at")+"/kreditkarten/anbieter/")}
 <div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../">Anbieter</a> › {E(nm)}</span><span>Stand {dmy(max(c['geprueft'] for c in v))}</span></div>
+<div class="crumb"><span><a href="../../alle/">Alle Karten</a> › {E(nm)}</span><span>Stand {dmy(max(c['geprueft'] for c in v))}</span></div>
   <div class="dh" style="grid-template-columns:64px 1fr"><span class="plogo" style="width:64px;height:64px;font-size:20px">{initials(nm)}</span><div>{f'<span class="tag">{E(pv["typ"])}</span>' if pv.get('typ') else ''}<h1 style="margin-top:8px">{E(nm)}: Kreditkarten</h1></div></div>
   <div class="feat">{feat}</div>
   {f'<a class="btn primary block" style="margin-top:16px" href="{E(pv["web"])}" target="_blank" rel="noopener">Zum Anbieter ↗</a>' if pv.get('web') else ''}
-  {f'<div class="intro">{E(pv["text"])}</div>' if pv.get('text') else ''}
     <div class="cond" style="margin-top:18px"><div class="gh">Auf einen Blick</div>{facts}</div>
+    {f'<h2>Über {E(nm)}</h2><div class="prose">' + (f'<p>{E(pv["text"])}</p>' if pv.get('text') else '') + about + '</div>' if pv.get('text') or about else ''}
     <h2>Karten von {E(nm)}</h2><div class="plist">{"".join(prow_card(c,"../../") for c in v)}</div>
+    {f'<h2>Für wen passt {E(nm)}</h2><div class="prose"><p>{E(dt["fuer_wen"])}</p></div>' if dt.get('fuer_wen') else ''}
+    <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div>
+    {f'<p class="src">Quellen: {src}</p>' if src else ''}
 </main>
 {footer(P2)}''')
+def write_redirects():
+    """301-Regeln aus REDIRECTS: tools/daten/redirects.json, server/redirects.conf (nginx, im Server-Block eingebunden) und public/.htaccess (Apache)."""
+    json.dump(dict(sorted(REDIRECTS.items())),open(os.path.join(SP,'daten','redirects.json'),'w'),ensure_ascii=False,indent=1)
+    open(os.path.join(R,'..','server','redirects.conf'),'w').write('# automatisch erzeugt von tools/karten.py – nicht von Hand ändern\n'+''.join(f'location = {a} {{ return 301 {b}; }}\n' for a,b in sorted(REDIRECTS.items())))
+    open(R+'.htaccess','w').write('# automatisch erzeugt von tools/karten.py (für Apache-Hosting)\nRewriteEngine On\nRewriteCond %{HTTP_HOST} ^www\\.finvallo\\.com$ [NC]\nRewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]\nRewriteCond %{HTTPS} off\nRewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]\n'+''.join(f'Redirect 301 {a} https://finvallo.com{b}\n' for a,b in sorted(REDIRECTS.items()))+'ErrorDocument 404 /404.html\n')
 def alle_page(cards,prov):
     code=L['code']; N=L['name']; rel=f'{code}/kreditkarten/alle/'; P='../../../'
     by={}
     for c in cards: by.setdefault(c['p'],[]).append(c)
-    t=f'Alle {len(cards)} Kreditkarten in {N} nach Anbieter | Finvallo'
+    t=f'Alle Kreditkarten in {N} nach Anbieter | Finvallo'
     d=f'Alle {len(cards)} Kreditkarten, Debit- und Prepaid-Karten in {N} nach Anbieter sortiert, mit Jahresgebühr, Auslandsgebühr und Bewertung. Stand {dmy(L["stand"])}.'
     sec=''
     for p,v in sorted(by.items(),key=lambda kv:(prov.get(kv[0]) or {}).get('name',kv[1][0]['anbieter']).lower()):
         nm=(prov.get(p) or {}).get('name') or v[0]['anbieter']
         rows=''.join(f'<tr><td><a class="lnk" href="../{c["slug"]}/">{E(c["titel"])}</a></td><td>{E(TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung",""))}</td><td>{"0 €" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "beim Anbieter prüfen"}</td><td>{E(fxT(c)) if c.get("fx") is not None else "–"}</td><td>{(de1(c["stars"])+" ★") if c.get("stars") else "nicht bewertet"}</td></tr>' for c in sorted(v,key=lambda c:-(c.get('stars') or 0)))
-        sec+=f'<h2>{E(nm)}</h2><div class="tbl"><table><thead><tr><th>Karte</th><th>Typ</th><th>Jahresgebühr</th><th>Zahlung Ausland</th><th>Bewertung</th></tr></thead><tbody>{rows}</tbody></table></div>'
+        sec+=f'<h2>{(f"<a href=\"../anbieter/{p}/\">{E(nm)}</a>") if p in PROVPAGE.get(code,()) else E(nm)}</h2><div class="tbl"><table><thead><tr><th>Karte</th><th>Typ</th><th>Jahresgebühr</th><th>Zahlung Ausland</th><th>Bewertung</th></tr></thead><tbody>{rows}</tbody></table></div>'
     write(rel,head(t,d,rel,P,graph(rel,t,d,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Alle Karten',rel)]),alt=alt_links('at/kreditkarten/alle/','de/kreditkarten/alle/'))+f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/alle/")}
 <div class="wrap"><main id="app">
 <div class="crumb"><span><a href="../../">{N}</a> › <a href="../">Kreditkarten</a> › Alle Karten</span><span>Stand {dmy(L["stand"])}</span></div><h1>Alle Kreditkarten in {N}</h1><p class="lede">{len(cards)} Karten von {len(by)} Anbietern. Ein Klick führt zur ausführlichen Kartenseite mit allen Kosten, der Versicherung und unserer Bewertung.</p>{sec}
@@ -914,6 +922,12 @@ TERMS=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'da
 def t(key,land=None):
     """Länderspezifischer Begriff aus daten/terms.json (z. B. Polizze/Police, beheben/abheben)."""
     return TERMS[land or L['code']][key]
+PROVPAGE={}; REDIRECTS={}
+DETAIL_LABELS=[('gruendung','Gegründet'),('lizenz_aufsicht','Lizenz und Aufsicht'),('einlagensicherung','Einlagensicherung'),('kundenservice','Kundenservice'),('besonderheiten','Besonderheiten'),('kritik','Kritik')]
+def details(land):
+    p=os.path.join(SP,'daten',land,'anbieter-details.json')
+    return json.load(open(p))['anbieter'] if os.path.exists(p) else {}
+def has_details(dt): return any(v for k,v in (dt or {}).items() if k!='quellen')
 COUNTS={}
 def card_count(land,scope='all'):
     """Einzige Quelle für Kartenanzahlen (alle Texte, Meta, FAQ, llms.txt, JSON-Export).
@@ -946,9 +960,10 @@ def clean_old(land,cards):
         if os.path.isdir(f) and d not in keep: shutil.rmtree(f); print('entfernt',land,d)
     a=R+f'{land}/kreditkarten/anbieter/'
     if os.path.isdir(a):
-        ps={c['p'] for c in cards}
+        ps=PROVPAGE.get(land) or {c['p'] for c in cards}
         for d in os.listdir(a):
             if os.path.isdir(a+d) and d not in ps: shutil.rmtree(a+d); print('entfernt',land,'anbieter',d)
+        if os.path.exists(a+'index.html'): os.remove(a+'index.html')
 def main():
     global BEST
     DATA=prepare()
@@ -959,6 +974,9 @@ def main():
         priv=sorted([c for c in cards if c.get('rank')],key=lambda c:c['rank'])
         biz=[c for c in cards if c['art']=='Business']
         lists,BEST=LISTS[land]
+        by={}
+        for c in cards: by.setdefault(c['p'],[]).append(c)
+        DT=details(land); PROVPAGE[land]={p for p,v in by.items() if len(v)>1 or has_details(DT.get(p))}
         clean_old(land,cards)
         for c in cards: card_page(c,cards,len(priv),prov)
         list_page(cards,priv,biz)
@@ -967,7 +985,7 @@ def main():
         bestenlisten(cards,lists,LISTS['de' if land=='at' else 'at'][0])
         if land=='de': methodik_page(cards,priv)
         print(L['name'],'Karten',len(cards),'bewertet',len(priv),'business',len(biz),'Stand',L['stand'])
-    patch_tabs(); sitemap(DATA); llms(DATA)
+    patch_tabs(); sitemap(DATA); llms(DATA); write_redirects()
     return DATA
 
 if __name__=='__main__': main()

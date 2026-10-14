@@ -9,5 +9,9 @@ if [ ! -f "$DIR/.indexnow-alle" ]; then
   python3 "$DIR/server/indexnow.py" --alle && touch "$DIR/.indexnow-alle"
 elif [ "$ALT" != "$NEU" ]; then
   echo "Website aktualisiert."
+  # Weiterleitungen geändert: nginx neu laden (nur wenn die Konfiguration gültig ist)
+  if git -C "$DIR" diff --name-only "$ALT" "$NEU" | grep -q '^server/redirects.conf$'; then
+    nginx -t 2>/dev/null && systemctl reload nginx && echo "nginx neu geladen."
+  fi
   git -C "$DIR" diff --name-only "$ALT" "$NEU" -- public | python3 "$DIR/server/indexnow.py"
 fi

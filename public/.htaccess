@@ -1,0 +1,36 @@
+# automatisch erzeugt von tools/karten.py (für Apache-Hosting)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.finvallo\.com$ [NC]
+RewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]
+Redirect 301 /at/kreditkarten/anbieter/ https://finvallo.com/at/kreditkarten/alle/
+Redirect 301 /at/kreditkarten/anbieter/bitpanda/ https://finvallo.com/at/kreditkarten/bitpanda-karte/
+Redirect 301 /at/kreditkarten/anbieter/bunq/ https://finvallo.com/at/kreditkarten/bunq-karte/
+Redirect 301 /at/kreditkarten/anbieter/santander/ https://finvallo.com/at/kreditkarten/santander-card/
+Redirect 301 /at/kreditkarten/anbieter/tf-bank/ https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/
+Redirect 301 /at/kreditkarten/anbieter/trade-republic/ https://finvallo.com/at/kreditkarten/trade-republic-karte/
+Redirect 301 /at/kreditkarten/anbieter/wise/ https://finvallo.com/at/kreditkarten/wise-karte/
+Redirect 301 /de/kreditkarten/anbieter/ https://finvallo.com/de/kreditkarten/alle/
+Redirect 301 /de/kreditkarten/anbieter/advanzia/ https://finvallo.com/de/kreditkarten/advanzia-bank-gebuehrenfrei-mastercard-gold/
+Redirect 301 /de/kreditkarten/anbieter/amazon/ https://finvallo.com/de/kreditkarten/amazon-visa/
+Redirect 301 /de/kreditkarten/anbieter/bank-dimare/ https://finvallo.com/de/kreditkarten/bank-dimare-extra-karte-mastercard/
+Redirect 301 /de/kreditkarten/anbieter/bank-norwegian/ https://finvallo.com/de/kreditkarten/bank-norwegian-visa-kreditkarte/
+Redirect 301 /de/kreditkarten/anbieter/bbva/ https://finvallo.com/de/kreditkarten/bbva-debitkarte/
+Redirect 301 /de/kreditkarten/anbieter/bitpanda/ https://finvallo.com/de/kreditkarten/bitpanda-visa-card/
+Redirect 301 /de/kreditkarten/anbieter/consors-finanz/ https://finvallo.com/de/kreditkarten/consors-finanz-mastercard/
+Redirect 301 /de/kreditkarten/anbieter/hilton/ https://finvallo.com/de/kreditkarten/hilton-honors-kreditkarte/
+Redirect 301 /de/kreditkarten/anbieter/ikea/ https://finvallo.com/de/kreditkarten/ikea-family-kreditkarte/
+Redirect 301 /de/kreditkarten/anbieter/ing/ https://finvallo.com/de/kreditkarten/ing-visa-card/
+Redirect 301 /de/kreditkarten/anbieter/instabank/ https://finvallo.com/de/kreditkarten/instabank-kreditkarte/
+Redirect 301 /de/kreditkarten/anbieter/kraken/ https://finvallo.com/de/kreditkarten/kraken-krak-card/
+Redirect 301 /de/kreditkarten/anbieter/magenta-pay/ https://finvallo.com/de/kreditkarten/magenta-pay-visa-debitkarte/
+Redirect 301 /de/kreditkarten/anbieter/norisbank/ https://finvallo.com/de/kreditkarten/norisbank-mastercard-kreditkarte/
+Redirect 301 /de/kreditkarten/anbieter/tf-bank/ https://finvallo.com/de/kreditkarten/tf-bank-mastercard-gold/
+Redirect 301 /de/kreditkarten/anbieter/trade-republic/ https://finvallo.com/de/kreditkarten/trade-republic-karte/
+Redirect 301 /de/kreditkarten/anbieter/trading-212/ https://finvallo.com/de/kreditkarten/trading-212-card/
+Redirect 301 /de/kreditkarten/anbieter/turkish-airlines/ https://finvallo.com/de/kreditkarten/turkish-airlines-milesundsmiles-mastercard-gold/
+Redirect 301 /de/kreditkarten/anbieter/unitplus/ https://finvallo.com/de/kreditkarten/unitplus-mastercard/
+Redirect 301 /de/kreditkarten/anbieter/webcent/ https://finvallo.com/de/kreditkarten/web-cent-mastercard-gold-gmx-web-de/
+Redirect 301 /de/kreditkarten/anbieter/wise/ https://finvallo.com/de/kreditkarten/wise-debitkarte/
+ErrorDocument 404 /404.html
