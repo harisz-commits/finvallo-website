@@ -1,6 +1,6 @@
 # Impressum und Datenschutz – offene Fragen für die rechtliche Prüfung
 
-Stand: Oktober 2026. Die Rechtstexte wurden inhaltlich nicht geändert; nur die E-Mail-Adresse wurde auf `impressum@finvallo.com` umgestellt, und im Impressum ist ein Platz für eine Telefonnummer vorbereitet (`tools/daten/site.json` → `phone`).
+Stand: Oktober 2026. Die Rechtstexte wurden inhaltlich nicht geändert; nur die E-Mail-Adresse wurde auf `hallo@finvallo.com` umgestellt, und im Impressum ist ein Platz für eine Telefonnummer vorbereitet (`tools/daten/site.json` → `phone`).
 
 1. **Gewerbeanmeldung:** Ist für die Affiliate-Einnahmen eine Gewerbeanmeldung nötig? Falls ja: Kammerzugehörigkeit (WKO) und zuständige Gewerbebehörde ins Impressum aufnehmen (§ 5 ECG, § 25 MedienG).
 2. **Rechtsform:** Muss eine Rechtsform angegeben werden (Einzelunternehmen, ggf. Firmenbuch)?

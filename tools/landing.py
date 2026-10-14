@@ -152,7 +152,8 @@ def b_root(P,hdr):
       tile(P,'at/kreditkarten/business/','brief','Business-Kreditkarten','Firmenkarten für Selbstständige'),
       tile(P,'at/kreditkarten/rechner/','calc','Kartenrechner','Was kostet dich deine Karte wirklich?'),
       tile(P,'at/ratgeber/','book','Ratgeber','Gebühren, Punkte, Versicherung erklärt'),
-      tile(P,'at/rechner/','calc','Finanzrechner','Zinseszins, Kredit, Steuer und mehr')])
+      tile(P,'at/rechner/','calc','Finanzrechner Österreich','Zinseszins, Kredit, KESt und mehr'),
+      tile(P,'de/rechner/','calc','Finanzrechner Deutschland','Zinseszins, Kredit, Abgeltungsteuer und mehr')])
     fq,ld=faqblock(ROOT_FAQ(t))
     return (hero(SHIELD,'Dein unabhängiger Finanzvergleich für Österreich und Deutschland.',
         'Banken, Preise und Bedingungen unterscheiden sich. Wähle dein Land, dann siehst du nur Angebote, die du dort auch bekommst.',

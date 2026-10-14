@@ -1,5 +1,9 @@
 {
  "hinweis": "Website-Konfiguration. phone: Telefonnummer fürs Impressum (leer = Zeile wird nicht angezeigt). analytics.enabled: Plausible-Snippet einbinden (Standard false, erst nach rechtlicher Freigabe).",
- "phone": "",
- "analytics": {"enabled": false, "domain": "finvallo.com", "src": "https://plausible.io/js/script.js"}
+ "phone": "+43 660 1989186",
+ "analytics": {
+  "enabled": false,
+  "domain": "finvallo.com",
+  "src": "https://plausible.io/js/script.js"
+ }
 }

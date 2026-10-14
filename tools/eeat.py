@@ -47,7 +47,7 @@ UEBER = '''<h1>Über Finvallo</h1>
 <p><b>Haris</b> – Gründer, Wien</p>
 <p>Hat Finvallo gebaut und betreibt es derzeit allein. Kommt aus Daten und Analyse: sammeln, prüfen, auswerten, aus Zahlen Entscheidungsgrundlagen machen. Kein Finanzberater, kein Banker – und das soll so bleiben. Finvallo liefert Regeln und Rechner, keine Empfehlungen.</p>
 <h2>Fehler gefunden?</h2>
-<p>Dann wollen wir es wissen. Schreib an <a class="lnk" href="mailto:korrektur@finvallo.com">korrektur@finvallo.com</a> mit Kartenname und Quelle. Wir korrigieren und vermerken das Datum der Korrektur auf der betroffenen Seite.</p>
+<p>Dann wollen wir es wissen. Schreib an <a class="lnk" href="mailto:hallo@finvallo.com">hallo@finvallo.com</a> mit Kartenname und Quelle. Wir korrigieren und vermerken das Datum der Korrektur auf der betroffenen Seite.</p>
 <h2>Kontakt</h2>
 <p><a class="lnk" href="mailto:hallo@finvallo.com">hallo@finvallo.com</a> · Finvallo, Wien</p>
 </div>'''
@@ -71,7 +71,7 @@ def ueber(s):
 # ---------- 2. Autorenbox ----------
 def author_box(land, title):
     t = re.sub(r'\s*\|\s*Finvallo\s*$', '', H.unescape(title))
-    mail = 'mailto:korrektur@finvallo.com?subject=' + quote('Korrektur: ' + t)
+    mail = 'mailto:hallo@finvallo.com?subject=' + quote('Korrektur: ' + t)
     return (f'<!--author--><aside class="author-box" aria-label="Über den Autor"><img src="/assets/haris.jpg" alt="Haris" width="48" height="48"{IMG_ERR}>'
             f'<div><p><b>Haris</b> betreibt Finvallo. Er kommt aus Daten und Analyse, nicht aus der Finanzberatung – deshalb gibt es hier Regeln und Rechner statt Empfehlungen.</p>'
             f'<p class="author-links"><a class="lnk" href="/ueber-uns/">Über Finvallo</a> · <a class="lnk" href="/{land}/kreditkarten/methodik/">So entstehen die Sterne</a> · <a class="lnk" href="{H.escape(mail)}">Fehler melden</a></p></div></aside><!--/author-->')
