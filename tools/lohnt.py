@@ -288,14 +288,14 @@ def hub_data(cards, X, A):
 def filter_html(cards, X, A):
     data, opts = hub_data(cards, X, A)
     sel = '<option value="0">nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
-    cb = ''.join(f'<label class="lc"><input type="checkbox" data-item="{E(k)}"> {E(k)} <span class="mut">({E(t)})</span></label>' for k, t in opts)
+    cb = ''.join(f'<label class="lc"><input type="checkbox" data-item="{E(k)}"><span>{E(k)} <span class="mut">({E(t)})</span></span></label>' for k, t in opts)
     return f'''<div class="box lcalc lfilter" data-lohnt-hub='{html.escape(json.dumps(data), quote=True)}' hidden>
   <h2 style="margin-top:0">Was würdest du nutzen?</h2>
   <p class="note" style="margin:0">Trag ein, was du wirklich nutzt. Die Karten unten zeigen dann gleich, ob sie für dich ein Plus oder ein Minus ergeben.</p>
   <div class="lgrid">{'<label>Lounge Wien pro Jahr<input type="number" min="0" max="200" value="0" data-in="wien"></label><label>Lounge Ausland pro Jahr<input type="number" min="0" max="200" value="0" data-in="lounge"></label>' if any(wien_only(x) for x in X.values()) else '<label>Lounge-Besuche im Jahr<input type="number" min="0" max="200" value="0" data-in="lounge"></label>'}
   <label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-in="guests"></label>
-  <label>Kartenumsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-in="spend"></label>
-  <label>Reiseversicherung gewünscht<select data-in="vers">{sel}</select></label></div>
+  <label>Umsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-in="spend"></label>
+  <label>Reiseversicherung<select data-in="vers">{sel}</select></label></div>
   {f'<p class="note" style="margin:6px 0 0"><b>Guthaben und Abos, die du nutzen würdest</b> (Abos nur, wenn du sie sonst selbst bezahlen würdest)</p><div class="lchecks">{cb}</div>' if cb else ''}
   <label class="lc"><input type="checkbox" data-welcome> Willkommensbonus im ersten Jahr mitrechnen</label>
 </div>'''
@@ -333,7 +333,7 @@ def hub(land, cards, X, A, P):
 def top_block(land, cards, X, A):
     top = sorted([c for c in cards if (c['fee'] or 0) >= TOP], key=lambda c: -(c['fee'] or 0))
     names = ', '.join(c['titel'].replace('American Express', 'Amex') for c in top[:3])
-    return (f'<!--lohnt--><a class="catcard top" href="lohnt-sich/"><span class="ct">Top-Karten</span><b>Premiumkarten ab {TOP} € im Jahr</b>'
+    return (f'<!--lohnt--><a class="catcard top" href="lohnt-sich/"><span class="ct">Top-Karten</span><b>Premiumkarten: hohe Gebühr, viele Vorteile</b>'
             f'<span>{E(names)}{" und mehr" if len(cards) > 3 else ""}: ab wann sie sich lohnen</span><small>{len(cards)} Karten · ansehen →</small></a><!--/lohnt-->')
 
 def main():

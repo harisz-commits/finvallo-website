@@ -565,3 +565,12 @@ input,select,textarea{font-size:max(16px,1em)!important}
 .filt select:hover,.lcalc select:hover{border-color:var(--blue)}
 .filt select:focus-visible,.lcalc select:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
 .filt select option,.lcalc select option{background:var(--card);color:var(--ink)}
+/* Rechner und Filter: ruhiges Raster, gleich hohe Felder */
+.lcalc .lgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 14px}
+@media (min-width:720px){.lcalc .lgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.lcalc label{font-size:14px;line-height:1.3}
+.lcalc input[type=number],.lcalc select{box-sizing:border-box;height:46px;padding-top:0;padding-bottom:0;width:100%}
+.lcalc input[type=number]{background:var(--card)}
+.lchecks{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:4px 18px}
+.lchecks .lc{align-items:flex-start;padding:6px 0;line-height:1.35}
+.lchecks .lc input{flex:none;margin-top:1px}
