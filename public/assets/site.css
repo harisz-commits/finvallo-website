@@ -574,3 +574,26 @@ input,select,textarea{font-size:max(16px,1em)!important}
 .lchecks{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:4px 18px}
 .lchecks .lc{align-items:flex-start;padding:6px 0;line-height:1.35}
 .lchecks .lc input{flex:none;margin-top:1px}
+/* Persönlich rechnen (Kartenliste) */
+.rbox{margin:14px 0}
+.rbox>summary{cursor:pointer;list-style:none;display:grid;gap:4px;padding-right:28px;position:relative}
+.rbox>summary::-webkit-details-marker{display:none}
+.rbox>summary::after{content:"";position:absolute;right:4px;top:8px;width:9px;height:9px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .15s}
+.rbox[open]>summary::after{transform:rotate(-135deg);top:12px}
+.rbox>summary b{font-size:18px}
+.rbox>summary span{color:var(--muted);font-size:14.5px}
+.rbox[open]>summary{margin-bottom:14px}
+.ires{margin:10px 0 2px;border:1px solid var(--line);border-radius:14px;background:var(--card2,var(--bg))}
+.ires>details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;padding:10px 14px}
+.ires>details>summary::-webkit-details-marker{display:none}
+.ires>details>summary span{font-weight:600}
+.ires>details>summary b{margin-left:auto;font-size:17px}
+.ires>details>summary>small{color:var(--blue-text,var(--blue));font-size:13px;white-space:nowrap}
+.ires>details>summary>small::after{content:" ▾"}
+.ires>details[open]>summary>small::after{content:" ▴"}
+.ires table{width:100%;border-collapse:collapse;font-size:14px}
+.ires td{padding:7px 14px;border-top:1px solid var(--line);vertical-align:top}
+.ires td.nw{text-align:right;white-space:nowrap}
+.ires tr.sum td{font-weight:700}
+.ires .note{padding:10px 14px}
+.ires>details>summary span small{font-weight:400;font-size:12.5px}

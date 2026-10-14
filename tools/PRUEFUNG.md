@@ -22,6 +22,7 @@ Für jede Karte das Preisverzeichnis (`preis`) und die Produktseite (`quelle`) d
 - „Ab wann lohnt sich“: Guthaben, Lounge-Regeln, Abos und Willkommensboni in `tools/daten/at/lohnt.json` und `tools/daten/de/lohnt.json` ebenfalls prüfen und dort `geprueft` setzen.
 - Abo-Preise in `annahmen.abos` (günstigster regulärer Tarif, Jahresabo auf den Monat umgerechnet, Quelle) prüfen und `annahmen.abos_stand` setzen. Abos ohne bestätigten Preis bekommen keinen Eintrag; sie werden dann nicht mitgerechnet.
 - Lounge: `lounge.scope` = "wien", wenn die Karte nur die Lounges am Flughafen Wien öffnet (sonst weltweit), `lounge.min_umsatz` bei Umsatzbedingung (z. B. Diners Club 3.600 € in 365 Tagen) prüfen.
+- Ertrag in `tools/daten/<land>/ertrag.json` (Cashback-Satz, Obergrenze, Teilnahmegebühr, Lounge der Nicht-Premiumkarten) mit den Kartenbedingungen abgleichen.
 - Gibt es die Karte nicht mehr: bei DE `"status": "eingestellt"`, bei AT `"status": "eingestellt"` setzen (die Seite fällt dann weg).
 
 Regeln:

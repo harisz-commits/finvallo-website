@@ -1,0 +1,228 @@
+{
+ "hinweis": "Ertrag je Karte für den Rechner auf der Kartenliste. pct = Prozent vom Umsatz (Punkte und Meilen 1 Cent, Hotelpunkte 0,4 Cent), cap = höchstens € im Jahr, kosten = Teilnahmegebühr (wird nur gezählt, wenn sich die Teilnahme lohnt), anteil = Anteil des Umsatzes, für den es gilt, fx_only = nur auf Fremdwährungsumsatz. Premiumkarten stehen in lohnt.json.",
+ "karten": {
+  "web-cent-mastercard-gold-gmx-web-de": {
+   "pct": 0.5,
+   "art": "Cashback",
+   "hinweis": "0,5 % auf jeden Einkauf, ohne Obergrenze"
+  },
+  "hilton-honors-kreditkarte": {
+   "pct": 0.4,
+   "art": "Hilton-Punkte",
+   "hinweis": "1 Punkt je €, 1 Hilton-Punkt ≈ 0,4 Cent"
+  },
+  "turkish-airlines-milesundsmiles-mastercard-gold": {
+   "pct": 0.5,
+   "art": "Meilen",
+   "hinweis": "1 Meile je 2 €"
+  },
+  "klarna-plus": {
+   "pct": 0.5,
+   "art": "Cashback",
+   "hinweis": "0,5 % auf Klarna-Käufe"
+  },
+  "klarna-premium": {
+   "pct": 1,
+   "art": "Cashback",
+   "hinweis": "1 % auf Klarna-Käufe"
+  },
+  "klarna-max": {
+   "pct": 1.5,
+   "art": "Cashback",
+   "hinweis": "1,5 % auf Klarna-Käufe",
+   "lounge": {
+    "visits": "unbegrenzt",
+    "guests_free": 0,
+    "program": "über 1.500 Lounges"
+   }
+  },
+  "eurowings-kreditkarte-classic": {
+   "pct": 0.5,
+   "art": "Miles & More Meilen",
+   "hinweis": "1 Meile je 2 €"
+  },
+  "amazon-visa": {
+   "pct": 0.5,
+   "art": "Amazon-Punkte",
+   "hinweis": "0,5 % auf alle Umsätze, 1 % bei Amazon.de"
+  },
+  "ikea-family-kreditkarte": {
+   "pct": 1,
+   "cap": 30,
+   "art": "IKEA-Guthaben",
+   "hinweis": "1 %, höchstens 30 € im Jahr"
+  },
+  "miles-und-more-blue-credit-card": {
+   "pct": 0.5,
+   "art": "Miles & More Meilen",
+   "hinweis": "1 Meile je 2 €"
+  },
+  "miles-und-more-myflex-credit-card": {
+   "pct": 0.5,
+   "art": "Miles & More Meilen",
+   "hinweis": "1 Meile je 2 €"
+  },
+  "miles-und-more-lufthansa-frequent-traveller-credit-card": {
+   "pct": 0.5,
+   "art": "Miles & More Meilen",
+   "hinweis": "1 Meile je 2 €"
+  },
+  "miles-und-more-lufthansa-senator-credit-card": {
+   "pct": 0.5,
+   "art": "Miles & More Meilen",
+   "hinweis": "1 Meile je 2 €"
+  },
+  "miles-und-more-lufthansa-hon-circle-credit-card": {
+   "pct": 0.5,
+   "art": "Miles & More Meilen",
+   "hinweis": "1 Meile je 2 €"
+  },
+  "targobank-gold-karte": {
+   "pct": 1,
+   "cap": 100,
+   "art": "Cashback",
+   "hinweis": "1 % auf Einkäufe, höchstens 100 € im Jahr"
+  },
+  "american-express-card": {
+   "pct": 1,
+   "art": "Membership-Rewards-Punkte",
+   "hinweis": "1 Punkt je €, inklusive"
+  },
+  "american-express-gold-card-rose": {
+   "pct": 1,
+   "art": "Membership-Rewards-Punkte",
+   "hinweis": "1 Punkt je €, inklusive"
+  },
+  "payback-american-express-karte": {
+   "pct": 0.33,
+   "art": "PAYBACK-Punkte",
+   "hinweis": "1 Punkt je 3 €, 1 Punkt = 1 Cent"
+  },
+  "dm-payback-american-express-karte": {
+   "pct": 0.33,
+   "art": "PAYBACK-Punkte",
+   "hinweis": "1 Punkt je 3 €, bei dm doppelt"
+  },
+  "bmw-card-von-american-express": {
+   "pct": 1,
+   "art": "Membership-Rewards-Punkte",
+   "hinweis": "1 Punkt je €, an Tankstellen 1 % Gutschrift"
+  },
+  "bmw-premium-card-carbon": {
+   "pct": 1,
+   "art": "Membership-Rewards-Punkte",
+   "hinweis": "1 Punkt je €",
+   "lounge": {
+    "visits": 50,
+    "guests_free": 0,
+    "program": "Priority Pass"
+   }
+  },
+  "payback-visa-kreditkarte": {
+   "pct": 0.2,
+   "art": "PAYBACK-Punkte",
+   "hinweis": "1 Punkt je 5 €"
+  },
+  "payback-visa-kreditkarte-auf-guthabenbasis": {
+   "pct": 0.2,
+   "art": "PAYBACK-Punkte",
+   "hinweis": "1 Punkt je 5 €"
+  },
+  "c24-bank-smart": {
+   "pct": 0.05,
+   "art": "Cashback",
+   "hinweis": "0,05 % Basis-Cashback"
+  },
+  "c24-bank-plus": {
+   "pct": 0.5,
+   "cap": 144,
+   "art": "Cashback",
+   "hinweis": "0,5 % bis 12 € im Monat"
+  },
+  "c24-bank-max": {
+   "pct": 1,
+   "cap": 288,
+   "art": "Cashback",
+   "hinweis": "1 % bis 24 € im Monat"
+  },
+  "trade-republic-karte": {
+   "pct": 1,
+   "cap": 180,
+   "art": "Saveback",
+   "hinweis": "1 % in deinen Sparplan, höchstens 15 € im Monat, Sparplan ab 50 € nötig"
+  },
+  "unitplus-mastercard": {
+   "pct": 0.1,
+   "art": "Cashback",
+   "hinweis": "0,1 % auf jede Zahlung"
+  },
+  "crypto-com-visa-card-ruby-steel": {
+   "pct": 1.5,
+   "cap": 200,
+   "art": "Krypto (CRO)",
+   "hinweis": "1,5 % in CRO, Umsatz bis etwa 1.150 € im Monat"
+  },
+  "crypto-com-visa-card-jade-indigo": {
+   "pct": 2.5,
+   "cap": 690,
+   "art": "Krypto (CRO)",
+   "hinweis": "2,5 % in CRO, Umsatz bis etwa 2.300 € im Monat",
+   "lounge": {
+    "visits": 4,
+    "guests_free": 0,
+    "program": "Priority Pass"
+   }
+  },
+  "curve-pay-x": {
+   "pct": 1,
+   "fx_only": true,
+   "art": "Cashback",
+   "hinweis": "1 % nur auf Umsätze außerhalb Europas"
+  },
+  "curve-pay-pro": {
+   "pct": 1,
+   "fx_only": true,
+   "art": "Cashback",
+   "hinweis": "1 % auf Umsätze außerhalb Europas"
+  },
+  "curve-pay-proplus": {
+   "pct": 1,
+   "fx_only": true,
+   "art": "Cashback",
+   "hinweis": "1 % auf Umsätze außerhalb Europas"
+  },
+  "magenta-pay-visa-debitkarte": {
+   "pct": 1,
+   "art": "Cashback",
+   "hinweis": "1 % in Coins, 100 Coins = 1 €"
+  },
+  "monese-mastercard-cashback": {
+   "pct": 0.5,
+   "cap": 30,
+   "art": "Cashback",
+   "hinweis": "0,5 % bis 500 € Umsatz im Monat"
+  },
+  "revolut-standard": {
+   "pct": 0.1,
+   "art": "RevPoints",
+   "hinweis": "1 RevPoint je 10 €, 1 RevPoint = 1 Cent"
+  },
+  "revolut-plus": {
+   "pct": 0.1,
+   "art": "RevPoints",
+   "hinweis": "1 RevPoint je 10 €, 1 RevPoint = 1 Cent"
+  },
+  "revolut-premium": {
+   "pct": 0.25,
+   "art": "RevPoints",
+   "hinweis": "1 RevPoint je 4 €, 1 RevPoint = 1 Cent"
+  },
+  "deutsche-bank-mastercard-black": {
+   "lounge": {
+    "visits": "unbegrenzt",
+    "guests_free": 0,
+    "program": "Priority Pass"
+   }
+  }
+ }
+}

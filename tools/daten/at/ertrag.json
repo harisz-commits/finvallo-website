@@ -1,0 +1,143 @@
+{
+ "hinweis": "Ertrag je Karte für den Rechner auf der Kartenliste. pct = Prozent vom Umsatz (Punkte und Meilen 1 Cent, Hotelpunkte 0,4 Cent), cap = höchstens € im Jahr, kosten = Teilnahmegebühr (wird nur gezählt, wenn sich die Teilnahme lohnt), anteil = Anteil des Umsatzes, für den es gilt, fx_only = nur auf Fremdwährungsumsatz. Premiumkarten stehen in lohnt.json.",
+ "karten": {
+  "advanzia-bank-hilton-honors-kreditkarte": {
+   "pct": 0.4,
+   "art": "Hilton-Punkte",
+   "hinweis": "1 Punkt je €, 1 Hilton-Punkt ≈ 0,4 Cent"
+  },
+  "american-express-card": {
+   "pct": 1,
+   "kosten": 30,
+   "art": "Membership-Rewards-Punkte",
+   "hinweis": "1 Punkt je €, Teilnahme 30 € im Jahr"
+  },
+  "diners-club-golf": {
+   "pct": 0.5,
+   "kosten": 25,
+   "art": "Miles & More Meilen",
+   "hinweis": "1 Punkt je 8 € = 4 Meilen, Teilnahme 25 € im Jahr"
+  },
+  "diners-club-vintage": {
+   "pct": 0.5,
+   "art": "Miles & More Meilen",
+   "hinweis": "1 Punkt je 8 € = 4 Meilen, inklusive",
+   "lounge": {
+    "visits": 8,
+    "guests_free": 0,
+    "min_umsatz": 3600,
+    "program": "Diners Club Lounges"
+   }
+  },
+  "diners-club-classic": {
+   "lounge": {
+    "visits": 4,
+    "guests_free": 0,
+    "min_umsatz": 3600,
+    "program": "Diners Club Lounges"
+   }
+  },
+  "diners-club-student": {
+   "lounge": {
+    "visits": 4,
+    "guests_free": 0,
+    "min_umsatz": 3600,
+    "program": "Diners Club Lounges"
+   }
+  },
+  "erste-bank-und-sparkassen-smartcard": {
+   "pct": 0.3,
+   "cap": 8,
+   "anteil": 0.25,
+   "art": "Cashback",
+   "hinweis": "0,3 % in teilnehmenden Webshops, höchstens 8 € im Jahr"
+  },
+  "erste-bank-und-sparkassen-premiumcard": {
+   "pct": 0.6,
+   "cap": 30,
+   "anteil": 0.25,
+   "art": "Cashback",
+   "hinweis": "0,6 % in teilnehmenden Webshops, höchstens 30 € im Jahr"
+  },
+  "erste-bank-und-sparkassen-goed-smartcard": {
+   "pct": 0.3,
+   "cap": 8,
+   "anteil": 0.25,
+   "art": "Cashback",
+   "hinweis": "0,3 % in teilnehmenden Webshops, höchstens 8 € im Jahr"
+  },
+  "erste-bank-und-sparkassen-goed-premiumcard": {
+   "pct": 0.6,
+   "cap": 30,
+   "anteil": 0.25,
+   "art": "Cashback",
+   "hinweis": "0,6 % in teilnehmenden Webshops, höchstens 30 € im Jahr"
+  },
+  "santander-card": {
+   "pct": 1,
+   "cap": 50,
+   "art": "Cashback",
+   "hinweis": "1 %, höchstens 50 € im Jahr"
+  },
+  "revolut-standard": {
+   "pct": 0.1,
+   "art": "RevPoints",
+   "hinweis": "1 RevPoint je 10 €, 1 RevPoint = 1 Cent"
+  },
+  "revolut-plus": {
+   "pct": 0.1,
+   "art": "RevPoints",
+   "hinweis": "1 RevPoint je 10 €, 1 RevPoint = 1 Cent"
+  },
+  "revolut-premium": {
+   "pct": 0.25,
+   "art": "RevPoints",
+   "hinweis": "1 RevPoint je 4 €, 1 RevPoint = 1 Cent"
+  },
+  "trade-republic-karte": {
+   "pct": 1,
+   "cap": 180,
+   "art": "Saveback",
+   "hinweis": "1 % in deinen Sparplan, höchstens 15 € im Monat"
+  },
+  "card-complete-world-traveller-gold": {
+   "lounge": {
+    "visits": 4,
+    "guests_free": 0,
+    "scope": "wien",
+    "program": "VIENNA Lounge und SKY Lounge"
+   }
+  },
+  "bank-austria-world": {
+   "lounge": {
+    "visits": 4,
+    "guests_free": 0,
+    "program": "Priority Pass"
+   }
+  },
+  "bawag-gold": {
+   "lounge": {
+    "visits": 2,
+    "guests_free": 0,
+    "scope": "wien",
+    "program": "Wiener Lounges"
+   }
+  },
+  "bawag-gold-student": {
+   "lounge": {
+    "visits": 2,
+    "guests_free": 0,
+    "scope": "wien",
+    "program": "Wiener Lounges"
+   }
+  },
+  "bank99-platinum": {
+   "lounge": {
+    "visits": 4,
+    "guests_free": 0,
+    "scope": "wien",
+    "program": "Wiener Lounges, Begleitung zählt mit"
+   }
+  }
+ }
+}
