@@ -1,10 +1,10 @@
 # Finvallo
 
-> Unabhängiger Finanzvergleich für Österreich und Deutschland. 77 Karten in Österreich und 165 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Stand: 12.10.2026.
+> Unabhängiger Finanzvergleich für Österreich und Deutschland. 77 Karten in Österreich und 165 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Stand: 14.10.2026.
 
 Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/at/ und /de/). Konditionen aus Deutschland gelten nicht für Österreich. Bitte bei Zitaten die jeweilige Seiten-URL als Quelle angeben.
 
-## Schnellantworten (Stand 12.10.2026)
+## Schnellantworten (Stand 14.10.2026)
 - Beste Kreditkarte Deutschland (Gesamtwertung): WEB.Cent Mastercard Gold (GMX / WEB.DE) (4,7/5) – https://finvallo.com/de/kreditkarten/web-cent-mastercard-gold-gmx-web-de/
 - Beste Kreditkarte Österreich (Gesamtwertung): TF Bank Mastercard Gold (4,6/5) – https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/
 - Beste kostenlose Kreditkarte Deutschland: WEB.Cent Mastercard Gold (GMX / WEB.DE) – https://finvallo.com/de/kreditkarten/web-cent-mastercard-gold-gmx-web-de/
@@ -37,7 +37,7 @@ Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/a
 - [Die besten Karten für Meilen und Punkte in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/punkte/): Platz 1 American Express Card. Nur Karten mit Meilen- oder Punkteprogramm auf normale Einkäufe, etwa Miles & More, Membership Rewards, Payback oder Hotelpunkte. Am meisten zählt der Sammelwert: was bei 1.000 € Umsatz im Monat pro Jahr zusammenkommt. Reines Cashback steht in der eigenen Bestenliste.
 - [Die besten Karten mit Cashback in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/cashback/): Platz 1 Trade Republic Karte. Nur Karten, die auf normale Einkäufe Geld zurückgeben. Am meisten zählt, wie viel bei 1.000 € Umsatz im Monat pro Jahr zurückkommt, mit allen Höchstgrenzen. Partner- und Reiserabatte zählen hier nicht.
 - [Die besten Karten mit Lounge-Zugang in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/lounge/): Platz 1 American Express Platinum Card. Nur Karten mit kostenlosen Lounge-Besuchen. Am meisten zählt, wie gut der Lounge-Zugang ist: wie viele Besuche im Jahr und ob eine Begleitperson gratis mitkommt.
-- [Die besten Premiumkarten in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/premium/): Platz 1 Erste Bank und Sparkassen Austrian Miles & More Premiumcard. Top-Karten mit Lounges oder Premium-Reiseschutz. Die Jahresgebühr zählt hier weniger.
+- [Die besten Premiumkarten in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/premium/): Platz 1 Revolut Ultra. Top-Karten mit Lounges oder Premium-Reiseschutz. Die Jahresgebühr zählt hier weniger.
 - [Die besten Karten für Studierende und junge Leute in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/studium/): Platz 1 easybank Gold Student. Karten, die für Studierende, Azubis oder junge Kunden günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.
 - [Die besten Debitkarten und App-Banken in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/debit/): Platz 1 Revolut Standard. Karten, die sofort vom Konto abbuchen. Kosten im Ausland zählen hier mehr.
 
@@ -57,7 +57,7 @@ Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/a
 - [Firmenkreditkarten: das musst du wissen (Österreich)](https://finvallo.com/at/ratgeber/business/): Worauf Selbstständige und Firmen bei Firmenkreditkarten in Österreich achten sollten: Haftung, Abrechnung, Mitarbeiterkarten und Kosten.
 
 ## Deutschland: Kreditkarten
-- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 165 Karten, Stand 12.10.2026
+- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 165 Karten, Stand 14.10.2026
 - [Alle Karten nach Anbieter](https://finvallo.com/de/kreditkarten/alle/)
 - [Bestenlisten Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/): beste Karten nach Kategorie
 - [Bewertungsmethodik Deutschland](https://finvallo.com/de/kreditkarten/methodik/)
@@ -111,10 +111,10 @@ Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/a
 - [Erste Bank und Sparkassen GÖD Premiumcard](https://finvallo.com/at/kreditkarten/erste-bank-und-sparkassen-goed-premiumcard/): Typ: Charge; Netz: Visa; Jahresgebühr: 49,44 € (1. Jahr 0 €); Fremdwährung: 1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs); Bargeld: 3 %, mind. 3,63 €; Reiseversicherung: Umfassender Reiseschutz; Sammelrate: 0,6 % online, max. 30 €/Jahr; Bewertung: 4,2/5 (Gut); geprüft am 11.10.2026
 - [Advanzia Bank Hilton Honors Kreditkarte](https://finvallo.com/at/kreditkarten/advanzia-bank-hilton-honors-kreditkarte/): Typ: Kreditkarte; Netz: Mastercard; Jahresgebühr: 72 €; Fremdwährung: 0 %; Bargeld: 0 € (Zinsen ab Abhebung); Reiseversicherung: Reiseversicherung inkl. Storno; Zins: 22,48 % Soll / 24,95 % effektiv; Sammelrate: 1 Hilton-Punkt je €, 2 in Hilton-Hotels; Bewertung: 4,2/5 (Gut); geprüft am 11.10.2026
 - [Erste Bank und Sparkassen Premiumcard](https://finvallo.com/at/kreditkarten/erste-bank-und-sparkassen-premiumcard/): Typ: Charge; Netz: Visa/Mastercard; Jahresgebühr: 99 € (1. Jahr 0 €); Fremdwährung: 1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs); Bargeld: 3 %, mind. 3,63 €; Reiseversicherung: Umfassender Reiseschutz; Sammelrate: 0,6 % online, max. 30 €/Jahr; Bewertung: 4,0/5 (Gut); geprüft am 11.10.2026
+- [N26 Go](https://finvallo.com/at/kreditkarten/n26-go/): Typ: Debit; Netz: Mastercard; Jahresgebühr: 118,80 €; Fremdwährung: 0 %; Bargeld: Unbegrenzt kostenlos, auch in Fremdwährung; Reiseversicherung: Umfassender Reiseschutz; Bewertung: 4,0/5 (Gut); geprüft am 14.10.2026
+- [Revolut Premium](https://finvallo.com/at/kreditkarten/revolut-premium/): Typ: Debit; Netz: Visa/Mastercard; Jahresgebühr: 119,88 €; Fremdwährung: 0 %; Bargeld: Bis 400 € pro Monat kostenlos, danach 2 %, mind. 1 €; Reiseversicherung: Reiseversicherung inkl. Storno; Sammelrate: 1 RevPoint je 4 €; Bewertung: 4,0/5 (Gut); geprüft am 14.10.2026
+- [Revolut Metal](https://finvallo.com/at/kreditkarten/revolut-metal/): Typ: Debit; Netz: Visa/Mastercard; Jahresgebühr: 215,88 €; Fremdwährung: 0 %; Bargeld: Bis 800 € pro Monat kostenlos, danach 2 %, mind. 1 €; Reiseversicherung: Umfassender Reiseschutz; Sammelrate: 1 RevPoint je 2 €; Bewertung: 4,0/5 (Gut); geprüft am 14.10.2026
 - [Santander Card](https://finvallo.com/at/kreditkarten/santander-card/): Typ: Kreditkarte; Netz: beim Anbieter prüfen; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: Kostenlos; Reiseversicherung: Keine Reiseversicherung; Zins: 18 % Soll / 19,56 % effektiv; Sammelrate: 1 % Cashback, max. 50 €/Jahr; Bewertung: 3,9/5 (Befriedigend); geprüft am 11.10.2026
-- [easybank Kreditkarte](https://finvallo.com/at/kreditkarten/easybank-kreditkarte/): Typ: Charge; Netz: Mastercard; Jahresgebühr: 12 €; Fremdwährung: 1,5 % plus Kursaufschlag (Höhe beim Anbieter prüfen); Bargeld: 3,63 € je Behebung; Reiseversicherung: Basis-Reiseschutz; Bewertung: 3,9/5 (Befriedigend); geprüft am 11.10.2026
-- [Trade Republic Karte](https://finvallo.com/at/kreditkarten/trade-republic-karte/): Typ: Debit; Netz: Visa; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 1 € unter 100 €, sonst 0 €; Reiseversicherung: Keine Reiseversicherung; Sammelrate: 1 % Saveback, max. 15 €/Monat; Bewertung: 3,8/5 (Befriedigend); geprüft am 11.10.2026
-- [Erste Bank und Sparkassen GÖD Smartcard](https://finvallo.com/at/kreditkarten/erste-bank-und-sparkassen-goed-smartcard/): Typ: Charge; Netz: Visa; Jahresgebühr: 11,16 €; Fremdwährung: 1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs); Bargeld: 3 %, mind. 3,63 €; Reiseversicherung: beim Anbieter prüfen; Sammelrate: 0,3 % online, max. 8 €/Jahr; Bewertung: 3,8/5 (Befriedigend); geprüft am 11.10.2026
 
 ## Optional
 - [Vollständige Kartendaten als Text](https://finvallo.com/llms-full.txt)

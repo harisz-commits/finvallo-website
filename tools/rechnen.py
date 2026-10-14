@@ -28,6 +28,8 @@ def card_data(land, cards):
         e = ER.get(c['slug'], {}); x = LX.get(c['slug'])
         d = dict(fee=c.get('fee'), fx=c.get('fx'), cash=c.get('cash'), effz=c.get('effz'), tier=c.get('tier') or 0)
         if c.get('fee1') is not None and c.get('fee1') != c.get('fee'): d['fee1'] = c['fee1']
+        if c.get('cashAus'): d['cashA'] = c['cashAus']
+        if c.get('cashFx'): d['cfx'] = c['cashFx']
         if x:
             d['pct'] = x.get('punkte_pro_100') or 0
             if x.get('punkte_max'): d['cap'] = x['punkte_max']
