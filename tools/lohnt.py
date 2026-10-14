@@ -212,8 +212,14 @@ def card_page(land, c, x, A, P, prov):
     for pr in PR:
         v, parts = value(c, x, A, pr['p']); net = v - (c['fee'] or 0)
         prof += f'<div class="lprof"><b>{E(pr["t"])}</b><small>{E((pr["d"] + " " + pr["n"]).strip())}</small><span class="{"good" if net >= 0 else "bad"}">{"+" if net >= 0 else "−"}{eur(round(abs(net)))} € pro Jahr</span></div>'
-    fq = [(f'Ab wann lohnt sich die {c["titel"]}?', vt),
-          ('Wie rechnet Finvallo?', f'Wir zählen nur Vorteile, die du wirklich nutzt: Guthaben zum Nennwert, einen Lounge-Besuch mit {eur(A["lounge_eur"])} €, Punkte und Meilen mit 1 Cent und die Reiseversicherung mit dem Preis einer vergleichbaren eigenen {K.t("jahrespolizze")}. Davon ziehen wir die Jahresgebühr ab. Die Reiseversicherung zählt nur, wenn du sonst eine eigene bräuchtest.' + (' Partner-Abos zählen mit dem günstigsten regulären Tarif des Anbieters, aber nur, wenn du sie sonst selbst bezahlen würdest.' if x.get('subs_names') else '')),
+    T = c['titel']; fee = c['fee'] or 0
+    lg_ = (x.get('lounge') or {}).get('visits')
+    parts = [p for p, h in ((f'die Guthaben der {T} zum Nennwert', x.get('credits')), (f'jeden Lounge-Besuch mit {eur(A["lounge_eur"])} €', lg_), ('Punkte und Meilen mit 1 Cent', x.get('punkte_pro_100')),
+             (f'die Reiseversicherung mit dem Preis einer vergleichbaren eigenen {K.t("jahrespolizze")} (etwa {eur(A["vers"][str(c["tier"])])} €), aber nur, wenn du sonst eine eigene bräuchtest' if c.get('tier') else '', c.get('tier')),
+             ('Partner-Abos mit dem günstigsten regulären Tarif des Anbieters, wenn du sie sonst selbst bezahlen würdest', x.get('subs_names'))) if h]
+    how_ = f'Bei der {T} zählen wir nur Vorteile, die du wirklich nutzt: ' + '; '.join(parts) + f'. Davon ziehen wir die Jahresgebühr von {eur(fee)} € ab.' if parts else f'Bei der {T} ziehen wir die Jahresgebühr von {eur(fee)} € von den Vorteilen ab, die du wirklich nutzt.'
+    fq = [(f'Ab wann lohnt sich die {T}?', vt if T in vt else f'Die {T} kostet {eur(fee)} € im Jahr. ' + vt),
+          (f'Wie rechnet Finvallo bei der {T}?', how_),
           ('Zählt der Willkommensbonus mit?', 'Nur im ersten Jahr. Für die Frage, ob sich die Karte dauerhaft lohnt, rechnen wir ohne Bonus.')]
     ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Bestenlisten', f'{land}/kreditkarten/bestenlisten/'), ('Top-Karten', f'{land}/kreditkarten/bestenlisten/lohnt-sich/'), (c['titel'], rel)],
                  [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in fq]}], date=x.get('geprueft') or c['geprueft'])

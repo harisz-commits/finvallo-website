@@ -339,17 +339,53 @@ def cash_answer(c):
     if t.lower()=='kostenlos': return f'Ja, {L["Cash"].lower().replace("bargeld","Bargeld")} kostet 0 %.'
     if re.match(r'^(\d|ca\.|Inland\b)',t): return f'{L["Cash"]} kostet {t}.'
     return f'Die Bedingungen: {t}.'
+def lieferzeit(c):
+    """Lieferzeit aus den Vorteilen/Extras des Datensatzes (z. B. „Lieferung in ca. 7 Werktagen“), sonst None."""
+    for x in (c.get('extra') or [])+(c.get('pros') or []):
+        m=re.search(r'(?:Lieferung|Plastikkarte|Karte kommt)[^;,.]*?((?:ca\. )?\d+(?:[–-]\d+)? (?:Werktagen|Werktage|Tagen|Tage))',x)
+        if m: return m.group(1).replace('Werktage','Werktagen').replace(' Tage',' Tagen') if not m.group(1).endswith('n') else m.group(1)
+    return None
+def ins_limits(c):
+    """Einschränkungen der Reiseversicherung aus dem Versicherungstext (nur wörtlich belegte Sätze)."""
+    txt=' '.join([c.get('insText') or '']+[x.get('t','') for x in ((c.get('blocks') or {}).get('ins') or {}).get('items',[])])
+    sents=re.split(r'(?<=[.;])\s+',txt)
+    hit=[x.strip(' ;') for x in sents if re.search(r'nicht versichert|gilt nicht|nicht für|endet mit|\bkein(?:e|en)? \w*(?:schutz|versicherung)|nur wenn|ausgeschlossen',x,re.I)]
+    out=[]
+    for h in hit:
+        h=h[0].upper()+h[1:]
+        if not h.endswith('.'): h+='.'
+        if h not in out: out.append(h)
+    return out[:3]
 def faq(c):
-    q=[(f'Was kostet die {c["titel"]}?', (f'Die Jahresgebühr beträgt {eur(c["fee"])} €'+(f', das sind {eur(c["price"])} € im Monat' if c.get('period')=='Monat' and c.get('price') else '')+'.'+(f' Im ersten Jahr zahlst du {eur(c["fee1"])} €.' if c.get('fee1') is not None and c['fee1']!=c['fee'] else '')+(f' {c["feeNote"]}.' if c.get('feeNote') and c['land']=='de' else '')) if c.get('fee') is not None else 'Die Jahresgebühr konnten wir noch nicht bestätigen.'),
-       ('Was kostet das Zahlen im Ausland?','Zahlungen in fremder Währung kosten nichts extra.' if c.get('fx')==0 else f'Pro Zahlung in fremder Währung: {fxT(c)}.' if c.get('fx') is not None else 'Das konnten wir noch nicht bestätigen.'),
-       (L['cashq'],cash_answer(c)+(' Achtung: Bargeld wird ab dem Abhebungstag verzinst.' if c.get('cashInterest') else '')),
-       ('Ist eine Reiseversicherung dabei?', ('Ja: '+TIER[c['tier']][1]+'. Die Details stehen im Abschnitt Versicherung.') if (c.get('tier') or 0)>0 else 'Nein, ohne Aufpreis ist keine Reiseversicherung enthalten.' if c.get('tier')==0 else 'Das konnten wir noch nicht bestätigen.'),
-       ('Brauche ich ein Girokonto beim Anbieter?', 'Ja'+(f', und zwar {c["konto"]}.' if c.get('konto') else '.') if c.get('giro') else 'Nein, dein bestehendes Konto bei einer beliebigen Bank reicht.' if c.get('giro') is False else 'Das konnten wir noch nicht bestätigen.'),
-       ('Wie zahle ich die Rechnung?', 'Umsätze werden direkt vom Konto abgebucht.' if c['typ'] in ('Debit','Prepaid') else ('Der Betrag wird automatisch per Lastschrift eingezogen.'+(f' {c["autoNote"]}.' if c.get('autoNote') else '')) if c.get('auto') else ('Du überweist den Betrag selbst.'+(f' Was offen bleibt, kostet {zinsT(c)}.' if zinsT(c) else '')) if c.get('auto') is False else 'Das konnten wir noch nicht bestätigen.'),
-       ('Geht Apple Pay und Google Pay?','Ja, laut Anbieter.' if c.get('pay') else 'Laut unseren Unterlagen nicht.' if c.get('pay') is False else 'Das konnten wir noch nicht bestätigen.'),
-       ('Gibt es Lounge-Zugang?', ('Ja: '+c['lgText'].rstrip('.')+'.' if c['ex'].get('lg') else c['lgText'].rstrip('.')+'.') if c.get('lgText') else 'Laut unseren Unterlagen nicht.')]
-    if c.get('stars') is not None: q.append(('Wie kommt die Bewertung zustande?',f'Die Karte bekommt {de1(c["stars"])} von 5 Sternen. Das ist der gewichtete Durchschnitt aus 7 Kriterien, die Aufschlüsselung steht im Abschnitt Bewertung.'))
-    return q
+    """Fragen nur, wenn die Antwort mehr sagt als ein Einzelwert der Konditionstabelle (3 bis 6 Fragen, Kartenname in jeder Antwort)."""
+    T=c['titel']; q=[]
+    # Wer bekommt die Karte?
+    w=[]
+    if c.get('nurfuer'): w.append(f'Die {T} gibt es nur für bestimmte Kundengruppen: {c["nurfuer"]}.')
+    if c['typ'] in ('Kreditkarte','Charge'): w.append(f'Für die {T} prüft {c["anbieter"]} deine Bonität{" beim KSV1870" if c["land"]=="at" else " bei der Schufa"}.')
+    if c.get('giro'): w.append(f'Für die {T} brauchst du ein Konto bei {c["anbieter"]}'+(f' ({c["konto"]})' if c.get('konto') else '')+'.')
+    elif c.get('giro') is False: w.append(f'Ein Girokonto bei {c["anbieter"]} brauchst du für die {T} nicht, dein bestehendes Konto reicht.')
+    w.append(f'Beantragen kannst du sie mit Wohnsitz in {L["name"]}.')
+    q.append((f'Wer bekommt die {T}?',' '.join(w)))
+    lz=lieferzeit(c)
+    if lz: q.append((f'Wie lange dauert es, bis die {T} da ist?',f'Laut {c["anbieter"]} kommt die {T} nach {lz}.'))
+    z=zinsT(c)
+    if c['typ']=='Kreditkarte' and z:
+        q.append(('Was passiert, wenn ich die Rechnung nicht ganz bezahle?',f'Bei der {T} wird der offene Betrag in Raten zurückgezahlt und verzinst: {z}. Stell die Rückzahlung auf 100 %, dann fallen keine Zinsen an.'+(' Die Rechnung wird abgebucht.' if c.get('auto') else ' Du überweist den Betrag selbst, also achte auf den Termin.' if c.get('auto') is False else '')))
+    if c['typ'] in ('Kreditkarte','Charge'):
+        q.append((f'Kann ich mit der {T} ein Auto mieten oder ein Hotel reservieren?',f'Meist ja. Die {T} ist eine {TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung","")} mit Kreditrahmen, die Vermieter und Hotels in der Regel für Kautionen annehmen. Ob die Karte akzeptiert wird'+(' (American Express wird seltener genommen)' if 'American Express' in (c.get('netz') or '') else '')+', prüfst du am besten vorher beim Vermieter.'))
+    else:
+        q.append((f'Kann ich mit der {T} ein Auto mieten oder ein Hotel reservieren?',f'Oft nicht. Die {T} ist eine {TYPLAB.get(c["typ"],c["typ"])}, und viele Mietwagenfirmen und Hotels verlangen für die Kaution eine echte Kreditkarte. Frag vorher beim Vermieter nach.'))
+    lim=ins_limits(c)
+    if (c.get('tier') or 0)>0 and lim:
+        q.append((f'Was deckt die Reiseversicherung bei der {T} nicht ab?',f'Laut Versicherungsbedingungen der {T}: '+' '.join(lim)))
+    kc=[x for x in (c.get('cons') or []) if not x.startswith('Bei Kautionen')][:3]
+    if kc:
+        q.append((f'Für wen lohnt sich die {T} nicht?',f'Die {T} passt weniger zu dir, wenn dich einer dieser Punkte stört: '+' '.join(x.rstrip('.')+'.' for x in kc)))
+    if len(q)<3 and c.get('stars') is not None:
+        q.append((f'Wie kommt die Bewertung der {T} zustande?',f'Die {T} bekommt {de1(c["stars"])} von 5 Sternen. Das ist der gewichtete Durchschnitt aus 7 Kriterien, die Aufschlüsselung steht im Abschnitt Bewertung.'))
+    if len(q)<3 and c.get('lgText'): q.append((f'Gibt es mit der {T} Lounge-Zugang?',f'Zur {T}: {c["lgText"].rstrip(".")}.'))
+    return q[:6]
 def who(c):
     a=[]; b=[]
     if c.get('fee')==0 and c.get('fx')==0: a.append('Sie passt zu allen, die ohne Jahresgebühr und ohne Auslandsgebühren zahlen wollen, etwa auf Reisen.')
