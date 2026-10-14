@@ -480,8 +480,8 @@ def list_page(cards,priv,biz):
     n=len(cards); na=len({c['anbieter'] for c in cards})
     t=TXT[code]['list_t']; top=priv[:3]
     if code=='de':
-        d=f'{n} Kreditkarten in Deutschland unabhängig verglichen: Jahresgebühr, Ausland, Bargeld, Versicherung. Testsieger: {top[0]["titel"]} ({de1(top[0]["stars"])}/5).'
-        if len(d)>158: d=f'{n} Kreditkarten in Deutschland unabhängig verglichen: Jahresgebühr, Ausland, Bargeld und Reiseversicherung. Mit Testsieger und Rangliste.'
+        d=f'{n} Kreditkarten in Deutschland unabhängig verglichen: Jahresgebühr, Ausland, Bargeld, Versicherung. Platz 1 der Finvallo-Bewertung: {top[0]["titel"]} ({de1(top[0]["stars"])}/5).'
+        if len(d)>158: d=f'{n} Kreditkarten in Deutschland unabhängig verglichen: Jahresgebühr, Ausland, Bargeld und Reiseversicherung. Mit Rangliste und bestbewerteter Karte laut Finvallo-Bewertung.'
     else: d=f'{n} Kredit-, Debit- und Prepaid-Karten in Österreich unabhängig verglichen: Jahresgebühr, Auslandsgebühr, Versicherung und offene Bewertung.'
     ld=graph(rel,t,d,[(N,f'{code}/'),('Kreditkarten',rel)],[{"@type":"ItemList","name":f"Beste Kreditkarten {N}","itemListElement":[{"@type":"ListItem","position":c['rank'],"name":c['titel'],"url":f"https://finvallo.com/{rel}{c['slug']}/"} for c in priv[:20]]}])
     unrated=[c for c in cards if c['art']=='Privat' and c.get('stars') is None and not c.get('nurfuer')]
@@ -494,9 +494,10 @@ def list_page(cards,priv,biz):
     <div class="wbars">{"".join(f'<div class="wbar"><span>{k}</span><span class="t"><i style="width:{w*4}%"></i></span><em>{w} %</em></div>' for k,w in [("Jahresgebühr",25),("Reiseversicherung",20),("Zahlen im Ausland",15),("Kartenart &amp; Akzeptanz",10),("Alltag &amp; Flexibilität",10),("Bargeld",10),("Extras",10)])}</div>
     <p class="note">Jedes Kriterium bekommt nach festen Regeln 1 bis 5 Sterne. Die Gesamtnote ist der gewichtete Durchschnitt. Ab 4,5 Sternen gilt eine Karte als sehr gut. Fehlende Angaben zählen mit 2,5 Sternen, damit sie keinen Vorteil bringen. Bei gleicher Sternzahl steht die Karte mit der niedrigeren Jahresgebühr vorn.</p>
     <a class="lnk" href="{P}{code}/kreditkarten/methodik/">Alle Regeln und ein Rechenbeispiel →</a></details>
+  <p class="lhead"><b>{card_count(code,'private')} Karten{f", davon {card_count(code,'special')} für bestimmte Kundengruppen" if card_count(code,'special') else ""}</b></p>
   <div class="list" id="list">{"".join(list_item(c,P) for c in priv)}</div>
   {f'<h2>Noch nicht bewertet</h2><p class="note">Für diese Karten fehlen uns bestätigte Angaben in mindestens drei Kriterien.</p><div class="list">{"".join(list_item(c,P) for c in unrated)}</div>' if unrated else ''}
-  {f'<h2>Nur für bestimmte Kundengruppen</h2><p class="note">Diese Karten bekommt nicht jeder. Sie stehen deshalb nicht in der Rangliste.</p><div class="list">{"".join(list_item(c,P) for c in special)}</div>' if special else ''}
+  {f'<h2>Nur für bestimmte Kundengruppen</h2><p class="note">Diese Karten bekommt nicht jeder. Sie stehen deshalb nicht in der Rangliste.</p><div class="list" data-special>{"".join(list_item(c,P) for c in special)}</div>' if special else ''}
   {f'<h2>Business-Kreditkarten</h2><p class="lede">Firmen- und Business-Karten bewerten wir nach denselben Regeln, aber in einer eigenen Liste.</p><p><a class="btn" href="business/">Alle {len(biz)} Business-Karten ansehen →</a></p>' if biz else ''}
   <p class="note" style="margin-top:18px"><a class="lnk" href="alle/">Alle Karten nach Anbieter →</a></p>
 </main>
@@ -686,7 +687,7 @@ def cat_lists(cards,land):
     for cat in CATS:
         f=cat.get('f_'+land,cat['f'])
         X=[c for c in cards if c['art']=='Privat' and not c.get('nurfuer') and c.get('stars') is not None and f(c)]
-        out[cat['k']]=sorted(X,key=lambda c:(-(cat_stars(c,cat['w']) or 0),c.get('fee') if c.get('fee') is not None else 1e9))
+        out[cat['k']]=sorted(X,key=lambda c:(-(cat_stars(c,cat['w']) or 0),c.get('fee') if c.get('fee') is not None else 1e9,c['titel'].lower()))
     best={}
     for cat in CATS:
         for i,c in enumerate(out[cat['k']][:3]):
@@ -728,6 +729,7 @@ COLS={
 }
 TXTCOL=('Sammelrate','Cashback','Gilt für')
 COLNOTE={'punkte':'¹ Bei 1.000 € Umsatz im Monat, 1 Punkt oder Meile = 1 Cent. „Nach Gebühr“ = Wert minus Jahresgebühr.','cashback':'¹ Bei 1.000 € Umsatz im Monat, mit allen Höchstgrenzen. „Nach Gebühr“ = Wert minus Jahresgebühr.'}
+def top_of(n): return f'Top 25 von {n} bewerteten Karten' if n>25 else f'Alle {n} bewerteten Karten'
 def bestenlisten(cards,lists,other_lists):
     code=L['code']; N=L['name']; S=dmy(L['stand'])
     base=f'{code}/kreditkarten/bestenlisten/'; P='../../../'
@@ -738,7 +740,7 @@ def bestenlisten(cards,lists,other_lists):
         X=lists[cat['k']]
         if not X: continue
         c=X[0]; s_=cat_stars(c,cat['w'])
-        tiles+=f'<a class="catcard" href="{cat["k"]}/"><span class="ct">{E(cat["t"])}</span><b>{E(c["titel"])}</b><span>{stars(s_)} {de1(s_)}</span><small>{len(X)} Karten · Liste ansehen →</small></a>'
+        tiles+=f'<a class="catcard" href="{cat["k"]}/"><span class="ct">{E(cat["t"])}</span><b>{E(c["titel"])}</b><span>{stars(s_)} {de1(s_)}</span><small>{top_of(len(X))} · Liste ansehen →</small></a>'
     t=f'Beste Kreditkarten {N} 2026 nach Kategorie | Finvallo'
     d=f'Die besten Kreditkarten in {N} für Reisen, ohne Jahresgebühr, ohne Auslandsgebühr, Meilen, Cashback, Lounges, Premium, Studierende und Debit.'
     ld=graph(base,t,d,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Bestenlisten',base)],[{"@type":"ItemList","name":f"Bestenlisten Kreditkarten {N}","itemListElement":[{"@type":"ListItem","position":i+1,"name":cat['h']+' in '+N,'url':f"https://finvallo.com/{base}{cat['k']}/"} for i,cat in enumerate(CATS) if lists[cat['k']]]}])
@@ -757,9 +759,9 @@ def bestenlisten(cards,lists,other_lists):
         t=f'{cat["h"]} in {N} 2026 | Finvallo'
         if len(t)>65: t=f'{cat["h"]} ({code.upper()}) 2026 | Finvallo'
         top=X[0]
-        d=f'{cat["h"]} in {N}, Stand {S}: Platz 1 ist die {top["titel"]} ({de1(cat_stars(top,cat["w"]))} Sterne). {len(X)} Karten im Vergleich.'
-        if len(d)>158: d=f'{cat["h"]} in {N}: Platz 1 ist die {top["titel"]}. {len(X)} Karten im Vergleich, Stand {S}.'
-        if len(d)>156: d=d[:150].rsplit(' ',1)[0]+' …'
+        d=f'{cat["h"]} in {N}, Stand {S}: Platz 1 ist die {top["titel"]} ({de1(cat_stars(top,cat["w"]))} Sterne). {top_of(len(X))}.'
+        if len(d)>155: d=f'{cat["h"]} in {N}: Platz 1 ist die {top["titel"]}. {top_of(len(X))}, Stand {S}.'
+        if len(d)>155: d=f'{cat["h"]} in {N}: Platz 1 ist die {top["titel"]}. Stand {S}.'
         wb=''
         if cat['w']:
             mx=max(cat['w'].values())
@@ -771,7 +773,7 @@ def bestenlisten(cards,lists,other_lists):
         rows=''.join(f'<tr><td><b>{i+1}</b></td><td><a class="lnk" href="../../{c["slug"]}/">{E(c["titel"])}</a></td>'+''.join(f'<td{"" if h in TXTCOL else " class=nw"}>{E(fn(c))}</td>' for h,fn in cols)+f'<td style="white-space:nowrap"><b>{de1(cat_stars(c,cat["w"]))} ★</b></td><td style="white-space:nowrap">{de1(c["stars"])} ★</td></tr>' for i,c in enumerate(X[:25]))
         thead='<tr><th>#</th><th>Karte</th>'+''.join(f'<th>{E(h)}</th>' for h,_ in cols)+'<th>Kategorie</th><th>Gesamt</th></tr>'
         cnote=f'<p class="note" style="margin-top:8px">{E(COLNOTE[cat["k"]])}</p>' if cat['k'] in COLNOTE else ''
-        kurz=f'<b>Kurz gesagt:</b> {cat["h"]} in {N}: Platz 1 ist laut Finvallo die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} Sternen in dieser Kategorie'+(f', vor der {X[1]["titel"]}' if len(X)>1 else '')+(f' und der {X[2]["titel"]}' if len(X)>2 else '')+f'. Verglichen haben wir {len(X)} Karten. Stand: {S}.'
+        kurz=f'<b>Kurz gesagt:</b> {cat["h"]} in {N}: Platz 1 ist laut Finvallo die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} Sternen in dieser Kategorie'+(f', vor der {X[1]["titel"]}' if len(X)>1 else '')+(f' und der {X[2]["titel"]}' if len(X)>2 else '')+f'. Die Liste zeigt {"die Top 25 von "+str(len(X))+" bewerteten Karten" if len(X)>25 else "alle "+str(len(X))+" bewerteten Karten"}. Stand: {S}.'
         fq=[(f'Welche Karte ist in {N} am besten in der Kategorie „{cat["t"]}“?',f'Laut Finvallo-Bewertung ist es die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} von 5 Sternen in dieser Kategorie. Stand: {S}.'),
             ('Wie entsteht diese Rangliste?',cat['d']+' Grundlage sind dieselben Sterne je Kriterium wie in der Gesamtwertung, nur anders gewichtet.'),
             ('Spielen Provisionen eine Rolle?','Nein. Provisionen haben keinen Einfluss auf Sterne oder Reihenfolge, und es gibt keine bezahlten Platzierungen.')]
@@ -874,6 +876,34 @@ def quick_answers(DL,dpriv,AL,apriv):
     return out
 # ---------- Ablauf ----------
 BEST={}
+def fit_desc(t,lim=155):
+    """Meta Description: ganze Sätze aufnehmen, solange die Länge ≤ lim bleibt (mindestens ein Satz, nie „…“)."""
+    t=re.sub(r'\s*…\s*$','',t.strip())
+    if len(t)<=lim and t.endswith(('.','!','?')): return t
+    sents=re.split(r'(?<=[.!?])\s+(?=[A-ZÄÖÜ0-9„])',t); out=''
+    for x in sents:
+        y=(out+' '+x).strip()
+        if len(y)<=lim: out=y
+        else: break
+    if len(out)<70:
+        x=t if len(out)==0 else t
+        out=''
+        for sep in ('. ',': ',', ',' – ',' und '):
+            i=x[:lim-1].rfind(sep)
+            if i>=70: out=x[:i].rstrip(' ,:–.')+'.'; break
+        else: out=x[:lim-1].rsplit(' ',1)[0].rstrip(' ,:–')+'.'
+    if not out.endswith(('.','!','?')): out=out.rstrip(' ,:;–')+'.'
+    return out
+COUNTS={}
+def card_count(land,scope='all'):
+    """Einzige Quelle für Kartenanzahlen (alle Texte, Meta, FAQ, llms.txt, JSON-Export).
+    all = alle Karten des Landes inkl. Business, Debit, Prepaid (Startseite, Hubs, Vergleichsseite)
+    private = Privatkarten = Liste auf der Vergleichsseite und im Kreditkarten-Rechner (inkl. „nur für bestimmte Kundengruppen“)
+    special = davon nur für bestimmte Kundengruppen
+    business = Business-Karten
+    rated = Privatkarten in der Rangliste (bewertet, für alle erhältlich)
+    Bestenlisten: Anzahl bewerteter Karten der Kategorie, siehe cat_lists()."""
+    return COUNTS[land][scope]
 def prepare():
     """Lädt und bewertet beide Länder (für andere Skripte wie ratgeber.py und listui.py)."""
     DATA={}
@@ -881,6 +911,9 @@ def prepare():
         cards=load(land); ratecards(cards)
         LANDS[land]['stand']=max(c['geprueft'] for c in cards)
         DATA[land]=(cards,providers(land,cards))
+        priv=[c for c in cards if c['art']!='Business']
+        COUNTS[land]=dict(all=len(cards),private=len(priv),special=sum(1 for c in priv if c.get('nurfuer')),
+                          business=len(cards)-len(priv),rated=sum(1 for c in priv if c.get('stars') is not None and not c.get('nurfuer')))
     at={c['titel']:c['slug'] for c in DATA['at'][0] if c['art']=='Privat'}
     for c in DATA['de'][0]:
         if c['art']=='Privat' and c['titel'] in at:

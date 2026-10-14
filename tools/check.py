@@ -8,6 +8,13 @@ from urllib.parse import urljoin, urlparse
 R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public') + '/'
 INTERN = re.compile(r'hochgeladen|Faktencheck|Prüfkandidat|Prüfstatus|Sekundärquelle|[Cc]apitalo|Screenshot|Excel|Kund:innen|class="sek"|Vorprüfung')
 LATER = {'assets/haris.jpg'}   # Foto wird nachgeliefert (bis dahin per onerror ausgeblendet)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import karten as K
+_D = K.prepare(); ALLOWED = {}
+for _l in ('at', 'de'):
+    K.use(_l)
+    _lists, _ = K.cat_lists(_D[_l][0], _l)
+    ALLOWED[_l] = {K.card_count(_l, x) for x in ('all', 'private', 'business', 'rated', 'special')} | {len(v) for v in _lists.values()}
 err = []
 pages = glob.glob(R + '**/index.html', recursive=True) + [R + '404.html']
 titles = {}
@@ -17,13 +24,17 @@ for f in pages:
     spa = rel == 'at/kreditkarten/rechner/index.html'
     base = 'https://finvallo.com/' + (rel[:-10] if rel.endswith('index.html') else '')
     if not spa:
-        for h in re.findall(r'(?:href|src)="([^"#?]*)[^"]*"', s):
+        TAGS = {m.group(1): m.group(0) for m in re.finditer(r'<a [^>]*href="([^"#?]*)[^"]*"[^>]*>', s[s.find('<body'):])}
+        for h in re.findall(r'(?:href|src)="([^"#?]*)[^"]*"', s[s.find('<body'):]):
             if not h or h.startswith(('mailto:', 'tel:', 'javascript')): continue
             u = urlparse(urljoin(base, h))
             if u.scheme not in ('http', 'https'): err.append(f'{rel}: kaputter Link {h[:80]}'); continue
             if u.netloc != 'finvallo.com': continue
             p = u.path.lstrip('/'); t = p + 'index.html' if (p == '' or p.endswith('/')) else p
             if not os.path.exists(R + t) and rel != '404.html' and t not in LATER: err.append(f'{rel}: Link ins Leere {h}')
+            me = rel.split('/')[0]
+            if me in ('at', 'de') and p.split('/')[0] in ('at', 'de') and p.split('/')[0] != me and 'hreflang' not in TAGS.get(h, ''):
+                err.append(f'{rel}: Link ins andere Land ohne hreflang {h}')
         txt = re.sub(r'<script type="application/ld\+json">.*?</script>', '', s, flags=re.S)
         m = INTERN.search(re.sub(r'<script.*?</script>', '', txt, flags=re.S))
         if m: err.append(f'{rel}: interner Begriff „{m.group(0)}“')
@@ -35,7 +46,18 @@ for f in pages:
     t = re.search(r'<title>(.*?)</title>', s)
     if t: titles.setdefault(t.group(1), []).append(rel)
     d = re.search(r'<meta name="description" content="(.*?)"', s)
-    if d and len(d.group(1)) > 160 and rel != 'ueber-uns/index.html': err.append(f'{rel}: Beschreibung zu lang ({len(d.group(1))})')
+    if d and len(d.group(1)) > 160: err.append(f'{rel}: Beschreibung zu lang ({len(d.group(1))})')
+    if d and len(d.group(1)) < 70: err.append(f'{rel}: Beschreibung zu kurz ({len(d.group(1))})')
+    if d and d.group(1).rstrip().endswith(('…', '...')): err.append(f'{rel}: Beschreibung endet mit …')
+    if not d and rel != '404.html': err.append(f'{rel}: keine Beschreibung')
+    # A6: Kartenanzahlen nur aus card_count() bzw. den Bestenlisten-Zählern
+    lc = rel.split('/')[0]
+    if lc in ALLOWED:
+        txt = re.sub(r'<script.*?</script>', '', s, flags=re.S)
+        for m in re.finditer(r'(?<![\w.,])(\d{2,3}) (?:bewerteten |bewertete )?(?:Privatkarten|Kreditkarten|Karten)\b', txt):
+            n = int(m.group(1))
+            if n >= 20 and n not in ALLOWED[lc] and not txt[max(0, m.start() - 8):m.start()].endswith('Trading '):
+                err.append(f'{rel}: Kartenanzahl {m.group(0)} stammt nicht aus card_count()')
 for t, v in titles.items():
     if len(v) > 1: err.append(f'doppelter Titel „{t}“: {", ".join(v[:3])}')
 sm = re.findall(r'<loc>https://finvallo.com/([^<]*)</loc>', open(R + 'sitemap.xml').read())

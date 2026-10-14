@@ -89,7 +89,7 @@ def tag(a, land, idx):
     attrs = f' data-f="{flags(c, a)}" data-typ="{c.get("typ") or ""}" data-netz="{H.escape((c.get("netz") or "").lower())}" data-fee="{fee}" data-q="{q}"'
     return re.sub(r'^(<article class="item" id="[^"]*")>', lambda x: x.group(1) + attrs + '>', a)
 
-def bar(n):
+def bar(n, m=0):
     chips = [('fee0', 'Ohne Jahresgebühr'), ('fx0', '0 % im Ausland'), ('cash0', 'Gratis Bargeld'), ('ins', 'Reiseversicherung'),
              ('cb', 'Cashback &amp; Punkte'), ('ml', 'Meilen'), ('lg', 'Lounge'), ('pay', 'Apple Pay / Google Pay')]
     opt = lambda xs: ''.join(f'<option value="{v}">{t}</option>' for v, t in xs)
@@ -99,7 +99,7 @@ def bar(n):
     <div class="frow"><select data-typ aria-label="Kartenart">{opt([("", "Alle Kartenarten"), ("Kreditkarte", "Kreditkarte mit Teilzahlung"), ("Charge", "Charge-Karte"), ("Debit", "Debitkarte"), ("Prepaid", "Prepaid-Karte")])}</select>
     <select data-netz aria-label="Kartennetzwerk">{opt([("", "Alle Kartennetzwerke"), ("visa", "Visa"), ("mastercard", "Mastercard"), ("american express", "American Express"), ("diners", "Diners Club")])}</select>
     <select data-sort aria-label="Sortierung">{opt([("rank", "Nach Bewertung"), ("fee", "Günstigste zuerst"), ("name", "Nach Name")])}</select></div>
-    <div class="fbot"><b data-count>{n} Karten</b><button type="button" class="lnk" data-reset hidden>Filter zurücksetzen</button></div>
+    <div class="fbot"><b data-count>{n} Karten{f', davon {m} für bestimmte Kundengruppen' if m else ''}</b><button type="button" class="lnk" data-reset hidden>Filter zurücksetzen</button></div>
   </div>
   '''
 
@@ -119,7 +119,9 @@ def main():
             s = re.sub(r'\n  <p class="upd">Zuletzt geprüft: [^<]*</p>', '', s, count=1)
             s = re.sub(r'<div class="box filt" id="filt".*?</div>\n  </div>\n  ', '', s, flags=re.S)
             n = s.count('<article class="item"')
-            s = s.replace('<details class="box howscore">', bar(n) + '<details class="box howscore">', 1)
+            i = s.find('<div class="list" data-special>')
+            m = s[i:].count('<article class="item"') if i >= 0 else 0
+            s = s.replace('<details class="box howscore">', bar(n, m) + '<details class="box howscore">', 1)
             s = re.sub(r'<script src="[^"]*assets/filter\.js[^"]*" defer></script>', '', s)
             s = s.replace('</body>', f'<script src="../../assets/filter.js?v={v}" defer></script>\n</body>', 1)
         if s != s0: open(f, 'w', encoding='utf-8').write(s)

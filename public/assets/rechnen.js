@@ -13,7 +13,7 @@
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var PAGE = !!box.dataset.page;
   if (PAGE && /[?&]land=DE/i.test(location.search) && /\/at\//.test(location.pathname)) { location.replace(location.pathname.replace('/at/', '/de/')); return; }
-  var items = [].slice.call(document.querySelectorAll('#list article.item, #rlist article.item'));
+  var items = [].slice.call(document.querySelectorAll('.list article.item, #rlist article.item'));
   var sort = document.querySelector('#filt [data-sort]');
   if (sort && !sort.querySelector('option[value="net"]')) { var o = document.createElement('option'); o.value = 'net'; o.textContent = 'Nach deinem Ergebnis'; sort.appendChild(o); }
 

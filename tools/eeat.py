@@ -21,6 +21,7 @@ PERSON = {"@type": "Person", "@id": "https://finvallo.com/ueber-uns/#haris", "na
           "knowsAbout": ["Kreditkarten", "Datenanalyse", "Finanzvergleich"]}
 AUTH = {"@id": "https://finvallo.com/ueber-uns/#haris"}
 DATE = re.compile(r'\d{2}\.\d{2}\.\d{4}')
+SITE = json.load(open(os.path.join(K.SP, 'daten', 'site.json')))
 RESERVED = {'anbieter', 'bestenlisten', 'alle', 'business', 'methodik', 'rechner'}
 IMG_ERR = ' onerror="this.remove()"'   # Foto wird nachgeliefert; bis dahin kein kaputtes Bild
 
@@ -55,7 +56,7 @@ UD = 'Finvallo vergleicht Kreditkarten in Österreich und Deutschland nach feste
 
 def ueber(s):
     s = re.sub(r'<title>.*?</title>', f'<title>{E(UT)}</title>', s, count=1)
-    for a in ('name="description"', 'property="og:description"'): s = re.sub(rf'<meta {a} content="[^"]*">', f'<meta {a} content="{E(UD)}">', s, count=1)
+    for a in ('name="description"', 'property="og:description"'): s = re.sub(rf'<meta {a} content="[^"]*">', f'<meta {a} content="{E(K.fit_desc(UD))}">', s, count=1)
     s = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{E(UT)}">', s, count=1)
     m = re.search(r'<main[^>]*>(.*?)</main>', s, re.S)
     inner = m.group(1)
@@ -106,6 +107,28 @@ def list_dates(s, maxd):
     body = re.sub(r'\s?\(Stand \d{2}\.\d{2}\.\d{4}\)', '', body)
     s = head + body
     return date_line(s, f'<p class="checked-line">Konditionen geprüft bis {d}</p>', 'checked-line')
+
+# ---------- Links im eigenen Land (A8) ----------
+MAP = {}
+for _a, _b in json.load(open(os.path.join(K.SP, 'daten', 'hreflang-map.json')))['paare']: MAP[_a] = _b; MAP[_b] = _a
+def land_links(s, rel):
+    me = rel.split('/')[0]
+    if me not in ('at', 'de'): return s
+    other = 'de' if me == 'at' else 'at'
+    pair = other + rel[2:]
+    def fix(m):
+        tag, h = m.group(0), m.group(1)
+        if 'hreflang=' in tag or h.startswith(('http', 'mailto', '#', '/')): return tag
+        t = os.path.normpath(os.path.join(rel, h)).replace('\\', '/')
+        if not (t + '/').startswith(other + '/'): return tag
+        t = t + '/' if not t.endswith('/') else t
+        if t == pair or t == other + '/' or t == MAP.get(rel): return tag.replace('<a ', f'<a hreflang="de-{other.upper()}" ', 1)
+        own = me + t[2:]
+        if os.path.exists(R + own + 'index.html'):
+            return tag.replace(f'href="{h}"', f'href="{os.path.relpath(R + own, R + rel).replace(chr(92), "/")}/"', 1)
+        return tag
+    head, body = s[:s.find('<body')], s[s.find('<body'):]
+    return head + re.sub(r'<a [^>]*href="([^"]*)"[^>]*>', fix, body)
 
 # ---------- 5. JSON-LD ----------
 def ld_merge(s, extra=(), patch=None):
@@ -183,7 +206,20 @@ def main():
         if 'name="author"' not in s: s = s.replace('<meta name="viewport" content="width=device-width, initial-scale=1">', '<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="author" content="Haris, Finvallo">', 1)
         s = re.sub(r'(<a href="[^"]*ueber-uns/"[^>]*>)Über uns(</a>)', r'\1Über Finvallo\2', s)
         s = no_stand(s)
+        s = land_links(s, rel)
+        for attr in ('name="description"', 'property="og:description"'):
+            s = re.sub(rf'(<meta {attr} content=")([^"]*)(">)', lambda m: m.group(1) + E(K.fit_desc(H.unescape(m.group(2)))) + m.group(3), s, count=1)
         if rel == 'ueber-uns/': s = ueber(s)
+        if rel == 'impressum/':
+            ph = SITE.get('phone') or ''
+            s = re.sub(r'<!--phone-->.*?<!--/phone-->', '<!--phone-->' + (f'<br>Telefon: <a href="tel:{E(re.sub(r"[^+0-9]", "", ph))}">{E(ph)}</a>' if ph else '') + '<!--/phone-->', s)
+        s = re.sub(r'<!--analytics-->.*?<!--/analytics-->\n?', '', s, flags=re.S)
+        if (SITE.get('analytics') or {}).get('enabled'):
+            a_ = SITE['analytics']
+            s = s.replace('</head>', f'<!--analytics--><script defer data-domain="{E(a_["domain"])}" src="{E(a_["src"])}"></script><!--/analytics-->\n</head>', 1)
+        if rel == 'de/':
+            dd = f'Unabhängiger Finanzvergleich für Deutschland: {K.card_count("de", "all")} Kreditkarten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner.'
+            s = re.sub(r'Kreditkarten in Deutschland: unabhängige Ratgeber zu Punkten, Meilen, Auslandsgebühren, Reiseversicherung und Kartentypen\. Der Kartenvergleich folgt\.', dd, s)
         parts = rel.split('/')
         land = parts[0] if parts[0] in ('at', 'de') else None
         title = (re.search(r'<title>(.*?)</title>', s, re.S) or [None, ''])[1]
