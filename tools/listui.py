@@ -8,7 +8,7 @@ import karten as G
 
 R = G.R
 STARS = ['*', '**', '***']
-LABEL = {'Ausland': 'Ausland', 'Bargeld Inland': 'Bargeld', 'Jahresgebühr': 'Jahresgebühr'}
+LABEL = {'Zahlung Ausland': 'Zahlung im Ausland', 'Bargeld Inland': 'Bargeld im Inland', 'Jahresgebühr': 'Jahresgebühr'}
 
 def short(label, raw):
     """Kurzwert für die Kachel und die Erklärung dazu (oder None, None, wenn der Wert schon kurz ist)."""

@@ -99,7 +99,8 @@
     {
      "name": "Gourmet-Gutschrift Ausland",
      "eur": 180,
-     "hinweis": "2 × 90 € im Jahr in über 2.000 Restaurants in 16 Ländern"
+     "hinweis": "2 × 90 € im Jahr in über 2.000 Restaurants in 16 Ländern",
+     "ausland": true
     },
     {
      "name": "Entertainment-Gutschrift",

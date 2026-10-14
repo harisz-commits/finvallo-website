@@ -29,14 +29,14 @@
       case 'pct': return { v: a * k[1] / 100 * n, t: n + ' × ' + pct(k[1]) + ' von ' + eur(a) };
       case 'pctmin': return { v: Math.max(a * k[1] / 100, k[2]) * n, t: n + ' × ' + pct(k[1]) + ' (mindestens ' + eur2(k[2]) + ') von ' + eur(a) };
       case 'fixpct': return { v: (k[1] + a * k[2] / 100) * n, t: n + ' × (' + eur2(k[1]) + ' + ' + pct(k[2]) + ' von ' + eur(a) + ')' };
-      case 'freeN': var extra = Math.max(0, n - k[1] * 12); return { v: extra * k[2], t: extra ? (k[1] + ' pro Monat gratis, ' + extra + ' × ' + eur2(k[2])) : (k[1] + ' Abhebungen pro Monat gratis') };
+      case 'freeN': var extra = Math.max(0, n - k[1] * 12); return { v: extra * k[2], t: extra ? ((c.ct ? c.ct + '; ' : k[1] + ' pro Monat gratis, ') + 'gerechnet: ' + extra + ' × ' + eur2(k[2])) : (c.ct || (k[1] + ' Abhebungen pro Monat gratis')) };
       case 'no': return { v: 0, t: 'Mit dieser Karte kannst du kein Bargeld abheben', warn: 1 };
     }
     return { v: 0, t: 'Bargeldkosten unbekannt, nicht gerechnet', unk: 1 };
   }
 
   function calc(c) {
-    var S = num('spend') * 12, F = Math.min(num('fxs'), S || Infinity), n = num('cn'), ni = num('cin'), a = num('ca'), y1 = (q('jahr') || {}).value === '1';
+    var S = num('spend') * 12, F = Math.min(num('fxs'), S || Infinity), n = num('cn'), ni = num('cin'), a = num('ca'), ai = num('cia'), y1 = !!(q('wel') && q('wel').checked);
     var w = num('wien'), l = num('lounge'), g = num('guests'), lvl = +(q('vers') || { value: 0 }).value;
     var rows = [], plus = 0, minus = 0, inc = false;
     var add = function (t, v, d) { rows.push([t, v, d || '']); if (v >= 0) plus += v; else minus -= v; };
@@ -61,14 +61,14 @@
       if (c.lg.w && l) rows.push(['Lounge im Ausland', 0, 'nicht enthalten']);
     }
     /* Guthaben und Abos */
-    if (c.cr && q('cr') && q('cr').checked) add('Guthaben der Karte', c.cr);
-    if (c.sb && q('sb') && q('sb').checked) add('Partner-Abos', c.sb, 'zum günstigsten regulären Preis');
+    if (c.cr && q('cr') && q('cr').checked) add('Guthaben der Karte', c.cr, (c.crn || '') + (c.crx ? '; weitere ' + eur(c.crx) + ' Gourmet-Guthaben im Ausland möglich, nicht gerechnet' : ''));
+    if (c.sb && q('sb') && q('sb').checked) add('Partner-Abos', c.sb * 0.6, '60 % von ' + eur(c.sb) + ', zum günstigsten regulären Preis');
     /* Reiseversicherung */
     var low = lvl > 0 && c.tier < lvl;
     if (lvl > 0 && !low) add('Reiseversicherung', D.vers[String(lvl)], 'statt eigener Polizze (' + D.tiers[String(lvl)] + ')');
     if (low) rows.push(['Reiseversicherung', 0, c.tier ? 'schwächer als gewünscht' : 'nicht enthalten', 1]);
     /* Kosten */
-    if (c.wel && q('wel') && q('wel').checked) add('Willkommensbonus', c.wel[0], c.wel[1]);
+    if (c.wel && y1) add('Willkommensbonus', c.wel[0], c.wel[1]);
     if (c.fee === null || c.fee === undefined) return null;
     var fee = y1 && c.fee1 !== undefined ? c.fee1 : c.fee;
     add(y1 && c.fee1 !== undefined ? 'Jahresgebühr im 1. Jahr' : 'Jahresgebühr', -fee, y1 && c.fee1 !== undefined ? 'danach ' + eur2(c.fee) + ' im Jahr' : '');
@@ -78,7 +78,7 @@
       else rows.push(['Fremdwährungsgebühr', 0, '0 % auf ' + eur(F)]);
     }
     if (ni) {
-      var ci = cash(c, ni, a);
+      var ci = cash(c, ni, ai);
       if (ci.v) add('Bargeld im Inland', -ci.v, ci.t); else rows.push(['Bargeld im Inland', 0, ci.t, ci.warn || ci.unk]);
       if (ci.unk) inc = true;
     }

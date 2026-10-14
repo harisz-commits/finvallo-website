@@ -440,7 +440,7 @@ def card_page(c,cards,nrated,prov):
   <section id="s-vers"><h2>Reiseversicherung</h2>{ins_block(c)}
   </section>
   <section id="s-bew"><h2>So kommt die Bewertung zustande</h2>{scorebox(c,P)}
-  {f"<h2>Im Vergleich mit ähnlichen Karten</h2><div class='tbl wide'><table><thead><tr><th>Karte</th><th>Jahresgebühr</th><th>Ausland</th><th>Bargeld</th><th>Bewertung</th></tr></thead><tbody>{simtbl}</tbody></table></div>" if simtbl else ""}
+  {f"<h2>Im Vergleich mit ähnlichen Karten</h2><div class='tbl wide'><table><thead><tr><th>Karte</th><th>Jahresgebühr</th><th>Zahlung Ausland</th><th>Bargeld</th><th>Bewertung</th></tr></thead><tbody>{simtbl}</tbody></table></div>" if simtbl else ""}
   <h2>So beantragst du die Karte</h2><p class="note" style="margin-top:-6px">Das ist der übliche Ablauf. Die Details legt der Anbieter fest.</p>
   <div class="steps">{steps(c)}</div>
   </section>
@@ -465,7 +465,7 @@ def list_item(c,P,base=''):
     <div class="ihead"><div style="display:flex;gap:10px;align-items:center">{rank}{'<span class="reco">★ Bestbewertet</span>' if c.get('rank')==1 else ''}</div></div>
     <div class="irow">{face(c)}<div style="min-width:0"><h3 class="iname"><a href="{base}{c["slug"]}/">{E(c["titel"])}</a></h3><div class="iprov">{E(c["anbieter"])}</div>{starrow(c)}</div></div>
     <div class="tags">{f'<a class="tag best" href="{base}bestenlisten/{BEST[c["slug"]][2]}/">🏆 Platz {BEST[c["slug"]][0]+1} für {E(BEST[c["slug"]][1])}</a>' if c["slug"] in BEST else ''}<span class="tag typ">▭ {E(TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung",""))}</span><span class="tag kl">{E(c["klasse"])}</span>{'<span class="tag out">+ Girokonto</span>' if c.get('giro') else ''}{f'<span class="tag out">{E(c["netz"])}</span>' if c.get('netz') else ''}</div>
-    <div class="stats"><div><small>Jahresgebühr</small>{st(c.get("fee")==0,fee)}</div><div><small>Ausland</small>{st(c.get("fx")==0,fxT(c) if c.get("fx") is not None else "–")}</div><div><small>Bargeld Inland</small>{st(v==0,cash)}</div></div>
+    <div class="stats"><div><small>Jahresgebühr</small>{st(c.get("fee")==0,fee)}</div><div><small>Zahlung Ausland</small>{st(c.get("fx")==0,fxT(c) if c.get("fx") is not None else "–")}</div><div><small>Bargeld Inland</small>{st(v==0,cash)}</div></div>
     {offer(c)}
     {f'<div class="earn"><span>Sammeln</span><b>{E(earn)}</b></div>' if earn else ""}
     <ul class="checks">{"".join(f"<li>{E(x)}</li>" for x in c["pros"][:4])}</ul>
@@ -583,7 +583,7 @@ def alle_page(cards,prov):
     for p,v in sorted(by.items(),key=lambda kv:(prov.get(kv[0]) or {}).get('name',kv[1][0]['anbieter']).lower()):
         nm=(prov.get(p) or {}).get('name') or v[0]['anbieter']
         rows=''.join(f'<tr><td><a class="lnk" href="../{c["slug"]}/">{E(c["titel"])}</a></td><td>{E(TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung",""))}</td><td>{"0 €" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "beim Anbieter prüfen"}</td><td>{E(fxT(c)) if c.get("fx") is not None else "–"}</td><td>{(de1(c["stars"])+" ★") if c.get("stars") else "nicht bewertet"}</td></tr>' for c in sorted(v,key=lambda c:-(c.get('stars') or 0)))
-        sec+=f'<h2>{E(nm)}</h2><div class="tbl"><table><thead><tr><th>Karte</th><th>Typ</th><th>Jahresgebühr</th><th>Ausland</th><th>Bewertung</th></tr></thead><tbody>{rows}</tbody></table></div>'
+        sec+=f'<h2>{E(nm)}</h2><div class="tbl"><table><thead><tr><th>Karte</th><th>Typ</th><th>Jahresgebühr</th><th>Zahlung Ausland</th><th>Bewertung</th></tr></thead><tbody>{rows}</tbody></table></div>'
     write(rel,head(t,d,rel,P,graph(rel,t,d,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Alle Karten',rel)]),alt=alt_links('at/kreditkarten/alle/','de/kreditkarten/alle/'))+f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/alle/")}
 <div class="wrap"><main id="app">
 <div class="crumb"><span><a href="../../">{N}</a> › <a href="../">Kreditkarten</a> › Alle Karten</span><span>Stand {dmy(L["stand"])}</span></div><h1>Alle Kreditkarten in {N}</h1><p class="lede">{len(cards)} Karten von {len(by)} Anbietern. Ein Klick führt zur ausführlichen Kartenseite mit allen Kosten, der Versicherung und unserer Bewertung.</p>{sec}
@@ -716,15 +716,15 @@ def k_val(c): return f'≈ {eur(round(c["sammelEur"]))} €' if c.get('sammelEur
 def k_net(c): return '–' if c.get('sammelNet') is None else f'{"+" if c["sammelNet"]>=0 else "−"}{eur(round(abs(c["sammelNet"])))} €'
 def k_youth(c): return 'Studierende' if re.search(r'Student|Maturant',c['titel']) else ((youth(c) or '–')[:40])
 COLS={
- 'reisen':[('Versicherung',k_ins),('Ausland',k_fx),('Jahresgebühr',k_fee)],
- 'gratis':[('Ausland',k_fx),('Bargeld',k_cash),('Versicherung',k_ins)],
- 'ausland':[('Ausland',k_fx),('Bargeld',k_cash),('Jahresgebühr',k_fee)],
+ 'reisen':[('Versicherung',k_ins),('Zahlung Ausland',k_fx),('Jahresgebühr',k_fee)],
+ 'gratis':[('Zahlung Ausland',k_fx),('Bargeld',k_cash),('Versicherung',k_ins)],
+ 'ausland':[('Zahlung Ausland',k_fx),('Bargeld',k_cash),('Jahresgebühr',k_fee)],
  'punkte':[('Sammelrate',k_prog),('Wert pro Jahr¹',k_val),('Nach Gebühr¹',k_net),('Jahresgebühr',k_fee)],
  'cashback':[('Cashback',k_prog),('Wert pro Jahr¹',k_val),('Nach Gebühr¹',k_net),('Jahresgebühr',k_fee)],
  'lounge':[('Lounge-Besuche',k_lg),('Begleitung',k_guest),('Jahresgebühr',k_fee)],
- 'premium':[('Versicherung',k_ins),('Lounge',lambda c:k_lg(c) if c['ex'].get('lg') else '–'),('Ausland',k_fx),('Jahresgebühr',k_fee)],
- 'studium':[('Gilt für',k_youth),('Ausland',k_fx),('Jahresgebühr',k_fee)],
- 'debit':[('Ausland',k_fx),('Bargeld',k_cash),('Jahresgebühr',k_fee)],
+ 'premium':[('Versicherung',k_ins),('Lounge',lambda c:k_lg(c) if c['ex'].get('lg') else '–'),('Zahlung Ausland',k_fx),('Jahresgebühr',k_fee)],
+ 'studium':[('Gilt für',k_youth),('Zahlung Ausland',k_fx),('Jahresgebühr',k_fee)],
+ 'debit':[('Zahlung Ausland',k_fx),('Bargeld',k_cash),('Jahresgebühr',k_fee)],
 }
 TXTCOL=('Sammelrate','Cashback','Gilt für')
 COLNOTE={'punkte':'¹ Bei 1.000 € Umsatz im Monat, 1 Punkt oder Meile = 1 Cent. „Nach Gebühr“ = Wert minus Jahresgebühr.','cashback':'¹ Bei 1.000 € Umsatz im Monat, mit allen Höchstgrenzen. „Nach Gebühr“ = Wert minus Jahresgebühr.'}
