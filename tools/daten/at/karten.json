@@ -717,9 +717,9 @@
   "typ": "Charge",
   "klasse": "Std",
   "netz": "American Express",
-  "fee": null,
+  "fee": 40,
   "fee1": null,
-  "feeNote": null,
+  "feeNote": "40 € pro Jahr, beitragsfrei ab 3.500 € Jahresumsatz; Membership Rewards 30 € im Jahr",
   "price": null,
   "period": "Monat",
   "fx": 2.0,
@@ -776,7 +776,7 @@
     "info": "Zur Reiseversicherung dieser Karte haben wir keine bestätigten Angaben gefunden. Bitte beim Anbieter prüfen."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT08",
@@ -789,9 +789,9 @@
   "typ": "Charge",
   "klasse": "Gold",
   "netz": "American Express",
-  "fee": null,
+  "fee": 90,
   "fee1": null,
-  "feeNote": null,
+  "feeNote": "90 € pro Jahr, beitragsfrei ab 5.000 € Jahresumsatz; Membership Rewards 30 € im Jahr",
   "price": null,
   "period": "Monat",
   "fx": 2.0,
@@ -848,7 +848,7 @@
     "info": "Zur Reiseversicherung dieser Karte haben wir keine bestätigten Angaben gefunden. Bitte beim Anbieter prüfen."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT09",
@@ -1049,9 +1049,9 @@
   "typ": "Charge",
   "klasse": "Premium",
   "netz": "American Express",
-  "fee": null,
-  "fee1": null,
-  "feeNote": null,
+  "fee": 4000,
+  "fee1": 8000,
+  "feeNote": "4.000 € pro Jahr plus einmalig 4.000 € Beitrittsentgelt; nur auf Einladung",
   "price": null,
   "period": "Monat",
   "fx": 2.0,
@@ -1108,7 +1108,7 @@
     "info": "Zur Reiseversicherung dieser Karte haben wir keine bestätigten Angaben gefunden. Bitte beim Anbieter prüfen."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT12",
@@ -1856,15 +1856,19 @@
   "typ": "Prepaid",
   "klasse": "Basis",
   "netz": "",
-  "fee": 18.0,
+  "fee": 18,
   "fee1": 16.5,
   "feeNote": null,
   "price": 1.5,
   "period": "Monat",
   "fx": 1.65,
-  "fxText": "1,65 %",
-  "cash": null,
-  "cashText": "Inland beim Anbieter prüfen; Ausland 3 €",
+  "fxText": "1,65 % außerhalb des Euroraums, zzgl. Kursaufschlag",
+  "cash": [
+   "freeN",
+   2,
+   3
+  ],
+  "cashText": "2 Behebungen pro Monat gratis, danach 3 € (In- und Ausland)",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -1933,7 +1937,7 @@
     "info": "Die Karte enthält keine Reiseversicherung."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT20",
@@ -1946,15 +1950,19 @@
   "typ": "Charge",
   "klasse": "Std",
   "netz": "Diners Club",
-  "fee": 75,
+  "fee": 74.9,
   "fee1": null,
   "feeNote": null,
   "price": 75,
   "period": "Jahr",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 1.65,
+  "fxText": "1,65 % außerhalb des Euroraums, zzgl. Kursaufschlag",
+  "cash": [
+   "pctmin",
+   3,
+   4
+  ],
+  "cashText": "3 %, mind. 4,00 € (In- und Ausland)",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -2043,7 +2051,7 @@
     "src": "Quelle: Diners Club Versicherungsleistungen, Stand Oktober 2022"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT21",
@@ -2056,15 +2064,19 @@
   "typ": "Charge",
   "klasse": "Gold",
   "netz": "Diners Club",
-  "fee": 85.68,
+  "fee": 85.6,
   "fee1": null,
   "feeNote": null,
   "price": 85.68,
   "period": "Jahr",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 1.65,
+  "fxText": "1,65 % außerhalb des Euroraums, zzgl. Kursaufschlag",
+  "cash": [
+   "pctmin",
+   3,
+   4
+  ],
+  "cashText": "3 %, mind. 4,00 € (In- und Ausland)",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -2154,7 +2166,7 @@
     "src": "Quelle: Diners Club Versicherungsleistungen, Stand Oktober 2022"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT22",
@@ -2167,15 +2179,19 @@
   "typ": "Charge",
   "klasse": "Gold",
   "netz": "Diners Club",
-  "fee": 96.36,
+  "fee": 96.3,
   "fee1": null,
   "feeNote": null,
   "price": 96.36,
   "period": "Jahr",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 1.65,
+  "fxText": "1,65 % außerhalb des Euroraums, zzgl. Kursaufschlag",
+  "cash": [
+   "pctmin",
+   3,
+   4
+  ],
+  "cashText": "3 %, mind. 4,00 € (In- und Ausland)",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -2253,7 +2269,7 @@
     "src": "Quelle: Diners Club Versicherungsleistungen, Stand Oktober 2022"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT23",
@@ -2271,10 +2287,14 @@
   "feeNote": null,
   "price": 199.08,
   "period": "Jahr",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 1.65,
+  "fxText": "1,65 % außerhalb des Euroraums, zzgl. Kursaufschlag",
+  "cash": [
+   "pctmin",
+   3,
+   4
+  ],
+  "cashText": "3 %, mind. 4,00 € (In- und Ausland)",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -2363,7 +2383,7 @@
     "src": "Quelle: Diners Club Versicherungsleistungen, Stand Oktober 2022"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT24",
@@ -2376,15 +2396,19 @@
   "typ": "Charge",
   "klasse": "Std",
   "netz": "Diners Club",
-  "fee": 25.8,
+  "fee": 25.7,
   "fee1": null,
   "feeNote": null,
   "price": 25.8,
   "period": "Jahr",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 1.65,
+  "fxText": "1,65 % außerhalb des Euroraums, zzgl. Kursaufschlag",
+  "cash": [
+   "pctmin",
+   3,
+   4
+  ],
+  "cashText": "3 %, mind. 4,00 € (In- und Ausland)",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -2460,7 +2484,7 @@
     "src": "Quelle: Diners Club Versicherungsleistungen, Stand Oktober 2022"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT25",
@@ -2473,15 +2497,19 @@
   "typ": "Charge",
   "klasse": "Std",
   "netz": "Diners Club",
-  "fee": null,
-  "fee1": null,
-  "feeNote": null,
+  "fee": 40,
+  "fee1": 0,
+  "feeNote": "1. Jahr gratis, danach 40 € (20 € ab 1.800 € Jahresumsatz), Ö1-Club-Mitgliedschaft nötig",
   "price": null,
   "period": "Jahr",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 1.65,
+  "fxText": "1,65 % außerhalb des Euroraums, zzgl. Kursaufschlag",
+  "cash": [
+   "pctmin",
+   3,
+   4
+  ],
+  "cashText": "3 %, mind. 4,00 € (In- und Ausland)",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -2541,7 +2569,7 @@
     "src": "Quelle: Diners Club Versicherungsleistungen, Stand Oktober 2022"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT26",
@@ -5677,15 +5705,19 @@
   "typ": "Charge",
   "klasse": "Basis",
   "netz": "Mastercard",
-  "fee": 22.2,
-  "fee1": null,
+  "fee": 22.25,
+  "fee1": 14.84,
   "feeNote": null,
   "price": 1.85,
   "period": "Monat",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 1.35,
+  "fxText": "1,35 % für Zahlungen in fremder Währung",
+  "cash": [
+   "fixpct",
+   0.35,
+   3
+  ],
+  "cashText": "0,35 € + 3 % (in Fremdwährung zusätzlich 1,35 %)",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -5726,7 +5758,7 @@
     "info": "Zur Reiseversicherung dieser Karte haben wir keine bestätigten Angaben gefunden. Bitte beim Anbieter prüfen."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT59",
@@ -5739,15 +5771,19 @@
   "typ": "Charge",
   "klasse": "Gold",
   "netz": "Mastercard",
-  "fee": 73.08,
-  "fee1": 36.6,
+  "fee": 73.14,
+  "fee1": 36.56,
   "feeNote": null,
   "price": 6.09,
   "period": "Monat",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 1.35,
+  "fxText": "1,35 % für Zahlungen in fremder Währung",
+  "cash": [
+   "fixpct",
+   0.35,
+   3
+  ],
+  "cashText": "0,35 € + 3 % (in Fremdwährung zusätzlich 1,35 %)",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -5810,7 +5846,7 @@
     "src": "Quellen: <a href=\"https://www.raiffeisen-versicherung.at/de/privatkunden/kombinationsprodukte/raiffeisen-platinum-kreditkarte.html\" target=\"_blank\" rel=\"noopener\">raiffeisen-versicherung.at ↗</a> · <a href=\"https://www.r-card-service.at/content/dam/rbi/cardservice/dokumente/1215-2026_ZRW_Kreditkarte_Gold_Folder_100x210.pdf.coredownload.inline.pdf\" target=\"_blank\" rel=\"noopener\">r-card-service.at ↗</a>"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT60",
@@ -5823,15 +5859,19 @@
   "typ": "Charge",
   "klasse": "Premium",
   "netz": "Mastercard",
-  "fee": 127.2,
+  "fee": 127.19,
   "fee1": null,
   "feeNote": null,
   "price": 10.6,
   "period": "Monat",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 1.35,
+  "fxText": "1,35 % für Zahlungen in fremder Währung",
+  "cash": [
+   "fixpct",
+   0.35,
+   3
+  ],
+  "cashText": "0,35 € + 3 % (in Fremdwährung zusätzlich 1,35 %)",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -5887,7 +5927,7 @@
     "src": "Quellen: <a href=\"https://www.raiffeisen-versicherung.at/de/privatkunden/kombinationsprodukte/raiffeisen-platinum-kreditkarte.html\" target=\"_blank\" rel=\"noopener\">raiffeisen-versicherung.at ↗</a> · <a href=\"https://www.r-card-service.at/content/dam/rbi/cardservice/dokumente/1215-ZRW_Platinum_Folder_100x210.pdf.coredownload.inline.pdf\" target=\"_blank\" rel=\"noopener\">r-card-service.at ↗</a>"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "AT61",
@@ -5973,8 +6013,12 @@
   "period": "Monat",
   "fx": 0,
   "fxText": "0 % im Tariflimit",
-  "cash": null,
-  "cashText": null,
+  "cash": [
+   "freeN",
+   1,
+   4.0
+  ],
+  "cashText": "Bis 5 Abhebungen bzw. 200 € pro Monat kostenlos, danach 2 %, mind. 1 €",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -6031,7 +6075,7 @@
     "info": "Die Karte enthält keine Reiseversicherung."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "D02",
@@ -6051,8 +6095,12 @@
   "period": "Monat",
   "fx": 0,
   "fxText": "0 % im Tariflimit",
-  "cash": null,
-  "cashText": null,
+  "cash": [
+   "freeN",
+   1,
+   4.0
+  ],
+  "cashText": "Bis 200 € pro Monat kostenlos, danach 2 %, mind. 1 €",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -6111,7 +6159,7 @@
     "info": "Die Karte enthält keine Reiseversicherung."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "D03",
@@ -6131,8 +6179,12 @@
   "period": "Monat",
   "fx": 0,
   "fxText": "0 % im Tariflimit",
-  "cash": null,
-  "cashText": null,
+  "cash": [
+   "freeN",
+   2,
+   4.0
+  ],
+  "cashText": "Bis 400 € pro Monat kostenlos, danach 2 %, mind. 1 €",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -6213,7 +6265,7 @@
     "src": "Quelle: <a href=\"https://cdn.revolut.com/terms_and_conditions/pdf/premium_travel_insurance_terms_05d2114c_1.0.0_1762355270_de.pdf\" target=\"_blank\" rel=\"noopener\">cdn.revolut.com ↗</a>"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "D04",
@@ -6233,8 +6285,12 @@
   "period": "Monat",
   "fx": 0,
   "fxText": "0 % im Tariflimit",
-  "cash": null,
-  "cashText": null,
+  "cash": [
+   "freeN",
+   4,
+   4.0
+  ],
+  "cashText": "Bis 800 € pro Monat kostenlos, danach 2 %, mind. 1 €",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -6552,7 +6608,7 @@
     "src": "Quelle: <a href=\"https://cdn.revolut.com/terms_and_conditions/pdf/metal_travel_insurance_terms_ac7c65c8_1.0.0_1762354709_de.pdf\" target=\"_blank\" rel=\"noopener\">cdn.revolut.com ↗</a>"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "D05",
@@ -6572,8 +6628,12 @@
   "period": "Monat",
   "fx": 0,
   "fxText": "0 % im Tariflimit",
-  "cash": null,
-  "cashText": null,
+  "cash": [
+   "freeN",
+   10,
+   4.0
+  ],
+  "cashText": "Bis 2.000 € pro Monat kostenlos, danach 2 %, mind. 1 €",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -6669,7 +6729,7 @@
     "src": "Quelle: <a href=\"https://cdn.revolut.com/terms_and_conditions/pdf/ultra_travel_insurance_terms_20c1573c_1.0.1_1766056503_en.pdf\" target=\"_blank\" rel=\"noopener\">cdn.revolut.com ↗</a>"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "D06",
@@ -6689,8 +6749,10 @@
   "period": "Monat",
   "fx": 0,
   "fxText": "0 % bei Kartenzahlung",
-  "cash": null,
-  "cashText": "3 Gratis-Abhebungen/Monat im Euroraum (danach 1,70 %, mind. 2 €)",
+  "cash": [
+   "free"
+  ],
+  "cashText": "In Euro unbegrenzt kostenlos (österreichisches Konto); in Fremdwährung 1,7 %",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -6731,7 +6793,8 @@
     "info": "Die Karte enthält keine Reiseversicherung."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14",
+  "cashFx": 1.7
  },
  {
   "id": "D07",
@@ -6751,8 +6814,10 @@
   "period": "Monat",
   "fx": 0,
   "fxText": "0 % bei Kartenzahlung",
-  "cash": null,
-  "cashText": null,
+  "cash": [
+   "free"
+  ],
+  "cashText": "In Euro unbegrenzt kostenlos (österreichisches Konto); in Fremdwährung 1,7 %",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -6795,7 +6860,8 @@
     "info": "Die Karte enthält keine Reiseversicherung."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14",
+  "cashFx": 1.7
  },
  {
   "id": "D08",
@@ -6815,8 +6881,10 @@
   "period": "Monat",
   "fx": 0,
   "fxText": "0 % bei Kartenzahlung",
-  "cash": null,
-  "cashText": null,
+  "cash": [
+   "free"
+  ],
+  "cashText": "Unbegrenzt kostenlos, auch in Fremdwährung",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -6880,7 +6948,7 @@
     "src": "Quellen: <a href=\"https://docs.n26.com/legal/02+AT/07+Metal/de/03_4metal-allianz-insurance-tncs-mar23-at-de.pdf\" target=\"_blank\" rel=\"noopener\">docs.n26.com ↗</a> · <a href=\"https://n26.com/de-at/reiseversicherung\" target=\"_blank\" rel=\"noopener\">n26.com ↗</a>"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "D09",
@@ -6900,8 +6968,10 @@
   "period": "Monat",
   "fx": 0,
   "fxText": "0 % bei Kartenzahlung",
-  "cash": null,
-  "cashText": "Weltweit kostenlose Abhebungen",
+  "cash": [
+   "free"
+  ],
+  "cashText": "Unbegrenzt kostenlos, auch in Fremdwährung",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -6968,7 +7038,7 @@
     "src": "Quellen: <a href=\"https://docs.n26.com/legal/02+AT/07+Metal/de/03_4metal-allianz-insurance-tncs-mar23-at-de.pdf\" target=\"_blank\" rel=\"noopener\">docs.n26.com ↗</a> · <a href=\"https://n26.com/de-at/reiseversicherung\" target=\"_blank\" rel=\"noopener\">n26.com ↗</a>"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "D10",
@@ -7050,15 +7120,19 @@
   "typ": "Debit",
   "klasse": "Basis",
   "netz": "",
-  "fee": null,
+  "fee": 0,
   "fee1": null,
   "feeNote": null,
   "price": null,
   "period": "Monat",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 0,
+  "fxText": "Keine Bitpanda-Gebühr außerhalb des Euroraums (Visa-Kurs)",
+  "cash": [
+   "pctmin",
+   2,
+   2
+  ],
+  "cashText": "2 %, mind. 2 € pro Abhebung",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -7099,7 +7173,7 @@
     "info": "Zur Reiseversicherung dieser Karte haben wir keine bestätigten Angaben gefunden. Bitte beim Anbieter prüfen."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "D12",
@@ -7112,15 +7186,18 @@
   "typ": "Debit",
   "klasse": "Basis",
   "netz": "",
-  "fee": null,
+  "fee": 47.88,
   "fee1": null,
-  "feeNote": null,
+  "feeNote": "Tarif bunq Core, 3,99 € im Monat",
   "price": null,
   "period": "Monat",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": null,
+  "fx": 0.5,
+  "fxText": "0,5 % Aufschlag auf den Mastercard-Kurs",
+  "cash": [
+   "fix",
+   0.99
+  ],
+  "cashText": "Die ersten 5 Abhebungen im Monat je 0,99 €, danach 2,99 €",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -7161,7 +7238,7 @@
     "info": "Zur Reiseversicherung dieser Karte haben wir keine bestätigten Angaben gefunden. Bitte beim Anbieter prüfen."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "D13",
@@ -7408,8 +7485,10 @@
   "period": "Monat",
   "fx": 0,
   "fxText": "0 % bei Kartenzahlung",
-  "cash": null,
-  "cashText": null,
+  "cash": [
+   "free"
+  ],
+  "cashText": "Unbegrenzt kostenlos, auch in Fremdwährung",
   "cashNote": null,
   "soll": null,
   "effz": null,
@@ -7450,7 +7529,7 @@
     "info": "Zur Reiseversicherung dieser Karte haben wir keine bestätigten Angaben gefunden. Bitte beim Anbieter prüfen."
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-14"
  },
  {
   "id": "B04",

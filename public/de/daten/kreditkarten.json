@@ -1,6 +1,6 @@
 {
  "quelle": "https://finvallo.com/de/kreditkarten/",
- "stand": "2026-10-12",
+ "stand": "2026-10-14",
  "lizenz": "Frei nutzbar mit Quellenangabe Finvallo",
  "karten": [
   {
@@ -516,7 +516,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 46,
+   "rank": 47,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -567,7 +567,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 65,
+   "rank": 66,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -669,7 +669,7 @@
    "tier": 1,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 30,
+   "rank": 31,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -1199,7 +1199,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 32,
+   "rank": 33,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -1252,7 +1252,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 58,
+   "rank": 59,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (1,5 % Auslandseinsatzentgelt (Visa-Kurs))",
@@ -1305,7 +1305,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 61,
+   "rank": 62,
    "pros": [
     "Keine Jahresgebühr",
     "1 % Bonus auf den Umsatz als IKEA Aktionskarte (max. 30 € pro Jahr); 10 € Aktionskarte nach 6 erfolgreichen Lastschrifteinzügen",
@@ -1465,7 +1465,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 44,
+   "rank": 45,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -1518,7 +1518,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 118,
+   "rank": 119,
    "pros": [
     "Kein Girokonto beim Anbieter nötig",
     "Girokonto bei der Deutschen Bank nicht nötig",
@@ -1857,7 +1857,7 @@
    "tier": 3,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 29,
+   "rank": 30,
    "pros": [
     "Umfassender Reiseschutz",
     "1 Meile pro 2 € Kartenumsatz (Privatkarten); 1 Meile pro 1 € beim Überweisungsservice (kostet 2,5 % Entgelt); Meilen unbegrenzt gültig; Meilentausch in Points (bis 25.000 Meilen = 100 Points/Jahr)",
@@ -1910,7 +1910,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 94,
+   "rank": 95,
    "pros": [
     "1 Meile pro 2 € Kartenumsatz (Privatkarten); 1 Meile pro 1 € beim Überweisungsservice (kostet 2,5 % Entgelt); Meilen unbegrenzt gültig",
     "6 Monate Wolt+ kostenlos (danach 4,99 €/Monat, verlängert sich automatisch)",
@@ -1962,7 +1962,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 62,
+   "rank": 63,
    "pros": [
     "Keine Jahresgebühr",
     "1 Meile pro 2 € Kartenumsatz; Meilen verfallen nach den normalen Miles & More Regeln",
@@ -2257,7 +2257,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 106,
+   "rank": 107,
    "pros": [
     "5 % Reisebonus auf Buchungen über Partner Urlaubsplus",
     "Kein Girokonto beim Anbieter nötig",
@@ -2308,7 +2308,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 52,
+   "rank": 53,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "5 % Reisebonus auf Buchungen über Partner Urlaubsplus",
@@ -2360,7 +2360,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 40,
+   "rank": 41,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "5 % Reisebonus auf Buchungen über Partner Urlaubsplus",
@@ -2495,7 +2495,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 104,
+   "rank": 105,
    "pros": [
     "Keine Jahresgebühr",
     "Kostenlos zum Girokonto",
@@ -2746,7 +2746,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 103,
+   "rank": 104,
    "pros": [
     "Keine Jahresgebühr",
     "5 % Reisebonus über Partner Urlaubsplus",
@@ -2850,7 +2850,7 @@
    "tier": 3,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 55,
+   "rank": 56,
    "pros": [
     "Umfassender Reiseschutz",
     "1 Bonuspunkt pro 1 € (2 Punkte bei Reise/Restaurant), max. 20.000 Punkte/Jahr; 100 Punkte = 1 €, Einlösung ab 9.000 Punkten",
@@ -3093,7 +3093,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 119,
+   "rank": 120,
    "pros": [
     "Visa oder Mastercard wählbar",
     "Monatlich kündbar, anteilige Erstattung",
@@ -3143,7 +3143,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 56,
+   "rank": 57,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Reiseversicherung ohne Karteneinsatzpflicht",
@@ -3194,7 +3194,7 @@
    "tier": 2,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 98,
+   "rank": 99,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Bis zu 2 Visa + 2 Mastercard im PremiumKonto",
@@ -3441,7 +3441,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 121,
+   "rank": 122,
    "pros": [
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Gratis-Konto unter Bedingungen",
@@ -3543,7 +3543,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 37,
+   "rank": 38,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -3646,7 +3646,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 107,
+   "rank": 108,
    "pros": [
     "Im 1. Jahr 0 € statt 36 €",
     "Bargeld ohne Automatengebühr",
@@ -3697,7 +3697,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 39,
+   "rank": 40,
    "pros": [
     "Im 1. Jahr 0 € statt 72 €",
     "Bargeld ohne Automatengebühr",
@@ -3800,7 +3800,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 38,
+   "rank": 39,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Reiseschutz ohne Karteneinsatzpflicht",
@@ -3851,7 +3851,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 117,
+   "rank": 118,
    "pros": [
     "Bis zu 7 % Rückerstattung nur auf Reisebuchungen über den ReisebuchungsService der Sparkasse (kein Cashback auf normale Einkäufe)",
     "Bargeld im Ausland kostenlos",
@@ -3902,7 +3902,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 54,
+   "rank": 55,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Bis zu 7 % Rückerstattung nur auf Reisebuchungen über den ReisebuchungsService der Sparkasse (kein Cashback auf normale Einkäufe)",
@@ -3993,8 +3993,8 @@
    "fee": 60.0,
    "fee1": null,
    "feeNote": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. 60 € pro Jahr mit Versicherung, 37,50 € ohne Versicherung",
-   "fx": null,
-   "fxText": "abweichende Regelung für Visa Card Business (im PLV nicht beziffert)",
+   "fx": 0,
+   "fxText": "0 % (Beispiel Berliner Sparkasse; andere Sparkassen bis etwa 2 %)",
    "cashText": "Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) – Beispiel Berliner Sparkasse",
    "soll": null,
    "effz": null,
@@ -4003,10 +4003,11 @@
    "auto": true,
    "pay": true,
    "tier": null,
-   "stars": 3.2,
-   "note": "Ausreichend",
+   "stars": 3.6,
+   "note": "Befriedigend",
    "rank": null,
    "pros": [
+    "Keine Fremdwährungsgebühr",
     "Bis zu 7 % Rückerstattung nur auf Reisebuchungen über den ReisebuchungsService der Sparkasse (kein Cashback auf normale Einkäufe)",
     "Wahlweise mit oder ohne Versicherung"
    ],
@@ -4018,7 +4019,7 @@
    "quelle": "https://www.berliner-sparkasse.de/",
    "preis": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
    "stand": "PLV Berliner Sparkasse 15.07.2026",
-   "geprueft": "2026-10-12",
+   "geprueft": "2026-10-14",
    "versicherung": null,
    "url": "https://finvallo.com/de/kreditkarten/sparkasse-visa-card-business-gold/",
    "sek": []
@@ -4049,7 +4050,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 60,
+   "rank": 61,
    "pros": [
     "Keine Jahresgebühr",
     "Bis 4 % (Classic) bzw. 10 % (Gold) Reisebonus nur bei Buchung über vr-meinereise.de/Urlaubsplus – kein Cashback auf normale Einkäufe",
@@ -4151,7 +4152,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 125,
+   "rank": 126,
    "pros": [
     "Bis 25 Jahre kostenlos",
     "Keine Bonitätsprüfung (Guthabenbasis)"
@@ -4199,7 +4200,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 116,
+   "rank": 117,
    "pros": [
     "Im smartDialog-Konto enthalten"
    ],
@@ -4291,7 +4292,7 @@
    "tier": null,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 111,
+   "rank": 112,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Kein Fremdwährungsentgelt",
@@ -4337,7 +4338,7 @@
    "tier": 4,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 114,
+   "rank": 115,
    "pros": [
     "Premium-Reiseschutz",
     "Membership Rewards inklusive: 1 Punkt pro 1 € Umsatz, Punkte u. a. zu Airline- und Hotelprogrammen übertragbar",
@@ -4392,7 +4393,7 @@
    "tier": 2,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 99,
+   "rank": 100,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Membership Rewards inklusive: 1 Punkt pro 1 € Umsatz, Punkte u. a. zu Airline-Partnern übertragbar",
@@ -4447,7 +4448,7 @@
    "tier": 2,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 100,
+   "rank": 101,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Membership Rewards inklusive: 1 Punkt pro 1 € Umsatz, Punkte u. a. zu Airline-Partnern übertragbar",
@@ -4502,7 +4503,7 @@
    "tier": 1,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 93,
+   "rank": 94,
    "pros": [
     "Membership Rewards Classic inklusive (für Neukunden ab 01/2026): 1 Punkt pro 1 € Umsatz",
     "Kein Girokonto beim Anbieter nötig",
@@ -4553,7 +4554,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 59,
+   "rank": 60,
    "pros": [
     "Keine Jahresgebühr",
     "Kein Girokonto beim Anbieter nötig",
@@ -4604,7 +4605,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 101,
+   "rank": 102,
    "pros": [
     "Keine Jahresgebühr",
     "1 PAYBACK °Punkt pro 3 € Umsatz (ca. 0,33 %), keine Punkte für Tankstellenumsätze; zusätzlich die regulären Punkte bei PAYBACK-Partnern",
@@ -4657,7 +4658,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 102,
+   "rank": 103,
    "pros": [
     "Keine Jahresgebühr",
     "1 °Punkt pro 3 € Umsatz, bei dm automatisch 2 °Punkte pro 3 € (ca. 0,67 %); keine Punkte an Tankstellen",
@@ -4709,7 +4710,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 108,
+   "rank": 109,
    "pros": [
     "1 % Gutschrift ohne Limit auf Tank- und E-Ladeumsätze bei gelisteten Ketten in DE; sonst Membership Rewards inklusive (1 Punkt pro 1 €, ohne Tankumsätze)",
     "Kein Girokonto beim Anbieter nötig",
@@ -4761,7 +4762,7 @@
    "tier": 3,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 113,
+   "rank": 114,
    "pros": [
     "Umfassender Reiseschutz",
     "Membership Rewards inklusive: 1 Punkt pro 1 €, bei BMW-Händlern, SIXT und ausgewählten Tankstellen in DE 2 Punkte pro 1 €",
@@ -5081,7 +5082,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 63,
+   "rank": 64,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "1 PAYBACK °Punkt pro 5 € Umsatz (ca. 0,2 %), zusätzlich die regulären Punkte bei PAYBACK-Partnern; kein Punkteverfall",
@@ -5184,7 +5185,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 105,
+   "rank": 106,
    "pros": [
     "Im 1. Jahr 0 € statt 22,80 €",
     "Kein Girokonto beim Anbieter nötig",
@@ -5237,7 +5238,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 64,
+   "rank": 65,
    "pros": [
     "Im 1. Jahr 0 € statt 46,80 €",
     "Kein Girokonto beim Anbieter nötig",
@@ -5288,7 +5289,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 120,
+   "rank": 121,
    "pros": [
     "Im 1. Jahr 0 € statt 58,80 €",
     "2 % Tankrabatt weltweit auf Tankstellen- und E-Ladeumsätze bis 150 € pro Monat (also max. 3 €/Monat); bis zu 30 % Cashback über den ADAC-Cashback-Shop; 5 % auf Ferienmietwagen und 10 % auf Clubmobile der ADAC Autovermietung",
@@ -5341,7 +5342,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 53,
+   "rank": 54,
    "pros": [
     "Im 1. Jahr 0 € statt 70,80 €",
     "Reiseversicherung inkl. Storno",
@@ -5395,7 +5396,7 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 41,
+   "rank": 42,
    "pros": [
     "Im 1. Jahr 0 € statt 118,80 €",
     "Umfassender Reiseschutz",
@@ -5450,7 +5451,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 47,
+   "rank": 48,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -5502,7 +5503,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 92,
+   "rank": 93,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5553,7 +5554,7 @@
    "tier": 2,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 28,
+   "rank": 29,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5605,7 +5606,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 42,
+   "rank": 43,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -5858,7 +5859,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 31,
+   "rank": 32,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -5963,7 +5964,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 109,
+   "rank": 110,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6116,7 +6117,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 57,
+   "rank": 58,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -6169,7 +6170,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 48,
+   "rank": 49,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -6476,7 +6477,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 90,
+   "rank": 91,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Kurs + 0,5 % 'Schutz vor Wechselkursschwankungen'))",
     "1 physische Mastercard inklusive",
@@ -6525,7 +6526,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 122,
+   "rank": 123,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Kurs + 0,5 % 'Schutz vor Wechselkursschwankungen'))",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6575,7 +6576,7 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 43,
+   "rank": 44,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Kurs + 0,5 % 'Schutz vor Wechselkursschwankungen'))",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6822,7 +6823,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 91,
+   "rank": 92,
    "pros": [
     "Niedrige Fremdwährungskosten (1 % Währungsaufschlag auf den Wechselkurs bei Kartenzahlungen außerhalb EUR)",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6874,7 +6875,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 95,
+   "rank": 96,
    "pros": [
     "Niedrige Fremdwährungskosten (1 % Währungsaufschlag auf den Wechselkurs bei Kartenzahlungen außerhalb EUR)",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6924,7 +6925,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 110,
+   "rank": 111,
    "pros": [
     "Niedrige Fremdwährungskosten (1 % Währungsaufschlag auf den Wechselkurs bei Kartenzahlungen außerhalb EUR)",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
@@ -6977,7 +6978,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 49,
+   "rank": 50,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (ca. 0,47 % Umrechnungsgebühr EUR→USD zum Devisenmittelkurs (variabel, abhängig von Währung/Betrag; Stand 12.10.2026 per Wise-Preisrechner); 0 % bei Zahlung aus vorhandenem USD-Guthaben)",
@@ -7029,7 +7030,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 34,
+   "rank": 35,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7081,7 +7082,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 35,
+   "rank": 36,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7134,7 +7135,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 45,
+   "rank": 46,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7288,7 +7289,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 50,
+   "rank": 51,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7392,7 +7393,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 51,
+   "rank": 52,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7446,7 +7447,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 123,
+   "rank": 124,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7501,7 +7502,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 115,
+   "rank": 116,
    "pros": [
     "Keine Jahresgebühr",
     "Kein Girokonto beim Anbieter nötig",
@@ -7552,7 +7553,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 66,
+   "rank": 67,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7605,7 +7606,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 97,
+   "rank": 98,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7658,7 +7659,7 @@
    "tier": 0,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 112,
+   "rank": 113,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7765,7 +7766,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 33,
+   "rank": 34,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7804,9 +7805,9 @@
    "fee": 0,
    "fee1": null,
    "feeNote": "Geschäftskonto und geschäftliche Mastercard (physisch/virtuell) kostenlos; Geschäftskonto Plus mit mehr Unterkonten/Karten kostenpflichtig (Preis nicht geprüft)",
-   "fx": null,
-   "fxText": null,
-   "cashText": "Kostenlose monatliche Abhebungen (Anzahl nicht genannt), danach und im Ausland 2 %; max. 500 € pro Abhebung, 2.000 € pro Tag; Bargeldeinzahlung 2,5 %",
+   "fx": 0,
+   "fxText": "0 %, Mastercard-Kurs",
+   "cashText": "3 Abhebungen in Euro pro Monat kostenlos, danach 2 %; außerhalb des Euroraums 2 %",
    "soll": null,
    "effz": null,
    "rahmen": "kein Kreditrahmen (E-Geld-Konto)",
@@ -7814,11 +7815,13 @@
    "auto": true,
    "pay": null,
    "tier": 0,
-   "stars": 3.1,
-   "note": "Ausreichend",
+   "stars": 3.7,
+   "note": "Befriedigend",
    "rank": null,
    "pros": [
     "Keine Jahresgebühr",
+    "Keine Fremdwährungsgebühr",
+    "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Kostenloses Geschäftskonto mit Mastercard",
     "Auszahlung der SumUp-Kartenumsätze am nächsten Tag (auch Wochenende)",
     "Kostenlose Echtzeitüberweisungen"
@@ -7833,7 +7836,7 @@
    "quelle": "https://www.sumup.com/de-de/geschaeftskonto/",
    "preis": null,
    "stand": "Produktseite, abgerufen 10/2026",
-   "geprueft": "2026-10-12",
+   "geprueft": "2026-10-14",
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/sumup-geschaeftskonto-mastercard/",
    "sek": []
@@ -7864,7 +7867,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 124,
+   "rank": 125,
    "pros": [
     "Keine Jahresgebühr",
     "Kein Monatsentgelt",
@@ -7913,7 +7916,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 126,
+   "rank": 127,
    "pros": [
     "Eingehende Überweisungen kostenlos",
     "Konten in EUR, GBP und RON"
@@ -7961,7 +7964,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 96,
+   "rank": 97,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Großhandelskurs))",
     "Bargeld ohne Automatengebühr",
@@ -8156,9 +8159,9 @@
    "fee": 39,
    "fee1": null,
    "feeNote": "39 € pro Jahr; Partnerkarte 19,50 €",
-   "fx": null,
-   "fxText": null,
-   "cashText": "Gebührenfreie Bargeldauszahlung im EU-Ausland (mit Einschränkungen laut Fußnote); Inlandskonditionen unbekannt",
+   "fx": 1.5,
+   "fxText": "1,5 % außerhalb des Euroraums",
+   "cashText": "Inland 2 %, mind. 5 €; im Ausland kostenlos (außerhalb des Euroraums 1,5 % Auslandseinsatz)",
    "soll": null,
    "effz": null,
    "rahmen": null,
@@ -8166,10 +8169,11 @@
    "auto": true,
    "pay": true,
    "tier": 0,
-   "stars": 3.1,
+   "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 127,
+   "rank": 90,
    "pros": [
+    "Niedrige Fremdwährungskosten (1,5 % außerhalb des Euroraums)",
     "Kein Girokonto beim Anbieter nötig",
     "Europaweiter Mobilitätsschutz",
     "Reiseservice mit Bestpreisgarantie",
@@ -8177,13 +8181,12 @@
    ],
    "cons": [
     "Keine Reiseversicherung inklusive",
-    "Konditionen (Auslandseinsatz, Bargeld) nicht öffentlich",
     "Kein Online-Antrag auf der BW-Bank-Seite sichtbar"
    ],
    "quelle": "https://www.bw-bank.de/de/home/privatkunden/kreditkarte/mercedescard.html",
    "preis": null,
    "stand": null,
-   "geprueft": "2026-10-12",
+   "geprueft": "2026-10-14",
    "versicherung": "Keine Reiseversicherung",
    "url": "https://finvallo.com/de/kreditkarten/mercedes-benz-bw-bank-mercedes-credit-card-silber/",
    "sek": []
@@ -8202,9 +8205,9 @@
    "fee": 83.4,
    "fee1": null,
    "feeNote": "83,40 € pro Jahr; Partnerkarte 41,70 €",
-   "fx": null,
-   "fxText": null,
-   "cashText": "Gebührenfreie Bargeldauszahlung im EU-Ausland (mit Einschränkungen laut Fußnote); Inlandskonditionen unbekannt",
+   "fx": 1.5,
+   "fxText": "1,5 % außerhalb des Euroraums",
+   "cashText": "Inland 2 %, mind. 5 €; im Ausland kostenlos (außerhalb des Euroraums 1,5 % Auslandseinsatz)",
    "soll": null,
    "effz": null,
    "rahmen": null,
@@ -8212,10 +8215,11 @@
    "auto": true,
    "pay": true,
    "tier": 2,
-   "stars": 3.6,
+   "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 67,
+   "rank": 28,
    "pros": [
+    "Niedrige Fremdwährungskosten (1,5 % außerhalb des Euroraums)",
     "Reiseversicherung inkl. Storno",
     "Kein Girokonto beim Anbieter nötig",
     "Reiserücktritts- und Reisekrankenversicherung",
@@ -8224,13 +8228,12 @@
     "Bis 40 Tage Zahlungsziel"
    ],
    "cons": [
-    "Konditionen (Auslandseinsatz, Bargeld) nicht öffentlich",
     "Kein Online-Antrag auf der BW-Bank-Seite sichtbar"
    ],
    "quelle": "https://www.bw-bank.de/de/home/privatkunden/kreditkarte/mercedescard.html",
    "preis": null,
    "stand": null,
-   "geprueft": "2026-10-12",
+   "geprueft": "2026-10-14",
    "versicherung": "Reiseversicherung inkl. Storno",
    "url": "https://finvallo.com/de/kreditkarten/mercedes-benz-bw-bank-mercedes-credit-card-gold/",
    "sek": []
@@ -8312,7 +8315,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 36,
+   "rank": 37,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",

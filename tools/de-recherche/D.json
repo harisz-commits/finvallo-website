@@ -1352,8 +1352,8 @@
   "fee1": null,
   "feeNote": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. 60 € pro Jahr mit Versicherung, 37,50 € ohne Versicherung",
   "konto": "Geschäftsgirokonto der Sparkasse",
-  "fx": null,
-  "fxText": "abweichende Regelung für Visa Card Business (im PLV nicht beziffert)",
+  "fx": 0,
+  "fxText": "0 % (Beispiel Berliner Sparkasse; andere Sparkassen bis etwa 2 %)",
   "cash": [
    "pctmin",
    2,
@@ -1397,7 +1397,10 @@
   "stand": "PLV Berliner Sparkasse 15.07.2026",
   "sek": [],
   "notiz": "Preis je Sparkasse unterschiedlich, Beispiel: Berliner Sparkasse. Ergänzt, nur Preis aus PLV gelesen; Versicherungsumfang, Fremdwährungsentgelt und Bargeldkonditionen nicht geprüft (tier/fx daher null).",
-  "geprueft": "2026-10-12"
+  "geprueft": "2026-10-14",
+  "cashAus": [
+   "free"
+  ]
  },
  {
   "key": "volksbank-classiccard",

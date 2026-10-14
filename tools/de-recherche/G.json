@@ -1036,10 +1036,14 @@
   "fee1": null,
   "feeNote": "Geschäftskonto und geschäftliche Mastercard (physisch/virtuell) kostenlos; Geschäftskonto Plus mit mehr Unterkonten/Karten kostenpflichtig (Preis nicht geprüft)",
   "konto": "SumUp Geschäftskonto (0 €)",
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": "Kostenlose monatliche Abhebungen (Anzahl nicht genannt), danach und im Ausland 2 %; max. 500 € pro Abhebung, 2.000 € pro Tag; Bargeldeinzahlung 2,5 %",
+  "fx": 0,
+  "fxText": "0 %, Mastercard-Kurs",
+  "cash": [
+   "freeN",
+   3,
+   4
+  ],
+  "cashText": "3 Abhebungen in Euro pro Monat kostenlos, danach 2 %; außerhalb des Euroraums 2 %",
   "cashInterest": false,
   "soll": null,
   "effz": null,
@@ -1081,7 +1085,11 @@
   "stand": "Produktseite, abgerufen 10/2026",
   "sek": [],
   "notiz": "Ergänzt (Business-Variante). Fremdwährungsentgelt und Anzahl Gratis-Abhebungen auf der Produktseite nicht beziffert; aktuelle Business-Gebührenübersicht nicht gefunden (nur alte PDFs von 2020).",
-  "geprueft": "2026-10-12"
+  "geprueft": "2026-10-14",
+  "cashAus": [
+   "pct",
+   2
+  ]
  },
  {
   "key": "monese-pay-as-you-go",
@@ -1497,10 +1505,14 @@
   "fee1": null,
   "feeNote": "39 € pro Jahr; Partnerkarte 19,50 €",
   "konto": null,
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": "Gebührenfreie Bargeldauszahlung im EU-Ausland (mit Einschränkungen laut Fußnote); Inlandskonditionen unbekannt",
+  "fx": 1.5,
+  "fxText": "1,5 % außerhalb des Euroraums",
+  "cash": [
+   "pctmin",
+   2,
+   5
+  ],
+  "cashText": "Inland 2 %, mind. 5 €; im Ausland kostenlos (außerhalb des Euroraums 1,5 % Auslandseinsatz)",
   "cashInterest": null,
   "soll": null,
   "effz": null,
@@ -1533,7 +1545,6 @@
    "Bis 40 Tage Zahlungsziel"
   ],
   "cons_extra": [
-   "Konditionen (Auslandseinsatz, Bargeld) nicht öffentlich",
    "Kein Online-Antrag auf der BW-Bank-Seite sichtbar"
   ],
   "quelle": "https://www.bw-bank.de/de/home/privatkunden/kreditkarte/mercedescard.html",
@@ -1545,7 +1556,10 @@
    "zinsfrei"
   ],
   "notiz": "Ehemals Mercedes-Benz Bank, seit 2016 von BW-Bank betreut. BW-Bank-Seite richtet sich an 'Inhaber der Mercedes Credit Card', zeigt weder Preise noch Antrag – Verfügbarkeit für Neukunden unklar, ggf. eingestellt oder nur über Mercedes-Benz-Vertrieb. Preise nur von konto.org (Stand 13.07.2026). Mercedes-Benz Bank selbst bietet keine eigene Kreditkarte mehr an (Website nicht erreichbar, nicht verifiziert).",
-  "geprueft": "2026-10-12"
+  "geprueft": "2026-10-14",
+  "cashAus": [
+   "free"
+  ]
  },
  {
   "key": "mercedes-credit-card-gold",
@@ -1562,10 +1576,14 @@
   "fee1": null,
   "feeNote": "83,40 € pro Jahr; Partnerkarte 41,70 €",
   "konto": null,
-  "fx": null,
-  "fxText": null,
-  "cash": null,
-  "cashText": "Gebührenfreie Bargeldauszahlung im EU-Ausland (mit Einschränkungen laut Fußnote); Inlandskonditionen unbekannt",
+  "fx": 1.5,
+  "fxText": "1,5 % außerhalb des Euroraums",
+  "cash": [
+   "pctmin",
+   2,
+   5
+  ],
+  "cashText": "Inland 2 %, mind. 5 €; im Ausland kostenlos (außerhalb des Euroraums 1,5 % Auslandseinsatz)",
   "cashInterest": null,
   "soll": null,
   "effz": null,
@@ -1599,7 +1617,6 @@
    "Bis 40 Tage Zahlungsziel"
   ],
   "cons_extra": [
-   "Konditionen (Auslandseinsatz, Bargeld) nicht öffentlich",
    "Kein Online-Antrag auf der BW-Bank-Seite sichtbar"
   ],
   "quelle": "https://www.bw-bank.de/de/home/privatkunden/kreditkarte/mercedescard.html",
@@ -1613,6 +1630,9 @@
    "insText"
   ],
   "notiz": "Ehemals Mercedes-Benz Bank, seit 2016 von BW-Bank betreut. BW-Bank-Seite richtet sich an 'Inhaber der Mercedes Credit Card', zeigt weder Preise noch Antrag – Verfügbarkeit für Neukunden unklar, ggf. eingestellt oder nur über Mercedes-Benz-Vertrieb. Preise nur von konto.org (Stand 13.07.2026). Mercedes-Benz Bank selbst bietet keine eigene Kreditkarte mehr an (Website nicht erreichbar, nicht verifiziert).",
-  "geprueft": "2026-10-12"
+  "geprueft": "2026-10-14",
+  "cashAus": [
+   "free"
+  ]
  }
 ]

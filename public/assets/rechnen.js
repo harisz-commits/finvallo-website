@@ -18,8 +18,8 @@
   if (sort && !sort.querySelector('option[value="net"]')) { var o = document.createElement('option'); o.value = 'net'; o.textContent = 'Nach deinem Ergebnis'; sort.appendChild(o); }
 
   /* Bargeldkosten für n Abhebungen zu je a € im Jahr. */
-  function cash(c, n, a) {
-    var k = c.cash;
+  function cash(c, n, a, aus) {
+    var k = aus && c.cashA ? c.cashA : c.cash;
     if (!n) return { v: 0 };
     if (!k) return { v: 0, t: 'Bargeldkosten unbekannt, nicht gerechnet', unk: 1 };
     switch (k[0]) {
@@ -83,10 +83,11 @@
       if (ci.unk) inc = true;
     }
     if (n) {
-      var cs = cash(c, n, a);
+      var cs = cash(c, n, a, true);
       if (cs.v) add('Bargeld im Ausland', -cs.v, cs.t); else rows.push(['Bargeld im Ausland', 0, cs.t, cs.warn || cs.unk]);
       if (cs.unk || ((c.fx === null || c.fx === undefined) && a)) inc = true;
-      if (c.fx && a) add('Fremdwährung beim Abheben', -n * a * c.fx / 100, pct(c.fx) + ' auf ' + eur(n * a));
+      var cf = c.cfx || c.fx;
+      if (cf && a) add('Fremdwährung beim Abheben', -n * a * cf / 100, pct(cf) + ' auf ' + eur(n * a));
     }
     return { net: plus - minus, rows: rows, low: low || inc, inc: inc };
   }
