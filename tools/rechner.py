@@ -6,9 +6,9 @@ STAND='2026-10-12'; STAND_DE='12.10.2026'
 E=lambda s: html.escape(str(s))
 LN={'at':('Österreich','de-AT','de_AT'),'de':('Deutschland','de-DE','de_DE')}
 def inp(id,label,val,suffix='',help=''):
-    return f'<label>{label}<span class="inw"><input id="{id}" name="{id}" type="text" inputmode="decimal" value="{val}" autocomplete="off">{f"<em>{suffix}</em>" if suffix else ""}</span>{f"<small class=mut>{help}</small>" if help else ""}</label>'
+    return f'<label><span class="flab">{label}</span><span class="inw"><input id="{id}" name="{id}" type="text" inputmode="decimal" value="{val}" autocomplete="off">{f"<em>{suffix}</em>" if suffix else ""}</span>{f"<small class=mut>{help}</small>" if help else ""}</label>'
 def sel(id,label,opts):
-    return f'<label>{label}<select id="{id}" name="{id}">'+''.join(f'<option value="{v}"{" selected" if s else ""}>{t}</option>' for v,t,s in opts)+'</select></label>'
+    return f'<label><span class="flab">{label}</span><select id="{id}" name="{id}">'+''.join(f'<option value="{v}"{" selected" if s else ""}>{t}</option>' for v,t,s in opts)+'</select></label>'
 DISCLAIMER='<div class="box disc"><b>Hinweis:</b> Alle Berechnungen sind Beispielrechnungen ohne Gewähr. Trotz sorgfältiger Prüfung können Fehler passieren, und Banken runden oder rechnen im Detail oft anders. Das Ergebnis ersetzt keine Beratung. Prüfe wichtige Entscheidungen mit den Unterlagen deiner Bank.</div>'
 CALCS={}
 def calc(slug,**kw): CALCS[slug]=kw

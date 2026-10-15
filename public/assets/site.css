@@ -660,3 +660,5 @@ details.rbox>summary::after{border-color:var(--blue-text)}
 .lcalc .fld,.lcalc label{grid-template-columns:minmax(0,1fr)}
 .lcalc select,.filt select{min-width:0;max-width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 body{overflow-x:clip}
+.flab{display:block}
+.lcalc .flab{display:flex}

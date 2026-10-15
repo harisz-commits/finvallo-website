@@ -117,7 +117,7 @@ def breakeven(c, x, A, credits, vers=False, sub=False):
 def need(k, v, x=None):
     """Teilsatz nach „lohnt sie sich …“."""
     w = lw(x or {})
-    if k == 'lounge': return f'schon ab dem ersten Lounge-Besuch{w} im Jahr' if v == 1 else f'ab etwa {v} Lounge-Besuchen{w} im Jahr'
+    if k == 'lounge': return f'ab dem ersten Lounge-Besuch{w} im Jahr' if v == 1 else f'ab etwa {v} Lounge-Besuchen{w} im Jahr'
     if k == 'both': return f'mit allen {v[0]} Lounge-Besuchen{w} ab etwa {eur(v[1])} € Kartenumsatz im Monat'
     if k == 'spend': return f'ab etwa {eur(v)} € Kartenumsatz im Monat'
     return ''
@@ -135,6 +135,7 @@ def verdict(c, x, A):
     base = 'Mit ' + ' und '.join(w) if w else ''
     if k1 == 'ok': s.append((base or 'Schon ohne Zusatznutzung') + (' holst du die Jahresgebühr herein, auch ohne Lounge-Besuch.' if free_visits(x) else ' holst du die Jahresgebühr herein.'))
     elif k1 == 'both': s.append(f'Mit {"allen Guthaben und " if cr else ""}allen {v1[0]} enthaltenen Lounge-Besuchen{lw(x)} lohnt sie sich ab etwa {eur(v1[1])} € Kartenumsatz im Monat.')
+    elif k1 == 'lounge' and v1 == 1: s.append((f'{base} ist die Jahresgebühr' if base else 'Die Jahresgebühr ist') + f' ab dem ersten Lounge-Besuch{lw(x)} gedeckt; jeder weitere Besuch ist ein Plus.')
     elif k1 != 'no': s.append((f'{base} lohnt sie sich ' if base else 'Sie lohnt sich ') + need(k1, v1, x) + '.')
     else:
         h = [w for w, v in (('Guthaben', cr), ('Lounge-Besuchen', free_visits(x)), ('Punkten', x.get('punkte_pro_100'))) if v]
@@ -182,9 +183,9 @@ def calc_html(c, x, A):
     wl = f'<label class="lc"><input type="checkbox" data-welcome name="welcome"> Willkommensbonus im ersten Jahr <b>{eur(data["welcome"])} €</b></label>' if data['welcome'] else ''
     vs = f'<label class="lc"><input type="checkbox" data-vers name="vers"{" checked" if I["vers"] else ""}> Ich bräuchte sonst eine eigene Reiseversicherung <b>{eur(data["vers"])} €</b></label>' if data['vers'] else ''
     ins = ''.join(w for w in (
-        f'<label>Lounge-Besuche{lw(x)} im Jahr<input type="number" min="0" max="200" value="{I['lounge']}" data-in="lounge" name="lounge"></label>' if lg else '',
-        f'<label>davon mit Begleitung<input type="number" min="0" max="200" value="{I["guests"]}" data-in="guests" name="guests"></label>' if lg and gf else '',
-        f'<label>Kartenumsatz pro Monat (€)<input type="number" min="0" step="100" value="{I["spend"]}" data-in="spend" name="spend"></label>' if pp else '') if w)
+        f'<label><span class="flab">Lounge-Besuche{lw(x)} im Jahr</span><input type="number" min="0" max="200" value="{I['lounge']}" data-in="lounge" name="lounge"></label>' if lg else '',
+        f'<label><span class="flab">davon mit Begleitung</span><input type="number" min="0" max="200" value="{I["guests"]}" data-in="guests" name="guests"></label>' if lg and gf else '',
+        f'<label><span class="flab">Kartenumsatz pro Monat (€)</span><input type="number" min="0" step="100" value="{I["spend"]}" data-in="spend" name="spend"></label>' if pp else '') if w)
     if not lg: I['lounge'] = I['guests'] = 0
     if not (lg and gf): I['guests'] = 0
     if not pp: I['spend'] = 0
@@ -219,8 +220,8 @@ def card_page(land, c, x, A, P, prov):
     rows = ''
     for g in x.get('credits') or []: rows += f'<tr><td>{E(g["name"])}</td><td class="nw">{eur(g["eur"])} €</td><td>{E(g.get("hinweis") or g.get("scope") or "")}</td></tr>'
     lg = x.get('lounge') or {}
-    if lg.get('visits'): rows += f'<tr><td>Lounge-Besuche ({E(lg.get("program") or "")})</td><td class="nw">je ≈ {eur(A["lounge_eur"])} €</td><td>{"unbegrenzt" if lg["visits"] == "unbegrenzt" else str(lg["visits"]) + " pro Jahr"}{"; " + E(lg["hinweis"]) if lg.get("hinweis") else ""}</td></tr>'
-    if x.get('punkte_pro_100'): rows += f'<tr><td>Punkte oder Meilen</td><td class="nw">{eur(x["punkte_pro_100"])} € je 100 € Umsatz</td><td>{E(x.get("punkte_hinweis") or "1 Punkt oder Meile = 1 Cent")}{f", höchstens {eur(x.get('punkte_max') or 0)} € im Jahr" if x.get("punkte_max") else ""}</td></tr>'
+    if lg.get('visits'): rows += f'<tr><td>Lounge-Besuche ({E(lg.get("program") or "")})</td><td class="nw">pro Besuch ≈ {eur(A["lounge_eur"])} €</td><td>{"unbegrenzt" if lg["visits"] == "unbegrenzt" else str(lg["visits"]) + " pro Jahr"}{"; " + E(lg["hinweis"]) if lg.get("hinweis") else ""}</td></tr>'
+    if x.get('punkte_pro_100'): rows += f'<tr><td>Punkte oder Meilen</td><td class="nw">{eur(x["punkte_pro_100"])} € pro 100 € Umsatz</td><td>{E(x.get("punkte_hinweis") or "1 Punkt oder Meile = 1 Cent")}{f", höchstens {eur(x.get('punkte_max') or 0)} € im Jahr" if x.get("punkte_max") else ""}</td></tr>'
     if c.get('tier'): rows += f'<tr><td>Reiseversicherung ({E(K.TIER[c["tier"]][1])})</td><td class="nw">≈ {eur(A["vers"][str(c["tier"])])} €</td><td>so viel kostet eine vergleichbare eigene {K.t("jahrespolizze")}</td></tr>'
     sb = subs(x, A); ps = [g for g in sb if g['eur']]
     if ps: rows += f'<tr><td>Partner-Abos</td><td class="nw">bis {eur(round(sum(g["eur"] for g in ps)))} €</td><td>{E("; ".join(g["name"] + ": " + (A["abos"][g["name"]].get("hinweis") or eur(g["monat"]) + " € pro Monat") for g in ps))}. Zählt nur, was du sonst selbst bezahlen würdest.</td></tr>'
@@ -322,7 +323,7 @@ def vers_info():
             + ''.join(f'<p><b>{E(t)}:</b> {E(d)}</p>' for t, d in INFO) + '<p class="mut">Was eine Karte genau abdeckt, steht auf ihrer Seite unter „Versicherung“.</p></div></details>')
 
 def vers_field(attr):
-    sel = '<option value="0">nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
+    sel = '<option value="0" selected>nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
     return f'<div class="fld"><span class="flab">Reiseversicherung {vers_info()}</span><select data-{attr}="vers" name="vers" aria-label="Reiseversicherung">{sel}</select></div>'
 
 def filter_html(cards, X, A):
@@ -332,9 +333,9 @@ def filter_html(cards, X, A):
     return f'''<div class="box lcalc lfilter" data-lohnt-hub='{html.escape(json.dumps(data), quote=True)}' hidden>
   <h2 style="margin-top:0">Was würdest du nutzen?</h2>
   <p class="note" style="margin:0">Trag ein, was du wirklich nutzt. Die Karten unten zeigen dann gleich, ob sie für dich ein Plus oder ein Minus ergeben.</p>
-  <div class="lgrid">{'<label>Lounge Wien pro Jahr<input type="number" min="0" max="200" value="0" data-in="wien"></label><label>Lounge Ausland pro Jahr<input type="number" min="0" max="200" value="0" data-in="lounge"></label>' if any(wien_only(x) for x in X.values()) else '<label>Lounge-Besuche im Jahr<input type="number" min="0" max="200" value="0" data-in="lounge"></label>'}
-  <label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-in="guests"></label>
-  <label>Umsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-in="spend"></label>
+  <div class="lgrid">{'<label><span class="flab">Lounge Wien pro Jahr</span><input type="number" min="0" max="200" value="0" data-in="wien"></label><label><span class="flab">Lounge Ausland pro Jahr</span><input type="number" min="0" max="200" value="0" data-in="lounge"></label>' if any(wien_only(x) for x in X.values()) else '<label><span class="flab">Lounge-Besuche im Jahr</span><input type="number" min="0" max="200" value="0" data-in="lounge"></label>'}
+  <label><span class="flab">davon mit Begleitung</span><input type="number" min="0" max="200" value="0" data-in="guests"></label>
+  <label><span class="flab">Umsatz pro Monat (€)</span><input type="number" min="0" step="100" value="1000" data-in="spend"></label>
   {vers_field('in')}</div>
   {f'<p class="note" style="margin:6px 0 0"><b>Guthaben und Abos, die du nutzen würdest</b> (Abos nur, wenn du sie sonst selbst bezahlen würdest)</p><div class="lchecks">{cb}</div>' if cb else ''}
   <label class="lc"><input type="checkbox" data-welcome> Willkommensbonus im ersten Jahr mitrechnen</label>

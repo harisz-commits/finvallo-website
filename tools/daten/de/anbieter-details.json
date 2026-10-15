@@ -13,7 +13,7 @@
  "anbieter": {
   "1822direkt": {
    "gruendung": "Die 1822direkt wurde 1996 gegründet und ist ein Unternehmen der Frankfurter Sparkasse mit Sitz in Frankfurt am Main (Friesstraße 20).",
-   "lizenz_aufsicht": "Anbieter ist die 1822direkt Gesellschaft der Frankfurter Sparkasse mbH; das Impressum nennt die Europäische Zentralbank und die BaFin als Aufsicht. Konten laufen unter BLZ/BIC der Frankfurter Sparkasse (500 502 01, HELADEF1822).",
+   "lizenz_aufsicht": "Anbieter ist die 1822direkt Gesellschaft der Frankfurter Sparkasse mbH; das Impressum nennt die Europäische Zentralbank und die BaFin als Aufsicht.",
    "einlagensicherung": "Institutsbezogenes Sicherungssystem der Sparkassen-Finanzgruppe, seit 3. Juli 2015 als Einlagensicherungssystem nach EinSiG anerkannt; greift die Institutssicherung nicht, besteht ein Erstattungsanspruch bis 100.000 Euro.",
    "kundenservice": "Telefon-Banking, Online-Banking, 1822TAN+ App, E-Mail bzw. Kontaktformular sowie digitaler Assistent im Hilfe-Center.",
    "besonderheiten": "Angeboten werden Visa Classic (36 € p.a.) und Visa Gold (72 € p.a.), jeweils im ersten Jahr kostenlos. Die Visa Gold enthält u. a. Reiserücktritts-, Verkehrs-Rechtsschutz- (Ausland) und Unfallversicherung für öffentliche Verkehrsmittel und Hotels.",
@@ -29,7 +29,7 @@
    ]
   },
   "adac": {
-   "gruendung": "Die ADAC Kreditkarte wird seit September 2024 in Kooperation zwischen der ADAC Finanzdienste GmbH und der Partnerbank Solaris SE (Sitz Berlin) angeboten; kartenausgebende Bank ist die Solaris SE.",
+   "gruendung": "Die ADAC Kreditkarte wird seit September 2024 in Kooperation zwischen der ADAC Finanzdienste GmbH und der Partnerbank Solaris SE (Sitz Berlin) angeboten.",
    "lizenz_aufsicht": "Die Solaris SE verfügt über eine Vollbanklizenz; als zuständige Aufsichtsbehörden nennt ihr Impressum die BaFin und die Europäische Zentralbank.",
    "einlagensicherung": "Für das optionale Tagesgeldkonto (nur für ADAC-Kreditkarteninhaber) gibt der ADAC eine Einlagensicherung bis 100.000 € an; Kontoführer ist die Solaris SE.",
    "kundenservice": "ADAC Kreditkarten-App und Online-Banking (Solaris), Kontaktformulare von ADAC und Solaris, telefonischer Kontakt sowie FAQ.",
@@ -66,7 +66,7 @@
   },
   "american-express": {
    "gruendung": "American Express wurde 1850 in den USA gegründet. Herausgeber der Karten in Deutschland ist die American Express Europe S.A. mit Sitz in Madrid, die über eine Zweigniederlassung in Frankfurt am Main (Güterplatz 1) tätig ist.",
-   "lizenz_aufsicht": "Die American Express Europe S.A. hat eine Erlaubnis der Banco de España (Referenznummer 6.837) zur Erbringung von Zahlungsdiensten und ist über die deutsche Zweigniederlassung (HRB 112342, Frankfurt) tätig; Beschwerden nach ZAG sind laut Impressum auch bei der BaFin möglich.",
+   "lizenz_aufsicht": "",
    "einlagensicherung": "",
    "kundenservice": "Telefon, sichere Nachricht im Online-Service-Bereich und Amex App.",
    "besonderheiten": "Die American Express Europe S.A. ist zugleich Kartenherausgeber und Betreiber des Bonusprogramms Membership Rewards.",
@@ -122,7 +122,7 @@
   },
   "bunq": {
    "gruendung": "bunq wurde 2012 von Ali Niknam gestartet; Betreiber ist die bunq B.V. mit Sitz in Amsterdam (Niederlande), in Deutschland mit einer Niederlassung (HRB 293822, München) vertreten.",
-   "lizenz_aufsicht": "bunq B.V. ist eine niederländische Bank unter Aufsicht der De Nederlandsche Bank (DNB); das Impressum nennt zusätzlich die BaFin für das Deutschlandgeschäft.",
+   "lizenz_aufsicht": "bunq B.V. ist eine niederländische Bank unter Aufsicht der De Nederlandsche Bank (DNB).",
    "einlagensicherung": "Niederländische Einlagensicherung (Deposit Guarantee Scheme, DGS) bis 100.000 € pro Person für verifizierte Konten.",
    "kundenservice": "Chat in der bunq App (laut bunq schnellster Weg), Hilfe-Center, SOS-Hotline für Notfälle und Kontakt über X.",
    "besonderheiten": "Mit einem aktiven Konto erhält man laut AGB kostenlos eine digitale Mastercard-Kreditkarte; weitere Karten sind je nach Abo kostenpflichtig.",
@@ -170,7 +170,7 @@
    "lizenz_aufsicht": "Die Commerzbank AG wird von der Europäischen Zentralbank und der BaFin beaufsichtigt.",
    "einlagensicherung": "Gesetzliche Einlagensicherung über die Entschädigungseinrichtung deutscher Banken bis 100.000 Euro pro Person, zusätzlich freiwilliger Einlagensicherungsfonds des Bundesverbandes deutscher Banken.",
    "kundenservice": "Filialen, Telefon- und Videoberatung nach Termin, Chat nach Anmeldung im Kundenbereich, Online Banking und Banking App.",
-   "besonderheiten": "Neben Classic-, Gold- und Premium-Kreditkarte bietet die Commerzbank eine Mastercard Debit und eine Prepaid-Karte an; zur Classic-Kreditkarte ist ein Reise-Sorglos-Paket als Upgrade buchbar.",
+   "besonderheiten": "",
    "kritik": "Auf Klage der Verbraucherzentrale Hamburg erklärte der BGH im Februar 2025 (Az. XI ZR 183/23) Klauseln im Preis- und Leistungsverzeichnis der Commerzbank zu Entgelten für Guthaben auf Sparkonten für unzulässig; das OLG Frankfurt verpflichtete die Bank anschließend, betroffene Kunden zu informieren (Az. 3 U 286/22).",
    "fuer_wen": "Für den Online-Antrag sind ein Commerzbank-Girokonto und Online-Banking-Zugang nötig; das Angebot richtet sich an volljährige Steuerinländer mit Wohnsitz in Deutschland, Bonität vorausgesetzt.",
    "quellen": [
@@ -216,7 +216,7 @@
    "kundenservice": "Online-Hilfe-Center (help.crypto.com).",
    "besonderheiten": "Die Karte ist eine Visa-Prepaidkarte; das zugehörige Cash Account stellt ebenfalls die Foris MT Limited bereit.",
    "kritik": "",
-   "fuer_wen": "Die Karte setzt ein Konto in der Crypto.com App voraus.",
+   "fuer_wen": "",
    "quellen": [
     "https://crypto.com/eea/pay",
     "https://crypto.com/en-de/levelup/basic",
@@ -468,7 +468,7 @@
   },
   "n26": {
    "gruendung": "N26 wurde 2013 in Berlin gegründet; Sitz der N26 Bank SE ist Berlin.",
-   "lizenz_aufsicht": "Konto und Karten stellt die N26 Bank SE bereit, die 2016 eine deutsche Vollbanklizenz erhielt. Zuständige Aufsichtsbehörde laut Impressum ist die BaFin.",
+   "lizenz_aufsicht": "Zuständige Aufsichtsbehörde laut Impressum ist die BaFin.",
    "einlagensicherung": "Einlagen sind über die deutsche gesetzliche Einlagensicherung bis 100.000 € pro Kunde geschützt.",
    "kundenservice": "Chat in der App (bzw. Besucher-Chat ohne Login); telefonischer Support nur für Premiumkonten (Go, Smart, Metal).",
    "besonderheiten": "N26 war nach eigenen Angaben die erste Digitalbank mit deutscher Vollbanklizenz.",
@@ -513,7 +513,7 @@
    "kundenservice": "Digital per App und Online-Banking, telefonisch, per Video und in Filialen.",
    "besonderheiten": "Die BestCard Basic ist eine Visa-Kreditkarte ohne Jahresgebühr; für den Einsatz in Fremdwährung fällt ein Auslandseinsatzentgelt von 1,85 % an. Openbank betreibt nach eigenen Angaben 119 Filialen in Deutschland.",
    "kritik": "",
-   "fuer_wen": "Die BestCard Basic passt zu Nutzern, die eine Kreditkarte ohne Jahresgebühr suchen und selten in Fremdwährung zahlen.",
+   "fuer_wen": "",
    "quellen": [
     "https://www.openbank.de/content/openbank/de/de/home/impressum.html",
     "https://www.openbank.de/ueber-uns/",
@@ -542,7 +542,7 @@
    "lizenz_aufsicht": "Die Kreditkarten gibt die Postbank als Niederlassung der Deutsche Bank AG heraus. Aufsichtsbehörden sind die Europäische Zentralbank (EZB) und die BaFin.",
    "einlagensicherung": "Die Postbank ist der Entschädigungseinrichtung deutscher Banken zugeordnet (bis 100.000 € pro Einleger) und als Niederlassung der Deutsche Bank AG Mitglied im Einlagensicherungsfonds des Bundesverbands deutscher Banken.",
    "kundenservice": "Filialen und Telefon-Banking; Kartensperrung telefonisch.",
-   "besonderheiten": "Die Postbank bietet Mastercard-Kreditkarten (Standard, Gold, Platinum) sowie Business-Karten an.",
+   "besonderheiten": "",
    "kritik": "Der Bundesgerichtshof erklärte am 27.04.2021 (XI ZR 26/20) auf Klage des vzbv die AGB-Klauseln der Postbank für unwirksam, nach denen Schweigen als Zustimmung zu Vertrags- und Entgeltänderungen galt.",
    "fuer_wen": "",
    "quellen": [
@@ -554,7 +554,7 @@
   },
   "revolut": {
    "gruendung": "Für Kunden in Deutschland ist die Revolut Bank UAB mit Sitz in Vilnius (Litauen) zuständig. Sie handelt über die Revolut Bank UAB, Zweigniederlassung Deutschland, in Berlin.",
-   "lizenz_aufsicht": "Konto und Karten stellt die Revolut Bank UAB bereit, eine litauische Bank unter Aufsicht der Europäischen Zentralbank (EZB) und der Bank of Lithuania. Für die Zweigniederlassung in Deutschland ist zusätzlich die BaFin zuständig.",
+   "lizenz_aufsicht": "Für die Zweigniederlassung in Deutschland ist zusätzlich die BaFin zuständig.",
    "einlagensicherung": "Einlagen bei der Revolut Bank UAB sind über die litauische staatliche Einrichtung „Einlagen- und Investitionsversicherung“ bis 100.000 € pro Einleger abgesichert.",
    "kundenservice": "Chat in der App sowie E-Mail.",
    "besonderheiten": "Revolut ist in Deutschland mit einer litauischen EU-Banklizenz über eine Berliner Zweigniederlassung tätig; die Einlagensicherung richtet sich daher nach dem litauischen System.",
@@ -566,10 +566,10 @@
    ]
   },
   "sparkasse": {
-   "gruendung": "„Sparkasse“ ist keine einzelne Bank, sondern eine Gruppe von bundesweit 337 eigenständigen, regional tätigen Instituten (Stand August 2026) mit kommunalen Trägern. Konditionen und Kartenpreise legt jede Sparkasse selbst fest, sie unterscheiden sich daher je nach Sparkasse.",
-   "lizenz_aufsicht": "Die Karten werden von der jeweiligen örtlichen Sparkasse ausgegeben, die als Kreditinstitut der deutschen Bankenaufsicht unterliegt.",
+   "gruendung": "„Sparkasse“ ist keine einzelne Bank, sondern eine Gruppe von bundesweit 337 eigenständigen, regional tätigen Instituten (Stand August 2026) mit kommunalen Trägern.",
+   "lizenz_aufsicht": "",
    "einlagensicherung": "Einlagen sind durch das Sicherungssystem der Sparkassen-Finanzgruppe geschützt, das nach § 43 EinSiG als Einlagensicherungssystem amtlich anerkannt ist; gesetzlich gesichert sind gedeckte Einlagen bis 100.000 €.",
-   "kundenservice": "Geschäftsstellen vor Ort (bundesweit über 10.500) und die App „Sparkasse“; weitere Kanäle unterscheiden sich je nach Sparkasse.",
+   "kundenservice": "Geschäftsstellen vor Ort (bundesweit über 10.500) und die App „Sparkasse“.",
    "besonderheiten": "Für Sparkassen gilt das Regionalprinzip: Ihr Geschäftsgebiet entspricht in der Regel dem Gebiet ihres kommunalen Trägers. Beispiel Berliner Sparkasse: Für Kreditkarten ist ein Girokonto bei der Sparkasse Voraussetzung.",
    "kritik": "Auf eine Musterfeststellungsklage des vzbv entschied der BGH am 3. Juni 2025, dass die Berliner Sparkasse auf Basis einer Zustimmungsfiktionsklausel eingeführte oder erhöhte Entgelte nicht erheben durfte und sie erstatten muss.",
    "fuer_wen": "Am Beispiel der Berliner Sparkasse richten sich die Karten an Kunden mit Girokonto bei der jeweiligen Sparkasse.",
@@ -582,13 +582,13 @@
    ]
   },
   "sumup": {
-   "gruendung": "SumUp wurde 2012 in London und Berlin gegründet. Für die Kontoprodukte ist die SumUp Limited mit Sitz in Dublin (Irland) zuständig.",
+   "gruendung": "Für die Kontoprodukte ist die SumUp Limited mit Sitz in Dublin (Irland) zuständig.",
    "lizenz_aufsicht": "SumUp Limited ist ein E-Geld-Institut unter Aufsicht der Central Bank of Ireland (Referenz C195030) und gibt die Mastercards aus.",
    "einlagensicherung": "",
    "kundenservice": "Chat nach Login, Kontakt über die SumUp App und das Support Center; telefonischer Support abhängig vom Anliegen, kein Support per E-Mail.",
    "besonderheiten": "SumUp ist keine Bank: Kundengelder werden getrennt verwahrt, aber nicht durch eine Einlagensicherung garantiert. Das Geschäftskonto hat keine Kontoführungsgebühr und enthält eine kostenlose geschäftliche Mastercard.",
    "kritik": "",
-   "fuer_wen": "Das Geschäftskonto mit Mastercard richtet sich an Selbstständige und kleine Unternehmen, insbesondere SumUp-Händler.",
+   "fuer_wen": "",
    "quellen": [
     "https://www.sumup.com/de-de/impressum/",
     "https://www.sumup.com/de-de/geschaeftskonto/",
@@ -705,13 +705,13 @@
    ]
   },
   "volksbank": {
-   "gruendung": "„Volksbank“ steht für eine Gruppe eigenständiger Genossenschaftsbanken; Ende 2025 gab es 646 selbstständige Genossenschaftsbanken (inklusive Sparda-, PSD- und Spezialinstituten). Konditionen und Kartenpreise legt jede Bank selbst fest, sie unterscheiden sich daher je nach Volksbank.",
-   "lizenz_aufsicht": "Die Karten werden von der jeweiligen örtlichen Volksbank bzw. Raiffeisenbank ausgegeben, die als Kreditinstitut der deutschen Bankenaufsicht unterliegt.",
+   "gruendung": "„Volksbank“ steht für eine Gruppe eigenständiger Genossenschaftsbanken; Ende 2025 gab es 646 selbstständige Genossenschaftsbanken (inklusive Sparda-, PSD- und Spezialinstituten).",
+   "lizenz_aufsicht": "",
    "einlagensicherung": "Einlagen sind über die als Einlagensicherungssystem amtlich anerkannte BVR Institutssicherung GmbH sowie die freiwillige Sicherungseinrichtung des BVR geschützt.",
-   "kundenservice": "Filialen der jeweiligen Bank sowie die VR Banking App; weitere Kanäle je nach Bank.",
+   "kundenservice": "Filialen der jeweiligen Bank sowie die VR Banking App.",
    "besonderheiten": "Beide Sicherungssysteme sind institutsbezogen und sollen Insolvenzen der angeschlossenen Banken verhindern. Beispiel Berliner Volksbank: Die ClassicCard ist mit Girokonto bei der Bank gebührenfrei.",
    "kritik": "",
-   "fuer_wen": "Am Beispiel der Berliner Volksbank richten sich die Karten an Kunden mit Girokonto bei der jeweiligen Bank.",
+   "fuer_wen": "",
    "quellen": [
     "https://berichte.bvr.de/jahresbericht-2025/ergebnisse/unser-jahr-in-zahlen/",
     "https://www.bvr.de/p.nsf/0/9BAD2857099ACC21C12588EC002A090D/$file/2026.06.30%20BVR-SE%20f%C3%BCr%20Internet.pdf",

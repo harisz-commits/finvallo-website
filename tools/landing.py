@@ -64,12 +64,12 @@ def top3(d,names=None):
 def mark(hdr): return re.search(r'<svg class="mark".*?</svg>',hdr).group(0)
 def herolands(P,at,dd):
     def one(code,href,name,sub): return f'<a class="hp-hl" href="{P}{href}" hreflang="de-{code}">{FLAG[code].replace(chr(34)+"flag"+chr(34),chr(34)+"flag big"+chr(34))}<span><b>{name}</b><small>{sub}</small></span>{ic(I["arrow"])}</a>'
-    return one('AT','at/','Österreich',f'{len(at["karten"])} Kreditkarten im Vergleich')+one('DE','de/','Deutschland',f'{len(dd["karten"])} Kreditkarten im Vergleich' if dd else 'Ratgeber · Vergleich in Arbeit')
+    return one('AT','at/','Österreich',f'{len(at["karten"])} Karten im Vergleich')+one('DE','de/','Deutschland',f'{len(dd["karten"])} Karten im Vergleich' if dd else 'Ratgeber · Vergleich in Arbeit')
 def picker(P,at,dd):
     def one(code,href,name,sub):
         return f'<a class="hp-land" href="{P}{href}" hreflang="de-{code}">{FLAG[code].replace("class=\"flag\"","class=\"flag big\"")}<span><b>{name}</b><small>{sub}</small></span><span class="hp-land-go">{ic(I["arrow"])}</span></a>'
-    ats=f'{len(at["karten"])} Kreditkarten im Vergleich'
-    des=f'{len(dd["karten"])} Kreditkarten im Vergleich' if dd else 'Ratgeber · Kartenvergleich in Arbeit'
+    ats=f'{len(at["karten"])} Karten im Vergleich'
+    des=f'{len(dd["karten"])} Karten im Vergleich' if dd else 'Ratgeber · Kartenvergleich in Arbeit'
     return f'''<section class="hp-picker"><div class="hp-w"><h2>Für welches Land suchst du?</h2><p>Banken, Preise und Bedingungen unterscheiden sich. Wähle dein Land, dann siehst du nur Angebote, die du dort auch bekommst.</p>
 <div class="hp-lands">{one("AT","at/","Österreich",ats)}{one("DE","de/","Deutschland",des)}</div></div></section>'''
 def footer(P,hdr,year,stand,land='at'):
@@ -107,7 +107,7 @@ def topcards(P,d,land,names=None,base='at/kreditkarten/'):
     chips=''
     if os.path.isdir(R+base+'bestenlisten'):
         chips='<div class="hp-chips"><span>Beste Karte nach Kategorie:</span><div class="chips">'+''.join(f'<a class="chip" href="{P}{base}bestenlisten/{s}/">{x}</a>' for s,x in best if os.path.isdir(R+base+'bestenlisten/'+s))+'</div></div>'
-    inner=f'<div class="hp-cards">{"".join(card(P,i+1,c) for i,c in enumerate(t))}</div>{chips}<div class="hp-more"><a class="btn" href="{P}{base}">Alle {n} Kreditkarten anzeigen →</a></div>'
+    inner=f'<div class="hp-cards">{"".join(card(P,i+1,c) for i,c in enumerate(t))}</div>{chips}<div class="hp-more"><a class="btn" href="{P}{base}">Alle {n} Karten anzeigen →</a></div>'
     return t, sec(f'Die besten Kreditkarten in {land}',f'Die drei bestbewerteten Karten laut Finvallo-Bewertung. Stand: {stand}.',inner,True,'bestbewertet')
 def trust(P,land='at'):
     return sec('So bewerten wir','Transparenz statt Werbeplätze: Unsere Regeln sind öffentlich.',f'''<div class="hp-trust">
@@ -158,7 +158,7 @@ def b_root(P,hdr):
     return (hero(SHIELD,'Dein unabhängiger Finanzvergleich für Österreich und Deutschland.',
         'Banken, Preise und Bedingungen unterscheiden sich. Wähle dein Land, dann siehst du nur Angebote, die du dort auch bekommst.',
         herolands(P,AT,DD),art(t[0],None))
-      + stats([(nA,'Kreditkarten in Österreich'),(len(DD['karten']) if DD else '–','Kreditkarten in Deutschland'),(len({c['anbieter'].split()[0].lower().strip(',') for c in AT['karten']+(DD['karten'] if DD else [])}),'Banken und Anbieter'),(7,'offene Bewertungskriterien')])
+      + stats([(nA,'Karten in Österreich'),(len(DD['karten']) if DD else '-','Karten in Deutschland'),(len({c['anbieter'].split()[0].lower().strip(',') for c in AT['karten']+(DD['karten'] if DD else [])}),'Banken und Anbieter'),(7,'offene Bewertungskriterien')])
       + sec('Unsere Vergleiche im Überblick','Finde das passende Finanzprodukt.',f'<div class="hp-tiles">{tiles}</div><p class="hp-sub" style="margin-top:16px">Weitere Vergleiche (Girokonto, Tagesgeld, Depot) sind in Arbeit.</p>')
       + tc + trust(P)
       + sec('Ratgeber','Kreditkarten einfach erklärt.',f'<div class="hp-posts">{guides(P,AT_GUIDES[:3])}</div><div class="hp-more"><a class="btn" href="{P}at/ratgeber/">Ratgeber Österreich →</a> <a class="btn ghost" href="{P}de/ratgeber/">Ratgeber Deutschland →</a></div>',True)
@@ -204,7 +204,7 @@ def b_de(P,hdr):
       tile(P,'de/ratgeber/business/','brief','Firmenkreditkarten','Für Selbstständige und Firmen'),
       tile(P,'de/ratgeber/','book','Alle Ratgeber','Kreditkarten einfach erklärt'),
       tile(P,'de/rechner/','calc','Finanzrechner','Zinseszins, Kredit, Abgeltungsteuer und mehr')])
-    faq=[('Gibt es den Kreditkartenvergleich auch für Deutschland?', f'Ja. Wir vergleichen {nD} Kreditkarten für Deutschland nach derselben Methode wie in Österreich.' if DD else 'Er ist in Arbeit. Wir sammeln und prüfen gerade die Konditionen aller Kreditkarten in Deutschland, direkt bei den Anbietern und in den Preisverzeichnissen. Danach erscheinen sie hier mit derselben Bewertung wie in Österreich.'),
+    faq=[('Gibt es den Kreditkartenvergleich auch für Deutschland?', f'Ja. Wir vergleichen {nD} Karten für Deutschland nach derselben Methode wie in Österreich.' if DD else 'Er ist in Arbeit. Wir sammeln und prüfen gerade die Konditionen aller Kreditkarten in Deutschland, direkt bei den Anbietern und in den Preisverzeichnissen. Danach erscheinen sie hier mit derselben Bewertung wie in Österreich.'),
      ('Warum übernehmt ihr nicht einfach die Werte aus Österreich?','Banken, Preise und Bedingungen sind in Deutschland anders, und viele Karten gibt es nur in einem der beiden Länder. Wir übernehmen deshalb keine Werte von einem Land ins andere.'),
      ('Was kostet Finvallo?','Nichts. Du kannst alles ohne Registrierung nutzen. Wir finanzieren uns über Affiliate-Links, die mit * markiert sind. Die Provision hat keinen Einfluss auf Sterne oder Reihenfolge.'),
      ('Wie bewertet Finvallo Kreditkarten?','Jede Karte wird nach sieben fest gewichteten Kriterien bewertet: Jahresgebühr (25 %), Reiseversicherung (20 %), Zahlen im Ausland (15 %) sowie Kartenart, Alltag, Bargeld und Extras (je 10 %). Die Regeln sind öffentlich.'),
@@ -213,7 +213,7 @@ def b_de(P,hdr):
     if DD:
         st=stats([(nD,'Kreditkarten verglichen'),(anbD,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(9,'Bestenlisten nach Kategorie')])
         cta=f'<a class="btn primary" href="{P}de/kreditkarten/">Alle Kreditkarten {ic(I["arrow"])}</a><a class="btn ghost" href="{P}de/kreditkarten/bestenlisten/">Bestenlisten</a><a class="btn ghost" href="#bestbewertet">Bestbewertete Karten ansehen</a>'
-        p=f'{nD} Kreditkarten von {anbD} Anbietern, mit Gebühren, Versicherung und Bewertung.'
+        p=f'{nD} Karten von {anbD} Anbietern, mit Gebühren, Versicherung und Bewertung.'
     else:
         st=stats([(len(DE_GUIDES)+1,'Ratgeber für Deutschland'),(7,'offene Bewertungskriterien'),(0,'bezahlte Platzierungen'),('100 %','kostenlos')])
         cta=f'<a class="btn primary" href="{P}de/ratgeber/">Zu den Ratgebern {ic(I["arrow"])}</a><a class="btn ghost" href="{P}at/kreditkarten/">{FLAG["AT"]} Österreich-Vergleich</a>'
