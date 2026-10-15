@@ -704,7 +704,7 @@
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Umfassender Reiseschutz",
     "1,5 % Cashback auf jeden Klarna-Kauf, 4-faches bei ausgewählten Shops in der App; umwandelbar in Meilen/Hotelpunkte",
-    "Unbegrenzter kostenloser Zugang zu über 1.500 Flughafen-Lounges",
+    "LoungeKey: unbegrenzt kostenlose Besuche, weltweit, Begleitpersonen zahlen (Klarna Max Mitgliedschaft (44,99 €/Monat))",
     "18 Abos inklusive (Klarna: Wert 2.160 €/Jahr), Flexkonto 2,70 % eff.",
     "Kein Girokonto beim Anbieter nötig",
     "Unbegrenzt Lounge-Zugang (1.500+ Lounges)"
@@ -1465,7 +1465,7 @@
    "note": "Ausreichend",
    "rank": 129,
    "pros": [
-    "Priority Pass für Flughafen-Lounges: Besuche für Karteninhaber kostenfrei, Begleitperson 20 € pro Besuch",
+    "Priority Pass: unbegrenzt kostenlose Besuche, weltweit, Begleitpersonen zahlen",
     "Kein Girokonto beim Anbieter nötig",
     "Priority Pass, Besuche für Karteninhaber kostenlos",
     "Girokonto bei der Deutschen Bank nicht nötig"
@@ -1513,7 +1513,7 @@
    "note": "Mangelhaft",
    "rank": 134,
    "pros": [
-    "Priority Pass für Flughafen-Lounges: Besuche für Karteninhaber kostenfrei, Begleitperson 20 € pro Besuch",
+    "Priority Pass: unbegrenzt kostenlose Besuche, weltweit, Begleitpersonen zahlen",
     "Kein Girokonto beim Anbieter nötig",
     "Priority Pass, Besuche für Karteninhaber kostenlos"
    ],
@@ -4061,7 +4061,7 @@
    "pros": [
     "Premium-Reiseschutz",
     "Membership Rewards inklusive: 1 Punkt pro 1 € Umsatz, Punkte u. a. zu Airline- und Hotelprogrammen übertragbar",
-    "Priority Pass für Haupt- und Zusatzkarte inkl. je 1 Gast kostenlos, zusammen max. 50 Besuche pro Kalenderjahr (Gast zählt mit); dazu weitere Flughafen-Lounges; 120 € „Lounge on the Go“-Verzehrguthaben in FRA/MUC",
+    "Priority Pass + Global Lounge Collection (Centurion u.a.): 50 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zählen mit (Max. 50 Priority-Pass-Besuche pro Kalenderjahr für Haupt- und Platinum-Zusatzkarte zusammen inkl. Gäste)",
     "Jährlich 200 € Online-Reiseguthaben, 200 € SIXT ride Fahrtguthaben, 150 € Restaurantguthaben, 100 € LODENFREY Shoppingguthaben (2× 50 € ab 200 € Einkauf), jeweils nach Anmeldung",
     "Kein Girokonto beim Anbieter nötig",
     "Kartenkörper aus Metall",
@@ -4463,8 +4463,9 @@
    "pros": [
     "Umfassender Reiseschutz",
     "Membership Rewards inklusive: 1 Punkt pro 1 €, bei BMW-Händlern, SIXT und ausgewählten Tankstellen in DE 2 Punkte pro 1 €",
-    "2 Priority Pass (Haupt- und 1 Zusatzkarteninhaber) kostenlos, zusammen max. 50 Besuche pro Kalenderjahr; Gäste nicht kostenlos",
+    "Priority Pass: 50 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zahlen (Max. 50 Besuche pro Kalenderjahr für Hauptkarte und 1 Zusatzkarte zusammen)",
     "Kein Girokonto beim Anbieter nötig",
+    "2× Priority Pass",
     "4 Zusatzkarten inklusive",
     "Leasing-Rückgabeschutz und Autoschlüssel-Versicherung",
     "Mietwagen-Vollkasko",
@@ -4514,7 +4515,7 @@
    "pros": [
     "Premium-Reiseschutz",
     "Membership Rewards inklusive: 1 Punkt pro 1 €",
-    "Priority Pass für Haupt- und Business-Platinum-Zusatzkarte, je 1 Gast kostenlos, zusammen max. 50 Besuche pro Jahr; dazu weitere ausgewählte Lounges",
+    "Priority Pass + weitere ausgewählte Flughafen-Lounges: 50 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zählen mit (Max. 50 Besuche pro Kalenderjahr für Haupt- und Business-Platinum-Zusatzkarte zusammen inkl. Gäste)",
     "Jährlich 200 € Online-Reiseguthaben, 200 € SIXT ride (8× 25 €), 240 € SIXT+ (12× 20 €), 200 € Dell Technologies (2× 100 €), 300 € eBuero und 300 € Office Club (je 12× 25 €), 8 € eSIMfirst; jeweils nach Anmeldung, nur für die Hauptkarte",
     "Kein Girokonto beim Anbieter nötig",
     "Priority Pass inkl. Gast",
@@ -5272,7 +5273,7 @@
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Reiseversicherung inkl. Storno",
-    "Erster Flughafenlounge-Besuch pro Jahr gratis (DragonPass), danach 30 € pro Besuch",
+    "N26 Flughafenlounges (DragonPass): 1 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zahlen",
     "Debit World Elite Mastercard aus Edelstahl",
     "Reise-, Handy- und Einkaufsversicherung (Allianz)",
     "1 kostenloser Lounge-Besuch pro Jahr (DragonPass)",
@@ -6027,7 +6028,7 @@
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Reiseversicherung inkl. Storno",
-    "Kostenlose Lounge-Pässe für den persönlichen Gebrauch, Gäste-Pässe kostenpflichtig",
+    "LoungeKey (Lounge-Pässe in der App): unbegrenzt kostenlose Besuche, ausgewählte Flughäfen weltweit, Begleitpersonen zahlen (Ultra-Abo)",
     "Plan-Partnerschaften (Partner-Abos) laut Abo-Bedingungen; konkrete Partner nicht geprüft",
     "Unbegrenzte kostenlose Lounge-Pässe für den Inhaber",
     "2.000 € Gratis-Abhebung pro Monat",
@@ -7087,7 +7088,7 @@
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
     "2,5 % zurück in Krypto (CRO) auf Kartenumsätze, Umsatzdeckel 2.500 US-$ pro Monat",
-    "4 Lounge-Besuche pro Jahr (über 1.000 Lounges, Priority Pass) für Jahresabonnenten",
+    "Priority Pass: 2 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zahlen (Level Up Pro (früher Jade/Indigo); pro Kalenderjahr; Registrierung per Einladungscode)",
     "6 Monate Rückerstattung für Spotify- und Netflix-Abos",
     "2,5 % Krypto-Cashback",
     "4 Lounge-Besuche pro Jahr (Jahresabo)",

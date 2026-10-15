@@ -1,0 +1,131 @@
+{
+ "hinweis": "Lounge-Zugang je Karte (recherchiert 15.10.2026, Quelle je Eintrag). visits: Gratis-Besuche pro Jahr oder \"unbegrenzt\" (0 = nur Mitgliedschaft/Rabatt); guests: Begleitung gratis (\"unbegrenzt\", Zahl pro Jahr, \"zählt mit\" = verbraucht die eigenen Besuche, 0 = zahlt); scope: weltweit oder Wien.",
+ "karten": {
+  "klarna-premium": {
+   "visits": 0,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "LoungeKey",
+   "bedingung": "Klarna Premium Mitgliedschaft",
+   "quelle": "https://www.klarna.com/de/mitgliedschaft/premium/",
+   "notiz": "Vergünstigte Lounge-Pässe (LoungeKey, 1.500+ Lounges), keine Gratisbesuche; Preis je Stufe in der App. lgText korrekt."
+  },
+  "klarna-max": {
+   "visits": "unbegrenzt",
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "LoungeKey",
+   "bedingung": "Klarna Max Mitgliedschaft (44,99 €/Monat)",
+   "quelle": "https://www.klarna.com/de/mitgliedschaft/max/",
+   "notiz": "Unbegrenzte kostenlose Besuche für das Mitglied (LoungeKey), Gästepässe separat kostenpflichtig. lgText: 'Gäste zahlen' ergänzen."
+  },
+  "deutsche-bank-mastercard-platin": {
+   "visits": "unbegrenzt",
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "",
+   "quelle": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
+   "notiz": "PLV: Nutzung Priority Pass Karteninhaber kostenfrei, Begleitperson 20 € pro Besuch und Person. Kein Limit genannt. lgText korrekt."
+  },
+  "deutsche-bank-mastercard-black": {
+   "visits": "unbegrenzt",
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "",
+   "quelle": "https://www.deutsche-bank.de/dam/deutschebank/de/shared/pdf/ser-konditionen_preise_leistungsverzeichnis.pdf",
+   "notiz": "PLV: Nutzung Priority Pass Karteninhaber kostenfrei, Begleitperson 20 € pro Besuch und Person. Kein Limit genannt. lgText korrekt."
+  },
+  "postbank-mastercard-platinum": {
+   "visits": 0,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "",
+   "quelle": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Preis-und-Leistungsverzeichnis-923-959-000-1026.pdf",
+   "notiz": "PLV 10/2026: Priority Pass Karteninhaber 33,32 € pro Besuch, Begleitperson 33,32 € pro Besuch und Person. lgText korrekt."
+  },
+  "commerzbank-goldkreditkarte": {
+   "visits": 0,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Mitgliedschaft auf Wunsch über prioritypass.com/commerzbank",
+   "quelle": "https://www.commerzbank.de/ms/documents/de-DE/goldkreditkarte-produktinformationsblatt-pdf.pdf",
+   "notiz": "Priority-Pass-Mitgliedsbeitrag im Jahrespreis enthalten; kein Freikontingent genannt. Höhe des Besuchsentgelts in den offiziellen Commerzbank-Unterlagen (Produktinfo, PLV) nicht beziffert. lgText korrekt."
+  },
+  "commerzbank-premiumkreditkarte": {
+   "visits": 0,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Mitgliedschaft über prioritypass.com/commerzbank",
+   "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/premium-kreditkarte/",
+   "notiz": "Priority-Pass-Mitgliedschaft (prioritypass.com/commerzbank: 'complimentary membership'), kein Freikontingent genannt; Besuchsentgelt offiziell nicht beziffert. Achtung: '2x Priority Pass kostenfreier Zugang' auf der Seite betrifft die Amex-Platinum-Partnerkarte, nicht die PremiumKreditkarte. lgText korrekt."
+  },
+  "american-express-platinum-card": {
+   "visits": 50,
+   "guests": "zählt mit",
+   "scope": "weltweit",
+   "program": "Priority Pass + Global Lounge Collection (Centurion u.a.)",
+   "bedingung": "Max. 50 Priority-Pass-Besuche pro Kalenderjahr für Haupt- und Platinum-Zusatzkarte zusammen inkl. Gäste",
+   "quelle": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Platinum_Card_Informationen.pdf",
+   "notiz": "Priority Pass für Haupt- und Zusatzkarte, je 1 Begleitperson kostenfrei; zusammen max. 50 Besuche/Kalenderjahr, jeder Gast zählt als Besuch (Cap gilt für Haupt+Zusatzkarte gemeinsam). Zusätzlich Global Lounge Collection (1.550+ Lounges inkl. Centurion) ohne genanntes Limit; Lounge on the Go 6x20 € in FRA/MUC. lgText korrekt."
+  },
+  "bmw-premium-card-carbon": {
+   "visits": 50,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Max. 50 Besuche pro Kalenderjahr für Hauptkarte und 1 Zusatzkarte zusammen",
+   "quelle": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/BMW_Carbon_Card_Informationen.pdf",
+   "notiz": "Priority Pass für Hauptkarteninhaber und einen der vier Zusatzkarteninhaber, zusammen max. 50 Besuche/Kalenderjahr; Begleitpersonen nicht kostenfrei (PP-Preise). lgText korrekt."
+  },
+  "american-express-business-platinum-card": {
+   "visits": 50,
+   "guests": "zählt mit",
+   "scope": "weltweit",
+   "program": "Priority Pass + weitere ausgewählte Flughafen-Lounges",
+   "bedingung": "Max. 50 Besuche pro Kalenderjahr für Haupt- und Business-Platinum-Zusatzkarte zusammen inkl. Gäste",
+   "quelle": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Platinum_Card_Informationen_NEU.pdf",
+   "notiz": "Je 1 Priority Pass für Haupt- und Business-Platinum-Zusatzkarte, je 1 Gast pro Besuch; zusammen max. 50 Besuche inkl. Gäste (Gast zählt als Besuch). Platinum Plus Zusatzkarte aus Metall (350 €/Jahr): eigener PP mit max. 20 Besuchen inkl. Gast; weitere kostenpflichtige Business-Platinum-Zusatzkarten je max. 20. lgText korrekt, 'Gast zählt mit' ergänzen."
+  },
+  "n26-metal": {
+   "visits": 1,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "N26 Flughafenlounges (DragonPass)",
+   "bedingung": "",
+   "quelle": "https://support.n26.com/de-de/konto-und-personliche-informationen/sonstiges/flughafenlounges",
+   "notiz": "1 kostenloser Lounge-Pass pro Jahr, danach 30 € pro Zugang; bis zu 4 weitere Eintritte für Gäste pro Pass kaufbar. Partner DragonPass laut N26-EU-Support (DE-Seite nennt Anbieter nicht). lgText korrekt."
+  },
+  "revolut-ultra": {
+   "visits": "unbegrenzt",
+   "guests": 0,
+   "scope": "ausgewählte Flughäfen weltweit",
+   "program": "LoungeKey (Lounge-Pässe in der App)",
+   "bedingung": "Ultra-Abo",
+   "quelle": "https://cdn.revolut.com/terms_and_conditions/pdf/airport_lounge_passes_44dace41_1.1.0_1779099345_en.pdf",
+   "notiz": "Lounge-Pässe für den eigenen Gebrauch kostenlos (kein Limit genannt), Gäste-Pässe kostenpflichtig. Seit 10.6.2026 LoungeKey statt DragonPass. revolut.com blockiert Abruf (403), via Revolut-AGB-PDF (EWR-Version) verifiziert. lgText korrekt."
+  },
+  "crypto-com-visa-card-jade-indigo": {
+   "visits": 2,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Level Up Pro (früher Jade/Indigo); pro Kalenderjahr; Registrierung per Einladungscode",
+   "quelle": "https://help.crypto.com/en/articles/7733288-priority-pass-airport-lounge-access",
+   "notiz": "VERALTET im lgText: Für EU-Nutzer ab 1.10.2026 nur noch 2 (statt 4) kostenlose Lounge-Besuche/Erlebnisse pro Kalenderjahr, nur für den Nutzer. Wer 2026 schon 2+ Besuche hatte, bekommt bis 31.12.2026 keine weiteren. Ob nur Jahresabonnenten berechtigt sind, sagt der Help-Artikel nicht (Marketingseite nennt 'annual subscriber')."
+  },
+  "curve-pay-proplus": {
+   "visits": 0,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "LoungeKey",
+   "bedingung": "Curve Pay Pro+ Abo",
+   "quelle": "https://help.curve.com/en_gb/loungekey-r1jLr_h8O",
+   "notiz": "Keine Gratisbesuche: Pro+-Abonnent und Begleiter zahlen 30 € (£24) pro Person, bei manchen Lounges Aufpreis. lgText korrekt."
+  }
+ }
+}

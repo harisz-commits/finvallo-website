@@ -743,7 +743,7 @@ CATS=[
  dict(k='ausland',t='Ohne Auslandsgebühr',h='Die besten Karten zum Zahlen im Ausland',d='Karten mit höchstens 0,5 % Aufschlag in fremder Währung. Ausgangspunkt ist die Gesamtnote, dazu kommt ein Bonus für günstiges Zahlen und Abheben im Ausland.',f=lambda c:c.get('fx') is not None and c['fx']<=0.5,w={'_bonus':'fokus','fokus':['Zahlen im Ausland', 'Bargeld']}),
  dict(k='punkte',t='Meilen & Punkte',h='Die besten Karten für Meilen und Punkte',d='Nur Karten mit Meilen- oder Punkteprogramm auf normale Einkäufe, etwa Miles & More, Membership Rewards, Payback oder Hotelpunkte. Ausgangspunkt ist die Gesamtnote der Karte, dazu kommt ein Bonus für den Sammelwert: was bei 1.000 € Umsatz im Monat pro Jahr zusammenkommt. Reines Cashback steht in der eigenen Bestenliste.',f=lambda c:c.get('sammel') is not None and c.get('sammelKind')!='cash',w={'_bonus':'sammel'}),
  dict(k='cashback',t='Cashback',h='Die besten Karten mit Cashback',d='Nur Karten, die auf normale Einkäufe Geld zurückgeben. Ausgangspunkt ist die Gesamtnote der Karte, dazu kommt ein Bonus dafür, wie viel bei 1.000 € Umsatz im Monat pro Jahr zurückkommt, mit allen Höchstgrenzen. Partner- und Reiserabatte zählen hier nicht.',f=lambda c:c.get('sammel') is not None and c.get('sammelKind')=='cash',w={'_bonus':'sammel'}),
- dict(k='lounge',t='Lounge-Zugang',h='Die besten Karten mit Lounge-Zugang',d='Nur Karten mit kostenlosen Lounge-Besuchen. Ausgangspunkt ist die Gesamtnote, dazu kommt ein Bonus für den Lounge-Zugang: wie viele Gratis-Besuche im Jahr, ob eine Begleitperson gratis mitkommt und ob die Lounges weltweit oder nur in Wien nutzbar sind.',f=lambda c:bool(c['ex'].get('lg')),w={'_bonus':'fokus','fokus':['Lounge-Zugang']}),
+ dict(k='lounge',t='Lounge-Zugang',h='Die besten Karten mit Lounge-Zugang',d='Nur Karten mit kostenlosen Lounge-Besuchen. Ausgangspunkt ist die Gesamtnote, dazu kommt ein Bonus für den Lounge-Zugang: wie viele Gratis-Besuche im Jahr, ob eine Begleitperson gratis mitkommt und ob die Lounges weltweit oder nur in Wien nutzbar sind.',f=lambda c:bool(c['ex'].get('lg')),w={'_bonus':'fokus','fokus':['Lounge-Zugang'],'max':1.0}),
  dict(k='premium',t='Premium',h='Die besten Premiumkarten',d='Top-Karten mit Lounges oder Premium-Reiseschutz. Ausgangspunkt ist die Gesamtnote, dazu kommt ein Bonus für Reiseschutz und Extras.',f=lambda c:c['klasse']=='Premium',w={'_bonus':'fokus','fokus':['Reiseversicherung', 'Extras']}),
  dict(k='studium',f_at=lambda c:bool(re.search(r'Student|Maturant',c['titel'])),t='Studierende',h='Die besten Karten für Studierende und junge Leute',d='Karten, die für Studierende, Azubis oder junge Kunden günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.',f=lambda c:youth(c) is not None,w=None),
  dict(k='debit',t='Debit & App-Banken',h='Die besten Debitkarten und App-Banken',d='Karten, die sofort vom Konto abbuchen. Ausgangspunkt ist die Gesamtnote, dazu kommt ein Bonus für günstiges Zahlen und Abheben im Ausland.',f=lambda c:c['typ'] in ('Debit','Prepaid'),w={'_bonus':'fokus','fokus':['Zahlen im Ausland', 'Bargeld']}),
@@ -757,6 +757,35 @@ def youth(c):
     for x in c.get('extra') or []:
         if re.search(YOUTH,x): return x
     return None
+def lounge_data(land):
+    p=os.path.join(SP,'daten',land,'lounge.json')
+    return json.load(open(p))['karten'] if os.path.exists(p) else {}
+def lg_text(d):
+    v=d.get('visits'); g=d.get('guests'); sc=d.get('scope') or ''
+    if v in (0,None): t=f'{d.get("program") or "Lounge-Zugang"}: keine Gratis-Besuche, Besuche kosten extra'
+    else:
+        t=f'{d.get("program") or "Lounges"}: '+('unbegrenzt kostenlose Besuche' if v=='unbegrenzt' else f'{v} kostenlose Besuche pro Jahr')+(', nur am Flughafen Wien' if sc=='Wien' else ', weltweit' if sc=='weltweit' else f', {sc}' if sc else '')
+        t+={'unbegrenzt':', Begleitperson gratis','zählt mit':', Begleitpersonen zählen mit',0:', Begleitpersonen zahlen'}.get(g,f', {g} Gäste pro Jahr gratis' if isinstance(g,int) and g>0 else '')
+    if d.get('bedingung'): t+=f' ({d["bedingung"].rstrip(".")})'
+    return t
+def apply_lounge(cards,land):
+    """Recherchierte Lounge-Daten (tools/daten/<land>/lounge.json): Text, Extras-Kennzeichen und Lounge-Note."""
+    LD=lounge_data(land)
+    for c in cards:
+        d=LD.get(c.get('slug') or slug(c.get('titel') or ''))
+        if not d: continue
+        c['lgData']=d; c['lgText']=lg_text(d)
+        c.setdefault('ex',{})['lg']=d.get('visits') not in (0,None)
+        if c['ex']['lg']: c['ex'].pop('lgm',None)
+def lounge_note(d):
+    """Lounge-Note aus den Daten: Besuche, Begleitung, Wien oder weltweit."""
+    v=d.get('visits')
+    if v in (0,None): return None
+    s=5.0 if v=='unbegrenzt' else 4.5 if v>=10 else 4.0 if v>=6 else 3.5 if v>=4 else 3.0 if v>=2 else 2.5
+    g=d.get('guests')
+    s+=0.5 if g=='unbegrenzt' else 0.25 if isinstance(g,int) and g>0 else 0
+    if d.get('scope')=='Wien': s-=0.5
+    return round(max(1.0,min(5.0,s)),1)
 def lounge_score(c):
     t=(c.get('lgText') or '')
     if not c['ex'].get('lg'): return None
@@ -776,16 +805,16 @@ def fokus_note(c,fokus):
     v=[c.get('lounge') if k=='Lounge-Zugang' else next((p['s'] for p in c['score']['parts'] if p['k']==k),None) for k in fokus]
     v=[x for x in v if x is not None]
     return sum(v)/len(v) if v else None
-def fokus_bonus(c,fokus):
-    """Bonus bis +0,5: Note 2,5 oder weniger in den Kategorie-Kriterien = +0, Note 5,0 = +0,5."""
+def fokus_bonus(c,fokus,mx=0.5):
+    """Bonus bis +mx (Standard 0,5): Note 2,5 oder weniger in den Kategorie-Kriterien = +0, Note 5,0 = +mx."""
     n=fokus_note(c,fokus)
-    return 0.0 if n is None else round(max(0.0,min(1.0,(n-2.5)/2.5))*0.5+1e-9,1)
+    return 0.0 if n is None else round(max(0.0,min(1.0,(n-2.5)/2.5))*mx+1e-9,1)
 def cat_stars(c,w):
     if c.get('stars') is None: return None
     if not w: return c['stars']
     if w.get('_bonus')=='sammel': return round(min(5.0,c['stars']+sammel_bonus(c.get('sammelEur')))+1e-9,1)
     if w.get('_bonus')=='fokus':
-        return round(min(5.0,c['stars']+fokus_bonus(c,w['fokus']))+1e-9,1)
+        return round(min(5.0,c['stars']+fokus_bonus(c,w['fokus'],w.get('max',0.5)))+1e-9,1)
     a=b=0
     for p in c['score']['parts']:
         if p['k'] in w: a+=p['s']*w[p['k']]; b+=w[p['k']]
@@ -796,7 +825,8 @@ def cat_lists(cards,land):
     import sammeln
     out={}
     for c in cards:
-        if land=='de' or c.get('lounge') is None: c['lounge']=lounge_score(c) if land=='de' else c.get('lounge')
+        if c.get('lgData'): c['lounge']=lounge_note(c['lgData'])
+        elif land=='de' or c.get('lounge') is None: c['lounge']=lounge_score(c) if land=='de' else c.get('lounge')
         v=sammeln.value(land,c['titel'])
         c['sammel']=sammeln.note(v[0]) if v else None; c['sammelEur']=v[0] if v else None; c['sammelTxt']=v[1]['txt'] if v else None; c['sammelKind']=sammeln.kind(v[1]) if v else None; c['sammelCap']=v[1].get('cap') if v else None
         c['sammelNet']=(v[0]-(c.get('fee') or 0)) if v else None; c['sammelNetNote']=sammeln.net_note(c['sammelNet'])
@@ -823,11 +853,21 @@ def k_cash(c):
     return m.group(1) if m else 'siehe Karte'
 def k_ins(c): return TIERK.get(c.get('tier'),'–')
 def k_lg(c):
+    d=c.get('lgData')
+    if d and d.get('visits') not in (None,):
+        v=d['visits']; w=' (Wien)' if d.get('scope')=='Wien' else ''
+        return ('unbegrenzt' if v=='unbegrenzt' else 'nur gegen Gebühr' if v==0 else f'{v} pro Jahr')+w
     t=c.get('lgText') or ''
     if re.search(r'unbegrenzt|ohne Limit|unlimit',t,re.I): return 'unbegrenzt'
     m=re.search(r'(\d+)\s*(?:kostenlose |freie |Gratis-)?(?:Besuch|Zutritt|Voucher|Lounge-Besuch)',t,re.I)
     return f'{m.group(1)} pro Jahr' if m else 'ja'
-def k_guest(c): return 'gratis' if re.search(r'(Gast|Gäste|Begleitperson)\w* (kostenlos|gratis|frei)|1 Gast kostenlos',c.get('lgText') or '',re.I) else '–'
+def k_guest(c):
+    d=c.get('lgData')
+    if d:
+        g=d.get('guests')
+        return {'unbegrenzt':'gratis','zählt mit':'zählt mit',0:'zahlt'}.get(g,f'{g} pro Jahr gratis' if isinstance(g,int) and g>0 else 'keine Angabe')
+    return k_guest_txt(c)
+def k_guest_txt(c): return 'gratis' if re.search(r'(Gast|Gäste|Begleitperson)\w* (kostenlos|gratis|frei)|1 Gast kostenlos',c.get('lgText') or '',re.I) else '–'
 def k_prog(c): return re.split(r' \(|;',c.get('sammelTxt') or '–')[0].replace('°Punkt','PAYBACK-Punkt')
 def k_val(c): return f'≈ {eur(round(c["sammelEur"]))} €' if c.get('sammelEur') is not None else '–'
 def k_net(c): return '–' if c.get('sammelNet') is None else f'{"+" if c["sammelNet"]>=0 else "−"}{eur(round(abs(c["sammelNet"])))} €'
@@ -886,7 +926,7 @@ def bestenlisten(cards,lists,other_lists):
         if cat['w'] and cat['w'].get('_bonus')=='fokus':
             fk=' und '.join(cat['w']['fokus'])
             wb=('<details class="box howscore"><summary><span><b>So rechnen wir in dieser Kategorie</b></span><span class="lnk">anzeigen</span></summary>'
-                f'<p class="note">Kategorie-Sterne = Gesamtnote + Bonus, höchstens 5,0. Der Bonus richtet sich nach der Note in {fk}: 2,5 Sterne oder weniger ergeben +0, 5,0 Sterne ergeben +0,5, dazwischen anteilig. '
+                f'<p class="note">Kategorie-Sterne = Gesamtnote + Bonus, höchstens 5,0. Der Bonus richtet sich nach der Note in {fk}: 2,5 Sterne oder weniger ergeben +0, 5,0 Sterne ergeben +{de1(cat["w"].get("max",0.5))}, dazwischen anteilig. '
                 'So steht eine Karte hier nie schlechter da als in der Gesamtwertung, und Karten, die in dieser Kategorie stark sind, rücken nach vorn.'
                 + (' Die Lounge-Note: unbegrenzte Gratis-Besuche 5,0, ab 10 Besuchen 4,5, ab 6 Besuchen 4,0, ab 4 Besuchen 3,5, 2 bis 3 Besuche 3,0, 1 Besuch 2,5. Begleitperson gratis +0,5 (begrenzt +0,25), nur Lounges in Wien −0,5.' if cat['k']=='lounge' else '')
                 + '</p></details>')
@@ -909,7 +949,7 @@ def bestenlisten(cards,lists,other_lists):
         cnote=f'<p class="note" style="margin-top:8px">{E(COLNOTE[cat["k"]])}</p>' if cat['k'] in COLNOTE else ''
         kurz=f'<b>Kurz gesagt:</b> {cat["h"]} in {N}: Platz 1 ist laut Finvallo die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} Sternen in dieser Kategorie'+(f', vor der {X[1]["titel"]}' if len(X)>1 else '')+(f' und der {X[2]["titel"]}' if len(X)>2 else '')+f'. Die Liste zeigt {"die Top 25 von "+str(len(X))+" bewerteten Karten" if len(X)>25 else "alle "+str(len(X))+" bewerteten Karten"}. Stand: {S}.'
         fq=[(f'Welche Karte ist in {N} am besten in der Kategorie „{cat["t"]}“?',f'In der Kategorie „{cat["t"]}“ liegt laut Finvallo-Bewertung die {top["titel"]} vorn, mit {de1(cat_stars(top,cat["w"]))} von 5 Sternen (Gesamtnote {de1(top["stars"])}). Stand: {S}.'),
-            ('Wie entsteht diese Rangliste?',cat['d']+(' Die Kategorie-Sterne sind die Gesamtnote plus ein Bonus von bis zu 0,5 Sternen.' if (cat['w'] or {}).get('_bonus') else ' Bewertet wie in der Gesamtwertung.')),
+            ('Wie entsteht diese Rangliste?',cat['d']+(f' Die Kategorie-Sterne sind die Gesamtnote plus ein Bonus von bis zu {de1((cat["w"] or {}).get("max",0.5))} Sternen.' if (cat['w'] or {}).get('_bonus') else ' Bewertet wie in der Gesamtwertung.')),
             ('Spielen Provisionen eine Rolle?','Nein. Provisionen haben keinen Einfluss auf Sterne oder Reihenfolge, und es gibt keine bezahlten Platzierungen.')]
         ld=graph(rel,t,d,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Bestenlisten',base),(cat['t'],rel)],
                  [{"@type":"ItemList","name":cat['h']+' in '+N,"numberOfItems":len(X),"itemListElement":[{"@type":"ListItem","position":i+1,"name":c['titel'],"url":f"https://finvallo.com/{code}/kreditkarten/{c['slug']}/"} for i,c in enumerate(X[:25])]},
@@ -1056,7 +1096,7 @@ def prepare():
     """Lädt und bewertet beide Länder (für andere Skripte wie ratgeber.py und listui.py)."""
     DATA={}
     for land in ('at','de'):
-        cards=load(land); ratecards(cards)
+        cards=load(land); apply_lounge(cards,land); ratecards(cards)
         LANDS[land]['stand']=max(c['geprueft'] for c in cards)
         DATA[land]=(cards,providers(land,cards))
         priv=[c for c in cards if c['art']!='Business']

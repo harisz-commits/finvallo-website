@@ -1,0 +1,212 @@
+{
+ "hinweis": "Lounge-Zugang je Karte (recherchiert 15.10.2026, Quelle je Eintrag). visits: Gratis-Besuche pro Jahr oder \"unbegrenzt\" (0 = nur Mitgliedschaft/Rabatt); guests: Begleitung gratis (\"unbegrenzt\", Zahl pro Jahr, \"zählt mit\" = verbraucht die eigenen Besuche, 0 = zahlt); scope: weltweit oder Wien.",
+ "karten": {
+  "american-express-gold-card": {
+   "visits": "unbegrenzt",
+   "guests": null,
+   "scope": "Wien",
+   "program": "SKY/VIENNA Lounge Wien",
+   "bedingung": "",
+   "quelle": "https://www.americanexpress.com/at/vorteile/willkommen/gold-card/",
+   "notiz": "Offiziell: Zugang zu den Airport-Lounges am Flughafen Wien für Haupt- und Zusatzkarteninhaber, kein Limit genannt. Gästeregel auf den offiziellen Seiten nicht angegeben ('Gäste zahlen' nicht verifizierbar). Im Preis- und Leistungsverzeichnis 08/2026 ist der Lounge-Vorteil nicht aufgeführt."
+  },
+  "american-express-platinum-card": {
+   "visits": "unbegrenzt",
+   "guests": "unbegrenzt",
+   "scope": "weltweit",
+   "program": "Priority Pass + Global Lounge Collection (Centurion u.a.) + SKY/VIENNA Lounge Wien",
+   "bedingung": "Priority Pass: Anmeldung erforderlich",
+   "quelle": "https://www.americanexpress.com/de-at/vorteile/platinum-card/reisen/",
+   "notiz": "Priority Pass für Haupt- und Platinum-Zusatzkarte unbegrenzt, je 1 Gast pro Besuch gratis; KEIN Jahreslimit in AT (anders als DE mit 50). Centurion Lounges unbegrenzt inkl. 1 Gast; Plaza Premium mit 1 Gast; VIENNA/SKY Lounge Wien für Haupt- und Zusatzkarte + 1 Gast gratis. Lufthansa Lounges seit 1.10.2026 nicht mehr enthalten. lgText stimmt im Kern, Gast in Wien fehlt."
+  },
+  "card-complete-platinum": {
+   "visits": 4,
+   "guests": "zählt mit",
+   "scope": "Wien",
+   "program": "SKY/VIENNA Lounge Wien",
+   "bedingung": "Gilt für Karten mit Ausstellung ab 1.6.2024 (davor unbegrenzt kostenlos)",
+   "quelle": "https://www.cardcomplete.com/service/vip-lounges-am-flughafen-wien/",
+   "notiz": "Max. 4 kostenlose Zutritte/Jahr, geteilt auf Haupt- und Zusatzkarten plus Begleitpersonen (Kinder ab 4 zählen als Begleitperson); danach 29 € pro Person. lgText korrekt, aber Gemeinschaftskontingent fehlt."
+  },
+  "card-complete-world-traveller-gold": {
+   "visits": 4,
+   "guests": "zählt mit",
+   "scope": "Wien",
+   "program": "SKY/VIENNA Lounge Wien",
+   "bedingung": "",
+   "quelle": "https://www.cardcomplete.com/service/vip-lounges-am-flughafen-wien/",
+   "notiz": "Max. 4 kostenlose Zutritte/Jahr, geteilt auf Haupt-/Zusatzkarten und Begleitpersonen; danach 29 € pro Person. lgText korrekt."
+  },
+  "card-complete-world-traveller-black": {
+   "visits": "unbegrenzt",
+   "guests": "unbegrenzt",
+   "scope": "Wien",
+   "program": "SKY/VIENNA Lounge Wien",
+   "bedingung": "",
+   "quelle": "https://www.cardcomplete.com/service/vip-lounges-am-flughafen-wien/",
+   "notiz": "Unbegrenzt kostenlose Zutritte inkl. max. 1 Begleitperson (Kinder ab 4 zählen als Begleitperson). lgText korrekt."
+  },
+  "diners-club-classic": {
+   "visits": 4,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Diners Club Airport Lounges",
+   "bedingung": "Mindestumsatz 3.600 € in den letzten 365 Tagen vor Besuch",
+   "quelle": "https://www.cardcomplete.com/service/vip-lounges-am-flughafen-wien/",
+   "notiz": "Diners Club Airport Lounges weltweit (1.900+ Lounges, auch via Priority Pass App mit Diners Club). Begleitpersonen: in Wien 29 € (Kinder bis 14 gratis, zählen aber zum Kontingent), international lt. Diners Club Lounge Locator. Mindestumsatz 3.600 € in den letzten 365 Tagen vor dem Loungebesuch (Summe Haupt- + Zusatzkarten), sonst 29 € pro Besuch. lgText korrekt."
+  },
+  "diners-club-gold": {
+   "visits": 4,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Diners Club Airport Lounges",
+   "bedingung": "Mindestumsatz 3.600 € in den letzten 365 Tagen vor Besuch",
+   "quelle": "https://www.cardcomplete.com/service/vip-lounges-am-flughafen-wien/",
+   "notiz": "Diners Club Airport Lounges weltweit (1.900+ Lounges, auch via Priority Pass App mit Diners Club). Begleitpersonen: in Wien 29 € (Kinder bis 14 gratis, zählen aber zum Kontingent), international lt. Diners Club Lounge Locator. Mindestumsatz 3.600 € in den letzten 365 Tagen vor dem Loungebesuch (Summe Haupt- + Zusatzkarten), sonst 29 € pro Besuch. lgText korrekt."
+  },
+  "diners-club-vintage": {
+   "visits": 8,
+   "guests": "zählt mit",
+   "scope": "weltweit",
+   "program": "Diners Club Airport Lounges",
+   "bedingung": "Mindestumsatz 3.600 € in den letzten 365 Tagen vor Besuch",
+   "quelle": "https://www.cardcomplete.com/service/vip-lounges-am-flughafen-wien/",
+   "notiz": "Diners Club Airport Lounges weltweit (1.900+ Lounges, auch via Priority Pass App mit Diners Club). Begleitpersonen: in Wien zählen sie zu den 8 Besuchen (Kinder bis 14 gratis, zählen aber zum Kontingent), international lt. Diners Club Lounge Locator. Mindestumsatz 3.600 € in den letzten 365 Tagen vor dem Loungebesuch (Summe Haupt- + Zusatzkarten), sonst 29 € pro Besuch. Max. 8 kostenlose Zutritte/Jahr (inkl. Gäste in Wien). lgText: Umsatzbedingung = 3.600 € ergänzen."
+  },
+  "diners-club-student": {
+   "visits": 4,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Diners Club Airport Lounges",
+   "bedingung": "Mindestumsatz 3.600 € in den letzten 365 Tagen vor Besuch",
+   "quelle": "https://www.cardcomplete.com/service/vip-lounges-am-flughafen-wien/",
+   "notiz": "Diners Club Airport Lounges weltweit (1.900+ Lounges, auch via Priority Pass App mit Diners Club). Begleitpersonen: in Wien 29 € (Kinder bis 14 gratis, zählen aber zum Kontingent), international lt. Diners Club Lounge Locator. Mindestumsatz 3.600 € in den letzten 365 Tagen vor dem Loungebesuch (Summe Haupt- + Zusatzkarten), sonst 29 € pro Besuch. lgText korrekt."
+  },
+  "paylife-black": {
+   "visits": 2,
+   "guests": 0,
+   "scope": "Wien",
+   "program": "SKY/VIENNA Lounge Wien",
+   "bedingung": "Vorteil gilt bis mindestens 31.12.2026",
+   "quelle": "https://www.paylife.at/paylife/privat/service/paylife-black-vorteile",
+   "notiz": "2 kostenlose Zutritte pro Kalenderjahr, ab dem 3. ermäßigt (SKY 18 €, VIENNA 20 €). Begleitpersonen zahlen ermäßigt (SKY 36 €, VIENNA 47 €; Kinder 4–14: 24/28 €). lgText korrekt."
+  },
+  "paylife-platinum": {
+   "visits": 5,
+   "guests": "zählt mit",
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Pro Vertragsjahr",
+   "quelle": "https://www.paylife.at/paylife/privat/service/platinum-mastercard-vorteile",
+   "notiz": "5 kostenlose Priority-Pass-Zutritte pro Vertragsjahr für Karteninhaber und Begleitung ('egal, wie Sie diese aufteilen'), danach 30 € pro Person. Zusätzlich ermäßigter Zutritt Wiener Lounges (SKY 18 €, VIENNA 20 €). lgText korrekt."
+  },
+  "erste-bank-und-sparkassen-austrian-miles-und-more-premiumcard": {
+   "visits": 4,
+   "guests": "zählt mit",
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Aktivierung erforderlich",
+   "quelle": "https://www.sparkasse.at/sgruppe/privatkunden/konto-karten/s-kreditkarten/s-mastercard/miles-more-kreditkarten/austrian-miles-more-premiumcard",
+   "notiz": "4x pro Jahr kostenloser Priority-Pass-Zugang (1.800+ Lounges); Begleitpersonen können die Lounge-Zutritte der Karteninhaber:in nutzen (zählen also mit). lgText korrekt."
+  },
+  "raiffeisen-gold": {
+   "visits": 0,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Aktivierung via Mein Portal",
+   "quelle": "https://www.r-card-service.at/de/privat/aktionen-rabatte/priority-pass.html",
+   "notiz": "Priority-Pass-Mitgliedschaft kostenlos, jeder Zutritt 30 € pro Person (auch Begleitpersonen). lgText korrekt."
+  },
+  "raiffeisen-platinum": {
+   "visits": 0,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Aktivierung via Mein Portal",
+   "quelle": "https://www.r-card-service.at/de/privat/aktionen-rabatte/priority-pass.html",
+   "notiz": "Priority-Pass-Mitgliedschaft kostenlos, jeder Zutritt 30 € pro Person (auch Begleitpersonen). lgText korrekt."
+  },
+  "bank-austria-platinum": {
+   "visits": 0,
+   "guests": 0,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Aktivierung unter prioritypass.com",
+   "quelle": "https://www.bankaustria.at/mastercard-platinum.jsp",
+   "notiz": "Priority-Pass-Mitgliedschaft, jeder Lounge-Besuch 30 €, Begleitpersonen ebenfalls 30 €. lgText vage – besser: 'jeder Besuch 30 €'."
+  },
+  "bank-austria-world": {
+   "visits": 4,
+   "guests": "zählt mit",
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Pro Kalenderjahr; Aktivierung unter prioritypass.com",
+   "quelle": "https://www.bankaustria.at/mastercard-world.jsp",
+   "notiz": "4 Gratis-Besuche pro Kalenderjahr für Karteninhaber ODER Begleitpersonen, danach 30 € pro Besuch. lgText: Ergänzung 'Begleitung zählt mit, danach 30 €'."
+  },
+  "bank-austria-world-elite": {
+   "visits": "unbegrenzt",
+   "guests": 12,
+   "scope": "weltweit",
+   "program": "Priority Pass",
+   "bedingung": "Gäste-Kontingent pro Kalenderjahr; Aktivierung unter prioritypass.com",
+   "quelle": "https://www.bankaustria.at/mastercard-world-elite.jsp",
+   "notiz": "Unlimitierte kostenlose Besuche für Karteninhaber, 12 kostenlose Besuche pro Kalenderjahr für Begleitpersonen, danach 30 € pro Besuch. lgText korrekt."
+  },
+  "bawag-gold": {
+   "visits": 2,
+   "guests": 0,
+   "scope": "Wien",
+   "program": "SKY/VIENNA Lounge Wien",
+   "bedingung": "Nur BAWAG Visa Gold; gilt bis mindestens 31.12.2026",
+   "quelle": "https://www.bawag.at/bawag/privatkunden/kreditkarte/kreditkarte-gold",
+   "notiz": "2 kostenlose Zutritte pro Kalenderjahr exklusiv für Karteninhaber, danach SKY 18 €/VIENNA 20 €; Begleitpersonen 36/47 € (Kinder 4–14: 24/28 €). lgText korrekt."
+  },
+  "bawag-gold-student": {
+   "visits": 2,
+   "guests": 0,
+   "scope": "Wien",
+   "program": "SKY/VIENNA Lounge Wien",
+   "bedingung": "Nur BAWAG Visa Gold; gilt bis mindestens 31.12.2026",
+   "quelle": "https://www.bawag.at/bawag/privatkunden/kreditkarte/kreditkarte-gold-studenten",
+   "notiz": "Wie BAWAG Gold: 2 kostenlose Zutritte/Kalenderjahr nur für Karteninhaber, danach 18/20 €; Begleitpersonen zahlen. lgText korrekt."
+  },
+  "bank99-gold": {
+   "visits": 0,
+   "guests": 0,
+   "scope": "Wien",
+   "program": "SKY/VIENNA Lounge Wien",
+   "bedingung": "",
+   "quelle": "https://bank99.at/kreditkarten",
+   "notiz": "Keine Gratis-Zutritte, ermäßigter Preis 29 € pro Person (Karte von card complete). lgText korrekt."
+  },
+  "bank99-platinum": {
+   "visits": 4,
+   "guests": "zählt mit",
+   "scope": "Wien",
+   "program": "SKY/VIENNA Lounge Wien",
+   "bedingung": "",
+   "quelle": "https://www.cardcomplete.com/service/vip-lounges-am-flughafen-wien/",
+   "notiz": "bank99 vermittelt card complete Platinum: 4 kostenlose Zutritte/Jahr (bank99.at: 'Gratis Zutritt m. Begleitperson', 4 inkl., ab dem 5. 29 €). Laut card complete teilen sich die 4 Zutritte auf Haupt-/Zusatzkarten und Begleitpersonen. lgText korrekt."
+  },
+  "revolut-standard": {
+   "visits": 0,
+   "guests": 0,
+   "scope": "ausgewählte Flughäfen weltweit",
+   "program": "LoungeKey (Lounge-Pässe in der App)",
+   "bedingung": "",
+   "quelle": "https://cdn.revolut.com/terms_and_conditions/pdf/airport_lounge_passes_44dace41_1.1.0_1779099345_en.pdf",
+   "notiz": "Nur kostenpflichtige Lounge-Pässe in der App (Preis in App). revolut.com (de-AT) blockiert automatisierten Abruf (403), daher über Revolut-AGB-PDF (EWR-Version, Bank of Lithuania) verifiziert. Anbieter seit 10.6.2026 LoungeKey statt DragonPass. lgText korrekt."
+  },
+  "revolut-ultra": {
+   "visits": "unbegrenzt",
+   "guests": 0,
+   "scope": "ausgewählte Flughäfen weltweit",
+   "program": "LoungeKey (Lounge-Pässe in der App)",
+   "bedingung": "Ultra-Abo",
+   "quelle": "https://cdn.revolut.com/terms_and_conditions/pdf/airport_lounge_passes_44dace41_1.1.0_1779099345_en.pdf",
+   "notiz": "Lounge-Pässe für den eigenen Gebrauch kostenlos (kein Limit genannt), Gäste-Pässe kostenpflichtig; max. 1 Lounge pro 2 Stunden. Seit 10.6.2026 LoungeKey. revolut.com blockiert Abruf (403), via Revolut-AGB-PDF verifiziert. lgText korrekt, Gäste zahlen ergänzen."
+  }
+ }
+}
