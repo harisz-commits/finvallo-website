@@ -1004,7 +1004,7 @@ def t(key,land=None):
     return TERMS[land or L['code']][key]
 PROVPAGE={}; REDIRECTS={}
 DETAIL_LABELS=[('gruendung','Gegründet'),('lizenz_aufsicht','Lizenz und Aufsicht'),('einlagensicherung','Einlagensicherung'),('kundenservice','Kundenservice'),('besonderheiten','Besonderheiten'),('kritik','Kritik')]
-KRITIK_QUELLEN=('arbeiterkammer.at','ris.bka.gv.at','vki.at','verbraucherrecht.at','ogh.gv.at','bundesgerichtshof.de','vzbv.de','verbraucherzentrale')
+KRITIK_QUELLEN=('arbeiterkammer.at','vzhh.de','ris.bka.gv.at','vki.at','verbraucherrecht.at','ogh.gv.at','bundesgerichtshof.de','vzbv.de','verbraucherzentrale')
 def kritik_ok(dt):
     """Kritik (Urteile, Verbandsklagen) nur mit Quelle von AK, RIS, VKI, Gericht oder Verbraucherzentrale."""
     return any(any(q in u for q in KRITIK_QUELLEN) for u in dt.get('quellen') or [])
