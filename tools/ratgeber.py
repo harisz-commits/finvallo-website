@@ -15,12 +15,15 @@ TIERN={0:'keine',1:'Basis-Reiseschutz',2:'mit Reiserücktritt',3:'umfassend (ink
 # ---------- Daten ----------
 def cards(land):
     import karten
-    if not hasattr(cards,'D'): cards.D=karten.prepare()
+    if not hasattr(cards,'D'):
+        cards.D=karten.prepare()
+        global STAND, STAND_DE   # Stand = jüngstes Prüfdatum der Kartendaten
+        STAND=max(karten.LANDS[l]['stand'] for l in karten.LANDS); STAND_DE='.'.join(reversed(STAND.split('-')))
     out=[]
     for c in cards.D[land][0]:
         out.append(dict(titel=c['titel'],url=f'{land}/kreditkarten/{c["slug"]}/',fee=c.get('fee'),fx=c.get('fx'),fxText=karten.fxT(c),cashText=karten.cashT(c),
           stars=c.get('stars'),tier=c.get('tier'),typ=c['typ'],netz=c.get('netz') or '',giro=c.get('giro'),auto=c.get('auto'),art=c['art'],
-          lg=c.get('lgText') if c['ex'].get('lg') else None,cb=c.get('earnText') or (c.get('cbText') if c['ex'].get('cb') else None),ml=c['ex'].get('ml'),klasse=c['klasse'],bestand=c.get('nurfuer'),cash=c.get('cash')))
+          lg=c.get('lgText') if c['ex'].get('lg') else None,cb=c.get('earnText') or (c.get('cbText') if c['ex'].get('cb') else None),ml=c['ex'].get('ml'),klasse=c['klasse'],bestand=c.get('nurfuer'),cash=c.get('cash'),effz=c.get('effz')))
     return [c for c in out if c['art']=='Privat' and not c.get('bestand')]
 def rated(L): return sorted([c for c in L if c.get('stars') is not None],key=lambda c:(-c['stars'],c['fee'] if c['fee'] is not None else 1e9))
 def link(c,P): return f'<a class="lnk" href="{P}{c["url"]}">{E(c["titel"])}</a>'
@@ -41,7 +44,7 @@ COL=dict(karte=('Karte',lambda c,P:link(c,P)),
 # optional corrections=[dict(date='JJJJ-MM-TT', note='…')] → Abschnitt „Korrekturen“ am Ende des Artikels.
 DATES={
     ('at','business'): dict(published='2026-10-11', updated='2026-10-11'),
-    ('at','fremdwaehrung'): dict(published='2026-10-11', updated='2026-10-14'),
+    ('at','fremdwaehrung'): dict(published='2026-10-11', updated='2026-10-15'),
     ('at','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
     ('at','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-12'),
     ('at','kreditkarte-beantragen'): dict(published='2026-10-12', updated='2026-10-12'),
@@ -159,6 +162,10 @@ def build(land):
     best=f'../../kreditkarten/bestenlisten/'
     # A) kostenlose Kreditkarte
     t3=free[:3]
+    fxs_=sorted(c['fx'] for c in credit if c['fx'])
+    fxspan=f'Die Kredit- und Charge-Karten in unserem {N}-Vergleich, die etwas verlangen, nehmen {pct(fxs_[0])} bis {pct(fxs_[-1])} pro Zahlung außerhalb des Euroraums.' if fxs_ else ''
+    zs_=sorted(c['effz'] for c in RC if c['typ']=='Kreditkarte' and c.get('effz'))
+    zspan=f'Dann zahlst du laut den Karten in unserem Vergleich {pct(zs_[0])} bis {pct(zs_[-1])} effektive Zinsen pro Jahr.' if zs_ else 'Dann fallen hohe Zinsen an.'
     art(land,'kostenlose-kreditkarte',
       h1=f'Kostenlose Kreditkarte in {N}: die besten ohne Jahresgebühr',
       mt=f'Kostenlose Kreditkarte {N} 2026: Vergleich | Finvallo',
@@ -168,14 +175,14 @@ def build(land):
             +(f'{len(free_ins)} davon haben sogar eine Reiseversicherung mit Reiserücktritt. ' if free_ins else '')+'Achte trotzdem auf Auslandsgebühren, Bargeldkosten und Zinsen bei Teilzahlung.'),
       secs=[('Die besten kostenlosen Kreditkarten',table(free[:12],[COL['karte'],COL['fx'],COL['cash'],COL['ins'],COL['stars']],P)+f'<p class="note">Nur Karten ohne Jahresgebühr, sortiert nach unserer Bewertung. <a class="lnk" href="{best}gratis/">Ganze Bestenliste ansehen →</a></p>'),
             ('Was „kostenlos“ wirklich bedeutet',f'''<div class="prose"><p>Eine Kreditkarte ohne Jahresgebühr kann trotzdem Geld kosten. Prüfe vor dem Antrag vier Punkte:</p><ul>
-<li><b>Zahlen in fremder Währung:</b> Viele Karten verlangen 1,5 bis 2,5 % pro Zahlung außerhalb des Euroraums. Die besten Gratiskarten verlangen 0 %.</li>
+<li><b>Zahlen in fremder Währung:</b> {fxspan} Die besten Gratiskarten verlangen 0 %.</li>
 <li><b>Bargeld {AB}:</b> Manche Karten nehmen eine feste Gebühr, andere verzinsen Bargeld ab dem ersten Tag.</li>
-<li><b>Teilzahlung:</b> Bei echten Kreditkarten ist oft eine Ratenzahlung voreingestellt. Dann zahlst du rund 16 bis 25 % effektive Zinsen pro Jahr. Stell die Rückzahlung auf 100 % um.</li>
+<li><b>Teilzahlung:</b> Bei echten Kreditkarten ist oft eine Ratenzahlung voreingestellt. {zspan} Stell die Rückzahlung auf 100 % um.</li>
 <li><b>Girokonto-Pflicht:</b> Manche Karten sind nur gratis, wenn du ein Konto beim Anbieter hast, das selbst etwas kostet.</li></ul></div>'''),
             ('Kostenlose Kreditkarte oder Debitkarte?',f'<div class="prose"><p>Viele Banken und App-Banken geben gratis eine Debitkarte aus. Die bucht jede Zahlung sofort vom Konto ab und hat keinen Kreditrahmen. Für den Alltag reicht das meist. Mietwagenfirmen und Hotels verlangen für die Kaution aber oft eine echte Kreditkarte. Mehr dazu in unseren Beiträgen zu <a href="../kartentypen/">Kartentypen</a> und <a href="../mietwagen-kaution/">Mietwagen-Kaution</a>.</p></div>')],
       faq=[(f'Welche kostenlose Kreditkarte ist in {N} die beste?',f'Laut Finvallo-Bewertung ist es die {free[0]["titel"]} mit {de1(free[0]["stars"])} von 5 Sternen, Stand {STAND_DE}.' if free else 'Aktuell keine.'),
            ('Ist eine kostenlose Kreditkarte wirklich gratis?','Die Jahresgebühr ist 0 €. Kosten entstehen aber bei Fremdwährung, Bargeld oder wenn du die Rechnung nicht vollständig zahlst. Mit der richtigen Karte und voller Rückzahlung bleibt sie gratis.'),
-           ('Brauche ich für eine kostenlose Kreditkarte ein neues Girokonto?',f'Nicht unbedingt. {sum(1 for c in free if c["giro"] is False)} der {len(free)} Gratiskarten in unserem Vergleich funktionieren mit deinem bestehenden Konto.'),
+           ('Brauche ich für eine kostenlose Kreditkarte ein neues Girokonto?',f'Nicht unbedingt. {sum(1 for c in free if c["giro"] is False)} der {len(free)} Gratiskarten in unserem Vergleich funktionieren mit deinem bestehenden Konto.'+(f' Ein Konto beim Anbieter brauchst du für: {fmtlist([c["titel"] for c in free if c["giro"] is not False])}.' if any(c["giro"] is not False for c in free) else '')),
            (f'Wird bei einer kostenlosen Kreditkarte die {AUS} geprüft?',f'Ja. Für jede echte Kredit- oder Charge-Karte prüft die Bank deine Bonität, in {N} meist über {"die Schufa" if land=="de" else "den KSV1870"}.')],
       related=['kreditkarte-beantragen','fremdwaehrung','teilzahlung'])
     # B) Kreditkarte beantragen
@@ -202,13 +209,13 @@ def build(land):
     # C) ohne Bonitätsprüfung
     art(land,'ohne-bonitaetspruefung',
       h1=('Kreditkarte ohne Schufa: was wirklich geht' if land=='de' else 'Kreditkarte ohne KSV-Abfrage: was wirklich geht'),
-      mt=('Kreditkarte ohne Schufa 2026: echte Alternativen | Finvallo' if land=='de' else 'Kreditkarte ohne KSV 2026: echte Alternativen | Finvallo'),
+      mt=('Kreditkarte ohne Schufa? Was wirklich geht | Finvallo' if land=='de' else 'Kreditkarte ohne KSV? Was wirklich geht | Finvallo'),
       desc=f'Kreditkarte ohne {"Schufa" if land=="de" else "KSV-Prüfung"}? Was seriös geht, welche Debit- und Prepaid-Karten es in {N} ohne Kreditprüfung gibt und wovor du dich hüten solltest.',
       lede=f'Echte Kreditkarten gibt es nicht ohne Bonitätsprüfung. Diese Alternativen funktionieren in {N} trotzdem.',
       kurz=f'Eine echte Kreditkarte mit Kreditrahmen bekommst du in {N} nicht ohne {"Schufa-Abfrage" if land=="de" else "Bonitätsprüfung"}. Debit- und Prepaid-Karten mit Visa oder Mastercard gibt es dagegen meist ohne Kreditprüfung, viele ohne Grundgebühr. Sie funktionieren fast überall, werden aber bei Mietwagen- und Hotelkautionen oft abgelehnt. Meide Angebote, die Vorkasse oder Gebühren für die „Vermittlung“ verlangen.',
       secs=[('Warum Kreditkarten geprüft werden',f'<div class="prose"><p>Bei einer Kredit- oder Charge-Karte gibt dir die Bank Geld im Voraus, bis die Monatsrechnung bezahlt ist. Deshalb muss sie nach dem Gesetz prüfen, ob du das zurückzahlen kannst. Sie fragt dazu {"die Schufa" if land=="de" else "den KSV1870"} ab.</p></div>'),
-            (f'Gute Alternativen ohne Kreditprüfung',table(deb_free[:10],[COL['karte'],COL['typ'],COL['fx'],COL['cash'],COL['stars']],P)+f'<p class="note">Debit- und Prepaid-Karten ohne Grundgebühr, sortiert nach unserer Bewertung. Bei Kontoeröffnung wird deine Identität geprüft, eine Kreditprüfung gibt es meist nicht. <a class="lnk" href="{best}debit/">Alle Debitkarten ansehen →</a></p>'),
-            ('Vorsicht bei diesen Angeboten','<div class="prose"><ul><li>Anbieter, die vor der Zusage Geld verlangen, etwa für Nachnahme, „Bearbeitung“ oder eine Vermittlung</li><li>Karten mit hohen Monats- oder Aufladegebühren</li><li>Werbung mit „garantierter Zusage“ für echte Kreditkarten</li></ul><p>Seriöse Banken verlangen keine Vorauszahlung für einen Kreditkartenantrag.</p></div>'),
+            (f'Gute Alternativen ohne Kreditprüfung',table(deb_free[:8]+[c for c in deb if c['typ']=='Prepaid' and c not in deb_free][:3],[COL['karte'],COL['typ'],COL['fee'],COL['fx'],COL['cash'],COL['stars']],P)+f'<p class="note">Debitkarten ohne Grundgebühr und Prepaid-Karten, sortiert nach unserer Bewertung. Bei Kontoeröffnung wird deine Identität geprüft, eine Kreditprüfung gibt es meist nicht. <a class="lnk" href="{best}debit/">Alle Debitkarten ansehen →</a></p>'),
+            ('Vorsicht bei diesen Angeboten','<div class="prose"><ul><li>Anbieter, die vor der Zusage Geld verlangen, etwa als Vorkasse, für „Bearbeitung“ oder für eine Vermittlung</li><li>Karten mit hohen Monats- oder Aufladegebühren</li><li>Werbung mit „garantierter Zusage“ für echte Kreditkarten</li></ul><p>Seriöse Banken verlangen keine Vorauszahlung für einen Kreditkartenantrag.</p></div>'),
             (f'{"Schufa" if land=="de" else "Bonität"} verbessern',f'<div class="prose"><p>{"Fordere einmal im Jahr deine kostenlose Datenkopie bei der Schufa an und lass falsche Einträge löschen. Zahle Rechnungen pünktlich und stelle nicht viele Kreditanfragen auf einmal." if land=="de" else "Du kannst beim KSV1870 kostenlos Auskunft über deine Daten verlangen und falsche Einträge korrigieren lassen. Zahle Rechnungen pünktlich und stelle nicht viele Kreditanfragen auf einmal."} Nach einiger Zeit klappt es dann oft auch mit einer echten Kreditkarte.</p></div>')],
       faq=[(f'Gibt es eine Kreditkarte ganz ohne {"Schufa" if land=="de" else "KSV"}?','Echte Kreditkarten mit Kreditrahmen nicht. Debit- und Prepaid-Karten mit Visa oder Mastercard bekommst du meist ohne Kreditprüfung.'),
            ('Kann ich mit einer Debitkarte online bezahlen?','Ja. Debitkarten mit Visa oder Mastercard funktionieren online, im Ausland und mit Apple Pay oder Google Pay fast wie eine Kreditkarte.'),
@@ -262,12 +269,12 @@ def build(land):
           desc='Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“: So vermeidest du unnötige Gebühren mit der Kreditkarte, wenn du aus Österreich verreist.',
           lede='Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“.',
           kurz=f'Innerhalb des Euroraums kostet das Zahlen mit der Karte nichts extra. Außerhalb verlangen die Karten der großen österreichischen Banken in unserem Vergleich {pct(fxs[0])} bis {pct(fxs[-1])}. {len([c for c in credit if c["fx"]==0])} Kredit- und Charge-Karten in unserem Vergleich verlangen dafür 0 %.' if fxs else None,
-          secs=[('Was beim Zahlen in Fremdwährung anfällt','<div class="prose"><p>Zahlst du in einer fremden Währung, verlangen viele Banken zwei Dinge: ein Bearbeitungsentgelt, oft 1,5 bis 1,65 %, und einen Aufschlag auf den Wechselkurs, oft 1 bis 2 %. Zusammen sind das schnell 2,5 bis über 3 %. Achte deshalb immer auf beides.</p></div><div class="cond"><div class="r"><span>Urlaub in den USA, 1.000 € Ausgaben</span> <span></span></div><div class="r"><span>Karte mit 0 %</span> <span>0 €</span></div><div class="r"><span>Karte mit 1,5 %</span> <span>15 €</span></div><div class="r"><span>Karte mit 1,65 % + 1,5 %</span> <span>31,50 €</span></div></div>'),
-                ('Typische Gebühren bei Hausbanken',table(hb,[COL['karte'],COL['fee'],COL['fx'],COL['cash']],P)+'<p class="note">Je Bank die günstigste Standardkarte aus unserem Vergleich. Bei card complete und Bank Austria ist der Kursaufschlag eingerechnet.</p>' if hb else ''),
+          secs=[('Was beim Zahlen in Fremdwährung anfällt','<div class="prose"><p>Zahlst du in einer fremden Währung, verlangen viele Banken zwei Dinge: ein Bearbeitungsentgelt, oft 1,5 bis 1,65 %, und einen Aufschlag auf den Wechselkurs, in unserem Vergleich 1 bis 1,5 %. Zusammen sind das schnell 2,5 bis über 3 %. Achte deshalb immer auf beides.</p></div><div class="cond"><div class="r"><span>Urlaub in den USA, 1.000 € Ausgaben</span> <span></span></div><div class="r"><span>Karte mit 0 %</span> <span>0 €</span></div><div class="r"><span>Karte mit 1,5 %</span> <span>15 €</span></div><div class="r"><span>Karte mit 1,65 % + 1,5 %</span> <span>31,50 €</span></div></div>'),
+                ('Typische Gebühren bei Hausbanken',table(hb,[COL['karte'],COL['fee'],COL['fx'],COL['cash']],P)+'<p class="note">Je Bank die günstigste Standardkarte aus unserem Vergleich. Wo ein Kursaufschlag dazukommt, steht er dabei. In unserer Bewertung zählt die Summe aus Entgelt und Aufschlag.</p>' if hb else ''),
                 ('Karten ohne Auslandsgebühr',table(fx0,[COL['karte'],COL['fee'],COL['cash'],COL['stars']],P)+f'<p class="note"><a class="lnk" href="{best}ausland/">Zur Bestenliste: ohne Auslandsgebühr →</a></p>'),
                 ('Die Falle „in Euro zahlen?“','<div class="info"><span class="ic">!</span><div><p style="margin:0">Fragt dich ein Terminal oder Geldautomat im Ausland, ob du in Euro statt in der Landeswährung zahlen willst, lehne ab. Bei der Umrechnung durch den Händler ist der Kurs fast immer schlechter als bei deiner Bank.</p></div></div>'),
                 ('Bargeld im Ausland','<div class="prose"><p>Beim Beheben im Ausland fallen bis zu drei Kosten an: das Bearbeitungsentgelt für die Fremdwährung, eine Bargeldgebühr deiner Bank und eine Gebühr des Automatenbetreibers. Viele gebührenfreie Karten erstatten nur die eigenen Gebühren, nicht die des Betreibers. Was jede Karte für das Beheben verlangt, steht in den Tabellen oben und auf der jeweiligen Kartenseite.</p></div>'),
-                ('Das Urteil zu card complete','<div class="prose"><p>Der Oberste Gerichtshof hat 2026 entschieden, dass card complete Bearbeitungsentgelt und Kursaufschlag in älteren Verträgen nicht doppelt verrechnen durfte. Die Arbeiterkammer sieht ein ähnliches Muster bei PayLife und BAWAG und bietet einen Musterbrief an: <a class="lnk" href="https://wien.arbeiterkammer.at/cardcomplete" target="_blank" rel="noopener">Musterbrief bei der Arbeiterkammer</a>.</p></div>')],
+                ('Das Urteil zu card complete','<div class="prose"><p>Der Oberste Gerichtshof hat 2026 entschieden, dass card complete Bearbeitungsentgelt und Kursaufschlag in älteren Verträgen nicht doppelt verrechnen durfte. Die Arbeiterkammer sieht ein ähnliches Muster bei PayLife und BAWAG Rückerstattungen konnten laut <a class="lnk" href="https://wien.arbeiterkammer.at/cardcomplete" target="_blank" rel="noopener">Arbeiterkammer</a> bis 1. August 2026 beantragt werden; diese Frist ist abgelaufen.</p></div>')],
           faq=[('Kostet das Zahlen mit Kreditkarte in Euro-Ländern extra?','Nein. Zahlungen in Euro innerhalb des Euroraums kosten wie im Inland, meist also nichts.'),
                ('Wie hoch ist die Gebühr für Fremdwährung bei österreichischen Banken?',f'Bei den Standardkarten der großen Banken in unserem Vergleich {pct(fxs[0])} bis {pct(fxs[-1])}, je nachdem ob ein Kursaufschlag dazukommt. Karten ohne Auslandsgebühr verlangen 0 %.' if fxs else 'Das hängt von der Bank ab.'),
                ('Soll ich am Automaten im Ausland Euro oder Landeswährung wählen?','Immer die Landeswährung. Die Umrechnung in Euro durch den Automaten ist fast immer teurer.')],

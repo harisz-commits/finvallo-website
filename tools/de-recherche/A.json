@@ -103,7 +103,7 @@
   "pay": true,
   "payText": "Apple Pay und Google Pay",
   "tier": 2,
-  "insText": "Lloyd's-Reisepaket (Bedingungen Gold-Karte, gültig ab 1.1.2023): Reiserücktritt und -abbruch je bis 3.000 € (20 % SB, mind. 100 €/Person), Auslandsreisekranken/Rücktransport bis 1 Mio. € (100 € SB), Reiseunfall 40.000 €, Privathaftpflicht 350.000 €, Gepäck 2.500 € (max. 3.000 € alle), Gepäck-/Reiseverspätung je 250 €; dazu Käuferschutz und Preisschutz. Nur Reisen außerhalb Deutschlands (Inland nur mit vorab per Karte bezahlter Übernachtung); mind. 50 % der Transport- bzw. Pauschalreisekosten mit der Karte bezahlt; max. 90 Tage, ab 70 Jahren 21 Tage, Schutz endet mit 75. Kein Mietwagenschutz.",
+  "insText": "Lloyd's-Reisepaket (Bedingungen Gold-Karte, gültig ab 1.1.2023): Reiserücktritt und -abbruch je bis 3.000 € (20 % SB, mind. 100 €/Person), Auslandsreisekranken/Rücktransport bis 1 Mio. € (100 € SB), Reiseunfall 40.000 €, Privathaftpflicht 350.000 €, Gepäck 2.500 € (max. 3.000 € alle), Gepäck-/Reiseverspätung pro 250 €; dazu Käuferschutz und Preisschutz. Nur Reisen außerhalb Deutschlands (Inland nur mit vorab per Karte bezahlter Übernachtung); mind. 50 % der Transport- bzw. Pauschalreisekosten mit der Karte bezahlt; max. 90 Tage, ab 70 Jahren 21 Tage, Schutz endet mit 75. Kein Mietwagenschutz.",
   "insQuelle": "https://cdn.sanity.io/files/mkiw82r3/production/5687f96ca62efcf7656daa2da18c1cacd3bdf706.pdf",
   "ex": {
    "cb": false,
@@ -176,7 +176,7 @@
   "pay": true,
   "payText": "Apple Pay und Google Pay",
   "tier": 2,
-  "insText": "Lloyd's-Reisepaket (Bedingungen Gold-Karte, gültig ab 1.1.2023): Reiserücktritt und -abbruch je bis 3.000 € (20 % SB, mind. 100 €/Person), Auslandsreisekranken/Rücktransport bis 1 Mio. € (100 € SB), Reiseunfall 40.000 €, Privathaftpflicht 350.000 €, Gepäck 2.500 € (max. 3.000 € alle), Gepäck-/Reiseverspätung je 250 €; dazu Käuferschutz und Preisschutz. Nur Reisen außerhalb Deutschlands (Inland nur mit vorab per Karte bezahlter Übernachtung); mind. 50 % der Transport- bzw. Pauschalreisekosten mit der Karte bezahlt; max. 90 Tage, ab 70 Jahren 21 Tage, Schutz endet mit 75. Kein Mietwagenschutz.",
+  "insText": "Lloyd's-Reisepaket (Bedingungen Gold-Karte, gültig ab 1.1.2023): Reiserücktritt und -abbruch je bis 3.000 € (20 % SB, mind. 100 €/Person), Auslandsreisekranken/Rücktransport bis 1 Mio. € (100 € SB), Reiseunfall 40.000 €, Privathaftpflicht 350.000 €, Gepäck 2.500 € (max. 3.000 € alle), Gepäck-/Reiseverspätung pro 250 €; dazu Käuferschutz und Preisschutz. Nur Reisen außerhalb Deutschlands (Inland nur mit vorab per Karte bezahlter Übernachtung); mind. 50 % der Transport- bzw. Pauschalreisekosten mit der Karte bezahlt; max. 90 Tage, ab 70 Jahren 21 Tage, Schutz endet mit 75. Kein Mietwagenschutz.",
   "insQuelle": "https://cdn.sanity.io/files/mkiw82r3/production/5687f96ca62efcf7656daa2da18c1cacd3bdf706.pdf",
   "ex": {
    "cb": true,
@@ -244,7 +244,7 @@
   "pay": true,
   "payText": "Apple Pay und Google Pay",
   "tier": 2,
-  "insText": "Lloyd's-Paket für Advanzia Mastercard World (gültig ab 1.6.2024): Reiserücktritt/-abbruch je 3.000 € (20 % SB, mind. 100 €), Auslandsreisekranken bis 1 Mio. €, Reiseunfall 40.000 €, Haftpflicht 350.000 €, Gepäck 2.500 €, Verspätung je 250 €, dazu Käuferschutz/Preisschutz. Mind. 50 % der Transportkosten mit Karte bezahlt, nur Reisen außerhalb des Wohnsitzlandes, Ehe-/Lebenspartner und Kinder mitversichert, bis 75 Jahre. Kein Mietwagenschutz.",
+  "insText": "Lloyd's-Paket für Advanzia Mastercard World (gültig ab 1.6.2024): Reiserücktritt/-abbruch pro 3.000 € (20 % SB, mind. 100 €), Auslandsreisekranken bis 1 Mio. €, Reiseunfall 40.000 €, Haftpflicht 350.000 €, Gepäck 2.500 €, Verspätung pro 250 €, dazu Käuferschutz/Preisschutz. Mind. 50 % der Transportkosten mit Karte bezahlt, nur Reisen außerhalb des Wohnsitzlandes, Ehe-/Lebenspartner und Kinder mitversichert, bis 75 Jahre. Kein Mietwagenschutz.",
   "insQuelle": "https://cdn.sanity.io/files/mkiw82r3/production/4e9e9ce35b05eea561fd74a84ccfc3a2c36a29d4.pdf",
   "ex": {
    "cb": true,
@@ -255,7 +255,7 @@
    "ft": false,
    "offer": true
   },
-  "cbText": "1 Hilton-Honors-Punkt pro 1 € Umsatz, 2 Punkte pro 1 € in Hilton-Hotels; dauerhafter Hilton Honors Gold-Status; Diamond schneller (40 statt 50 Nächte, je 5.000 € Umsatz 5 Nächte weniger)",
+  "cbText": "1 Hilton-Honors-Punkt pro 1 € Umsatz, 2 Punkte pro 1 € in Hilton-Hotels; dauerhafter Hilton Honors Gold-Status; Diamond schneller (40 statt 50 Nächte, pro 5.000 € Umsatz 5 Nächte weniger)",
   "lgText": null,
   "creditsText": null,
   "bonus": "50.000 Hilton-Honors-Punkte statt 6.000 bei Antrag bis 05.11.2026 und erstem Einkauf bis 05.12.2026 (nicht für aktuelle/ehemalige Advanzia-Kunden)",
@@ -317,7 +317,7 @@
   "pay": true,
   "payText": "Apple Pay und Google Pay",
   "tier": 2,
-  "insText": "Lloyd's-Reisepaket (Bedingungen Gold-Karte, gültig ab 1.1.2023): Reiserücktritt und -abbruch je bis 3.000 € (20 % SB, mind. 100 €/Person), Auslandsreisekranken/Rücktransport bis 1 Mio. € (100 € SB), Reiseunfall 40.000 €, Privathaftpflicht 350.000 €, Gepäck 2.500 € (max. 3.000 € alle), Gepäck-/Reiseverspätung je 250 €; dazu Käuferschutz und Preisschutz. Nur Reisen außerhalb Deutschlands (Inland nur mit vorab per Karte bezahlter Übernachtung); mind. 50 % der Transport- bzw. Pauschalreisekosten mit der Karte bezahlt; max. 90 Tage, ab 70 Jahren 21 Tage, Schutz endet mit 75. Kein Mietwagenschutz.",
+  "insText": "Lloyd's-Reisepaket (Bedingungen Gold-Karte, gültig ab 1.1.2023): Reiserücktritt und -abbruch je bis 3.000 € (20 % SB, mind. 100 €/Person), Auslandsreisekranken/Rücktransport bis 1 Mio. € (100 € SB), Reiseunfall 40.000 €, Privathaftpflicht 350.000 €, Gepäck 2.500 € (max. 3.000 € alle), Gepäck-/Reiseverspätung pro 250 €; dazu Käuferschutz und Preisschutz. Nur Reisen außerhalb Deutschlands (Inland nur mit vorab per Karte bezahlter Übernachtung); mind. 50 % der Transport- bzw. Pauschalreisekosten mit der Karte bezahlt; max. 90 Tage, ab 70 Jahren 21 Tage, Schutz endet mit 75. Kein Mietwagenschutz.",
   "insQuelle": "https://cdn.sanity.io/files/mkiw82r3/production/5687f96ca62efcf7656daa2da18c1cacd3bdf706.pdf",
   "ex": {
    "cb": false,

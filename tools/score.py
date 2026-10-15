@@ -27,11 +27,12 @@ def cash200(c):
     if k=='pct': return 200*c[1]/100
     if k=='pctmin': return max(200*c[1]/100,c[2])
     if k=='fixpct': return c[1]+200*c[2]/100
-    if k=='freeN': return 0.0 if c[1]>=1 else float(c[2])
+    if k=='freeN': return 'fn' if c[1]>=1 else float(c[2])   # Gratis-Abhebungen begrenzt
     if k=='no': return 'no'
     return None
 def s_cash(v):
     if v=='fi': return 4.5
+    if v=='fn': return 4.5
     if v=='no': return 2.0
     if v==0: return 5.0
     for lim,s in [(2,4.2),(4,3.4),(7,2.6)]:
@@ -52,6 +53,7 @@ def score(c):
     else: add('Reiseversicherung',*TIER[t])
     x=c.get('fx')
     if x is None: add('Zahlen im Ausland',MISSING,'keine bestätigten Daten',False)
+    elif x==0 and c.get('fxLimit'): add('Zahlen im Ausland',4.8,'0 % nur bis zur Freigrenze, darüber und am Wochenende mit Aufschlag')
     else: add('Zahlen im Ausland',s_fx(x),'0 %' if x==0 else f'{pct(x)} pro Zahlung in US-Dollar')
     # Alltag: drei Punkte; was nicht bestätigt ist, zählt wie überall mit MISSING (2,5)
     vals=[];txt=[];conf=0
@@ -69,6 +71,7 @@ def score(c):
     v=cash200(c.get('cash'))
     if v is None: add('Bargeld',MISSING,'keine bestätigten Daten',False)
     elif v=='fi': add('Bargeld',4.5,'kostenlos, aber ab Tag 1 verzinst')
+    elif v=='fn': add('Bargeld',4.5,'kostenlos, aber nur begrenzt viele Abhebungen')
     elif v=='no': add('Bargeld',2.0,'Bargeld nicht möglich')
     elif v==0: add('Bargeld',5.0,'kostenlos')
     else: add('Bargeld',s_cash(v),f'{eur(v)} € für 200 €')

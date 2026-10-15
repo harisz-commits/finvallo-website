@@ -9,12 +9,12 @@
   "hilton-honors-kreditkarte": {
    "pct": 0.4,
    "art": "Hilton-Punkte",
-   "hinweis": "1 Punkt je €, 1 Hilton-Punkt ≈ 0,4 Cent"
+   "hinweis": "1 Punkt pro €, 1 Hilton-Punkt ≈ 0,4 Cent"
   },
   "turkish-airlines-milesundsmiles-mastercard-gold": {
    "pct": 0.5,
    "art": "Meilen",
-   "hinweis": "1 Meile je 2 €"
+   "hinweis": "1 Meile pro 2 €"
   },
   "klarna-plus": {
    "pct": 0.5,
@@ -39,7 +39,7 @@
   "eurowings-kreditkarte-classic": {
    "pct": 0.5,
    "art": "Miles & More Meilen",
-   "hinweis": "1 Meile je 2 €"
+   "hinweis": "1 Meile pro 2 €"
   },
   "amazon-visa": {
    "pct": 0.5,
@@ -55,27 +55,27 @@
   "miles-und-more-blue-credit-card": {
    "pct": 0.5,
    "art": "Miles & More Meilen",
-   "hinweis": "1 Meile je 2 €"
+   "hinweis": "1 Meile pro 2 €"
   },
   "miles-und-more-myflex-credit-card": {
    "pct": 0.5,
    "art": "Miles & More Meilen",
-   "hinweis": "1 Meile je 2 €"
+   "hinweis": "1 Meile pro 2 €"
   },
   "miles-und-more-lufthansa-frequent-traveller-credit-card": {
    "pct": 0.5,
    "art": "Miles & More Meilen",
-   "hinweis": "1 Meile je 2 €"
+   "hinweis": "1 Meile pro 2 €"
   },
   "miles-und-more-lufthansa-senator-credit-card": {
    "pct": 0.5,
    "art": "Miles & More Meilen",
-   "hinweis": "1 Meile je 2 €"
+   "hinweis": "1 Meile pro 2 €"
   },
   "miles-und-more-lufthansa-hon-circle-credit-card": {
    "pct": 0.5,
    "art": "Miles & More Meilen",
-   "hinweis": "1 Meile je 2 €"
+   "hinweis": "1 Meile pro 2 €"
   },
   "targobank-gold-karte": {
    "pct": 1,
@@ -86,32 +86,32 @@
   "american-express-card": {
    "pct": 1,
    "art": "Membership-Rewards-Punkte",
-   "hinweis": "1 Punkt je €, inklusive"
+   "hinweis": "1 Punkt pro €, inklusive"
   },
   "american-express-gold-card-rose": {
    "pct": 1,
    "art": "Membership-Rewards-Punkte",
-   "hinweis": "1 Punkt je €, inklusive"
+   "hinweis": "1 Punkt pro €, inklusive"
   },
   "payback-american-express-karte": {
    "pct": 0.33,
    "art": "PAYBACK-Punkte",
-   "hinweis": "1 Punkt je 3 €, 1 Punkt = 1 Cent"
+   "hinweis": "1 Punkt pro 3 €, 1 Punkt = 1 Cent"
   },
   "dm-payback-american-express-karte": {
    "pct": 0.33,
    "art": "PAYBACK-Punkte",
-   "hinweis": "1 Punkt je 3 €, bei dm doppelt"
+   "hinweis": "1 Punkt pro 3 €, bei dm doppelt"
   },
   "bmw-card-von-american-express": {
    "pct": 1,
    "art": "Membership-Rewards-Punkte",
-   "hinweis": "1 Punkt je €, an Tankstellen 1 % Gutschrift"
+   "hinweis": "1 Punkt pro €, an Tankstellen 1 % Gutschrift"
   },
   "bmw-premium-card-carbon": {
    "pct": 1,
    "art": "Membership-Rewards-Punkte",
-   "hinweis": "1 Punkt je €",
+   "hinweis": "1 Punkt pro €",
    "lounge": {
     "visits": 50,
     "guests_free": 0,
@@ -121,12 +121,12 @@
   "payback-visa-kreditkarte": {
    "pct": 0.2,
    "art": "PAYBACK-Punkte",
-   "hinweis": "1 Punkt je 5 €"
+   "hinweis": "1 Punkt pro 5 €"
   },
   "payback-visa-kreditkarte-auf-guthabenbasis": {
    "pct": 0.2,
    "art": "PAYBACK-Punkte",
-   "hinweis": "1 Punkt je 5 €"
+   "hinweis": "1 Punkt pro 5 €"
   },
   "c24-bank-smart": {
    "pct": 0.05,
@@ -205,17 +205,17 @@
   "revolut-standard": {
    "pct": 0.1,
    "art": "RevPoints",
-   "hinweis": "1 RevPoint je 10 €, 1 RevPoint = 1 Cent"
+   "hinweis": "1 RevPoint pro 10 €, 1 RevPoint = 1 Cent"
   },
   "revolut-plus": {
    "pct": 0.1,
    "art": "RevPoints",
-   "hinweis": "1 RevPoint je 10 €, 1 RevPoint = 1 Cent"
+   "hinweis": "1 RevPoint pro 10 €, 1 RevPoint = 1 Cent"
   },
   "revolut-premium": {
    "pct": 0.25,
    "art": "RevPoints",
-   "hinweis": "1 RevPoint je 4 €, 1 RevPoint = 1 Cent"
+   "hinweis": "1 RevPoint pro 4 €, 1 RevPoint = 1 Cent"
   },
   "deutsche-bank-mastercard-black": {
    "lounge": {

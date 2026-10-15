@@ -226,7 +226,7 @@
    "ft": true,
    "offer": true
   },
-  "cbText": "1 Miles & More Prämienmeile je 2 € Umsatz (36 Monate gültig)",
+  "cbText": "1 Miles & More Prämienmeile pro 2 € Umsatz (36 Monate gültig)",
   "lgText": null,
   "creditsText": null,
   "bonus": "500 Willkommensmeilen für Neukunden bei Karteneinsatz in 6 Wochen nach Kontoeröffnung + 1. Jahr 14,50 €",
@@ -290,7 +290,7 @@
    "ft": true,
    "offer": true
   },
-  "cbText": "1 Miles & More Prämienmeile je 2 € Umsatz (36 Monate gültig)",
+  "cbText": "1 Miles & More Prämienmeile pro 2 € Umsatz (36 Monate gültig)",
   "lgText": null,
   "creditsText": null,
   "bonus": "3.000 Willkommensmeilen für Neukunden bei Karteneinsatz in 6 Wochen nach Kontoeröffnung + 1. Jahr 49,50 €",
@@ -706,7 +706,7 @@
   "pay": null,
   "payText": null,
   "tier": 2,
-  "insText": "Reiserücktritt und -abbruch je 6.000 € pro Reise (One: 3.000 €), ohne Selbstbehalt; dazu Verspätungs- und Umbuchungsversicherung, Reise-Assistance. Gilt nur für Reisen der Veranstalter TUI/airtours (teils XTUI, ltur, Mein Schiff, TUI fly), wenn die TUI CARD als Zahlungsart auf der Buchungsbestätigung steht; bis zu 5 Mitreisende.",
+  "insText": "Reiserücktritt und -abbruch pro 6.000 € pro Reise (One: 3.000 €), ohne Selbstbehalt; dazu Verspätungs- und Umbuchungsversicherung, Reise-Assistance. Gilt nur für Reisen der Veranstalter TUI/airtours (teils XTUI, ltur, Mein Schiff, TUI fly), wenn die TUI CARD als Zahlungsart auf der Buchungsbestätigung steht; bis zu 5 Mitreisende.",
   "insQuelle": "https://assets.ctfassets.net/ffm7i8qj4mgh/2onW6ln2s3R0bqI271EZ4x/0d22e7816a0e5f347f9731b29c0ceb68/Versicherungsbest_tigung_TUI_CARD_Classic_Reisen_ab_01.11.2024.pdf",
   "ex": {},
   "cbText": null,

@@ -78,7 +78,7 @@
    "einlagensicherung": "Die bank99 ist Mitglied der Einlagensicherung AUSTRIA.",
    "kundenservice": "Telefonischer Kundenservice, rund 1.700 Post-Geschäftsstellen und die App; für Kreditkartenfragen der Kundenservice von card complete.",
    "besonderheiten": "Angeboten werden die Mastercard-Modelle Classic ohne Versicherung, Gold und Platinum von card complete.",
-   "kritik": "Da die Karten von card complete ausgegeben werden, gilt die AK-Rückerstattungsaktion nach dem OGH-Urteil 5 Ob 191/24k zum Fremdwährungs-Bearbeitungsentgelt auch für diese Karten (betrifft laut AK alle von card complete ausgegebenen Kreditkarten).",
+   "kritik": "Da die Karten von card complete ausgegeben werden, gilt die AK-Rückerstattungsaktion nach dem OGH-Urteil 5 Ob 191/24k zum Fremdwährungs-Bearbeitungsentgelt auch für diese Karten (betrifft laut AK alle von card complete ausgegebenen Kreditkarten). Laut AK konnten Rückerstattungen bis 1. August 2026 beantragt werden; diese Frist ist abgelaufen.",
    "fuer_wen": "Für Kontokundinnen und -kunden der bank99, weil die Kreditkarte zu einem bank99-Konto bestellt wird.",
    "quellen": [
     "https://bank99.at/kreditkarten",
@@ -131,7 +131,7 @@
    "einlagensicherung": "card complete ist Mitglied der Einlagensicherung AUSTRIA.",
    "kundenservice": "Telefonischer Kundenservice an Werktagen, Kontaktformular, 24-Stunden-Sperrhotline sowie die App bzw. das Portal complete Control.",
    "besonderheiten": "card complete gibt Kreditkarten von Visa, Mastercard und exklusiv Diners Club aus und betreibt auch Kartenakzeptanz für Händler. Die Kreditkartenportfolios von Bank Austria und Raiffeisen Bank International gehen laut Ankündigung von 2025 an diese Banken zurück; andere Portfolios (z. B. ÖAMTC, Miles & More, Diners Club) bleiben bei card complete.",
-   "kritik": "Der OGH (5 Ob 191/24k) hat nach einer Verbandsklage der AK das Bearbeitungsentgelt für Fremdwährungstransaktionen von 1,65 % in Kombination mit einem Wechselkursabschlag als intransparent und unzulässig beurteilt. AK und card complete haben eine Rückerstattungsaktion für Privatkarten vereinbart (Visa/Mastercard ab 1. August 2018, Diners Club ab 1. März 2015).",
+   "kritik": "Der OGH (5 Ob 191/24k) hat nach einer Verbandsklage der AK das Bearbeitungsentgelt für Fremdwährungstransaktionen von 1,65 % in Kombination mit einem Wechselkursabschlag als intransparent und unzulässig beurteilt. AK und card complete haben eine Rückerstattungsaktion für Privatkarten vereinbart (Visa/Mastercard ab 1. August 2018, Diners Club ab 1. März 2015). Laut AK konnten Rückerstattungen bis 1. August 2026 beantragt werden; diese Frist ist abgelaufen.",
    "fuer_wen": "",
    "quellen": [
     "https://www.cardcomplete.com/impressum/",
@@ -150,7 +150,7 @@
    "einlagensicherung": "",
    "kundenservice": "Telefonische Hotline für Diners Club Privatkarten und eigene Diners-Sperrnummern über card complete sowie das Online-E-Konto.",
    "besonderheiten": "",
-   "kritik": "Die AK-Verbandsklage gegen card complete (OGH 5 Ob 191/24k) zum Bearbeitungsentgelt für Fremdwährungstransaktionen umfasst auch Diners Club Karten; Rückerstattung für Transaktionen ab 1. März 2015.",
+   "kritik": "Die AK-Verbandsklage gegen card complete (OGH 5 Ob 191/24k) zum Bearbeitungsentgelt für Fremdwährungstransaktionen umfasst auch Diners Club Karten; Rückerstattung für Transaktionen ab 1. März 2015. Laut AK konnten Rückerstattungen bis 1. August 2026 beantragt werden; diese Frist ist abgelaufen.",
    "fuer_wen": "",
    "quellen": [
     "https://www.cardcomplete.com/diners-club/uber-diners-club/",
@@ -193,7 +193,7 @@
   },
   "n26": {
    "gruendung": "2013 in Berlin gegründet, Sitz in Berlin.",
-   "lizenz_aufsicht": "Deutsche Bank mit Vollbanklizenz (N26 Bank SE), beaufsichtigt von der Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin).",
+   "lizenz_aufsicht": "Bank mit Sitz in Berlin und Vollbanklizenz (N26 Bank SE), beaufsichtigt von der Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin).",
    "einlagensicherung": "Guthaben auf dem N26 Konto ist laut N26 bis 100.000 € durch die deutsche Einlagensicherung geschützt.",
    "kundenservice": "Support über die App und Internet-Chat sowie das Online-Hilfecenter.",
    "besonderheiten": "Die Karten zu den N26 Konten sind Mastercard-Debitkarten, auch die Metal-Karte ist laut N26 keine Kreditkarte.",

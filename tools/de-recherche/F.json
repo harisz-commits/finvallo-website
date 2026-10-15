@@ -1356,7 +1356,7 @@
    "fix",
    0.99
   ],
-  "cashText": "Die ersten 5 Abhebungen pro Monat je 0,99 €, danach 2,99 €; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
+  "cashText": "Die ersten 5 Abhebungen pro Monat pro 0,99 €, danach 2,99 €; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
   "cashInterest": false,
   "soll": null,
   "effz": null,
@@ -1422,7 +1422,7 @@
    6,
    0.99
   ],
-  "cashText": "Die ersten 6 Abhebungen pro Monat kostenlos, die nächsten 5 je 0,99 €, danach 2,99 € je Abhebung; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
+  "cashText": "Die ersten 6 Abhebungen pro Monat kostenlos, die nächsten 5 pro 0,99 €, danach 2,99 € je Abhebung; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
   "cashInterest": false,
   "soll": null,
   "effz": null,
@@ -1488,7 +1488,7 @@
    6,
    0.99
   ],
-  "cashText": "Die ersten 6 Abhebungen pro Monat kostenlos, die nächsten 5 je 0,99 €, danach 2,99 € je Abhebung; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
+  "cashText": "Die ersten 6 Abhebungen pro Monat kostenlos, die nächsten 5 pro 0,99 €, danach 2,99 € je Abhebung; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
   "cashInterest": false,
   "soll": null,
   "effz": null,
@@ -1618,7 +1618,7 @@
    "fix",
    0.99
   ],
-  "cashText": "Die ersten 5 Abhebungen pro Monat je 0,99 €, danach 2,99 €; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
+  "cashText": "Die ersten 5 Abhebungen pro Monat pro 0,99 €, danach 2,99 €; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
   "cashInterest": false,
   "soll": null,
   "effz": null,
@@ -1682,7 +1682,7 @@
    6,
    0.99
   ],
-  "cashText": "Die ersten 6 Abhebungen pro Monat kostenlos, die nächsten 5 je 0,99 €, danach 2,99 € je Abhebung; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
+  "cashText": "Die ersten 6 Abhebungen pro Monat kostenlos, die nächsten 5 pro 0,99 €, danach 2,99 € je Abhebung; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
   "cashInterest": false,
   "soll": null,
   "effz": null,
@@ -1747,7 +1747,7 @@
    6,
    0.99
   ],
-  "cashText": "Die ersten 6 Abhebungen pro Monat kostenlos, die nächsten 5 je 0,99 €, danach 2,99 € je Abhebung; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
+  "cashText": "Die ersten 6 Abhebungen pro Monat kostenlos, die nächsten 5 pro 0,99 €, danach 2,99 € je Abhebung; in Fremdwährung mit Umrechnung zusätzlich 0,5 %",
   "cashInterest": false,
   "soll": null,
   "effz": null,

@@ -302,7 +302,7 @@
   "pay": true,
   "payText": "Apple Pay, Google Pay, Garmin Pay, Swatch Pay",
   "tier": 2,
-  "insText": "Reise-Rücktritt und -abbruch je bis 5.000 € (SB 20 %, mind. 100/200 €), Auslandsreise-Kranken, Auslandsreise-Unfall (30.000 €/130.000 €), Reisegepäck bis 4.000 € je Fall (SB 50 €), Flug- und Gepäckverspätung bis je 250 €, Reise-Service/Notruf – jeweils auch für die Familie auf gemeinsamen Reisen; dazu Bargeld-Schutz (250 €) und Handy-Missbrauchschutz. Schutz unabhängig vom Karteneinsatz, Reisen bis 62 Tage. Keine Mietwagenversicherung.",
+  "insText": "Reise-Rücktritt und -abbruch je bis 5.000 € (SB 20 %, mind. 100/200 €), Auslandsreise-Kranken, Auslandsreise-Unfall (30.000 €/130.000 €), Reisegepäck bis 4.000 € je Fall (SB 50 €), Flug- und Gepäckverspätung bis pro 250 €, Reise-Service/Notruf – jeweils auch für die Familie auf gemeinsamen Reisen; dazu Bargeld-Schutz (250 €) und Handy-Missbrauchschutz. Schutz unabhängig vom Karteneinsatz, Reisen bis 62 Tage. Keine Mietwagenversicherung.",
   "insQuelle": "https://www.commerzbank.de/portal/media/efw-dokumente/versicherungsbestaetigung_premiumkreditkarte.pdf",
   "ex": {
    "cb": false,
