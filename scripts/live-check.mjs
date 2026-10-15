@@ -29,11 +29,11 @@ const home = body('https://finvallo.com/'), want = (readFileSync(join(ROOT, 'pub
 const got = (home.match(/<meta name="build" content="([^"]+)"/) || [])[1];
 check('R8.6', 'Startseite = aktueller Build', got && got === want, got === want ? `build ${got}` : `live ${got || 'ohne Marker'}, Repo ${want}: Cache liefert alten Build`);
 const h = headers('https://finvallo.com/'), ma = maxAge(h), enc = (h.match(/content-encoding: *(\S+)/) || [])[1];
-check('B20.5', 'HTML: Cache höchstens 1 Stunde', ma !== null && ma <= 3600, ma === null ? 'kein Cache-Control' : `max-age=${ma}`);
-check('B20.5', 'HTML: gzip oder br', ['gzip', 'br'].includes(enc), enc || 'keine Komprimierung');
+check('R2', 'HTML: Cache höchstens 10 Minuten', ma !== null && ma <= 600, ma === null ? 'kein Cache-Control' : `max-age=${ma}`);
+check('R2', 'HTML: gzip oder br', ['gzip', 'br'].includes(enc), enc || 'keine Komprimierung');
 const a = asset();
-if (a) { const ha = headers(a), mx = maxAge(ha); check('B20.5', 'Assets: Cache mindestens 30 Tage', mx !== null && mx >= 2592000, mx === null ? 'kein Cache-Control' : `max-age=${mx}` + ((ha.match(/cache-control/g) || []).length > 1 ? ' (Header doppelt)' : '')); }
-else check('B20.5', 'Assets: Cache mindestens 30 Tage', false, 'CSS-Datei nicht gefunden');
+if (a) { const ha = headers(a), mx = maxAge(ha); check('R2', 'CSS/JS: Cache 1 Jahr (versioniert)', mx !== null && mx >= 31536000, mx === null ? 'kein Cache-Control' : `max-age=${mx}` + ((ha.match(/cache-control/g) || []).length > 1 ? ' (Header doppelt)' : '')); }
+else check('R2', 'CSS/JS: Cache 1 Jahr (versioniert)', false, 'CSS-Datei nicht gefunden');
 
 // R8.7/R8.8: JSON-LD-Typen und Affiliate-Satz im Footer
 for (const [u, need] of [['/', ['Organization', 'Person', 'WebSite']], ['/at/kreditkarten/tf-bank-mastercard-gold/', ['Product', 'Review', 'FAQPage', 'BreadcrumbList']], ['/at/ratgeber/fremdwaehrung/', ['Article', 'FAQPage', 'BreadcrumbList']]]) {
@@ -44,7 +44,7 @@ for (const [u, need] of [['/', ['Organization', 'Person', 'WebSite']], ['/at/kre
   const miss = need.filter(t => !types.includes(t));
   check('R8.7', `JSON-LD ${u}`, !miss.length, types.join(', ') + (miss.length ? ` (fehlt: ${miss.join(', ')})` : ''));
   const f = h.slice(h.lastIndexOf('<footer')).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
-  const aff = (f.match(/[^·]*Affiliate[^·.]*\./) || [''])[0].trim();
+  const aff = (f.match(/[^.·©]{0,140}Affiliate[^.·]*\./) || [''])[0].trim();
   check('R8.8', `Affiliate-Satz ${u}`, !!aff, aff || 'nicht gefunden');
 }
 
