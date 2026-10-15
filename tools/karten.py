@@ -138,7 +138,7 @@ def not_pro(x):
 def pros(c):
     p=[]
     f=c.get('fee')
-    if f==0: p.append('Keine Jahresgebühr')
+    if f==0: p.append('Keine Jahresgebühr' + (f' ({c["feeBis"]})' if c.get('feeBis') else ''))
     elif c.get('fee1')==0 and f: p.append(f'Im 1. Jahr 0 € statt {eur(f)} €')
     if c.get('fx')==0: p.append('Keine Fremdwährungsgebühr' + (' bis zur Freigrenze' if c.get('fxLimit') else ''))
     elif c.get('fx') is not None and c['fx']<=1.5: p.append(f'Niedrige Fremdwährungskosten ({fxT(c)})')
@@ -153,6 +153,7 @@ def pros(c):
     if c.get('auto') and c['typ']=='Kreditkarte': p.append('Volle Abbuchung per Lastschrift möglich')
     if c.get('auto') and c['typ']=='Charge' and c['land']=='at': p.append('Automatischer Rechnungsausgleich per Lastschrift')
     for x in c.get('extra') or []:
+        if c.get('feeBis') and re.match(r'Gratis bis',x): continue   # steht schon bei der Jahresgebühr
         if x not in p: p.append(x)
     return p[:9]
 def cons(c):
@@ -182,7 +183,7 @@ def feats(c):
     if c['ex'].get('cb'): t.append(('g','Cashback / Punkte'))
     if c['ex'].get('ml'): t.append(('p','Meilen'))
     if c['ex'].get('lg'): t.append(('a','Lounge'))
-    if c.get('fee')==0: t.append(('g','Dauerhaft ohne Jahresgebühr'))
+    if c.get('fee')==0: t.append(('g',f'Ohne Jahresgebühr {c["feeBis"]}' if c.get('feeBis') else 'Dauerhaft ohne Jahresgebühr'))
     return ''.join(f'<span class="{a}">{b}</span>' for a,b in t)
 def summary(c):
     s=f'Die {c["titel"]} ist eine {TYPLAB.get(c["typ"],c["typ"])} für Kunden in {L["name"]}. '
@@ -215,12 +216,24 @@ def offer(c,big=False):
             f'  {f"<small>{E(o["note"])}</small>" if o.get("note") and big else ""}</div>')
 
 # ---------- Bewertung ----------
+def _norm(t): return re.sub(r'\s+',' ',re.sub(r'[^\wäöüß%€ ]','',(t or '').lower().replace(',',''))).strip()
+def sammel_dedupe(c,pros):
+    """Punkte, die nur wiederholen, was im Feld „Sammeln“ (cbText/earnText) steht, nicht noch einmal als Vorteil zeigen."""
+    f=_norm((c.get('cbText') or '')+' '+(c.get('earnText') or ''))
+    if not f: return pros
+    out=[]
+    for x in pros:
+        n=_norm(x)
+        lead=re.match(r'\+?(\d+ ?(?:%|€|meilen?|punkte?|revpoints?)\b(?: pro \d+ ?€)?)',n)
+        if n and (n in f or (lead and lead.group(1) in f) or (re.search(r'verfallen nicht|unbegrenzt gültig',n) and re.search(r'verfallen nicht|unbegrenzt gültig',f))): continue
+        out.append(x)
+    return out
 def ratecards(cards):
     for c in cards:
         c['ex'].setdefault('offer',bool(c.get('offer') or (c.get('fee1')==0 and c.get('fee'))))
         sc=score(c); c['score']=sc; c['stars']=sc['stars']; c['note']=note(sc['stars'])
         pr=pros(c); neg=[x for x in pr if not_pro(x)]
-        c['pros']=dedupe([x for x in pr if not not_pro(x)]); c['cons']=dedupe(cons(c)+neg)
+        c['pros']=sammel_dedupe(c,dedupe([x for x in pr if not not_pro(x)])); c['cons']=dedupe(cons(c)+neg)
     priv=[c for c in cards if c['art']=='Privat' and c['stars'] is not None and not c.get('nurfuer')]
     priv.sort(key=lambda c:(-c['stars'],c['fee'] if c['fee'] is not None else 1e9,c['titel'].lower()))
     for c in cards: c['rank']=None
@@ -414,7 +427,13 @@ def who(c):
     elif c.get('stars') is None: a.append('Für eine Empfehlung fehlen uns noch bestätigte Daten.')
     else: a.append('Sie passt zu allen, denen die Leistungen dieser Karte den Preis wert sind.')
     if c['ex'].get('lg'): a.append('Wer oft fliegt, nutzt die enthaltenen Lounge-Besuche.')
-    if c['ex'].get('cb') and not re.match(r'(Kein|Nur Partner)',c.get('cbText') or ''): a.append('Wer gerne sammelt, bekommt Punkte oder Geld zurück.')
+    if c['ex'].get('cb') and not re.match(r'(Kein|Nur Partner)',c.get('cbText') or ''):
+        t=((c.get('cbText') or '')+' '+(c.get('earnText') or '')).lower()
+        geld=bool(re.search(r'cashback|geld zurück|gutschrift|% zurück',t)); pkt=bool(re.search(r'punkt|meile|revpoint|rewards|payback|bonus',t))
+        if 'saveback' in t: a.append('Wer gerne spart, bekommt einen Teil der Umsätze in den Sparplan.')
+        elif re.search(r'reisebuchung',t) and not (geld or pkt): a.append('Wer über den Partner bucht, bekommt einen Teil des Reisepreises zurück.')
+        elif re.search(r'rabatt|rückvergütung|erstattung',t) and not pkt: a.append('Wer gerne sammelt, bekommt Geld zurück.')
+        else: a.append('Wer gerne sammelt, bekommt Punkte und Geld zurück.' if geld and pkt else 'Wer gerne sammelt, bekommt Geld zurück.' if geld else 'Wer gerne sammelt, bekommt Punkte oder Meilen.' if pkt else 'Wer gerne sammelt, bekommt Vorteile beim Einkaufen.')
     if c.get('giro'): a.append(f'Am meisten Sinn ergibt sie, wenn du schon Kunde bei {c["anbieter"]} bist.')
     if c['typ']=='Kreditkarte' and not c.get('auto'): b.append('Wenn du Termine leicht vergisst, nimm besser eine Karte mit automatischer Abbuchung. Hier kosten offene Beträge hohe Zinsen.')
     if c['typ']=='Kreditkarte' and c.get('auto'): b.append('Achte darauf, die Rückzahlung auf 100 % zu stellen, sonst fallen Zinsen an.')

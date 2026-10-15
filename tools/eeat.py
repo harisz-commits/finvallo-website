@@ -256,6 +256,8 @@ def methodik(s, land):
     s = s.replace('<h2>Die Regeln je Kriterium</h2>', blk + '<h2>Die Regeln je Kriterium</h2>', 1)
     calc = f'../../../{land}/rechner/teilzahlung/'
     s = s.replace('<h2>Was die Sterne nicht zeigen</h2>', '<h2>Was nicht in die Bewertung einfließt</h2>', 1)
+    s = re.sub(r'<!--gruppen-->.*?<!--/gruppen-->', '', s, flags=re.S)
+    s = s.replace('<h2>Was nicht in die Bewertung einfließt</h2>', '<!--gruppen--><h2>Karten für bestimmte Kundengruppen</h2><div class="prose"><p>Manche Karten bekommt nicht jede und jeder: etwa nur Studierende, junge Kundinnen und Kunden bis zu einem bestimmten Alter, Mitglieder eines Verbands oder nur bestehende Kunden. Wir bewerten sie nach denselben Regeln, führen sie aber in einer eigenen Liste unter der Rangliste. In passenden Bestenlisten, zum Beispiel für Studierende, stehen sie trotzdem.</p><p>Ist eine Karte nur bis zu einem bestimmten Alter oder nur vorübergehend gratis, zählt bei der Jahresgebühr der Preis, den du danach zahlst.</p></div><!--/gruppen--><h2>Was nicht in die Bewertung einfließt</h2>', 1)
     hint = 'Zinsen für Teilzahlung zählen nicht mit, weil sie nur anfallen, wenn du nicht alles zahlst.'
     if hint in s and 'rechner/teilzahlung/' not in s:
         s = s.replace(hint, hint + f' Was sie kosten, zeigt der <a href="{calc}">Teilzahlungsrechner</a>.', 1)
