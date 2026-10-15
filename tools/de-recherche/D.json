@@ -479,7 +479,7 @@
   "netz": "Visa/Mastercard",
   "fee": 79.9,
   "fee1": null,
-  "feeNote": "79,90 € pro Jahr; im PremiumGeschäftskonto kostenfrei enthalten",
+  "feeNote": "79,90 € pro Jahr; im Premium-Geschäftskonto kostenfrei enthalten",
   "konto": "Commerzbank Geschäftskonto (Pflicht)",
   "fx": 1.5,
   "fxText": "1,5 % (außerhalb Euroland; EWR-Währungen zzgl. 0,59 %)",
@@ -518,7 +518,7 @@
   "extra": [
    "0,55 % Umsatzrückvergütung",
    "Auslandsreise-Krankenversicherung",
-   "Im PremiumGeschäftskonto inklusive"
+   "Im Premium-Geschäftskonto inklusive"
   ],
   "cons_extra": [
    "Nur mit Commerzbank-Geschäftskonto",

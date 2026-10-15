@@ -47,6 +47,7 @@ def score(c):
         parts.append({'k':k,'s':round(s,1),'v':v,'w':W[k]})
     f=c.get('fee')
     if f is None: add('Jahresgebühr',MISSING,'keine bestätigten Daten',False)
+    elif c.get('feeNach') is not None: add('Jahresgebühr',s_fee(c['feeNach']),f'0 € {c.get("feeBis") or "vorübergehend"}, danach {eur(c["feeNach"])} € pro Jahr')   # nur zeitweise gratis: Preis danach zählt
     else: add('Jahresgebühr',s_fee(f),'kostenlos' if f==0 else f'{eur(f)} € pro Jahr')
     t=c.get('tier')
     if t is None: add('Reiseversicherung',MISSING,'keine bestätigten Daten',False)

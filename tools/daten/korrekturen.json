@@ -1,24 +1,134 @@
 {
  "hinweis": "Gezielte Korrekturen an Kartendaten mit Quelle (recherchiert 15.10.2026). Wird beim Laden vor der Bewertung angewendet.",
  "karten": [
-  {"land": "at", "titel": "easybank Gold Student", "quelle": "https://www.easybank.at (Preisblatt Kreditkarten, Stand 1.5.2025)",
-   "set": {"cash": ["pctmin", 3, 3.63], "cashText": "3 %, mind. 3,63 €", "fx": 2.5, "fxText": "1,5 % + 1 % Kursaufschlag (USD; andere Währungen 1,5 %)"}},
-  {"land": "at", "titel": "Revolut Standard", "quelle": "https://cdn.revolut.com (Gebührenverzeichnis Standard, EWR)",
-   "set": {"fxLimit": true, "fxText": "0 % werktags bis 1.000 € Umtausch pro Monat, darüber 1 %; am Wochenende 1 % Aufschlag"}},
-  {"land": "at", "titel": "Revolut Plus", "quelle": "https://cdn.revolut.com (Gebührenverzeichnis Plus, EWR)",
-   "set": {"fxLimit": true, "fxText": "0 % werktags bis 3.000 € Umtausch pro Monat, darüber 0,5 %; am Wochenende 0,5 % Aufschlag"}},
-  {"land": "at", "titel": "Revolut Premium", "set": {"fxText": "0 % ohne Wechsellimit"}},
-  {"land": "at", "titel": "Revolut Metal", "set": {"fxText": "0 % ohne Wechsellimit"}},
-  {"land": "at", "titel": "Revolut Ultra", "set": {"fxText": "0 % ohne Wechsellimit"}},
-  {"land": "de", "titel": "Revolut Standard", "set": {"fxLimit": true}},
-  {"land": "de", "titel": "Revolut Plus", "set": {"fxLimit": true}},
-  {"land": "at", "titel": "TF Bank Mastercard Gold", "quelle": "https://tfbank.at/media/n1yh5fqa/04_preis-leistungsverzeichnis_tf-bank_at_20260629.pdf",
-   "set": {"preis": "https://tfbank.at/media/n1yh5fqa/04_preis-leistungsverzeichnis_tf-bank_at_20260629.pdf", "rahmen": null}}
+  {
+   "land": "at",
+   "titel": "easybank Gold Student",
+   "quelle": "https://www.easybank.at (Preisblatt Kreditkarten, Stand 1.5.2025)",
+   "set": {
+    "cash": [
+     "pctmin",
+     3,
+     3.63
+    ],
+    "cashText": "3 %, mind. 3,63 €",
+    "fx": 2.5,
+    "fxText": "1,5 % + 1 % Kursaufschlag (USD; andere Währungen 1,5 %)",
+    "feeBis": "bis zum 27. Lebensjahr",
+    "feeNach": 59.88,
+    "blocks": {
+     "fees": [
+      {
+       "h": "Zahlen im Ausland und Bargeld",
+       "t": "Zahlungen in Fremdwährung kosten 1,5 % Entgelt plus 1 % Kursaufschlag (bei US-Dollar, bei vielen anderen Währungen 1,5 %). Eine Bargeldbehebung kostet 3 %, mindestens 3,63 €."
+      }
+     ],
+     "ins": {
+      "note": "Alle Beträge sind Höchstgrenzen laut Leistungsverzeichnis.",
+      "items": [
+       {
+        "h": "Arztkosten im Ausland",
+        "t": "Die Auslandsreise-Krankenversicherung zahlt bis 500.000 €, versichert ist nur der Karteninhaber. Dafür reicht es, die Karte zu besitzen. Bei einer bestehenden Erkrankung, die akut wird, sind es höchstens 36.500 €."
+       },
+       {
+        "h": "Reise absagen",
+        "t": "Stornokosten sind bis 1.500 € versichert, wenn du die Reise mit der Karte (an)gezahlt hast bis 2.500 €. Du trägst 20 % selbst."
+       },
+       {
+        "h": "Gepäck",
+        "t": "Beschädigtes, gestohlenes oder verlorenes Gepäck bis 2.000 €, verspätetes Gepäck bis 220 €. Voraussetzung: Du hast die Karte in den letzten 3 Monaten verwendet."
+       },
+       {
+        "h": "Hilfe unterwegs",
+        "t": "Such- und Bergungskosten bis 35.000 €, außerplanmäßige Rückreise bis 10.000 €, Mehrkosten bei Flugverspätung bis 200 €. Gepäck, Bergung und Rückreise gelten laut Leistungsverzeichnis auch für mitreisende Familienangehörige."
+       },
+       {
+        "h": "Einkaufsschutz",
+        "t": "Beschädigung, Diebstahl oder Raub von Einkäufen innerhalb von 30 Tagen bis 1.000 €, mit 30 € Selbstbehalt. Voraussetzung: mindestens 80 % mit der Karte bezahlt."
+       }
+      ],
+      "src": "Quelle: <a href=\"https://www.easybank.at/resource/blob/49900/105e7de118c37fdc75270622df884334/premium-easy-gold-versicherung-erv-data.pdf\" target=\"_blank\" rel=\"noopener\">Leistungsverzeichnis easy kreditkarte gold (Europäische Reiseversicherung) ↗</a>"
+     }
+    }
+   }
+  },
+  {
+   "land": "at",
+   "titel": "Revolut Standard",
+   "quelle": "https://cdn.revolut.com (Gebührenverzeichnis Standard, EWR)",
+   "set": {
+    "fxLimit": true,
+    "fxText": "0 % werktags bis 1.000 € Umtausch pro Monat, darüber 1 %; am Wochenende 1 % Aufschlag"
+   }
+  },
+  {
+   "land": "at",
+   "titel": "Revolut Plus",
+   "quelle": "https://cdn.revolut.com (Gebührenverzeichnis Plus, EWR)",
+   "set": {
+    "fxLimit": true,
+    "fxText": "0 % werktags bis 3.000 € Umtausch pro Monat, darüber 0,5 %; am Wochenende 0,5 % Aufschlag"
+   }
+  },
+  {
+   "land": "at",
+   "titel": "Revolut Premium",
+   "set": {
+    "fxText": "0 % ohne Wechsellimit"
+   }
+  },
+  {
+   "land": "at",
+   "titel": "Revolut Metal",
+   "set": {
+    "fxText": "0 % ohne Wechsellimit"
+   }
+  },
+  {
+   "land": "at",
+   "titel": "Revolut Ultra",
+   "set": {
+    "fxText": "0 % ohne Wechsellimit"
+   }
+  },
+  {
+   "land": "de",
+   "titel": "Revolut Standard",
+   "set": {
+    "fxLimit": true
+   }
+  },
+  {
+   "land": "de",
+   "titel": "Revolut Plus",
+   "set": {
+    "fxLimit": true
+   }
+  },
+  {
+   "land": "at",
+   "titel": "TF Bank Mastercard Gold",
+   "quelle": "https://tfbank.at/media/n1yh5fqa/04_preis-leistungsverzeichnis_tf-bank_at_20260629.pdf",
+   "set": {
+    "preis": "https://tfbank.at/media/n1yh5fqa/04_preis-leistungsverzeichnis_tf-bank_at_20260629.pdf",
+    "rahmen": null
+   }
+  }
  ],
  "gruppen": {
-  "easybank Gold Student": {"text": "Nur bis zum 27. Lebensjahr gratis (danach 59,88 € pro Jahr) und nur zusammen mit dem easy gratis Konto", "jung": true},
-  "Bank Austria Gold Student": {"text": "Nur für Studierende, längstens bis zum 30. Geburtstag", "jung": true},
-  "Erste Bank und Sparkassen GÖD Smartcard": {"text": "Nur für Mitglieder der Gewerkschaft Öffentlicher Dienst (GÖD)"},
-  "Erste Bank und Sparkassen GÖD Premiumcard": {"text": "Nur für Mitglieder der Gewerkschaft Öffentlicher Dienst (GÖD)"}
+  "easybank Gold Student": {
+   "text": "Nur bis zum 27. Lebensjahr gratis (danach 59,88 € pro Jahr) und nur zusammen mit dem easy gratis Konto",
+   "jung": true
+  },
+  "Bank Austria Gold Student": {
+   "text": "Nur für Studierende, längstens bis zum 30. Geburtstag",
+   "jung": true
+  },
+  "Erste Bank und Sparkassen GÖD Smartcard": {
+   "text": "Nur für Mitglieder der Gewerkschaft Öffentlicher Dienst (GÖD)"
+  },
+  "Erste Bank und Sparkassen GÖD Premiumcard": {
+   "text": "Nur für Mitglieder der Gewerkschaft Öffentlicher Dienst (GÖD)"
+  }
  }
 }
