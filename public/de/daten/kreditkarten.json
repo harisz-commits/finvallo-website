@@ -388,7 +388,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 79,
+   "rank": 78,
    "pros": [
     "Keine Jahresgebühr",
     "Wechselnder Monatsrabatt in einer Kategorie (z",
@@ -439,7 +439,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 77,
+   "rank": 76,
    "pros": [
     "Keine Jahresgebühr",
     "Kein Girokonto beim Anbieter nötig",
@@ -591,7 +591,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 75,
+   "rank": 74,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Einige Abhebungen pro Monat ohne Gebühr",
@@ -1105,7 +1105,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 78,
+   "rank": 77,
    "pros": [
     "Keine Jahresgebühr",
     "Bargeld ohne Automatengebühr",
@@ -1203,7 +1203,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 56,
+   "rank": 55,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (1,5 % Auslandseinsatzentgelt (Visa-Kurs))",
@@ -1355,7 +1355,7 @@
    "tier": 1,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 74,
+   "rank": 73,
    "pros": [
     "6 % Rückvergütung auf Reisebuchungen über den Reiseservice-Partner PTG (kontoreiseservice.de)",
     "Kein Girokonto beim Anbieter nötig",
@@ -1739,7 +1739,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 58,
+   "rank": 57,
    "pros": [
     "Keine Jahresgebühr",
     "1 Meile pro 2 € Kartenumsatz",
@@ -2076,7 +2076,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 49,
+   "rank": 48,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "5 % Reisebonus auf Buchungen über Partner Urlaubsplus",
@@ -2606,7 +2606,7 @@
    "tier": 3,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 52,
+   "rank": 51,
    "pros": [
     "Umfassender Reiseschutz",
     "1 Bonuspunkt pro 1 € (2 Punkte bei Reise/Restaurant), max",
@@ -2891,7 +2891,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 53,
+   "rank": 52,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Priority-Pass-Mitgliedschaft inklusive",
@@ -3475,7 +3475,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 80,
+   "rank": 79,
    "pros": [
     "Im ExklusivKonto und StartKonto kostenlos",
     "Bargeld an HVB-Automaten kostenlos",
@@ -3622,7 +3622,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 51,
+   "rank": 50,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Bis zu 7 % Rückerstattung nur auf Reisebuchungen über den ReisebuchungsService der Sparkasse (kein Cashback auf normale Einkäufe)",
@@ -4253,7 +4253,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 57,
+   "rank": 56,
    "pros": [
     "Keine Jahresgebühr",
     "Kein Girokonto beim Anbieter nötig",
@@ -4805,7 +4805,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 81,
+   "rank": 80,
    "pros": [
     "Bargeld ohne Automatengebühr",
     "PAYBACK °Punkte auf Kartenumsätze (Sammelrate laut Finanzfluss 1 °P pro 5 €)",
@@ -5004,7 +5004,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 50,
+   "rank": 49,
    "pros": [
     "Im 1. Jahr 0 € statt 70,80 €",
     "Reiseversicherung inkl. Storno",
@@ -5759,7 +5759,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 54,
+   "rank": 53,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -5809,12 +5809,12 @@
    "auto": true,
    "pay": true,
    "tier": 0,
-   "stars": 3.7,
+   "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 45,
+   "rank": 58,
    "pros": [
     "Keine Jahresgebühr",
-    "Keine Fremdwährungsgebühr",
+    "Keine Fremdwährungsgebühr bis zur Freigrenze",
     "Einige Abhebungen pro Monat ohne Gebühr",
     "Kontoführung kostenlos",
     "Deutsche IBAN",
@@ -5861,11 +5861,11 @@
    "auto": true,
    "pay": true,
    "tier": 0,
-   "stars": 3.5,
-   "note": "Befriedigend",
-   "rank": 73,
+   "stars": 3.4,
+   "note": "Ausreichend",
+   "rank": 82,
    "pros": [
-    "Keine Fremdwährungsgebühr",
+    "Keine Fremdwährungsgebühr bis zur Freigrenze",
     "Einige Abhebungen pro Monat ohne Gebühr",
     "Werktags 0 % bis 3.000 €/Monat",
     "Käuferschutz und Ticketstornoversicherung",
@@ -6014,7 +6014,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 76,
+   "rank": 75,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Einige Abhebungen pro Monat ohne Gebühr",
@@ -6214,7 +6214,7 @@
    "tier": 3,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 55,
+   "rank": 54,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % (Mastercard-Kurs + 0,5 % 'Schutz vor Wechselkursschwankungen'))",
     "Einige Abhebungen pro Monat ohne Gebühr",
@@ -6614,7 +6614,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 47,
+   "rank": 46,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (ca. 0,47 % Umrechnungsgebühr EUR→USD zum Devisenmittelkurs (variabel, abhängig von Währung/Betrag; Stand 12.10.2026 per Wise-Preisrechner); 0 % bei Zahlung aus vorhandenem USD-Guthaben)",
@@ -6769,7 +6769,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 46,
+   "rank": 45,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -7020,7 +7020,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 48,
+   "rank": 47,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -7688,7 +7688,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 82,
+   "rank": 81,
    "pros": [
     "Rabatte statt Cashback: 2 % auf Kartenumsätze bei Konzernpartnern der Volkswagen AG, 5-8 % Rückvergütung auf Reisen über das VW-Bank-Reise-Center, bis 20 % Rabatt bei Europcar",
     "Kein Girokonto beim Anbieter nötig",

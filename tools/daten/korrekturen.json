@@ -1,0 +1,24 @@
+{
+ "hinweis": "Gezielte Korrekturen an Kartendaten mit Quelle (recherchiert 15.10.2026). Wird beim Laden vor der Bewertung angewendet.",
+ "karten": [
+  {"land": "at", "titel": "easybank Gold Student", "quelle": "https://www.easybank.at (Preisblatt Kreditkarten, Stand 1.5.2025)",
+   "set": {"cash": ["pctmin", 3, 3.63], "cashText": "3 %, mind. 3,63 €", "fx": 2.5, "fxText": "1,5 % + 1 % Kursaufschlag (USD; andere Währungen 1,5 %)"}},
+  {"land": "at", "titel": "Revolut Standard", "quelle": "https://cdn.revolut.com (Gebührenverzeichnis Standard, EWR)",
+   "set": {"fxLimit": true, "fxText": "0 % werktags bis 1.000 € Umtausch pro Monat, darüber 1 %; am Wochenende 1 % Aufschlag"}},
+  {"land": "at", "titel": "Revolut Plus", "quelle": "https://cdn.revolut.com (Gebührenverzeichnis Plus, EWR)",
+   "set": {"fxLimit": true, "fxText": "0 % werktags bis 3.000 € Umtausch pro Monat, darüber 0,5 %; am Wochenende 0,5 % Aufschlag"}},
+  {"land": "at", "titel": "Revolut Premium", "set": {"fxText": "0 % ohne Wechsellimit"}},
+  {"land": "at", "titel": "Revolut Metal", "set": {"fxText": "0 % ohne Wechsellimit"}},
+  {"land": "at", "titel": "Revolut Ultra", "set": {"fxText": "0 % ohne Wechsellimit"}},
+  {"land": "de", "titel": "Revolut Standard", "set": {"fxLimit": true}},
+  {"land": "de", "titel": "Revolut Plus", "set": {"fxLimit": true}},
+  {"land": "at", "titel": "TF Bank Mastercard Gold", "quelle": "https://tfbank.at/media/n1yh5fqa/04_preis-leistungsverzeichnis_tf-bank_at_20260629.pdf",
+   "set": {"preis": "https://tfbank.at/media/n1yh5fqa/04_preis-leistungsverzeichnis_tf-bank_at_20260629.pdf", "rahmen": null}}
+ ],
+ "gruppen": {
+  "easybank Gold Student": {"text": "Nur bis zum 27. Lebensjahr gratis (danach 59,88 € pro Jahr) und nur zusammen mit dem easy gratis Konto", "jung": true},
+  "Bank Austria Gold Student": {"text": "Nur für Studierende, längstens bis zum 30. Geburtstag", "jung": true},
+  "Erste Bank und Sparkassen GÖD Smartcard": {"text": "Nur für Mitglieder der Gewerkschaft Öffentlicher Dienst (GÖD)"},
+  "Erste Bank und Sparkassen GÖD Premiumcard": {"text": "Nur für Mitglieder der Gewerkschaft Öffentlicher Dienst (GÖD)"}
+ }
+}

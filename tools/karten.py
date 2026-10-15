@@ -140,7 +140,7 @@ def pros(c):
     f=c.get('fee')
     if f==0: p.append('Keine Jahresgebühr')
     elif c.get('fee1')==0 and f: p.append(f'Im 1. Jahr 0 € statt {eur(f)} €')
-    if c.get('fx')==0: p.append('Keine Fremdwährungsgebühr')
+    if c.get('fx')==0: p.append('Keine Fremdwährungsgebühr' + (' bis zur Freigrenze' if c.get('fxLimit') else ''))
     elif c.get('fx') is not None and c['fx']<=1.5: p.append(f'Niedrige Fremdwährungskosten ({fxT(c)})')
     v=cash200(c.get('cash'))
     if v==0: p.append('Bargeld ohne Automatengebühr')
@@ -718,7 +718,7 @@ def methodik_page(cards,priv):
     ex=priv[0]
     rows=lambda X: ''.join(f'<tr><td>{a}</td><td>{b}</td></tr>' for a,b in X)
     rules=[('Jahresgebühr · 25 %','Was die Karte ab dem zweiten Jahr kostet. Aktionen im ersten Jahr zählen bei den Extras.',[('0 €','5,0'),('bis 25 €','4,6'),('bis 50 €','4,2'),('bis 100 €','3,6'),('bis 150 €','3,0'),('bis 250 €','2,4'),('bis 450 €','1,8'),('über 450 €','1,2')]),
-           ('Zahlen im Ausland · 15 %','Was eine Zahlung in US-Dollar insgesamt extra kostet, also Auslandseinsatzentgelt und Kursaufschlag zusammen.',[('0 %','5,0'),('bis 0,5 %','4,8'),('bis 1 %','4,4'),('bis 1,5 %','4,0'),('bis 2 %','3,4'),('bis 2,7 %','2,6'),('bis 3,2 %','2,0'),('darüber','1,5')]),
+           ('Zahlen im Ausland · 15 %','Was eine Zahlung in US-Dollar insgesamt extra kostet, also Auslandseinsatzentgelt und Kursaufschlag zusammen.',[('0 %','5,0'),('0 % mit Freigrenze oder Wochenendaufschlag','4,8'),('bis 0,5 %','4,8'),('bis 1 %','4,4'),('bis 1,5 %','4,0'),('bis 2 %','3,4'),('bis 2,7 %','2,6'),('bis 3,2 %','2,0'),('darüber','1,5')]),
            ('Reiseversicherung · 20 %','Wie umfassend der Reiseschutz ist, der ohne Aufpreis enthalten ist.',[('Premium-Reiseschutz','5,0'),('umfassender Reiseschutz (mit Mietwagen)','4,7'),('Reiseversicherung mit Reiserücktritt','4,2'),('Basis-Reiseschutz','3,0'),('keine Reiseversicherung','1,0')]),
            ('Kartenart & Akzeptanz · 10 %','Wo die Karte angenommen wird. Debit- und Prepaid-Karten gehen fast überall, werden aber bei Kautionen für Mietwagen oder Hotels oft abgelehnt.',[('Kredit- oder Charge-Karte mit Visa oder Mastercard','5,0'),('Kredit- oder Charge-Karte, Netz nicht bestätigt','4,5'),('Debit- oder Prepaid-Karte mit Visa oder Mastercard','3,5'),('American Express','3,0'),('Diners Club','2,0')]),
            ('Alltag & Flexibilität · 10 %','Durchschnitt aus drei Punkten. Ist ein Punkt nicht bestätigt, zählt er wie bei allen Kriterien mit 2,5 Sternen.',[('kein Konto beim Anbieter nötig','5,0 (sonst 2,5)'),('automatische Abbuchung','5,0 (sonst 3,0)'),('Apple Pay / Google Pay','5,0 (sonst 1,0)')]),
@@ -770,7 +770,14 @@ def youth(c):
         if re.search(YOUTH,x): return x
     return None
 # Karten nur für bestimmte Gruppen (Studium/Alter, Mitgliedschaft): nicht im Hauptranking, aber in passenden Bestenlisten
-GRUPPEN=json.load(open(os.path.join(SP,'daten','gruppen.json'))) if os.path.exists(os.path.join(SP,'daten','gruppen.json')) else {}
+KORR=json.load(open(os.path.join(SP,'daten','korrekturen.json'))) if os.path.exists(os.path.join(SP,'daten','korrekturen.json')) else {}
+GRUPPEN=KORR.get('gruppen') or {}
+def apply_korrekturen(cards,land):
+    """Gezielte, belegte Korrekturen aus tools/daten/korrekturen.json."""
+    by={c.get('titel'):c for c in cards}
+    for k in KORR.get('karten') or []:
+        c=by.get(k['titel'])
+        if k['land']==land and c: c.update(k['set'])
 def apply_gruppen(cards):
     for c in cards:
         t=c.get('titel') or ''
@@ -1110,7 +1117,7 @@ def prepare():
     """Lädt und bewertet beide Länder (für andere Skripte wie ratgeber.py und listui.py)."""
     DATA={}
     for land in ('at','de'):
-        cards=load(land); apply_lounge(cards,land); apply_gruppen(cards); ratecards(cards)
+        cards=load(land); apply_korrekturen(cards,land); apply_lounge(cards,land); apply_gruppen(cards); ratecards(cards)
         LANDS[land]['stand']=max(c['geprueft'] for c in cards)
         DATA[land]=(cards,providers(land,cards))
         priv=[c for c in cards if c['art']!='Business']

@@ -44,7 +44,7 @@ COL=dict(karte=('Karte',lambda c,P:link(c,P)),
 # optional corrections=[dict(date='JJJJ-MM-TT', note='…')] → Abschnitt „Korrekturen“ am Ende des Artikels.
 DATES={
     ('at','business'): dict(published='2026-10-11', updated='2026-10-11'),
-    ('at','fremdwaehrung'): dict(published='2026-10-11', updated='2026-10-14'),
+    ('at','fremdwaehrung'): dict(published='2026-10-11', updated='2026-10-15'),
     ('at','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
     ('at','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-12'),
     ('at','kreditkarte-beantragen'): dict(published='2026-10-12', updated='2026-10-12'),
@@ -274,7 +274,7 @@ def build(land):
                 ('Karten ohne Auslandsgebühr',table(fx0,[COL['karte'],COL['fee'],COL['cash'],COL['stars']],P)+f'<p class="note"><a class="lnk" href="{best}ausland/">Zur Bestenliste: ohne Auslandsgebühr →</a></p>'),
                 ('Die Falle „in Euro zahlen?“','<div class="info"><span class="ic">!</span><div><p style="margin:0">Fragt dich ein Terminal oder Geldautomat im Ausland, ob du in Euro statt in der Landeswährung zahlen willst, lehne ab. Bei der Umrechnung durch den Händler ist der Kurs fast immer schlechter als bei deiner Bank.</p></div></div>'),
                 ('Bargeld im Ausland','<div class="prose"><p>Beim Beheben im Ausland fallen bis zu drei Kosten an: das Bearbeitungsentgelt für die Fremdwährung, eine Bargeldgebühr deiner Bank und eine Gebühr des Automatenbetreibers. Viele gebührenfreie Karten erstatten nur die eigenen Gebühren, nicht die des Betreibers. Was jede Karte für das Beheben verlangt, steht in den Tabellen oben und auf der jeweiligen Kartenseite.</p></div>'),
-                ('Das Urteil zu card complete','<div class="prose"><p>Der Oberste Gerichtshof hat 2026 entschieden, dass card complete Bearbeitungsentgelt und Kursaufschlag in älteren Verträgen nicht doppelt verrechnen durfte. Die Arbeiterkammer sieht ein ähnliches Muster bei PayLife und BAWAG und bietet einen Musterbrief an: <a class="lnk" href="https://wien.arbeiterkammer.at/cardcomplete" target="_blank" rel="noopener">Musterbrief bei der Arbeiterkammer</a>.</p></div>')],
+                ('Das Urteil zu card complete','<div class="prose"><p>Der Oberste Gerichtshof hat 2026 entschieden, dass card complete Bearbeitungsentgelt und Kursaufschlag in älteren Verträgen nicht doppelt verrechnen durfte. Die Arbeiterkammer sieht ein ähnliches Muster bei PayLife und BAWAG Rückerstattungen konnten laut <a class="lnk" href="https://wien.arbeiterkammer.at/cardcomplete" target="_blank" rel="noopener">Arbeiterkammer</a> bis 1. August 2026 beantragt werden; diese Frist ist abgelaufen.</p></div>')],
           faq=[('Kostet das Zahlen mit Kreditkarte in Euro-Ländern extra?','Nein. Zahlungen in Euro innerhalb des Euroraums kosten wie im Inland, meist also nichts.'),
                ('Wie hoch ist die Gebühr für Fremdwährung bei österreichischen Banken?',f'Bei den Standardkarten der großen Banken in unserem Vergleich {pct(fxs[0])} bis {pct(fxs[-1])}, je nachdem ob ein Kursaufschlag dazukommt. Karten ohne Auslandsgebühr verlangen 0 %.' if fxs else 'Das hängt von der Bank ab.'),
                ('Soll ich am Automaten im Ausland Euro oder Landeswährung wählen?','Immer die Landeswährung. Die Umrechnung in Euro durch den Automaten ist fast immer teurer.')],

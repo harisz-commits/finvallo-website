@@ -53,6 +53,7 @@ def score(c):
     else: add('Reiseversicherung',*TIER[t])
     x=c.get('fx')
     if x is None: add('Zahlen im Ausland',MISSING,'keine bestätigten Daten',False)
+    elif x==0 and c.get('fxLimit'): add('Zahlen im Ausland',4.8,'0 % nur bis zur Freigrenze, darüber und am Wochenende mit Aufschlag')
     else: add('Zahlen im Ausland',s_fx(x),'0 %' if x==0 else f'{pct(x)} pro Zahlung in US-Dollar')
     # Alltag: drei Punkte; was nicht bestätigt ist, zählt wie überall mit MISSING (2,5)
     vals=[];txt=[];conf=0
