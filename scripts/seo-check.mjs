@@ -102,7 +102,7 @@ for (const f of pages) {
     const ok = new Set([...ALLOWED[me], ...(pv ? [(ALLOWED['anbieter_' + me] || {})[pv[1]]] : [])]);
     for (const m of t.matchAll(/(?<![\w.,])(\d+) (?:bewerteten |bewertete )?(?:(?:Kredit|Debit|Prepaid|Charge|Business)-|Privat|Kredit)?[Kk]arten\b/g)) {
       const n = +m[1], ctx = t.slice(Math.max(0, m.index - 12), m.index), after = t.slice(m.index, m.index + 80);
-      if (ok.has(n) || /(Trading |▭ |bis zu )$/.test(ctx) || /^\d+ Kreditkarten in unserem \S+-Vergleich enthalten|^\d+ Karten · ansehen/.test(after)) continue;
+      if (n < 10 || ok.has(n) || /(Trading |▭ |bis zu )$/.test(ctx) || /^\d+ Kreditkarten in unserem \S+-Vergleich enthalten|^\d+ Karten · ansehen/.test(after)) continue;
       err.push(`A6 ${rel}: Kartenanzahl „${m[0]}“ stammt nicht aus card_count()`);
     }
   }

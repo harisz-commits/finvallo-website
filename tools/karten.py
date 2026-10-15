@@ -93,7 +93,7 @@ def cashT(c):
     t=c.get('cashText')
     if t: return t
     v=cash200(c.get('cash'))
-    return 'unbekannt' if v is None else 'kostenlos' if v==0 else f'{eur(v)} € für 200 €' if isinstance(v,float) else 'kostenlos, aber verzinst'
+    return 'unbekannt' if v is None else 'kostenlos' if v==0 else 'begrenzt kostenlos' if v=='fn' else f'{eur(v)} € für 200 €' if isinstance(v,float) else 'kostenlos, aber verzinst'
 def cash_sentence(c):
     t=cashT(c)
     if t.lower()=='kostenlos': return f'{L["Cash"]} kostet 0 %.'
@@ -109,14 +109,23 @@ TOPICS=[('girokonto','konto beim anbieter','geschäftskonto','hausbank'),('reise
         ('unbegrenzt gültig','verfallen nicht'),('wolt+',),('^bargeld','^weltweit kostenlos bargeld')]
 def dedupe(xs):
     """Doppelte Punkte entfernen: gleich nach Normalisierung (Kleinschreibung, ohne Satzzeichen) oder gleiches Thema mit gleicher Aussage."""
-    out=[]; seen=set(); topics={}; keys=set()
+    out=[]; seen=set(); topics={}; keys=set(); pcs=set()
     for x in xs:
         n=re.sub(r'[^\wäöüß%€ ]','',x.lower()); n=re.sub(r'\s+',' ',n).strip()
         # R7.3: Stoppwörter weg (Karten, pro, je, …) und die ersten 25 Zeichen vergleichen
         k=re.sub(r'\s+',' ',re.sub(r'karten|\bpro\b|\bje\b|…','',n)).strip()[:25]
+        pc=re.match(r'(\d+(?: ?\d+)?) ?% (cashback|rückvergütung|umsatzrückvergütung)',n)
+        if pc and pc.group(0) in pcs: continue
+        if pc: pcs.add(pc.group(0))
         if n in seen or any(k.startswith(o) or o.startswith(k) for o in keys if min(len(k),len(o))>=15) or any(n in o or o in n for o in seen if len(o)>12 and len(n)>12): continue
         keys.add(k)
         t=next((i for i,ws in enumerate(TOPICS) if any(re.search(re.escape(w).replace('\\^','^'),x.lower()) for w in ws)),None)
+        if t is None and re.search(r'lastschrift|nicht abgebucht',x.lower()):
+            if 'abbuchung' in topics: continue
+            topics['abbuchung']=x
+        if t is None and re.search(r'teilzahlung ist teuer|hoher zins',x.lower()):
+            if 'zins' in topics: continue
+            topics['zins']=x
         neg=bool(re.match(r'(keine?|nur|ohne|0 €|0 %)(\b|\s)',x.lower()))
         if t is not None and (t,neg) in topics: continue
         if t is not None: topics[(t,neg)]=x
@@ -134,9 +143,10 @@ def pros(c):
     if c.get('fx')==0: p.append('Keine Fremdwährungsgebühr')
     elif c.get('fx') is not None and c['fx']<=1.5: p.append(f'Niedrige Fremdwährungskosten ({fxT(c)})')
     v=cash200(c.get('cash'))
-    if v==0: p.append('Bargeld ohne Automatengebühr' + (' (Gratis-Abhebungen begrenzt)' if (c.get('cash') or [''])[0]=='freeN' else ''))
+    if v==0: p.append('Bargeld ohne Automatengebühr')
+    elif v=='fn': p.append('Einige Abhebungen pro Monat ohne Gebühr')
     if (c.get('tier') or 0)>=2: p.append(TIER[c['tier']][1])
-    if c.get('cbText') and c['ex'].get('cb'): p.append(c['cbText'])
+    if c.get('cbText') and c['ex'].get('cb'): p.append(re.split(r';|\. ',c['cbText'])[0].rstrip('.'))   # Kurzfassung, Details stehen in der Konditionstabelle
     if c['ex'].get('lg') and c.get('lgText'): p.append(c['lgText'])
     if c['ex'].get('credits') and c.get('creditsText'): p.append(c['creditsText'])
     if c.get('giro') is False: p.append('Kein Girokonto beim Anbieter nötig')
@@ -166,6 +176,7 @@ def feats(c):
     t=[]
     if c.get('fx')==0: t.append(('g','Kostenlos im Ausland'))
     if cash200(c.get('cash'))==0: t.append(('b','Gratis Bargeld'))
+    elif cash200(c.get('cash'))=='fn': t.append(('b','Bargeld begrenzt gratis'))
     if (c.get('tier') or 0)>=1: t.append(('p','Reiseversicherung'))
     if c.get('pay'): t.append(('a','Apple Pay &amp; Google Pay'))
     if c['ex'].get('cb'): t.append(('g','Cashback / Punkte'))
@@ -403,7 +414,7 @@ def who(c):
     elif c.get('stars') is None: a.append('Für eine Empfehlung fehlen uns noch bestätigte Daten.')
     else: a.append('Sie passt zu allen, denen die Leistungen dieser Karte den Preis wert sind.')
     if c['ex'].get('lg'): a.append('Wer oft fliegt, nutzt die enthaltenen Lounge-Besuche.')
-    if c['ex'].get('cb'): a.append('Wer gerne sammelt, bekommt Punkte oder Geld zurück.')
+    if c['ex'].get('cb') and not re.match(r'(Kein|Nur Partner)',c.get('cbText') or ''): a.append('Wer gerne sammelt, bekommt Punkte oder Geld zurück.')
     if c.get('giro'): a.append(f'Am meisten Sinn ergibt sie, wenn du schon Kunde bei {c["anbieter"]} bist.')
     if c['typ']=='Kreditkarte' and not c.get('auto'): b.append('Wenn du Termine leicht vergisst, nimm besser eine Karte mit automatischer Abbuchung. Hier kosten offene Beträge hohe Zinsen.')
     if c['typ']=='Kreditkarte' and c.get('auto'): b.append('Achte darauf, die Rückzahlung auf 100 % zu stellen, sonst fallen Zinsen an.')
@@ -517,7 +528,7 @@ def list_item(c,P,base=''):
     v=cash200(c.get('cash'))
     st=lambda good,txt: f'<b class="{ "good" if good else ""}">{E(txt)}</b>'
     fee='–' if c.get('fee') is None else ('€ 0,00' if c['fee']==0 else f'€ {eur(c["fee"])}')
-    cash="Kostenlos" if v==0 else "0 € (verzinst)" if v=="fi" else (c.get('cashText') if c.get('cashText') and len(c['cashText'])<=40 else (eur(v)+" €") if isinstance(v,float) else (c.get('cashText') or "–"))
+    cash="Kostenlos" if v==0 else "Begrenzt gratis" if v=="fn" else "0 € (verzinst)" if v=="fi" else (c.get('cashText') if c.get('cashText') and len(c['cashText'])<=40 else (eur(v)+" €") if isinstance(v,float) else (c.get('cashText') or "–"))
     rank=f'<span class="rank r{c["rank"]}">{c["rank"]}</span>' if c.get('rank') and c['rank']<=3 else (f'<span class="rank">{c["rank"]}</span>' if c.get('rank') else '')
     earn=c.get('earnText') or (c.get('cbText') if c['ex'].get('cb') else None)
     return f'''<article class="item" id="it-{c.get("id") or c["slug"]}">
@@ -549,13 +560,13 @@ def list_page(cards,priv,biz):
     body=f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/")}
 <div class="wrap"><main id="app">
 <h1>Kreditkarten-Vergleich {N}</h1>
-  <p class="lede">{n} Karten in {N}: {card_count(code,'private')} Privatkarten in dieser Rangliste, {card_count(code,'business')} Business-Karten auf einer <a href="business/">eigenen Seite</a>{f" und {len(unrated)} Karten ohne Bewertung (zu wenig bestätigte Daten)" if unrated else ""}. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>
+  <p class="lede">{n} Karten in {N}: {card_count(code,'rated')} in der Rangliste, {card_count(code,'special')} für bestimmte Kundengruppen in einer eigenen Liste darunter und {card_count(code,'business')} Business-Karten auf einer <a href="business/">eigenen Seite</a>{f" und {len(unrated)} Karten ohne Bewertung (zu wenig bestätigte Daten)" if unrated else ""}. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>
   <details class="box howscore"><summary><span><b>So entstehen die Sterne</b><br><small>7 Kriterien, feste Regeln, offene Gewichtung</small></span><span class="lnk">anzeigen</span></summary>
     <div class="wbars">{"".join(f'<div class="wbar"><span>{k}</span><span class="t"><i style="width:{w*4}%"></i></span><em>{w} %</em></div>' for k,w in [("Jahresgebühr",25),("Reiseversicherung",20),("Zahlen im Ausland",15),("Kartenart &amp; Akzeptanz",10),("Alltag &amp; Flexibilität",10),("Bargeld",10),("Extras",10)])}</div>
     <p class="note">Jedes Kriterium bekommt nach festen Regeln 1 bis 5 Sterne. Die Gesamtnote ist der gewichtete Durchschnitt. Ab 4,5 Sternen gilt eine Karte als sehr gut. Fehlende Angaben zählen mit 2,5 Sternen, damit sie keinen Vorteil bringen. Bei gleicher Sternzahl steht die Karte mit der niedrigeren Jahresgebühr vorn.</p>
     <p class="note">Kategorie-Plätze (z. B. „Platz 1 für Reisen“) kommen aus den Bestenlisten, dort sind die Kriterien anders gewichtet. Deshalb kann eine Karte in einer Kategorie vorn liegen und in der Gesamtwertung weiter hinten.</p>
     <a class="lnk" href="{P}{code}/kreditkarten/methodik/">Alle Regeln und ein Rechenbeispiel →</a></details>
-  <p class="lhead"><b>{card_count(code,'private')} Karten{f", davon {card_count(code,'special')} für bestimmte Kundengruppen" if card_count(code,'special') else ""}</b></p>
+  <p class="lhead"><b>{card_count(code,'rated')} Karten in der Rangliste</b></p>
   <div class="list" id="list">{"".join(list_item(c,P) for c in priv)}</div>
   {f'<h2>Noch nicht bewertet</h2><p class="note">Für diese Karten fehlen uns bestätigte Angaben in mindestens drei Kriterien.</p><div class="list">{"".join(list_item(c,P) for c in unrated)}</div>' if unrated else ''}
   {f'<h2>Nur für bestimmte Kundengruppen</h2><p class="note">Diese Karten bekommt nicht jeder. Sie stehen deshalb nicht in der Rangliste.</p><div class="list" data-special>{"".join(list_item(c,P) for c in special)}</div>' if special else ''}
@@ -584,12 +595,13 @@ def biz_page(biz):
     nogiro=[c for c in biz if c.get('giro') is False]
     nl=lambda X: ', '.join(c['titel'] for c in X[:-1])+' und '+X[-1]['titel'] if len(X)>1 else X[0]['titel']
     fq=[]
-    if free: fq.append(('Welche Firmenkarte hat keine Jahresgebühr?',f'Ohne Jahresgebühr: {nl(free[:6])}.'+(f' Am besten bewertet davon ist die {max(free,key=lambda c:c.get("stars") or 0)["titel"]}.' if len(free)>1 else '')))
+    if free: fq.append(('Welche Firmenkarte hat keine Jahresgebühr?',f'Ohne Jahresgebühr: {nl(free)}.'+(f' Am besten bewertet davon ist die {max(free,key=lambda c:c.get("stars") or 0)["titel"]}.' if len(free)>1 else '')))
     else: fq.append(('Welche Firmenkarte hat keine Jahresgebühr?','In unserem Vergleich hat derzeit keine Firmenkarte eine Jahresgebühr von 0 €.'))
-    if mit: fq.append(('Welche Firmenkarten haben kostenlose Mitarbeiterkarten?',f'Laut Anbieter mit kostenlosen Zusatz- oder Mitarbeiterkarten: {nl(mit[:6])}. Die Bedingungen stehen auf der jeweiligen Kartenseite.'))
-    if nogiro: fq.append(('Welche Firmenkarten gibt es ohne Firmenkonto beim Anbieter?',f'Ohne Konto beim Anbieter bekommst du: {nl(nogiro[:6])}.'))
+    if mit: fq.append(('Welche Firmenkarten haben kostenlose Mitarbeiterkarten?',f'Laut Anbieter mit kostenlosen Zusatz- oder Mitarbeiterkarten: {nl(mit)}. Die Bedingungen stehen auf der jeweiligen Kartenseite.'))
+    if nogiro: fq.append(('Welche Firmenkarten gibt es ohne Firmenkonto beim Anbieter?',f'Ohne Konto beim Anbieter bekommst du: {nl(nogiro)}.'))
     first=kc[0] if kc else biz[0]
-    kurz=f'<b>Kurz gesagt:</b> {len(biz)} Firmenkarten im Vergleich. Am besten bewertet ist die {first["titel"]}'+(f' mit {de1(first["stars"])} Sternen' if first.get('stars') else '')+'.'+(f' {len(free)} {"Karte kostet" if len(free)==1 else "Karten kosten"} keine Jahresgebühr.' if free else '')
+    tie=[c for c in kc if c.get('stars')==first.get('stars')] if first.get('stars') else [first]
+    kurz=f'<b>Kurz gesagt:</b> {len(biz)} Firmenkarten im Vergleich. '+(f'Am besten bewertet ist die {first["titel"]}'+(f' mit {de1(first["stars"])} Sternen' if first.get('stars') else '') if len(tie)<2 else f'Am besten bewertet sind mit je {de1(first["stars"])} Sternen: '+nl(tie))+'.'+(f' {len(free)} {"Karte kostet" if len(free)==1 else "Karten kosten"} keine Jahresgebühr.' if free else '')
     ld=graph(rel,t,d,[(L['name'],f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Business',rel)],[{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}])
     body=f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/business/")}
 <div class="wrap"><main id="app">
@@ -710,7 +722,7 @@ def methodik_page(cards,priv):
            ('Reiseversicherung · 20 %','Wie umfassend der Reiseschutz ist, der ohne Aufpreis enthalten ist.',[('Premium-Reiseschutz','5,0'),('umfassender Reiseschutz (mit Mietwagen)','4,7'),('Reiseversicherung mit Reiserücktritt','4,2'),('Basis-Reiseschutz','3,0'),('keine Reiseversicherung','1,0')]),
            ('Kartenart & Akzeptanz · 10 %','Wo die Karte angenommen wird. Debit- und Prepaid-Karten gehen fast überall, werden aber bei Kautionen für Mietwagen oder Hotels oft abgelehnt.',[('Kredit- oder Charge-Karte mit Visa oder Mastercard','5,0'),('Kredit- oder Charge-Karte, Netz nicht bestätigt','4,5'),('Debit- oder Prepaid-Karte mit Visa oder Mastercard','3,5'),('American Express','3,0'),('Diners Club','2,0')]),
            ('Alltag & Flexibilität · 10 %','Durchschnitt aus drei Punkten. Ist ein Punkt nicht bestätigt, zählt er wie bei allen Kriterien mit 2,5 Sternen.',[('kein Konto beim Anbieter nötig','5,0 (sonst 2,5)'),('automatische Abbuchung','5,0 (sonst 3,0)'),('Apple Pay / Google Pay','5,0 (sonst 1,0)')]),
-           ('Bargeld · 10 %','Was eine Abhebung von 200 € am Automaten in Deutschland kostet.',[('kostenlos','5,0'),('kostenlos, aber ab Tag 1 verzinst','4,5'),('bis 2 €','4,2'),('bis 4 €','3,4'),('bis 7 €','2,6'),('darüber','2,0')]),
+           ('Bargeld · 10 %','Was eine Abhebung von 200 € am Automaten in Deutschland kostet.',[('kostenlos','5,0'),('kostenlos, aber ab Tag 1 verzinst','4,5'),('kostenlos, aber nur begrenzt viele Abhebungen','4,5'),('bis 2 €','4,2'),('bis 4 €','3,4'),('bis 7 €','2,6'),('darüber','2,0')]),
            ('Extras · 10 %','Jede Karte startet bei 2,5 Sternen. Für jedes Extra gibt es einen Zuschlag, höchstens bis 5,0.',[('Cashback, Punkte oder Partner-Rabatte inklusive','+1,0'),('kostenlose Lounge-Besuche','+1,0'),('nur Lounge-Mitgliedschaft','+0,4'),('Meilen','+0,5'),('Guthaben oder Partner-Abos','+0,5'),('FastTrack','+0,3'),('Aktion im 1. Jahr','+0,3')])]
     rb=''.join(f'<h3 style="margin-top:22px">{a}</h3><p class="note">{b}</p><div class="tbl"><table><tbody>{rows(X)}</tbody></table></div>' for a,b,X in rules)
     exrows=''.join(f'<tr><td><b>{E(p["k"])}</b><br><small class="mut">{E(p["v"])}</small></td><td>{p["w"]} %</td><td>{de1(p["s"])}</td></tr>' for p in ex['score']['parts'])
@@ -757,6 +769,15 @@ def youth(c):
     for x in c.get('extra') or []:
         if re.search(YOUTH,x): return x
     return None
+# Karten nur für bestimmte Gruppen (Studium/Alter, Mitgliedschaft): nicht im Hauptranking, aber in passenden Bestenlisten
+GRUPPEN=json.load(open(os.path.join(SP,'daten','gruppen.json'))) if os.path.exists(os.path.join(SP,'daten','gruppen.json')) else {}
+def apply_gruppen(cards):
+    for c in cards:
+        t=c.get('titel') or ''
+        g=GRUPPEN.get(t)
+        if g: c['nurfuer']=g['text']; c['jung']=g.get('jung',False); continue
+        if not c.get('nurfuer') and re.search(r'\b(Student|Maturant|Young|Jugend)',t):
+            c['nurfuer']='Nur für Studierende oder junge Kundinnen und Kunden (Altersgrenze beim Anbieter)'; c['jung']=True
 def lounge_data(land):
     p=os.path.join(SP,'daten',land,'lounge.json')
     return json.load(open(p))['karten'] if os.path.exists(p) else {}
@@ -836,7 +857,7 @@ def cat_lists(cards,land):
         c['sammelNet']=(v[0]-(c.get('fee') or 0)) if v else None; c['sammelNetNote']=sammeln.net_note(c['sammelNet'])
     for cat in CATS:
         f=cat.get('f_'+land,cat['f'])
-        X=[c for c in cards if c['art']=='Privat' and not c.get('nurfuer') and c.get('stars') is not None and f(c)]
+        X=[c for c in cards if c['art']=='Privat' and (not c.get('nurfuer') or (cat['k']=='studium' and c.get('jung'))) and c.get('stars') is not None and f(c)]
         out[cat['k']]=sorted(X,key=lambda c:(-(cat_stars(c,cat['w']) or 0),c.get('fee') if c.get('fee') is not None else 1e9,c['titel'].lower()))
     best={}
     for cat in CATS:
@@ -937,9 +958,9 @@ def bestenlisten(cards,lists,other_lists):
                    'punkte':' Sammelwert nach Jahresgebühr = Wert der Punkte oder Meilen bei 1.000 € Umsatz im Monat pro Jahr, minus Jahresgebühr und Aufpreis fürs Programm. Ein Punkt oder eine Meile zählt mit 1 Cent, ein Hilton-Punkt mit 0,4 Cent. Ab 150 € 5,0 Sterne, ab 100 € 4,5, ab 60 € 4,0, ab 30 € 3,5, ab 0 € 3,0, bis −50 € 2,5, bis −150 € 2,0, darunter 1,5. Wer Punkte gezielt in Business-Class-Flüge tauscht, holt oft mehr heraus; Guthaben und Lounges von Premiumkarten zählen in der Liste „Premium“.'}.get(cat['k'],'')
             wb='<details class="box howscore"><summary><span><b>So gewichten wir in dieser Kategorie</b></span><span class="lnk">anzeigen</span></summary><div class="wbars">'+''.join(f'<div class="wbar"><span>{E(k)}</span><span class="t"><i style="width:{v/mx*100}%"></i></span><em>{v} %</em></div>' for k,v in cat['w'].items())+'</div><p class="note">Die Sterne je Kriterium sind dieselben wie in der Gesamtwertung, nur die Gewichte ändern sich.'+extra+'</p></details>'
         cols=COLS[cat['k']]
-        rows=''.join(f'<tr><td><b>{i+1}</b></td><td><a class="lnk" href="../../{c["slug"]}/">{E(c["titel"])}</a></td>'+''.join(f'<td{"" if h in TXTCOL else " class=nw"}>{E(fn(c))}</td>' for h,fn in cols)+f'<td style="white-space:nowrap"><b>{de1(cat_stars(c,cat["w"]))} ★</b></td><td style="white-space:nowrap">{de1(c["stars"])} ★</td></tr>' for i,c in enumerate(X[:25]))
-        thead='<tr><th>#</th><th>Karte</th>'+''.join(f'<th>{E(h)}</th>' for h,_ in cols)+'<th>Kategorie</th><th>Gesamt</th></tr>'
-        cnote=f'<p class="note" style="margin-top:8px">{E(COLNOTE[cat["k"]])}</p>' if cat['k'] in COLNOTE else ''
+        rows=''.join(f'<tr><td><b>{i+1}</b></td><td><a class="lnk" href="../../{c["slug"]}/">{E(c["titel"])}</a></td>'+''.join(f'<td{"" if h in TXTCOL else " class=nw"}>{E(fn(c))}</td>' for h,fn in cols)+(f'<td style="white-space:nowrap"><b>{de1(cat_stars(c,cat["w"]))} ★</b></td>' if cat['w'] else '')+f'<td style="white-space:nowrap">{de1(c["stars"])} ★</td></tr>' for i,c in enumerate(X[:25]))
+        thead='<tr><th>#</th><th>Karte</th>'+''.join(f'<th>{E(h)}</th>' for h,_ in cols)+('<th>Kategorie</th>' if cat['w'] else '')+'<th>Gesamt</th></tr>'
+        cnote=f'<p class="note" style="margin-top:8px">{E(COLNOTE[cat["k"]]+" " if cat["k"] in COLNOTE else "")}Bei gleicher Note steht die Karte mit der niedrigeren Jahresgebühr vorn.</p>'
         kurz=f'<b>Kurz gesagt:</b> {cat["h"]} in {N}: Platz 1 ist laut Finvallo die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} Sternen in dieser Kategorie'+(f', vor der {X[1]["titel"]}' if len(X)>1 else '')+(f' und der {X[2]["titel"]}' if len(X)>2 else '')+f'. Die Liste zeigt {"die Top 25 von "+str(len(X))+" bewerteten Karten" if len(X)>25 else "alle "+str(len(X))+" bewerteten Karten"}. Stand: {S}.'
         fq=[(f'Welche Karte ist in {N} am besten in der Kategorie „{cat["t"]}“?',f'In der Kategorie „{cat["t"]}“ liegt laut Finvallo-Bewertung die {top["titel"]} vorn, mit {de1(cat_stars(top,cat["w"]))} von 5 Sternen (Gesamtnote {de1(top["stars"])}). Stand: {S}.'),
             ('Wie entsteht diese Rangliste?',cat['d']+(' Grundlage ist die Gesamtnote der Karte.' if (cat['w'] or {}).get('_bonus') else '')),
@@ -1089,7 +1110,7 @@ def prepare():
     """Lädt und bewertet beide Länder (für andere Skripte wie ratgeber.py und listui.py)."""
     DATA={}
     for land in ('at','de'):
-        cards=load(land); apply_lounge(cards,land); ratecards(cards)
+        cards=load(land); apply_lounge(cards,land); apply_gruppen(cards); ratecards(cards)
         LANDS[land]['stand']=max(c['geprueft'] for c in cards)
         DATA[land]=(cards,providers(land,cards))
         priv=[c for c in cards if c['art']!='Business']

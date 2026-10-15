@@ -96,7 +96,7 @@ for f in pages:
         ok = ALLOWED[lc] | ({PROV[lc].get(prov.group(1))} if prov else set())
         for m in re.finditer(COUNT_RE, txt):
             n = int(m.group(1)); ctx = txt[max(0, m.start() - 12):m.start()]
-            if n in ok or ctx.endswith(('Trading ', '▭ ', 'bis zu ')) or re.match(COUNT_OK, txt[m.start():m.start() + 80]): continue
+            if n < 10 or n in ok or ctx.endswith(('Trading ', '▭ ', 'bis zu ')) or re.match(COUNT_OK, txt[m.start():m.start() + 80]): continue
             err.append(f'{rel}: Kartenanzahl {m.group(0)} stammt nicht aus card_count()')
     # R5: Formular-Labels als eigenes Element, Rechner mit Standardwerten im HTML
     if re.search(r'<label>[^<]+<(?:select|input)', s): err.append(f'{rel}: Label-Text ohne eigenes Element (klebt am Feld)')

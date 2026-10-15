@@ -44,7 +44,7 @@ def card(P,i,c):
     fx=(c.get('fxText') or '–').split(' (')[0].replace(' plus Kursaufschlag',' + Aufschlag')
     feats=''.join(f'<li>{E(p)}</li>' for p in c['pros'][:3])
     return f'''<article class="hp-card">
-<div class="hp-card-top"><span class="rank r{i}">{i}</span><span class="hp-typ">{E(c['typ'])}</span></div>
+<div class="hp-card-top"><span class="rank r{i}" aria-label="Platz {i}">{i}</span><span class="hp-typ">{E({'Kreditkarte':'Kreditkarte','Charge':'Charge-Karte','Debit':'Debitkarte','Prepaid':'Prepaid-Karte'}.get(c['typ'],c['typ']))}</span></div>
 <a class="hp-face-link" href="{href}" tabindex="-1" aria-hidden="true"><div class="face k-{c['klasse']}"><span class="pn">{E(c['anbieter'])}</span><span class="chipc"></span><span class="nw">{E((c.get('netz') or '').upper())}</span></div></a>
 <div><small class="hp-by">{E(c['anbieter'])}</small><h3><a href="{href}">{E(c['titel'])}</a></h3>
 <div class="stars">{stars(c['stars'],i)}<b>{de(c['stars'])}</b><span class="nt">{E(c['note'])}</span></div></div>
@@ -57,7 +57,7 @@ def load(land):
     if not os.path.exists(p): return None
     d=json.load(open(p)); return d if d.get('karten') else None
 def top3(d,names=None):
-    ks=[c for c in d['karten'] if c.get('stars') is not None]
+    ks=[c for c in d['karten'] if c.get('stars') is not None and c.get('rank')]
     if names:
         K={c['titel']:c for c in ks}; return [K[n] for n in names]
     return sorted(ks,key=lambda c:(-c['stars'],c.get('rank') or 999))[:3]
@@ -127,7 +127,7 @@ DE_GUIDES=[('de/ratgeber/kostenlose-kreditkarte/','Vergleich','Kostenlose Kredit
 ('de/ratgeber/mietwagen-kaution/','Reisen','Kreditkarte für Mietwagen und Kaution','Warum Vermieter eine echte Kreditkarte wollen.'),
 ('de/ratgeber/punkte-sammeln-de/','Punkte','Lohnt sich Punktesammeln in Deutschland?','Amex-Boni, Miles & More und Payback: was sich wirklich lohnt.'),
 ('de/ratgeber/kreditkarte-beantragen/','Antrag','Kreditkarte beantragen','Ablauf, Unterlagen und warum Anträge abgelehnt werden.')]
-AT_TOP=['TF Bank Mastercard Gold','Advanzia Bank free Mastercard Gold','easybank Gold Student']
+AT_TOP=None   # Top 3 aus der Rangliste
 
 def page(rel, build):
     f=R+rel+'index.html'; src=open(f).read()
@@ -146,6 +146,8 @@ nA=len(AT['karten']); anbA=len({c['anbieter'] for c in AT['karten']})
 
 def b_root(P,hdr):
     t,tc=topcards(P,AT,'Österreich',AT_TOP)
+    td,tcd=topcards(P,DD,'Deutschland',None,'de/kreditkarten/') if DD else (None,'')
+    tcd=tcd.replace('id="bestbewertet"','id="bestbewertet-de"')
     tiles=''.join([tile(P,'at/kreditkarten/','card','Kreditkarten Österreich',f'{nA} Karten im Vergleich'),
       tile(P,'de/kreditkarten/','card','Kreditkarten Deutschland',f'{len(DD["karten"])} Karten im Vergleich' if DD else 'Ratgeber · Vergleich in Arbeit'),
       tile(P,'at/kreditkarten/bestenlisten/','trophy','Bestenlisten','Die besten Karten nach Kategorie'),
@@ -154,20 +156,21 @@ def b_root(P,hdr):
       tile(P,'at/ratgeber/','book','Ratgeber','Gebühren, Punkte, Versicherung erklärt'),
       tile(P,'at/rechner/','calc','Finanzrechner Österreich','Zinseszins, Kredit, KESt und mehr'),
       tile(P,'de/rechner/','calc','Finanzrechner Deutschland','Zinseszins, Kredit, Abgeltungsteuer und mehr')])
-    fq,ld=faqblock(ROOT_FAQ(t))
+    fq,ld=faqblock(ROOT_FAQ(t,td))
     return (hero(SHIELD,'Dein unabhängiger Finanzvergleich für Österreich und Deutschland.',
         'Banken, Preise und Bedingungen unterscheiden sich. Wähle dein Land, dann siehst du nur Angebote, die du dort auch bekommst.',
         herolands(P,AT,DD),art(t[0],None))
       + stats([(nA,'Karten in Österreich'),(len(DD['karten']) if DD else '-','Karten in Deutschland'),(len({c['anbieter'].split()[0].lower().strip(',') for c in AT['karten']+(DD['karten'] if DD else [])}),'Banken und Anbieter'),(7,'offene Bewertungskriterien')])
       + sec('Unsere Vergleiche im Überblick','Finde das passende Finanzprodukt.',f'<div class="hp-tiles">{tiles}</div><p class="hp-sub" style="margin-top:16px">Weitere Vergleiche (Girokonto, Tagesgeld, Depot) sind in Arbeit.</p>')
-      + tc + trust(P)
-      + sec('Ratgeber','Kreditkarten einfach erklärt.',f'<div class="hp-posts">{guides(P,AT_GUIDES[:3])}</div><div class="hp-more"><a class="btn" href="{P}at/ratgeber/">Ratgeber Österreich →</a> <a class="btn ghost" href="{P}de/ratgeber/">Ratgeber Deutschland →</a></div>',True)
+      + tc + tcd + trust(P)
+      + sec('Ratgeber','Kreditkarten einfach erklärt.',f'<div class="hp-posts">{guides(P,AT_GUIDES[:3]+DE_GUIDES[:3])}</div><div class="hp-more"><a class="btn" href="{P}at/ratgeber/">Ratgeber Österreich →</a> <a class="btn ghost" href="{P}de/ratgeber/">Ratgeber Deutschland →</a></div>',True)
       + fq), ld
-def ROOT_FAQ(t): return [
+def ROOT_FAQ(t,td=None): return [
  ('Was kostet Finvallo?','Nichts. Du kannst alle Vergleiche ohne Registrierung nutzen. Wir finanzieren uns über Affiliate-Links, die mit * markiert sind. Die Provision hat keinen Einfluss auf Sterne oder Reihenfolge.'),
  ('Warum muss ich ein Land wählen?','Banken, Preise und Bedingungen sind in Österreich und Deutschland verschieden, und viele Karten gibt es nur in einem der beiden Länder. Deshalb vergleichen wir jedes Land getrennt und übernehmen keine Werte von einem Land ins andere.'),
  ('Wie bewertet Finvallo Kreditkarten?','Jede Karte wird nach sieben fest gewichteten Kriterien bewertet: Jahresgebühr (25 %), Reiseversicherung (20 %), Zahlen im Ausland (15 %) sowie Kartenart, Alltag, Bargeld und Extras (je 10 %). Die Regeln sind öffentlich.'),
  ('Welche Kreditkarte ist in Österreich die beste?',f'Laut Finvallo-Bewertung ist die {t[0]["titel"]} mit {de(t[0]["stars"])} von 5 Sternen die bestbewertete Kreditkarte, vor der {t[1]["titel"]} und der {t[2]["titel"]}. Welche Karte zu dir passt, hängt davon ab, wie du sie nutzt.'),
+]+([(f'Welche Kreditkarte ist in Deutschland die beste?',f'In Deutschland liegt laut Finvallo-Bewertung die {td[0]["titel"]} mit {de(td[0]["stars"])} von 5 Sternen vorn, vor der {td[1]["titel"]} und der {td[2]["titel"]}.')] if td else [])+[
  ('Wie aktuell sind die Konditionen?','Wir prüfen die Konditionen regelmäßig direkt beim Anbieter und im Preisblatt. Jede Seite zeigt den Stand der Daten.'),
  ('Ist Finvallo eine Finanzberatung?','Nein. Finvallo vergleicht und erklärt, ersetzt aber keine persönliche Beratung. Prüfe die Konditionen vor dem Abschluss beim Anbieter.')]
 def b_at(P,hdr):

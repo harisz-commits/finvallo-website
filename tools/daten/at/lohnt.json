@@ -115,7 +115,7 @@
     "hinweis": "pro Besuch 1 Gast kostenlos"
    },
    "punkte_pro_100": 1,
-   "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
+   "punkte_hinweis": "1 Membership-Rewards-Punkt pro €, 1 Punkt = 1 Cent",
    "extra": [
     {
      "name": "Hotel- und Mietwagenstatus",
@@ -144,7 +144,7 @@
     "scope": "wien"
    },
    "punkte_pro_100": 1,
-   "punkte_hinweis": "1 Membership-Rewards-Punkt je €, 1 Punkt = 1 Cent",
+   "punkte_hinweis": "1 Membership-Rewards-Punkt pro €, 1 Punkt = 1 Cent",
    "extra": [
     {
      "name": "Teilnahme an Membership Rewards",
@@ -167,7 +167,7 @@
     "hinweis": "für dich unbegrenzt, Gäste kosten extra"
    },
    "punkte_pro_100": 1,
-   "punkte_hinweis": "1 RevPoint je €, 1 RevPoint = 1 Cent",
+   "punkte_hinweis": "1 RevPoint pro €, 1 RevPoint = 1 Cent",
    "subs_names": [
     "ChatGPT Go",
     "WeWork (nur im Ausland)",
@@ -200,7 +200,7 @@
    "slug": "revolut-metal",
    "geprueft": "2026-10-13",
    "punkte_pro_100": 0.5,
-   "punkte_hinweis": "1 RevPoint je 2 €, 1 RevPoint = 1 Cent",
+   "punkte_hinweis": "1 RevPoint pro 2 €, 1 RevPoint = 1 Cent",
    "subs_names": [
     "ChatGPT Go",
     "WeWork (nur im Ausland)",
@@ -349,7 +349,7 @@
     "min_umsatz": 3600
    },
    "punkte_pro_100": 0.5,
-   "punkte_hinweis": "1 Bonuspunkt je 8 € = 4 Miles & More Meilen, 1 Meile = 1 Cent",
+   "punkte_hinweis": "1 Bonuspunkt pro 8 € = 4 Miles & More Meilen, 1 Meile = 1 Cent",
    "extra": [
     {
      "name": "Umtausch in Meilen",
@@ -373,7 +373,7 @@
     "hinweis": "4 Zutritte im Jahr, Begleitpersonen nutzen sie mit"
    },
    "punkte_pro_100": 0.67,
-   "punkte_hinweis": "1 Meile je 1,50 €, 1 Meile = 1 Cent",
+   "punkte_hinweis": "1 Meile pro 1,50 €, 1 Meile = 1 Cent",
    "welcome": {
     "text": "5.000 Meilen bei Antrag bis 31.10.2026",
     "eur": 50

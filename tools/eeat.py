@@ -46,7 +46,7 @@ UEBER = '''<h1>Über Finvallo</h1>
 <h2>Wer dahinter steht</h2>
 <p><img class="founder" src="/assets/haris.jpg" alt="Haris, Gründer von Finvallo" width="120" height="120"''' + IMG_ERR + '''></p>
 <p><b>Haris</b> – Gründer, Wien</p>
-<p>Hat Finvallo gebaut und betreibt es derzeit allein. Kommt aus Daten und Analyse: sammeln, prüfen, auswerten, aus Zahlen Entscheidungsgrundlagen machen. Kein Finanzberater, kein Banker – und das soll so bleiben. Finvallo liefert Regeln und Rechner, keine Empfehlungen.</p>
+<p>Hat Finvallo gebaut und betreibt es derzeit allein. Wir schreiben „wir“, weil Finvallo wachsen soll. Derzeit steckt hinter allem eine Person. Kommt aus Daten und Analyse: sammeln, prüfen, auswerten, aus Zahlen Entscheidungsgrundlagen machen. Kein Finanzberater, kein Banker – und das soll so bleiben. Finvallo liefert Regeln und Rechner, keine Empfehlungen.</p>
 <h2>Fehler gefunden?</h2>
 <p>Dann wollen wir es wissen. Schreib an <a class="lnk" href="mailto:korrektur@finvallo.com">korrektur@finvallo.com</a> mit Kartenname und Quelle. Wir korrigieren und vermerken das Datum der Korrektur auf der betroffenen Seite.</p>
 <h2>Kontakt</h2>
@@ -74,7 +74,7 @@ def author_box(land, title):
     t = re.sub(r'\s*\|\s*Finvallo\s*$', '', H.unescape(title))
     mail = 'mailto:' + MAIL['korrektur'] + '?subject=' + quote('Korrektur: ' + t)
     return (f'<!--author--><aside class="author-box" aria-label="Über den Autor"><img src="/assets/haris.jpg" alt="Haris" width="48" height="48"{IMG_ERR}>'
-            f'<div><p><b>Haris</b> betreibt Finvallo. Er kommt aus Daten und Analyse, nicht aus der Finanzberatung – deshalb gibt es hier Regeln und Rechner statt Empfehlungen.</p>'
+            f'<div><p><b>Haris</b> betreibt Finvallo. Er kommt aus Daten und Analyse, nicht aus der Finanzberatung – deshalb gibt es hier Regeln und Rechner statt persönlicher Beratung.</p>'
             f'<p class="author-links"><a class="lnk" href="/ueber-uns/">Über Finvallo</a> · <a class="lnk" href="/{land}/kreditkarten/methodik/">So entstehen die Sterne</a> · <a class="lnk" href="{H.escape(mail)}">Fehler melden</a></p></div></aside><!--/author-->')
 
 def put_author(s, box, before):
@@ -392,6 +392,7 @@ def main():
         if rel == '':   # R2.4: Build-Marker (Commit beim Bauen), live-check vergleicht ihn mit dem Repo
             s = re.sub(r'\n?<meta name="build" content="[^"]*">', '', s)
             s = s.replace('<meta charset="utf-8">', f'<meta charset="utf-8">\n<meta name="build" content="{BUILD}">', 1)
+        s = s.replace('<a href="">', '<a href="./" aria-current="page">')   # Link auf die eigene Seite
         s = undash(s)
         if s != s0: open(f, 'w', encoding='utf-8').write(s)
     # Sitemap (B11, B14, B20.8): alle indexierbaren Seiten, lastmod aus Inhaltsdaten, hreflang-Paare, keine 301-Quellen

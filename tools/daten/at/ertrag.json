@@ -4,24 +4,24 @@
   "advanzia-bank-hilton-honors-kreditkarte": {
    "pct": 0.4,
    "art": "Hilton-Punkte",
-   "hinweis": "1 Punkt je €, 1 Hilton-Punkt ≈ 0,4 Cent"
+   "hinweis": "1 Punkt pro €, 1 Hilton-Punkt ≈ 0,4 Cent"
   },
   "american-express-card": {
    "pct": 1,
    "kosten": 30,
    "art": "Membership-Rewards-Punkte",
-   "hinweis": "1 Punkt je €, Teilnahme 30 € im Jahr"
+   "hinweis": "1 Punkt pro €, Teilnahme 30 € im Jahr"
   },
   "diners-club-golf": {
    "pct": 0.5,
    "kosten": 25,
    "art": "Miles & More Meilen",
-   "hinweis": "1 Punkt je 8 € = 4 Meilen, Teilnahme 25 € im Jahr"
+   "hinweis": "1 Punkt pro 8 € = 4 Meilen, Teilnahme 25 € im Jahr"
   },
   "diners-club-vintage": {
    "pct": 0.5,
    "art": "Miles & More Meilen",
-   "hinweis": "1 Punkt je 8 € = 4 Meilen, inklusive",
+   "hinweis": "1 Punkt pro 8 € = 4 Meilen, inklusive",
    "lounge": {
     "visits": 8,
     "guests_free": 0,
@@ -82,17 +82,17 @@
   "revolut-standard": {
    "pct": 0.1,
    "art": "RevPoints",
-   "hinweis": "1 RevPoint je 10 €, 1 RevPoint = 1 Cent"
+   "hinweis": "1 RevPoint pro 10 €, 1 RevPoint = 1 Cent"
   },
   "revolut-plus": {
    "pct": 0.1,
    "art": "RevPoints",
-   "hinweis": "1 RevPoint je 10 €, 1 RevPoint = 1 Cent"
+   "hinweis": "1 RevPoint pro 10 €, 1 RevPoint = 1 Cent"
   },
   "revolut-premium": {
    "pct": 0.25,
    "art": "RevPoints",
-   "hinweis": "1 RevPoint je 4 €, 1 RevPoint = 1 Cent"
+   "hinweis": "1 RevPoint pro 4 €, 1 RevPoint = 1 Cent"
   },
   "trade-republic-karte": {
    "pct": 1,

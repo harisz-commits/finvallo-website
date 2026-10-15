@@ -685,7 +685,7 @@
   "pay": true,
   "payText": "Apple Pay und Google Pay",
   "tier": 0,
-  "insText": "Keine Versicherungen; Zusatzpakete Travel Security / Shopping Guarantee je 2,90 €/Monat buchbar.",
+  "insText": "Keine Versicherungen; Zusatzpakete Travel Security / Shopping Guarantee pro 2,90 €/Monat buchbar.",
   "insQuelle": null,
   "ex": {
    "cb": false,

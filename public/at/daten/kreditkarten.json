@@ -132,7 +132,7 @@
    "tier": 2,
    "stars": 4.2,
    "note": "Gut",
-   "rank": 5,
+   "rank": 4,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Reiseversicherung inkl. Storno",
@@ -182,7 +182,7 @@
    "tier": 3,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 53,
+   "rank": 48,
    "pros": [
     "Umfassender Reiseschutz",
     "Membership Rewards (30 €/Jahr, Turbo +15 €)",
@@ -232,7 +232,7 @@
    "tier": 4,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 64,
+   "rank": 58,
    "pros": [
     "Premium-Reiseschutz",
     "Membership Rewards inklusive",
@@ -285,7 +285,7 @@
    "tier": 1,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 58,
+   "rank": 52,
    "pros": [
     "Im 1. Jahr 0 € statt 72 €",
     "Membership Rewards",
@@ -419,7 +419,7 @@
    "tier": 3,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 37,
+   "rank": 32,
    "pros": [
     "Im 1. Jahr 0 € statt 55 €",
     "Umfassender Reiseschutz",
@@ -465,7 +465,7 @@
    "tier": 3,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 52,
+   "rank": 47,
    "pros": [
     "Im 1. Jahr 0 € statt 150 €",
     "Umfassender Reiseschutz",
@@ -557,7 +557,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 69,
+   "rank": 63,
    "pros": [
     "Kein Girokonto beim Anbieter nötig",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -601,7 +601,7 @@
    "tier": 1,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 62,
+   "rank": 56,
    "pros": [
     "Kein Girokonto beim Anbieter nötig",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -644,7 +644,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 49,
+   "rank": 44,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Kein Girokonto beim Anbieter nötig",
@@ -688,7 +688,7 @@
    "tier": 3,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 51,
+   "rank": 46,
    "pros": [
     "Umfassender Reiseschutz",
     "SKY/VIENNA Lounge Wien: 4 kostenlose Besuche pro Jahr, nur am Flughafen Wien, Begleitpersonen zählen mit (Gilt für Karten mit Ausstellung ab 1.6.2024 (davor unbegrenzt kostenlos))",
@@ -734,7 +734,7 @@
    "tier": 2,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 41,
+   "rank": 36,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "SKY/VIENNA Lounge Wien: 4 kostenlose Besuche pro Jahr, nur am Flughafen Wien, Begleitpersonen zählen mit",
@@ -780,7 +780,7 @@
    "tier": 3,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 59,
+   "rank": 53,
    "pros": [
     "Umfassender Reiseschutz",
     "SKY/VIENNA Lounge Wien: unbegrenzt kostenlose Besuche, nur am Flughafen Wien, Begleitperson gratis",
@@ -828,7 +828,7 @@
    "tier": 1,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 56,
+   "rank": null,
    "pros": [
     "Im 1. Jahr 0 € statt 38,40 €",
     "Kein Girokonto beim Anbieter nötig",
@@ -872,9 +872,9 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 54,
+   "rank": 49,
    "pros": [
-    "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
+    "Einige Abhebungen pro Monat ohne Gebühr",
     "Kein Girokonto beim Anbieter nötig",
     "Keine Bonitätsprüfung",
     "Aufladen per Überweisung, max. 2.500 € Guthaben"
@@ -917,7 +917,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 47,
+   "rank": 42,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Diners Club Airport Lounges: 4 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zahlen (Mindestumsatz 3.600 € in den letzten 365 Tagen vor Besuch)",
@@ -962,10 +962,10 @@
    "tier": 2,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 39,
+   "rank": 34,
    "pros": [
     "Reiseversicherung inkl. Storno",
-    "Optional Bonusprogramm (25 €/Jahr): 1 Punkt je 8 €, 4 Miles & More Meilen je Punkt",
+    "Optional Bonusprogramm (25 €/Jahr): 1 Punkt pro 8 €, 4 Miles & More Meilen je Punkt",
     "Diners Club Airport Lounges: 4 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zahlen (Mindestumsatz 3.600 € in den letzten 365 Tagen vor Besuch)",
     "Kein Girokonto beim Anbieter nötig",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -1009,7 +1009,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 50,
+   "rank": 45,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Optional Bonusprogramm (25 €/Jahr), Miles & More",
@@ -1055,10 +1055,10 @@
    "tier": 3,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 60,
+   "rank": 54,
    "pros": [
     "Umfassender Reiseschutz",
-    "Bonusprogramm inklusive: 1 Punkt je 8 €, 4 Miles & More Meilen je Punkt",
+    "Bonusprogramm inklusive: 1 Punkt pro 8 €, 4 Miles & More Meilen je Punkt",
     "Diners Club Airport Lounges: 8 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zählen mit (Mindestumsatz 3.600 € in den letzten 365 Tagen vor Besuch)",
     "Kein Girokonto beim Anbieter nötig",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -1102,7 +1102,7 @@
    "tier": 2,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 32,
+   "rank": null,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Diners Club Airport Lounges: 4 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zahlen (Mindestumsatz 3.600 € in den letzten 365 Tagen vor Besuch)",
@@ -1147,7 +1147,7 @@
    "tier": null,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 66,
+   "rank": 60,
    "pros": [
     "Im 1. Jahr 0 € statt 40 €",
     "Kein Girokonto beim Anbieter nötig",
@@ -1191,7 +1191,7 @@
    "tier": 1,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 45,
+   "rank": 40,
    "pros": [
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Einkaufsschutz"
@@ -1234,7 +1234,7 @@
    "tier": 2,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 40,
+   "rank": 35,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Automatischer Rechnungsausgleich per Lastschrift",
@@ -1278,7 +1278,7 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 20,
+   "rank": 18,
    "pros": [
     "Umfassender Reiseschutz",
     "Black Bonustravel: 1 Hin- und Rückreise ab 7.500 € Jahresumsatz",
@@ -1325,7 +1325,7 @@
    "tier": 4,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 61,
+   "rank": 55,
    "pros": [
     "Premium-Reiseschutz",
     "Priority Pass: 5 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zählen mit (Pro Vertragsjahr)",
@@ -1372,7 +1372,7 @@
    "tier": 2,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 36,
+   "rank": null,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Automatischer Rechnungsausgleich per Lastschrift",
@@ -1459,11 +1459,11 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 44,
+   "rank": 39,
    "pros": [
     "Im 1. Jahr 0 € statt 22,44 €",
     "Niedrige Fremdwährungskosten (1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs))",
-    "0,3 % Online-Umsatzbonus, max. 8 €/Jahr",
+    "0,3 % Online-Umsatzbonus, max",
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Split Now 3×/Jahr gratis"
    ],
@@ -1506,12 +1506,12 @@
    "tier": 3,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 6,
+   "rank": 5,
    "pros": [
     "Im 1. Jahr 0 € statt 99 €",
     "Niedrige Fremdwährungskosten (1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs))",
     "Umfassender Reiseschutz",
-    "0,6 % Online-Umsatzbonus, max. 30 €/Jahr",
+    "0,6 % Online-Umsatzbonus, max",
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Split Now 6×/Jahr gratis",
     "7 % Rabatt im Reiseservice",
@@ -1556,11 +1556,11 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 23,
+   "rank": 21,
    "pros": [
     "Niedrige Fremdwährungskosten (1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs))",
     "Umfassender Reiseschutz",
-    "1 Meile je 1,50 € Umsatz",
+    "1 Meile pro 1,50 € Umsatz",
     "Priority Pass: 4 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zählen mit (Aktivierung erforderlich)",
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Kartengebühr auch mit 78.408 Meilen zahlbar"
@@ -1604,10 +1604,10 @@
    "tier": null,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 15,
+   "rank": 14,
    "pros": [
     "Niedrige Fremdwährungskosten (1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs))",
-    "0,3 % Online-Umsatzbonus, max. 8 €/Jahr",
+    "0,3 % Online-Umsatzbonus, max",
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Gilt als GÖD-Mitgliedsausweis"
    ],
@@ -1650,12 +1650,12 @@
    "tier": 3,
    "stars": 4.2,
    "note": "Gut",
-   "rank": 4,
+   "rank": 3,
    "pros": [
     "Im 1. Jahr 0 € statt 49,44 €",
     "Niedrige Fremdwährungskosten (1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs))",
     "Umfassender Reiseschutz",
-    "0,6 % Online-Umsatzbonus, max. 30 €/Jahr",
+    "0,6 % Online-Umsatzbonus, max",
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Fremdwährungsentgelt 6×/Jahr erstattet",
     "5 % Rabatt bei Urlaubsplus"
@@ -1699,7 +1699,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 55,
+   "rank": 50,
    "pros": [
     "Niedrige Fremdwährungskosten (1,35 %)",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -1743,7 +1743,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 19,
+   "rank": 17,
    "pros": [
     "Niedrige Fremdwährungskosten (1,35 %)",
     "Reiseversicherung inkl. Storno",
@@ -1787,7 +1787,7 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 21,
+   "rank": 19,
    "pros": [
     "Niedrige Fremdwährungskosten (1,35 %)",
     "Umfassender Reiseschutz",
@@ -1832,7 +1832,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 67,
+   "rank": 61,
    "pros": [
     "Im 1. Jahr 0 € statt 20 €",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -1877,7 +1877,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 46,
+   "rank": 41,
    "pros": [
     "Im 1. Jahr 0 € statt 65 €",
     "Reiseversicherung inkl. Storno",
@@ -1922,7 +1922,7 @@
    "tier": 2,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 33,
+   "rank": null,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Automatischer Rechnungsausgleich per Lastschrift",
@@ -1967,7 +1967,7 @@
    "tier": 3,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 38,
+   "rank": 33,
    "pros": [
     "Im 1. Jahr 0 € statt 80 €",
     "Umfassender Reiseschutz",
@@ -2012,7 +2012,7 @@
    "tier": 3,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 42,
+   "rank": 37,
    "pros": [
     "Im 1. Jahr 0 € statt 135 €",
     "Umfassender Reiseschutz",
@@ -2058,7 +2058,7 @@
    "tier": 4,
    "stars": 3.3,
    "note": "Ausreichend",
-   "rank": 63,
+   "rank": 57,
    "pros": [
     "Im 1. Jahr 0 € statt 440 €",
     "Premium-Reiseschutz",
@@ -2107,7 +2107,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 29,
+   "rank": 25,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "SKY/VIENNA Lounge Wien: 2 kostenlose Besuche pro Jahr, nur am Flughafen Wien, Begleitpersonen zahlen (Nur BAWAG Visa Gold; gilt bis mindestens 31.12.2026)",
@@ -2152,7 +2152,7 @@
    "tier": 0,
    "stars": 3.2,
    "note": "Ausreichend",
-   "rank": 65,
+   "rank": 59,
    "pros": [
     "Automatischer Rechnungsausgleich per Lastschrift"
    ],
@@ -2196,7 +2196,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 16,
+   "rank": null,
    "pros": [
     "Im 1. Jahr 0 € statt 30,76 €",
     "Reiseversicherung inkl. Storno",
@@ -2242,7 +2242,7 @@
    "tier": 1,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 12,
+   "rank": 8,
    "pros": [
     "Niedrige Fremdwährungskosten (1,5 % plus Kursaufschlag (Höhe beim Anbieter prüfen))",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -2285,7 +2285,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 17,
+   "rank": 15,
    "pros": [
     "Niedrige Fremdwährungskosten (1,5 % plus Kursaufschlag (Höhe beim Anbieter prüfen))",
     "Reiseversicherung inkl. Storno",
@@ -2330,7 +2330,7 @@
    "tier": 2,
    "stars": 4.2,
    "note": "Gut",
-   "rank": 3,
+   "rank": null,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (1,5 % plus Kursaufschlag (Höhe beim Anbieter prüfen))",
@@ -2376,7 +2376,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 34,
+   "rank": 30,
    "pros": [
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Partnerkarte 18,08 €/Jahr"
@@ -2418,7 +2418,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 30,
+   "rank": 26,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Automatischer Rechnungsausgleich per Lastschrift",
@@ -2461,7 +2461,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 68,
+   "rank": 62,
    "pros": [
     "Im 1. Jahr 0 € statt 21,60 €",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -2506,7 +2506,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 48,
+   "rank": 43,
    "pros": [
     "Im 1. Jahr 0 € statt 80,40 €",
     "Reiseversicherung inkl. Storno",
@@ -2552,7 +2552,7 @@
    "tier": 3,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 43,
+   "rank": 38,
    "pros": [
     "Im 1. Jahr 0 € statt 138,60 €",
     "Umfassender Reiseschutz",
@@ -2599,7 +2599,7 @@
    "tier": null,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 27,
+   "rank": 23,
    "pros": [
     "Niedrige Fremdwährungskosten (1,35 % für Zahlungen in fremder Währung)",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -2642,7 +2642,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 18,
+   "rank": 16,
    "pros": [
     "Niedrige Fremdwährungskosten (1,35 % für Zahlungen in fremder Währung)",
     "Reiseversicherung inkl. Storno",
@@ -2686,7 +2686,7 @@
    "tier": 3,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 31,
+   "rank": 27,
    "pros": [
     "Niedrige Fremdwährungskosten (1,35 % für Zahlungen in fremder Währung)",
     "Umfassender Reiseschutz",
@@ -2730,12 +2730,12 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 13,
+   "rank": 12,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
-    "1 % Cashback, max. 50 €/Jahr",
+    "1 % Cashback, max",
     "Kein Girokonto beim Anbieter nötig",
     "Einkaufsversicherung"
    ],
@@ -2775,14 +2775,14 @@
    "auto": true,
    "pay": true,
    "tier": 0,
-   "stars": 3.9,
+   "stars": 3.8,
    "note": "Befriedigend",
    "rank": 11,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
-    "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
-    "RevPoints: 1 Punkt je 10 €"
+    "Einige Abhebungen pro Monat ohne Gebühr",
+    "RevPoints: 1 Punkt pro 10 €"
    ],
    "cons": [
     "Nur mit Konto beim Anbieter",
@@ -2822,11 +2822,11 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 35,
+   "rank": 31,
    "pros": [
     "Keine Fremdwährungsgebühr",
-    "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
-    "RevPoints: 1 Punkt je 10 €",
+    "Einige Abhebungen pro Monat ohne Gebühr",
+    "RevPoints: 1 Punkt pro 10 €",
     "Einkaufsversicherung"
    ],
    "cons": [
@@ -2866,14 +2866,14 @@
    "auto": true,
    "pay": true,
    "tier": 2,
-   "stars": 4.0,
-   "note": "Gut",
-   "rank": 8,
+   "stars": 3.9,
+   "note": "Befriedigend",
+   "rank": 9,
    "pros": [
     "Keine Fremdwährungsgebühr",
-    "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
+    "Einige Abhebungen pro Monat ohne Gebühr",
     "Reiseversicherung inkl. Storno",
-    "RevPoints: 1 Punkt je 4 €"
+    "RevPoints: 1 Punkt pro 4 €"
    ],
    "cons": [
     "Nur mit Konto beim Anbieter",
@@ -2911,14 +2911,14 @@
    "auto": true,
    "pay": true,
    "tier": 3,
-   "stars": 4.0,
-   "note": "Gut",
-   "rank": 9,
+   "stars": 3.9,
+   "note": "Befriedigend",
+   "rank": 10,
    "pros": [
     "Keine Fremdwährungsgebühr",
-    "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
+    "Einige Abhebungen pro Monat ohne Gebühr",
     "Umfassender Reiseschutz",
-    "RevPoints: 1 Punkt je 2 €",
+    "RevPoints: 1 Punkt pro 2 €",
     "Partner-Abos u. a. ChatGPT Go 12 Monate, ClassPass, Financial Times",
     "3 GB globale eSIM"
    ],
@@ -2959,14 +2959,14 @@
    "auto": true,
    "pay": true,
    "tier": 3,
-   "stars": 3.8,
+   "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 24,
+   "rank": 28,
    "pros": [
     "Keine Fremdwährungsgebühr",
-    "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
+    "Einige Abhebungen pro Monat ohne Gebühr",
     "Umfassender Reiseschutz",
-    "RevPoints: 1 Punkt je 1 €",
+    "RevPoints: 1 Punkt pro 1 €",
     "LoungeKey (Lounge-Pässe in der App): unbegrenzt kostenlose Besuche, ausgewählte Flughäfen weltweit, Begleitpersonen zahlen (Ultra-Abo)",
     "Mietwagen-Selbstbehalt bis 2.000 € versichert"
    ],
@@ -3009,7 +3009,7 @@
    "tier": 0,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 25,
+   "rank": 22,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -3053,7 +3053,7 @@
    "tier": 0,
    "stars": 3.4,
    "note": "Ausreichend",
-   "rank": 57,
+   "rank": 51,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -3098,7 +3098,7 @@
    "tier": 3,
    "stars": 4.0,
    "note": "Gut",
-   "rank": 7,
+   "rank": 6,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -3142,7 +3142,7 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 22,
+   "rank": 20,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
@@ -3189,12 +3189,12 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 14,
+   "rank": 13,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
-    "1 % Saveback in den Sparplan, max. 15 €/Monat",
+    "1 % Saveback in den Sparplan, max",
     "Österreichische Zweigniederlassung seit 2025"
    ],
    "cons": [
@@ -3236,7 +3236,7 @@
    "tier": null,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 10,
+   "rank": 7,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr"
@@ -3270,7 +3270,7 @@
    "feeNote": "Tarif bunq Core, 3,99 € im Monat",
    "fx": 0.5,
    "fxText": "0,5 % Aufschlag auf den Mastercard-Kurs",
-   "cashText": "Die ersten 5 Abhebungen im Monat je 0,99 €, danach 2,99 €",
+   "cashText": "Die ersten 5 Abhebungen im Monat pro 0,99 €, danach 2,99 €",
    "soll": null,
    "effz": null,
    "rahmen": null,
@@ -3280,7 +3280,7 @@
    "tier": null,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 28,
+   "rank": 24,
    "pros": [
     "Niedrige Fremdwährungskosten (0,5 % Aufschlag auf den Mastercard-Kurs)"
    ],
@@ -3320,13 +3320,13 @@
    "auto": true,
    "pay": true,
    "tier": 0,
-   "stars": 3.7,
+   "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 26,
+   "rank": 29,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (ab 0,47 % zum Mittelkurs)",
-    "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
+    "Einige Abhebungen pro Monat ohne Gebühr",
     "Konto in über 40 Währungen",
     "Karte einmalig 7 €"
    ],

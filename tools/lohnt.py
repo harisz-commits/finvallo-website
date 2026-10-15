@@ -117,7 +117,8 @@ def breakeven(c, x, A, credits, vers=False, sub=False):
 def need(k, v, x=None):
     """Teilsatz nach „lohnt sie sich …“."""
     w = lw(x or {})
-    if k == 'lounge': return f'ab dem ersten Lounge-Besuch{w} im Jahr' if v == 1 else f'ab etwa {v} Lounge-Besuchen{w} im Jahr'
+    u = ' (bei 1.000 € Kartenumsatz im Monat)' if (x or {}).get('punkte_pro_100') else ''
+    if k == 'lounge': return (f'ab dem ersten Lounge-Besuch{w} im Jahr' if v == 1 else f'ab etwa {v} Lounge-Besuchen{w} im Jahr') + u
     if k == 'both': return f'mit allen {v[0]} Lounge-Besuchen{w} ab etwa {eur(v[1])} € Kartenumsatz im Monat'
     if k == 'spend': return f'ab etwa {eur(v)} € Kartenumsatz im Monat'
     return ''
@@ -159,7 +160,7 @@ def short(c, x, A):
     g = ' mit allen Guthaben' if x.get('credits') else ''
     if k == 'ok': return 'Lohnt sich schon bei normaler Nutzung' + g
     w = ' in Wien' if wien_only(x) else ''
-    if k == 'lounge': return (f'Lohnt sich ab dem ersten Lounge-Besuch{w}' if v == 1 else f'Lohnt sich ab etwa {v} Lounge-Besuchen{w} im Jahr') + g
+    if k == 'lounge': return (f'Jahresgebühr ab dem ersten Lounge-Besuch{w} gedeckt' if v == 1 else f'Lohnt sich ab etwa {v} Lounge-Besuchen{w} im Jahr') + g
     if k == 'both': return f'Lohnt sich mit {v[0]} Lounge-Besuchen{w} ab etwa {eur(v[1])} € Umsatz im Monat' + g
     if k == 'spend': return f'Lohnt sich ab etwa {eur(v or 0)} € Umsatz im Monat' + g
     if c.get('tier') and breakeven(c, x, A, True, True)[0] == 'ok': return 'Lohnt sich, wenn du sonst eine Reiseversicherung kaufen würdest'
