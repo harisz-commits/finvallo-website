@@ -182,9 +182,9 @@ def calc_html(c, x, A):
     wl = f'<label class="lc"><input type="checkbox" data-welcome name="welcome"> Willkommensbonus im ersten Jahr <b>{eur(data["welcome"])} €</b></label>' if data['welcome'] else ''
     vs = f'<label class="lc"><input type="checkbox" data-vers name="vers"{" checked" if I["vers"] else ""}> Ich bräuchte sonst eine eigene Reiseversicherung <b>{eur(data["vers"])} €</b></label>' if data['vers'] else ''
     ins = ''.join(w for w in (
-        f'<label>Lounge-Besuche{lw(x)} im Jahr<input type="number" min="0" max="200" value="{I['lounge']}" data-in="lounge" name="lounge"></label>' if lg else '',
-        f'<label>davon mit Begleitung<input type="number" min="0" max="200" value="{I["guests"]}" data-in="guests" name="guests"></label>' if lg and gf else '',
-        f'<label>Kartenumsatz pro Monat (€)<input type="number" min="0" step="100" value="{I["spend"]}" data-in="spend" name="spend"></label>' if pp else '') if w)
+        f'<label><span class="flab">Lounge-Besuche{lw(x)} im Jahr</span><input type="number" min="0" max="200" value="{I['lounge']}" data-in="lounge" name="lounge"></label>' if lg else '',
+        f'<label><span class="flab">davon mit Begleitung</span><input type="number" min="0" max="200" value="{I["guests"]}" data-in="guests" name="guests"></label>' if lg and gf else '',
+        f'<label><span class="flab">Kartenumsatz pro Monat (€)</span><input type="number" min="0" step="100" value="{I["spend"]}" data-in="spend" name="spend"></label>' if pp else '') if w)
     if not lg: I['lounge'] = I['guests'] = 0
     if not (lg and gf): I['guests'] = 0
     if not pp: I['spend'] = 0
@@ -322,7 +322,7 @@ def vers_info():
             + ''.join(f'<p><b>{E(t)}:</b> {E(d)}</p>' for t, d in INFO) + '<p class="mut">Was eine Karte genau abdeckt, steht auf ihrer Seite unter „Versicherung“.</p></div></details>')
 
 def vers_field(attr):
-    sel = '<option value="0">nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
+    sel = '<option value="0" selected>nicht nötig</option>' + ''.join(f'<option value="{k}">{E(K.TIER[k][1])}</option>' for k in range(1, 5))
     return f'<div class="fld"><span class="flab">Reiseversicherung {vers_info()}</span><select data-{attr}="vers" name="vers" aria-label="Reiseversicherung">{sel}</select></div>'
 
 def filter_html(cards, X, A):
@@ -332,9 +332,9 @@ def filter_html(cards, X, A):
     return f'''<div class="box lcalc lfilter" data-lohnt-hub='{html.escape(json.dumps(data), quote=True)}' hidden>
   <h2 style="margin-top:0">Was würdest du nutzen?</h2>
   <p class="note" style="margin:0">Trag ein, was du wirklich nutzt. Die Karten unten zeigen dann gleich, ob sie für dich ein Plus oder ein Minus ergeben.</p>
-  <div class="lgrid">{'<label>Lounge Wien pro Jahr<input type="number" min="0" max="200" value="0" data-in="wien"></label><label>Lounge Ausland pro Jahr<input type="number" min="0" max="200" value="0" data-in="lounge"></label>' if any(wien_only(x) for x in X.values()) else '<label>Lounge-Besuche im Jahr<input type="number" min="0" max="200" value="0" data-in="lounge"></label>'}
-  <label>davon mit Begleitung<input type="number" min="0" max="200" value="0" data-in="guests"></label>
-  <label>Umsatz pro Monat (€)<input type="number" min="0" step="100" value="1000" data-in="spend"></label>
+  <div class="lgrid">{'<label><span class="flab">Lounge Wien pro Jahr</span><input type="number" min="0" max="200" value="0" data-in="wien"></label><label><span class="flab">Lounge Ausland pro Jahr</span><input type="number" min="0" max="200" value="0" data-in="lounge"></label>' if any(wien_only(x) for x in X.values()) else '<label><span class="flab">Lounge-Besuche im Jahr</span><input type="number" min="0" max="200" value="0" data-in="lounge"></label>'}
+  <label><span class="flab">davon mit Begleitung</span><input type="number" min="0" max="200" value="0" data-in="guests"></label>
+  <label><span class="flab">Umsatz pro Monat (€)</span><input type="number" min="0" step="100" value="1000" data-in="spend"></label>
   {vers_field('in')}</div>
   {f'<p class="note" style="margin:6px 0 0"><b>Guthaben und Abos, die du nutzen würdest</b> (Abos nur, wenn du sie sonst selbst bezahlen würdest)</p><div class="lchecks">{cb}</div>' if cb else ''}
   <label class="lc"><input type="checkbox" data-welcome> Willkommensbonus im ersten Jahr mitrechnen</label>

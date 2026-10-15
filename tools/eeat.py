@@ -22,6 +22,7 @@ PERSON = {"@type": "Person", "@id": "https://finvallo.com/ueber-uns/#haris", "na
 AUTH = {"@id": "https://finvallo.com/ueber-uns/#haris"}
 DATE = re.compile(r'\d{2}\.\d{2}\.\d{4}')
 SITE = json.load(open(os.path.join(K.SP, 'daten', 'site.json')))
+MAIL = {'kontakt': 'hallo@finvallo.com', 'korrektur': 'korrektur@finvallo.com', 'impressum': 'hallo@finvallo.com', **(SITE.get('mail') or {})}
 RESERVED = {'anbieter', 'bestenlisten', 'alle', 'business', 'methodik', 'rechner'}
 IMG_ERR = ' onerror="this.remove()"'   # Foto wird nachgeliefert; bis dahin kein kaputtes Bild
 
@@ -47,7 +48,7 @@ UEBER = '''<h1>Über Finvallo</h1>
 <p><b>Haris</b> – Gründer, Wien</p>
 <p>Hat Finvallo gebaut und betreibt es derzeit allein. Kommt aus Daten und Analyse: sammeln, prüfen, auswerten, aus Zahlen Entscheidungsgrundlagen machen. Kein Finanzberater, kein Banker – und das soll so bleiben. Finvallo liefert Regeln und Rechner, keine Empfehlungen.</p>
 <h2>Fehler gefunden?</h2>
-<p>Dann wollen wir es wissen. Schreib an <a class="lnk" href="mailto:hallo@finvallo.com">hallo@finvallo.com</a> mit Kartenname und Quelle. Wir korrigieren und vermerken das Datum der Korrektur auf der betroffenen Seite.</p>
+<p>Dann wollen wir es wissen. Schreib an <a class="lnk" href="mailto:korrektur@finvallo.com">korrektur@finvallo.com</a> mit Kartenname und Quelle. Wir korrigieren und vermerken das Datum der Korrektur auf der betroffenen Seite.</p>
 <h2>Kontakt</h2>
 <p><a class="lnk" href="mailto:hallo@finvallo.com">hallo@finvallo.com</a> · Finvallo, Wien</p>
 </div>'''
@@ -71,7 +72,7 @@ def ueber(s):
 # ---------- 2. Autorenbox ----------
 def author_box(land, title):
     t = re.sub(r'\s*\|\s*Finvallo\s*$', '', H.unescape(title))
-    mail = 'mailto:hallo@finvallo.com?subject=' + quote('Korrektur: ' + t)
+    mail = 'mailto:' + MAIL['korrektur'] + '?subject=' + quote('Korrektur: ' + t)
     return (f'<!--author--><aside class="author-box" aria-label="Über den Autor"><img src="/assets/haris.jpg" alt="Haris" width="48" height="48"{IMG_ERR}>'
             f'<div><p><b>Haris</b> betreibt Finvallo. Er kommt aus Daten und Analyse, nicht aus der Finanzberatung – deshalb gibt es hier Regeln und Rechner statt Empfehlungen.</p>'
             f'<p class="author-links"><a class="lnk" href="/ueber-uns/">Über Finvallo</a> · <a class="lnk" href="/{land}/kreditkarten/methodik/">So entstehen die Sterne</a> · <a class="lnk" href="{H.escape(mail)}">Fehler melden</a></p></div></aside><!--/author-->')
@@ -294,6 +295,10 @@ def main():
         if re.match(r'(at|de)/kreditkarten/(?:(?:alle|business|rechner)/|bestenlisten/(?:[a-z-]+/)?)?$', rel):
             s = re.sub(r'(<link rel="canonical"[^>]*>)', lambda m: m.group(1) + f'\n<link rel="alternate" type="application/json" href="/{rel[:2]}/daten/kreditkarten.json" title="Kartendaten als JSON">', s, count=1)
         if rel in ('at/kreditkarten/methodik/', 'de/kreditkarten/methodik/'): s = methodik(s, rel[:2])
+        if rel in ('impressum/', 'datenschutz/'):
+            s = re.sub(r'(E-Mail: <a href="mailto:)[^"]+(">)[^<]+(</a>)', lambda m: m.group(1) + MAIL['impressum'] + m.group(2) + MAIL['impressum'] + m.group(3), s)
+        if rel == 'so-verdienen-wir-geld/':
+            s = s.replace('Hinweise gern an <a href="mailto:hallo@finvallo.com">hallo@finvallo.com</a>', f'Hinweise gern an <a href="mailto:{MAIL["korrektur"]}">{MAIL["korrektur"]}</a>')
         if rel == 'impressum/':
             ph = SITE.get('phone') or ''
             s = re.sub(r'<!--phone-->.*?<!--/phone-->', '<!--phone-->' + (f'<br>Telefon: <a href="tel:{E(re.sub(r"[^+0-9]", "", ph))}">{E(ph)}</a>' if ph else '') + '<!--/phone-->', s)

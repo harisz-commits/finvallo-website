@@ -11,11 +11,15 @@ GLUE_OK = ('1822direkt', 'ChatGPT', 'NordVPN', 'eSIM', 'PayPal', 'MasterCard', '
 LATER = {'assets/haris.jpg'}   # Foto wird nachgeliefert (bis dahin per onerror ausgeblendet)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import karten as K
-_D = K.prepare(); ALLOWED = {}
+_D = K.prepare(); ALLOWED = {}; PROV = {}
+COUNT_RE = r'(?<![\w.,])(\d+) (?:bewerteten |bewertete )?(?:(?:Kredit|Debit|Prepaid|Charge|Business)-|Privat|Kredit)?[Kk]arten\b'
+COUNT_OK = r'\d+ Kreditkarten in unserem \S+-Vergleich enthalten|\d+ Karten · ansehen'
 for _l in ('at', 'de'):
     K.use(_l)
     _lists, _ = K.cat_lists(_D[_l][0], _l)
-    ALLOWED[_l] = {K.card_count(_l, x) for x in ('all', 'private', 'business', 'rated', 'special')} | {len(v) for v in _lists.values()}
+    ALLOWED[_l] = {K.card_count(_l, x) for x in ('all', 'private', 'business', 'rated', 'special', 'unrated')} | {len(v) for v in _lists.values()}
+    PROV[_l] = {}
+    for _c in _D[_l][0]: PROV[_l][_c['p']] = PROV[_l].get(_c['p'], 0) + 1
 err = []
 pages = glob.glob(R + '**/index.html', recursive=True) + [R + '404.html']
 titles = {}
@@ -24,7 +28,7 @@ FAQ = {}
 for f in pages:
     rel = f[len(R):]
     s = open(f, encoding='utf-8').read()
-    spa = rel == 'at/kreditkarten/rechner/index.html'
+    spa = False
     base = 'https://finvallo.com/' + (rel[:-10] if rel.endswith('index.html') else '')
     if not spa:
         TAGS = {m.group(1): m.group(0) for m in re.finditer(r'<a [^>]*href="([^"#?]*)[^"]*"[^>]*>', s[s.find('<body'):])}
@@ -77,14 +81,22 @@ for f in pages:
     if d and len(d.group(1)) < 70: err.append(f'{rel}: Beschreibung zu kurz ({len(d.group(1))})')
     if d and d.group(1).rstrip().endswith(('…', '...')): err.append(f'{rel}: Beschreibung endet mit …')
     if not d and rel != '404.html': err.append(f'{rel}: keine Beschreibung')
-    # A6: Kartenanzahlen nur aus card_count() bzw. den Bestenlisten-Zählern
+    # A6/R3: jede Kartenanzahl stammt aus card_count() (all, private, business, special, rated, unrated),
+    # den Bestenlisten-Zählern oder auf Anbieterseiten aus der Kartenzahl des Anbieters
     lc = rel.split('/')[0]
     if lc in ALLOWED:
         txt = re.sub(r'<script.*?</script>', '', s, flags=re.S)
-        for m in re.finditer(r'(?<![\w.,])(\d{2,3}) (?:bewerteten |bewertete )?(?:Privatkarten|Kreditkarten|Karten)\b', txt):
-            n = int(m.group(1))
-            if n >= 20 and n not in ALLOWED[lc] and not txt[max(0, m.start() - 8):m.start()].endswith('Trading '):
-                err.append(f'{rel}: Kartenanzahl {m.group(0)} stammt nicht aus card_count()')
+        prov = re.match(r'(?:at|de)/kreditkarten/anbieter/([^/]+)/', rel)
+        ok = ALLOWED[lc] | ({PROV[lc].get(prov.group(1))} if prov else set())
+        for m in re.finditer(COUNT_RE, txt):
+            n = int(m.group(1)); ctx = txt[max(0, m.start() - 12):m.start()]
+            if n in ok or ctx.endswith(('Trading ', '▭ ', 'bis zu ')) or re.match(COUNT_OK, txt[m.start():m.start() + 80]): continue
+            err.append(f'{rel}: Kartenanzahl {m.group(0)} stammt nicht aus card_count()')
+    # R5: Formular-Labels als eigenes Element, Rechner mit Standardwerten im HTML
+    if re.search(r'<label>[^<]+<(?:select|input)', s): err.append(f'{rel}: Label-Text ohne eigenes Element (klebt am Feld)')
+    if rel.endswith('kreditkarten/rechner/index.html'):
+        f_ = re.search(r'<form[^>]*id="rbox".*?</form>', s, re.S)
+        if not f_ or len(re.findall(r'<input[^>]*value=', f_.group(0))) < 5: err.append(f'{rel}: Rechner-Formular ohne Standardwerte im HTML')
 # B11: hreflang symmetrisch (jede genannte Seite nennt dieselben Partner)
 for r, alts in HREF.items():
     for t in alts.values():

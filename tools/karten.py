@@ -463,7 +463,7 @@ def card_page(c,cards,nrated,prov):
     extras=f'\n  <h2>Extras im Detail</h2>{qa(bl["extras"])}' if bl.get('extras') else ''
     fees=f'\n  <h2>Weitere Gebühren von {E(c["anbieter"])}</h2>{qa(bl["fees"])}' if bl.get('fees') else ''
     best='<span class="reco">★ Bestbewertet</span>' if c.get('rank')==1 else ''
-    if c['slug'] in BEST: bb=BEST[c['slug']]; best+=f'<a class="tag best" href="../bestenlisten/{bb[2]}/">🏆 Platz {bb[0]+1} für {E(bb[1])}</a>'
+    if c['slug'] in BEST: bb=BEST[c['slug']]; best+=f'<a class="tag best" href="../bestenlisten/{bb[2]}/">🏆 Platz {bb[0]+1} für {E(bb[1])} ({de1(bb[3])} ★ in dieser Kategorie)</a>'
     pv=prov.get(c['p']) or {}
     f1=f'<span class="note">Im 1. Jahr {eur(c["fee1"])} €</span>' if c.get('fee1') is not None and c.get('fee') and c['fee1']!=c['fee'] else ''
     other=pair_rel(c)
@@ -515,7 +515,7 @@ def list_item(c,P,base=''):
     return f'''<article class="item" id="it-{c.get("id") or c["slug"]}">
     <div class="ihead"><div style="display:flex;gap:10px;align-items:center">{rank}{'<span class="reco">★ Bestbewertet</span>' if c.get('rank')==1 else ''}</div></div>
     <div class="irow">{face(c)}<div style="min-width:0"><h3 class="iname"><a href="{base}{c["slug"]}/">{E(c["titel"])}</a></h3><div class="iprov">{E(c["anbieter"])}</div>{starrow(c)}</div></div>
-    <div class="tags">{f'<a class="tag best" href="{base}bestenlisten/{BEST[c["slug"]][2]}/">🏆 Platz {BEST[c["slug"]][0]+1} für {E(BEST[c["slug"]][1])}</a>' if c["slug"] in BEST else ''}<span class="tag typ">▭ {E(TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung",""))}</span><span class="tag kl">{E({"Std":"Standard"}.get(c["klasse"],c["klasse"]))}</span>{'<span class="tag out">+ Girokonto</span>' if c.get('giro') else ''}{f'<span class="tag out">{E(c["netz"])}</span>' if c.get('netz') else ''}</div>
+    <div class="tags">{f'<a class="tag best" href="{base}bestenlisten/{BEST[c["slug"]][2]}/">🏆 Platz {BEST[c["slug"]][0]+1} für {E(BEST[c["slug"]][1])} ({de1(BEST[c["slug"]][3])} ★ in dieser Kategorie)</a>' if c["slug"] in BEST else ''}<span class="tag typ">▭ {E(TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung",""))}</span><span class="tag kl">{E({"Std":"Standard"}.get(c["klasse"],c["klasse"]))}</span>{'<span class="tag out">+ Girokonto</span>' if c.get('giro') else ''}{f'<span class="tag out">{E(c["netz"])}</span>' if c.get('netz') else ''}</div>
     <div class="stats"><div><small>Jahresgebühr</small>{st(c.get("fee")==0,fee)}</div><div><small>Zahlung Ausland</small>{st(c.get("fx")==0,fxT(c) if c.get("fx") is not None else "–")}</div><div><small>Bargeld Inland</small>{st(v==0,cash)}</div></div>
     {offer(c)}
     {f'<div class="earn"><span>Sammeln</span><b>{E(earn)}</b></div>' if earn else ""}
@@ -530,20 +530,22 @@ def list_page(cards,priv,biz):
     code=L['code']; N=L['name']; rel=f'{code}/kreditkarten/'; P='../../'
     n=len(cards); na=len({c['anbieter'] for c in cards})
     t=TXT[code]['list_t']; top=priv[:3]
+    nprv=card_count(code,'private')   # Meta: Zahl der Karten, die die Seite zeigt
     if code=='de':
-        d=f'{n} Kreditkarten in Deutschland unabhängig verglichen: Jahresgebühr, Ausland, Bargeld, Versicherung. Platz 1 der Finvallo-Bewertung: {top[0]["titel"]} ({de1(top[0]["stars"])}/5).'
-        if len(d)>158: d=f'{n} Kreditkarten in Deutschland unabhängig verglichen: Jahresgebühr, Ausland, Bargeld und Reiseversicherung. Mit Rangliste und bestbewerteter Karte laut Finvallo-Bewertung.'
-    else: d=f'{n} Kredit-, Debit- und Prepaid-Karten in Österreich unabhängig verglichen: Jahresgebühr, Auslandsgebühr, Versicherung und offene Bewertung.'
+        d=f'{nprv} Privatkarten in Deutschland unabhängig verglichen: Jahresgebühr, Ausland, Bargeld, Versicherung. Platz 1 der Finvallo-Bewertung: {top[0]["titel"]} ({de1(top[0]["stars"])}/5).'
+        if len(d)>158: d=f'{nprv} Privatkarten in Deutschland unabhängig verglichen: Jahresgebühr, Ausland, Bargeld und Reiseversicherung. Mit Rangliste und bestbewerteter Karte laut Finvallo-Bewertung.'
+    else: d=f'{nprv} Privatkarten in Österreich unabhängig verglichen: Jahresgebühr, Auslandsgebühr, Versicherung und offene Bewertung.'
     ld=graph(rel,t,d,[(N,f'{code}/'),('Kreditkarten',rel)],[{"@type":"ItemList","name":f"Beste Kreditkarten {N}","itemListElement":[{"@type":"ListItem","position":c['rank'],"name":c['titel'],"url":f"https://finvallo.com/{rel}{c['slug']}/"} for c in priv[:20]]}])
     unrated=[c for c in cards if c['art']=='Privat' and c.get('stars') is None and not c.get('nurfuer')]
     special=[c for c in cards if c['art']=='Privat' and c.get('nurfuer')]
     body=f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/")}
 <div class="wrap"><main id="app">
 <h1>Kreditkarten-Vergleich {N}</h1>
-  <p class="lede">{n} Kredit-, Charge-, Debit- und Prepaidkarten von {na} Anbietern. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>
+  <p class="lede">{n} Karten in {N}: {card_count(code,'private')} Privatkarten in dieser Rangliste, {card_count(code,'business')} Business-Karten auf einer <a href="business/">eigenen Seite</a>{f" und {len(unrated)} Karten ohne Bewertung (zu wenig bestätigte Daten)" if unrated else ""}. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>
   <details class="box howscore"><summary><span><b>So entstehen die Sterne</b><br><small>7 Kriterien, feste Regeln, offene Gewichtung</small></span><span class="lnk">anzeigen</span></summary>
     <div class="wbars">{"".join(f'<div class="wbar"><span>{k}</span><span class="t"><i style="width:{w*4}%"></i></span><em>{w} %</em></div>' for k,w in [("Jahresgebühr",25),("Reiseversicherung",20),("Zahlen im Ausland",15),("Kartenart &amp; Akzeptanz",10),("Alltag &amp; Flexibilität",10),("Bargeld",10),("Extras",10)])}</div>
     <p class="note">Jedes Kriterium bekommt nach festen Regeln 1 bis 5 Sterne. Die Gesamtnote ist der gewichtete Durchschnitt. Ab 4,5 Sternen gilt eine Karte als sehr gut. Fehlende Angaben zählen mit 2,5 Sternen, damit sie keinen Vorteil bringen. Bei gleicher Sternzahl steht die Karte mit der niedrigeren Jahresgebühr vorn.</p>
+    <p class="note">Kategorie-Plätze (z. B. „Platz 1 für Reisen“) kommen aus den Bestenlisten, dort sind die Kriterien anders gewichtet. Deshalb kann eine Karte in einer Kategorie vorn liegen und in der Gesamtwertung weiter hinten.</p>
     <a class="lnk" href="{P}{code}/kreditkarten/methodik/">Alle Regeln und ein Rechenbeispiel →</a></details>
   <p class="lhead"><b>{card_count(code,'private')} Karten{f", davon {card_count(code,'special')} für bestimmte Kundengruppen" if card_count(code,'special') else ""}</b></p>
   <div class="list" id="list">{"".join(list_item(c,P) for c in priv)}</div>
@@ -622,7 +624,7 @@ def anbieter_pages(cards,prov):
               ('Bester Score',f'{de1(b["stars"])} Sterne – {b["name"] if b.get("name") and b["titel"].endswith(b["name"]) else b["titel"]}' if b else None),
               ('Jahresgebühren',(('kostenlos' if max(fees)==0 else f'{eur(min(fees))} € bis {eur(max(fees))} €') if len(set(fees))>1 or max(fees)==0 else f'{eur(fees[0])} €') if fees else None)] if x)
         feat=''.join(x for x in [f'<span>📍 {E(pv["sitz"])}</span>' if pv.get('sitz') else '',f'<span class="b">▭ {len(v)} {"Karte" if len(v)==1 else "Karten"}</span>',f'<span class="g">★ bis {de1(b["stars"])}</span>' if b else ''])
-        about=''.join(f'<p><b>{lab}:</b> {E(dt[k])}</p>' for k,lab in DETAIL_LABELS if dt.get(k))
+        about=''.join(f'<p><b>{lab}:</b> {E(dt[k])}</p>' for k,lab in DETAIL_LABELS if dt.get(k) and (k!='kritik' or kritik_ok(dt)))
         src=' · '.join(ext(u) for u in dt.get('quellen') or [])
         giro=[c for c in v if c.get('giro')]
         if not giro: ga=f'Nein. Für {"keine der Karten" if len(v)>1 else "die Karte"} von {nm} brauchst du ein Girokonto beim Anbieter.'
@@ -778,7 +780,7 @@ def cat_lists(cards,land):
     best={}
     for cat in CATS:
         for i,c in enumerate(out[cat['k']][:3]):
-            if c['slug'] not in best or i<best[c['slug']][0]: best[c['slug']]=(i,cat['t'],cat['k'])
+            if c['slug'] not in best or i<best[c['slug']][0]: best[c['slug']]=(i,cat['t'],cat['k'],cat_stars(c,cat['w']))
     return out,best
 TIERK={0:'keine',1:'Basis',2:'inkl. Storno',3:'umfassend',4:'Premium'}
 def k_fee(c): return '–' if c.get('fee') is None else '0 €' if c['fee']==0 else f'{eur(c["fee"])} €'
@@ -991,6 +993,10 @@ def t(key,land=None):
     return TERMS[land or L['code']][key]
 PROVPAGE={}; REDIRECTS={}
 DETAIL_LABELS=[('gruendung','Gegründet'),('lizenz_aufsicht','Lizenz und Aufsicht'),('einlagensicherung','Einlagensicherung'),('kundenservice','Kundenservice'),('besonderheiten','Besonderheiten'),('kritik','Kritik')]
+KRITIK_QUELLEN=('arbeiterkammer.at','ris.bka.gv.at','vki.at','verbraucherrecht.at','ogh.gv.at','bundesgerichtshof.de','vzbv.de','verbraucherzentrale')
+def kritik_ok(dt):
+    """Kritik (Urteile, Verbandsklagen) nur mit Quelle von AK, RIS, VKI, Gericht oder Verbraucherzentrale."""
+    return any(any(q in u for q in KRITIK_QUELLEN) for u in dt.get('quellen') or [])
 def details(land):
     p=os.path.join(SP,'daten',land,'anbieter-details.json')
     return json.load(open(p))['anbieter'] if os.path.exists(p) else {}
@@ -1013,7 +1019,7 @@ def prepare():
         LANDS[land]['stand']=max(c['geprueft'] for c in cards)
         DATA[land]=(cards,providers(land,cards))
         priv=[c for c in cards if c['art']!='Business']
-        COUNTS[land]=dict(all=len(cards),private=len(priv),special=sum(1 for c in priv if c.get('nurfuer')),
+        COUNTS[land]=dict(unrated=sum(1 for c in cards if c.get('stars') is None),all=len(cards),private=len(priv),special=sum(1 for c in priv if c.get('nurfuer')),
                           business=len(cards)-len(priv),rated=sum(1 for c in priv if c.get('stars') is not None and not c.get('nurfuer')))
     at={c['titel']:c['slug'] for c in DATA['at'][0] if c['art']=='Privat'}
     for c in DATA['de'][0]:
@@ -1059,7 +1065,12 @@ def main():
         print(L['name'],'Karten',len(cards),'bewertet',len(priv),'business',len(biz),'Stand',L['stand'])
     patch_tabs(); sitemap(DATA); llms(DATA); write_redirects()
     # Für scripts/seo-check.mjs (A6): erlaubte Kartenanzahlen je Land aus card_count() und den Bestenlisten
-    json.dump({land:sorted({card_count(land,x) for x in ('all','private','business','rated','special')}|{len(v) for v in LISTS[land][0].values()}) for land in ('at','de')},
+    Z={land:sorted({card_count(land,x) for x in ('all','private','business','rated','special','unrated')}|{len(v) for v in LISTS[land][0].values()}) for land in ('at','de')}
+    for land in ('at','de'):
+        by={}
+        for c in DATA[land][0]: by[c['p']]=by.get(c['p'],0)+1
+        Z['anbieter_'+land]=by
+    json.dump(Z,
               open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten','zaehler.json'),'w'),indent=1)
     return DATA
 
