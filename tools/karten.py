@@ -738,15 +738,15 @@ def methodik_page(cards,priv):
 
 # ---------- Bestenlisten ----------
 CATS=[
- dict(k='reisen',t='Reisen',h='Die besten Karten für Reisen',d='Hier zählen Reiseversicherung und Auslandsgebühren am meisten.',f=lambda c:c['typ']!='Prepaid',w={'Reiseversicherung':30,'Zahlen im Ausland':25,'Jahresgebühr':15,'Kartenart & Akzeptanz':10,'Extras':10,'Bargeld':10}),
+ dict(k='reisen',t='Reisen',h='Die besten Karten für Reisen',d='Ausgangspunkt ist die Gesamtnote, dazu kommt ein Bonus für Reiseversicherung und Auslandsgebühren.',f=lambda c:c['typ']!='Prepaid',w={'_bonus':'fokus','fokus':['Reiseversicherung', 'Zahlen im Ausland']}),
  dict(k='gratis',t='Ohne Jahresgebühr',h='Die besten Karten ohne Jahresgebühr',d='Nur Karten, die dauerhaft nichts kosten. Bewertet wie in der Gesamtwertung.',f=lambda c:c.get('fee')==0,w=None),
- dict(k='ausland',t='Ohne Auslandsgebühr',h='Die besten Karten zum Zahlen im Ausland',d='Karten mit höchstens 0,5 % Aufschlag in fremder Währung. Bargeld und Akzeptanz zählen hier mehr.',f=lambda c:c.get('fx') is not None and c['fx']<=0.5,w={'Zahlen im Ausland':30,'Bargeld':20,'Jahresgebühr':20,'Kartenart & Akzeptanz':15,'Alltag & Flexibilität':15}),
+ dict(k='ausland',t='Ohne Auslandsgebühr',h='Die besten Karten zum Zahlen im Ausland',d='Karten mit höchstens 0,5 % Aufschlag in fremder Währung. Ausgangspunkt ist die Gesamtnote, dazu kommt ein Bonus für günstiges Zahlen und Abheben im Ausland.',f=lambda c:c.get('fx') is not None and c['fx']<=0.5,w={'_bonus':'fokus','fokus':['Zahlen im Ausland', 'Bargeld']}),
  dict(k='punkte',t='Meilen & Punkte',h='Die besten Karten für Meilen und Punkte',d='Nur Karten mit Meilen- oder Punkteprogramm auf normale Einkäufe, etwa Miles & More, Membership Rewards, Payback oder Hotelpunkte. Ausgangspunkt ist die Gesamtnote der Karte, dazu kommt ein Bonus für den Sammelwert: was bei 1.000 € Umsatz im Monat pro Jahr zusammenkommt. Reines Cashback steht in der eigenen Bestenliste.',f=lambda c:c.get('sammel') is not None and c.get('sammelKind')!='cash',w={'_bonus':'sammel'}),
  dict(k='cashback',t='Cashback',h='Die besten Karten mit Cashback',d='Nur Karten, die auf normale Einkäufe Geld zurückgeben. Ausgangspunkt ist die Gesamtnote der Karte, dazu kommt ein Bonus dafür, wie viel bei 1.000 € Umsatz im Monat pro Jahr zurückkommt, mit allen Höchstgrenzen. Partner- und Reiserabatte zählen hier nicht.',f=lambda c:c.get('sammel') is not None and c.get('sammelKind')=='cash',w={'_bonus':'sammel'}),
- dict(k='lounge',t='Lounge-Zugang',h='Die besten Karten mit Lounge-Zugang',d='Nur Karten mit kostenlosen Lounge-Besuchen. Am meisten zählt, wie gut der Lounge-Zugang ist: wie viele Besuche im Jahr und ob eine Begleitperson gratis mitkommt.',f=lambda c:bool(c['ex'].get('lg')),w={'Lounge-Zugang':60,'Reiseversicherung':15,'Jahresgebühr':15,'Zahlen im Ausland':10}),
- dict(k='premium',t='Premium',h='Die besten Premiumkarten',d='Top-Karten mit Lounges oder Premium-Reiseschutz. Die Jahresgebühr zählt hier weniger.',f=lambda c:c['klasse']=='Premium',w={'Reiseversicherung':30,'Extras':25,'Zahlen im Ausland':15,'Jahresgebühr':10,'Kartenart & Akzeptanz':10,'Bargeld':10}),
+ dict(k='lounge',t='Lounge-Zugang',h='Die besten Karten mit Lounge-Zugang',d='Nur Karten mit kostenlosen Lounge-Besuchen. Ausgangspunkt ist die Gesamtnote, dazu kommt ein Bonus für den Lounge-Zugang: wie viele Gratis-Besuche im Jahr, ob eine Begleitperson gratis mitkommt und ob die Lounges weltweit oder nur in Wien nutzbar sind.',f=lambda c:bool(c['ex'].get('lg')),w={'_bonus':'fokus','fokus':['Lounge-Zugang']}),
+ dict(k='premium',t='Premium',h='Die besten Premiumkarten',d='Top-Karten mit Lounges oder Premium-Reiseschutz. Ausgangspunkt ist die Gesamtnote, dazu kommt ein Bonus für Reiseschutz und Extras.',f=lambda c:c['klasse']=='Premium',w={'_bonus':'fokus','fokus':['Reiseversicherung', 'Extras']}),
  dict(k='studium',f_at=lambda c:bool(re.search(r'Student|Maturant',c['titel'])),t='Studierende',h='Die besten Karten für Studierende und junge Leute',d='Karten, die für Studierende, Azubis oder junge Kunden günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.',f=lambda c:youth(c) is not None,w=None),
- dict(k='debit',t='Debit & App-Banken',h='Die besten Debitkarten und App-Banken',d='Karten, die sofort vom Konto abbuchen. Kosten im Ausland zählen hier mehr.',f=lambda c:c['typ'] in ('Debit','Prepaid'),w={'Jahresgebühr':30,'Zahlen im Ausland':25,'Extras':15,'Reiseversicherung':15,'Alltag & Flexibilität':15}),
+ dict(k='debit',t='Debit & App-Banken',h='Die besten Debitkarten und App-Banken',d='Karten, die sofort vom Konto abbuchen. Ausgangspunkt ist die Gesamtnote, dazu kommt ein Bonus für günstiges Zahlen und Abheben im Ausland.',f=lambda c:c['typ'] in ('Debit','Prepaid'),w={'_bonus':'fokus','fokus':['Zahlen im Ausland', 'Bargeld']}),
 ]
 YOUTH=r'(unter (?:2|3)\d(?: Jahren|-Jährige| in Ausbildung)?|bis (?:1|2)\d Jahre|bis zum (?:1|2)\d\. Geburtstag|in Ausbildung|Studierende|Student|Young|StartKonto|Azubi)'
 def youth(c):
@@ -771,10 +771,21 @@ SAMMEL_BONUS=[(180,0.5),(120,0.4),(90,0.3),(60,0.2),(36,0.1)]
 def sammel_bonus(v):
     """Bonus auf die Gesamtnote für den Sammelwert pro Jahr (vor Jahresgebühr, die steckt schon in der Gesamtnote)."""
     return next((b for lim,b in SAMMEL_BONUS if (v or 0)>=lim),0.0)
+def fokus_note(c,fokus):
+    """Durchschnitt der Kategorie-Kriterien (Sterne wie in der Gesamtwertung, Lounge-Zugang aus lounge_score)."""
+    v=[c.get('lounge') if k=='Lounge-Zugang' else next((p['s'] for p in c['score']['parts'] if p['k']==k),None) for k in fokus]
+    v=[x for x in v if x is not None]
+    return sum(v)/len(v) if v else None
+def fokus_bonus(c,fokus):
+    """Bonus bis +0,5: Note 2,5 oder weniger in den Kategorie-Kriterien = +0, Note 5,0 = +0,5."""
+    n=fokus_note(c,fokus)
+    return 0.0 if n is None else round(max(0.0,min(1.0,(n-2.5)/2.5))*0.5+1e-9,1)
 def cat_stars(c,w):
     if c.get('stars') is None: return None
     if not w: return c['stars']
     if w.get('_bonus')=='sammel': return round(min(5.0,c['stars']+sammel_bonus(c.get('sammelEur')))+1e-9,1)
+    if w.get('_bonus')=='fokus':
+        return round(min(5.0,c['stars']+fokus_bonus(c,w['fokus']))+1e-9,1)
     a=b=0
     for p in c['score']['parts']:
         if p['k'] in w: a+=p['s']*w[p['k']]; b+=w[p['k']]
@@ -872,7 +883,14 @@ def bestenlisten(cards,lists,other_lists):
         if len(d)>155: d=f'{cat["h"]} in {N}: Platz 1 ist die {top["titel"]}. {top_of(len(X))}, Stand {S}.'
         if len(d)>155: d=f'{cat["h"]} in {N}: Platz 1 ist die {top["titel"]}. Stand {S}.'
         wb=''
-        if cat['w'] and cat['w'].get('_bonus')=='sammel':
+        if cat['w'] and cat['w'].get('_bonus')=='fokus':
+            fk=' und '.join(cat['w']['fokus'])
+            wb=('<details class="box howscore"><summary><span><b>So rechnen wir in dieser Kategorie</b></span><span class="lnk">anzeigen</span></summary>'
+                f'<p class="note">Kategorie-Sterne = Gesamtnote + Bonus, höchstens 5,0. Der Bonus richtet sich nach der Note in {fk}: 2,5 Sterne oder weniger ergeben +0, 5,0 Sterne ergeben +0,5, dazwischen anteilig. '
+                'So steht eine Karte hier nie schlechter da als in der Gesamtwertung, und Karten, die in dieser Kategorie stark sind, rücken nach vorn.'
+                + (' Die Lounge-Note: unbegrenzte Gratis-Besuche 5,0, ab 10 Besuchen 4,5, ab 6 Besuchen 4,0, ab 4 Besuchen 3,5, 2 bis 3 Besuche 3,0, 1 Besuch 2,5. Begleitperson gratis +0,5 (begrenzt +0,25), nur Lounges in Wien −0,5.' if cat['k']=='lounge' else '')
+                + '</p></details>')
+        elif cat['w'] and cat['w'].get('_bonus')=='sammel':
             bt=', '.join(f'ab {lim} € +{de1(b)}' for lim,b in SAMMEL_BONUS)
             wb=('<details class="box howscore"><summary><span><b>So rechnen wir in dieser Kategorie</b></span><span class="lnk">anzeigen</span></summary>'
                 f'<p class="note">Kategorie-Sterne = Gesamtnote + Sammel-Bonus, höchstens 5,0. Der Bonus richtet sich nach dem Sammelwert: was bei 1.000 € Umsatz im Monat pro Jahr zusammenkommt ({bt}). '
@@ -890,8 +908,8 @@ def bestenlisten(cards,lists,other_lists):
         thead='<tr><th>#</th><th>Karte</th>'+''.join(f'<th>{E(h)}</th>' for h,_ in cols)+'<th>Kategorie</th><th>Gesamt</th></tr>'
         cnote=f'<p class="note" style="margin-top:8px">{E(COLNOTE[cat["k"]])}</p>' if cat['k'] in COLNOTE else ''
         kurz=f'<b>Kurz gesagt:</b> {cat["h"]} in {N}: Platz 1 ist laut Finvallo die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} Sternen in dieser Kategorie'+(f', vor der {X[1]["titel"]}' if len(X)>1 else '')+(f' und der {X[2]["titel"]}' if len(X)>2 else '')+f'. Die Liste zeigt {"die Top 25 von "+str(len(X))+" bewerteten Karten" if len(X)>25 else "alle "+str(len(X))+" bewerteten Karten"}. Stand: {S}.'
-        fq=[(f'Welche Karte ist in {N} am besten in der Kategorie „{cat["t"]}“?',f'Laut Finvallo-Bewertung ist es die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} von 5 Sternen in dieser Kategorie. Stand: {S}.'),
-            ('Wie entsteht diese Rangliste?',cat['d']+(' Die Kategorie-Sterne sind die Gesamtnote plus ein Bonus von bis zu 0,5 Sternen für den Sammelwert.' if (cat['w'] or {}).get('_bonus') else ' Grundlage sind dieselben Sterne je Kriterium wie in der Gesamtwertung, nur anders gewichtet.')),
+        fq=[(f'Welche Karte ist in {N} am besten in der Kategorie „{cat["t"]}“?',f'In der Kategorie „{cat["t"]}“ liegt laut Finvallo-Bewertung die {top["titel"]} vorn, mit {de1(cat_stars(top,cat["w"]))} von 5 Sternen (Gesamtnote {de1(top["stars"])}). Stand: {S}.'),
+            ('Wie entsteht diese Rangliste?',cat['d']+(' Die Kategorie-Sterne sind die Gesamtnote plus ein Bonus von bis zu 0,5 Sternen.' if (cat['w'] or {}).get('_bonus') else ' Bewertet wie in der Gesamtwertung.')),
             ('Spielen Provisionen eine Rolle?','Nein. Provisionen haben keinen Einfluss auf Sterne oder Reihenfolge, und es gibt keine bezahlten Platzierungen.')]
         ld=graph(rel,t,d,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Bestenlisten',base),(cat['t'],rel)],
                  [{"@type":"ItemList","name":cat['h']+' in '+N,"numberOfItems":len(X),"itemListElement":[{"@type":"ListItem","position":i+1,"name":c['titel'],"url":f"https://finvallo.com/{code}/kreditkarten/{c['slug']}/"} for i,c in enumerate(X[:25])]},
