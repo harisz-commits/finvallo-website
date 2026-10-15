@@ -15,7 +15,10 @@ TIERN={0:'keine',1:'Basis-Reiseschutz',2:'mit Reiserücktritt',3:'umfassend (ink
 # ---------- Daten ----------
 def cards(land):
     import karten
-    if not hasattr(cards,'D'): cards.D=karten.prepare()
+    if not hasattr(cards,'D'):
+        cards.D=karten.prepare()
+        global STAND, STAND_DE   # Stand = jüngstes Prüfdatum der Kartendaten
+        STAND=max(karten.LANDS[l]['stand'] for l in karten.LANDS); STAND_DE='.'.join(reversed(STAND.split('-')))
     out=[]
     for c in cards.D[land][0]:
         out.append(dict(titel=c['titel'],url=f'{land}/kreditkarten/{c["slug"]}/',fee=c.get('fee'),fx=c.get('fx'),fxText=karten.fxT(c),cashText=karten.cashT(c),
@@ -266,8 +269,8 @@ def build(land):
           desc='Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“: So vermeidest du unnötige Gebühren mit der Kreditkarte, wenn du aus Österreich verreist.',
           lede='Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“.',
           kurz=f'Innerhalb des Euroraums kostet das Zahlen mit der Karte nichts extra. Außerhalb verlangen die Karten der großen österreichischen Banken in unserem Vergleich {pct(fxs[0])} bis {pct(fxs[-1])}. {len([c for c in credit if c["fx"]==0])} Kredit- und Charge-Karten in unserem Vergleich verlangen dafür 0 %.' if fxs else None,
-          secs=[('Was beim Zahlen in Fremdwährung anfällt','<div class="prose"><p>Zahlst du in einer fremden Währung, verlangen viele Banken zwei Dinge: ein Bearbeitungsentgelt, oft 1,5 bis 1,65 %, und einen Aufschlag auf den Wechselkurs, oft 1 bis 2 %. Zusammen sind das schnell 2,5 bis über 3 %. Achte deshalb immer auf beides.</p></div><div class="cond"><div class="r"><span>Urlaub in den USA, 1.000 € Ausgaben</span> <span></span></div><div class="r"><span>Karte mit 0 %</span> <span>0 €</span></div><div class="r"><span>Karte mit 1,5 %</span> <span>15 €</span></div><div class="r"><span>Karte mit 1,65 % + 1,5 %</span> <span>31,50 €</span></div></div>'),
-                ('Typische Gebühren bei Hausbanken',table(hb,[COL['karte'],COL['fee'],COL['fx'],COL['cash']],P)+'<p class="note">Je Bank die günstigste Standardkarte aus unserem Vergleich. Bei card complete und Bank Austria ist der Kursaufschlag eingerechnet.</p>' if hb else ''),
+          secs=[('Was beim Zahlen in Fremdwährung anfällt','<div class="prose"><p>Zahlst du in einer fremden Währung, verlangen viele Banken zwei Dinge: ein Bearbeitungsentgelt, oft 1,5 bis 1,65 %, und einen Aufschlag auf den Wechselkurs, in unserem Vergleich 1 bis 1,5 %. Zusammen sind das schnell 2,5 bis über 3 %. Achte deshalb immer auf beides.</p></div><div class="cond"><div class="r"><span>Urlaub in den USA, 1.000 € Ausgaben</span> <span></span></div><div class="r"><span>Karte mit 0 %</span> <span>0 €</span></div><div class="r"><span>Karte mit 1,5 %</span> <span>15 €</span></div><div class="r"><span>Karte mit 1,65 % + 1,5 %</span> <span>31,50 €</span></div></div>'),
+                ('Typische Gebühren bei Hausbanken',table(hb,[COL['karte'],COL['fee'],COL['fx'],COL['cash']],P)+'<p class="note">Je Bank die günstigste Standardkarte aus unserem Vergleich. Wo ein Kursaufschlag dazukommt, steht er dabei. In unserer Bewertung zählt die Summe aus Entgelt und Aufschlag.</p>' if hb else ''),
                 ('Karten ohne Auslandsgebühr',table(fx0,[COL['karte'],COL['fee'],COL['cash'],COL['stars']],P)+f'<p class="note"><a class="lnk" href="{best}ausland/">Zur Bestenliste: ohne Auslandsgebühr →</a></p>'),
                 ('Die Falle „in Euro zahlen?“','<div class="info"><span class="ic">!</span><div><p style="margin:0">Fragt dich ein Terminal oder Geldautomat im Ausland, ob du in Euro statt in der Landeswährung zahlen willst, lehne ab. Bei der Umrechnung durch den Händler ist der Kurs fast immer schlechter als bei deiner Bank.</p></div></div>'),
                 ('Bargeld im Ausland','<div class="prose"><p>Beim Beheben im Ausland fallen bis zu drei Kosten an: das Bearbeitungsentgelt für die Fremdwährung, eine Bargeldgebühr deiner Bank und eine Gebühr des Automatenbetreibers. Viele gebührenfreie Karten erstatten nur die eigenen Gebühren, nicht die des Betreibers. Was jede Karte für das Beheben verlangt, steht in den Tabellen oben und auf der jeweiligen Kartenseite.</p></div>'),
