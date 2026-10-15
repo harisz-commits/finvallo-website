@@ -25,7 +25,9 @@ check('R8.4', 'unbekannte Seite → 404 mit Navigation', r.code === '404' && /<n
 const KEY = (readFileSync(join(ROOT, 'server/indexnow.py'), 'utf8').match(/KEY = '([0-9a-f]+)'/) || [])[1];
 const kb = KEY ? body(`https://finvallo.com/${KEY}.txt`).trim() : '';
 check('R8.5', 'IndexNow-Schlüsseldatei', !!KEY && kb === KEY, KEY ? (kb === KEY ? '200, Inhalt = Schlüssel' : 'fehlt oder falscher Inhalt') : 'kein Schlüssel im Repo');
-const home = body('https://finvallo.com/'), want = (readFileSync(join(ROOT, 'public/index.html'), 'utf8').match(/<meta name="build" content="([^"]+)"/) || [])[1];
+// Soll-Stand: Startseite auf origin/main (das, was der Server zieht); ohne Git die lokale Datei
+let mainHtml; try { execFileSync('git', ['-C', ROOT, 'fetch', '-q', 'origin', 'main']); mainHtml = execFileSync('git', ['-C', ROOT, 'show', 'origin/main:public/index.html'], { encoding: 'utf8' }); } catch { mainHtml = readFileSync(join(ROOT, 'public/index.html'), 'utf8'); }
+const home = body('https://finvallo.com/'), want = (mainHtml.match(/<meta name="build" content="([^"]+)"/) || [])[1];
 const got = (home.match(/<meta name="build" content="([^"]+)"/) || [])[1];
 check('R8.6', 'Startseite = aktueller Build', got && got === want, got === want ? `build ${got}` : `live ${got || 'ohne Marker'}, Repo ${want}: Cache liefert alten Build`);
 const h = headers('https://finvallo.com/'), ma = maxAge(h), enc = (h.match(/content-encoding: *(\S+)/) || [])[1];

@@ -25,7 +25,9 @@ if HTML not in s: s = s.replace(ROOT, ROOT + '\n    ' + HTML)
 # location / ohne eigenen Header (sonst überschreibt er die Server-Zeile)
 s = re.sub(r'(location / \{ try_files \$uri \$uri/ =404;) add_header Cache-Control "[^"]*";', r'\1', s)
 # Asset-Regeln auf den neuen Stand bringen
-s = re.sub(r'location ~\* \\\.\(css\|js\|png\|jpg\|jpeg\|webp\|svg\|ico\|woff2\?(?:\|webmanifest)?\)\$ \{[^}]*\}', lambda m: ASSETS, s)
+if ASSETS.split('\n')[0] not in s:
+    # jede bisherige Asset-Regel (eine location mit css in der Endungsliste) durch die neuen zwei Regeln ersetzen
+    s = re.sub(r'location ~\* \\\.\([^)]*\bcss\b[^)]*\)\$ \{[^}]*\}', lambda m: ASSETS, s)
 if s == old: sys.exit(0)
 shutil.copy(CONF, CONF + '.bak')
 open(CONF, 'w').write(s)
