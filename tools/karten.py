@@ -105,20 +105,27 @@ def zinsT(c):
     return c.get('zins')
 TYPLAB={'Kreditkarte':'Kreditkarte mit Teilzahlung','Charge':'Charge-Karte','Debit':'Debitkarte','Prepaid':'Prepaid-Karte'}
 TOPICS=[('girokonto','konto beim anbieter','geschäftskonto','hausbank'),('reiseversicherung','versicherungen'),
-        ('fremdwährungsgebühr','auslandseinsatzentgelt','fremdwährungskosten'),('jahresgebühr',),('membership rewards',),
+        ('fremdwährungsgebühr','auslandseinsatz','fremdwährungskosten'),('jahresgebühr',),('membership rewards',),
         ('unbegrenzt gültig','verfallen nicht'),('wolt+',),('^bargeld','^weltweit kostenlos bargeld')]
 def dedupe(xs):
     """Doppelte Punkte entfernen: gleich nach Normalisierung (Kleinschreibung, ohne Satzzeichen) oder gleiches Thema mit gleicher Aussage."""
-    out=[]; seen=set(); topics={}
+    out=[]; seen=set(); topics={}; keys=set()
     for x in xs:
         n=re.sub(r'[^\wäöüß%€ ]','',x.lower()); n=re.sub(r'\s+',' ',n).strip()
-        if n in seen or any(n in o or o in n for o in seen if len(o)>12 and len(n)>12): continue
+        # R7.3: Stoppwörter weg (Karten, pro, je, …) und die ersten 25 Zeichen vergleichen
+        k=re.sub(r'\s+',' ',re.sub(r'karten|\bpro\b|\bje\b|…','',n)).strip()[:25]
+        if n in seen or any(k.startswith(o) or o.startswith(k) for o in keys if min(len(k),len(o))>=15) or any(n in o or o in n for o in seen if len(o)>12 and len(n)>12): continue
+        keys.add(k)
         t=next((i for i,ws in enumerate(TOPICS) if any(re.search(re.escape(w).replace('\\^','^'),x.lower()) for w in ws)),None)
-        neg=bool(re.match(r'(keine?|nur|ohne)\b',x.lower()))
+        neg=bool(re.match(r'(keine?|nur|ohne|0 €|0 %)(\b|\s)',x.lower()))
         if t is not None and (t,neg) in topics: continue
         if t is not None: topics[(t,neg)]=x
         seen.add(n); out.append(x)
     return out
+PRO_NEIN_OK=('Keine Jahresgebühr','Keine Fremdwährungsgebühr','Kein Girokonto','Keine Bonitätsprüfung','Kein Mindestumsatz')
+def not_pro(x):
+    """Punkt beginnt mit Kein/Keine und ist keine echte Stärke (z. B. „Kein Cashback …“)."""
+    return bool(re.match(r'Keine?\b',x)) and not x.startswith(PRO_NEIN_OK)
 def pros(c):
     p=[]
     f=c.get('fee')
@@ -201,7 +208,8 @@ def ratecards(cards):
     for c in cards:
         c['ex'].setdefault('offer',bool(c.get('offer') or (c.get('fee1')==0 and c.get('fee'))))
         sc=score(c); c['score']=sc; c['stars']=sc['stars']; c['note']=note(sc['stars'])
-        c['pros']=dedupe(pros(c)); c['cons']=dedupe(cons(c))
+        pr=pros(c); neg=[x for x in pr if not_pro(x)]
+        c['pros']=dedupe([x for x in pr if not not_pro(x)]); c['cons']=dedupe(cons(c)+neg)
     priv=[c for c in cards if c['art']=='Privat' and c['stars'] is not None and not c.get('nurfuer')]
     priv.sort(key=lambda c:(-c['stars'],c['fee'] if c['fee'] is not None else 1e9,c['titel'].lower()))
     for c in cards: c['rank']=None
@@ -661,13 +669,16 @@ def write_redirects():
     json.dump(dict(sorted(ENTF.items())),open(ENTF_P,'w'),ensure_ascii=False,indent=1)
     json.dump(dict(sorted(REDIRECTS.items())),open(os.path.join(SP,'daten','redirects.json'),'w'),ensure_ascii=False,indent=1)
     open(os.path.join(R,'..','server','redirects.conf'),'w').write('# automatisch erzeugt von tools/karten.py – nicht von Hand ändern\n'+''.join(f'location = {a} {{ return 301 {b}; }}\n' for a,b in sorted(REDIRECTS.items())))
-    open(R+'.htaccess','w').write('# automatisch erzeugt von tools/karten.py (für Apache-Hosting)\nRewriteEngine On\nRewriteCond %{HTTP_HOST} ^www\\.finvallo\\.com$ [NC]\nRewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]\nRewriteCond %{HTTPS} off\nRewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]\n'+''.join(f'Redirect 301 {a} https://finvallo.com{b}\n' for a,b in sorted(REDIRECTS.items()))+'ErrorDocument 404 /404.html\n')
+    HT_CACHE=('<IfModule mod_headers.c>\n  <FilesMatch "\\.(html|htm|xml|txt|json)$">\n    Header set Cache-Control "public, max-age=600, must-revalidate"\n  </FilesMatch>\n'
+              '  <FilesMatch "\\.(css|js)$">\n    Header set Cache-Control "public, max-age=31536000, immutable"\n  </FilesMatch>\n'
+              '  <FilesMatch "\\.(woff2|png|jpg|jpeg|webp|svg|ico)$">\n    Header set Cache-Control "public, max-age=86400"\n  </FilesMatch>\n</IfModule>\n')
+    open(R+'.htaccess','w').write(HT_CACHE+'# automatisch erzeugt von tools/karten.py (für Apache-Hosting)\nRewriteEngine On\nRewriteCond %{HTTP_HOST} ^www\\.finvallo\\.com$ [NC]\nRewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]\nRewriteCond %{HTTPS} off\nRewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]\n'+''.join(f'Redirect 301 {a} https://finvallo.com{b}\n' for a,b in sorted(REDIRECTS.items()))+'ErrorDocument 404 /404.html\n')
 def alle_page(cards,prov):
     code=L['code']; N=L['name']; rel=f'{code}/kreditkarten/alle/'; P='../../../'
     by={}
     for c in cards: by.setdefault(c['p'],[]).append(c)
     t=f'Alle Kreditkarten in {N} nach Anbieter | Finvallo'
-    d=f'Alle {len(cards)} Kreditkarten, Debit- und Prepaid-Karten in {N} nach Anbieter sortiert, mit Jahresgebühr, Auslandsgebühr und Bewertung. Stand {dmy(L["stand"])}.'
+    d=f'Alle {len(cards)} Karten (Kredit-, Debit- und Prepaid-Karten) in {N} nach Anbieter sortiert, mit Jahresgebühr, Auslandsgebühr und Bewertung. Stand {dmy(L["stand"])}.'
     sec=''
     for p,v in sorted(by.items(),key=lambda kv:(prov.get(kv[0]) or {}).get('name',kv[1][0]['anbieter']).lower()):
         nm=(prov.get(p) or {}).get('name') or v[0]['anbieter']

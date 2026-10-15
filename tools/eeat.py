@@ -8,7 +8,7 @@
   FAQPage und BreadcrumbList, wo sie fehlen
 Datumsquellen: Feld `geprueft` je Karte (karten.json / DE-Recherche), `updated`/`published` je Ratgeber (ratgeber.py).
 """
-import glob, html as H, json, os, re, sys
+import glob, html as H, json, os, re, subprocess, sys
 from urllib.parse import quote
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import karten as K
@@ -260,14 +260,17 @@ def methodik(s, land):
     if hint in s and 'rechner/teilzahlung/' not in s:
         s = s.replace(hint, hint + f' Was sie kosten, zeigt der <a href="{calc}">Teilzahlungsrechner</a>.', 1)
     s = re.sub(r'<p class="note meth-since">.*?</p>', '', s)
-    if METH.get('gueltig_seit'):
-        s = re.sub(r'(<p class="lede">.*?</p>)', r'\1' + f'<p class="note meth-since">Methodik gültig seit {dmy(METH["gueltig_seit"])}.</p>', s, count=1, flags=re.S)
+    if SITE.get('methodikSeit'):
+        s = re.sub(r'(<p class="lede">.*?</p>)', r'\1' + f'<p class="note meth-since">Methodik gültig seit {dmy(SITE["methodikSeit"])}.</p>', s, count=1, flags=re.S)
     return s
 
 DASH = str.maketrans({'\u2013': '-', '\u2014': '-', '\u2212': '-'})
 def undash(t):
     """Nur den normalen Bindestrich verwenden (keine Halbgeviert-, Geviert- oder Minuszeichen)."""
     return t.translate(DASH)
+
+try: BUILD = subprocess.run(['git', 'rev-parse', '--short', 'HEAD'], capture_output=True, text=True, cwd=os.path.dirname(os.path.abspath(__file__))).stdout.strip() or 'unbekannt'
+except Exception: BUILD = 'unbekannt'
 
 def main():
     import ratgeber as RG
@@ -306,10 +309,14 @@ def main():
         if (SITE.get('analytics') or {}).get('enabled'):
             a_ = SITE['analytics']
             s = s.replace('</head>', f'<!--analytics--><script defer data-domain="{E(a_["domain"])}" src="{E(a_["src"])}"></script><!--/analytics-->\n</head>', 1)
+        if rel == 'at/':
+            da = f'Unabhängiger Finanzvergleich für Österreich: {K.card_count("at", "all")} Karten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner.'
+            s = s.replace('Finvallo vergleicht Finanzprodukte in Österreich unabhängig und nach offenen Regeln. Jetzt: 77 Kreditkarten. Bald: Girokonten, Depots und ETFs.', da)
+            s = re.sub(r'Unabhängiger Finanzvergleich für Österreich: \d+ Karten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner\.', da, s)
         if rel == 'de/':
-            dd = f'Unabhängiger Finanzvergleich für Deutschland: {K.card_count("de", "all")} Kreditkarten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner.'
+            dd = f'Unabhängiger Finanzvergleich für Deutschland: {K.card_count("de", "all")} Karten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner.'
             s = re.sub(r'Kreditkarten in Deutschland: unabhängige Ratgeber zu Punkten, Meilen, Auslandsgebühren, Reiseversicherung und Kartentypen\. Der Kartenvergleich folgt\.', dd, s)
-            s = re.sub(r'Unabhängiger Finanzvergleich für Deutschland: \d+ Kreditkarten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner\.', dd, s)
+            s = re.sub(r'Unabhängiger Finanzvergleich für Deutschland: \d+ (?:Kreditkarten|Karten|Karten \(Kredit-, Debit- und Prepaid-Karten\)) mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner\.', dd, s)
         parts = rel.split('/')
         land = parts[0] if parts[0] in ('at', 'de') else None
         title = (re.search(r'<title>(.*?)</title>', s, re.S) or [None, ''])[1]
@@ -367,7 +374,13 @@ def main():
                 if pub: art["datePublished"] = pub
                 if upd: art["dateModified"] = upd
             patch = rp
-        s = ld_merge(s, extra, patch)
+        md = re.search(r'<meta name="description" content="([^"]*)"', s)
+        def patch2(out, _p=patch, _d=H.unescape(md.group(1)) if md else None, _u='https://finvallo.com/' + rel):
+            if _p: _p(out)
+            # Beschreibung der Seite im JSON-LD = aktuelle Meta Description (keine alten Texte aus früheren Builds)
+            for x in out:
+                if _d and 'description' in x and (x.get('url') == _u or (x.get('@id') or '').startswith(_u + '#')): x['description'] = _d
+        s = ld_merge(s, extra, patch2)
         s = set_hreflang(s, rel)
         if rel not in LASTMOD:
             if land:
@@ -376,6 +389,9 @@ def main():
             else:
                 LASTMOD[rel] = git_date(f'public/{rel}index.html' if rel else 'public/index.html') or max(K.LANDS[l]['stand'] for l in K.LANDS)
         NOINDEX[rel] = 'noindex' in (re.search(r'<meta name="robots" content="([^"]*)"', s) or [None, ''])[1]
+        if rel == '':   # R2.4: Build-Marker (Commit beim Bauen), live-check vergleicht ihn mit dem Repo
+            s = re.sub(r'\n?<meta name="build" content="[^"]*">', '', s)
+            s = s.replace('<meta charset="utf-8">', f'<meta charset="utf-8">\n<meta name="build" content="{BUILD}">', 1)
         s = undash(s)
         if s != s0: open(f, 'w', encoding='utf-8').write(s)
     # Sitemap (B11, B14, B20.8): alle indexierbaren Seiten, lastmod aus Inhaltsdaten, hreflang-Paare, keine 301-Quellen

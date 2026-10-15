@@ -15,7 +15,8 @@ const GLUE_OK = ['1822direkt', 'ChatGPT', 'NordVPN', 'eSIM', 'PayPal', 'MasterCa
 const LATER = new Set(['assets/haris.jpg']); // Foto wird nachgeliefert
 const ALLOWED = JSON.parse(readFileSync(join(ROOT, 'tools/daten/zaehler.json'), 'utf8'));
 const unesc = s => s.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'");
-const err = [];
+const err = [], warn = [];
+const NEIN_OK = ['Keine Jahresgebühr', 'Keine Fremdwährungsgebühr', 'Kein Girokonto', 'Keine Bonitätsprüfung', 'Kein Mindestumsatz'];
 
 function walk(d, out = []) {
   for (const f of readdirSync(d)) { const p = join(d, f); if (statSync(p).isDirectory()) walk(p, out); else if (f === 'index.html') out.push(p); }
@@ -74,6 +75,14 @@ for (const f of pages) {
       if (seen.has(n)) err.push(`B15.3 ${rel}: doppelter Punkt „${n.slice(0, 60)}“`); seen.add(n);
     }
   }
+  // R7.7: sichtbares „Aktualisiert am“ = article:modified_time = dateModified
+  const vis = s.match(/Aktualisiert am (\d{2})\.(\d{2})\.(\d{4})/);
+  if (vis) { const iso = `${vis[3]}-${vis[2]}-${vis[1]}`;
+    for (const [lab, m] of [['article:modified_time', s.match(/article:modified_time" content="([^"]+)"/)], ['dateModified', s.match(/"dateModified": "([^"]+)"/)]])
+      if (m && m[1].slice(0, 10) !== iso) err.push(`R7.7 ${rel}: „Aktualisiert am“ ${iso} ≠ ${lab} ${m[1]}`); }
+  // R7.2: verneinte Punkte unter Vorteilen (Warnung)
+  const pm = s.match(/<ul class="checks">([\s\S]*?)<\/ul>/);
+  if (pm) for (const li of pm[1].matchAll(/<li>([\s\S]*?)<\/li>/g)) { const t = unesc(li[1].replace(/<[^>]+>/g, '')).trim(); if (/^Keine?\b/.test(t) && !NEIN_OK.some(o => t.startsWith(o))) warn.push(`R7.2 ${rel}: Vorteil „${t.slice(0, 60)}“`); }
   // B17.3: höchstens 35 Links außerhalb von <main>
   const outside = body.replace(/<main\b[\s\S]*?<\/main>/g, ''); const nl = (outside.match(/<a\s/g) || []).length;
   if (nl > 35) err.push(`B17.3 ${rel}: ${nl} Links außerhalb von <main>`);
@@ -136,5 +145,6 @@ for (const u of sm) {
 if (sm.length !== new Set(sm).size) err.push('B20.8 Sitemap: doppelte Einträge');
 
 console.log(`${pages.length} Seiten, ${sm.length} Sitemap-Einträge geprüft`);
+if (warn.length) console.log('WARNUNG:\n' + warn.slice(0, 50).join('\n'));
 if (err.length) { console.log('FEHLER:\n' + err.slice(0, 100).join('\n') + (err.length > 100 ? `\n… und ${err.length - 100} weitere` : '')); process.exit(1); }
 console.log('alles in Ordnung');

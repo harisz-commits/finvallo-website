@@ -74,6 +74,12 @@ for f in pages:
     ds = set(re.findall(r'(?:Stand:|[Gg]eprüft am|geprüft bis|Aktualisiert am)\s*(\d{2}\.\d{2}\.\d{4})', re.sub(r'<[^>]+>', ' ', body_)))
     if len(ds) > 1: err.append(f'{rel}: mehrere Prüfdaten {sorted(ds)}')
     if re.search('[\u2013\u2014\u2212]', s): err.append(f'{rel}: langer Strich (– — −) statt Bindestrich')
+    # R7.7: sichtbares „Aktualisiert am“ = article:modified_time = dateModified
+    vis = re.search(r'Aktualisiert am (\d{2})\.(\d{2})\.(\d{4})', s)
+    if vis:
+        iso = f'{vis.group(3)}-{vis.group(2)}-{vis.group(1)}'
+        for lab, m_ in (('article:modified_time', re.search(r'article:modified_time" content="([^"]+)"', s)), ('dateModified', re.search(r'"dateModified": "([^"]+)"', s))):
+            if m_ and m_.group(1)[:10] != iso: err.append(f'{rel}: „Aktualisiert am“ {iso} ≠ {lab} {m_.group(1)}')
     t = re.search(r'<title>(.*?)</title>', s)
     if t: titles.setdefault(t.group(1), []).append(rel)
     d = re.search(r'<meta name="description" content="(.*?)"', s)

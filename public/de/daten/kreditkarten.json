@@ -36,10 +36,7 @@
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
     "Reiseversicherung inkl. Storno",
-    "Kein Cashback auf alle Umsätze; nur Partner-Rabatte/Cashback über den TF Bank Vorteilsclub",
     "Kein Girokonto beim Anbieter nötig",
-    "0 € Jahresgebühr dauerhaft",
-    "0 % Auslandseinsatz",
     "Bargeld weltweit ohne Gebühr",
     "Bis 51 Tage zinsfrei"
    ],
@@ -49,7 +46,8 @@
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Teilzahlung (3 %, mind. 30 €) ist Standard - Vollzahlung nur per Überweisung",
     "Kein Lastschrifteinzug",
-    "Hoher Zins 25,09 % eff."
+    "Hoher Zins 25,09 % eff.",
+    "Kein Cashback auf alle Umsätze; nur Partner-Rabatte/Cashback über den TF Bank Vorteilsclub"
    ],
    "quelle": "https://tfbank.de/",
    "preis": "https://tfbank.de/media/metjnv0f/preis-und-leistungsverzeichnis_tf-bank-de_20260624.pdf",
@@ -92,17 +90,15 @@
     "Reiseversicherung inkl. Storno",
     "Nur Partner-Rabatte (z. B. 5 % Reisegutschrift bei Urlaubsplus), kein allgemeines Cashback",
     "Kein Girokonto beim Anbieter nötig",
-    "Volle Abbuchung per Lastschrift möglich",
-    "0 € Jahresgebühr dauerhaft",
-    "0 % Auslandseinsatz",
-    "Keine Abhebegebühr"
+    "Volle Abbuchung per Lastschrift möglich"
    ],
    "cons": [
     "Teilzahlung ist teuer: 22,32 % Soll / 24,69 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Zinsen ab Transaktionstag, wenn nicht die volle Rechnung bezahlt wird",
     "Nur eine Advanzia-Karte pro Person",
-    "Mindestzahlung 3 % (mind. 30 €) bis zum 20. - volle Zahlung muss man aktiv sicherstellen"
+    "Mindestzahlung 3 % (mind. 30 €) bis zum 20. - volle Zahlung muss man aktiv sicherstellen",
+    "Keine Abhebegebühr"
    ],
    "quelle": "https://www.gebuhrenfrei.com/",
    "preis": "https://cdn.sanity.io/files/mkiw82r3/production/ef9d9e8b04864b895f98b8269f5adb789846b68f.pdf",
@@ -146,9 +142,7 @@
     "0,5 % Cashback (WEB.Cent) auf jeden Einkauf, ohne Jahreslimit; Auszahlung ab 5 € aufs Bankkonto. Ausgenommen Geldtransfers, PayPal, Google-Play-Family. Plus Shop-Cashback über WEB.Cent-Partner.",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "0,5 % Cashback auf alle Einkäufe",
-    "0 € Jahresgebühr dauerhaft",
-    "0 % Auslandseinsatz"
+    "0,5 % Cashback auf alle Einkäufe"
    ],
    "cons": [
     "Teilzahlung ist teuer: 22,32 % Soll / 24,69 % effektiv",
@@ -199,16 +193,15 @@
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
     "Hilton Honors Gold-Status inklusive",
-    "1 Punkt pro €, 2 Punkte pro € bei Hilton",
-    "0 % Auslandseinsatz",
-    "Keine Abhebegebühr"
+    "1 Punkt pro €, 2 Punkte pro € bei Hilton"
    ],
    "cons": [
     "Teilzahlung ist teuer: 22,32 % Soll / 24,69 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "72 € Jahresgebühr (6 €/Monat)",
     "Bestehende Advanzia-Karte muss gekündigt werden",
-    "Kein Lounge-Zugang"
+    "Kein Lounge-Zugang",
+    "Keine Abhebegebühr"
    ],
    "quelle": "https://hilton-honors.mein-onlineantrag.de/",
    "preis": "https://cdn.sanity.io/files/mkiw82r3/production/ef9d9e8b04864b895f98b8269f5adb789846b68f.pdf",
@@ -251,16 +244,15 @@
     "1 Miles&Smiles-Meile pro 2 € Umsatz",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "1 Meile pro 2 € Umsatz",
-    "0 % Auslandseinsatz",
-    "Keine Abhebegebühr"
+    "1 Meile pro 2 € Umsatz"
    ],
    "cons": [
     "Teilzahlung ist teuer: 22,32 % Soll / 24,69 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "96 € Jahresgebühr (8 €/Monat)",
     "Keine Lounge, kein Status-Vorteil",
-    "Nur eine Advanzia-Karte pro Person"
+    "Nur eine Advanzia-Karte pro Person",
+    "Keine Abhebegebühr"
    ],
    "quelle": "https://milesandsmiles.kartegold.de/",
    "preis": "https://cdn.sanity.io/files/mkiw82r3/production/ef9d9e8b04864b895f98b8269f5adb789846b68f.pdf",
@@ -300,10 +292,8 @@
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
-    "Kein Cashback; bis zu 7 % Reiserabatt bei Urlaubsplus und Gutscheine in der Hanseatic Vorteilswelt",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "0 € Jahresgebühr",
     "0 % Fremdwährung",
     "Bargeld im Ausland gratis",
     "Lastschrift-Vollzahlung möglich"
@@ -314,7 +304,8 @@
     "Teilzahlung ist voreingestellt",
     "3,95 € pro Abhebung in Deutschland",
     "Überweisung aufs Girokonto kostet 3,95 €",
-    "3 % (mind. 3,95 €) bei Krypto/Glücksspiel/Geldtransfer"
+    "3 % (mind. 3,95 €) bei Krypto/Glücksspiel/Geldtransfer",
+    "Kein Cashback; bis zu 7 % Reiserabatt bei Urlaubsplus und Gutscheine in der Hanseatic Vorteilswelt"
    ],
    "quelle": "https://www.deutschland-kreditkarte.de/classic",
    "preis": "https://www.deutschland-kreditkarte.de/preisliste.html",
@@ -355,7 +346,6 @@
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
     "Reiseversicherung inkl. Storno",
-    "Kein Cashback; bis zu 7 % Reiserabatt bei Urlaubsplus",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
     "0 % Fremdwährung"
@@ -365,7 +355,8 @@
     "4,90 € Monatsgebühr",
     "Teilzahlung ist voreingestellt",
     "Effektivzins 27,87 % (inkl. Kartengebühr)",
-    "Überweisung aufs Girokonto kostet 3,95 €"
+    "Überweisung aufs Girokonto kostet 3,95 €",
+    "Kein Cashback; bis zu 7 % Reiserabatt bei Urlaubsplus"
    ],
    "quelle": "https://www.deutschland-kreditkarte.de/gold",
    "preis": "https://www.deutschland-kreditkarte.de/preisliste.html",
@@ -406,8 +397,6 @@
     "Keine Jahresgebühr",
     "Wechselnder Monatsrabatt in einer Kategorie (z. B. Oktober 2026: 5 % auf Sportausrüstung), max. 50 €/Monat und 300 €/Jahr, Abzug von der nächsten Rechnung",
     "Kein Girokonto beim Anbieter nötig",
-    "0 € Jahresgebühr",
-    "Kein SCHUFA-Eintrag (Experian)",
     "Limit bis 25.000 €",
     "Virtuelle Karte sofort nutzbar",
     "Monatsrabatt bis 5 %"
@@ -417,7 +406,8 @@
     "Teilzahlung ist teuer: 18,90 % Soll / 20,63 % effektiv",
     "Bargeld wird ab dem Abhebungstag verzinst",
     "Fremdwährungsgebühr: 2,49 %",
-    "Keine zinsfreien Tage - Zinsen ab dem ersten Tag"
+    "Keine zinsfreien Tage - Zinsen ab dem ersten Tag",
+    "Kein SCHUFA-Eintrag (Experian)"
    ],
    "quelle": "https://instabank.de/kreditkarte",
    "preis": "https://instabank.de/vollstandige-preisliste",
@@ -456,10 +446,8 @@
    "rank": 79,
    "pros": [
     "Keine Jahresgebühr",
-    "Kein allgemeines Cashback; Extra Club mit Partner-Rabatten (z. B. 10 % Zalando-Gutscheine, 15 % YOOX), Reise-Cashback und Mietwagenrabatten",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "0 € Jahresgebühr",
     "Bis ca. 8 Wochen zinsfrei",
     "Extra Club Partner-Rabatte",
     "Apple Pay und Google Pay"
@@ -470,7 +458,8 @@
     "Fremdwährungsgebühr: 2,99 % auf Fremdwährungsumsätze",
     "2,99 % Fremdwährungsentgelt",
     "3 % (mind. 3 €) fürs Geldabheben",
-    "Hoher Zins 24,60 % eff."
+    "Hoher Zins 24,60 % eff.",
+    "Kein allgemeines Cashback; Extra Club mit Partner-Rabatten (z. B. 10 % Zalando-Gutscheine, 15 % YOOX), Reise-Cashback und Mietwagenrabatten"
    ],
    "quelle": "https://www.extrakarte.com/",
    "preis": "https://www.extrakarte.com/kreditkarten-kostenuebersicht",
@@ -874,7 +863,6 @@
     "5 % Rückvergütung auf Reisen über easybank Reiseservice Plus (PTG)",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "0 % Auslandseinsatzentgelt",
     "Bargeld weltweit ohne Gebühr",
     "Partnerkarten kostenlos (bis zu 3)",
     "Mietwagen-Vollkasko inkl."
@@ -979,7 +967,6 @@
     "1 Miles & More Prämienmeile je 2 € Umsatz (36 Monate gültig)",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "0 % Auslandseinsatzentgelt",
     "Kostenlose Sitzplatzreservierung bei Eurowings",
     "Fastlane an 20 Flughäfen + Priority Check-in",
     "Mietwagen-Vollkasko inklusive"
@@ -1179,7 +1166,6 @@
     "Keine Fremdwährungsgebühr",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "0 € Jahresgebühr",
     "0 % Fremdwährung",
     "Bis zu 90 Tage zinsfrei ('Später zahlen')",
     "CashClick: Geld vom Kartenrahmen aufs Girokonto, gebührenfrei"
@@ -1239,7 +1225,8 @@
     "Bargeld am Automaten kostet 3,9 % (mind. 1,50 €) in der EU in Euro; 5,4 % (mind. 1,50 €) in Fremdwährung weltweit",
     "1,5 % Auslandseinsatzentgelt",
     "Kein Apple Pay",
-    "Überweisung aufs Referenzkonto 2 €"
+    "Überweisung aufs Referenzkonto 2 €",
+    "Kein neues Girokonto nötig"
    ],
    "quelle": "https://www.openbankpay.com/de/amazon",
    "preis": "https://www.openbankpay.com/assets/CF_DE/de-DE/documents/v1/CB.AMZ.DE.TC.GENERAL_SPECIAL.pdf",
@@ -1961,7 +1948,6 @@
     "1 Meile pro 1 € Kartenumsatz; Meilen unbegrenzt gültig",
     "Wolt+ kostenlos, Marriott Bonvoy Silver Elite",
     "Kein Girokonto beim Anbieter nötig",
-    "1 Meile pro 1 € Umsatz",
     "Für Selbstständige und Freiberufler"
    ],
    "cons": [
@@ -2007,7 +1993,6 @@
     "1 Meile pro 1 € Kartenumsatz; Meilen unbegrenzt gültig",
     "6 Monate Wolt+ kostenlos",
     "Kein Girokonto beim Anbieter nötig",
-    "1 Meile pro 1 € Umsatz",
     "Für Selbstständige und Freiberufler"
    ],
    "cons": [
@@ -2385,7 +2370,6 @@
     "5 % Erstattung auf Reisebuchungen über Partner Urlaubsplus",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "0 % Auslandseinsatzentgelt",
     "4 Gratis-Abhebungen pro Monat weltweit",
     "0 € ab 2.000 € Jahresumsatz"
    ],
@@ -2437,7 +2421,6 @@
     "5 % Erstattung auf Reisebuchungen über Partner Urlaubsplus",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "0 % Auslandseinsatzentgelt",
     "6 Gratis-Abhebungen pro Monat",
     "Reiserücktritt und Auslandskranken"
    ],
@@ -2488,7 +2471,6 @@
     "7 % Erstattung auf Reisebuchungen über Partner Urlaubsplus",
     "Kein Girokonto beim Anbieter nötig",
     "Volle Abbuchung per Lastschrift möglich",
-    "0 % Auslandseinsatzentgelt",
     "8 Gratis-Abhebungen pro Monat",
     "Mietwagen-Vollkasko und Gepäck"
    ],
@@ -2774,7 +2756,6 @@
    "note": "Ausreichend",
    "rank": 130,
    "pros": [
-    "Keine SCHUFA-/Bonitätsprüfung",
     "Visa oder Mastercard wählbar",
     "Monatlich kündbar",
     "Für 14-18-Jährige kostenlos"
@@ -2785,7 +2766,8 @@
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "39,90 € Jahresgebühr für eine Guthabenkarte",
-    "Bargeld 1,95 %, mind. 5,98 €"
+    "Bargeld 1,95 %, mind. 5,98 €",
+    "Keine SCHUFA-/Bonitätsprüfung"
    ],
    "quelle": "https://www.commerzbank.de/privatkunden/kreditkarten/prepaid-karte/",
    "preis": "https://www.commerzbank.de/portal/media/efw-dokumente/preis_leistungsverzeichnis.pdf",
@@ -3164,7 +3146,8 @@
     "Nur mit Konto beim Anbieter (comdirect Girokonto Aktiv (0 € bei 700 € Geldeingang/Monat oder 3 Apple-/Google-Pay-Zahlungen/Monat oder 1 Trade/Sparplan oder unter 28 in Ausbildung, sonst 4,90 €/Monat))",
     "Keine Reiseversicherung inklusive",
     "4,90 € pro Bargeldabhebung",
-    "Reiseversicherung nur gegen Aufpreis (Reise-Sorglos-Paket 7,90 €/Monat)"
+    "Reiseversicherung nur gegen Aufpreis (Reise-Sorglos-Paket 7,90 €/Monat)",
+    "Kein Auslandseinsatzentgelt"
    ],
    "quelle": "https://www.comdirect.de/konto/karten.html",
    "preis": "https://www.comdirect.de/formulare/preis-leistungsverzeichnis",
@@ -3313,7 +3296,8 @@
    "cons": [
     "Nur mit Konto beim Anbieter (DKB Girokonto (0 € bei mind. 700 € Geldeingang/Monat oder unter 28 Jahren, sonst 4,50 €/Monat))",
     "Keine Reiseversicherung inklusive",
-    "Mindestabhebung 50 €"
+    "Mindestabhebung 50 €",
+    "Kein Auslandseinsatzentgelt"
    ],
    "quelle": "https://www.dkb.de/kreditkarte",
    "preis": "https://dok.dkb.de/pdf/plv_pk_karten.pdf",
@@ -3844,7 +3828,6 @@
     "Keine Fremdwährungsgebühr",
     "Reiseversicherung inkl. Storno",
     "Bis 4 % (Classic) bzw. 10 % (Gold) Reisebonus nur bei Buchung über vr-meinereise.de/Urlaubsplus - kein Cashback auf normale Einkäufe",
-    "Kein Fremdwährungsentgelt",
     "Bargeld im Ausland kostenlos",
     "Für Mitglieder kostenlos",
     "Reisebonus bis 10 %",
@@ -3854,7 +3837,8 @@
     "Bargeld am Automaten kostet Im Ausland kostenlos seitens der Bank; Inland 2 %, mind. 7,50 €",
     "Nur mit Konto beim Anbieter (Girokonto der Berliner Volksbank (3,95 €/Monat, ClassicCard inklusive))",
     "Inlands-Abhebung kostenpflichtig",
-    "Versicherungssummen nicht transparent online"
+    "Versicherungssummen nicht transparent online",
+    "Kein Fremdwährungsentgelt"
    ],
    "quelle": "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte-gold.html",
    "preis": "https://www.berliner-volksbank.de/privatkunden/girokonto-karten/kreditkarte-gold.html",
@@ -3986,13 +3970,13 @@
    "rank": 64,
    "pros": [
     "Keine Fremdwährungsgebühr",
-    "Kein Fremdwährungsentgelt",
     "Bargeld im Ausland kostenlos",
     "Globales Datenroaming-Angebot (FlexiRoam)"
    ],
    "cons": [
     "Nur mit Konto beim Anbieter (OLB Girokonto (z. B. smartDigital 5 €/Monat, 0 € ab 1.000 € Durchschnittsguthaben; smartDialog 7,50 €/Monat inkl. Mastercard Standard, bis 25 Jahre 0 €))",
-    "Inlands-Abhebung 2 %, mind. 5 €"
+    "Inlands-Abhebung 2 %, mind. 5 €",
+    "Kein Fremdwährungsentgelt"
    ],
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
@@ -4031,13 +4015,13 @@
    "rank": 109,
    "pros": [
     "Keine Fremdwährungsgebühr",
-    "Kein Fremdwährungsentgelt",
     "Bargeld im Ausland kostenlos"
    ],
    "cons": [
     "Hohe Jahresgebühr (198 €)",
     "Nur mit Konto beim Anbieter (OLB Girokonto (z. B. smartDigital 5 €/Monat, 0 € ab 1.000 € Durchschnittsguthaben; smartDialog 7,50 €/Monat inkl. Mastercard Standard, bis 25 Jahre 0 €))",
-    "Hohe Monatsgebühr"
+    "Hohe Monatsgebühr",
+    "Kein Fremdwährungsentgelt"
    ],
    "quelle": "https://www.olb.de/konten-und-karten/kartenvergleich",
    "preis": "https://www.olb.de/cms-assets/rPO2xc7wIsWuV7jHc7T2j/f1871c54a18475e77e6fdcd416e92104/20251001_PLV_Allg644_OLB.pdf",
@@ -5487,7 +5471,6 @@
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Reiseversicherung inkl. Storno",
     "0,5 % Cashback auf alle Kartenzahlungen, monatlich ausgezahlt, ohne Obergrenze; zusätzlich 1 % außerhalb EWR/UK/CH (Aktion, 12 Monate)",
-    "0,5 % Cashback auf alle Kartenzahlungen ohne Obergrenze",
     "Metallkarte",
     "Reise-, Handy- und Einkaufsversicherung"
    ],
@@ -5539,7 +5522,6 @@
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "0,05 % Basis-Cashback als Smily-Punkte, Aktions-Cashback bis 2,5 % (max. 100 €/Monat)",
     "Kontoführung kostenlos",
-    "0 % Fremdwährungsgebühr",
     "4 Gratisabhebungen weltweit pro Monat",
     "0,75 % Zinsen auf Girokonto (laut Website)",
     "girocard kostenlos"
@@ -5591,7 +5573,6 @@
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "0,5 % Cashback auf alles bis 12 €/Monat, danach 0,1 % Basis-Cashback; Aktions-Cashback bis 5 % (Smily-Punkte)",
     "20 Gratisabhebungen weltweit pro Monat",
-    "0 % Fremdwährungsgebühr",
     "AXA Käuferschutz",
     "0,5 % Cashback bis 12 €/Monat",
     "20 virtuelle Karten, 20 Pockets"
@@ -5644,7 +5625,6 @@
     "Metall-Mastercard in Wunschfarbe",
     "1 % Cashback bis 24 €/Monat",
     "20 Gratisabhebungen weltweit",
-    "0 % Fremdwährungsgebühr",
     "AXA Käuferschutz",
     "Priorisierter Kundenservice, Smily Level 3"
    ],
@@ -5743,7 +5723,6 @@
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
-    "0 % Fremdwährungsgebühr",
     "Auslandsreise-Krankenversicherung inklusive",
     "5 Gratisabhebungen",
     "1,25 % Tagesgeldzins"
@@ -5794,7 +5773,6 @@
     "Bargeld ohne Automatengebühr",
     "Reiseversicherung inkl. Storno",
     "Unbegrenzt kostenlose Abhebungen",
-    "0 % Fremdwährungsgebühr",
     "Reiserücktritt, Gepäck- und Auslandskrankenversicherung",
     "Holzkarte möglich (20 €)",
     "1,75 % Tagesgeldzins"
@@ -6649,7 +6627,6 @@
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (ca. 0,47 % Umrechnungsgebühr EUR→USD zum Devisenmittelkurs (variabel, abhängig von Währung/Betrag; Stand 12.10.2026 per Wise-Preisrechner); 0 % bei Zahlung aus vorhandenem USD-Guthaben)",
     "Bargeld ohne Automatengebühr",
-    "Keine Monatsgebühr",
     "Umrechnung zum Devisenmittelkurs mit geringer Gebühr",
     "Guthaben in 40+ Währungen halten",
     "250 € Gratis-Abhebung pro Monat"
@@ -6660,7 +6637,8 @@
     "Physische Karte 7 € einmalig",
     "2,69 % auf Abhebungen über 250 €/Monat",
     "Kein Dispo, keine Versicherungen",
-    "Umrechnungsgebühr variabel"
+    "Umrechnungsgebühr variabel",
+    "Keine Monatsgebühr"
    ],
    "quelle": "https://wise.com/de/card/",
    "preis": "https://wise.com/de/pricing/card-fees",
@@ -6854,7 +6832,6 @@
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
     "Cashback in EUR oder Bitcoin nach 30-Tage-Durchschnittsguthaben: ab ca. 200 € 0,5 %, ab 1.000 € 1 %, ab 10.000 € 1,5 %, ab 50.000 € 2 %; unter 200 € 0 %",
-    "Keine Gebühren für Karte und Fremdwährung",
     "Zahlung aus über 600 Fiat- und Krypto-Guthaben",
     "Cashback wahlweise in Bitcoin"
    ],
@@ -6863,7 +6840,8 @@
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Cashback hängt vom Guthaben ab (unter 200 € kein Cashback)",
     "Spread bei Zahlung mit Krypto",
-    "Ersatzkarte 4,99 €"
+    "Ersatzkarte 4,99 €",
+    "Keine Gebühren für Karte und Fremdwährung"
    ],
    "quelle": "https://www.krak.app/de/card",
    "preis": "https://support.kraken.com/de/articles/kraken-card-faqs",
@@ -6953,9 +6931,7 @@
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
     "1 % Cashback in BTC, nur bei Zahlung mit Kryptowährungen (nicht bei EUR, Metallen, Aktien, Stablecoins)",
-    "Keine Karten- oder Monatsgebühr",
     "Bezahlen mit über 600 Krypto-Assets und Edelmetallen",
-    "0 % Fremdwährungsgebühr",
     "1 % BTC-Cashback bei Krypto-Zahlung"
    ],
    "cons": [
@@ -6964,7 +6940,8 @@
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Cashback nur bei Zahlung mit Krypto (steuerpflichtiger Tausch)",
     "Spread/Handelsgebühr bei Zahlung mit Krypto",
-    "Nur für Bürger der Eurozone, nicht bei Bankident-Verifizierung"
+    "Nur für Bürger der Eurozone, nicht bei Bankident-Verifizierung",
+    "Keine Karten- oder Monatsgebühr"
    ],
    "quelle": "https://www.bitpanda.com/de/card",
    "preis": "https://support.bitpanda.com/hc/en-us/articles/360018933120",
@@ -7375,9 +7352,7 @@
     "Keine Jahresgebühr",
     "Bargeld ohne Automatengebühr",
     "1 % Cashback in Coins auf Kartenzahlungen (100 Coins = 1 €); ausgenommen Bargeld, Überweisungen, Krypto, Glücksspiel u. a.",
-    "Keine Grundgebühr",
     "1 % Cashback auf Kartenzahlungen",
-    "Kein Telekom-Vertrag nötig",
     "Kostenlos aufladen per Karte"
    ],
    "cons": [
@@ -7387,7 +7362,9 @@
     "Nur virtuelle Karte, Bargeld nur an NFC-Automaten",
     "2,5 % Fremdwährungsentgelt",
     "E-Geld: keine Einlagensicherung, keine Zinsen",
-    "Griechische IBAN, nicht als Gehaltskonto gedacht"
+    "Griechische IBAN, nicht als Gehaltskonto gedacht",
+    "Keine Grundgebühr",
+    "Kein Telekom-Vertrag nötig"
    ],
    "quelle": "https://www.magenta.pay/",
    "preis": null,
@@ -7429,7 +7406,6 @@
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr (Gratis-Abhebungen begrenzt)",
     "Bis zu 5 % Cashback auf Kartenzahlungen, max. 10 € pro Monat (Sätze je nach Händler/Kategorie)",
-    "Kein Monatsentgelt",
     "3 Gratis-Abhebungen im Inland + 1 im Ausland pro Monat",
     "Bis zu 5 % Cashback (max. 10 €/Monat)"
    ],
@@ -7438,7 +7414,8 @@
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Ab der 4. Abhebung 2 %",
     "Cashback auf 10 € pro Monat gedeckelt",
-    "E-Geld-Konto ohne Einlagensicherung"
+    "E-Geld-Konto ohne Einlagensicherung",
+    "Kein Monatsentgelt"
    ],
    "quelle": "https://www.sumup.com/de-de/privat/reisen/",
    "preis": "https://www.sumup.com/de-de/pay/legal/fee-schedule/",
@@ -7527,7 +7504,6 @@
    "rank": 122,
    "pros": [
     "Keine Jahresgebühr",
-    "Kein Monatsentgelt",
     "Konten in EUR, GBP und RON"
    ],
    "cons": [
@@ -7537,7 +7513,8 @@
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "3 % Fremdwährungsentgelt",
     "Jede Abhebung 2 %",
-    "Überweisungen 1,29 € pro Stück, eingehende 0,99 €"
+    "Überweisungen 1,29 € pro Stück, eingehende 0,99 €",
+    "Kein Monatsentgelt"
    ],
    "quelle": "https://monese.com/our-pricing-eu/",
    "preis": "https://monese.com/fees-and-limits/deutschland-personal-fees-and-limits-03-07-2026",

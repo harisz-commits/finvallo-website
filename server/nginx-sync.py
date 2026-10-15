@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Bringt die Live-nginx-Konfiguration von finvallo.com auf den Stand der Vorlage (läuft aus update.sh).
 
-Ergänzt nur fehlende Zeilen in den server-Blöcken mit `root /var/www/finvallo/public;`:
+In den server-Blöcken mit `root /var/www/finvallo/public;`:
 - include der 301-Weiterleitungen (server/redirects.conf)
-- Cache-Control für HTML (1 Stunde)
-und entfernt den doppelten Cache-Header bei Assets (`expires 30d;` neben add_header).
+- Cache-Control für HTML, XML, TXT, JSON: 10 Minuten, must-revalidate (Server-Ebene)
+- CSS/JS (per ?v=Hash versioniert): 1 Jahr, immutable; Bilder, Schriften, Manifest: 1 Tag
 Sicher: Sicherungskopie, `nginx -t`, bei Fehler Rückbau. Ohne Änderung passiert nichts.
 """
 import os, re, shutil, subprocess, sys
@@ -12,16 +12,20 @@ import os, re, shutil, subprocess, sys
 CONF = '/etc/nginx/sites-available/finvallo'
 ROOT = 'root /var/www/finvallo/public;'
 INC = 'include /var/www/finvallo/server/redirects.conf;'
-CACHE = 'add_header Cache-Control "public, max-age=3600";'
+HTML = 'add_header Cache-Control "public, max-age=600, must-revalidate";'
+ASSETS = ('location ~* \\.(css|js)$ { add_header Cache-Control "public, max-age=31536000, immutable"; }\n'
+          '    location ~* \\.(png|jpg|jpeg|webp|svg|ico|woff2?|webmanifest)$ { add_header Cache-Control "public, max-age=86400"; }')
 
 if not os.path.exists(CONF): sys.exit(0)
 old = open(CONF).read(); s = old
-if INC not in s:
-    s = s.replace(ROOT, ROOT + '\n    ' + INC)
-if 'max-age=3600' not in s:
-    # auf Server-Ebene: gilt für alle locations ohne eigenes add_header (Assets setzen ihr eigenes)
-    s = s.replace(ROOT, ROOT + '\n    ' + CACHE)
-s = re.sub(r'expires 30d;\s*(add_header Cache-Control "public, max-age=2592000";)', r'\1', s)
+if INC not in s: s = s.replace(ROOT, ROOT + '\n    ' + INC)
+# HTML-Cache: alte Server-Zeile ersetzen oder neu setzen
+s = re.sub(r'add_header Cache-Control "public, max-age=3600";', HTML, s)
+if HTML not in s: s = s.replace(ROOT, ROOT + '\n    ' + HTML)
+# location / ohne eigenen Header (sonst überschreibt er die Server-Zeile)
+s = re.sub(r'(location / \{ try_files \$uri \$uri/ =404;) add_header Cache-Control "[^"]*";', r'\1', s)
+# Asset-Regeln auf den neuen Stand bringen
+s = re.sub(r'location ~\* \\\.\(css\|js\|png\|jpg\|jpeg\|webp\|svg\|ico\|woff2\?(?:\|webmanifest)?\)\$ \{[^}]*\}', lambda m: ASSETS, s)
 if s == old: sys.exit(0)
 shutil.copy(CONF, CONF + '.bak')
 open(CONF, 'w').write(s)
