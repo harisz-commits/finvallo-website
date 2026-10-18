@@ -80,7 +80,7 @@ def register(art,P,best,K,nprv,eur,KM):
     art('de','bargeld-abheben',pair='bargeld-beheben',
       h1='Geld abheben mit der Kreditkarte: Was es in Deutschland und im Ausland wirklich kostet',
       mt='Geld abheben mit Kreditkarte: Gebühren im Vergleich (Deutschland 2026) | Finvallo',
-      desc='Was Bargeld am Geldautomaten mit der Kreditkarte kostet: Entgelte aller Karten in Deutschland, die Zinsfalle bei Gratiskarten und Rechenbeispiele für Italien, Türkei und Thailand.',
+      desc='Geld abheben mit der Kreditkarte: Entgelte aller Karten in Deutschland, Inland gegen Ausland, Zinsfalle bei Gratiskarten und Rechenbeispiele.',
       lede='In Deutschland ist die Lage verkehrt herum: Viele Karten verlangen im Inland ein Entgelt und sind im Ausland kostenlos. Dazu kommen Automatenbetreiber, Fremdwährung und bei den Gratiskarten Zinsen ab dem ersten Tag.',
       kurz=(f'Von den {nprv} Privatkarten in unserem Deutschland-Vergleich heben {n_free} ohne Entgelt ab, {n_lim} mit einem monatlichen Freikontingent und {n_int} ohne Entgelt, aber mit Zinsen ab dem Buchungstag. '
             f'{n_pct} verlangen einen Prozentsatz, meist 2 bis 4 % mit 5 bis 7,50 € Mindestbetrag, {n_fix} einen Festbetrag je Abhebung. '

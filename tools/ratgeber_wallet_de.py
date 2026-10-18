@@ -43,7 +43,7 @@ def register(art,P,best,K,nprv,eur,KM):
     art('de','apple-pay-google-pay',
       h1='Apple Pay und Google Pay in Deutschland: Welche Banken und Kreditkarten funktionieren',
       mt='Apple Pay und Google Pay in Deutschland: alle Banken und Kreditkarten 2026 | Finvallo',
-      desc='Welche deutschen Banken und Kreditkarten Apple Pay und Google Pay unterstützen, welche nicht (Sparkasse, Amazon Visa, Postbank Visa), wie du die Karte einrichtest und was bei Verlust gilt.',
+      desc='Apple Pay und Google Pay in Deutschland: welche Banken mitmachen, welche nicht (Sparkasse, Amazon Visa, Postbank Visa), Einrichtung und Haftung.',
       lede='Die Listen von Apple und Google sind unvollständig, und die Ausnahmen stecken im Kleingedruckten: Sparkassen ohne Google Pay, Postbank nur mit Mastercard, Amazon Visa ohne Apple Pay. Hier stehen alle Herausgeber aus unserem Vergleich an einem Ort.',
       kurz=(f'Von den {len(order)} Kartenherausgebern in unserem Deutschland-Vergleich unterstützen {n_both} sowohl Apple Pay als auch Google Pay, bei {n_one} ist nur eines belegt, bei {n_none} keines, und bei {n_unk} fehlt jeder Beleg. '
             f'Die wichtigsten Ausnahmen: Die Sparkassen bieten Apple Pay, für Android aber nur ihre eigene App „Mobiles Bezahlen“ statt Google Pay; bei Volksbanken und TARGOBANK ist Google Pay nicht belegt; die {L("postbank-mastercard")} läuft nur als Mastercard, nicht als Visa; die {L("amazon-visa")} läuft nur mit Google Pay, Apple schließt sie aus; die {L("ikea-family-kreditkarte")} nennt keine Wallet. '

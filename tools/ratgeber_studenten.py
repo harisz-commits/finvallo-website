@@ -42,7 +42,7 @@ def register(art,P,best,K,nprv,eur,KM):
     art('at','kreditkarte-studenten',
       h1='Kreditkarte als Student in Österreich: Was du ohne Einkommen bekommst und was nach dem Studium passiert',
       mt='Kreditkarte als Student in Österreich: Bonität, Gratis-Karten, Auslandssemester | Finvallo',
-      desc='Kreditkarte im Studium: welche Karten es ohne Einkommen gibt, was die Bonitätsprüfung prüft, was die Studentenkarten der Banken nach dem Studium kosten und was fürs Auslandssemester zählt.',
+      desc='Kreditkarte als Student in Österreich: Karten ohne Einkommen, Studentenkarten der Banken, was nach dem Studium gilt und was im Auslandssemester zählt.',
       lede='Sechs Banken haben eigene Studentenkarten, acht Karten sind für alle gratis. Welche passt, hängt an drei Fragen: Konto, Einkommen und Reisen.',
       kurz=(f'In Österreich gibt es Studentenkarten von easybank, Diners Club, Bank Austria, BAWAG, card complete und PayLife, meist zum halben Preis der normalen Karte und oft nur zusammen mit dem Studentenkonto der Bank. '
             f'Die {L("easybank-gold-student")} ist bis 27 komplett gratis, ohne Studiennachweis, mit Reiseversicherung, verlangt aber das easy gratis Konto. '

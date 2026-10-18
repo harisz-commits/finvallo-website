@@ -41,7 +41,7 @@ def register(art,P,best,K,nprv,eur,KM):
     art('at','apple-pay-google-pay',
       h1='Apple Pay und Google Pay in Österreich: Welche Banken und Kreditkarten funktionieren',
       mt='Apple Pay und Google Pay in Österreich: alle Banken und Kreditkarten 2026 | Finvallo',
-      desc='Welche österreichischen Banken und Kreditkarten Apple Pay und Google Pay unterstützen, welche nicht, wie du die Karte einrichtest und was bei Verlust des Handys passiert.',
+      desc='Apple Pay und Google Pay in Österreich: welche Banken und Karten mitmachen, welche nicht (Amex, card complete), Einrichtung, Limits und Haftung.',
       lede='Die Listen von Apple und Google sind unvollständig, die Bankseiten verstreut. Hier stehen alle Herausgeber aus unserem Vergleich an einem Ort, mit Quelle und Prüfdatum.',
       kurz=(f'Von den {len(order)} Kartenherausgebern in unserem Österreich-Vergleich unterstützen {n_both} sowohl Apple Pay als auch Google Pay, {n_one} nur eines davon oder nur eines belegt, {n_none} keines, und bei {n_unk} fehlt ein aktueller Beleg. '
             f'Die großen Lücken: {Lp("american-express")} bietet in Österreich weder Apple Pay noch Google Pay an, die {L("santander-card")} ebenfalls nicht, und für card complete und Diners Club haben wir keinen aktuellen Beleg gefunden. '
