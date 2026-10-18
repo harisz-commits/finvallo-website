@@ -53,22 +53,36 @@ def load_at():
 def load(land='de'): return load_de() if land=='de' else load_at()
 # Apple Pay / Google Pay je Anbieter (daten/at/anbieter.json, Feld wallet). Kartenfeld pay bleibt der Schalter:
 # pay=None → keine Angabe, pay=False → nein; bei pay=True entscheidet der Anbieter-Eintrag, ob „Apple Pay & Google Pay“ oder nur eines steht.
-_WALLET=None
-def wallet(p):
-    global _WALLET
-    if _WALLET is None:
-        try: _WALLET={k:(v.get('wallet') or {}) for k,v in json.load(open(SP+'/daten/at/anbieter.json')).items()}
-        except Exception: _WALLET={}
-    return _WALLET.get(p) or {}
+_WALLET={}
+def wallet(p,land='at'):
+    if land not in _WALLET:
+        try:
+            if land=='at': _WALLET[land]={k:(v.get('wallet') or {}) for k,v in json.load(open(SP+'/daten/at/anbieter.json')).items()}
+            else: _WALLET[land]=json.load(open(SP+'/daten/de/wallet.json')).get('wallet') or {}
+        except Exception: _WALLET[land]={}
+    return _WALLET[land].get(p) or {}
 def wallet_text(c):
+    """Badge-Text: nur wenn mindestens ein Dienst belegt ist."""
     if not c.get('pay'): return None
-    w=wallet(c.get('p')) if c.get('land')=='at' else {}
+    w=wallet(c.get('p'),c.get('land') or 'at')
     if not w: return 'Apple Pay & Google Pay'
     a,g=w.get('apple'),w.get('google')
     if a and g: return 'Apple Pay & Google Pay'
-    if a and not g: return 'Apple Pay'+(' (Google Pay unklar)' if g is None else '')
-    if g and not a: return 'Google Pay'+(' (Apple Pay unklar)' if a is None else '')
-    return 'Apple Pay & Google Pay'
+    if a: return 'Apple Pay'+(' (Google Pay unklar)' if g is None else '')
+    if g: return 'Google Pay'+(' (Apple Pay unklar)' if a is None else '')
+    return None
+def wallet_row(c,b,na):
+    """Zeile „Apple / Google Pay“ auf der Kartenseite."""
+    w=wallet(c.get('p'),c.get('land') or 'at')
+    if not w and c.get('pay') and c.get('payText'): return E(c['payText'])
+    if w:
+        t=wallet_text(c)
+        if t: return E(t)
+        a,g=w.get('apple'),w.get('google')
+        if a is False and g is False: return 'nein'
+        if a is False and g is None: return 'Apple Pay nein, Google Pay unklar'
+        return 'unklar'
+    return b(c.get('pay')) if c.get('pay') is not None else na
 def providers(land,cards):
     P=json.load(open(SP+'/daten/at/anbieter.json')) if land=='at' else {}
     out={}
@@ -366,7 +380,7 @@ def cond(c):
     out+=r('Girokonto beim Anbieter','nötig' if c.get('giro') else 'nicht nötig' if c.get('giro') is False else '–')
     out+=r(L['bonrow'],'ja' if c['typ'] in ('Kreditkarte','Charge') else 'meist nur bei Kontoeröffnung')
     out+=r('Für Kautionen','in der Regel ja' if c['typ'] in ('Kreditkarte','Charge') and 'American' not in (c.get('netz') or '') else 'oft nicht' if c['typ'] in ('Debit','Prepaid') else 'eingeschränkt')
-    out+=r('Apple / Google Pay',(E(c.get('payText')) if c.get('pay') and c.get('payText') else E(wallet_text(c)) if wallet_text(c) else b(c.get('pay')) if c.get('pay') is not None else na))
+    out+=r('Apple / Google Pay',wallet_row(c,b,na))
     if c.get('herausgeber'): out+=r('Herausgeber',E(c['herausgeber']))
     return out+'</div>'
 def scorebox(c,P):
