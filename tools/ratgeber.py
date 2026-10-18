@@ -71,7 +71,7 @@ DATES={
     ('de','ohne-bonitaetspruefung'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','punkte-sammeln-de'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','punkte'): dict(published='2026-10-12', updated='2026-10-12'),
-    ('de','reiseversicherung'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('de','reiseversicherung'): dict(published='2026-10-11', updated='2026-10-18'),
     ('de','teilzahlung'): dict(published='2026-10-11', updated='2026-10-11'),
     ('de','visa-mastercard-amex'): dict(published='2026-10-12', updated='2026-10-12'),
 }
@@ -293,6 +293,7 @@ def build(land):
     if land=='de':
         import karten, ratgeber_bargeld_de
         ratgeber_bargeld_de.register(art,P,best,cards.D['de'][0],karten.card_count('de','private'),eur,karten)
+        import ratgeber_reise_de; ratgeber_reise_de.register(art,P,best,cards.D['de'][0],karten.card_count('de','private'),eur,karten)
         lou=[c for c in RC if c['lg']]
         art('de','lounges',h1='Lounge-Zugang mit der Kreditkarte',mt='Lounge-Zugang mit Kreditkarte in Deutschland | Finvallo',
           desc='Welche Kreditkarten in Deutschland kostenlosen Zugang zu Flughafen-Lounges geben: Priority Pass, Besuche pro Jahr und Begleitpersonen.',
