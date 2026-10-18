@@ -552,7 +552,7 @@
    "tier": 0,
    "stars": 3.1,
    "note": "Ausreichend",
-   "rank": 61,
+   "rank": 60,
    "pros": [
     "Kein Girokonto beim Anbieter nötig",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -639,7 +639,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 42,
+   "rank": 41,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Kein Girokonto beim Anbieter nötig",
@@ -912,7 +912,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 40,
+   "rank": 39,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Diners Club Airport Lounges: 4 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zahlen (Mindestumsatz 3.600 € in den letzten 365 Tagen vor Besuch)",
@@ -1003,7 +1003,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 43,
+   "rank": 42,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Kein Girokonto beim Anbieter nötig",
@@ -1183,7 +1183,7 @@
    "tier": 1,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 37,
+   "rank": 36,
    "pros": [
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Einkaufsschutz"
@@ -1450,7 +1450,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 36,
+   "rank": 35,
    "pros": [
     "Im 1. Jahr 0 € statt 22,44 €",
     "Niedrige Fremdwährungskosten (1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs))",
@@ -1863,7 +1863,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 39,
+   "rank": 38,
    "pros": [
     "Im 1. Jahr 0 € statt 65 €",
     "Reiseversicherung inkl. Storno",
@@ -2442,11 +2442,11 @@
    "rahmen": null,
    "giro": true,
    "auto": true,
-   "pay": true,
+   "pay": null,
    "tier": 0,
-   "stars": 3.1,
+   "stars": 3.0,
    "note": "Ausreichend",
-   "rank": 60,
+   "rank": 61,
    "pros": [
     "Im 1. Jahr 0 € statt 21,60 €",
     "Automatischer Rechnungsausgleich per Lastschrift"
@@ -2487,11 +2487,11 @@
    "rahmen": null,
    "giro": true,
    "auto": true,
-   "pay": true,
+   "pay": null,
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 41,
+   "rank": 40,
    "pros": [
     "Im 1. Jahr 0 € statt 80,40 €",
     "Reiseversicherung inkl. Storno",
@@ -2533,11 +2533,11 @@
    "rahmen": null,
    "giro": true,
    "auto": true,
-   "pay": true,
+   "pay": null,
    "tier": 3,
-   "stars": 3.6,
+   "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 35,
+   "rank": 43,
    "pros": [
     "Im 1. Jahr 0 € statt 138,60 €",
     "Umfassender Reiseschutz",
@@ -2805,7 +2805,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 38,
+   "rank": 37,
    "pros": [
     "Keine Fremdwährungsgebühr bis zur Freigrenze",
     "Einige Abhebungen pro Monat ohne Gebühr",
