@@ -83,7 +83,7 @@ def register(art,P,best,K,nprv,eur,KM):
     art('at','bargeld-beheben',pair='bargeld-abheben',
       h1='Bargeld beheben mit der Kreditkarte: Was es in Österreich und im Ausland wirklich kostet',
       mt='Bargeld beheben mit Kreditkarte: Gebühren im Vergleich (Österreich 2026) | Finvallo',
-      desc='Was Bargeld am Bankomaten mit der Kreditkarte kostet: Gebühren aller Karten in Österreich, die Zinsfalle bei Gratiskarten und Rechenbeispiele für Kroatien, Türkei und Thailand.',
+      desc='Bargeld beheben mit der Kreditkarte: Gebühren aller Karten in Österreich, die Zinsfalle bei TF Bank und Advanzia und Rechenbeispiele für drei Urlaube.',
       lede='Bis zu vier Posten kommen bei einer Behebung zusammen: Bankgebühr, Fremdwährungsentgelt, Betreibergebühr und bei zwei Gratiskarten Zinsen ab dem ersten Tag.',
       kurz=(f'Von den {nprv} Privatkarten in unserem Vergleich beheben {n_free} ohne Gebühr, {n_lim} mit einem monatlichen Freikontingent und {n_int} ohne Gebühr, aber mit Zinsen ab dem Behebungstag. '
             f'{n_pct} verlangen einen Prozentsatz, meist 3 % mit 3,50 bis 4 € Mindestbetrag, {n_fix} einen Fixbetrag je Behebung. '

@@ -174,9 +174,9 @@ def build(land):
     zs_=sorted(c['effz'] for c in RC if c['typ']=='Kreditkarte' and c.get('effz'))
     zspan=f'Dann zahlst du laut den Karten in unserem Vergleich {pct(zs_[0])} bis {pct(zs_[-1])} effektive Zinsen pro Jahr.' if zs_ else 'Dann fallen hohe Zinsen an.'
     art(land,'kostenlose-kreditkarte',
-      h1=f'Kostenlose Kreditkarte in {N}: die besten ohne Jahresgebühr',
-      mt=f'Kostenlose Kreditkarte {N} 2026: Vergleich | Finvallo',
-      desc=f'Kostenlose Kreditkarten in {N} im Vergleich: {len(free)} echte Kredit- und Charge-Karten ohne Jahresgebühr, mit Auslandsgebühren, Bargeld und Versicherung.',
+      h1=f'Kostenlose Kreditkarte in {N}: Was „ohne Jahresgebühr“ wirklich heißt',
+      mt=f'Kostenlose Kreditkarte {N}: Was gratis wirklich heißt (2026) | Finvallo',
+      desc=f'Kostenlose Kreditkarte in {N}: {len(free)} echte Karten ohne Jahresgebühr, und wo sie bei Ausland, Bargeld und Zinsen trotzdem Geld kosten.',
       lede=f'Ohne Jahresgebühr heißt nicht automatisch kostenlos. Hier siehst du, welche Karten in {N} wirklich nichts kosten und wo die Haken liegen.',
       kurz=(f'In {N} gibt es laut unserem Vergleich {len(free)} echte Kredit- oder Charge-Karten ohne Jahresgebühr. Am besten bewertet sind {fmtlist([c["titel"]+f" ({de1(c["stars"])} Sterne)" for c in t3])}. '
             +(f'{len(free_ins)} davon haben sogar eine Reiseversicherung mit Reiserücktritt. ' if free_ins else '')+'Achte trotzdem auf Auslandsgebühren, Bargeldkosten und Zinsen bei Teilzahlung.'),

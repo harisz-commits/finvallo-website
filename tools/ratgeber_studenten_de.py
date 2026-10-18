@@ -48,7 +48,7 @@ def register(art,P,best,K,nprv,eur,KM):
     art('de','kreditkarte-studenten',
       h1='Kreditkarte als Student in Deutschland: Was du ohne Einkommen bekommst und was nach dem Studium passiert',
       mt='Kreditkarte als Student in Deutschland: SCHUFA, Gratis-Karten, Auslandssemester | Finvallo',
-      desc='Kreditkarte im Studium: welche Karten es ohne Einkommen gibt, was die SCHUFA-Prüfung bedeutet, wie die Jung-Konditionen der Banken enden und was fürs Auslandssemester zählt.',
+      desc='Kreditkarte als Student in Deutschland: Karten ohne Einkommen, SCHUFA-Prüfung, wann die Jung-Konditionen enden und was im Auslandssemester zählt.',
       lede='Echte Studentenkarten gibt es in Deutschland kaum. Die Vergünstigung hängt fast immer am Girokonto: gratis bis 26, 28 oder 30, danach zählt der Geldeingang.',
       kurz=(f'In Deutschland gibt es nur eine Karte, die ausdrücklich für Studierende gedacht ist: die {L("commerzbank-young-visa-kreditkarte")} im StartKonto bis 27. Bei DKB, ING, comdirect, Consorsbank, norisbank und 1822direkt ist nicht die Karte, sondern das Konto bis 28, 30 oder 31 kostenlos, danach nur noch mit 500 bis 1.000 € Geldeingang im Monat. '
             f'Ohne Konto und ohne Altersgrenze gibt es {L("tf-bank-mastercard-gold")} und {L("advanzia-bank-gebuehrenfrei-mastercard-gold")} mit Kreditrahmen und Reiseversicherung, {L("hanseatic-bank-genialcard")} und {L("awa7-visa-kreditkarte")} ohne Versicherung, alle nach SCHUFA-Prüfung; ohne Prüfung die Debitkarten von N26, Revolut, C24, Trade Republic und Wise. '

@@ -344,7 +344,7 @@ def filter_html(cards, X, A):
 
 def hub(land, cards, X, A, P):
     N = K.L['name']; rel = f'{land}/kreditkarten/bestenlisten/lohnt-sich/'
-    t = f'Top-Kreditkarten {N} 2026: Premiumkarten im Vergleich | Finvallo'
+    t = f'Top-Kreditkarten {N} 2026: Ab wann sich eine Premiumkarte lohnt | Finvallo'
     d = f'Die Top-Kreditkarten in {N} ab {TOP} € im Jahr und weitere Premiumkarten: ab wann sie sich lohnen, mit Guthaben, Lounges und Punkten gerechnet.'
     tile = lambda c: f'<a class="catcard" data-card="{c["slug"]}" href="{c["slug"]}/"><span class="ct">{eur(c["fee"] or 0)} € im Jahr</span><b>{E(c["titel"])}</b><small class="mut">{E(lounge_line(X[c["slug"]]))}</small><span data-def>{E(short(c, X[c["slug"]], A))}</span><span class="lnet" data-net hidden></span><small>Rechnung ansehen →</small></a>'
     top = sorted([c for c in cards if (c['fee'] or 0) >= TOP], key=lambda c: -(c['fee'] or 0))
@@ -360,7 +360,7 @@ def hub(land, cards, X, A, P):
     body = f'''{K.HDR(P, rel, other)}
 <div class="wrap"><main id="app">
 <div class="crumb"><span><a href="../">Bestenlisten</a> › Top-Karten</span><span>Stand {K.dmy(K.L["stand"])}</span></div>
-<h1>Top-Kreditkarten in {N}</h1>
+<h1>Top-Kreditkarten in {N}: ab wann sie sich lohnen</h1>
 <p class="lede">Premiumkarten kosten viel, bringen aber Guthaben, Lounges und Versicherungen mit. Für jede Karte rechnen wir aus, ab welcher Nutzung sich die Jahresgebühr bezahlt macht. Mit dem Filter siehst du sofort, welche Karte sich für dich rechnet.</p>
 {filter_html(cards, X, A)}
 <div class="catgrid">{"".join(tile(c) for c in top + rest)}</div>

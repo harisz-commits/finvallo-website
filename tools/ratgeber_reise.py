@@ -217,7 +217,7 @@ def register(art,P,best,K,nprv,eur):
     art('at','flugverspaetung-gepaeck',
       h1='Flugverspätung, Koffer verspätet oder verloren: Was deine Kreditkarte zahlt',
       mt='Flugverspätung und Gepäck: Was die Kreditkarte zahlt (Österreich) | Finvallo',
-      desc='Was Kreditkarten in Österreich bei Flugverspätung und verspätetem oder verlorenem Gepäck zahlen: Stundenschwellen, Höchstsummen und Grenzen für Wertsachen.',
+      desc='Was Kreditkarten in Österreich bei Flugverspätung und verspätetem oder verlorenem Gepäck zahlen: Schwellen in Stunden, Höchstsummen, Wertsachen-Grenzen.',
       lede='Die Airline haftet zuerst, die Karte legt nach. Wie viel, entscheiden drei Zahlen aus den Bedingungen: die Schwelle in Stunden, die Summe und die Grenze für Wertsachen.',
       kurz=(f'Von den {nprv} Privatkarten in unserem Vergleich nennen {len(DELAY)} konkrete Summen für verlorenes oder verspätetes Gepäck und für Flugverspätungen. '
             f'Die Schwellen reichen von zwei Stunden ({L("n26-go")}) bis zwölf Stunden ({L("bank-austria-world-elite")} beim Gepäck), die Summen für verlorenes Gepäck von 1.000 € (Revolut) bis 5.000 € (card complete Platinum, bank99 Platinum, Raiffeisen Platinum, Bank Direkt Platinum, Bank Austria World Elite). '

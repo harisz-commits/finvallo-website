@@ -88,7 +88,7 @@ def register(art,P,best,K,nprv,eur,KM):
     art('de','reiseversicherung',
       h1='Reiseversicherung über die Kreditkarte: Welche Karte dich in Deutschland wirklich absichert',
       mt='Kreditkarte mit Reiseversicherung: Vergleich für Deutschland 2026 | Finvallo',
-      desc='Welche Kreditkarten in Deutschland eine Reiseversicherung mit Storno enthalten: Summen, Selbstbehalt, Auslandskranken, Gepäck, Flugverspätung und Bedingungen im Vergleich.',
+      desc='Kreditkarten mit Reiseversicherung in Deutschland: Stornosummen, Selbstbehalt, Auslandskranken, Gepäck und Flugverspätung aller Karten im Vergleich.',
       lede=f'{n_storno} von {nprv} Privatkarten haben einen Reiserücktritt dabei. Ob er zahlt, hängt davon ab, womit du gebucht hast, wie lange du reist und wie alt du bist.',
       kurz=(f'Von den {nprv} Privatkarten in unserem Deutschland-Vergleich enthalten {n_storno} eine Reiseversicherung mit Reiserücktritt, {n_basis} nur einzelne Bausteine und {n_none} gar keine; beim Rest fehlen auswertbare Bedingungen. '
             f'Ohne Jahresgebühr und mit Storno bis 3.000 €: {L("tf-bank-mastercard-gold")} und {L("advanzia-bank-gebuehrenfrei-mastercard-gold")} (baugleich: {L("web-cent-mastercard-gold-gmx-web-de")}); die {L("bank-norwegian-visa-kreditkarte")} ist ebenfalls gratis, ihre Summen kennen wir aber nur aus zweiter Hand. '
