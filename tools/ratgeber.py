@@ -62,6 +62,7 @@ DATES={
     ('at','visa-mastercard-amex'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','bargeld-abheben'): dict(published='2026-10-18', updated='2026-10-18'),
     ('de','kreditkarte-studenten'): dict(published='2026-10-18', updated='2026-10-18'),
+    ('de','apple-pay-google-pay'): dict(published='2026-10-18', updated='2026-10-18'),
     ('de','business'): dict(published='2026-10-11', updated='2026-10-11'),
     ('de','fremdwaehrung'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
@@ -296,6 +297,7 @@ def build(land):
         ratgeber_bargeld_de.register(art,P,best,cards.D['de'][0],karten.card_count('de','private'),eur,karten)
         import ratgeber_reise_de; ratgeber_reise_de.register(art,P,best,cards.D['de'][0],karten.card_count('de','private'),eur,karten)
         import ratgeber_studenten_de; ratgeber_studenten_de.register(art,P,best,cards.D['de'][0],karten.card_count('de','private'),eur,karten)
+        import ratgeber_wallet_de; ratgeber_wallet_de.register(art,P,best,cards.D['de'][0],karten.card_count('de','private'),eur,karten)
         lou=[c for c in RC if c['lg']]
         art('de','lounges',h1='Lounge-Zugang mit der Kreditkarte',mt='Lounge-Zugang mit Kreditkarte in Deutschland | Finvallo',
           desc='Welche Kreditkarten in Deutschland kostenlosen Zugang zu Flughafen-Lounges geben: Priority Pass, Besuche pro Jahr und Begleitpersonen.',

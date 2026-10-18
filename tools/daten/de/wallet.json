@@ -1,0 +1,500 @@
+{
+ "hinweis": "Apple Pay / Google Pay je Herausgeber (Deutschland). apple/google: true, false oder null (kein Beleg). Quelle und Stand je Eintrag.",
+ "wallet": {
+  "1822direkt": {
+   "apple": true,
+   "google": true,
+   "app": "1822direkt Banking App",
+   "wear": "Smartwatch",
+   "hinweis": "Google Pay nur für die Visa-Kreditkarte, nicht für die Sparkassen-Card",
+   "quelle": "https://www.1822direkt.de/google-pay/",
+   "stand": "2026-10-18"
+  },
+  "adac": {
+   "apple": true,
+   "google": true,
+   "app": "ADAC Kreditkarten-App oder Wallet",
+   "wear": "Apple Watch, Wear OS",
+   "hinweis": "Herausgeber Solaris; auch iPad und Mac",
+   "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/apple-pay/",
+   "stand": "2026-10-18"
+  },
+  "advanzia": {
+   "apple": true,
+   "google": true,
+   "app": "direkt in Apple Wallet oder Google Wallet",
+   "wear": "Smartwatch (laut FAQ allgemein)",
+   "hinweis": null,
+   "quelle": "https://www.gebuhrenfrei.com/faq?anchor=einsatz",
+   "stand": "2026-10-18"
+  },
+  "amazon": {
+   "apple": false,
+   "google": true,
+   "app": "Google Wallet",
+   "wear": null,
+   "hinweis": "Google Pay laut Kartendaten (Prüfung Oktober 2026); Apple Pay nicht, Apple schließt Amazon-Cobranding-Karten ausdrücklich aus",
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "american-express": {
+   "apple": true,
+   "google": true,
+   "app": "Amex App oder Wallet",
+   "wear": "Apple Watch",
+   "hinweis": "Laut Amex mit jeder Karte, auch PAYBACK Amex; Google Pay ab Android 9",
+   "quelle": "https://www.americanexpress.com/de-de/amexcited/benefits/apple-und-google-pay-mit-amex-kreditkarte-12423",
+   "stand": "2026-10-18"
+  },
+  "bank-dimare": {
+   "apple": true,
+   "google": true,
+   "app": "Extra Karte App",
+   "wear": null,
+   "hinweis": "Apple Pay seit Dezember 2025; Herausgeber Novum Bank",
+   "quelle": "https://www.extrakarte.com/applepay",
+   "stand": "2026-10-18"
+  },
+  "bank-norwegian": {
+   "apple": true,
+   "google": null,
+   "app": "Bank Norwegian App oder Wallet",
+   "wear": "Apple Watch",
+   "hinweis": "Google Pay wird auf der deutschen Seite nicht genannt; die Google-Liste führt nur die Konzernmutter NOBA",
+   "quelle": "https://www.banknorwegian.de/kreditkarte/apple-pay/",
+   "stand": "2026-10-18"
+  },
+  "bbva": {
+   "apple": true,
+   "google": true,
+   "app": "BBVA App",
+   "wear": null,
+   "hinweis": "Eigene Bedingungen für Apple Pay und Google Pay; in keiner der beiden Listen",
+   "quelle": "https://www.bbva.de/en/privat/services/daily-banking/kontaktlos-bezahlen.html",
+   "stand": "2026-10-18"
+  },
+  "bitpanda": {
+   "apple": true,
+   "google": true,
+   "app": "Bitpanda App",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "bunq": {
+   "apple": true,
+   "google": true,
+   "app": "bunq App",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "c24": {
+   "apple": true,
+   "google": true,
+   "app": "C24 App",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "comdirect": {
+   "apple": true,
+   "google": true,
+   "app": "comdirect App oder Wallet",
+   "wear": null,
+   "hinweis": "Visa-Karten; girocard nicht",
+   "quelle": "https://support.google.com/wallet/answer/12059326?hl=de&co=GENIE.CountryCode%3DDE",
+   "stand": "2026-10-18"
+  },
+  "commerzbank": {
+   "apple": true,
+   "google": true,
+   "app": "Commerzbank App oder Wallet",
+   "wear": null,
+   "hinweis": "Alle Mastercard- und Visa-Karten; girocard nicht",
+   "quelle": "https://support.google.com/wallet/answer/12059326?hl=de&co=GENIE.CountryCode%3DDE",
+   "stand": "2026-10-18"
+  },
+  "consors-finanz": {
+   "apple": true,
+   "google": true,
+   "app": "Wallet",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://www.consorsfinanz.de/karte-kredite/mastercard",
+   "stand": "2026-10-18"
+  },
+  "consorsbank": {
+   "apple": true,
+   "google": true,
+   "app": "Consorsbank App oder Wallet",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "crypto-com": {
+   "apple": true,
+   "google": null,
+   "app": "Crypto.com App",
+   "wear": null,
+   "hinweis": "Apple Pay laut Hilfe für die EU bestätigt; Google Pay nur über einen Listeneintrag der Herausgeberin Foris MT ableitbar",
+   "quelle": "https://intercom.help/Cryptocom/en/articles/6201686-digital-wallet-faq",
+   "stand": "2026-10-18"
+  },
+  "curve": {
+   "apple": true,
+   "google": true,
+   "app": "Curve App",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "deutsche-bank": {
+   "apple": true,
+   "google": true,
+   "app": "Deutsche Bank App oder Wallet",
+   "wear": null,
+   "hinweis": "Mastercard Debit und Kredit",
+   "quelle": "https://support.google.com/wallet/answer/12059326?hl=de&co=GENIE.CountryCode%3DDE",
+   "stand": "2026-10-18"
+  },
+  "deutschland-kreditkarte": {
+   "apple": true,
+   "google": true,
+   "app": "Hanseatic Bank Mobile App oder Wallet",
+   "wear": "Apple Watch",
+   "hinweis": "Herausgeber Hanseatic Bank; auch iPad und Mac",
+   "quelle": "https://www.deutschland-kreditkarte.de/apple-pay.html",
+   "stand": "2026-10-18"
+  },
+  "dkb": {
+   "apple": true,
+   "google": true,
+   "app": "DKB App oder Wallet",
+   "wear": null,
+   "hinweis": "Visa Kredit- und Debitkarte",
+   "quelle": "https://support.google.com/wallet/answer/12059326?hl=de&co=GENIE.CountryCode%3DDE",
+   "stand": "2026-10-18"
+  },
+  "easybank": {
+   "apple": true,
+   "google": true,
+   "app": "easybank App oder Wallet",
+   "wear": "Apple Watch",
+   "hinweis": "Nur Visa-Kreditkarten; für easybank-Mastercards laut Anbieter weder Apple Pay noch Google Pay",
+   "quelle": "https://www.easybank.de/easybank-de/hilfe-und-kontakt/apple-pay",
+   "stand": "2026-10-18"
+  },
+  "eurowings": {
+   "apple": true,
+   "google": true,
+   "app": "easybank Privatkunden App oder Wallet",
+   "wear": null,
+   "hinweis": "Visa-Karten über easybank (BAWAG); laut eurowings.com bei Apple Pay und Google Pay hinterlegbar",
+   "quelle": "https://www.eurowings.com/de/ihre-vorteile/kreditkarten/kreditkarte-premium.html",
+   "stand": "2026-10-18"
+  },
+  "hanseatic-bank": {
+   "apple": true,
+   "google": true,
+   "app": "Hanseatic Bank Mobile App (mit TAN)",
+   "wear": "Apple Watch",
+   "hinweis": null,
+   "quelle": "https://www.hanseaticbank.de/hilfe-services/alle-faq/apple-pay",
+   "stand": "2026-10-18"
+  },
+  "hilton": {
+   "apple": true,
+   "google": true,
+   "app": "Wallet",
+   "wear": "Garmin Pay",
+   "hinweis": "Laut Advanzia-Mitteilung Google Pay, Apple Pay und Garmin Pay",
+   "quelle": "https://www.advanzia.com/en/news/hilton-partners-with-advanzia-bank-to-offer-hilton-honors-credit-card-to-german-and-austrian-customers",
+   "stand": "2026-10-18"
+  },
+  "hypovereinsbank": {
+   "apple": true,
+   "google": true,
+   "app": "HVB Mobile Banking App",
+   "wear": "Smartwatch mit NFC",
+   "hinweis": "Alle HVB Kreditkarten; nicht die HVB Reisestellenkarte",
+   "quelle": "https://www.hypovereinsbank.de/hvb/services/digitales-banking/apple-pay",
+   "stand": "2026-10-18"
+  },
+  "ikea": {
+   "apple": null,
+   "google": null,
+   "app": null,
+   "wear": null,
+   "hinweis": "Kein Beleg: Ikano Bank nennt nur kontaktloses Zahlen mit der Karte; in keiner der beiden Listen",
+   "quelle": "https://ikanobank.de/kreditkarten/ikea-family-kreditkarte/faq",
+   "stand": "2026-10-18"
+  },
+  "ing": {
+   "apple": true,
+   "google": true,
+   "app": "ING App oder Wallet",
+   "wear": null,
+   "hinweis": "Visa",
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "instabank": {
+   "apple": true,
+   "google": true,
+   "app": "Instabank App",
+   "wear": null,
+   "hinweis": "Karte nach Kontoverifizierung sofort digital nutzbar",
+   "quelle": "https://instabank.de/krediteundfinanzierung/kartenundzahlungen-kreditkarte-sofort-nutzbar",
+   "stand": "2026-10-18"
+  },
+  "klarna": {
+   "apple": true,
+   "google": true,
+   "app": "Klarna App",
+   "wear": null,
+   "hinweis": "Visa Debit und Kredit",
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "kraken": {
+   "apple": true,
+   "google": true,
+   "app": "Kraken App",
+   "wear": "Smartwatch",
+   "hinweis": "Laut Kraken-Hilfe für den EWR",
+   "quelle": "https://support.kraken.com/articles/getting-started-kraken-card",
+   "stand": "2026-10-18"
+  },
+  "magenta-pay": {
+   "apple": true,
+   "google": true,
+   "app": "Magenta Pay App",
+   "wear": "Garmin Pay",
+   "hinweis": "Visa-Debitkarte von Telekom Payments; in keiner der beiden Listen",
+   "quelle": "https://magenta.pay/de/apple-pay",
+   "stand": "2026-10-18"
+  },
+  "mercedes-credit-card": {
+   "apple": true,
+   "google": null,
+   "app": "Wallet",
+   "wear": null,
+   "hinweis": "Apple Pay laut Serviceseite; Google Pay dort nicht genannt, nur über den BW-Bank-Eintrag der Google-Liste ableitbar",
+   "quelle": "https://www.mercedes-creditcard.de/de/Serviceleistungen",
+   "stand": "2026-10-18"
+  },
+  "miles-and-more": {
+   "apple": true,
+   "google": true,
+   "app": "Wallet; Sonderbedingungen des Herausgebers Deutsche Bank",
+   "wear": "Samsung Wallet laut FAQ",
+   "hinweis": "Herausgeber Deutsche Bank",
+   "quelle": "https://www.miles-and-more-kreditkarte.com/de/service/haeufige-fragen.html",
+   "stand": "2026-10-18"
+  },
+  "monese": {
+   "apple": true,
+   "google": true,
+   "app": "Monese App",
+   "wear": null,
+   "hinweis": "Beide Listen; aktueller Stand des Angebots für Deutschland nicht geprüft",
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "n26": {
+   "apple": true,
+   "google": true,
+   "app": "N26 App",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "norisbank": {
+   "apple": true,
+   "google": true,
+   "app": "norisbank App oder Wallet",
+   "wear": null,
+   "hinweis": "Mastercard Debit und Kredit",
+   "quelle": "https://support.google.com/wallet/answer/12059326?hl=de&co=GENIE.CountryCode%3DDE",
+   "stand": "2026-10-18"
+  },
+  "olb": {
+   "apple": true,
+   "google": true,
+   "app": "OLB App oder Wallet",
+   "wear": null,
+   "hinweis": "Mastercard",
+   "quelle": "https://support.google.com/wallet/answer/12059326?hl=de&co=GENIE.CountryCode%3DDE",
+   "stand": "2026-10-18"
+  },
+  "openbank": {
+   "apple": true,
+   "google": true,
+   "app": "Openbank App oder Wallet",
+   "wear": null,
+   "hinweis": "Visa Debit und Kredit",
+   "quelle": "https://www.openbank.de/banking-und-service/service/kontaktlos-zahlen/",
+   "stand": "2026-10-18"
+  },
+  "payback": {
+   "apple": true,
+   "google": true,
+   "app": "Wallet",
+   "wear": "Smartwatch",
+   "hinweis": "PAYBACK Visa (Herausgeber BW-Bank) und PAYBACK Amex laut Anbieterseiten; die Apple-Fußnote zu Cobranding-Karten widerspricht der Amex-Aussage, Amex nennt die PAYBACK Amex ausdrücklich",
+   "quelle": "https://www.payback.de/info/visa",
+   "stand": "2026-10-18"
+  },
+  "postbank": {
+   "apple": true,
+   "google": true,
+   "app": "Postbank App (BestSign)",
+   "wear": "Apple Watch",
+   "hinweis": "Nur Mastercard; eine Postbank Visa Card kann laut Anbieter nicht hinterlegt werden",
+   "quelle": "https://www.postbank.de/privatkunden/services/online-banking/apple-pay.html",
+   "stand": "2026-10-18"
+  },
+  "revolut": {
+   "apple": true,
+   "google": true,
+   "app": "Revolut App",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "sparkasse": {
+   "apple": true,
+   "google": false,
+   "app": "App Sparkasse (Apple Pay); Android: eigene App „Mobiles Bezahlen“",
+   "wear": null,
+   "hinweis": "Kein Google Pay: Sparkassen nutzen für Android ihre eigene App „Mobiles Bezahlen“",
+   "quelle": "https://www.sparkasse.de/pk/produkte/konten-und-karten/bezahlverfahren/mobiles-bezahlen.html",
+   "stand": "2026-10-18"
+  },
+  "sumup": {
+   "apple": true,
+   "google": true,
+   "app": "SumUp Pay App oder Wallet",
+   "wear": "Apple Watch",
+   "hinweis": "Virtuelle Mastercard; Google Pay ab Android 5",
+   "quelle": "https://www.sumup.com/de-de/privat/apple-pay/",
+   "stand": "2026-10-18"
+  },
+  "targobank": {
+   "apple": true,
+   "google": null,
+   "app": "TARGOBANK Banking-App oder Wallet",
+   "wear": "Apple Watch",
+   "hinweis": "Apple Pay für Visa-Kreditkarte und Visa Debit; Google Pay auf targobank.de nicht genannt und nicht in der Google-Liste",
+   "quelle": "https://www.targobank.de/de/apple-pay.html",
+   "stand": "2026-10-18"
+  },
+  "tf-bank": {
+   "apple": true,
+   "google": true,
+   "app": "TF Bank Mobile App oder Google Pay App",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://tfbank.de/googlepay",
+   "stand": "2026-10-18"
+  },
+  "tomorrow": {
+   "apple": true,
+   "google": true,
+   "app": "Tomorrow App",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "trade-republic": {
+   "apple": true,
+   "google": true,
+   "app": "Trade Republic App",
+   "wear": null,
+   "hinweis": "Visa Debit",
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "trading-212": {
+   "apple": true,
+   "google": null,
+   "app": "Trading 212 App",
+   "wear": null,
+   "hinweis": "Apple Pay seit Dezember 2024 für alle EU-Kunden; Google Pay 2024 nur für Großbritannien angekündigt, für Deutschland kein Beleg",
+   "quelle": "https://community.trading212.com/t/apple-pay-is-now-available-to-all-eu-clients/79209",
+   "stand": "2026-10-18"
+  },
+  "turkish-airlines": {
+   "apple": null,
+   "google": true,
+   "app": "Wallet",
+   "wear": "Garmin Pay",
+   "hinweis": "Advanzia nennt für diese Karte Google Pay und Garmin Pay; Apple Pay nicht genannt, obwohl Advanzia als Herausgeber in der Apple-Liste steht",
+   "quelle": "https://www.advanzia.com/en/news/turkish-airlines-introduces-miles-and-smiles-mastercard-gold-in-germany-with-advanzia-bank",
+   "stand": "2026-10-18"
+  },
+  "unitplus": {
+   "apple": true,
+   "google": true,
+   "app": "UnitPlus App",
+   "wear": "Apple Watch",
+   "hinweis": "Laut UnitPlus-FAQ; in keiner der beiden Listen",
+   "quelle": "https://unitplus.eu/faqs/unitplus-card/can-i-also-pay-with-apple-pay-or-google-pay",
+   "stand": "2026-10-18"
+  },
+  "vivid": {
+   "apple": true,
+   "google": true,
+   "app": "Vivid App",
+   "wear": null,
+   "hinweis": "Visa",
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "volksbank": {
+   "apple": true,
+   "google": null,
+   "app": "VR Banking App oder Wallet (Apple Pay); Android: digitale Karten in der VR Banking App",
+   "wear": "Apple Watch",
+   "hinweis": "Mastercard und Visa für Apple Pay, girocard nicht; Google Pay auf vr.de nicht genannt und nicht in der Google-Liste",
+   "quelle": "https://www.vr.de/privatkunden/unsere-produkte/was-ist-eine-kreditkarte/apple-pay.html",
+   "stand": "2026-10-18"
+  },
+  "volkswagen-bank": {
+   "apple": true,
+   "google": true,
+   "app": "Wallet",
+   "wear": null,
+   "hinweis": "Beide Listen führen die Volkswagen Bank und Audi Bank; eigene Infoseite nicht gefunden",
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  },
+  "webcent": {
+   "apple": true,
+   "google": true,
+   "app": "Wallet",
+   "wear": null,
+   "hinweis": "Herausgeber Advanzia",
+   "quelle": "https://vorteile.web.de/webcent/cashback/kreditkarte/",
+   "stand": "2026-10-18"
+  },
+  "wise": {
+   "apple": true,
+   "google": true,
+   "app": "Wise App",
+   "wear": "Garmin Pay, Fitbit Pay",
+   "hinweis": null,
+   "quelle": "https://support.apple.com/de-de/109516",
+   "stand": "2026-10-18"
+  }
+ }
+}
