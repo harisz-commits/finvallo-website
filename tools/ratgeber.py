@@ -60,6 +60,7 @@ DATES={
     ('at','apple-pay-google-pay'): dict(published='2026-10-18', updated='2026-10-18'),
     ('at','teilzahlung'): dict(published='2026-10-11', updated='2026-10-11'),
     ('at','visa-mastercard-amex'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','bargeld-abheben'): dict(published='2026-10-18', updated='2026-10-18'),
     ('de','business'): dict(published='2026-10-11', updated='2026-10-11'),
     ('de','fremdwaehrung'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
@@ -290,6 +291,8 @@ def build(land):
         import ratgeber_studenten; ratgeber_studenten.register(art,P,best,cards.D['at'][0],karten.card_count('at','private'),eur,karten)
         import ratgeber_wallet; ratgeber_wallet.register(art,P,best,cards.D['at'][0],karten.card_count('at','private'),eur,karten)
     if land=='de':
+        import karten, ratgeber_bargeld_de
+        ratgeber_bargeld_de.register(art,P,best,cards.D['de'][0],karten.card_count('de','private'),eur,karten)
         lou=[c for c in RC if c['lg']]
         art('de','lounges',h1='Lounge-Zugang mit der Kreditkarte',mt='Lounge-Zugang mit Kreditkarte in Deutschland | Finvallo',
           desc='Welche Kreditkarten in Deutschland kostenlosen Zugang zu Flughafen-Lounges geben: Priority Pass, Besuche pro Jahr und Begleitpersonen.',
@@ -336,7 +339,7 @@ DE_FIX={
  'business':[('../../../at/kreditkarten/business/','../../kreditkarten/business/')],
  'reiseversicherung':[('../../../at/kreditkarten/bestenlisten/reisen/','../../kreditkarten/bestenlisten/reisen/')],
 }
-PAIRS={('at','punkte-sammeln-at'):('de','punkte-sammeln-de'),('de','punkte-sammeln-de'):('at','punkte-sammeln-at')}
+PAIRS={('at','punkte-sammeln-at'):('de','punkte-sammeln-de'),('de','punkte-sammeln-de'):('at','punkte-sammeln-at'),('at','bargeld-beheben'):('de','bargeld-abheben'),('de','bargeld-abheben'):('at','bargeld-beheben')}
 WHY_AMEX={'at':('punkte-sammeln-at','Österreich'),'de':('punkte-sammeln-de','Deutschland')}
 def why_amex(land):
     slug,N=WHY_AMEX[land]
@@ -381,7 +384,7 @@ def meta(land,slug):
     h1=html.unescape(re.sub(r'<[^>]+>','',re.search(r'<h1>(.*?)</h1>',s,re.S).group(1)))
     d=html.unescape(re.search(r'<meta name="description" content="([^"]*)"',s).group(1))
     return h1,d
-ORDER=['kostenlose-kreditkarte','kreditkarte-studenten','kreditkarte-beantragen','fremdwaehrung','bargeld-beheben','reiseversicherung','flugverspaetung-gepaeck','punkte','punkte-sammeln-at','punkte-sammeln-de','lounges','visa-mastercard-amex','apple-pay-google-pay','mietwagen-kaution','ohne-bonitaetspruefung','kartentypen','teilzahlung','business']
+ORDER=['kostenlose-kreditkarte','kreditkarte-studenten','kreditkarte-beantragen','fremdwaehrung','bargeld-beheben','bargeld-abheben','reiseversicherung','flugverspaetung-gepaeck','punkte','punkte-sammeln-at','punkte-sammeln-de','lounges','visa-mastercard-amex','apple-pay-google-pay','mietwagen-kaution','ohne-bonitaetspruefung','kartentypen','teilzahlung','business']
 def index_pages():
     for land in ('at','de'):
         f=R+f'{land}/ratgeber/index.html'; s=open(f).read()

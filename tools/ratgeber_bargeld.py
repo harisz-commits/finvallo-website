@@ -80,7 +80,7 @@ def register(art,P,best,K,nprv,eur,KM):
     Q_VO=ext('https://gesetze.legal/eu/vo_eu_2021_1230/3','Artikel 3 der Verordnung (EU) 2021/1230')
     Q_EVZ=ext('https://www.evz.de/finanzen-versicherungen/geld-abheben-im-ausland.html','Europäisches Verbraucherzentrum')
 
-    art('at','bargeld-beheben',
+    art('at','bargeld-beheben',pair='bargeld-abheben',
       h1='Bargeld beheben mit der Kreditkarte: Was es in Österreich und im Ausland wirklich kostet',
       mt='Bargeld beheben mit Kreditkarte: Gebühren im Vergleich (Österreich 2026) | Finvallo',
       desc='Was Bargeld am Bankomaten mit der Kreditkarte kostet: Gebühren aller Karten in Österreich, die Zinsfalle bei Gratiskarten und Rechenbeispiele für Kroatien, Türkei und Thailand.',
