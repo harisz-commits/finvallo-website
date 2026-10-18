@@ -4,146 +4,335 @@
   "typ": "Direktbank",
   "sitz": "Munsbach, Luxemburg",
   "web": "https://free.at/",
-  "text": "Luxemburger Direktbank. In Österreich bekannt für die gebührenfreie free Mastercard Gold. Die Rechnung wird per Überweisung bezahlt, nicht per Lastschrift."
+  "text": "Luxemburger Direktbank. In Österreich bekannt für die gebührenfreie free Mastercard Gold. Die Rechnung wird per Überweisung bezahlt, nicht per Lastschrift.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "Advanzia App (nur Kontoinfo); Karte direkt in Apple Wallet oder Google Wallet hinzufügen",
+   "wear": null,
+   "hinweis": "Digitale Karte laut Anbieter schon vor Ankunft der Plastikkarte nutzbar",
+   "quelle": "https://www.free.at/faq",
+   "stand": "2026-10-18"
+  }
  },
  "tf-bank": {
   "name": "TF Bank",
   "typ": "Direktbank",
   "sitz": "Borås, Schweden",
   "web": "https://tfbank.at/mastercard-gold-reiseversicherung",
-  "text": "Schwedische Direktbank mit Vollbanklizenz (gegründet 1987). Bietet in Österreich die TF Mastercard Gold ohne Jahresgebühr an. Einlagensicherung über Schweden, bis ca. 100.000 €."
+  "text": "Schwedische Direktbank mit Vollbanklizenz (gegründet 1987). Bietet in Österreich die TF Mastercard Gold ohne Jahresgebühr an. Einlagensicherung über Schweden, bis ca. 100.000 €.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "TF Bank Mobile App oder direkt Google Wallet",
+   "wear": null,
+   "hinweis": "Google Pay ab Android 5",
+   "quelle": "https://tfbank.at/apple-pay",
+   "stand": "2026-10-18"
+  }
  },
  "american-express": {
   "name": "American Express",
   "typ": "Kartenanbieter",
   "sitz": null,
   "web": "https://www.americanexpress.com/at/legal/terms-and-conditions/",
-  "text": "Eigenes Kartennetz mit Charge-Karten. In Österreich Gold und Platinum als Hauptprodukte, dazu BMW-Karten und einzelne ältere Produkte. Fremdwährungsentgelt 2 %."
+  "text": "Eigenes Kartennetz mit Charge-Karten. In Österreich Gold und Platinum als Hauptprodukte, dazu BMW-Karten und einzelne ältere Produkte. Fremdwährungsentgelt 2 %.",
+  "wallet": {
+   "apple": false,
+   "google": false,
+   "app": "Amex App (nur Verwaltung)",
+   "wear": null,
+   "hinweis": "Nur kontaktlos mit der Plastikkarte; American Express Österreich bietet laut Anbieterseite weder Apple Pay noch Google Pay an",
+   "quelle": "https://www.americanexpress.com/at/vorteile/service-sicherheit/zahlungsarten/kontaktlos",
+   "stand": "2026-10-18"
+  }
  },
  "card-complete": {
   "name": "card complete",
   "typ": "Kartenanbieter",
   "sitz": "Wien",
   "web": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/alle-karten/",
-  "text": "card complete Service Bank AG, einer der größten Kreditkartenanbieter Österreichs. Gibt Visa- und Mastercard-Karten aus und betreibt auch Diners Club in Österreich. Karten werden auch über Banken wie bank99 vermittelt."
+  "text": "card complete Service Bank AG, einer der größten Kreditkartenanbieter Österreichs. Gibt Visa- und Mastercard-Karten aus und betreibt auch Diners Club in Österreich. Karten werden auch über Banken wie bank99 vermittelt.",
+  "wallet": {
+   "apple": null,
+   "google": null,
+   "app": "complete Control (nur Freigaben)",
+   "wear": null,
+   "hinweis": "Kein aktueller Beleg: card complete steht nicht in den Listen von Apple und Google, die frühere Apple-Pay-Seite leitet auf die Kartenübersicht; beim Anbieter nachfragen",
+   "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/",
+   "stand": "2026-10-18"
+  }
  },
  "diners-club": {
   "name": "Diners Club",
   "typ": "Kartenanbieter",
   "sitz": "Wien",
   "web": "https://www.cardcomplete.com/diners-club/privatkarten/",
-  "text": "Diners Club wird in Österreich über card complete angeboten. Eigenes Kartennetz mit eingeschränkter Akzeptanz, dafür Lounge-Zutritte bei Umsatz und optional Miles & More."
+  "text": "Diners Club wird in Österreich über card complete angeboten. Eigenes Kartennetz mit eingeschränkter Akzeptanz, dafür Lounge-Zutritte bei Umsatz und optional Miles & More.",
+  "wallet": {
+   "apple": null,
+   "google": null,
+   "app": "complete Control (nur Freigaben)",
+   "wear": null,
+   "hinweis": "Wie card complete: kein aktueller Beleg für Apple Pay oder Google Pay",
+   "quelle": "https://www.cardcomplete.com/diners-club/privatkarten/",
+   "stand": "2026-10-18"
+  }
  },
  "paylife": {
   "name": "PayLife",
   "typ": "Kartenanbieter",
   "sitz": "Wien",
   "web": "https://www.paylife.at/paylife/privat/kreditkarten",
-  "text": "Kreditkartenmarke der BAWAG. Karten von Classic bis Platinum, Halbpreisaktion im ersten Jahr bis 31.12.2026 für GoldPlus, Black und Platinum."
+  "text": "Kreditkartenmarke der BAWAG. Karten von Classic bis Platinum, Halbpreisaktion im ersten Jahr bis 31.12.2026 für GoldPlus, Black und Platinum.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "myPayLife App zur Aktivierung, Google Pay auch direkt über Google Wallet",
+   "wear": "Apple Watch, Smartwatch mit Google Wallet",
+   "hinweis": "Alle PayLife Kreditkarten; hinterlegte Mobilnummer nötig",
+   "quelle": "https://www.paylife.at/paylife/privat/service/apple-pay",
+   "stand": "2026-10-18"
+  }
  },
  "erste": {
   "name": "Erste Bank und Sparkassen",
   "typ": "Filialbank",
   "sitz": "Wien",
   "web": "https://www.sparkasse.at/erstebank/privatkunden/konto-karten/s-kreditkarten",
-  "text": "Smartcard und Premiumcard als Visa oder Mastercard, dazu seit 2026 die Austrian Miles & More Premiumcard. Kreditkarten nur mit Girokonto. Preise können je Sparkasse abweichen."
+  "text": "Smartcard und Premiumcard als Visa oder Mastercard, dazu seit 2026 die Austrian Miles & More Premiumcard. Kreditkarten nur mit Girokonto. Preise können je Sparkasse abweichen.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "George App zur Aktivierung",
+   "wear": "Apple Watch, Garmin Pay, Swatch Pay",
+   "hinweis": "Debit Mastercard und s Kreditkarten",
+   "quelle": "https://www.sparkasse.at/sgruppe/privatkunden/konto-karten/BankCard-NFC",
+   "stand": "2026-10-18"
+  }
  },
  "raiffeisen": {
   "name": "Raiffeisen",
   "typ": "Filialbank",
   "sitz": "Regionalbanken",
   "web": "https://www.raiffeisen.at/de/privatkunden/karte/kreditkarte.html",
-  "text": "Raiffeisen-Kreditkarten Classic, Gold und Platinum über die Regionalbanken. Gold und Platinum mit kostenloser Priority-Pass-Mitgliedschaft, jeder Besuch kostet 30 €."
+  "text": "Raiffeisen-Kreditkarten Classic, Gold und Platinum über die Regionalbanken. Gold und Platinum mit kostenloser Priority-Pass-Mitgliedschaft, jeder Besuch kostet 30 €.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "Mein ELBA App nur für Debitkarten nötig; RaiPay als eigene Wallet",
+   "wear": "Garmin Pay, Swatch Pay, Bluecode",
+   "hinweis": "Google Pay ab Android 11, auch Wear OS; neue Raiffeisen Kreditkarten seit 2026 statt card complete",
+   "quelle": "https://www.raiffeisen.at/de/online-banking/mobile-payment/googlepay.html",
+   "stand": "2026-10-18"
+  }
  },
  "bank-austria": {
   "name": "Bank Austria",
   "typ": "Filialbank",
   "sitz": "Wien",
   "web": "https://www.bankaustria.at/files/preise_konditionen_kreditkarten_bank_austria_de.pdf",
-  "text": "UniCredit Bank Austria mit eigenen Mastercard-Kreditkarten von Classic bis World Elite. Neukunden zahlen im ersten Jahr keine Kartengebühr (Aktion bis 31.12.2026). Girokonto nötig."
+  "text": "UniCredit Bank Austria mit eigenen Mastercard-Kreditkarten von Classic bis World Elite. Neukunden zahlen im ersten Jahr keine Kartengebühr (Aktion bis 31.12.2026). Girokonto nötig.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "MobileBanking App zur Einrichtung",
+   "wear": "Apple Watch, Wear OS",
+   "hinweis": "Google Pay seit April 2025; BankCard, MegaCard und Bank Austria Kreditkarte",
+   "quelle": "https://www.bankaustria.at/google-pay.jsp",
+   "stand": "2026-10-18"
+  }
  },
  "bawag": {
   "name": "BAWAG",
   "typ": "Filialbank",
   "sitz": "Wien",
   "web": "https://www.bawag.at/bawag/privatkunden/kreditkarte/kreditkarte-gold",
-  "text": "BAWAG-Kreditkarten Weiß und Gold, teils in Kontopaketen (KontoBox) enthalten. Visa Gold mit 2 Lounge-Zutritten in Wien pro Kalenderjahr."
+  "text": "BAWAG-Kreditkarten Weiß und Gold, teils in Kontopaketen (KontoBox) enthalten. Visa Gold mit 2 Lounge-Zutritten in Wien pro Kalenderjahr.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "BAWAG App zur Aktivierung",
+   "wear": "Apple Watch, Smartwatch mit Google Wallet",
+   "hinweis": "Google Pay seit März 2023; Mobilnummer für SMS-Code nötig",
+   "quelle": "https://www.bawag.at/bawag/apple-pay",
+   "stand": "2026-10-18"
+  }
  },
  "easybank": {
   "name": "easybank",
   "typ": "Direktbank",
   "sitz": "Wien",
   "web": "https://www.easybank.at/easybank/kreditkarten",
-  "text": "Direktbank der BAWAG Group. Kreditkarten nur mit easybank-Girokonto; je nach Kontomodell entfällt das Kartenentgelt."
+  "text": "Direktbank der BAWAG Group. Kreditkarten nur mit easybank-Girokonto; je nach Kontomodell entfällt das Kartenentgelt.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "easybank App zur Aktivierung",
+   "wear": "Apple Watch, Smartwatch mit Google Wallet",
+   "hinweis": "Debit Mastercard und easybank Kreditkarte",
+   "quelle": "https://www.easybank.at/easybank/services/apple-pay",
+   "stand": "2026-10-18"
+  }
  },
  "oberbank": {
   "name": "Oberbank",
   "typ": "Filialbank",
   "sitz": "Linz",
   "web": "https://www.oberbank.at/documents/20373/28034/ipk_obkfactsheet.pdf",
-  "text": "Oberösterreichische Regionalbank mit eigenen Mastercard-Karten Klassik und Gold. Gold mit Reisestorno."
+  "text": "Oberösterreichische Regionalbank mit eigenen Mastercard-Karten Klassik und Gold. Gold mit Reisestorno.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "Oberbank Wallet App ist für die Einrichtung Pflicht",
+   "wear": "Apple Watch, Garmin Pay, Swatch Pay",
+   "hinweis": "Debitkarte und Oberbank Mastercard; Internetbanking-Zugang nötig",
+   "quelle": "https://www.oberbank.at/apple-pay",
+   "stand": "2026-10-18"
+  }
  },
  "bank99": {
   "name": "bank99",
   "typ": "Filialbank",
   "sitz": "Wien",
   "web": "https://bank99.at/kreditkarten",
-  "text": "Bank der Österreichischen Post. Vermittelt card-complete-Karten; der Vertrag läuft mit card complete. Für Neukunden mit bank99-Konto die ersten 12 Monate gratis."
+  "text": "Bank der Österreichischen Post. Vermittelt card-complete-Karten; der Vertrag läuft mit card complete. Für Neukunden mit bank99-Konto die ersten 12 Monate gratis.",
+  "wallet": {
+   "apple": null,
+   "google": null,
+   "app": "okay99 App; brieftasche99 als eigene Wallet",
+   "wear": "Apple Watch (Debitkarte)",
+   "hinweis": "Die Debit Mastercard der bank99 läuft mit Apple Pay und Google Pay; für die Kreditkarten Classic, Gold und Platinum, die card complete ausgibt, nennt bank99 keine Wallet",
+   "quelle": "https://bank99.at/kreditkarten",
+   "stand": "2026-10-18"
+  }
  },
  "bank-direkt": {
   "name": "Bank Direkt",
   "typ": "Direktbank",
   "sitz": "Linz",
   "web": "https://www.raiffeisen.at/ooe/de/privatkunden/karte/kreditkarte.html",
-  "text": "Direktbank aus der Raiffeisen-Gruppe Oberösterreich. Kreditkarten Classic, Gold und Platinum, nur mit Bank-Direkt-Girokonto."
+  "text": "Direktbank aus der Raiffeisen-Gruppe Oberösterreich. Kreditkarten Classic, Gold und Platinum, nur mit Bank-Direkt-Girokonto.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "Mein ELBA App nur für Debitkarten nötig; RaiPay",
+   "wear": "Garmin Pay, Swatch Pay, Bluecode",
+   "hinweis": "Wie Raiffeisen; Wear OS",
+   "quelle": "https://www.bankdirekt.at/de/online-und-mobile-banking/mobile-payment/apple-pay.html",
+   "stand": "2026-10-18"
+  }
  },
  "santander": {
   "name": "Santander Consumer Bank",
   "typ": "Direktbank",
   "sitz": null,
   "web": "https://www.santanderconsumer.at/",
-  "text": "Konsumkreditbank. Die Santander Card ist eine Kreditkarte ohne Jahresgebühr mit Cashback."
+  "text": "Konsumkreditbank. Die Santander Card ist eine Kreditkarte ohne Jahresgebühr mit Cashback.",
+  "wallet": {
+   "apple": false,
+   "google": false,
+   "app": "OK Santander (nur Freigaben)",
+   "wear": null,
+   "hinweis": "Weder Apple Pay noch Google Pay auf der Anbieterseite; Santander Österreich steht in keiner der beiden Listen",
+   "quelle": "https://www.santanderconsumer.at/faq-karte",
+   "stand": "2026-10-18"
+  }
  },
  "revolut": {
   "name": "Revolut",
   "typ": "Neobank",
   "sitz": "Litauen (EU-Lizenz)",
   "web": "https://www.revolut.com/de-AT/our-pricing-plans/",
-  "text": "App-Bank mit fünf Tarifen von Standard bis Ultra. Debitkarten, RevPoints-Prämienprogramm und je nach Tarif Versicherungen und Partner-Abos."
+  "text": "App-Bank mit fünf Tarifen von Standard bis Ultra. Debitkarten, RevPoints-Prämienprogramm und je nach Tarif Versicherungen und Partner-Abos.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "Revolut App",
+   "wear": null,
+   "hinweis": "Österreich in der Länderliste von Revolut für Apple Pay",
+   "quelle": "https://help.revolut.com/help/card-payments-withdrawals/getting-started-with-card-payments/paying-with-apple-or-google-pay/am-i-eligible-for-apple-pay/",
+   "stand": "2026-10-18"
+  }
  },
  "n26": {
   "name": "N26",
   "typ": "Neobank",
   "sitz": "Berlin",
   "web": "https://n26.com/de-at/metal",
-  "text": "Deutsche App-Bank mit Standard, Smart, Go und Metal. Go und Metal enthalten eine Allianz-Reiseversicherung."
+  "text": "Deutsche App-Bank mit Standard, Smart, Go und Metal. Go und Metal enthalten eine Allianz-Reiseversicherung.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "N26 App",
+   "wear": null,
+   "hinweis": null,
+   "quelle": "https://support.apple.com/de-at/109516",
+   "stand": "2026-10-18"
+  }
  },
  "trade-republic": {
   "name": "Trade Republic",
   "typ": "Neobank",
   "sitz": "Berlin, mit Zweigniederlassung in Österreich",
   "web": "https://traderepublic.com/de-at/karte",
-  "text": "Broker und Bank mit kostenloser Visa-Debitkarte. Saveback: 1 % der Kartenzahlungen fließen in den Sparplan (max. 15 €/Monat)."
+  "text": "Broker und Bank mit kostenloser Visa-Debitkarte. Saveback: 1 % der Kartenzahlungen fließen in den Sparplan (max. 15 €/Monat).",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "Trade Republic App",
+   "wear": null,
+   "hinweis": "Visa Debit",
+   "quelle": "https://support.apple.com/de-at/109516",
+   "stand": "2026-10-18"
+  }
  },
  "bitpanda": {
   "name": "Bitpanda",
   "typ": "Neobank",
   "sitz": "Wien",
   "web": "https://www.bitpanda.com/de/card",
-  "text": "Aktuelle Kartenversion und Konditionen in Österreich beim Anbieter prüfen."
+  "text": "Aktuelle Kartenversion und Konditionen in Österreich beim Anbieter prüfen.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "Bitpanda App",
+   "wear": "Apple Watch",
+   "hinweis": "Visa-Debitkarte; Wohnsitz im Euroraum",
+   "quelle": "https://www.bitpanda.com/de/card",
+   "stand": "2026-10-18"
+  }
  },
  "bunq": {
   "name": "bunq",
   "typ": "Neobank",
   "sitz": "Amsterdam",
   "web": "https://www.bunq.com/",
-  "text": "Abotarife und Kartenklassifikation beim Anbieter prüfen."
+  "text": "Abotarife und Kartenklassifikation beim Anbieter prüfen.",
+  "wallet": {
+   "apple": true,
+   "google": null,
+   "app": "bunq App",
+   "wear": null,
+   "hinweis": "Apple Pay laut Apple-Liste; für Google Pay in Österreich kein aktueller Beleg auf den bunq-Hilfeseiten",
+   "quelle": "https://support.apple.com/de-at/109516",
+   "stand": "2026-10-18"
+  }
  },
  "wise": {
   "name": "Wise",
   "typ": "Zahlungsdienst",
   "sitz": "Brüssel (EU)",
   "web": "https://wise.com/at/card/",
-  "text": "Mehrwährungskonto mit Debitkarte. Umrechnung zum Mittelkurs ab 0,47 %, Karte einmalig 7 €."
+  "text": "Mehrwährungskonto mit Debitkarte. Umrechnung zum Mittelkurs ab 0,47 %, Karte einmalig 7 €.",
+  "wallet": {
+   "apple": true,
+   "google": true,
+   "app": "Wise App",
+   "wear": "Garmin Pay, Fitbit Pay",
+   "hinweis": null,
+   "quelle": "https://www.wise.com/help/articles/2977968/how-do-i-use-my-wise-card-with-garmin-pay-or-fitbit-pay",
+   "stand": "2026-10-18"
+  }
  }
 }

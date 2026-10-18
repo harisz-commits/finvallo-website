@@ -51,6 +51,24 @@ def load_at():
         c.setdefault('ex',{}); c.setdefault('sek',[]); c.setdefault('geprueft','2026-10-11'); c['land']='at'
     return cs
 def load(land='de'): return load_de() if land=='de' else load_at()
+# Apple Pay / Google Pay je Anbieter (daten/at/anbieter.json, Feld wallet). Kartenfeld pay bleibt der Schalter:
+# pay=None → keine Angabe, pay=False → nein; bei pay=True entscheidet der Anbieter-Eintrag, ob „Apple Pay & Google Pay“ oder nur eines steht.
+_WALLET=None
+def wallet(p):
+    global _WALLET
+    if _WALLET is None:
+        try: _WALLET={k:(v.get('wallet') or {}) for k,v in json.load(open(SP+'/daten/at/anbieter.json')).items()}
+        except Exception: _WALLET={}
+    return _WALLET.get(p) or {}
+def wallet_text(c):
+    if not c.get('pay'): return None
+    w=wallet(c.get('p')) if c.get('land')=='at' else {}
+    if not w: return 'Apple Pay & Google Pay'
+    a,g=w.get('apple'),w.get('google')
+    if a and g: return 'Apple Pay & Google Pay'
+    if a and not g: return 'Apple Pay'+(' (Google Pay unklar)' if g is None else '')
+    if g and not a: return 'Google Pay'+(' (Apple Pay unklar)' if a is None else '')
+    return 'Apple Pay & Google Pay'
 def providers(land,cards):
     P=json.load(open(SP+'/daten/at/anbieter.json')) if land=='at' else {}
     out={}
@@ -179,7 +197,7 @@ def feats(c):
     if cash200(c.get('cash'))==0: t.append(('b','Gratis Bargeld'))
     elif cash200(c.get('cash'))=='fn': t.append(('b','Bargeld begrenzt gratis'))
     if (c.get('tier') or 0)>=1: t.append(('p','Reiseversicherung'))
-    if c.get('pay'): t.append(('a','Apple Pay &amp; Google Pay'))
+    if wallet_text(c): t.append(('a',E(wallet_text(c))))
     if c['ex'].get('cb'): t.append(('g','Cashback / Punkte'))
     if c['ex'].get('ml'): t.append(('p','Meilen'))
     if c['ex'].get('lg'): t.append(('a','Lounge'))
@@ -348,7 +366,7 @@ def cond(c):
     out+=r('Girokonto beim Anbieter','nötig' if c.get('giro') else 'nicht nötig' if c.get('giro') is False else '–')
     out+=r(L['bonrow'],'ja' if c['typ'] in ('Kreditkarte','Charge') else 'meist nur bei Kontoeröffnung')
     out+=r('Für Kautionen','in der Regel ja' if c['typ'] in ('Kreditkarte','Charge') and 'American' not in (c.get('netz') or '') else 'oft nicht' if c['typ'] in ('Debit','Prepaid') else 'eingeschränkt')
-    out+=r('Apple / Google Pay',(E(c.get('payText')) if c.get('pay') and c.get('payText') else b(c.get('pay')) if c.get('pay') is not None else na))
+    out+=r('Apple / Google Pay',(E(c.get('payText')) if c.get('pay') and c.get('payText') else E(wallet_text(c)) if wallet_text(c) else b(c.get('pay')) if c.get('pay') is not None else na))
     if c.get('herausgeber'): out+=r('Herausgeber',E(c['herausgeber']))
     return out+'</div>'
 def scorebox(c,P):
