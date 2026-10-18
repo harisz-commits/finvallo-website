@@ -56,6 +56,7 @@ DATES={
     ('at','reiseversicherung'): dict(published='2026-10-11', updated='2026-10-18'),
     ('at','flugverspaetung-gepaeck'): dict(published='2026-10-18', updated='2026-10-18'),
     ('at','bargeld-beheben'): dict(published='2026-10-18', updated='2026-10-18'),
+    ('at','kreditkarte-studenten'): dict(published='2026-10-18', updated='2026-10-18'),
     ('at','teilzahlung'): dict(published='2026-10-11', updated='2026-10-11'),
     ('at','visa-mastercard-amex'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','business'): dict(published='2026-10-11', updated='2026-10-11'),
@@ -285,6 +286,7 @@ def build(land):
         import karten, ratgeber_reise
         ratgeber_reise.register(art,P,best,cards.D['at'][0],karten.card_count('at','private'),eur)
         import ratgeber_bargeld; ratgeber_bargeld.register(art,P,best,cards.D['at'][0],karten.card_count('at','private'),eur,karten)
+        import ratgeber_studenten; ratgeber_studenten.register(art,P,best,cards.D['at'][0],karten.card_count('at','private'),eur,karten)
     if land=='de':
         lou=[c for c in RC if c['lg']]
         art('de','lounges',h1='Lounge-Zugang mit der Kreditkarte',mt='Lounge-Zugang mit Kreditkarte in Deutschland | Finvallo',
@@ -377,7 +379,7 @@ def meta(land,slug):
     h1=html.unescape(re.sub(r'<[^>]+>','',re.search(r'<h1>(.*?)</h1>',s,re.S).group(1)))
     d=html.unescape(re.search(r'<meta name="description" content="([^"]*)"',s).group(1))
     return h1,d
-ORDER=['kostenlose-kreditkarte','kreditkarte-beantragen','fremdwaehrung','bargeld-beheben','reiseversicherung','flugverspaetung-gepaeck','punkte','punkte-sammeln-at','punkte-sammeln-de','lounges','visa-mastercard-amex','mietwagen-kaution','ohne-bonitaetspruefung','kartentypen','teilzahlung','business']
+ORDER=['kostenlose-kreditkarte','kreditkarte-studenten','kreditkarte-beantragen','fremdwaehrung','bargeld-beheben','reiseversicherung','flugverspaetung-gepaeck','punkte','punkte-sammeln-at','punkte-sammeln-de','lounges','visa-mastercard-amex','mietwagen-kaution','ohne-bonitaetspruefung','kartentypen','teilzahlung','business']
 def index_pages():
     for land in ('at','de'):
         f=R+f'{land}/ratgeber/index.html'; s=open(f).read()

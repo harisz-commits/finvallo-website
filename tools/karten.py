@@ -1003,10 +1003,23 @@ def bestenlisten(cards,lists,other_lists):
 {wb}
 <div class="tbl wide blt" style="margin-top:16px"><table><thead>{thead}</thead><tbody>{rows}</tbody></table></div>{cnote}
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div>
-<p class="note" style="margin-top:18px"><a class="lnk" href="{P2}{code}/kreditkarten/">Zur Gesamtwertung aller Karten →</a> · <a class="lnk" href="{P2}{code}/kreditkarten/methodik/">So bewerten wir →</a></p>
+{rg_note(cat['k'],code,P2)}<p class="note" style="margin-top:18px"><a class="lnk" href="{P2}{code}/kreditkarten/">Zur Gesamtwertung aller Karten →</a> · <a class="lnk" href="{P2}{code}/kreditkarten/methodik/">So bewerten wir →</a></p>
 </main>
 {footer(P2)}''')
 
+# Rückverweis von Bestenlisten auf den passenden Ratgeber (eine Seite je Suchabsicht: Liste = „welche Karte“, Ratgeber = „wie, worauf achten“)
+LIST_RATGEBER={'studium':('kreditkarte-studenten','Kreditkarte als Student: Bonität ohne Einkommen, Auslandssemester und was nach dem Studium passiert'),
+               'gratis':('kostenlose-kreditkarte','Kostenlose Kreditkarte: worauf du bei Gratis-Karten achten musst'),
+               'ausland':('fremdwaehrung','Gebühren im Ausland verstehen'),
+               'reisen':('reiseversicherung','Reiseversicherung über die Kreditkarte: Bedingungen, Summen, Altersgrenzen'),
+               'lounge':('lounges','Lounge-Zugang mit der Kreditkarte'),
+               'punkte':('punkte','Punkte und Meilen: der Einstieg'),
+               'cashback':('punkte','Punkte, Meilen und Cashback: der Einstieg'),
+               'debit':('kartentypen','Kredit-, Charge-, Debit- oder Prepaid-Karte?')}
+def rg_note(k,code,P2):
+    r=LIST_RATGEBER.get(k)
+    if not r or not os.path.exists(R+f'{code}/ratgeber/{r[0]}/index.html'): return ''
+    return f'<p class="note" style="margin-top:14px">Hintergrund und Entscheidungshilfe im Ratgeber: <a class="lnk" href="{P2}{code}/ratgeber/{r[0]}/">{E(r[1])} →</a></p>\n'
 # ---------- Tabs-Skript ----------
 def tabs_js(P):
     import hashlib
