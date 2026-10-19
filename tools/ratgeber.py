@@ -51,8 +51,7 @@ DATES={
     ('at','lounges'): dict(published='2026-10-11', updated='2026-10-11'),
     ('at','mietwagen-kaution'): dict(published='2026-10-12', updated='2026-10-14'),
     ('at','ohne-bonitaetspruefung'): dict(published='2026-10-12', updated='2026-10-12'),
-    ('at','punkte-sammeln-at'): dict(published='2026-10-12', updated='2026-10-12'),
-    ('at','punkte'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','punkte-sammeln-at'): dict(published='2026-10-12', updated='2026-10-19'),
     ('at','reiseversicherung'): dict(published='2026-10-11', updated='2026-10-18'),
     ('at','flugverspaetung-gepaeck'): dict(published='2026-10-18', updated='2026-10-18'),
     ('at','bargeld-beheben'): dict(published='2026-10-18', updated='2026-10-18'),
@@ -71,8 +70,7 @@ DATES={
     ('de','lounges'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','mietwagen-kaution'): dict(published='2026-10-12', updated='2026-10-14'),
     ('de','ohne-bonitaetspruefung'): dict(published='2026-10-12', updated='2026-10-12'),
-    ('de','punkte-sammeln-de'): dict(published='2026-10-12', updated='2026-10-12'),
-    ('de','punkte'): dict(published='2026-10-12', updated='2026-10-12'),
+    ('de','punkte-sammeln-de'): dict(published='2026-10-12', updated='2026-10-19'),
     ('de','reiseversicherung'): dict(published='2026-10-11', updated='2026-10-18'),
     ('de','teilzahlung'): dict(published='2026-10-11', updated='2026-10-19'),
     ('de','visa-mastercard-amex'): dict(published='2026-10-12', updated='2026-10-12'),
@@ -227,7 +225,7 @@ def build(land):
       faq=[('Ist Visa oder Mastercard besser?','Für dich als Kunde gibt es kaum Unterschiede bei Akzeptanz und Kurs. Entscheidend sind die Gebühren und Leistungen der Karte.'),
            ('Warum nimmt nicht jeder American Express?','Händler zahlen für Amex meist höhere Gebühren als für Visa oder Mastercard. Deshalb verzichten vor allem kleinere Geschäfte darauf.'),
            ('Lohnt sich American Express trotzdem?','Für Vielreisende oft ja: Punkteprogramm, Guthaben und Versicherungen können die Jahresgebühr aufwiegen. Als einzige Karte ist sie wegen der Akzeptanz aber nicht ideal.')],
-      related=['fremdwaehrung','punkte','kostenlose-kreditkarte'])
+      related=['fremdwaehrung',WHY_AMEX[land][0],'kostenlose-kreditkarte'])
     # E) Mietwagen & Kaution
     rent=[c for c in credit if (c['tier'] or 0)>=3]
     rent=sorted(rent,key=lambda c:(c['fee'] if c['fee'] is not None else 1e9))
@@ -305,17 +303,6 @@ def build(land):
                ('Wie hoch ist das Auslandseinsatzentgelt?','Bei Hausbanken meist 1,75 bis 2,35 %, bei American Express 2 %. Viele Direktbanken und Gold-Karten verlangen 0 %.'),
                ('Soll ich am Automaten im Ausland Euro oder Landeswährung wählen?','Immer die Landeswährung. Die Umrechnung in Euro durch den Automaten ist fast immer teurer.')],
           related=['kostenlose-kreditkarte','visa-mastercard-amex','reiseversicherung'])
-        pts=[c for c in RC if c['cb'] or c['ml']][:12]
-        art('de','punkte',h1='Punkte, Meilen und Cashback: der Einstieg',mt='Punkte & Meilen mit Kreditkarte (Deutschland) | Finvallo',
-          desc='Punkte, Meilen oder Cashback? Welche Programme es in Deutschland gibt (Membership Rewards, Miles & More, Payback) und wie viel sie bringen.',
-          lede='Welche Programme es in Deutschland gibt und wie viel sie wirklich bringen.',
-          kurz='In Deutschland sammelst du mit Kreditkarten vor allem Membership Rewards (American Express), Meilen bei Miles & More, Payback-Punkte oder einfaches Cashback. Cashback ist am einfachsten, gut eingelöste Meilen und Punkte bringen meist mehr. Die Jahresgebühr sollte nicht höher sein als der Wert, den du sammelst.',
-          secs=[('Die wichtigsten Programme','<div class="prose"><ul><li><b>Membership Rewards (Amex):</b> 1 Punkt pro Euro bei Gold und Platinum, übertragbar auf Airline- und Hotelprogramme. Bei der Blue Card nur gegen Aufpreis.</li><li><b>Miles & More:</b> Mit den Miles & More Credit Cards meist 1 Meile pro 2 €. Für Prämienflüge bei Lufthansa und Partnern.</li><li><b>Payback:</b> Mit den PAYBACK-Karten von American Express und Visa sammelst du °Punkte, 1 °Punkt ist 1 Cent wert.</li><li><b>Cashback:</b> Geld zurück auf jeden Einkauf, etwa 0,5 % bei der WEB.Cent-Karte oder Partner-Cashback bei vielen Banken.</li></ul></div>'),
-                ('Karten mit Punkten, Meilen oder Cashback',table(pts,[COL['karte'],COL['cb'],COL['fee'],COL['stars']],P)+f'<p class="note"><a class="lnk" href="{best}punkte/">Bestenliste Meilen &amp; Punkte →</a></p>'),
-                ('Was Punkte wert sind','<div class="prose"><p>Ein Payback-Punkt ist fest 1 Cent wert. Membership Rewards und Meilen sind am meisten wert, wenn du sie für Flüge in Business oder First Class einlöst. Für Sachprämien oder Gutscheine bekommst du oft deutlich weniger. Wie sich das rechnet, steht in <a href="../punkte-sammeln-de/">Lohnt sich Punktesammeln in Deutschland?</a></p></div>')],
-          faq=[('Was ist besser: Cashback oder Meilen?','Cashback ist einfach und sicher. Meilen lohnen sich, wenn du gezielt Prämienflüge buchst.'),
-               ('Bekomme ich Punkte für jede Zahlung?','Meist ja, aber oft nicht für Gebühren, Bargeld, Überweisungen oder bestimmte Händler wie Tankstellen.')],
-          related=['punkte-sammeln-de','lounges','visa-mastercard-amex'])
 
 # ---------- statische Artikel korrigieren, Übersichten, hreflang, Sitemap, llms ----------
 DE_FIX={
@@ -334,6 +321,21 @@ def why_amex(land):
             f'So passt sie für die meisten, die Punkte für Gutscheine oder Economy-Flüge einlösen. Dort liegen Karten mit niedriger Gebühr vorne, die teure Gold Card und Platinum Card landen weiter hinten. Wer lieber Geld zurück will, findet die <a href="../../kreditkarten/bestenlisten/cashback/">Bestenliste Cashback</a>.</p>'
             f'<p>Dieser Ratgeber rechnet dagegen mit 1 bis 2 Cent pro Punkt und dem Turbo-Bonus. Diesen Wert erreichst du nur, wenn du die Punkte gezielt in Business- oder First-Class-Flüge über Partnerprogramme tauschst. '
             f'Wenn du das vorhast und viel mit der Karte zahlst, lohnt sich American Express. Wenn nicht, nimm eine Karte aus der Bestenliste.</p></div>')
+
+PROG={'at':'<div class="prose"><p>Vier Wege, mit österreichischen Kreditkarten zu sammeln:</p><ul>\n<li><b>Membership Rewards (American Express):</b> 1 Punkt pro Euro, bei der Gold Card mit Turbo 1,5. Die Teilnahme kostet bei der Gold Card 30 € im Jahr, bei der Platinum Card ist sie inklusive. Punkte lassen sich in Partnerprogramme übertragen, die Liste steht oben.</li>\n<li><b>Miles &amp; More:</b> das Programm von Austrian, Lufthansa und Swiss. Direkt sammelst du mit der Austrian Miles &amp; More Premiumcard von Erste Bank und Sparkasse (1 Meile je 1,50 €), indirekt über das Bonusprogramm von Diners Club (1 Punkt je 8 €, 4 Meilen je Punkt, 25 € im Jahr).</li>\n<li><b>Hotelpunkte:</b> die Hilton Honors Kreditkarte gibt 1 Punkt pro Euro, 2 in Hilton-Hotels. Pro Stück sind Hotelpunkte deutlich weniger wert als Meilen.</li>\n<li><b>Cashback und App-Banken:</b> Revolut sammelt RevPoints, Trade Republic zahlt 1 % Saveback in den Sparplan, die Erste Bank gibt bis 0,6 % Online-Cashback. Einfach, aber meist weniger als gut eingelöste Meilen.</li></ul>\n<p>Punkte, die du in mehrere Programme übertragen kannst, sind am flexibelsten: Du entscheidest erst beim Einlösen, wo sie am meisten bringen. Übertragungen gehen nur in eine Richtung, also erst übertragen, wenn die Prämie feststeht.</p></div>',
+      'de':'<div class="prose"><p>Vier Wege, mit deutschen Kreditkarten zu sammeln:</p><ul>\n<li><b>Membership Rewards (American Express):</b> 1 Punkt pro Euro bei Gold und Platinum (mit Turbo 1,5), bei der Blue Card nur gegen Aufpreis. Übertragbar auf Airline- und Hotelprogramme, die Liste steht oben.</li>\n<li><b>Miles &amp; More:</b> mit den Miles &amp; More Credit Cards 1 Meile je 2 €, für Prämienflüge bei Lufthansa, Austrian, Swiss und Partnern; mit Blue und Gold verfallen die Meilen nicht.</li>\n<li><b>Payback:</b> mit der Payback American Express 1 Punkt je 3 €, 1 Punkt ist 1 Cent wert und lässt sich 1:1 zu Miles &amp; More übertragen.</li>\n<li><b>Cashback:</b> Geld zurück auf jeden Einkauf, etwa 0,5 % bei der WEB.Cent-Karte, oder Partner-Cashback bei vielen Banken. Am einfachsten zu vergleichen, weil der Wert feststeht.</li></ul>\n<p>Punkte, die du in mehrere Programme übertragen kannst, sind am flexibelsten: Du entscheidest erst beim Einlösen, wo sie am meisten bringen. Übertragungen gehen nur in eine Richtung, also erst übertragen, wenn die Prämie feststeht.</p></div>'}
+WERT={'at':[('Cashback','genau 1 Cent pro Cent'),('Miles &amp; More Meile','rund 1 Cent, bei Business-Class-Flügen oft mehr'),('Membership-Rewards-Punkt','0,5 bis 1 Cent, bei Flügen über Transferpartner 1 bis 2 Cent'),('Hilton-Punkt','0,4 bis 0,5 Cent'),('Sachprämien und Gutscheine','oft deutlich weniger als 1 Cent')],
+      'de':[('Cashback','genau 1 Cent pro Cent'),('Payback-Punkt','fest 1 Cent, als Miles &amp; More Meile bei Flügen mehr'),('Miles &amp; More Meile','rund 1 Cent, bei Business-Class-Flügen oft mehr'),('Membership-Rewards-Punkt','0,5 bis 1 Cent, bei Flügen über Transferpartner 1 bis 2 Cent'),('Hilton-Punkt','0,4 bis 0,5 Cent'),('Sachprämien und Gutscheine','oft deutlich weniger als 1 Cent')]}
+def punkte_block(land):
+    """Einstieg (Programme, Kartentabelle aus den Daten, Punktewerte, typische Fehler) für die statische Seite „Lohnt sich Punktesammeln“."""
+    RC=rated(cards(land)); P='../../../'; N=LAND[land]['name']
+    pts=[c for c in RC if c['cb'] or c['ml']]; n_all=len(pts); pts=pts[:25]
+    wert='<div class="tbl"><table><thead><tr><th>Was</th><th>Vorsichtiger Wert</th></tr></thead><tbody>'+''.join(f'<tr><td>{a}</td><td>{b}</td></tr>' for a,b in WERT[land])+'</tbody></table></div>'
+    return (f'<!-- GEN:punkte --><h2>Welche Programme es in {N} gibt</h2>{PROG[land]}'
+            f'<h2>Alle Karten mit Punkten, Meilen oder Cashback</h2><p class="note">Alle bewerteten Privatkarten aus unserem {N}-Vergleich, die Punkte, Meilen oder Cashback geben, sortiert nach Bewertung'+(f', die {len(pts)} am besten bewerteten von {n_all}' if n_all>len(pts) else '')+'. „Sammeln“ nennt die Rate laut Anbieter.</p>'
+            +table(pts,[COL['karte'],COL['cb'],COL['fee'],COL['stars']],P)+'<p class="note"><a class="lnk" href="../../kreditkarten/bestenlisten/punkte/">Bestenliste Meilen &amp; Punkte →</a> · <a class="lnk" href="../../kreditkarten/bestenlisten/cashback/">Bestenliste Cashback →</a></p>'
+            f'<h2>Was ein Punkt wert ist</h2><div class="prose"><p>Unsere vorsichtigen Schätzungen; der tatsächliche Wert hängt davon ab, wofür du einlöst.</p></div>{wert}'
+            '<h2>Typische Fehler</h2><div class="prose"><ul><li><b>Sachprämien und Gutscheine:</b> bringen pro Punkt am wenigsten.</li><li><b>Verfall:</b> viele Programme haben Verfallsregeln; Amex-Punkte verfallen nicht, solange die Karte läuft, Hilton-Punkte nach 24 Monaten ohne Aktivität'+(', Miles &amp; More Meilen ohne Verfallsschutz nach 36 Monaten' if land=='de' else '')+'.</li><li><b>Jahresgebühr nicht gegengerechnet:</b> eine Karte für über 200 € muss erst einmal so viele Punkte bringen; die Rechnung dazu steht oben.</li><li><b>Mehr ausgeben, nur um zu sammeln:</b> kein Punktewert ist so hoch wie 20 bis 25 % Teilzahlungszins.</li></ul></div><!-- /GEN:punkte -->')
 def fix_static():
     for land,(slug,N) in WHY_AMEX.items():
         f=R+f'{land}/ratgeber/{slug}/index.html'
@@ -342,6 +344,9 @@ def fix_static():
         s=re.sub(r'<h2 id="bestenliste">.*?</div>(?=\s*<h2)','',s,count=1,flags=re.S)
         i=s.find('<h2',s.find('Kurzantwort'))
         if i>0: s=s[:i]+why_amex(land)+'\n'+s[i:]
+        s=re.sub(r'<!-- GEN:punkte -->.*?<!-- /GEN:punkte -->\n?','',s,flags=re.S)
+        k=s.find('<h2>Die 5 wichtigsten Regeln</h2>')
+        if k>0: s=s[:k]+punkte_block(land)+'\n'+s[k:]
         open(f,'w').write(s)
     for slug,reps in DE_FIX.items():
         f=R+f'de/ratgeber/{slug}/index.html'
@@ -370,7 +375,7 @@ def meta(land,slug):
     h1=html.unescape(re.sub(r'<[^>]+>','',re.search(r'<h1>(.*?)</h1>',s,re.S).group(1)))
     d=html.unescape(re.search(r'<meta name="description" content="([^"]*)"',s).group(1))
     return h1,d
-ORDER=['kostenlose-kreditkarte','kreditkarte-studenten','kreditkarte-beantragen','fremdwaehrung','bargeld-beheben','bargeld-abheben','reiseversicherung','flugverspaetung-gepaeck','punkte','punkte-sammeln-at','punkte-sammeln-de','lounges','visa-mastercard-amex','apple-pay-google-pay','mietwagen-kaution','ohne-bonitaetspruefung','kartentypen','teilzahlung','business']
+ORDER=['kostenlose-kreditkarte','kreditkarte-studenten','kreditkarte-beantragen','fremdwaehrung','bargeld-beheben','bargeld-abheben','reiseversicherung','flugverspaetung-gepaeck','punkte-sammeln-at','punkte-sammeln-de','lounges','visa-mastercard-amex','apple-pay-google-pay','mietwagen-kaution','ohne-bonitaetspruefung','kartentypen','teilzahlung','business']
 def index_pages():
     for land in ('at','de'):
         f=R+f'{land}/ratgeber/index.html'; s=open(f).read()

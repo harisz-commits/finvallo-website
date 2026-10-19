@@ -1,6 +1,8 @@
 {
+ "/at/ratgeber/punkte/": "/at/ratgeber/punkte-sammeln-at/",
  "/de/kreditkarten/anbieter/tui/": "/de/kreditkarten/alle/",
  "/de/kreditkarten/tui-card-classic/": "/de/kreditkarten/",
  "/de/kreditkarten/tui-card-gold/": "/de/kreditkarten/",
- "/de/kreditkarten/tui-card-titan/": "/de/kreditkarten/"
+ "/de/kreditkarten/tui-card-titan/": "/de/kreditkarten/",
+ "/de/ratgeber/punkte/": "/de/ratgeber/punkte-sammeln-de/"
 }

@@ -22,6 +22,7 @@ Redirect 301 /at/kreditkarten/anbieter/santander/ https://finvallo.com/at/kredit
 Redirect 301 /at/kreditkarten/anbieter/tf-bank/ https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/
 Redirect 301 /at/kreditkarten/anbieter/trade-republic/ https://finvallo.com/at/kreditkarten/trade-republic-karte/
 Redirect 301 /at/kreditkarten/anbieter/wise/ https://finvallo.com/at/kreditkarten/wise-karte/
+Redirect 301 /at/ratgeber/punkte/ https://finvallo.com/at/ratgeber/punkte-sammeln-at/
 Redirect 301 /de/kreditkarten/anbieter/ https://finvallo.com/de/kreditkarten/alle/
 Redirect 301 /de/kreditkarten/anbieter/advanzia/ https://finvallo.com/de/kreditkarten/advanzia-bank-gebuehrenfrei-mastercard-gold/
 Redirect 301 /de/kreditkarten/anbieter/amazon/ https://finvallo.com/de/kreditkarten/amazon-visa/
@@ -48,4 +49,5 @@ Redirect 301 /de/kreditkarten/anbieter/wise/ https://finvallo.com/de/kreditkarte
 Redirect 301 /de/kreditkarten/tui-card-classic/ https://finvallo.com/de/kreditkarten/
 Redirect 301 /de/kreditkarten/tui-card-gold/ https://finvallo.com/de/kreditkarten/
 Redirect 301 /de/kreditkarten/tui-card-titan/ https://finvallo.com/de/kreditkarten/
+Redirect 301 /de/ratgeber/punkte/ https://finvallo.com/de/ratgeber/punkte-sammeln-de/
 ErrorDocument 404 /404.html
