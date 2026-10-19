@@ -33,6 +33,8 @@ check('R8.6', 'Startseite = aktueller Build', got && got === want, got === want 
 const h = headers('https://finvallo.com/'), ma = maxAge(h), enc = (h.match(/content-encoding: *(\S+)/) || [])[1];
 check('R2', 'HTML: Cache höchstens 10 Minuten', ma !== null && ma <= 600, ma === null ? 'kein Cache-Control' : `max-age=${ma}`);
 check('R2', 'HTML: gzip oder br', ['gzip', 'br'].includes(enc), enc || 'keine Komprimierung');
+for (const [hd, re_] of [['strict-transport-security', /max-age=\d+/], ['x-content-type-options', /nosniff/], ['referrer-policy', /strict-origin/]]) { const m = h.match(new RegExp(hd + ': *([^\\r\\n]+)')); check('R2', 'Header ' + hd, !!m && re_.test(m[1]), m ? m[1].trim() : 'fehlt'); }
+const alpn = curl(['-s', '-o', '/dev/null', '-w', '%{http_version}', '--http2', 'https://finvallo.com/']); check('R2', 'HTTP/2', alpn.trim() === '2', 'HTTP/' + alpn.trim());
 const a = asset();
 if (a) { const ha = headers(a), mx = maxAge(ha); check('R2', 'CSS/JS: Cache 1 Jahr (versioniert)', mx !== null && mx >= 31536000, mx === null ? 'kein Cache-Control' : `max-age=${mx}` + ((ha.match(/cache-control/g) || []).length > 1 ? ' (Header doppelt)' : '')); }
 else check('R2', 'CSS/JS: Cache 1 Jahr (versioniert)', false, 'CSS-Datei nicht gefunden');
