@@ -811,10 +811,10 @@ CATS=[
  dict(k='reisen',t='Reisen',h='Die besten Karten für Reisen',d='Für Reisen zählen vor allem eine gute Reiseversicherung und niedrige Gebühren im Ausland.',f=lambda c:c['typ']!='Prepaid',w={'_bonus':'fokus','fokus':['Reiseversicherung', 'Zahlen im Ausland']}),
  dict(k='gratis',t='Ohne Jahresgebühr',h='Die besten Karten ohne Jahresgebühr',d='Nur Karten, die dauerhaft nichts kosten. Bewertet wie in der Gesamtwertung.',f=lambda c:c.get('fee')==0,w=None),
  dict(k='ausland',t='Ohne Auslandsgebühr',h='Die besten Karten zum Zahlen im Ausland',d='Karten mit höchstens 0,5 % Aufschlag in fremder Währung. Hier zählen vor allem günstiges Zahlen und Abheben im Ausland.',f=lambda c:c.get('fx') is not None and c['fx']<=0.5,w={'_bonus':'fokus','fokus':['Zahlen im Ausland', 'Bargeld']}),
- dict(k='punkte',t='Meilen & Punkte',h='Die besten Karten für Meilen und Punkte',d='Nur Karten mit Meilen- oder Punkteprogramm auf normale Einkäufe, etwa Miles & More, Membership Rewards, Payback oder Hotelpunkte. Je mehr du bei 1.000 € Umsatz im Monat sammelst, desto weiter vorn steht die Karte. Reines Cashback steht in der eigenen Bestenliste.',f=lambda c:c.get('sammel') is not None and c.get('sammelKind')!='cash',w={'_bonus':'sammel'}),
- dict(k='cashback',t='Cashback',h='Die besten Karten mit Cashback',d='Nur Karten, die auf normale Einkäufe Geld zurückgeben. Je mehr bei 1.000 € Umsatz im Monat zurückkommt, desto weiter vorn steht die Karte. Partner- und Reiserabatte zählen hier nicht.',f=lambda c:c.get('sammel') is not None and c.get('sammelKind')=='cash',w={'_bonus':'sammel'}),
+ dict(k='punkte',t='Meilen & Punkte',h='Die besten Karten für Meilen und Punkte',d='Nur Karten mit Meilen- oder Punkteprogramm auf normale Einkäufe, etwa Miles & More, Membership Rewards, Payback oder Hotelpunkte. Je mehr bei 1.000 € Umsatz im Monat nach Abzug der Jahresgebühr übrig bleibt, desto weiter vorn steht die Karte. Reines Cashback steht in der eigenen Bestenliste.',f=lambda c:c.get('sammel') is not None and c.get('sammelKind')!='cash',w={'_bonus':'sammel'}),
+ dict(k='cashback',t='Cashback',h='Die besten Karten mit Cashback',d='Nur Karten, die auf normale Einkäufe Geld zurückgeben. Je mehr bei 1.000 € Umsatz im Monat nach Abzug der Jahresgebühr übrig bleibt, desto weiter vorn steht die Karte. Partner- und Reiserabatte zählen hier nicht.',f=lambda c:c.get('sammel') is not None and c.get('sammelKind')=='cash',w={'_bonus':'sammel'}),
  dict(k='lounge',t='Lounge-Zugang',h='Die besten Karten mit Lounge-Zugang',d='Nur Karten mit kostenlosen Lounge-Besuchen. Hier zählt vor allem der Lounge-Zugang: wie viele Besuche gratis sind, ob eine Begleitperson gratis mitkommt und ob die Lounges weltweit gelten.',f=lambda c:bool(c['ex'].get('lg')),w={'_bonus':'mix','fokus':['Lounge-Zugang'],'anteil':0.7}),
- dict(k='premium',t='Premium',h='Die besten Premiumkarten',d='Top-Karten mit Lounges oder Premium-Reiseschutz. Hier zählen vor allem Reiseschutz und Extras.',f=lambda c:c['klasse']=='Premium',w={'_bonus':'fokus','fokus':['Reiseversicherung', 'Extras']}),
+ dict(k='premium',t='Premium',h='Die besten Premiumkarten',d='Top-Karten mit Lounges oder Premium-Reiseschutz. Hier zählen vor allem Reiseschutz und Extras.',f=lambda c:c['klasse']=='Premium' and ((c.get('tier') or 0)>=2 or bool(c['ex'].get('lg'))),w={'_bonus':'fokus','fokus':['Reiseversicherung', 'Extras']}),
  dict(k='studium',f_at=lambda c:bool(re.search(r'Student|Maturant',c['titel'])),t='Studierende',h='Die besten Karten für Studierende und junge Leute',d='Karten, die für Studierende, Azubis oder junge Kunden günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.',f=lambda c:youth(c) is not None,w=None),
  dict(k='debit',t='Debit & App-Banken',h='Die besten Debitkarten und App-Banken',d='Karten, die sofort vom Konto abbuchen. Hier zählen vor allem günstiges Zahlen und Abheben im Ausland.',f=lambda c:c['typ'] in ('Debit','Prepaid'),w={'_bonus':'fokus','fokus':['Zahlen im Ausland', 'Bargeld']}),
 ]
@@ -923,7 +923,9 @@ def cat_lists(cards,land):
     for cat in CATS:
         f=cat.get('f_'+land,cat['f'])
         X=[c for c in cards if c['art']=='Privat' and (not c.get('nurfuer') or (cat['k']=='studium' and c.get('jung'))) and c.get('stars') is not None and f(c)]
-        out[cat['k']]=sorted(X,key=lambda c:(-(cat_stars(c,cat['w']) or 0),c.get('fee') if c.get('fee') is not None else 1e9,c['titel'].lower()))
+        if cat['k'] in ('punkte','cashback'):  # Wert nach Jahresgebühr zuerst, Sterne bei Gleichstand
+            out[cat['k']]=sorted(X,key=lambda c:(-(c.get('sammelNet') if c.get('sammelNet') is not None else -1e9),-(cat_stars(c,cat['w']) or 0),c['titel'].lower()))
+        else: out[cat['k']]=sorted(X,key=lambda c:(-(cat_stars(c,cat['w']) or 0),c.get('fee') if c.get('fee') is not None else 1e9,c['titel'].lower()))
     best={}
     for cat in CATS:
         for i,c in enumerate(out[cat['k']][:3]):
@@ -960,7 +962,7 @@ def k_guest(c):
 def k_guest_txt(c): return 'gratis' if re.search(r'(Gast|Gäste|Begleitperson)\w* (kostenlos|gratis|frei)|1 Gast kostenlos',c.get('lgText') or '',re.I) else '–'
 def k_prog(c): return re.split(r' \(|;',c.get('sammelTxt') or '–')[0].replace('°Punkt','PAYBACK-Punkt')
 def k_val(c): return f'≈ {eur(round(c["sammelEur"]))} €' if c.get('sammelEur') is not None else '–'
-def k_net(c): return '–' if c.get('sammelNet') is None else f'{"+" if c["sammelNet"]>=0 else "−"}{eur(round(abs(c["sammelNet"])))} €'
+def k_net(c): return '–' if c.get('sammelNet') is None else f'{"+" if c["sammelNet"]>=0 else "-"}{eur(round(abs(c["sammelNet"])))} €'
 def k_youth(c): return 'Studierende' if re.search(r'Student|Maturant',c['titel']) else (youth(c) or '–')
 COLS={
  'reisen':[('Versicherung',k_ins),('Zahlung Ausland',k_fx),('Jahresgebühr',k_fee)],
@@ -1015,7 +1017,7 @@ def bestenlisten(cards,lists,other_lists):
         wb=''
         if cat['w'] and cat['w'].get('_bonus'):
             wb=('<details class="box howscore"><summary><span><b>So rechnen wir in dieser Kategorie</b></span><span class="lnk">anzeigen</span></summary>'
-                f'<p class="note">{E(cat["d"])} Grundlage ist die Gesamtnote der Karte.</p></details>')
+                f'<p class="note">{E(cat["d"])}{"" if cat["k"] in ("punkte","cashback") else " Grundlage ist die Gesamtnote der Karte."}</p></details>')
         elif cat['w']:
             mx=max(cat['w'].values())
             extra={'lounge':' Die Lounge-Note richtet sich nach Zahl der Gratis-Besuche und danach, ob eine Begleitperson kostenlos mitkommt.',
@@ -1028,7 +1030,7 @@ def bestenlisten(cards,lists,other_lists):
         cnote=f'<p class="note" style="margin-top:8px">{E(COLNOTE[cat["k"]]+" " if cat["k"] in COLNOTE else "")}Bei gleicher Note steht die Karte mit der niedrigeren Jahresgebühr vorn.</p>'
         kurz=f'<b>Kurz gesagt:</b> {cat["h"]} in {N}: Platz 1 ist laut Finvallo die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} Sternen in dieser Kategorie'+(f', vor der {X[1]["titel"]}' if len(X)>1 else '')+(f' und der {X[2]["titel"]}' if len(X)>2 else '')+f'. Die Liste zeigt {"die Top 25 von "+str(len(X))+" bewerteten Karten" if len(X)>25 else "alle "+str(len(X))+" bewerteten Karten"}. Stand: {S}.'
         fq=[(f'Welche Karte ist in {N} am besten in der Kategorie „{cat["t"]}“?',f'In der Kategorie „{cat["t"]}“ liegt laut Finvallo-Bewertung die {top["titel"]} vorn, mit {de1(cat_stars(top,cat["w"]))} von 5 Sternen (Gesamtnote {de1(top["stars"])}). Stand: {S}.'),
-            ('Wie entsteht diese Rangliste?',cat['d']+(' Grundlage ist die Gesamtnote der Karte.' if (cat['w'] or {}).get('_bonus') else '')),
+            ('Wie entsteht diese Rangliste?',cat['d']+(' Grundlage ist die Gesamtnote der Karte.' if (cat['w'] or {}).get('_bonus') and cat['k'] not in ('punkte','cashback') else '')),
             ('Spielen Provisionen eine Rolle?','Nein. Provisionen haben keinen Einfluss auf Sterne oder Reihenfolge, und es gibt keine bezahlten Platzierungen.')]
         ld=graph(rel,t,d,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Bestenlisten',base),(cat['t'],rel)],
                  [{"@type":"ItemList","name":cat['h']+' in '+N,"numberOfItems":len(X),"itemListElement":[{"@type":"ListItem","position":i+1,"name":c['titel'],"url":f"https://finvallo.com/{code}/kreditkarten/{c['slug']}/"} for i,c in enumerate(X[:25])]},
