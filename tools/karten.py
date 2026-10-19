@@ -1046,13 +1046,15 @@ LIST_RATGEBER={'studium':('kreditkarte-studenten','Kreditkarte als Student: Boni
                'ausland':('fremdwaehrung','Gebühren im Ausland verstehen'),
                'reisen':('reiseversicherung','Reiseversicherung über die Kreditkarte: Bedingungen, Summen, Altersgrenzen'),
                'lounge':('lounges','Lounge-Zugang mit der Kreditkarte'),
-               'punkte':('punkte','Punkte und Meilen: der Einstieg'),
-               'cashback':('punkte','Punkte, Meilen und Cashback: der Einstieg'),
+               'punkte':('punkte-sammeln-{code}','Punkte und Meilen mit Kreditkarte: Programme, Werte und ab wann es sich lohnt'),
+               'cashback':('punkte-sammeln-{code}','Punkte, Meilen und Cashback: Programme, Werte und ab wann es sich lohnt'),
                'debit':('kartentypen','Kredit-, Charge-, Debit- oder Prepaid-Karte?')}
 def rg_note(k,code,P2):
     r=LIST_RATGEBER.get(k)
-    if not r or not os.path.exists(R+f'{code}/ratgeber/{r[0]}/index.html'): return ''
-    return f'<p class="note" style="margin-top:14px">Hintergrund und Entscheidungshilfe im Ratgeber: <a class="lnk" href="{P2}{code}/ratgeber/{r[0]}/">{E(r[1])} →</a></p>\n'
+    if not r: return ''
+    sl=r[0].replace('{code}',code)
+    if not os.path.exists(R+f'{code}/ratgeber/{sl}/index.html'): return ''
+    return f'<p class="note" style="margin-top:14px">Hintergrund und Entscheidungshilfe im Ratgeber: <a class="lnk" href="{P2}{code}/ratgeber/{sl}/">{E(r[1])} →</a></p>\n'
 # ---------- Tabs-Skript ----------
 def tabs_js(P):
     import hashlib

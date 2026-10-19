@@ -6,6 +6,7 @@
  "/at/kreditkarten/anbieter/tf-bank/": "/at/kreditkarten/tf-bank-mastercard-gold/",
  "/at/kreditkarten/anbieter/trade-republic/": "/at/kreditkarten/trade-republic-karte/",
  "/at/kreditkarten/anbieter/wise/": "/at/kreditkarten/wise-karte/",
+ "/at/ratgeber/punkte/": "/at/ratgeber/punkte-sammeln-at/",
  "/de/kreditkarten/anbieter/": "/de/kreditkarten/alle/",
  "/de/kreditkarten/anbieter/advanzia/": "/de/kreditkarten/advanzia-bank-gebuehrenfrei-mastercard-gold/",
  "/de/kreditkarten/anbieter/amazon/": "/de/kreditkarten/amazon-visa/",
@@ -31,5 +32,6 @@
  "/de/kreditkarten/anbieter/wise/": "/de/kreditkarten/wise-debitkarte/",
  "/de/kreditkarten/tui-card-classic/": "/de/kreditkarten/",
  "/de/kreditkarten/tui-card-gold/": "/de/kreditkarten/",
- "/de/kreditkarten/tui-card-titan/": "/de/kreditkarten/"
+ "/de/kreditkarten/tui-card-titan/": "/de/kreditkarten/",
+ "/de/ratgeber/punkte/": "/de/ratgeber/punkte-sammeln-de/"
 }
