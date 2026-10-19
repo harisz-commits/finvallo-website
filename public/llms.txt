@@ -62,7 +62,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Kreditkarte ohne KSV-Abfrage: was wirklich geht (Österreich)](https://finvallo.com/at/ratgeber/ohne-bonitaetspruefung/): Kreditkarte ohne KSV-Prüfung? Was seriös geht, welche Debit- und Prepaid-Karten es in Österreich ohne Kreditprüfung gibt und wovor du dich hüten solltest.
 - [Kredit-, Charge-, Debit- oder Prepaid-Karte? (Österreich)](https://finvallo.com/at/ratgeber/kartentypen/): Kreditkarte, Charge-Karte, Debitkarte oder Prepaid-Karte: die vier Kartentypen in Österreich einfach erklärt, mit Vor- und Nachteilen.
 - [Teilzahlung bei Kreditkarten in Österreich: Was sie kostet und wie du sie abschaltest (Österreich)](https://finvallo.com/at/ratgeber/teilzahlung/): Teilzahlung bei Kreditkarten in Österreich: Effektivzinsen aller Karten mit Kreditrahmen, was 1.000 € mit Mindestrate kosten und wie du sie abschaltest.
-- [Firmenkreditkarten: das musst du wissen (Österreich)](https://finvallo.com/at/ratgeber/business/): Worauf Selbstständige und Firmen bei Firmenkreditkarten in Österreich achten sollten: Haftung, Abrechnung, Mitarbeiterkarten und Kosten.
+- [Firmenkreditkarte in Österreich: Haftung, Mitarbeiterkarten, Buchhaltung und Kosten (Österreich)](https://finvallo.com/at/ratgeber/business/): Firmenkreditkarte in Österreich: Haftung, Mitarbeiterkarten, Zahlungsziel, Buchhaltungsexport und Jahreskosten aller Business-Karten laut Anbieter.
 
 ## Deutschland: Kreditkarten
 - [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 162 Karten, Stand 14.10.2026
@@ -113,7 +113,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Kreditkarte ohne Schufa: was wirklich geht (Deutschland)](https://finvallo.com/de/ratgeber/ohne-bonitaetspruefung/): Kreditkarte ohne Schufa? Was seriös geht, welche Debit- und Prepaid-Karten es in Deutschland ohne Kreditprüfung gibt und wovor du dich hüten solltest.
 - [Kredit-, Charge-, Debit- oder Prepaid-Karte? (Deutschland)](https://finvallo.com/de/ratgeber/kartentypen/): Kreditkarte, Charge-Karte, Debitkarte oder Prepaid-Karte: die vier Kartentypen in Deutschland einfach erklärt, mit Vor- und Nachteilen.
 - [Teilzahlung bei Kreditkarten in Deutschland: Was sie kostet und wie du sie abschaltest (Deutschland)](https://finvallo.com/de/ratgeber/teilzahlung/): Teilzahlung bei Kreditkarten in Deutschland: Effektivzinsen aller Karten mit Kreditrahmen, was 1.000 € mit Mindestrate kosten und wie du sie abschaltest.
-- [Firmenkreditkarten: das musst du wissen (Deutschland)](https://finvallo.com/de/ratgeber/business/): Worauf Selbstständige und Firmen bei Firmenkreditkarten in Deutschland achten sollten: Haftung, Abrechnung, Mitarbeiterkarten und Kosten.
+- [Firmenkreditkarte in Deutschland: Haftung, Mitarbeiterkarten, Buchhaltung und Kosten (Deutschland)](https://finvallo.com/de/ratgeber/business/): Firmenkreditkarte in Deutschland: Haftung, Mitarbeiterkarten, Zahlungsziel, Buchhaltungsexport und Jahreskosten aller Business-Karten laut Anbieter.
 
 ## Österreich: Top 10 laut Bewertung
 - [TF Bank Mastercard Gold](https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/): Typ: Kreditkarte; Netz: Mastercard; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 0 € (Zinsen ab Abhebung); Reiseversicherung: Reiseversicherung inkl. Storno; Zins: 22,60 % Soll / 25,09 % effektiv; Sammelrate: bis 5 % Cashback bei Partnern; Bewertung: 4,6/5 (Sehr gut); geprüft am 11.10.2026

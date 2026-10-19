@@ -43,7 +43,7 @@ COL=dict(karte=('Karte',lambda c,P:link(c,P)),
 # Datum je Ratgeber (wie Frontmatter): published, updated (beim nächsten inhaltlichen Edit pflegen),
 # optional corrections=[dict(date='JJJJ-MM-TT', note='…')] → Abschnitt „Korrekturen“ am Ende des Artikels.
 DATES={
-    ('at','business'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','business'): dict(published='2026-10-11', updated='2026-10-19'),
     ('at','fremdwaehrung'): dict(published='2026-10-11', updated='2026-10-15'),
     ('at','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
     ('at','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-19'),
@@ -63,7 +63,7 @@ DATES={
     ('de','bargeld-abheben'): dict(published='2026-10-18', updated='2026-10-18'),
     ('de','kreditkarte-studenten'): dict(published='2026-10-18', updated='2026-10-18'),
     ('de','apple-pay-google-pay'): dict(published='2026-10-18', updated='2026-10-18'),
-    ('de','business'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('de','business'): dict(published='2026-10-11', updated='2026-10-19'),
     ('de','fremdwaehrung'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
     ('de','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-19'),
@@ -171,6 +171,7 @@ def build(land):
     import karten, ratgeber_kostenlos
     ratgeber_kostenlos.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
     import ratgeber_teilzahlung; ratgeber_teilzahlung.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
+    import ratgeber_business; ratgeber_business.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
     # B) Kreditkarte beantragen
     art(land,'kreditkarte-beantragen',
       h1=f'Kreditkarte beantragen in {N}: so geht es Schritt für Schritt',
