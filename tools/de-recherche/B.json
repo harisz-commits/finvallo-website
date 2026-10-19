@@ -586,12 +586,12 @@
   "insQuelle": "https://www.openbankpay.com/assets/CF_DE/de-DE/documents/v1/CB.AMZ.DE.TC.GENERAL_SPECIAL.pdf",
   "ex": {
    "cb": true,
-   "offer": true
+   "offer": false
   },
   "cbText": "1 % in Amazon Punkten bei Amazon.de (1 Punkt je vollem Euro), 0,5 % auf alle anderen Umsätze; Prime-Mitglieder an Aktionstagen 2 % bei Amazon.de",
   "lgText": null,
   "creditsText": null,
-  "bonus": "Startgutschrift auf erste Kartenabrechnung nach erstem Einkauf (Höhe auf Seite nicht genannt; Prime-Aktion 50 € lief bis 07.10.2026)",
+  "bonus": null,
   "extra": [
    "Keine Jahresgebühr",
    "1 % Punkte bei Amazon.de, 0,5 % sonst",
