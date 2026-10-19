@@ -174,6 +174,7 @@ def page(land,rel,title,desc,body,ld_extra,alt):
 <meta property="og:image" content="https://finvallo.com/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0f1720">
+<meta name='impact-site-verification' value='395412e1-70ac-412c-9ce9-5e53d7b5e5ef'>
 <link rel="icon" href="{P}assets/favicon.svg?v={fv}" type="image/svg+xml">
 <link rel="preload" href="{P}assets/fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{P}assets/site.css?v={v}">
