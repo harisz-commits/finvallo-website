@@ -17,9 +17,10 @@
   "fx": 0,
   "fxText": "0 %",
   "cash": [
-   "free"
+   "fix",
+   0
   ],
-  "cashText": "Ab 100 € kostenlos (Inland und Ausland), unter 100 € 1 € pro Abhebung; Fremdgebühren der Automatenbetreiber möglich",
+  "cashText": "Ab 100 € kostenlos, unter 100 € 1 € pro Abhebung (auch in Fremdwährung); Automatenbetreiber können eigene Gebühren verlangen",
   "cashInterest": false,
   "soll": null,
   "effz": null,

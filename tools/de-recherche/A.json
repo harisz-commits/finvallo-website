@@ -953,8 +953,8 @@
   "pay": true,
   "payText": "Apple Pay und Google Pay",
   "tier": 3,
-  "insText": "Reisekranken bis 5 Mio. € (Zahn 300 €), Mietwagen-Diebstahl/-Schaden bis 10.000 €, Gepäckverlust bis 2.500 € pro Person (3.000 € gesamt), Gepäckverspätung ab 8 Std. bis 250 €. Dazu 'Stornierung aus beliebigem Grund' (70 % Erstattung bei Reisen/Events, ≥ 24 Std. vorher) – laut Klarna eine Serviceleistung, keine Versicherung.",
-  "insQuelle": "https://www.klarna.com/de/mitgliedschaft/max/",
+  "insText": "Reiseschutz von Axeria (über XCover): Reiserücktritt und Reiseabbruch bis 5.000 € pro Person und 10.000 € pro Reise, Auslandskranken inkl. Rücktransport bis 5 Mio. €, Gepäck 2.500 € pro Person (3.000 € pro Reise), Reiseverzögerung ab 4 Std. bis 500 €, Privathaftpflicht 1 Mio. €, Mietwagen-Selbstbehalt bis 10.000 €. Gilt nur, wenn die Reise über Klarna bezahlt wurde, Reisen bis 90 Tage. Dazu der Klarna-Service „Aus beliebigem Grund stornieren“ (keine Versicherung): bis 70 % bzw. 2.500 € pro Fall, 5.000 € pro Jahr, mind. 24 Std. vorher.",
+  "insQuelle": "https://static.xcover.com/media/pds/20c500eb-3478-4c88-84a3-9dc6f7f19a37/Klarna_Max_IPID_DE.pdf",
   "ex": {
    "cb": true,
    "lg": true,

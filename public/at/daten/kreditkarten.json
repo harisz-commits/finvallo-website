@@ -924,7 +924,7 @@
     "Eingeschränkte Akzeptanz (Diners-Netz)"
    ],
    "quelle": "https://www.cardcomplete.com/diners-club/privatkarten/",
-   "preis": null,
+   "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-14",
    "geprueft": "2026-10-14",
    "versicherung": "Reiseversicherung inkl. Storno",
@@ -970,7 +970,7 @@
     "Jahrespreis: Produktseite nennt 85,60 €, die Übersicht 7,14 € pro Monat (85,68 €)"
    ],
    "quelle": "https://www.cardcomplete.com/diners-club/privatkarten/",
-   "preis": null,
+   "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-14",
    "geprueft": "2026-10-14",
    "versicherung": "Reiseversicherung inkl. Storno",
@@ -1015,7 +1015,7 @@
     "Eingeschränkte Akzeptanz (Diners-Netz)"
    ],
    "quelle": "https://www.cardcomplete.com/diners-club/privatkarten/",
-   "preis": null,
+   "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-14",
    "geprueft": "2026-10-14",
    "versicherung": "Reiseversicherung inkl. Storno",
@@ -1061,7 +1061,7 @@
     "Eingeschränkte Akzeptanz (Diners-Netz)"
    ],
    "quelle": "https://www.cardcomplete.com/diners-club/privatkarten/",
-   "preis": null,
+   "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-14",
    "geprueft": "2026-10-14",
    "versicherung": "Umfassender Reiseschutz",
@@ -1106,7 +1106,7 @@
     "Eingeschränkte Akzeptanz (Diners-Netz)"
    ],
    "quelle": "https://www.cardcomplete.com/diners-club/privatkarten/",
-   "preis": null,
+   "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-14",
    "geprueft": "2026-10-14",
    "versicherung": "Reiseversicherung inkl. Storno",
@@ -1150,7 +1150,7 @@
     "Eingeschränkte Akzeptanz (Diners-Netz)"
    ],
    "quelle": "https://www.cardcomplete.com/diners-club/privatkarten/",
-   "preis": null,
+   "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
    "stand": "2026-10-14",
    "geprueft": "2026-10-14",
    "versicherung": null,
@@ -1270,7 +1270,7 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 16,
+   "rank": 17,
    "pros": [
     "Umfassender Reiseschutz",
     "SKY/VIENNA Lounge Wien: 2 kostenlose Besuche pro Jahr, nur am Flughafen Wien, Begleitpersonen zahlen (Vorteil gilt bis mindestens 31.12.2026)",
@@ -1729,7 +1729,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 15,
+   "rank": 16,
    "pros": [
     "Niedrige Fremdwährungskosten (1,35 %)",
     "Reiseversicherung inkl. Storno",
@@ -1773,7 +1773,7 @@
    "tier": 3,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 17,
+   "rank": 18,
    "pros": [
     "Niedrige Fremdwährungskosten (1,35 %)",
     "Umfassender Reiseschutz",
@@ -2271,7 +2271,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 13,
+   "rank": 14,
    "pros": [
     "Niedrige Fremdwährungskosten (1,5 % plus Kursaufschlag)",
     "Reiseversicherung inkl. Storno",
@@ -2627,7 +2627,7 @@
    "tier": 2,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 14,
+   "rank": 15,
    "pros": [
     "Niedrige Fremdwährungskosten (1,35 % für Zahlungen in fremder Währung)",
     "Reiseversicherung inkl. Storno",
@@ -2715,7 +2715,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 11,
+   "rank": 12,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
@@ -2761,7 +2761,7 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 10,
+   "rank": 11,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr bis zur Freigrenze",
@@ -2894,7 +2894,7 @@
    "tier": 3,
    "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 9,
+   "rank": 10,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Einige Abhebungen pro Monat ohne Gebühr",
@@ -3119,13 +3119,14 @@
    "auto": true,
    "pay": true,
    "tier": 3,
-   "stars": 3.8,
+   "stars": 3.9,
    "note": "Befriedigend",
-   "rank": 18,
+   "rank": 9,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Bargeld ohne Automatengebühr",
     "Umfassender Reiseschutz",
+    "DragonPass: 1 kostenloser Besuch pro Jahr, weltweit",
     "Metallkarte",
     "Handy- und Einkaufsversicherung"
    ],
@@ -3158,7 +3159,7 @@
    "feeNote": null,
    "fx": 0,
    "fxText": "0 %",
-   "cashText": "1 € unter 100 €, sonst 0 €",
+   "cashText": "Ab 100 € kostenlos, unter 100 € 1 € pro Abhebung (auch in Fremdwährung); Automatenbetreiber können eigene Gebühren verlangen",
    "soll": null,
    "effz": null,
    "rahmen": null,
@@ -3168,11 +3169,11 @@
    "tier": 0,
    "stars": 3.8,
    "note": "Befriedigend",
-   "rank": 12,
+   "rank": 13,
    "pros": [
     "Keine Jahresgebühr",
     "Keine Fremdwährungsgebühr",
-    "Bargeld ohne Automatengebühr",
+    "Bargeld ab 100 € ohne Gebühr",
     "Österreichische Zweigniederlassung seit 2025"
    ],
    "cons": [
