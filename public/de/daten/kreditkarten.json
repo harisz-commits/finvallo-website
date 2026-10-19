@@ -1253,7 +1253,7 @@
    "cons": [
     "Teilzahlung ist teuer: 14,71 % Soll / 15,75 % effektiv",
     "Fremdwährungsgebühr: 1,8 % (Nicht-Euro-Länder)",
-    "Bargeld am Automaten kostet Im EWR 2,5 %, mind. 3,99 €; außerhalb EWR 2,5 %, mind. 4,99 €; an Ikano-Automaten kostenlos",
+    "Bargeld am Automaten: Im EWR 2,5 %, mind. 3,99 €; außerhalb EWR 2,5 %, mind. 4,99 €; an Ikano-Automaten kostenlos",
     "Teilzahlung voreingestellt",
     "Bonus max. 30 €/Jahr, nur als IKEA-Gutschein"
    ],
@@ -1582,7 +1582,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 2,25 % (1,75 % Auslandseinsatzentgelt, mind. 1,50 €, + 0,50 % Währungsumrechnungsentgelt)",
-    "Bargeld am Automaten kostet Inland 2,5 %, mind. 5,75 € (Schalter 3 %); an ausländischen Geldautomaten seitens Deutsche Bank kostenfrei; außerhalb EWR/Fremdwährung zzgl. 1,75 % (mind. 1,50 €) + 0,50 %",
+    "Bargeld am Automaten: Inland 2,5 %, mind. 5,75 € (Schalter 3 %); an ausländischen Geldautomaten seitens Deutsche Bank kostenfrei; außerhalb EWR/Fremdwährung zzgl. 1,75 % (mind. 1,50 €) + 0,50 %",
     "2,25 % Gesamtaufschlag bei Fremdwährung"
    ],
    "quelle": "https://www.deutsche-bank.de/pk/konto-und-karte/karten-im-ueberblick/karten-im-vergleich.html",
@@ -3539,7 +3539,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,9 % (Berliner Sparkasse; je Sparkasse verschieden)",
-    "Bargeld am Automaten kostet Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) - Beispiel Berliner Sparkasse",
+    "Bargeld am Automaten: Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) - Beispiel Berliner Sparkasse",
     "Nur mit Konto beim Anbieter (Girokonto der Sparkasse (Beispiel Berliner Sparkasse: Giro Individual 2,95 €/Monat zzgl. Postenpreise, Giro Digital 4,95 €/Monat, Giro Pauschal 8,95 €/Monat))",
     "Keine Reiseversicherung inklusive",
     "1,9 % Fremdwährungsentgelt"
@@ -3589,7 +3589,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,9 % (Berliner Sparkasse; je Sparkasse verschieden)",
-    "Bargeld am Automaten kostet Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) - Beispiel Berliner Sparkasse",
+    "Bargeld am Automaten: Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) - Beispiel Berliner Sparkasse",
     "Nur mit Konto beim Anbieter (Girokonto der Sparkasse (Beispiel Berliner Sparkasse: Giro Individual 2,95 €/Monat zzgl. Postenpreise, Giro Digital 4,95 €/Monat, Giro Pauschal 8,95 €/Monat))",
     "1,9 % Fremdwährungsentgelt",
     "Reiserücktritt nur bei Zahlung mit Karte"
@@ -3636,7 +3636,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,9 % (Berliner Sparkasse; je Sparkasse verschieden)",
-    "Bargeld am Automaten kostet Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) - Beispiel Berliner Sparkasse",
+    "Bargeld am Automaten: Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) - Beispiel Berliner Sparkasse",
     "Nur mit Konto beim Anbieter (Girokonto der Sparkasse (Beispiel Berliner Sparkasse: Giro Individual 2,95 €/Monat zzgl. Postenpreise, Giro Digital 4,95 €/Monat, Giro Pauschal 8,95 €/Monat))",
     "Keine Reiseversicherung inklusive",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
@@ -3682,7 +3682,7 @@
     "Wahlweise mit oder ohne Versicherung"
    ],
    "cons": [
-    "Bargeld am Automaten kostet Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) - Beispiel Berliner Sparkasse",
+    "Bargeld am Automaten: Inland 2 %, mind. 7,50 €; im Ausland kostenlos seitens der Sparkasse (ggf. Betreiberentgelt) - Beispiel Berliner Sparkasse",
     "Nur mit Konto beim Anbieter (Geschäftsgirokonto der Sparkasse)"
    ],
    "quelle": "https://www.berliner-sparkasse.de/",
@@ -3728,7 +3728,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,8 %",
-    "Bargeld am Automaten kostet Inland 2 %; im Ausland ohne Bankentgelt (ggf. Betreiberentgelt)",
+    "Bargeld am Automaten: Inland 2 %; im Ausland ohne Bankentgelt (ggf. Betreiberentgelt)",
     "Nur mit Konto beim Anbieter (Girokonto der Berliner Volksbank (3,95 €/Monat, ClassicCard inklusive))",
     "Fremdwährungsentgelt",
     "Keine Reiseversicherung"
@@ -3778,7 +3778,7 @@
     "Familie mitversichert"
    ],
    "cons": [
-    "Bargeld am Automaten kostet Im Ausland kostenlos seitens der Bank; Inland 2 %, mind. 7,50 €",
+    "Bargeld am Automaten: Im Ausland kostenlos seitens der Bank; Inland 2 %, mind. 7,50 €",
     "Nur mit Konto beim Anbieter (Girokonto der Berliner Volksbank (3,95 €/Monat, ClassicCard inklusive))",
     "Inlands-Abhebung kostenpflichtig",
     "Versicherungssummen nicht transparent online"
@@ -4802,7 +4802,7 @@
    "cons": [
     "Teilzahlung ist teuer: 15,14 % Soll / 16,24 % effektiv",
     "Fremdwährungsgebühr: 1,75 %",
-    "Bargeld am Automaten kostet Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 % bei Fremdwährung); Limit 1.000 € (Inland) bzw. 2.000 € (Ausland) pro Monat",
+    "Bargeld am Automaten: Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 % bei Fremdwährung); Limit 1.000 € (Inland) bzw. 2.000 € (Ausland) pro Monat",
     "Keine Reiseversicherung inklusive",
     "nur für ADAC-Mitglieder"
    ],
@@ -4852,7 +4852,7 @@
    "cons": [
     "Teilzahlung ist teuer: 15,14 % Soll / 16,24 % effektiv",
     "Fremdwährungsgebühr: 1,75 %",
-    "Bargeld am Automaten kostet Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 % bei Fremdwährung); Limit 1.000 € (Inland) bzw. 2.000 € (Ausland) pro Monat",
+    "Bargeld am Automaten: Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 % bei Fremdwährung); Limit 1.000 € (Inland) bzw. 2.000 € (Ausland) pro Monat",
     "nur für ADAC-Mitglieder"
    ],
    "quelle": "https://www.adac.de/produkte/finanzdienstleistungen/kreditkarte/",
@@ -4900,7 +4900,7 @@
    "cons": [
     "Teilzahlung ist teuer: 15,14 % Soll / 16,24 % effektiv",
     "Fremdwährungsgebühr: 1,75 %",
-    "Bargeld am Automaten kostet Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 % bei Fremdwährung); Limit 1.000 € (Inland) bzw. 2.000 € (Ausland) pro Monat",
+    "Bargeld am Automaten: Inland 3 %, mind. 7,50 €; Ausland 3 %, mind. 5 € (zzgl. 1,75 % bei Fremdwährung); Limit 1.000 € (Inland) bzw. 2.000 € (Ausland) pro Monat",
     "Keine Reiseversicherung inklusive",
     "Tankrabatt auf 150 € Umsatz pro Monat gedeckelt",
     "nur für ADAC-Mitglieder"
@@ -5200,7 +5200,7 @@
     "Keine Fremdwährungsgebühr",
     "Einige Abhebungen pro Monat ohne Gebühr",
     "Reiseversicherung inkl. Storno",
-    "N26 Flughafenlounges (DragonPass): 1 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zahlen",
+    "N26 Flughafenlounges (DragonPass): 1 kostenloser Besuch pro Jahr, weltweit, Begleitpersonen zahlen",
     "Debit World Elite Mastercard aus Edelstahl",
     "Reise-, Handy- und Einkaufsversicherung (Allianz)",
     "1 kostenloser Lounge-Besuch pro Jahr (DragonPass)",
@@ -7056,7 +7056,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 0 % bis 250 € pro Monat, danach 2,99 %; am Wochenende zusätzlich 1,5 %",
-    "Bargeld am Automaten kostet Keine Gratis-Abhebungen: 2 %, mind. 2 € pro Abhebung (Inland und Ausland); am Wochenende in Fremdwährung +1,5 %",
+    "Bargeld am Automaten: Keine Gratis-Abhebungen: 2 %, mind. 2 € pro Abhebung (Inland und Ausland); am Wochenende in Fremdwährung +1,5 %",
     "Bei Kautionen für Mietwagen oder Hotel oft abgelehnt",
     "Nur 250 € gebührenfreier Fremdwährungsumsatz pro Monat, danach 2,99 %",
     "Wochenendaufschlag 1,5 %",
@@ -7610,7 +7610,7 @@
    ],
    "cons": [
     "Fremdwährungsgebühr: 1,75 % in Fremdwährung",
-    "Bargeld am Automaten kostet Euroraum: 3 %, mind. 5 €; mit Volkswagen-Girokonto als Einzugskonto die ersten 4 Abhebungen pro Abrechnungsmonat kostenlos, danach 2 €; Fremdwährung 3 % + 1,75 %; VW-Bank-Automaten kostenlos",
+    "Bargeld am Automaten: Euroraum: 3 %, mind. 5 €; mit Volkswagen-Girokonto als Einzugskonto die ersten 4 Abhebungen pro Abrechnungsmonat kostenlos, danach 2 €; Fremdwährung 3 % + 1,75 %; VW-Bank-Automaten kostenlos",
     "Keine Reiseversicherung inklusive",
     "Jahresgebühr 33 €"
    ],
