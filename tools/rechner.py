@@ -223,7 +223,11 @@ q('f').addEventListener('input',run);q('f').addEventListener('change',run);run()
             {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":N,"item":f"https://finvallo.com/{land}/"},{"@type":"ListItem","position":2,"name":"Rechner","item":f"https://finvallo.com/{land}/rechner/"},{"@type":"ListItem","position":3,"name":c['t'],"item":f"https://finvallo.com/{rel}"}]}]
         if fq: ld.append({"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]})
         mt=c['mt'] if (N in c['mt'] or 'KESt' in c['mt'] or 'Abgeltung' in c['mt']) else c['mt'].replace(' | Finvallo',f' ({land.upper()}) | Finvallo')
-        page(land,rel,mt,c['desc'],body,ld,True)
+        ds=c['desc']
+        if N not in ds:  # Land in die Description, damit AT und DE sich unterscheiden
+            i=ds.find(':'); j=ds.find('?')
+            ds=ds[:i-10]+f' für {N} berechnen'+ds[i:] if 0<i<45 and ds[:i].endswith(' berechnen') else ds[:i]+f' für {N}'+ds[i:] if 0<i<45 else ds[:j]+f' in {N}'+ds[j:] if j>0 else ds+f' Für {N}.'
+        page(land,rel,mt,ds,body,ld,True)
     # Übersicht
     rel=f'{land}/rechner/'
     tiles=f'<a class="hp-tile" href="../kreditkarten/rechner/"><span class="hp-ic">{ic("card")}</span><span><b>Kreditkarten-Kostenrechner</b><small>Was kostet dich eine Karte bei deiner Nutzung?</small></span></a>'
