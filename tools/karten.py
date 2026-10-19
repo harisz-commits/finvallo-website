@@ -199,7 +199,7 @@ def cons(c):
     if (c.get('fee') or 0)>=150: k.append(f'Hohe Jahresgebühr ({eur(c["fee"])} €)')
     if c.get('fx') is not None and c['fx']>=1.75: k.append(f'Fremdwährungsgebühr: {fxT(c)}')
     v=cash200(c.get('cash'))
-    if isinstance(v,float) and v>=3: k.append(f'Bargeld am Automaten kostet {cashT(c)}')
+    if isinstance(v,float) and v>=3: k.append(f'Bargeld am Automaten kostet {cashT(c)}' if re.match(r'(\d|ca\.|mind|bis )',cashT(c)) else f'Bargeld am Automaten: {cashT(c)}')
     if c.get('giro'): k.append('Nur mit Konto beim Anbieter' + (f' ({c["konto"]})' if c.get('konto') else ''))
     if c.get('tier')==0 and (c.get('fee') or 0)>0: k.append('Keine Reiseversicherung inklusive')
     if 'American Express' in (c.get('netz') or ''): k.append('American Express wird seltener akzeptiert als Visa oder Mastercard')
@@ -226,7 +226,7 @@ def summary(c):
     elif f is not None: s+=f'Sie kostet {eur(f)} € pro Jahr'+(f', im ersten Jahr {eur(c["fee1"])} €' if c.get('fee1') is not None and c['fee1']!=f else '')+'. '
     s+= 'Zahlungen in fremder Währung kosten nichts extra. ' if c.get('fx')==0 else (f'Zahlungen in fremder Währung kosten {fxT(c)}. ' if c.get('fx') is not None else '')
     if cashT(c)!='unbekannt': s+= cash_sentence(c)+' '
-    if c.get('tier') is not None: s+= f'Reiseversicherung: {TIER[c["tier"]][1]}. '
+    if c.get('tier') is not None: s+= f'Reiseversicherung: {re.sub(r"^Reiseversicherung ","",TIER[c["tier"]][1])}. '
     if c['ex'].get('lg') and c.get('lgText'): s+=f'Lounge: {c["lgText"]}. '
     return s
 def offer(c,big=False):
@@ -377,7 +377,7 @@ def cond(c):
     out+=r('Lounge',E(c.get('lgText') or '–'))
     if c.get('ftText'): out+=r('FastTrack',E(c['ftText']))
     if c.get('creditsText'): out+=r('Guthaben',E(c['creditsText']))
-    out+=r('Reiseversicherung',TIER[c['tier']][1] if c.get('tier') is not None else na)
+    out+=r('Reiseversicherung',re.sub(r'^Reiseversicherung ','',TIER[c['tier']][1]) if c.get('tier') is not None else na)
     out+='</div><div class="cond" style="margin-bottom:14px"><div class="gh">Voraussetzungen</div>'
     out+=r('Kartentyp',TYPLAB.get(c['typ'],c['typ']))+r('Kartennetz',E(c.get('netz')) if c.get('netz') else na)
     out+=r('Girokonto beim Anbieter','nötig' if c.get('giro') else 'nicht nötig' if c.get('giro') is False else '–')
@@ -415,7 +415,11 @@ def lieferzeit(c):
 def ins_limits(c):
     """Einschränkungen der Reiseversicherung aus dem Versicherungstext (nur wörtlich belegte Sätze)."""
     txt=' '.join([c.get('insText') or '']+[x.get('t','') for x in ((c.get('blocks') or {}).get('ins') or {}).get('items',[])])
-    sents=re.split(r'(?<=[.;])\s+',txt)
+    ABK=r'\b(Std|mind|max|ca|inkl|zzgl|ggf|bzw|Nr|Abs|bspw|vgl|u\.a|z\.B|z\. B|d\.h|ff|Tsd|Mio|p\.a|Pers)\.'
+    txt=re.sub(ABK,lambda m:m.group(0).replace('.','\u2024'),txt)
+    sents=[x.replace('\u2024','.') for x in re.split(r'(?<=[.;])\s+(?=[A-ZÄÖÜ„])',txt)]
+    # nur ganze Sätze: Anfang groß, Klammern ausgeglichen
+    sents=[x for x in sents if re.match(r'[A-ZÄÖÜ„]',x.strip()) and x.count('(')==x.count(')')]
     hit=[x.strip(' ;') for x in sents if re.search(r'nicht versichert|gilt nicht|nicht für|endet mit|\bkein(?:e|en)? \w*(?:schutz|versicherung)|nur wenn|ausgeschlossen',x,re.I)]
     out=[]
     for h in hit:
@@ -707,7 +711,7 @@ def anbieter_pages(cards,prov):
         fq=[(f'Braucht man ein Konto bei {nm}?',ga)]
         if fees:
             mn=min(fees); cheap=[c for c in v if c.get('fee')==mn]
-            fq.append((f'Welche Karte von {nm} ist die günstigste?',(f'Die {cheap[0]["titel"]}' if len(cheap)==1 else 'Die '+', '.join(c['titel'] for c in cheap[:-1])+' und die '+cheap[-1]['titel'])+(' kostet keine Jahresgebühr.' if mn==0 else f' mit {eur(mn)} € Jahresgebühr.' if len(cheap)==1 else f' mit je {eur(mn)} € Jahresgebühr.')))
+            fq.append((f'Welche Karte von {nm} ist die günstigste?',(f'Die {cheap[0]["titel"]}' if len(cheap)==1 else 'Die '+', '.join(c['titel'] for c in cheap[:-1])+' und die '+cheap[-1]['titel'])+((' kostet' if len(cheap)==1 else ' kosten')+' keine Jahresgebühr.' if mn==0 else f' ist am günstigsten, mit {eur(mn)} € Jahresgebühr.' if len(cheap)==1 else f' sind am günstigsten, mit je {eur(mn)} € Jahresgebühr.')))
         ld2=graph(rel2,t2,d2,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Alle Karten',f'{code}/kreditkarten/alle/'),(nm,rel2)],
                   [{"@type":"ItemList","name":f"Kreditkarten von {nm}","itemListElement":[{"@type":"ListItem","position":i+1,"name":c['titel'],"url":f"https://finvallo.com/{code}/kreditkarten/{c['slug']}/"} for i,c in enumerate(v)]},
                    {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}],
@@ -846,7 +850,7 @@ def lg_text(d):
     v=d.get('visits'); g=d.get('guests'); sc=d.get('scope') or ''
     if v in (0,None): t=f'{d.get("program") or "Lounge-Zugang"}: keine Gratis-Besuche, Besuche kosten extra'
     else:
-        t=f'{d.get("program") or "Lounges"}: '+('unbegrenzt kostenlose Besuche' if v=='unbegrenzt' else f'{v} kostenlose Besuche pro Jahr')+(', nur am Flughafen Wien' if sc=='Wien' else ', weltweit' if sc=='weltweit' else f', {sc}' if sc else '')
+        t=f'{d.get("program") or "Lounges"}: '+('unbegrenzt kostenlose Besuche' if v=='unbegrenzt' else '1 kostenloser Besuch pro Jahr' if v==1 else f'{v} kostenlose Besuche pro Jahr')+(', nur am Flughafen Wien' if sc=='Wien' else ', weltweit' if sc=='weltweit' else f', {sc}' if sc else '')
         t+={'unbegrenzt':', Begleitperson gratis','zählt mit':', Begleitpersonen zählen mit',0:', Begleitpersonen zahlen'}.get(g,f', {g} Gäste pro Jahr gratis' if isinstance(g,int) and g>0 else '')
     if d.get('bedingung'): t+=f' ({d["bedingung"].rstrip(".")})'
     return t
@@ -1090,7 +1094,7 @@ def sitemap(DATA):
 def llm_line(c,base):
     bits=[f'Typ: {c["typ"]}',f'Netz: {c.get("netz") or "beim Anbieter prüfen"}',
           'Jahresgebühr: '+(('0 €' if c['fee']==0 else f'{eur(c["fee"])} €')+(f' (1. Jahr {eur(c["fee1"])} €)' if c.get('fee1') is not None and c['fee1']!=c['fee'] else '') if c.get('fee') is not None else 'beim Anbieter prüfen'),
-          f'Fremdwährung: {fxT(c)}',f'Bargeld: {cashT(c)}',f'Reiseversicherung: {TIER[c["tier"]][1] if c.get("tier") is not None else "beim Anbieter prüfen"}']
+          f'Fremdwährung: {fxT(c)}',f'Bargeld: {cashT(c)}',f'Reiseversicherung: {re.sub(r"^Reiseversicherung ","",TIER[c["tier"]][1]) if c.get("tier") is not None else "keine Angabe"}']
     if zinsT(c) and c['typ']=='Kreditkarte': bits.append(f'Zins: {zinsT(c)}')
     if c['ex'].get('lg') and c.get('lgText'): bits.append(f'Lounge: {c["lgText"]}')
     if c.get('earnText') or (c['ex'].get('cb') and c.get('cbText')): bits.append(f'Sammelrate: {c.get("earnText") or c["cbText"]}')

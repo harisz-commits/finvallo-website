@@ -75,21 +75,21 @@ def profiles(c, x, A):
         what = []
         if cr: what.append(f'Du löst {namelist(g["name"] for g in cr)} voll ein')
         if sb: what.append(('und würdest ' if cr else 'Du würdest ') + f'die Partner-Abos {namelist(g["name"] for g in sb)} sonst selbst bezahlen')
-        d = [w for w in (f'{min(6, lg)} Lounge-Besuche{lw(x)}' if lg else '', '1.500 € Umsatz im Monat' if pp else '') if w]
+        d = [w for w in (f'{min(6, lg)} Lounge-Besuch{"e" if min(6, lg) != 1 else ""}{lw(x)}' if lg else '', '1.500 € Umsatz im Monat' if pp else '') if w]
         out.append(dict(t='Du nutzt alle Guthaben' if cr and not sb else 'Du nutzt alle Partner-Abos' if sb and not cr else 'Du nutzt alle Guthaben und Abos',
                         d=' '.join(what) + '.' + (f' Dazu {namelist(d)}.' if d else ''), n='', p=dict(credits=True, subs=True, lounge=min(6, lg), spend=1500)))
     elif pp:
-        out.append(dict(t='Du zahlst fast alles mit der Karte', d='3.000 € Kartenumsatz im Monat' + (f', {min(6, lg)} Lounge-Besuche{lw(x)} im Jahr.' if lg else '.'), n='',
+        out.append(dict(t='Du zahlst fast alles mit der Karte', d='3.000 € Kartenumsatz im Monat' + (f', {min(6, lg)} Lounge-Besuch{"e" if min(6, lg) != 1 else ""}{lw(x)} im Jahr.' if lg else '.'), n='',
                         p=dict(lounge=min(6, lg), spend=3000)))
     if lg and lg > 6:
         n = min(20, lg); g = min(6, gf)
-        d = f'{n} Lounge-Besuche{lw(x)} im Jahr' + (f', davon {g} mit Begleitung' if g else '') + (', 2.500 € Umsatz im Monat' if pp else '')
+        d = f'{n} Lounge-Besuch{"e" if n != 1 else ""}{lw(x)} im Jahr' + (f', davon {g} mit Begleitung' if g else '') + (', 2.500 € Umsatz im Monat' if pp else '')
         rest = [w for w, h in (('Guthaben', cr), ('Abos', sb)) if h]
         out.append(dict(t='Du fliegst oft', d=d + '.' + (f' {namelist(rest)} nutzt du auch.' if rest else ''), n='',
                         p=dict(credits=True, subs=True, lounge=n, guests=g, spend=2500)))
     if c.get('tier') and len(out) < 3:
         w = A['vers'][str(c['tier'])]
-        out.append(dict(t='Du bräuchtest sonst eine Reiseversicherung', d=f'Statt einer eigenen {K.t("jahrespolizze")} (etwa {eur(w)} €) nutzt du die Reiseversicherung der Karte ({K.TIER[c["tier"]][1]})' + (', dazu ' + namelist([w for w in (f'{min(4, lg)} Lounge-Besuche{lw(x)}' if lg else '', '1.000 € Umsatz im Monat' if pp else '') if w]) if lg or pp else '') + '.', n='',
+        out.append(dict(t='Du bräuchtest sonst eine Reiseversicherung', d=f'Statt einer eigenen {K.t("jahrespolizze")} (etwa {eur(w)} €) nutzt du die Reiseversicherung der Karte ({K.TIER[c["tier"]][1]})' + (', dazu ' + namelist([w for w in (f'{min(4, lg)} Lounge-Besuch{"e" if min(4, lg) != 1 else ""}{lw(x)}' if lg else '', '1.000 € Umsatz im Monat' if pp else '') if w]) if lg or pp else '') + '.', n='',
                         p=dict(lounge=min(4, lg), spend=1000, vers=True)))
     for o in out: o['p'].setdefault('vers', False)
     return out
