@@ -1,0 +1,59 @@
+{
+  "american-express-business-card": {
+    "zusatzkarten": "bis zu 99; im 1. Jahr 0 €, danach 30 € je Karte und Jahr",
+    "limits_pro_karte": null,
+    "export": "Online-Kartenkonto und App, PDF-Rechnungen; Abrechnung trennt Haupt- und Zusatzkarten. Kein CSV-, Excel- oder DATEV-Export in den Unterlagen genannt",
+    "haftung": "Karteninhaber persönlich; bei GmbH oder AG zusätzlich das Unternehmen gesamtschuldnerisch",
+    "rechtsform": "Selbstständige und Unternehmen jeder Rechtsform; Zusatzkarten nur für Teilhaber, Vorstände oder Mitarbeiter",
+    "zahlungsziel": "Monatsrechnung, Einzug per SEPA-Lastschrift; Verzugszinsen erst 30 Tage nach Abrechnungsdatum",
+    "konto_pflicht": false,
+    "virtuelle_karten": null,
+    "quelle": "https://www.americanexpress.com/de-at/kreditkarten/business/business-card/",
+    "stand": "2026-10-19",
+    "hinweis": "Haftung laut Mitgliedschaftsbedingungen (Stand 10/2025). Umsatz- und Bargeldlimit 700 €/7 Tage gelten kontoweit; Limits je Zusatzkarte nicht genannt."
+  },
+  "american-express-business-gold-card": {
+    "zusatzkarten": "bis zu 99; im 1. Jahr 0 €, danach 60 € je Gold-Zusatzkarte (30 € je Business-Zusatzkarte) und Jahr",
+    "limits_pro_karte": null,
+    "export": "Online-Kartenkonto und App, PDF-Rechnungen der letzten 24 Monate; Abrechnung trennt Haupt- und Zusatzkarten. Kein CSV-, Excel- oder DATEV-Export in den Unterlagen genannt",
+    "haftung": "Karteninhaber persönlich; bei GmbH oder AG zusätzlich das Unternehmen gesamtschuldnerisch",
+    "rechtsform": "Selbstständige und Unternehmen jeder Rechtsform; Unternehmen mindestens 1 Jahr alt, Bruttojahreseinkommen mindestens 30.000 €",
+    "zahlungsziel": "laut Produktseite bis zu 50 Tage; Monatsrechnung per SEPA-Lastschrift, Verzugszinsen erst 30 Tage nach Abrechnungsdatum",
+    "konto_pflicht": false,
+    "virtuelle_karten": null,
+    "quelle": "https://www.americanexpress.com/de-at/kreditkarten/business/business-card/business-gold-card/",
+    "stand": "2026-10-19",
+    "hinweis": "Die 50 Tage sind eine Marketingangabe der Produktseite, im Preisverzeichnis nicht als feste Frist definiert."
+  },
+  "n26-business-metal": {
+    "zusatzkarten": "keine Mitarbeiterkarten; Konto ist personengebunden. Bis zu 5 physische und 6 virtuelle Karten für den Inhaber",
+    "limits_pro_karte": null,
+    "export": "Kontoauszüge als PDF, Kontoaktivität für wählbaren Zeitraum als PDF oder CSV. Keine Buchhaltungsschnittstelle genannt",
+    "haftung": "Karteninhaber persönlich (Konto läuft auf die Person, nicht auf eine Firma)",
+    "rechtsform": "nur Selbstständige und Freelancer unter eigenem Namen; keine GmbH oder andere Gesellschaft",
+    "zahlungsziel": "keines; Debitkarte, Umsätze werden sofort abgebucht",
+    "konto_pflicht": true,
+    "virtuelle_karten": true,
+    "quelle": "https://n26.com/de-at/business-metal",
+    "stand": "2026-10-19",
+    "hinweis": "Haftung aus der Kontostruktur abgeleitet, nicht wörtlich in den gelesenen Quellen. AGB (docs.n26.com) waren nicht abrufbar."
+  },
+  "oberbank-business-mastercard-klassik": {
+    "zusatzkarten": null,
+    "limits_pro_karte": null,
+    "export": "monatliche Umsatzübersicht und Online-Abrechnung im Internetbanking; kein Export genannt",
+    "haftung": null,
+    "rechtsform": "Selbstständige, Freiberufler und nicht protokollierte Einzelunternehmer",
+    "zahlungsziel": "Umsatzübersicht zu Monatsbeginn, Abbuchung 10 Arbeitstage später (laut Oberbank bis zu 6 Wochen nach dem Einkauf)",
+    "konto_pflicht": true,
+    "virtuelle_karten": null,
+    "quelle": "https://www.oberbank.at/business-kreditkarten",
+    "stand": "2026-10-19",
+    "hinweis": "Offizieller Name Oberbank Mastercard Business Credit Classic. Jahresgebühr 36,16 € bis 31.12.2026, ab 1.1.2027 37,32 €. Verfügungsrahmen 2.200 € pro Monat. Mitarbeiterkarten in keiner Unterlage genannt; die Sonderbedingungen kennen nur Partnerkarten für Angehörige. Haftung Firma vs. Karteninhaber nicht geregelt."
+  },
+  "_weitere": [
+    {"name": "card complete Visa Business Classic Card", "jahresgebuehr": "58,30 € (Business Platinum 126,30 €)", "zusatzkarten": "Mitarbeiterkarten über Rahmenvereinbarung mit dem Unternehmen, Preis nicht genannt; nur mit Firmenhaftung; Zahlungsziel 20 Tage; Umsatzdaten an MobileXpense", "rechtsform": "Einzelunternehmer, Freiberufler, Mitarbeiter von KMU (Rahmenvereinbarung)", "quelle": "https://www.cardcomplete.com/fuer-unternehmen/firmenkarten/business-card/"},
+    {"name": "PayLife Business Classic", "jahresgebuehr": "31 €", "zusatzkarten": "Smart Data Portal zeigt Umsätze aller Mitarbeiterkarten, Export als XLS/CSV; Rahmen 2.200 € pro Monat", "rechtsform": "alle Unternehmensformen und Einzelunternehmer", "quelle": "https://www.paylife.at/paylife/business/kreditkarten/business-classic"},
+    {"name": "PayLife Business Gold", "jahresgebuehr": "64 €, im 1. Jahr 32 € (bis 31.12.2026)", "zusatzkarten": "Smart Data Portal mit XLS/CSV-Export; Rahmen 5.000 € pro Monat", "rechtsform": "Selbstständige, Freiberufler, Mitarbeiter aller Unternehmensformen", "quelle": "https://www.paylife.at/paylife/business/kreditkarten"}
+  ]
+}
