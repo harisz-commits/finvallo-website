@@ -16,7 +16,7 @@ def _tbl(head,rows):
 STUD=[
  ('easybank-gold-student','Alle unter 27 mit Hauptwohnsitz in Österreich, kein Studiennachweis; nur mit dem easy gratis Konto; Rahmen 1.000 € bei Einkommen bis 500 €, sonst 3.000 €','Ab dem 27. Geburtstag Kartenentgelt laut Preisblatt','ja'),
  ('diners-club-student','Studierende, Vergabe bonitätsabhängig; Einkaufsrahmen bis 1.500 €; Altersgrenze auf der Anbieterseite nicht genannt','Nicht auf der Anbieterseite genannt','nein'),
- ('bank-austria-gold-student','Studierende, längstens bis zum 30. Geburtstag, nur Hauptkarte; Konto bei der Bank Austria','Umstellung auf die reguläre Gold-Karte liegt nahe; Zeitpunkt und Entgelt beim Anbieter prüfen','ja'),
+ ('bank-austria-gold-student','Studierende, längstens bis zum 30. Geburtstag, nur Hauptkarte; Konto bei der Bank Austria','Umstellung auf die reguläre Gold-Karte liegt nahe; Zeitpunkt und Entgelt nennt der Anbieter nicht','ja'),
  ('bawag-gold-student','Studierende mit BAWAG-Konto und Studiennachweis','Im Monat nach dem 27. Geburtstag wird das Konto auf Standardkonditionen umgestellt, die Karte kostet dann laut Preisblatt des neuen Kontomodells','ja'),
  ('card-complete-student','Studierende bis zum Studienende, längstens bis zum vollendeten 30. Lebensjahr; Vergabe bonitätsabhängig','Nicht auf der Anbieterseite genannt','nein'),
  ('paylife-goldplus-student-maturant','Studierende und Maturantinnen und Maturanten; Altersgrenze im Preisblatt nicht genannt','Nicht im Preisblatt genannt','nein'),

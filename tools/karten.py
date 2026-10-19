@@ -68,8 +68,8 @@ def wallet_text(c):
     if not w: return 'Apple Pay & Google Pay'
     a,g=w.get('apple'),w.get('google')
     if a and g: return 'Apple Pay & Google Pay'
-    if a: return 'Apple Pay'+(' (Google Pay unklar)' if g is None else '')
-    if g: return 'Google Pay'+(' (Apple Pay unklar)' if a is None else '')
+    if a: return 'Apple Pay'+(' (Google Pay: keine Angabe)' if g is None else '')
+    if g: return 'Google Pay'+(' (Apple Pay: keine Angabe)' if a is None else '')
     return None
 def wallet_row(c,b,na):
     """Zeile „Apple / Google Pay“ auf der Kartenseite."""
@@ -80,8 +80,8 @@ def wallet_row(c,b,na):
         if t: return E(t)
         a,g=w.get('apple'),w.get('google')
         if a is False and g is False: return 'nein'
-        if a is False and g is None: return 'Apple Pay nein, Google Pay unklar'
-        return 'unklar'
+        if a is False and g is None: return 'Apple Pay nein, Google Pay: keine Angabe'
+        return 'keine Angabe'
     return b(c.get('pay')) if c.get('pay') is not None else na
 def providers(land,cards):
     P=json.load(open(SP+'/daten/at/anbieter.json')) if land=='at' else {}
@@ -353,7 +353,7 @@ def qa(items): return '<div class="qa">'+''.join(f'<div><h4>{E(x["h"])}</h4><p>{
 def cond(c):
     r=lambda k,v: f'<div class="r"><span>{k}</span><span>{v}</span></div>'
     b=lambda v: 'ja' if v else 'nein' if v is False else '–'
-    na='<span class="mut na">beim Anbieter prüfen</span>'
+    na='<span class="mut na">keine Angabe</span>'
     out='<div class="cond" style="margin-bottom:14px"><div class="gh">Kosten</div>'
     out+=r('Jahresgebühr',E(feeT(c))+(f' <small class="mut">({E(c["feeNote"])})</small>' if c.get('feeNote') else '') if c.get('fee') is not None else na)
     out+=r('1. Jahr',f'{eur(c["fee1"])} €' if c.get('fee1') is not None else '–')
@@ -502,7 +502,7 @@ def ins_block(c):
     if c.get('insText'):
         return f'<div class="qa"><div><h4>Was ist versichert?</h4><p>{E(c["insText"])}</p></div></div>'+(f'<p class="src" style="margin-top:8px">Quelle: {ext(c["insQuelle"])}</p>' if c.get('insQuelle') else '')
     if b.get('info'): return f'\n  <div class="info"><span class="ic">i</span><div><p style="margin:0">{b["info"]}</p></div></div>'
-    return '<p>Ohne Aufpreis ist keine Reiseversicherung enthalten.</p>' if c.get('tier')==0 else '<div class="info"><span class="ic">i</span><div><p style="margin:0">Zur Reiseversicherung dieser Karte haben wir keine bestätigten Angaben gefunden. Bitte beim Anbieter prüfen.</p></div></div>'
+    return '<p>Ohne Aufpreis ist keine Reiseversicherung enthalten.</p>' if c.get('tier')==0 else '<div class="info"><span class="ic">i</span><div><p style="margin:0">Zur Reiseversicherung dieser Karte haben wir keine Angabe des Anbieters gefunden.</p></div></div>'
 def card_page(c,cards,nrated,prov):
     code=L['code']; rel=f'{code}/kreditkarten/{c["slug"]}/'; P='../../../'
     t=c.get('seoTitle')
@@ -551,7 +551,7 @@ def card_page(c,cards,nrated,prov):
     <h1>{E(c["titel"])}</h1>{starrow(c)}</div></div>
   <div class="feat">{feats(c)}</div>{f'<p class="note"><b>Hinweis:</b> {E(c["nurfuer"])}.</p>' if c.get('nurfuer') else ''}
   {offer(c,True)}
-  <div class="box feebox"><small>Jahresgebühr</small><span class="big{" good" if c.get("fee")==0 else ""}">{"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "beim Anbieter prüfen"}</span>{f1}
+  <div class="box feebox"><small>Jahresgebühr</small><span class="big{" good" if c.get("fee")==0 else ""}">{"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "keine Angabe"}</span>{f1}
     <a class="btn primary block" href="{E(c.get("quelle"))}" target="_blank" rel="noopener">Zum Anbieter ↗</a>
     <div class="actrow"><a class="plink" href="{E(c.get("preis") or c.get("quelle"))}" target="_blank" rel="noopener">{"Preise &amp; Gebühren (PDF) ↗" if (c.get("preis") or "").lower().endswith(".pdf") else "Konditionen beim Anbieter ↗"}</a></div></div>
   <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
@@ -752,7 +752,7 @@ def alle_page(cards,prov):
     sec=''
     for p,v in sorted(by.items(),key=lambda kv:(prov.get(kv[0]) or {}).get('name',kv[1][0]['anbieter']).lower()):
         nm=(prov.get(p) or {}).get('name') or v[0]['anbieter']
-        rows=''.join(f'<tr><td><a class="lnk" href="../{c["slug"]}/">{E(c["titel"])}</a></td><td>{E(TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung",""))}</td><td>{"0 €" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "beim Anbieter prüfen"}</td><td>{E(fxT(c)) if c.get("fx") is not None else "–"}</td><td>{(de1(c["stars"])+" ★") if c.get("stars") else "nicht bewertet"}</td></tr>' for c in sorted(v,key=lambda c:-(c.get('stars') or 0)))
+        rows=''.join(f'<tr><td><a class="lnk" href="../{c["slug"]}/">{E(c["titel"])}</a></td><td>{E(TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung",""))}</td><td>{"0 €" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "keine Angabe"}</td><td>{E(fxT(c)) if c.get("fx") is not None else "–"}</td><td>{(de1(c["stars"])+" ★") if c.get("stars") else "nicht bewertet"}</td></tr>' for c in sorted(v,key=lambda c:-(c.get('stars') or 0)))
         sec+=f'<h2>{(f"<a href=\"../anbieter/{p}/\">{E(nm)}</a>") if p in PROVPAGE.get(code,()) else E(nm)}</h2><div class="tbl"><table><thead><tr><th>Karte</th><th>Typ</th><th>Jahresgebühr</th><th>Zahlung Ausland</th><th>Bewertung</th></tr></thead><tbody>{rows}</tbody></table></div>'
     write(rel,head(t,d,rel,P,graph(rel,t,d,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Alle Karten',rel)]),alt=alt_links('at/kreditkarten/alle/','de/kreditkarten/alle/'))+f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/alle/")}
 <div class="wrap"><main id="app">
@@ -1092,8 +1092,8 @@ def sitemap(DATA):
         if f'https://finvallo.com/{lc}/kreditkarten/rechner/' not in s: add+=f'<url><loc>https://finvallo.com/{lc}/kreditkarten/rechner/</loc><lastmod>{st}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n'
     s=s.replace('</urlset>',add+'</urlset>'); open(p,'w').write(s)
 def llm_line(c,base):
-    bits=[f'Typ: {c["typ"]}',f'Netz: {c.get("netz") or "beim Anbieter prüfen"}',
-          'Jahresgebühr: '+(('0 €' if c['fee']==0 else f'{eur(c["fee"])} €')+(f' (1. Jahr {eur(c["fee1"])} €)' if c.get('fee1') is not None and c['fee1']!=c['fee'] else '') if c.get('fee') is not None else 'beim Anbieter prüfen'),
+    bits=[f'Typ: {c["typ"]}',f'Netz: {c.get("netz") or "keine Angabe"}',
+          'Jahresgebühr: '+(('0 €' if c['fee']==0 else f'{eur(c["fee"])} €')+(f' (1. Jahr {eur(c["fee1"])} €)' if c.get('fee1') is not None and c['fee1']!=c['fee'] else '') if c.get('fee') is not None else 'keine Angabe'),
           f'Fremdwährung: {fxT(c)}',f'Bargeld: {cashT(c)}',f'Reiseversicherung: {re.sub(r"^Reiseversicherung ","",TIER[c["tier"]][1]) if c.get("tier") is not None else "keine Angabe"}']
     if zinsT(c) and c['typ']=='Kreditkarte': bits.append(f'Zins: {zinsT(c)}')
     if c['ex'].get('lg') and c.get('lgText'): bits.append(f'Lounge: {c["lgText"]}')

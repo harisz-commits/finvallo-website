@@ -292,7 +292,7 @@
   "typ": "Neobank",
   "sitz": "Wien",
   "web": "https://www.bitpanda.com/de/card",
-  "text": "Aktuelle Kartenversion und Konditionen in Österreich beim Anbieter prüfen.",
+  "text": "",
   "wallet": {
    "apple": true,
    "google": true,
@@ -308,7 +308,7 @@
   "typ": "Neobank",
   "sitz": "Amsterdam",
   "web": "https://www.bunq.com/",
-  "text": "Abotarife und Kartenklassifikation beim Anbieter prüfen.",
+  "text": "",
   "wallet": {
    "apple": true,
    "google": null,
