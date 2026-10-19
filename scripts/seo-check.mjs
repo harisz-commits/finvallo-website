@@ -82,7 +82,7 @@ for (const f of pages) {
       if (m && m[1].slice(0, 10) !== iso) err.push(`R7.7 ${rel}: „Aktualisiert am“ ${iso} ≠ ${lab} ${m[1]}`); }
   // R7.2: verneinte Punkte unter Vorteilen (Warnung)
   const pm = s.match(/<ul class="checks">([\s\S]*?)<\/ul>/);
-  if (pm) for (const li of pm[1].matchAll(/<li>([\s\S]*?)<\/li>/g)) { const t = unesc(li[1].replace(/<[^>]+>/g, '')).trim(); if (/^Keine?\b/.test(t) && !NEIN_OK.some(o => t.startsWith(o))) warn.push(`R7.2 ${rel}: Vorteil „${t.slice(0, 60)}“`); }
+  if (pm) for (const li of pm[1].matchAll(/<li>([\s\S]*?)<\/li>/g)) { const t = unesc(li[1].replace(/<[^>]+>/g, '')).trim(); if (/^Keine?\b/.test(t) && !NEIN_OK.some(o => t.startsWith(o)) && !/gebühr|entgelt|schufa|bonität|girokonto|vertrag nötig|mindestumsatz/i.test(t)) warn.push(`R7.2 ${rel}: Vorteil „${t.slice(0, 60)}“`); }
   // B17.3: höchstens 35 Links außerhalb von <main>
   const outside = body.replace(/<main\b[\s\S]*?<\/main>/g, ''); const nl = (outside.match(/<a\s/g) || []).length;
   if (nl > 35) err.push(`B17.3 ${rel}: ${nl} Links außerhalb von <main>`);
