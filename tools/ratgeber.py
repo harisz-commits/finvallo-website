@@ -278,7 +278,7 @@ def build(land):
         import ratgeber_studenten_de; ratgeber_studenten_de.register(art,P,best,cards.D['de'][0],karten.card_count('de','private'),eur,karten)
         import ratgeber_wallet_de; ratgeber_wallet_de.register(art,P,best,cards.D['de'][0],karten.card_count('de','private'),eur,karten)
         lou=[c for c in RC if c['lg']]
-        art('de','lounges',h1='Lounge-Zugang mit der Kreditkarte',mt='Lounge-Zugang mit Kreditkarte in Deutschland | Finvallo',
+        art('de','lounges',h1='Lounge-Zugang mit der Kreditkarte',mt='Lounge-Zugang mit Kreditkarte in Deutschland: Bedingungen und Gäste | Finvallo',
           desc='Welche Kreditkarten in Deutschland kostenlosen Zugang zu Flughafen-Lounges geben: Priority Pass, Besuche pro Jahr und Begleitpersonen.',
           lede='Welche Karten dich in Deutschland wirklich gratis in die Lounge bringen.',
           kurz=f'Nur {len(lou)} Privatkarten in unserem Deutschland-Vergleich enthalten kostenlose Lounge-Besuche, darunter {fmtlist([c["titel"] for c in lou[:3]])}. Viele andere Karten bieten nur eine Priority-Pass-Mitgliedschaft, bei der jeder Besuch rund 30 € kostet.',
