@@ -101,6 +101,7 @@ def head(land,slug,a,P,ld,alt):
 <meta property="og:image" content="https://finvallo.com/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0f1720">
+<meta name='impact-site-verification' value='395412e1-70ac-412c-9ce9-5e53d7b5e5ef'>
 <meta name="author" content="Finvallo-Redaktion">
 <meta property="article:modified_time" content="{(DATES.get((land,slug)) or {}).get('updated') or STAND}">
 <link rel="icon" href="{P}assets/favicon.svg?v={fv}" type="image/svg+xml">
