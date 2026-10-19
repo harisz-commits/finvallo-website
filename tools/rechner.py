@@ -115,7 +115,7 @@ else{const N=Math.round(n('y')*12),W=FinCalc.withdrawAmount(K,r,N);q('l1').textC
       form=inp('a','Betrag','100','€')+sel('from',f'Der Betrag ist',[('brutto','brutto (inkl. MwSt)',False),('netto','netto (ohne MwSt)',True)])+sel('rt','Steuersatz',rates),
       out='<div class="res"><div><small>Netto</small><b id="o1">–</b></div><div><small>Mehrwertsteuer</small><b id="o2">–</b></div><div><small>Brutto</small><b id="o3">–</b></div></div>',
       js='''const x=FinCalc.vat({amount:n('a'),rate:+v('rt'),from:v('from')});set('o1',FinCalc.eur(x.net));set('o2',FinCalc.eur(x.vat));set('o3',FinCalc.eur(x.gross));''',
-      how=f'<p>Netto zu Brutto: Netto × (1 + Steuersatz). Brutto zu Netto: Brutto / (1 + Steuersatz). In {N} gelten {"19 % als Regelsatz und 7 % zum Beispiel für viele Lebensmittel und Bücher" if land=="de" else "20 % als Normalsatz, 10 % zum Beispiel für Lebensmittel, Bücher und Mieten und 13 % zum Beispiel für Blumen, Theater oder Beherbergung"}.</p>',
+      how=f'<p>Netto zu Brutto: Netto × (1 + Steuersatz). Brutto zu Netto: Brutto / (1 + Steuersatz). In {N} gelten {"19 % als Regelsatz und 7 % zum Beispiel für viele Lebensmittel und Bücher" if land=="de" else "20 % als Normalsatz, 10 % zum Beispiel für Lebensmittel, Bücher, Mieten und Beherbergung und 13 % zum Beispiel für Blumen, Theater oder Kino"}.</p>',
       faq=[('Was ist der Unterschied zwischen Brutto und Netto?','Brutto enthält die Mehrwertsteuer, netto nicht.')])
 # B12: Beispielsatz zu den Standardwerten, Zahlen aus dem vorgerechneten Ergebnis (o = id → Text)
 EX={'zinseszins':lambda o,l:f'10.000 € Startkapital, 200 € Sparrate zu Monatsbeginn, 5 % Zins pro Jahr und 20 Jahre Laufzeit: Du zahlst {o["o2"]} ein und hast am Ende {o["o1"]}, davon {o["o3"]} Zinsen und Erträge.',
