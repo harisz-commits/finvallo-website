@@ -2,7 +2,7 @@
   "american-express-business-card": {
     "zusatzkarten": "bis zu 99; im 1. Jahr 0 €, danach 30 € je Karte und Jahr",
     "limits_pro_karte": null,
-    "export": "Online-Kartenkonto und App, PDF-Rechnungen; Abrechnung trennt Haupt- und Zusatzkarten. Kein CSV-, Excel- oder DATEV-Export in den Unterlagen genannt",
+    "export": "Online-Kartenkonto und App, PDF-Rechnungen; Abrechnung trennt Haupt- und Zusatzkarten. Kein CSV- oder DATEV-Export in den Unterlagen genannt",
     "haftung": "Karteninhaber persönlich; bei GmbH oder AG zusätzlich das Unternehmen gesamtschuldnerisch",
     "rechtsform": "Selbstständige und Unternehmen jeder Rechtsform; Zusatzkarten nur für Teilhaber, Vorstände oder Mitarbeiter",
     "zahlungsziel": "Monatsrechnung, Einzug per SEPA-Lastschrift; Verzugszinsen erst 30 Tage nach Abrechnungsdatum",
@@ -15,7 +15,7 @@
   "american-express-business-gold-card": {
     "zusatzkarten": "bis zu 99; im 1. Jahr 0 €, danach 60 € je Gold-Zusatzkarte (30 € je Business-Zusatzkarte) und Jahr",
     "limits_pro_karte": null,
-    "export": "Online-Kartenkonto und App, PDF-Rechnungen der letzten 24 Monate; Abrechnung trennt Haupt- und Zusatzkarten. Kein CSV-, Excel- oder DATEV-Export in den Unterlagen genannt",
+    "export": "Online-Kartenkonto und App, PDF-Rechnungen der letzten 24 Monate; Abrechnung trennt Haupt- und Zusatzkarten. Kein CSV- oder DATEV-Export in den Unterlagen genannt",
     "haftung": "Karteninhaber persönlich; bei GmbH oder AG zusätzlich das Unternehmen gesamtschuldnerisch",
     "rechtsform": "Selbstständige und Unternehmen jeder Rechtsform; Unternehmen mindestens 1 Jahr alt, Bruttojahreseinkommen mindestens 30.000 €",
     "zahlungsziel": "laut Produktseite bis zu 50 Tage; Monatsrechnung per SEPA-Lastschrift, Verzugszinsen erst 30 Tage nach Abrechnungsdatum",
