@@ -492,6 +492,7 @@ a.hp-tile:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0
 .inw{position:relative;display:block}.inw em{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-style:normal;color:var(--faint);font-size:14px;pointer-events:none}
 .calcbox input[type=text]{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 44px 12px 14px}
 .calcbox input[type=text]:focus{border-color:var(--blue);outline:none}
+.calcbox .chkrow{display:flex;align-items:center;gap:10px;min-height:46px;padding:0 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font-size:16px;cursor:pointer}.calcbox .chkrow input{width:18px;height:18px;accent-color:var(--blue);margin:0;cursor:pointer}
 .resbox{margin-top:14px}
 .res{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
 .res>div{background:var(--card2);border-radius:12px;padding:12px 14px}
