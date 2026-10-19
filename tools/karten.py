@@ -166,7 +166,9 @@ def dedupe(xs):
 PRO_NEIN_OK=('Keine Jahresgebühr','Keine Fremdwährungsgebühr','Kein Girokonto','Keine Bonitätsprüfung','Kein Mindestumsatz')
 def not_pro(x):
     """Punkt beginnt mit Kein/Keine und ist keine echte Stärke (z. B. „Kein Cashback …“)."""
-    return bool(re.match(r'Keine?\b',x)) and not x.startswith(PRO_NEIN_OK)
+    if not re.match(r'Keine?\b',x) or x.startswith(PRO_NEIN_OK): return False
+    # „Kein Fremdwährungsentgelt“, „Keine Abhebegebühr“, „Kein neues Girokonto nötig“ sind Stärken
+    return not re.search(r'gebühr|entgelt|schufa|bonität|girokonto|vertrag nötig|mindestumsatz',x.lower())
 def pros(c):
     p=[]
     f=c.get('fee')
