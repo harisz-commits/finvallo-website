@@ -58,7 +58,7 @@ DATES={
     ('at','bargeld-beheben'): dict(published='2026-10-18', updated='2026-10-18'),
     ('at','kreditkarte-studenten'): dict(published='2026-10-18', updated='2026-10-18'),
     ('at','apple-pay-google-pay'): dict(published='2026-10-18', updated='2026-10-18'),
-    ('at','teilzahlung'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','teilzahlung'): dict(published='2026-10-11', updated='2026-10-19'),
     ('at','visa-mastercard-amex'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','bargeld-abheben'): dict(published='2026-10-18', updated='2026-10-18'),
     ('de','kreditkarte-studenten'): dict(published='2026-10-18', updated='2026-10-18'),
@@ -74,7 +74,7 @@ DATES={
     ('de','punkte-sammeln-de'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','punkte'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','reiseversicherung'): dict(published='2026-10-11', updated='2026-10-18'),
-    ('de','teilzahlung'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('de','teilzahlung'): dict(published='2026-10-11', updated='2026-10-19'),
     ('de','visa-mastercard-amex'): dict(published='2026-10-12', updated='2026-10-12'),
 }
 def dates(): return DATES
@@ -170,6 +170,7 @@ def build(land):
     # A) kostenlose Kreditkarte: Texte und Tabellen in ratgeber_kostenlos.py
     import karten, ratgeber_kostenlos
     ratgeber_kostenlos.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
+    import ratgeber_teilzahlung; ratgeber_teilzahlung.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
     # B) Kreditkarte beantragen
     art(land,'kreditkarte-beantragen',
       h1=f'Kreditkarte beantragen in {N}: so geht es Schritt für Schritt',
