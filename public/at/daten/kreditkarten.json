@@ -787,7 +787,7 @@
     "Hohe Jahresgebühr (198,96 €)",
     "Fremdwährungsgebühr: 1,65 % + 1,5 % Kursaufschlag",
     "Bargeld am Automaten kostet 3 %, mind. 4 €",
-    "„Unbegrenzt“ steht nur in der Kurzbeschreibung der Anbieterseite - Details beim Anbieter prüfen"
+    "„Unbegrenzt“ steht nur in der Kurzbeschreibung der Anbieterseite, die Bedingungen nennen keine Details"
    ],
    "quelle": "https://www.cardcomplete.com/privatkarten/kartenuebersicht/mastercard-world-traveller-black-card/",
    "preis": "https://www.cardcomplete.com/media/medialibrary/2026/09/AGBs_Kreditkarten-Allgemein_0926.pdf",
@@ -1372,7 +1372,7 @@
    "cons": [
     "Fremdwährungsgebühr: 1,65 % + 1 % Kursaufschlag",
     "Bargeld am Automaten kostet 3,3 %, mind. 3,50 €",
-    "Folgejahrespreis 52 bis 54 €, beim Anbieter prüfen"
+    "Folgejahrespreis 52 bis 54 € (der Anbieter nennt beide Werte)"
    ],
    "quelle": "https://www.paylife.at/resource/blob/68424/ebcacfdca27703ddc0ff94d35bbe3fe7/preisblatt-paylife-kreditkarten-aut-dt-data.pdf",
    "preis": "https://www.paylife.at/resource/blob/68424/ebcacfdca27703ddc0ff94d35bbe3fe7/preisblatt-paylife-kreditkarten-aut-dt-data.pdf",
@@ -2217,7 +2217,7 @@
    "fee1": null,
    "feeNote": null,
    "fx": 1.5,
-   "fxText": "1,5 % plus Kursaufschlag (Höhe beim Anbieter prüfen)",
+   "fxText": "1,5 % plus Kursaufschlag (Höhe: keine Angabe)",
    "cashText": "3,63 € je Behebung",
    "soll": 12.15,
    "effz": null,
@@ -2230,7 +2230,7 @@
    "note": "Befriedigend",
    "rank": 7,
    "pros": [
-    "Niedrige Fremdwährungskosten (1,5 % plus Kursaufschlag (Höhe beim Anbieter prüfen))",
+    "Niedrige Fremdwährungskosten (1,5 % plus Kursaufschlag)",
     "Automatischer Rechnungsausgleich per Lastschrift"
    ],
    "cons": [
@@ -2260,7 +2260,7 @@
    "fee1": 35.88,
    "feeNote": null,
    "fx": 1.5,
-   "fxText": "1,5 % plus Kursaufschlag (Höhe beim Anbieter prüfen)",
+   "fxText": "1,5 % plus Kursaufschlag (Höhe: keine Angabe)",
    "cashText": "3,63 € je Behebung",
    "soll": null,
    "effz": null,
@@ -2273,7 +2273,7 @@
    "note": "Befriedigend",
    "rank": 13,
    "pros": [
-    "Niedrige Fremdwährungskosten (1,5 % plus Kursaufschlag (Höhe beim Anbieter prüfen))",
+    "Niedrige Fremdwährungskosten (1,5 % plus Kursaufschlag)",
     "Reiseversicherung inkl. Storno",
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Einkaufsschutz"
