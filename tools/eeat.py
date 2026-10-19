@@ -24,7 +24,7 @@ DATE = re.compile(r'\d{2}\.\d{2}\.\d{4}')
 SITE = json.load(open(os.path.join(K.SP, 'daten', 'site.json')))
 MAIL = {'kontakt': 'hallo@finvallo.com', 'korrektur': 'korrektur@finvallo.com', 'impressum': 'hallo@finvallo.com', **(SITE.get('mail') or {})}
 RESERVED = {'anbieter', 'bestenlisten', 'alle', 'business', 'methodik', 'rechner'}
-IMG_ERR = ' onerror="this.remove()"'   # Foto wird nachgeliefert; bis dahin kein kaputtes Bild
+IMG_ERR = ' loading="lazy" decoding="async"'
 
 def dmy(iso): return K.dmy(iso)
 
@@ -44,7 +44,7 @@ UEBER = '''<h1>Über Finvallo</h1>
 <h2>Was Finvallo nicht ist</h2>
 <p>Finvallo ist keine Finanzberatung und ersetzt keine. Wir erklären, was im Preisblatt steht, und rechnen vor, was es für verschiedene Nutzungsprofile bedeutet. Ob eine Karte für dich richtig ist, entscheidest du. Beratung zu deiner persönlichen Situation bekommst du bei Stellen, die dafür da sind – in Österreich etwa beim Konsumentenschutz der Arbeiterkammer, in Deutschland bei der Verbraucherzentrale.</p>
 <h2>Wer dahinter steht</h2>
-<p><img class="founder" src="/assets/haris.jpg" alt="Haris, Gründer von Finvallo" width="120" height="120"''' + IMG_ERR + '''></p>
+<p><img class="founder" src="/assets/haris.jpg" alt="Haris, Gründer von Finvallo" width="96" height="96"''' + IMG_ERR + '''></p>
 <p><b>Haris</b> – Gründer, Wien</p>
 <p>Hat Finvallo gebaut und betreibt es derzeit allein. Wir schreiben „wir“, weil Finvallo wachsen soll. Derzeit steckt hinter allem eine Person. Kommt aus Daten und Analyse: sammeln, prüfen, auswerten, aus Zahlen Entscheidungsgrundlagen machen. Kein Finanzberater, kein Banker – und das soll so bleiben. Finvallo liefert Regeln und Rechner, keine Empfehlungen.</p>
 <h2>Fehler gefunden?</h2>
