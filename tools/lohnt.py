@@ -215,6 +215,8 @@ def card_page(land, c, x, A, P, prov):
     N = K.L['name']; rel = f'{land}/kreditkarten/bestenlisten/lohnt-sich/{c["slug"]}/'
     t = f'Ab wann lohnt sich die {c["titel"]}? ({land.upper()}) | Finvallo'
     if len(t) > 70: t = f'Lohnt sich die {c["titel"]}? | Finvallo'
+    if len(t) > 72 and c['titel'].startswith(c['anbieter'] + ' '):  # langer Anbietername: Produkt vorn, Anbieter kurz
+        t = f'Lohnt sich die {c["titel"][len(c["anbieter"]) + 1:]} ({c["anbieter"].split()[0]})? | Finvallo'
     vt = verdict(c, x, A)
     d = f'Ab wann lohnt sich die {c["titel"]} in {N}? {short(c, x, A)}. Mit Rechner für deine Nutzung.'
     d = K.fit_desc(d)
@@ -344,7 +346,7 @@ def filter_html(cards, X, A):
 
 def hub(land, cards, X, A, P):
     N = K.L['name']; rel = f'{land}/kreditkarten/bestenlisten/lohnt-sich/'
-    t = f'Top-Kreditkarten {N} 2026: Ab wann sich eine Premiumkarte lohnt | Finvallo'
+    t = f'Ab wann lohnt sich eine Premiumkarte? {N} 2026 | Finvallo'
     d = f'Die Top-Kreditkarten in {N} ab {TOP} € im Jahr und weitere Premiumkarten: ab wann sie sich lohnen, mit Guthaben, Lounges und Punkten gerechnet.'
     tile = lambda c: f'<a class="catcard" data-card="{c["slug"]}" href="{c["slug"]}/"><span class="ct">{eur(c["fee"] or 0)} € im Jahr</span><b>{E(c["titel"])}</b><small class="mut">{E(lounge_line(X[c["slug"]]))}</small><span data-def>{E(short(c, X[c["slug"]], A))}</span><span class="lnet" data-net hidden></span><small>Rechnung ansehen →</small></a>'
     top = sorted([c for c in cards if (c['fee'] or 0) >= TOP], key=lambda c: -(c['fee'] or 0))
