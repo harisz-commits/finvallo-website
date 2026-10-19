@@ -3,20 +3,27 @@
   const F = {};
   // Monatszins aus effektivem Jahreszins (konformer Zins)
   F.monthlyFromEffective = r => Math.pow(1 + r, 1/12) - 1;
-  // Zinseszins / Sparplan, monatliche Simulation
-  F.savings = function({start=0, rate=0, months=0, yearsRateEff=true, pay=0, payStart=true, dyn=0}){
+  // Zinseszins / Sparplan, monatliche Simulation.
+  // tax: {mode:'none'|'yearly'|'end', rate, allowance, tfs}. 'yearly' zieht die Steuer jedes Jahr von den Zinsen ab
+  // (Bankzinsen, KESt/Abgeltungsteuer bei Gutschrift), 'end' einmal am Ende vom Gesamtgewinn (Kursgewinne bei Verkauf).
+  // allowance: Freibetrag (bei 'yearly' pro Jahr, bei 'end' einmal), tfs: Teilfreistellung als Anteil (0,3 = 30 %).
+  F.savings = function({start=0, rate=0, months=0, yearsRateEff=true, pay=0, payStart=true, dyn=0, tax=null}){
     const m = F.monthlyFromEffective(rate);
-    let bal = start, paid = start, p = pay; const years = [];
+    const t = tax && tax.mode && tax.mode !== 'none' ? Object.assign({rate:0, allowance:0, tfs:0}, tax) : null;
+    let bal = start, paid = start, p = pay, yi = 0, taxed = 0; const years = [];
     for (let i = 1; i <= months; i++){
       if (payStart){ bal += p; paid += p; }
-      bal *= (1 + m);
+      const g = bal * m; bal += g; yi += g;
       if (!payStart){ bal += p; paid += p; }
       if (i % 12 === 0 || i === months){
+        if (t && t.mode === 'yearly'){ const tx = Math.max(0, yi * (1 - t.tfs) - t.allowance) * t.rate; bal -= tx; taxed += tx; yi = 0; }
         years.push({year: Math.ceil(i/12), balance: bal, paid: paid, interest: bal - paid});
         if (i % 12 === 0) p = p * (1 + dyn);
       }
     }
-    return {end: bal, paid: paid, interest: bal - paid, years};
+    const gross = bal;
+    if (t && t.mode === 'end'){ const tx = Math.max(0, (bal - paid) * (1 - t.tfs) - t.allowance) * t.rate; bal -= tx; taxed += tx; }
+    return {end: bal, paid: paid, interest: gross - paid + (t && t.mode === 'yearly' ? taxed : 0), gross: gross, tax: taxed, years};
   };
   // Annuitätendarlehen: Rate aus Betrag, Sollzins p. a. (monatlich i/12), Laufzeit in Monaten
   F.annuity = function(K, i, n){
