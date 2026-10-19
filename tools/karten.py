@@ -177,7 +177,7 @@ def pros(c):
     if c.get('fx')==0: p.append('Keine Fremdwährungsgebühr' + (' bis zur Freigrenze' if c.get('fxLimit') else ''))
     elif c.get('fx') is not None and c['fx']<=1.5: p.append(f'Niedrige Fremdwährungskosten ({fxT(c)})')
     v=cash200(c.get('cash'))
-    if v==0: p.append('Bargeld ohne Automatengebühr')
+    if v==0: p.append((lambda m:f'Bargeld ab {m.group(1)} € ohne Gebühr' if m else 'Bargeld ohne Automatengebühr')(re.match(r'Ab (\d+) € kostenlos',cashT(c))))
     elif v=='fn': p.append('Einige Abhebungen pro Monat ohne Gebühr')
     if (c.get('tier') or 0)>=2: p.append(TIER[c['tier']][1])
     if c.get('cbText') and c['ex'].get('cb'): p.append(re.split(r';|\. ',c['cbText'])[0].rstrip('.'))   # Kurzfassung, Details stehen in der Konditionstabelle
@@ -938,6 +938,8 @@ def k_cash(c):
     t=cashT(c)
     if t=='unbekannt': return '–'
     if re.match(r'(kostenlos|0 €|weltweit kostenlos)',t,re.I): return '0 €'
+    m=re.match(r'Ab (\d+) € kostenlos',t)
+    if m: return f'0 € ab {m.group(1)} €'
     m=re.match(r'^(\d+) Gratis-Abhebungen',t)
     if m: return f'{m.group(1)}× gratis/Monat'
     if len(t)<=18: return t

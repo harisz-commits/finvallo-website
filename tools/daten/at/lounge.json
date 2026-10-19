@@ -207,6 +207,15 @@
    "bedingung": "Ultra-Abo",
    "quelle": "https://cdn.revolut.com/terms_and_conditions/pdf/airport_lounge_passes_44dace41_1.1.0_1779099345_en.pdf",
    "notiz": "Lounge-Pässe für den eigenen Gebrauch kostenlos (kein Limit genannt), Gäste-Pässe kostenpflichtig; max. 1 Lounge pro 2 Stunden. Seit 10.6.2026 LoungeKey. revolut.com blockiert Abruf (403), via Revolut-AGB-PDF verifiziert. lgText korrekt, Gäste zahlen ergänzen."
+  },
+  "n26-metal": {
+   "visits": 1,
+   "guests": null,
+   "scope": "weltweit",
+   "program": "DragonPass",
+   "bedingung": "",
+   "quelle": "https://n26.com/de-at/metal",
+   "notiz": "Offiziell: „Mit Metal ist dein erster Besuch pro Jahr kostenlos.“ Gäste: keine Angabe (19.10.2026)."
   }
  }
 }

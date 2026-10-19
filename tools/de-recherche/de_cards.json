@@ -169,8 +169,8 @@
   "autoNote": "Rechnung per Überweisung; neue SEPA-Lastschriften sind nicht möglich",
   "teilz": true,
   "pay": true,
-  "tier": 2,
-  "insText": "Reise- und Reiserücktrittsversicherung inklusive. Laut Vergleichsportal Reiserücktritt bis 2.000 € pro Person und 4.000 € pro Reise, 20 % Selbstbehalt (mind. 185 €), mindestens 50 % der Transportkosten mit der Karte bezahlt, bis einschließlich 65 Jahre.",
+  "tier": 3,
+  "insText": "Tryg-Reiseversicherung (Bedingungen gültig ab 1.10.2026): Reiserücktritt bis 2.000 € pro Person und 4.000 € pro Reise (20 % Selbstbehalt, mind. 185 €), Auslandsreiseabbruch (Zusatzkosten), Krankheit und Rücktransport unbegrenzt, Gepäck 2.700 € pro Person, Gepäckverspätung 275 €, verspätete Ankunft 675 €, Flugverspätung 125 €; sonst 185 € Selbstbehalt. Gilt nur, wenn mind. 75 % der Transport- und Übernachtungskosten mit der Karte bezahlt wurden. Reisen bis 60 Tage, Beginn und Ende in Deutschland. Rücktritt und Krankheit nur bis zum 65. Geburtstag. Partner und Kinder unter 21 sind mitversichert.",
   "ex": {
    "offer": true
   },
@@ -191,6 +191,7 @@
    "auto",
    "insText"
   ],
-  "geprueft": "2026-10-12"
+  "geprueft": "2026-10-12",
+  "insQuelle": "https://www.banknorwegian.de/documents/de/creditcard/Travel_insurance_terms_Tryg_DE.pdf"
  }
 ]
