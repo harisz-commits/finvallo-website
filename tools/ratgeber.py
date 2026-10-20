@@ -11,7 +11,7 @@ def eur(x):
 def de1(x): return f'{x:.1f}'.replace('.',',')
 def pct(x):
     s=f'{x:.2f}'.replace('.',','); return (s[:-3] if s.endswith(',00') else s)+' %'
-TIERN={0:'keine',1:'Basis-Reiseschutz',2:'mit Reiserücktritt',3:'umfassend (inkl. Mietwagen)',4:'Premium'}
+TIERN={0:'keine',1:'Basis-Reiseschutz',2:'mit Reiserücktritt',3:'umfassend',4:'Premium'}
 # ---------- Daten ----------
 def cards(land):
     import karten
@@ -21,12 +21,19 @@ def cards(land):
         STAND=max(karten.LANDS[l]['stand'] for l in karten.LANDS); STAND_DE='.'.join(reversed(STAND.split('-')))
     out=[]
     for c in cards.D[land][0]:
-        out.append(dict(titel=c['titel'],url=f'{land}/kreditkarten/{c["slug"]}/',fee=c.get('fee'),fx=c.get('fx'),fxText=karten.fxT(c),cashText=karten.cashT(c),
+        out.append(dict(slug=c['slug'],titel=c['titel'],url=f'{land}/kreditkarten/{c["slug"]}/',fee=c.get('fee'),fx=c.get('fx'),fxText=karten.fxT(c),cashText=karten.cashT(c),
           stars=c.get('stars'),tier=c.get('tier'),typ=c['typ'],netz=c.get('netz') or '',giro=c.get('giro'),auto=c.get('auto'),art=c['art'],
           lg=c.get('lgText') if c['ex'].get('lg') else None,cb=c.get('earnText') or (c.get('cbText') if c['ex'].get('cb') else None),ml=c['ex'].get('ml'),klasse=c['klasse'],bestand=c.get('nurfuer'),cash=c.get('cash'),effz=c.get('effz')))
     return [c for c in out if c['art']=='Privat' and not c.get('bestand')]
 def rated(L): return sorted([c for c in L if c.get('stars') is not None],key=lambda c:(-c['stars'],c['fee'] if c['fee'] is not None else 1e9))
 def link(c,P): return f'<a class="lnk" href="{P}{c["url"]}">{E(c["titel"])}</a>'
+def mietwagen(land):
+    """Karten mit Mietwagen-Schutz laut Versicherungsbedingungen: slug -> (Schutz, Bedingung). Quelle: Zeilen der Reiseversicherungs-Ratgeber."""
+    if land=='de':
+        import ratgeber_reise_de as RD
+        return {r[0]:(r[6],r[7]) for r in RD.ROWS if r[6] and not re.match(r'(nein|keine Angabe)',r[6])}
+    return {'american-express-platinum-card':('Vollkasko bis 75.000 €','Mietwagen mit der Karte bezahlen'),
+            'revolut-ultra':('Selbstbehalt-Erstattung bis 2.000 €','Mietwagen mit Revolut bezahlen; Tarif aktiv')}
 def table(rows,cols,P):
     h=''.join(f'<th>{c[0]}</th>' for c in cols)
     b=''.join('<tr>'+''.join(f'<td>{f(c,P)}</td>' for _,f in cols)+'</tr>' for c in rows)
@@ -227,19 +234,20 @@ def build(land):
            ('Lohnt sich American Express trotzdem?','Für Vielreisende oft ja: Punkteprogramm, Guthaben und Versicherungen können die Jahresgebühr aufwiegen. Als einzige Karte ist sie wegen der Akzeptanz aber nicht ideal.')],
       related=['fremdwaehrung',WHY_AMEX[land][0],'kostenlose-kreditkarte'])
     # E) Mietwagen & Kaution
-    rent=[c for c in credit if (c['tier'] or 0)>=3]
-    rent=sorted(rent,key=lambda c:(c['fee'] if c['fee'] is not None else 1e9))
+    # Mietwagen-Schutz nur, wo die Versicherungsbedingungen ihn nennen (dieselben Zeilen wie im Ratgeber Reiseversicherung)
+    MW=mietwagen(land); bys={c['slug']:c for c in RC}
+    rent=sorted([bys[k] for k in MW if k in bys],key=lambda c:(c['fee'] if c['fee'] is not None else 1e9))
     kau=sorted([c for c in credit if re.search(r'visa|mastercard',c['netz'],re.I)],key=lambda c:(c['fee'] if c['fee'] is not None else 1e9,-(c.get('stars') or 0)))
     art(land,'mietwagen-kaution',
       h1='Kreditkarte für Mietwagen und Kaution',
       mt=f'Mietwagen-Kaution mit Kreditkarte ({N}) | Finvallo',
       desc=f'Warum Autovermieter eine Kreditkarte für die Kaution wollen, was mit Debitkarten passiert und welche Karten in {N} Mietwagenschutz enthalten.',
       lede='Am Mietwagenschalter entscheidet die Karte, ob du dein Auto bekommst. Das musst du wissen.',
-      kurz=f'Autovermieter blockieren für die Kaution meist mehrere hundert Euro auf einer echten Kreditkarte, die auf den Namen der fahrenden Person läuft. Debit- und Prepaid-Karten werden oft abgelehnt oder nur gegen teure Zusatzversicherung akzeptiert. {len(rent)} Kreditkarten in unserem {N}-Vergleich enthalten einen umfassenden Reiseschutz inklusive Mietwagen-Absicherung, die günstigste davon ist die {rent[0]["titel"]}.' if rent else 'Autovermieter blockieren für die Kaution meist mehrere hundert Euro auf einer echten Kreditkarte.',
+      kurz=f'Autovermieter blockieren für die Kaution meist mehrere hundert Euro auf einer echten Kreditkarte, die auf den Namen der fahrenden Person läuft. Debit- und Prepaid-Karten werden oft abgelehnt oder nur gegen teure Zusatzversicherung akzeptiert. Einen Schutz für den Mietwagen nennen die Versicherungsbedingungen nur bei {"einer" if len(rent)==1 else len(rent)} der Karten in unserem {N}-Vergleich, am günstigsten ist die {rent[0]["titel"]}. Ein „umfassender Reiseschutz“ allein heißt nicht, dass der Mietwagen versichert ist.' if rent else 'Autovermieter blockieren für die Kaution meist mehrere hundert Euro auf einer echten Kreditkarte.',
       secs=[('So funktioniert die Kaution','<div class="prose"><p>Beim Abholen reserviert der Vermieter einen Betrag auf deiner Karte, meist zwischen 300 und 1.500 €. Das Geld wird nicht abgebucht, aber dein Kreditrahmen ist in dieser Höhe blockiert. Nach der Rückgabe wird die Reservierung aufgehoben, das kann einige Tage dauern. Plane deshalb genug Rahmen ein, vor allem im Urlaub.</p></div>'),
             ('Warum Debitkarten oft nicht reichen','<div class="prose"><p>Bei einer Debitkarte wird der Betrag direkt vom Konto reserviert. Viele Vermieter akzeptieren das nicht, weil sie im Schadensfall eine Kreditkarte mit Kreditrahmen wollen. Manche nehmen Debitkarten nur, wenn du ihre Vollkasko ohne Selbstbehalt dazubuchst. Lies die Bedingungen deiner Buchung vorher genau.</p></div>'),
             ('Karten, die für Kautionen geeignet sind',(table(kau[:10],[COL['karte'],COL['typ'],COL['netz'],COL['fee']],P)+f'<p class="note">Kredit- und Charge-Karten mit Visa oder Mastercard, also mit Kreditrahmen und der breitesten Akzeptanz, sortiert nach Jahresgebühr. Hier stehen die 10 günstigsten der {len(kau)} passenden aus unserem {N}-Vergleich. Ob der Vermieter die Karte annimmt, prüfst du am besten vorher.</p>') if kau else '<p>Aktuell keine passende Karte in unserem Vergleich.</p>'),
-            ('Karten mit Mietwagen-Versicherung',(table(rent[:10],[COL['karte'],COL['fee'],COL['ins'],COL['stars']],P)+f'<p class="note">Kredit- und Charge-Karten mit umfassendem oder Premium-Reiseschutz, sortiert nach Jahresgebühr. Was genau versichert ist, steht auf jeder Kartenseite.</p>') if rent else '<p>Aktuell keine Karte mit Mietwagenschutz in unserem Vergleich.</p>'),
+            ('Karten mit Mietwagen-Versicherung',(table(rent,[COL['karte'],COL['fee'],('Mietwagen-Schutz',lambda c,P:E(MW[c['slug']][0])),('Was du tun musst',lambda c,P:E(MW[c['slug']][1]))],P)+'<p class="note">Nur Karten, deren Versicherungsbedingungen den Mietwagen nennen, sortiert nach Jahresgebühr. Vollkasko heißt: Schäden am Mietwagen selbst sind versichert. Selbstbehalt-Erstattung heißt: Du buchst die Vollkasko des Vermieters, die Karte zahlt deinen Selbstbehalt. Zusatz-Haftpflicht heißt: nur Schäden an anderen, nicht am Mietwagen. Die genauen Grenzen stehen im Ratgeber Reiseversicherung und auf jeder Kartenseite.</p>') if rent else '<p>Aktuell keine Karte mit Mietwagenschutz in unserem Vergleich.</p>'),
             ('Checkliste vor der Abholung','<div class="prose"><ul><li>Echte Kredit- oder Charge-Karte mit Hochprägung oder Name auf der Karte</li><li>Karte lautet auf die Person im Mietvertrag</li><li>Genug freier Kreditrahmen für die Kaution</li><li>Führerschein und Ausweis</li><li>Mietwagen mit der Karte bezahlt, damit deren Versicherung greift</li></ul></div>')],
       faq=[('Kann ich einen Mietwagen mit Debitkarte mieten?','Manchmal, aber oft nur mit Aufpreis oder Zusatzversicherung. Sicherer ist eine echte Kreditkarte.'),
            ('Wie hoch ist die Kaution beim Mietwagen?','Meist 300 bis 1.500 €, bei Premiumautos mehr. Der Betrag wird reserviert und nach der Rückgabe wieder freigegeben.'),
