@@ -235,7 +235,7 @@
     "Priority Pass + Global Lounge Collection (Centurion u.a.) + SKY/VIENNA Lounge Wien: unbegrenzt kostenlose Besuche, weltweit, Begleitperson gratis (Priority Pass: Anmeldung erforderlich)",
     "Kein Girokonto beim Anbieter nötig",
     "Automatischer Rechnungsausgleich per Lastschrift",
-    "360 € Gourmet-Guthaben pro Jahr",
+    "Gourmet-Guthaben: je Halbjahr bis 90 € in Österreich und bis 90 € im Ausland (bis 360 € im Jahr)",
     "180 € Entertainment-Guthaben pro Jahr",
     "Mietwagen-Vollkasko bis 75.000 €",
     "5 Zusatzkarten inklusive"
@@ -412,9 +412,9 @@
    "auto": true,
    "pay": null,
    "tier": 3,
-   "stars": 3.6,
+   "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 29,
+   "rank": 23,
    "pros": [
     "Im 1. Jahr 0 € statt 55 €",
     "Umfassender Reiseschutz",
@@ -458,9 +458,9 @@
    "auto": true,
    "pay": null,
    "tier": 3,
-   "stars": 3.5,
+   "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 45,
+   "rank": 35,
    "pros": [
     "Im 1. Jahr 0 € statt 150 €",
     "Umfassender Reiseschutz",
@@ -639,7 +639,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 41,
+   "rank": 42,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Kein Girokonto beim Anbieter nötig",
@@ -683,7 +683,7 @@
    "tier": 3,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 44,
+   "rank": 45,
    "pros": [
     "Umfassender Reiseschutz",
     "SKY/VIENNA Lounge Wien: 4 kostenlose Besuche pro Jahr, nur am Flughafen Wien, Begleitpersonen zählen mit (Gilt für Karten mit Ausstellung ab 1.6.2024 (davor unbegrenzt kostenlos))",
@@ -912,7 +912,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 39,
+   "rank": 40,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Diners Club Airport Lounges: 4 kostenlose Besuche pro Jahr, weltweit, Begleitpersonen zahlen (Mindestumsatz 3.600 € in den letzten 365 Tagen vor Besuch)",
@@ -1003,7 +1003,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 42,
+   "rank": 43,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Kein Girokonto beim Anbieter nötig",
@@ -1183,7 +1183,7 @@
    "tier": 1,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 36,
+   "rank": 37,
    "pros": [
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Einkaufsschutz"
@@ -1450,7 +1450,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 35,
+   "rank": 36,
    "pros": [
     "Im 1. Jahr 0 € statt 22,44 €",
     "Niedrige Fremdwährungskosten (1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs))",
@@ -1863,7 +1863,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 38,
+   "rank": 39,
    "pros": [
     "Im 1. Jahr 0 € statt 65 €",
     "Reiseversicherung inkl. Storno",
@@ -2093,7 +2093,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 23,
+   "rank": 24,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "SKY/VIENNA Lounge Wien: 2 kostenlose Besuche pro Jahr, nur am Flughafen Wien, Begleitpersonen zahlen (Nur BAWAG Visa Gold; gilt bis mindestens 31.12.2026)",
@@ -2361,7 +2361,7 @@
    "tier": 1,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 28,
+   "rank": 29,
    "pros": [
     "Automatischer Rechnungsausgleich per Lastschrift",
     "Partnerkarte 18,08 €/Jahr"
@@ -2403,7 +2403,7 @@
    "tier": 2,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 24,
+   "rank": 25,
    "pros": [
     "Reiseversicherung inkl. Storno",
     "Automatischer Rechnungsausgleich per Lastschrift",
@@ -2491,7 +2491,7 @@
    "tier": 2,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 40,
+   "rank": 41,
    "pros": [
     "Im 1. Jahr 0 € statt 80,40 €",
     "Reiseversicherung inkl. Storno",
@@ -2537,7 +2537,7 @@
    "tier": 3,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 43,
+   "rank": 44,
    "pros": [
     "Im 1. Jahr 0 € statt 138,60 €",
     "Umfassender Reiseschutz",
@@ -2671,7 +2671,7 @@
    "tier": 3,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 25,
+   "rank": 26,
    "pros": [
     "Niedrige Fremdwährungskosten (1,35 % für Zahlungen in fremder Währung)",
     "Umfassender Reiseschutz",
@@ -2805,7 +2805,7 @@
    "tier": 0,
    "stars": 3.5,
    "note": "Befriedigend",
-   "rank": 37,
+   "rank": 38,
    "pros": [
     "Keine Fremdwährungsgebühr bis zur Freigrenze",
     "Einige Abhebungen pro Monat ohne Gebühr",
@@ -2941,7 +2941,7 @@
    "tier": 3,
    "stars": 3.7,
    "note": "Befriedigend",
-   "rank": 26,
+   "rank": 27,
    "pros": [
     "Keine Fremdwährungsgebühr",
     "Einige Abhebungen pro Monat ohne Gebühr",
@@ -3301,7 +3301,7 @@
    "tier": 0,
    "stars": 3.6,
    "note": "Befriedigend",
-   "rank": 27,
+   "rank": 28,
    "pros": [
     "Keine Jahresgebühr",
     "Niedrige Fremdwährungskosten (ab 0,47 % zum Mittelkurs)",

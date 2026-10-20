@@ -364,7 +364,7 @@
    "credits": false,
    "offer": false
   },
-  "cbText": "Membership Rewards (30 €/Jahr, Turbo +15 €)",
+  "cbText": "Membership Rewards 30 € im Jahr (Turbo +15 €: 1 Extrapunkt pro 2 €, höchstens 20.000 Extrapunkte (bis 40.000 € Umsatz) in 12 Monaten)",
   "earnText": "1 Membership-Rewards-Punkt pro €",
   "lgText": "SKY- und VIENNA-Lounge Flughafen Wien ohne Limit für Karteninhaber (Gäste zahlen)",
   "ftText": null,
@@ -492,13 +492,13 @@
    "credits": true,
    "offer": false
   },
-  "cbText": "Membership Rewards inklusive",
+  "cbText": "Membership Rewards inklusive (Turbo +15 €: 1 Extrapunkt pro 2 €, höchstens 20.000 Extrapunkte (bis 40.000 € Umsatz) in 12 Monaten)",
   "earnText": "1 Membership-Rewards-Punkt pro €",
   "lgText": "Priority Pass Prestige ohne Limit (Haupt- und Platinum-Zusatzkarte), Centurion Lounges mit 1 Gast, Wiener Lounges",
   "ftText": null,
   "lounge": 5.0,
   "extra": [
-   "360 € Gourmet-Guthaben pro Jahr",
+   "Gourmet-Guthaben: je Halbjahr bis 90 € in Österreich und bis 90 € im Ausland (bis 360 € im Jahr)",
    "180 € Entertainment-Guthaben pro Jahr",
    "Mietwagen-Vollkasko bis 75.000 €",
    "5 Zusatzkarten inklusive",
@@ -548,7 +548,7 @@
     "t": "Dazu kommen 6 Greenfees pro Jahr, ein Hotelstatus und Vorteile bei Hotelbuchungen. Das gilt nur für teilnehmende Golfplätze und Hotels und mit Reservierung."
    }
   ],
-  "vorteile": "360 € Gourmet; 180 € Entertainment; Lounges; Hotelstatus",
+  "vorteile": "Gourmet-Guthaben bis 360 € (je Halbjahr 90 € Österreich, 90 € Ausland); 180 € Entertainment; Lounges; Hotelstatus",
   "seoTitle": "American Express Platinum Card im Vergleich 2026 | Finvallo",
   "blocks": {
    "extras": [
@@ -670,8 +670,8 @@
    "credits": false,
    "offer": true
   },
-  "cbText": "Membership Rewards",
-  "earnText": "Membership Rewards",
+  "cbText": "Membership Rewards 30 € im Jahr (Turbo +15 €: 1 Extrapunkt pro 2 €, höchstens 20.000 Extrapunkte (bis 40.000 € Umsatz) in 12 Monaten)",
+  "earnText": "1 Membership-Rewards-Punkt pro € (Programm 30 € im Jahr)",
   "lgText": null,
   "ftText": null,
   "lounge": null,
@@ -896,7 +896,7 @@
   },
   "nurfuer": null,
   "ex": {
-   "cb": false,
+   "cb": true,
    "ml": false,
    "lg": false,
    "lgm": false,
@@ -904,8 +904,8 @@
    "credits": false,
    "offer": true
   },
-  "cbText": null,
-  "earnText": null,
+  "cbText": "Membership Rewards inklusive (Turbo +15 €: 1 Extrapunkt pro 2 €, höchstens 20.000 Extrapunkte (bis 40.000 € Umsatz) in 12 Monaten)",
+  "earnText": "1 Membership-Rewards-Punkt pro €",
   "lgText": null,
   "ftText": null,
   "lounge": null,
@@ -942,7 +942,8 @@
     "src": "Quelle: <a href=\"https://www.americanexpress.com/content/dam/amex/at/assets/pdf/legal/tnc/2017_Versicherungsbedingungen_BMWgold.pdf\" target=\"_blank\" rel=\"noopener\">americanexpress.com ↗</a>"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-11",
+  "quelle_mr": "https://www.americanexpress.com/content/dam/amex/de-at/homepage/Document/AT_BMW-Card_Mitgliedschaftsbedingungen.pdf"
  },
  {
   "id": "AT10",
@@ -990,7 +991,7 @@
   },
   "nurfuer": null,
   "ex": {
-   "cb": false,
+   "cb": true,
    "ml": false,
    "lg": false,
    "lgm": false,
@@ -998,8 +999,8 @@
    "credits": false,
    "offer": true
   },
-  "cbText": null,
-  "earnText": null,
+  "cbText": "Membership Rewards inklusive (Turbo +15 €: 1 Extrapunkt pro 2 €, höchstens 20.000 Extrapunkte (bis 40.000 € Umsatz) in 12 Monaten)",
+  "earnText": "1 Membership-Rewards-Punkt pro €",
   "lgText": null,
   "ftText": null,
   "lounge": null,
@@ -1036,7 +1037,8 @@
     "src": "Quelle: <a href=\"https://www.americanexpress.com/content/dam/amex/at/assets/pdf/legal/tnc/2017_Versicherungsbedingungen_BMWgold.pdf\" target=\"_blank\" rel=\"noopener\">americanexpress.com ↗</a>"
    }
   },
-  "geprueft": "2026-10-11"
+  "geprueft": "2026-10-11",
+  "quelle_mr": "https://www.americanexpress.com/content/dam/amex/de-at/homepage/Document/AT_BMW_Gold-Card_Mitgliedschaftsbedingungen.pdf"
  },
  {
   "id": "AT11",
