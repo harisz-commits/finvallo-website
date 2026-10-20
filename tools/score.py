@@ -44,7 +44,7 @@ def score(c):
     def add(k,s,v,ok=True):
         nonlocal known
         if ok: known+=1
-        parts.append({'k':k,'s':round(s,1),'v':v,'w':W[k]})
+        parts.append({'k':k,'s':round(s,1),'v':v,'w':W[k],'ok':ok})
     f=c.get('fee')
     if f is None: add('Jahresgebühr',MISSING,'keine bestätigten Daten',False)
     elif c.get('feeNach') is not None: add('Jahresgebühr',s_fee(c['feeNach']),f'0 € {c.get("feeBis") or "vorübergehend"}, danach {eur(c["feeNach"])} € pro Jahr')   # nur zeitweise gratis: Preis danach zählt

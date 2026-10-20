@@ -1436,7 +1436,7 @@
   "typ": "Charge",
   "klasse": "Basis",
   "netz": "Visa",
-  "fee": 36,
+  "fee": 0,
   "fee1": null,
   "feeNote": "Karte kostenlos, aber nur mit Volkswagen Girokonto (3 € pro Monat)",
   "konto": "Volkswagen Girokonto (3 €/Monat)",

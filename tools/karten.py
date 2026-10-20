@@ -164,9 +164,6 @@ def dedupe(xs):
         seen.add(n); out.append(x)
     return out
 PRO_NEIN_OK=('Keine Jahresgebühr','Keine Fremdwährungsgebühr','Kein Girokonto','Keine Bonitätsprüfung','Kein Mindestumsatz')
-def konto_fee(c):
-    """Die Karte selbst ist im Konto enthalten; der Preis ist die Kontogebühr, wenn die Bedingungen nicht erfüllt sind."""
-    return bool(c.get('fee') and c.get('konto') and re.search(r'Karte (im|zum) (Giro)?konto|kostenlos zum Girokonto|im (Giro)?konto enthalten',c.get('feeNote') or '',re.I))
 def not_pro(x):
     """Punkt beginnt mit Kein/Keine und ist keine echte Stärke (z. B. „Kein Cashback …“)."""
     if not re.match(r'Keine?\b',x) or x.startswith(PRO_NEIN_OK): return False
@@ -389,6 +386,16 @@ def cond(c):
     out+=r('Apple / Google Pay',wallet_row(c,b,na))
     if c.get('herausgeber'): out+=r('Herausgeber',E(c['herausgeber']))
     return out+'</div>'
+def gaps(s):
+    """Hinweis auf Datenlücken: welche Kriterien ganz oder teilweise mit 2,5 Sternen zählen."""
+    full=[p['k'] for p in s['parts'] if p.get('ok') is False]
+    part=[p['k'] for p in s['parts'] if p.get('ok') is not False and 'nicht bestätigt' in (p.get('v') or '')]
+    if not full and not part: return ''
+    t=[]
+    if full: t.append(f'Daten fehlen bei {fmtl(full)}. {"Dieses Kriterium zählt" if len(full)==1 else "Diese Kriterien zählen"} mit 2,5 Sternen.')
+    if part: t.append(f'Teilweise fehlen Daten bei {fmtl(part)}. Der fehlende Teil zählt mit 2,5 Sternen.')
+    return f'<p class="note" style="margin:0 0 10px"><b>Datenlücke:</b> {" ".join(t)}</p>'
+def fmtl(L): return ', '.join(L[:-1])+' und '+L[-1] if len(L)>1 else L[0]
 def scorebox(c,P):
     s=c['score']
     rows=''.join(f'<tr><td><b>{E(p["k"])}</b><br><small class="mut">{E(p["v"])}</small></td><td>{p["w"]} %</td><td style="white-space:nowrap">{stars(p["s"])} {de1(p["s"])}</td></tr>' for p in s['parts'])
@@ -398,7 +405,7 @@ def scorebox(c,P):
     return f'''<div class="box"><div class="scorehead"><div class="big">{de1(c["stars"])}<small>/5</small></div><div>{stars(c["stars"])}<div style="margin-top:4px"><span class="badge ">{c["note"]}</span></div></div></div>
   <div class="tbl" style="margin:14px 0"><table class="sct"><thead><tr><th>Kriterium</th><th>Gewicht</th><th>Sterne</th></tr></thead><tbody>
   {rows}
-  <tr><td><b>Gesamt</b><br><small class="mut">gewichteter Durchschnitt</small></td><td>100 %</td><td><b>{de1(c["stars"])}</b></td></tr></tbody></table></div><a class="lnk" href="{P}{L['code']}/kreditkarten/methodik/">ⓘ So funktioniert das Bewertungssystem</a></div>'''
+  <tr><td><b>Gesamt</b><br><small class="mut">gewichteter Durchschnitt</small></td><td>100 %</td><td><b>{de1(c["stars"])}</b></td></tr></tbody></table></div>{gaps(s)}<a class="lnk" href="{P}{L['code']}/kreditkarten/methodik/">ⓘ So funktioniert das Bewertungssystem</a></div>'''
 def similar(c,cards):
     pool=[x for x in cards if x is not c and x['art']==c['art'] and x.get('stars') is not None]
     pool.sort(key=lambda x:(x['typ']!=c['typ'],abs((x['fee'] or 0)-(c['fee'] or 0))>60,-(x['stars'] or 0)))
@@ -554,7 +561,7 @@ def card_page(c,cards,nrated,prov):
     <h1>{E(c["titel"])}</h1>{starrow(c)}</div></div>
   <div class="feat">{feats(c)}</div>{f'<p class="note"><b>Hinweis:</b> {E(c["nurfuer"])}.</p>' if c.get('nurfuer') else ''}
   {offer(c,True)}
-  <div class="box feebox"><small>{"Kontogebühr pro Jahr" if konto_fee(c) else "Jahresgebühr"}</small><span class="big{" good" if c.get("fee")==0 else ""}">{"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "keine Angabe"}</span>{f1}{f'<small class="mut">{E(c["feeNote"])}</small>' if konto_fee(c) else (f'<small class="mut">Nur mit {E(c["konto"])}</small>' if c.get("giro") and c.get("konto") else "")}
+  <div class="box feebox"><small>Jahresgebühr</small><span class="big{" good" if c.get("fee")==0 else ""}">{"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "keine Angabe"}</span>{f1}{f'<small class="mut">Nur mit Girokonto beim Anbieter: {E(c["konto"])}</small>' if c.get("giro") and c.get("konto") else ('<small class="mut">Nur mit Girokonto beim Anbieter</small>' if c.get("giro") else "")}
     <a class="btn primary block" href="{E(c.get("quelle"))}" target="_blank" rel="noopener">Zum Anbieter ↗</a>
     <div class="actrow"><a class="plink" href="{E(c.get("preis") or c.get("quelle"))}" target="_blank" rel="noopener">{"Preise &amp; Gebühren (PDF) ↗" if (c.get("preis") or "").lower().endswith(".pdf") else "Konditionen beim Anbieter ↗"}</a></div></div>
   <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
