@@ -138,6 +138,16 @@
     "scope": "wien",
     "program": "Wiener Lounges, Begleitung zählt mit"
    }
+  },
+  "american-express-bmw-card": {
+   "pct": 1,
+   "art": "Membership-Rewards-Punkte",
+   "hinweis": "1 Punkt pro €, Membership Rewards inklusive"
+  },
+  "american-express-bmw-card-gold": {
+   "pct": 1,
+   "art": "Membership-Rewards-Punkte",
+   "hinweis": "1 Punkt pro €, Membership Rewards inklusive"
   }
  }
 }
