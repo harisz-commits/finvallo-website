@@ -164,6 +164,9 @@ def dedupe(xs):
         seen.add(n); out.append(x)
     return out
 PRO_NEIN_OK=('Keine Jahresgebühr','Keine Fremdwährungsgebühr','Kein Girokonto','Keine Bonitätsprüfung','Kein Mindestumsatz')
+def konto_fee(c):
+    """Die Karte selbst ist im Konto enthalten; der Preis ist die Kontogebühr, wenn die Bedingungen nicht erfüllt sind."""
+    return bool(c.get('fee') and c.get('konto') and re.search(r'Karte (im|zum) (Giro)?konto|kostenlos zum Girokonto|im (Giro)?konto enthalten',c.get('feeNote') or '',re.I))
 def not_pro(x):
     """Punkt beginnt mit Kein/Keine und ist keine echte Stärke (z. B. „Kein Cashback …“)."""
     if not re.match(r'Keine?\b',x) or x.startswith(PRO_NEIN_OK): return False
@@ -551,7 +554,7 @@ def card_page(c,cards,nrated,prov):
     <h1>{E(c["titel"])}</h1>{starrow(c)}</div></div>
   <div class="feat">{feats(c)}</div>{f'<p class="note"><b>Hinweis:</b> {E(c["nurfuer"])}.</p>' if c.get('nurfuer') else ''}
   {offer(c,True)}
-  <div class="box feebox"><small>Jahresgebühr</small><span class="big{" good" if c.get("fee")==0 else ""}">{"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "keine Angabe"}</span>{f1}
+  <div class="box feebox"><small>{"Kontogebühr pro Jahr" if konto_fee(c) else "Jahresgebühr"}</small><span class="big{" good" if c.get("fee")==0 else ""}">{"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "keine Angabe"}</span>{f1}{f'<small class="mut">{E(c["feeNote"])}</small>' if konto_fee(c) else (f'<small class="mut">Nur mit {E(c["konto"])}</small>' if c.get("giro") and c.get("konto") else "")}
     <a class="btn primary block" href="{E(c.get("quelle"))}" target="_blank" rel="noopener">Zum Anbieter ↗</a>
     <div class="actrow"><a class="plink" href="{E(c.get("preis") or c.get("quelle"))}" target="_blank" rel="noopener">{"Preise &amp; Gebühren (PDF) ↗" if (c.get("preis") or "").lower().endswith(".pdf") else "Konditionen beim Anbieter ↗"}</a></div></div>
   <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
