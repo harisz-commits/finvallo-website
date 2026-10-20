@@ -4,7 +4,7 @@
 const path = require('path');
 const R = require(path.join(__dirname, '..', 'public', 'assets', 'rechnen.js'));
 const job = JSON.parse(require('fs').readFileSync(0, 'utf8'));
-const I = { num: k => { const v = +job.vals[k]; return isFinite(v) && v > 0 ? v : 0; }, on: k => (job.on || []).includes(k) };
+const I = { num: k => { const v = +job.vals[k]; return isFinite(v) && v > 0 ? v : 0; }, on: k => (job.on || []).includes(k), has: k => k in job.vals };
 const out = {};
 for (const [slug, c] of Object.entries(job.D.cards)) {
   const r = R.calc(c, I, job.D);

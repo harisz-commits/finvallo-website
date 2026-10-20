@@ -19,6 +19,8 @@ def load(p):
 
 def lim(v): return None if v in (None, 'unbegrenzt', math.inf) else v
 
+CASHRULES = load(SP + '/daten/bargeld-regeln.json').get('regeln', {})
+
 def card_data(land, cards):
     ER = load(SP + f'/daten/{land}/ertrag.json').get('karten', {})
     LD = LO.load(land) or {'annahmen': {}, 'karten': []}
@@ -31,6 +33,11 @@ def card_data(land, cards):
         if c.get('cashAus'): d['cashA'] = c['cashAus']
         if c.get('cashText') and (c.get('cash') or [''])[0] == 'freeN': d['ct'] = re.sub(r'\s*\(.*?\)', '', c['cashText']).split(';')[0][:90]
         if c.get('cashFx'): d['cfx'] = c['cashFx']
+        # Bargeldregel je Monat (Anzahl, Betrag, Mindestbetrag); freeN automatisch
+        rg = CASHRULES.get(f'{land}/{c["slug"]}')
+        if rg is None and (c.get('cash') or [''])[0] == 'freeN': rg = {'n': c['cash'][1], 'on': {'fix': c['cash'][2]}}
+        if rg is not None: d['cx'] = rg
+        if (c.get('cash') or [''])[0] == 'free_interest': d['soll'] = c.get('soll') or (round(1200 * ((1 + c['effz'] / 100) ** (1 / 12) - 1), 2) if c.get('effz') else None)
         if x:
             d['pct'] = x.get('punkte_pro_100') or 0
             if x.get('punkte_max'): d['cap'] = x['punkte_max']
@@ -83,10 +90,12 @@ def box(land, tags, wien, page=False):
     <label><span class="flab">Betrag je Abhebung Inland (€)</span><input type="number" min="0" step="50" value="200" data-r="cia" name="cia"></label>
     <label><span class="flab">Bargeld Ausland: Anzahl pro Jahr</span><input type="number" min="0" max="300" value="0" data-r="cn" name="cn"></label>
     <label><span class="flab">Betrag je Abhebung Ausland (€)</span><input type="number" min="0" step="50" value="200" data-r="ca" name="ca"></label>
+    <label><span class="flab">Monate mit Auslandsreisen</span><input type="number" min="1" max="12" value="2" data-r="rm" name="rm"></label>
+    <label><span class="flab">Tage bis zur Rückzahlung</span><input type="number" min="0" max="60" value="30" data-r="td" name="td"></label>
     {lounge}{LO.vers_field('r')}</div>
     <div class="lchecks">{cb}</div>
     {filt}
-    <p class="note" style="margin:0">Wir rechnen Punkte und Meilen mit 1 Cent, Hotelpunkte mit 0,4 Cent, einen Lounge-Besuch mit 30 € und die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)}. Fremdwährung heißt: Zahlungen und Abhebungen außerhalb des Euroraums. Unter jeder Karte siehst du, wie das Ergebnis zustande kommt.</p>
+    <p class="note" style="margin:0">Wir rechnen Punkte und Meilen mit 1 Cent, Hotelpunkte mit 0,4 Cent, einen Lounge-Besuch mit 30 € und die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)}. Fremdwährung heißt: Zahlungen und Abhebungen außerhalb des Euroraums. Abhebungen im Inland verteilen wir gleichmäßig auf 12 Monate, im Ausland auf deine Reisemonate, und rechnen die Freigrenzen pro Monat. Bei Karten, die Bargeld sofort verzinsen, rechnen wir den Sollzins für die angegebenen Tage. Unter jeder Karte siehst du, wie das Ergebnis zustande kommt.</p>
   </{tag}><!--/rechnen-->
   '''
 

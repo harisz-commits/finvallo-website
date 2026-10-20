@@ -1,0 +1,389 @@
+{
+ "hinweis": "Bargeldregeln für den Rechner (aus cashText der Kartendaten, Anbieterquellen). n: Gratis-Abhebungen pro Monat, a: Gratis-Betrag pro Monat, on: Gebühr je Abhebung über n (auf den ganzen Betrag), oa: Gebühr auf den Teil über a, both: on und oa zusammen, min/under: Mindestbetrag und Gebühr darunter (under null = unbekannt), steps: [Anzahl, Gebühr] je Monat nacheinander. Karten mit cash freeN bekommen automatisch n und on.fix.",
+ "regeln": {
+  "at/revolut-standard": {
+   "n": 5,
+   "a": 200,
+   "on": {
+    "pct": 2,
+    "min": 1
+   },
+   "oa": {
+    "pct": 2,
+    "min": 1
+   }
+  },
+  "at/revolut-plus": {
+   "n": null,
+   "a": 200,
+   "on": {
+    "pct": 2,
+    "min": 1
+   },
+   "oa": {
+    "pct": 2,
+    "min": 1
+   }
+  },
+  "at/revolut-premium": {
+   "n": null,
+   "a": 400,
+   "on": {
+    "pct": 2,
+    "min": 1
+   },
+   "oa": {
+    "pct": 2,
+    "min": 1
+   }
+  },
+  "at/revolut-metal": {
+   "n": null,
+   "a": 800,
+   "on": {
+    "pct": 2,
+    "min": 1
+   },
+   "oa": {
+    "pct": 2,
+    "min": 1
+   }
+  },
+  "at/revolut-ultra": {
+   "n": null,
+   "a": 2000,
+   "on": {
+    "pct": 2,
+    "min": 1
+   },
+   "oa": {
+    "pct": 2,
+    "min": 1
+   }
+  },
+  "at/trade-republic-karte": {
+   "min": 100,
+   "under": {
+    "fix": 1
+   }
+  },
+  "de/revolut-standard": {
+   "n": 5,
+   "a": 200,
+   "on": {
+    "pct": 2,
+    "min": 1
+   },
+   "oa": {
+    "pct": 2,
+    "min": 1
+   }
+  },
+  "de/revolut-plus": {
+   "n": null,
+   "a": 200,
+   "on": {
+    "pct": 2,
+    "min": 1
+   },
+   "oa": {
+    "pct": 2,
+    "min": 1
+   }
+  },
+  "de/revolut-premium": {
+   "n": null,
+   "a": 400,
+   "on": {
+    "pct": 2,
+    "min": 1
+   },
+   "oa": {
+    "pct": 2,
+    "min": 1
+   }
+  },
+  "de/revolut-metal": {
+   "n": null,
+   "a": 800,
+   "on": {
+    "pct": 2,
+    "min": 1
+   },
+   "oa": {
+    "pct": 2,
+    "min": 1
+   }
+  },
+  "de/revolut-ultra": {
+   "n": null,
+   "a": 2000,
+   "on": {
+    "pct": 2,
+    "min": 1
+   },
+   "oa": {
+    "pct": 2,
+    "min": 1
+   }
+  },
+  "de/trade-republic-karte": {
+   "min": 100,
+   "under": {
+    "fix": 1
+   }
+  },
+  "at/wise-karte": {
+   "n": 2,
+   "a": 200,
+   "on": {
+    "fix": 0.5
+   },
+   "oa": {
+    "pct": 1.75
+   },
+   "both": 1
+  },
+  "de/wise-debitkarte": {
+   "a": 250,
+   "oa": {
+    "pct": 2.69
+   }
+  },
+  "de/vivid-money-standard": {
+   "a": 200,
+   "min": 50,
+   "under": {
+    "pct": 3,
+    "min": 1
+   },
+   "oa": {
+    "pct": 3,
+    "min": 1
+   }
+  },
+  "de/vivid-money-plus": {
+   "a": 500,
+   "min": 50,
+   "under": {
+    "pct": 3,
+    "min": 1
+   },
+   "oa": {
+    "pct": 3,
+    "min": 1
+   }
+  },
+  "de/vivid-money-prime": {
+   "a": 1000,
+   "min": 50,
+   "under": {
+    "pct": 3,
+    "min": 1
+   },
+   "oa": {
+    "pct": 3,
+    "min": 1
+   }
+  },
+  "de/trading-212-card": {
+   "a": 400,
+   "oa": {
+    "pct": 1
+   }
+  },
+  "de/crypto-com-visa-card-midnight": {
+   "a": 200,
+   "oa": {
+    "pct": 2
+   }
+  },
+  "de/crypto-com-visa-card-ruby-steel": {
+   "a": 400,
+   "oa": {
+    "pct": 2
+   }
+  },
+  "de/crypto-com-visa-card-jade-indigo": {
+   "a": 800,
+   "oa": {
+    "pct": 2
+   }
+  },
+  "de/curve-pay-x": {
+   "a": 300,
+   "oa": {
+    "pct": 2,
+    "min": 2
+   }
+  },
+  "de/curve-pay-pro": {
+   "a": 500,
+   "oa": {
+    "pct": 2,
+    "min": 2
+   }
+  },
+  "de/curve-pay-proplus": {
+   "a": 1000,
+   "oa": {
+    "pct": 2,
+    "min": 2
+   }
+  },
+  "de/monese-mastercard-cashback": {
+   "a": 500,
+   "oa": {
+    "pct": 2
+   }
+  },
+  "de/monese-mastercard-premium": {
+   "a": 2500,
+   "oa": {
+    "pct": 2
+   }
+  },
+  "de/bbva-debitkarte": {
+   "min": 150,
+   "under": {
+    "fix": 2
+   }
+  },
+  "de/consorsbank-visa-card-debit": {
+   "min": 50,
+   "under": {
+    "fix": 1.95
+   }
+  },
+  "de/consors-finanz-mastercard": {
+   "min": 300,
+   "under": {
+    "fix": 3.95
+   }
+  },
+  "de/1822direkt-visa-classic-kreditkarte": {
+   "min": 50,
+   "under": {
+    "fix": 3
+   }
+  },
+  "de/1822direkt-visa-gold-kreditkarte": {
+   "min": 50,
+   "under": {
+    "fix": 3
+   }
+  },
+  "de/ing-visa-card": {
+   "min": 50,
+   "under": null
+  },
+  "de/dkb-visa-debitkarte": {
+   "min": 50,
+   "under": null
+  },
+  "de/dkb-visa-kreditkarte": {
+   "min": 50,
+   "under": null
+  },
+  "at/bunq-karte": {
+   "steps": [
+    [
+     5,
+     0.99
+    ],
+    [
+     null,
+     2.99
+    ]
+   ]
+  },
+  "de/bunq-core": {
+   "steps": [
+    [
+     5,
+     0.99
+    ],
+    [
+     null,
+     2.99
+    ]
+   ]
+  },
+  "de/bunq-core-business": {
+   "steps": [
+    [
+     5,
+     0.99
+    ],
+    [
+     null,
+     2.99
+    ]
+   ]
+  },
+  "de/bunq-pro": {
+   "steps": [
+    [
+     6,
+     0
+    ],
+    [
+     5,
+     0.99
+    ],
+    [
+     null,
+     2.99
+    ]
+   ]
+  },
+  "de/bunq-elite": {
+   "steps": [
+    [
+     6,
+     0
+    ],
+    [
+     5,
+     0.99
+    ],
+    [
+     null,
+     2.99
+    ]
+   ]
+  },
+  "de/bunq-pro-business": {
+   "steps": [
+    [
+     6,
+     0
+    ],
+    [
+     5,
+     0.99
+    ],
+    [
+     null,
+     2.99
+    ]
+   ]
+  },
+  "de/bunq-elite-business": {
+   "steps": [
+    [
+     6,
+     0
+    ],
+    [
+     5,
+     0.99
+    ],
+    [
+     null,
+     2.99
+    ]
+   ]
+  }
+ }
+}
