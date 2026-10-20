@@ -8,13 +8,13 @@
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
 
   /* Bargeldkosten für n Abhebungen zu je a € im Jahr. */
-  function cash(c, n, a, aus) {
+  function cash(c, n, a, aus, td) {
     var k = aus && c.cashA ? c.cashA : c.cash;
     if (!n) return { v: 0 };
     if (!k) return { v: 0, t: 'Bargeldkosten unbekannt, nicht gerechnet', unk: 1 };
     switch (k[0]) {
       case 'free': return { v: 0, t: n + ' Abhebungen ohne Automatengebühr' };
-      case 'free_interest': var z = (c.effz || 20) / 100 / 12 * a * n; return { v: z, t: n + ' Abhebungen ohne Gebühr, aber etwa ein Monat Zinsen (' + pct(c.effz || 20) + ' im Jahr)' };
+      case 'free_interest': var sz = c.soll || 20, z = sz / 100 * (td || 0) / 365 * a * n; return { v: z, t: n + ' Abhebungen ohne Gebühr, aber Zinsen ab dem Abhebungstag: ' + pct(sz) + ' Sollzins für ' + (td || 0) + ' Tage' };
       case 'fix': return { v: k[1] * n, t: n + ' × ' + eur2(k[1]) };
       case 'pct': return { v: a * k[1] / 100 * n, t: n + ' × ' + pct(k[1]) + ' von ' + eur(a) };
       case 'pctmin': return { v: Math.max(a * k[1] / 100, k[2]) * n, t: n + ' × ' + pct(k[1]) + ' (mindestens ' + eur2(k[2]) + ') von ' + eur(a) };
@@ -25,10 +25,37 @@
     return { v: 0, t: 'Bargeldkosten unbekannt, nicht gerechnet', unk: 1 };
   }
 
+  /* Bargeld nach Monatsregel (c.cx): Inland gleichmäßig auf 12 Monate, Ausland auf rm Reisemonate verteilt. */
+  function feeOf(o, x) { return o ? Math.max((o.fix || 0) + x * (o.pct || 0) / 100, o.min || 0) : 0; }
+  function cashSim(c, ni, ai, n, a, rm) {
+    var r = c.cx, M = [], i, res = { i: { v: 0, f: 0, cnt: 0, unk: 0 }, a: { v: 0, f: 0, cnt: 0, unk: 0 } };
+    for (i = 0; i < 12; i++) M.push([]);
+    for (i = 0; i < ni; i++) M[i % 12].push(['i', ai]);
+    var R = Math.max(1, Math.min(12, Math.round(rm || 2)));
+    if (!(c.cashA)) for (i = 0; i < n; i++) M[i % R].push(['a', a]);
+    M.forEach(function (m) {
+      var cnt = 0, sum = 0;
+      m.forEach(function (w) {
+        var amt = w[1], fee = 0, o = res[w[0]]; o.cnt++;
+        if (r.min && amt < r.min) { if (r.under) fee = feeOf(r.under, amt); else o.unk = 1; o.v += fee; if (fee) o.f++; return; }
+        if (r.steps) { var k = cnt, j; for (j = 0; j < r.steps.length; j++) { var st = r.steps[j]; if (st[0] === null || k < st[0]) { fee = st[1]; break; } k -= st[0]; } }
+        else {
+          var overN = r.n !== undefined && r.n !== null && cnt >= r.n;
+          if (overN) fee = feeOf(r.on, amt);
+          if ((!overN || r.both) && r.a !== undefined && r.a !== null) { var ex = Math.max(0, amt - Math.max(0, r.a - sum)); if (ex > 0) fee += feeOf(r.oa, ex); }
+        }
+        cnt++; sum += amt; o.v += fee; if (fee) o.f++;
+      });
+    });
+    var txt = function (o, lab) { return o.cnt + ' Abhebungen' + lab + (o.f ? ', davon ' + o.f + ' mit Gebühr' : ', alle ohne Gebühr') + (c.ct ? ' (' + c.ct + ')' : '') + (o.unk ? '; Gebühr für kleine Beträge unbekannt' : ''); };
+    return { i: { v: res.i.v, t: txt(res.i, ''), unk: res.i.unk }, a: { v: res.a.v, t: txt(res.a, ' in ' + R + ' Reisemonat' + (R > 1 ? 'en' : '')), unk: res.a.unk } };
+  }
+
   /* Ergebnis einer Karte; I liefert die Eingaben (num: Zahl, on: Haken gesetzt), D die gemeinsamen Werte. */
   function calc(c, I, D) {
     var num = I.num, S = num('spend') * 12, F = Math.min(num('fxs'), S || Infinity), n = num('cn'), ni = num('cin'), a = num('ca'), ai = num('cia'), y1 = I.on('wel');
-    var w = num('wien'), l = num('lounge'), g = num('guests'), lvl = num('vers');
+    var w = num('wien'), l = num('lounge'), g = num('guests'), lvl = num('vers'), rm = num('rm') || 2, td = I.has && I.has('td') ? num('td') : 30;
+    var sim = c.cx && (ni || n) ? cashSim(c, ni, ai, n, a, rm) : null;
     var rows = [], plus = 0, minus = 0, inc = false;
     var add = function (t, v, d) { rows.push([t, v, d || '']); if (v >= 0) plus += v; else minus -= v; };
     /* Punkte, Cashback, Meilen */
@@ -69,12 +96,12 @@
       else rows.push(['Fremdwährungsgebühr', 0, '0 % auf ' + eur(F)]);
     }
     if (ni) {
-      var ci = cash(c, ni, ai);
+      var ci = sim ? sim.i : cash(c, ni, ai, false, td);
       if (ci.v) add('Bargeld im Inland', -ci.v, ci.t); else rows.push(['Bargeld im Inland', 0, ci.t, ci.warn || ci.unk]);
       if (ci.unk) inc = true;
     }
     if (n) {
-      var cs = cash(c, n, a, true);
+      var cs = sim && !c.cashA ? sim.a : cash(c, n, a, true, td);
       if (cs.v) add('Bargeld im Ausland', -cs.v, cs.t); else rows.push(['Bargeld im Ausland', 0, cs.t, cs.warn || cs.unk]);
       if (cs.unk || ((c.fx === null || c.fx === undefined) && a)) inc = true;
       var cf = c.cfx || c.fx;
@@ -108,7 +135,7 @@
   if (sort && !sort.querySelector('option[value="net"]')) { var o = document.createElement('option'); o.value = 'net'; o.textContent = 'Nach deinem Ergebnis'; sort.appendChild(o); }
 
 
-  var I = { num: num, on: function (k) { var e = q(k); return !!(e && e.checked); } };
+  var I = { num: num, on: function (k) { var e = q(k); return !!(e && e.checked); }, has: function (k) { return !!q(k); } };
   function render(it, r) {
     var b = it.querySelector('[data-res]');
     it._r = r;

@@ -124,6 +124,10 @@ if len(sm) != len(set(sm)): err.append('Sitemap: doppelte Einträge')
 for fn in ('at', 'de'):
     try: json.load(open(R + f'{fn}/daten/kreditkarten.json'))
     except Exception as e: err.append(f'{fn}/daten/kreditkarten.json ungültig: {e}')
+# Kontrollbeispiele des Kartenrechners (Bargeld, Zinsen)
+import subprocess
+kr = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rechner-kontrolle.js')], capture_output=True, text=True)
+if kr.returncode: err += [x for x in kr.stdout.splitlines() if x] or ['Rechner-Kontrolle: Fehler ' + kr.stderr[:200]]
 print(f'{len(pages)} Seiten, {len(sm)} Sitemap-Einträge geprüft')
 if err:
     print('FEHLER:'); print('\n'.join(err[:100])); sys.exit(1)
