@@ -16,7 +16,7 @@ def de1(x): return f'{x:.1f}'.replace('.',',')
 # ---------- Länder ----------
 LANDS={
  'de':dict(code='de',name='Deutschland',lang='de-DE',locale='de_DE',cash='abheben',Cash='Bargeld abheben',cashq='Kann ich kostenlos Bargeld abheben?',
-           bon='Schufa',bonrow='Bonitätsprüfung (Schufa)',bonstep='in Deutschland meist bei der Schufa',ident=('Identität bestätigen','Meist per Video-Ident oder Online-Ausweis.'),
+           bon='Schufa',bonrow='Bonitätsprüfung',bonstep='in Deutschland meist bei der Schufa',ident=('Identität bestätigen','Meist per Video-Ident oder Online-Ausweis.'),
            aktiv='Die Karte kommt per Post, oft kannst du sie vorher schon digital im Smartphone nutzen.',
            card_title=lambda c:f'{c["titel"]} in Deutschland 2026 | Finvallo'),
  'at':dict(code='at',name='Österreich',lang='de-AT',locale='de_AT',cash='beheben',Cash='Bargeld beheben',cashq='Kann ich gratis Bargeld beheben?',
@@ -384,7 +384,7 @@ def cond(c):
     out+='</div><div class="cond" style="margin-bottom:14px"><div class="gh">Voraussetzungen</div>'
     out+=r('Kartentyp',TYPLAB.get(c['typ'],c['typ']))+r('Kartennetz',E(c.get('netz')) if c.get('netz') else na)
     out+=r('Girokonto beim Anbieter','nötig' if c.get('giro') else 'nicht nötig' if c.get('giro') is False else '–')
-    out+=r(L['bonrow'],'ja' if c['typ'] in ('Kreditkarte','Charge') else 'meist nur bei Kontoeröffnung')
+    out+=r(L['bonrow'],('ja, meist mit Abfrage bei der Schufa' if L['bon']=='Schufa' else 'ja, meist mit Abfrage beim KSV1870') if c['typ'] in ('Kreditkarte','Charge') else 'meist nur bei Kontoeröffnung')
     out+=r('Für Kautionen','in der Regel ja' if c['typ'] in ('Kreditkarte','Charge') and 'American' not in (c.get('netz') or '') else 'oft nicht' if c['typ'] in ('Debit','Prepaid') else 'eingeschränkt')
     out+=r('Apple / Google Pay',wallet_row(c,b,na))
     if c.get('herausgeber'): out+=r('Herausgeber',E(c['herausgeber']))
@@ -445,7 +445,7 @@ def faq(c):
     if lz: q.append((f'Wie lange dauert es, bis die {T} da ist?',f'Laut {c["anbieter"]} kommt die {T} nach {lz}.'))
     z=zinsT(c)
     if c['typ']=='Kreditkarte' and z:
-        q.append(('Was passiert, wenn ich die Rechnung nicht ganz bezahle?',f'Bei der {T} wird der offene Betrag in Raten zurückgezahlt und verzinst: {z}. Stell die Rückzahlung auf 100 %, dann fallen keine Zinsen an.'+(' Die Rechnung wird abgebucht.' if c.get('auto') else ' Du überweist den Betrag selbst, also achte auf den Termin.' if c.get('auto') is False else '')))
+        q.append(('Was passiert, wenn ich die Rechnung nicht ganz bezahle?',f'Bei der {T} wird der offene Betrag in Raten zurückgezahlt und verzinst: {z}. Stell die Rückzahlung auf 100 %, dann fallen auf Einkäufe keine Zinsen an.'+(' Bargeld wird bei dieser Karte trotzdem ab dem Abhebungstag verzinst.' if (c.get('cash') or [''])[0]=='free_interest' or c.get('cashInterest') else '')+(' Die Rechnung wird abgebucht.' if c.get('auto') else ' Du überweist den Betrag selbst, also achte auf den Termin.' if c.get('auto') is False else '')))
     if c['typ'] in ('Kreditkarte','Charge'):
         q.append((f'Kann ich mit der {T} ein Auto mieten oder ein Hotel reservieren?',f'Meist ja. Die {T} ist eine {TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung","")} mit Kreditrahmen, die Vermieter und Hotels in der Regel für Kautionen annehmen. Ob die Karte akzeptiert wird'+(' (American Express wird seltener genommen)' if 'American Express' in (c.get('netz') or '') else '')+', prüfst du am besten vorher beim Vermieter.'))
     else:
