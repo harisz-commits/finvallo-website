@@ -10,6 +10,7 @@ import hashlib, html, json, math, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import karten as K
 import lohnt as LO
+import sammeln as SM
 from score import eur
 
 R = K.R; SP = K.SP; E = K.E
@@ -60,6 +61,11 @@ def card_data(land, cards):
             lg = e.get('lounge')
         if lg and lg.get('visits'):
             d['lg'] = dict(v=lim(lg['visits']), g=lim(lg.get('guests_free') or 0), w=1 if lg.get('scope') == 'wien' else 0, m=lg.get('min_umsatz') or 0)
+        # Art des Ertrags: echtes Cashback bleibt fix, Punkte und Meilen hängen vom gewählten Punktewert ab
+        if d.get('pct'):
+            v = SM.value(land, c['titel'])
+            kind = SM.kind(v[1]) if v else ('cash' if re.search(r'cashback|saveback|gutschrift|coins|guthaben', ((e.get('art') or '') + ' ' + ((x or {}).get('punkte_hinweis') or '')), re.I) else 'points')
+            if kind != 'cash': d['pk'] = 1
         out[c['slug']] = d
     tags = {k: ', '.join(dict.fromkeys(v)) for k, v in prov.items() if k != 'crx'}
     if prov.get('crx'): tags['crx'] = max(prov['crx'])
@@ -92,10 +98,11 @@ def box(land, tags, wien, page=False):
     <label><span class="flab">Betrag je Abhebung Ausland (€)</span><input type="number" min="0" step="50" value="200" data-r="ca" name="ca"></label>
     <label><span class="flab">Monate mit Auslandsreisen</span><input type="number" min="1" max="12" value="2" data-r="rm" name="rm"></label>
     <label><span class="flab">Tage bis zur Rückzahlung</span><input type="number" min="0" max="60" value="30" data-r="td" name="td"></label>
-    {lounge}{LO.vers_field('r')}</div>
+    {lounge}{LO.vers_field('r')}
+    <label><span class="flab">Wert pro Punkt oder Meile</span><select data-r="pv" name="pv"><option value="1">1 Cent (Standard)</option><option value="1.5">1,5 Cent</option><option value="0.5">0,5 Cent</option><option value="0">nicht als Geld bewerten</option></select></label></div>
     <div class="lchecks">{cb}</div>
     {filt}
-    <p class="note" style="margin:0">Wir rechnen Punkte und Meilen mit 1 Cent, Hotelpunkte mit 0,4 Cent, einen Lounge-Besuch mit 30 € und die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)}. Fremdwährung heißt: Zahlungen und Abhebungen außerhalb des Euroraums. Abhebungen im Inland verteilen wir gleichmäßig auf 12 Monate, im Ausland auf deine Reisemonate, und rechnen die Freigrenzen pro Monat. Bei Karten, die Bargeld sofort verzinsen, rechnen wir den Sollzins für die angegebenen Tage. Unter jeder Karte siehst du, wie das Ergebnis zustande kommt.</p>
+    <p class="note" style="margin:0"><b>Annahme zum Punktewert:</b> Punkte und Meilen rechnen wir standardmäßig mit 1 Cent, Hotelpunkte mit 0,4 Cent. Den Wert kannst du oben ändern. Der tatsächliche Gegenwert hängt von der Einlösung ab, Punkte sind kein garantiertes Cashback. Wir rechnen außerdem einen Lounge-Besuch mit 30 € und die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)}. Fremdwährung heißt: Zahlungen und Abhebungen außerhalb des Euroraums. Abhebungen im Inland verteilen wir gleichmäßig auf 12 Monate, im Ausland auf deine Reisemonate, und rechnen die Freigrenzen pro Monat. Bei Karten, die Bargeld sofort verzinsen, rechnen wir den Sollzins für die angegebenen Tage. Unter jeder Karte siehst du, wie das Ergebnis zustande kommt.</p>
   </{tag}><!--/rechnen-->
   '''
 
