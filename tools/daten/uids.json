@@ -1,0 +1,962 @@
+{
+ "at": {
+  "AT01": {
+   "id": "AT01",
+   "uid": "at:advanzia-bank-free-mastercard-gold"
+  },
+  "AT02": {
+   "id": "AT02",
+   "uid": "at:tf-bank-mastercard-gold"
+  },
+  "AT03": {
+   "id": "AT03",
+   "uid": "at:advanzia-bank-hilton-honors-kreditkarte"
+  },
+  "AT04": {
+   "id": "AT04",
+   "uid": "at:american-express-gold-card"
+  },
+  "AT05": {
+   "id": "AT05",
+   "uid": "at:american-express-platinum-card"
+  },
+  "AT06": {
+   "id": "AT06",
+   "uid": "at:american-express-card"
+  },
+  "AT07": {
+   "id": "AT07",
+   "uid": "at:american-express-blue-card"
+  },
+  "AT08": {
+   "id": "AT08",
+   "uid": "at:american-express-aurum-card"
+  },
+  "AT09": {
+   "id": "AT09",
+   "uid": "at:american-express-bmw-card"
+  },
+  "AT10": {
+   "id": "AT10",
+   "uid": "at:american-express-bmw-card-gold"
+  },
+  "AT11": {
+   "id": "AT11",
+   "uid": "at:american-express-centurion-card"
+  },
+  "AT12": {
+   "id": "AT12",
+   "uid": "at:card-complete-classic-ohne-versicherung"
+  },
+  "AT13": {
+   "id": "AT13",
+   "uid": "at:card-complete-classic-mit-versicherung"
+  },
+  "AT14": {
+   "id": "AT14",
+   "uid": "at:card-complete-gold"
+  },
+  "AT15": {
+   "id": "AT15",
+   "uid": "at:card-complete-platinum"
+  },
+  "AT16": {
+   "id": "AT16",
+   "uid": "at:card-complete-world-traveller-gold"
+  },
+  "AT17": {
+   "id": "AT17",
+   "uid": "at:card-complete-world-traveller-black"
+  },
+  "AT18": {
+   "id": "AT18",
+   "uid": "at:card-complete-student"
+  },
+  "AT19": {
+   "id": "AT19",
+   "uid": "at:card-complete-prepaid"
+  },
+  "AT20": {
+   "id": "AT20",
+   "uid": "at:diners-club-classic"
+  },
+  "AT21": {
+   "id": "AT21",
+   "uid": "at:diners-club-gold"
+  },
+  "AT22": {
+   "id": "AT22",
+   "uid": "at:diners-club-golf"
+  },
+  "AT23": {
+   "id": "AT23",
+   "uid": "at:diners-club-vintage"
+  },
+  "AT24": {
+   "id": "AT24",
+   "uid": "at:diners-club-student"
+  },
+  "AT25": {
+   "id": "AT25",
+   "uid": "at:diners-club-oe1"
+  },
+  "AT26": {
+   "id": "AT26",
+   "uid": "at:paylife-classic"
+  },
+  "AT27": {
+   "id": "AT27",
+   "uid": "at:paylife-goldplus"
+  },
+  "AT28": {
+   "id": "AT28",
+   "uid": "at:paylife-black"
+  },
+  "AT29": {
+   "id": "AT29",
+   "uid": "at:paylife-platinum"
+  },
+  "AT30": {
+   "id": "AT30",
+   "uid": "at:paylife-goldplus-student-maturant"
+  },
+  "AT31": {
+   "id": "AT31",
+   "uid": "at:paylife-gold-bestand"
+  },
+  "AT32": {
+   "id": "AT32",
+   "uid": "at:erste-bank-und-sparkassen-smartcard"
+  },
+  "AT33": {
+   "id": "AT33",
+   "uid": "at:erste-bank-und-sparkassen-premiumcard"
+  },
+  "AT35": {
+   "id": "AT35",
+   "uid": "at:erste-bank-und-sparkassen-austrian-miles-und-more-premiumcard"
+  },
+  "AT36": {
+   "id": "AT36",
+   "uid": "at:erste-bank-und-sparkassen-goed-smartcard"
+  },
+  "AT37": {
+   "id": "AT37",
+   "uid": "at:erste-bank-und-sparkassen-goed-premiumcard"
+  },
+  "AT38": {
+   "id": "AT38",
+   "uid": "at:raiffeisen-classic"
+  },
+  "AT39": {
+   "id": "AT39",
+   "uid": "at:raiffeisen-gold"
+  },
+  "AT40": {
+   "id": "AT40",
+   "uid": "at:raiffeisen-platinum"
+  },
+  "AT41": {
+   "id": "AT41",
+   "uid": "at:bank-austria-classic"
+  },
+  "AT42": {
+   "id": "AT42",
+   "uid": "at:bank-austria-gold"
+  },
+  "AT43": {
+   "id": "AT43",
+   "uid": "at:bank-austria-gold-student"
+  },
+  "AT44": {
+   "id": "AT44",
+   "uid": "at:bank-austria-platinum"
+  },
+  "AT45": {
+   "id": "AT45",
+   "uid": "at:bank-austria-world"
+  },
+  "AT46": {
+   "id": "AT46",
+   "uid": "at:bank-austria-world-elite"
+  },
+  "AT47": {
+   "id": "AT47",
+   "uid": "at:bawag-gold"
+  },
+  "AT48": {
+   "id": "AT48",
+   "uid": "at:bawag-weiss"
+  },
+  "AT49": {
+   "id": "AT49",
+   "uid": "at:bawag-gold-student"
+  },
+  "AT50": {
+   "id": "AT50",
+   "uid": "at:easybank-kreditkarte"
+  },
+  "AT51": {
+   "id": "AT51",
+   "uid": "at:easybank-kreditkarte-gold"
+  },
+  "AT52": {
+   "id": "AT52",
+   "uid": "at:easybank-gold-student"
+  },
+  "AT53": {
+   "id": "AT53",
+   "uid": "at:oberbank-mastercard-klassik"
+  },
+  "AT54": {
+   "id": "AT54",
+   "uid": "at:oberbank-mastercard-gold"
+  },
+  "AT55": {
+   "id": "AT55",
+   "uid": "at:bank99-classic"
+  },
+  "AT56": {
+   "id": "AT56",
+   "uid": "at:bank99-gold"
+  },
+  "AT57": {
+   "id": "AT57",
+   "uid": "at:bank99-platinum"
+  },
+  "AT58": {
+   "id": "AT58",
+   "uid": "at:bank-direkt-classic"
+  },
+  "AT59": {
+   "id": "AT59",
+   "uid": "at:bank-direkt-gold"
+  },
+  "AT60": {
+   "id": "AT60",
+   "uid": "at:bank-direkt-platinum"
+  },
+  "AT61": {
+   "id": "AT61",
+   "uid": "at:santander-card"
+  },
+  "B01": {
+   "id": "B01",
+   "uid": "at:american-express-business-card"
+  },
+  "B02": {
+   "id": "B02",
+   "uid": "at:american-express-business-gold-card"
+  },
+  "B03": {
+   "id": "B03",
+   "uid": "at:n26-business-metal"
+  },
+  "B04": {
+   "id": "B04",
+   "uid": "at:oberbank-business-mastercard-klassik"
+  },
+  "D01": {
+   "id": "D01",
+   "uid": "at:revolut-standard"
+  },
+  "D02": {
+   "id": "D02",
+   "uid": "at:revolut-plus"
+  },
+  "D03": {
+   "id": "D03",
+   "uid": "at:revolut-premium"
+  },
+  "D04": {
+   "id": "D04",
+   "uid": "at:revolut-metal"
+  },
+  "D05": {
+   "id": "D05",
+   "uid": "at:revolut-ultra"
+  },
+  "D06": {
+   "id": "D06",
+   "uid": "at:n26-standard"
+  },
+  "D07": {
+   "id": "D07",
+   "uid": "at:n26-smart"
+  },
+  "D08": {
+   "id": "D08",
+   "uid": "at:n26-go"
+  },
+  "D09": {
+   "id": "D09",
+   "uid": "at:n26-metal"
+  },
+  "D10": {
+   "id": "D10",
+   "uid": "at:trade-republic-karte"
+  },
+  "D11": {
+   "id": "D11",
+   "uid": "at:bitpanda-karte"
+  },
+  "D12": {
+   "id": "D12",
+   "uid": "at:bunq-karte"
+  },
+  "D13": {
+   "id": "D13",
+   "uid": "at:wise-karte"
+  }
+ },
+ "de": {
+  "1822direkt-visa-classic": {
+   "id": "DE-1822direkt-visa-classic-kreditkarte",
+   "uid": "de:1822direkt-visa-classic-kreditkarte"
+  },
+  "1822direkt-visa-gold": {
+   "id": "DE-1822direkt-visa-gold-kreditkarte",
+   "uid": "de:1822direkt-visa-gold-kreditkarte"
+  },
+  "adac-kreditkarte": {
+   "id": "DE-adac-kreditkarte",
+   "uid": "de:adac-kreditkarte"
+  },
+  "adac-kreditkarte-paket-platin": {
+   "id": "DE-adac-kreditkarte-mit-paket-platin",
+   "uid": "de:adac-kreditkarte-mit-paket-platin"
+  },
+  "adac-kreditkarte-paket-reise": {
+   "id": "DE-adac-kreditkarte-mit-paket-reise",
+   "uid": "de:adac-kreditkarte-mit-paket-reise"
+  },
+  "adac-kreditkarte-paket-schutz": {
+   "id": "DE-adac-kreditkarte-mit-paket-schutz",
+   "uid": "de:adac-kreditkarte-mit-paket-schutz"
+  },
+  "adac-kreditkarte-paket-sparen": {
+   "id": "DE-adac-kreditkarte-mit-paket-sparen",
+   "uid": "de:adac-kreditkarte-mit-paket-sparen"
+  },
+  "advanzia-gebuehrenfrei-mastercard-gold": {
+   "id": "DE-advanzia-bank-gebuehrenfrei-mastercard-gold",
+   "uid": "de:advanzia-bank-gebuehrenfrei-mastercard-gold"
+  },
+  "amazon-business-american-express-card": {
+   "id": "DE-amazon-business-american-express-card",
+   "uid": "de:amazon-business-american-express-card"
+  },
+  "amazon-business-prime-american-express-card": {
+   "id": "DE-amazon-business-prime-american-express-card",
+   "uid": "de:amazon-business-prime-american-express-card"
+  },
+  "amazon-visa": {
+   "id": "DE-amazon-visa",
+   "uid": "de:amazon-visa"
+  },
+  "american-express-blue-card": {
+   "id": "DE-american-express-blue-card",
+   "uid": "de:american-express-blue-card"
+  },
+  "american-express-business-gold-card": {
+   "id": "DE-american-express-business-gold-card",
+   "uid": "de:american-express-business-gold-card"
+  },
+  "american-express-business-green-card": {
+   "id": "DE-american-express-business-green-card",
+   "uid": "de:american-express-business-green-card"
+  },
+  "american-express-business-platinum-card": {
+   "id": "DE-american-express-business-platinum-card",
+   "uid": "de:american-express-business-platinum-card"
+  },
+  "american-express-card": {
+   "id": "DE-american-express-card",
+   "uid": "de:american-express-card"
+  },
+  "american-express-gold-card": {
+   "id": "DE-american-express-gold-card",
+   "uid": "de:american-express-gold-card"
+  },
+  "american-express-gold-card-rose": {
+   "id": "DE-american-express-gold-card-rose",
+   "uid": "de:american-express-gold-card-rose"
+  },
+  "american-express-platinum-card": {
+   "id": "DE-american-express-platinum-card",
+   "uid": "de:american-express-platinum-card"
+  },
+  "awa7-visa": {
+   "id": "DE-awa7-visa-kreditkarte",
+   "uid": "de:awa7-visa-kreditkarte"
+  },
+  "bank-dimare-extra-karte": {
+   "id": "DE-bank-dimare-extra-karte-mastercard",
+   "uid": "de:bank-dimare-extra-karte-mastercard"
+  },
+  "bank-norwegian-visa": {
+   "id": "DE-bank-norwegian-visa-kreditkarte",
+   "uid": "de:bank-norwegian-visa-kreditkarte"
+  },
+  "bbva-debitkarte": {
+   "id": "DE-bbva-debitkarte",
+   "uid": "de:bbva-debitkarte"
+  },
+  "bitpanda-card": {
+   "id": "DE-bitpanda-visa-card",
+   "uid": "de:bitpanda-visa-card"
+  },
+  "bmw-card-american-express": {
+   "id": "DE-bmw-card-von-american-express",
+   "uid": "de:bmw-card-von-american-express"
+  },
+  "bmw-premium-card-carbon": {
+   "id": "DE-bmw-premium-card-carbon",
+   "uid": "de:bmw-premium-card-carbon"
+  },
+  "bunq-business-core": {
+   "id": "DE-bunq-core-business",
+   "uid": "de:bunq-core-business"
+  },
+  "bunq-business-elite": {
+   "id": "DE-bunq-elite-business",
+   "uid": "de:bunq-elite-business"
+  },
+  "bunq-business-free": {
+   "id": "DE-bunq-free-business",
+   "uid": "de:bunq-free-business"
+  },
+  "bunq-business-pro": {
+   "id": "DE-bunq-pro-business",
+   "uid": "de:bunq-pro-business"
+  },
+  "bunq-core": {
+   "id": "DE-bunq-core",
+   "uid": "de:bunq-core"
+  },
+  "bunq-elite": {
+   "id": "DE-bunq-elite",
+   "uid": "de:bunq-elite"
+  },
+  "bunq-free": {
+   "id": "DE-bunq-free",
+   "uid": "de:bunq-free"
+  },
+  "bunq-pro": {
+   "id": "DE-bunq-pro",
+   "uid": "de:bunq-pro"
+  },
+  "c24-max": {
+   "id": "DE-c24-bank-max",
+   "uid": "de:c24-bank-max"
+  },
+  "c24-plus": {
+   "id": "DE-c24-bank-plus",
+   "uid": "de:c24-bank-plus"
+  },
+  "c24-smart": {
+   "id": "DE-c24-bank-smart",
+   "uid": "de:c24-bank-smart"
+  },
+  "comdirect-visa-debitkarte": {
+   "id": "DE-comdirect-visa-debitkarte",
+   "uid": "de:comdirect-visa-debitkarte"
+  },
+  "comdirect-visa-kreditkarte": {
+   "id": "DE-comdirect-visa-kreditkarte",
+   "uid": "de:comdirect-visa-kreditkarte"
+  },
+  "commerzbank-business-card-classic": {
+   "id": "DE-commerzbank-business-card-classic",
+   "uid": "de:commerzbank-business-card-classic"
+  },
+  "commerzbank-business-card-premium": {
+   "id": "DE-commerzbank-business-card-premium",
+   "uid": "de:commerzbank-business-card-premium"
+  },
+  "commerzbank-classic-kreditkarte": {
+   "id": "DE-commerzbank-classickreditkarte",
+   "uid": "de:commerzbank-classickreditkarte"
+  },
+  "commerzbank-gold-kreditkarte": {
+   "id": "DE-commerzbank-goldkreditkarte",
+   "uid": "de:commerzbank-goldkreditkarte"
+  },
+  "commerzbank-mastercard-debit": {
+   "id": "DE-commerzbank-mastercard-debit",
+   "uid": "de:commerzbank-mastercard-debit"
+  },
+  "commerzbank-premium-kreditkarte": {
+   "id": "DE-commerzbank-premiumkreditkarte",
+   "uid": "de:commerzbank-premiumkreditkarte"
+  },
+  "commerzbank-prepaid": {
+   "id": "DE-commerzbank-prepaid-kreditkarte",
+   "uid": "de:commerzbank-prepaid-kreditkarte"
+  },
+  "commerzbank-young-visa": {
+   "id": "DE-commerzbank-young-visa-kreditkarte",
+   "uid": "de:commerzbank-young-visa-kreditkarte"
+  },
+  "consors-finanz-mastercard": {
+   "id": "DE-consors-finanz-mastercard",
+   "uid": "de:consors-finanz-mastercard"
+  },
+  "consorsbank-credit-card-gold-light": {
+   "id": "DE-consorsbank-credit-card-gold-light",
+   "uid": "de:consorsbank-credit-card-gold-light"
+  },
+  "consorsbank-visa-card-debit": {
+   "id": "DE-consorsbank-visa-card-debit",
+   "uid": "de:consorsbank-visa-card-debit"
+  },
+  "consorsbank-visa-card-gold": {
+   "id": "DE-consorsbank-visa-card-gold",
+   "uid": "de:consorsbank-visa-card-gold"
+  },
+  "crypto-com-visa-indigo-jade": {
+   "id": "DE-crypto-com-visa-card-jade-indigo",
+   "uid": "de:crypto-com-visa-card-jade-indigo"
+  },
+  "crypto-com-visa-midnight": {
+   "id": "DE-crypto-com-visa-card-midnight",
+   "uid": "de:crypto-com-visa-card-midnight"
+  },
+  "crypto-com-visa-ruby": {
+   "id": "DE-crypto-com-visa-card-ruby-steel",
+   "uid": "de:crypto-com-visa-card-ruby-steel"
+  },
+  "curve-pay": {
+   "id": "DE-curve-pay",
+   "uid": "de:curve-pay"
+  },
+  "curve-pay-pro": {
+   "id": "DE-curve-pay-pro",
+   "uid": "de:curve-pay-pro"
+  },
+  "curve-pay-pro-plus": {
+   "id": "DE-curve-pay-proplus",
+   "uid": "de:curve-pay-proplus"
+  },
+  "curve-pay-x": {
+   "id": "DE-curve-pay-x",
+   "uid": "de:curve-pay-x"
+  },
+  "deutsche-bank-businesscard": {
+   "id": "DE-deutsche-bank-businesscard",
+   "uid": "de:deutsche-bank-businesscard"
+  },
+  "deutsche-bank-businesscard-plus": {
+   "id": "DE-deutsche-bank-businesscard-mit-plus-paket",
+   "uid": "de:deutsche-bank-businesscard-mit-plus-paket"
+  },
+  "deutsche-bank-mastercard-black": {
+   "id": "DE-deutsche-bank-mastercard-black",
+   "uid": "de:deutsche-bank-mastercard-black"
+  },
+  "deutsche-bank-mastercard-gold": {
+   "id": "DE-deutsche-bank-mastercard-gold",
+   "uid": "de:deutsche-bank-mastercard-gold"
+  },
+  "deutsche-bank-mastercard-platin": {
+   "id": "DE-deutsche-bank-mastercard-platin",
+   "uid": "de:deutsche-bank-mastercard-platin"
+  },
+  "deutsche-bank-mastercard-standard": {
+   "id": "DE-deutsche-bank-mastercard-standard",
+   "uid": "de:deutsche-bank-mastercard-standard"
+  },
+  "deutsche-bank-mastercard-travel": {
+   "id": "DE-deutsche-bank-mastercard-travel",
+   "uid": "de:deutsche-bank-mastercard-travel"
+  },
+  "deutschland-kreditkarte-classic": {
+   "id": "DE-deutschland-kreditkarte-classic",
+   "uid": "de:deutschland-kreditkarte-classic"
+  },
+  "deutschland-kreditkarte-gold": {
+   "id": "DE-deutschland-kreditkarte-gold",
+   "uid": "de:deutschland-kreditkarte-gold"
+  },
+  "dkb-visa-debitkarte": {
+   "id": "DE-dkb-visa-debitkarte",
+   "uid": "de:dkb-visa-debitkarte"
+  },
+  "dkb-visa-kreditkarte": {
+   "id": "DE-dkb-visa-kreditkarte",
+   "uid": "de:dkb-visa-kreditkarte"
+  },
+  "dm-payback-american-express": {
+   "id": "DE-dm-payback-american-express-karte",
+   "uid": "de:dm-payback-american-express-karte"
+  },
+  "easybank-kreditkarte": {
+   "id": "DE-easybank-kreditkarte",
+   "uid": "de:easybank-kreditkarte"
+  },
+  "easybank-kreditkarte-gold": {
+   "id": "DE-easybank-kreditkarte-gold",
+   "uid": "de:easybank-kreditkarte-gold"
+  },
+  "easybank-kreditkarte-platinum": {
+   "id": "DE-easybank-kreditkarte-platinum",
+   "uid": "de:easybank-kreditkarte-platinum"
+  },
+  "eurowings-kreditkarte-classic": {
+   "id": "DE-eurowings-kreditkarte-classic",
+   "uid": "de:eurowings-kreditkarte-classic"
+  },
+  "eurowings-kreditkarte-premium": {
+   "id": "DE-eurowings-kreditkarte-premium",
+   "uid": "de:eurowings-kreditkarte-premium"
+  },
+  "hanseatic-genialcard": {
+   "id": "DE-hanseatic-bank-genialcard",
+   "uid": "de:hanseatic-bank-genialcard"
+  },
+  "hanseatic-goldcard": {
+   "id": "DE-hanseatic-bank-goldcard",
+   "uid": "de:hanseatic-bank-goldcard"
+  },
+  "hilton-honors-kreditkarte": {
+   "id": "DE-hilton-honors-kreditkarte",
+   "uid": "de:hilton-honors-kreditkarte"
+  },
+  "hvb-mastercard": {
+   "id": "DE-hypovereinsbank-mastercard",
+   "uid": "de:hypovereinsbank-mastercard"
+  },
+  "hvb-mastercard-gold": {
+   "id": "DE-hypovereinsbank-mastercard-gold",
+   "uid": "de:hypovereinsbank-mastercard-gold"
+  },
+  "ikea-family-kreditkarte": {
+   "id": "DE-ikea-family-kreditkarte",
+   "uid": "de:ikea-family-kreditkarte"
+  },
+  "ing-visa-card-debit": {
+   "id": "DE-ing-visa-card",
+   "uid": "de:ing-visa-card"
+  },
+  "instabank-kreditkarte": {
+   "id": "DE-instabank-kreditkarte",
+   "uid": "de:instabank-kreditkarte"
+  },
+  "klarna-card-standard": {
+   "id": "DE-klarna-card",
+   "uid": "de:klarna-card"
+  },
+  "klarna-kreditkarte-everywhere": {
+   "id": "DE-klarna-kreditkarte-everywhere",
+   "uid": "de:klarna-kreditkarte-everywhere"
+  },
+  "klarna-max": {
+   "id": "DE-klarna-max",
+   "uid": "de:klarna-max"
+  },
+  "klarna-plus": {
+   "id": "DE-klarna-plus",
+   "uid": "de:klarna-plus"
+  },
+  "klarna-premium": {
+   "id": "DE-klarna-premium",
+   "uid": "de:klarna-premium"
+  },
+  "kraken-krak-card": {
+   "id": "DE-kraken-krak-card",
+   "uid": "de:kraken-krak-card"
+  },
+  "magenta-pay": {
+   "id": "DE-magenta-pay-visa-debitkarte",
+   "uid": "de:magenta-pay-visa-debitkarte"
+  },
+  "mercedes-credit-card-gold": {
+   "id": "DE-mercedes-benz-bw-bank-mercedes-credit-card-gold",
+   "uid": "de:mercedes-benz-bw-bank-mercedes-credit-card-gold"
+  },
+  "mercedes-credit-card-silber": {
+   "id": "DE-mercedes-benz-bw-bank-mercedes-credit-card-silber",
+   "uid": "de:mercedes-benz-bw-bank-mercedes-credit-card-silber"
+  },
+  "miles-and-more-blue-credit-card": {
+   "id": "DE-miles-und-more-blue-credit-card",
+   "uid": "de:miles-und-more-blue-credit-card"
+  },
+  "miles-and-more-blue-credit-card-business": {
+   "id": "DE-miles-und-more-blue-credit-card-business",
+   "uid": "de:miles-und-more-blue-credit-card-business"
+  },
+  "miles-and-more-gold-credit-card": {
+   "id": "DE-miles-und-more-gold-credit-card",
+   "uid": "de:miles-und-more-gold-credit-card"
+  },
+  "miles-and-more-gold-credit-card-business": {
+   "id": "DE-miles-und-more-gold-credit-card-business",
+   "uid": "de:miles-und-more-gold-credit-card-business"
+  },
+  "miles-and-more-lufthansa-frequent-traveller-credit-card": {
+   "id": "DE-miles-und-more-lufthansa-frequent-traveller-credit-card",
+   "uid": "de:miles-und-more-lufthansa-frequent-traveller-credit-card"
+  },
+  "miles-and-more-lufthansa-hon-circle-credit-card": {
+   "id": "DE-miles-und-more-lufthansa-hon-circle-credit-card",
+   "uid": "de:miles-und-more-lufthansa-hon-circle-credit-card"
+  },
+  "miles-and-more-lufthansa-senator-credit-card": {
+   "id": "DE-miles-und-more-lufthansa-senator-credit-card",
+   "uid": "de:miles-und-more-lufthansa-senator-credit-card"
+  },
+  "miles-and-more-myflex-credit-card": {
+   "id": "DE-miles-und-more-myflex-credit-card",
+   "uid": "de:miles-und-more-myflex-credit-card"
+  },
+  "monese-cashback": {
+   "id": "DE-monese-mastercard-cashback",
+   "uid": "de:monese-mastercard-cashback"
+  },
+  "monese-everyday": {
+   "id": "DE-monese-mastercard-everyday",
+   "uid": "de:monese-mastercard-everyday"
+  },
+  "monese-pay-as-you-go": {
+   "id": "DE-monese-mastercard-pay-as-you-go",
+   "uid": "de:monese-mastercard-pay-as-you-go"
+  },
+  "monese-premium": {
+   "id": "DE-monese-mastercard-premium",
+   "uid": "de:monese-mastercard-premium"
+  },
+  "n26-business-go": {
+   "id": "DE-n26-business-go",
+   "uid": "de:n26-business-go"
+  },
+  "n26-business-metal": {
+   "id": "DE-n26-business-metal",
+   "uid": "de:n26-business-metal"
+  },
+  "n26-business-smart": {
+   "id": "DE-n26-business-smart",
+   "uid": "de:n26-business-smart"
+  },
+  "n26-business-standard": {
+   "id": "DE-n26-business-standard",
+   "uid": "de:n26-business-standard"
+  },
+  "n26-go": {
+   "id": "DE-n26-go",
+   "uid": "de:n26-go"
+  },
+  "n26-metal": {
+   "id": "DE-n26-metal",
+   "uid": "de:n26-metal"
+  },
+  "n26-smart": {
+   "id": "DE-n26-smart",
+   "uid": "de:n26-smart"
+  },
+  "n26-standard": {
+   "id": "DE-n26-standard",
+   "uid": "de:n26-standard"
+  },
+  "norisbank-mastercard": {
+   "id": "DE-norisbank-mastercard-kreditkarte",
+   "uid": "de:norisbank-mastercard-kreditkarte"
+  },
+  "olb-mastercard-gold": {
+   "id": "DE-olb-mastercard-gold",
+   "uid": "de:olb-mastercard-gold"
+  },
+  "olb-mastercard-prepaid": {
+   "id": "DE-olb-mastercard-prepaid",
+   "uid": "de:olb-mastercard-prepaid"
+  },
+  "olb-mastercard-standard": {
+   "id": "DE-olb-mastercard-standard",
+   "uid": "de:olb-mastercard-standard"
+  },
+  "olb-mastercard-world-elite": {
+   "id": "DE-olb-mastercard-world-elite",
+   "uid": "de:olb-mastercard-world-elite"
+  },
+  "openbank-bestcard-basic": {
+   "id": "DE-openbank-bestcard-basic",
+   "uid": "de:openbank-bestcard-basic"
+  },
+  "openbank-bestcard-extra": {
+   "id": "DE-openbank-bestcard-extra",
+   "uid": "de:openbank-bestcard-extra"
+  },
+  "openbank-bestcard-premium": {
+   "id": "DE-openbank-bestcard-premium",
+   "uid": "de:openbank-bestcard-premium"
+  },
+  "openbank-bestcard-smart": {
+   "id": "DE-openbank-bestcard-smart",
+   "uid": "de:openbank-bestcard-smart"
+  },
+  "payback-american-express": {
+   "id": "DE-payback-american-express-karte",
+   "uid": "de:payback-american-express-karte"
+  },
+  "payback-visa-guthabenbasis": {
+   "id": "DE-payback-visa-kreditkarte-auf-guthabenbasis",
+   "uid": "de:payback-visa-kreditkarte-auf-guthabenbasis"
+  },
+  "payback-visa-kreditkarte": {
+   "id": "DE-payback-visa-kreditkarte",
+   "uid": "de:payback-visa-kreditkarte"
+  },
+  "postbank-mastercard": {
+   "id": "DE-postbank-mastercard",
+   "uid": "de:postbank-mastercard"
+  },
+  "postbank-mastercard-business-card-classic": {
+   "id": "DE-postbank-mastercard-business-card-classic",
+   "uid": "de:postbank-mastercard-business-card-classic"
+  },
+  "postbank-mastercard-business-card-gold": {
+   "id": "DE-postbank-mastercard-business-card-gold",
+   "uid": "de:postbank-mastercard-business-card-gold"
+  },
+  "postbank-mastercard-gold": {
+   "id": "DE-postbank-mastercard-gold",
+   "uid": "de:postbank-mastercard-gold"
+  },
+  "postbank-mastercard-platinum": {
+   "id": "DE-postbank-mastercard-platinum",
+   "uid": "de:postbank-mastercard-platinum"
+  },
+  "revolut-metal": {
+   "id": "DE-revolut-metal",
+   "uid": "de:revolut-metal"
+  },
+  "revolut-plus": {
+   "id": "DE-revolut-plus",
+   "uid": "de:revolut-plus"
+  },
+  "revolut-premium": {
+   "id": "DE-revolut-premium",
+   "uid": "de:revolut-premium"
+  },
+  "revolut-standard": {
+   "id": "DE-revolut-standard",
+   "uid": "de:revolut-standard"
+  },
+  "revolut-ultra": {
+   "id": "DE-revolut-ultra",
+   "uid": "de:revolut-ultra"
+  },
+  "sparkasse-kreditkarte-classic": {
+   "id": "DE-sparkasse-kreditkarte-classic",
+   "uid": "de:sparkasse-kreditkarte-classic"
+  },
+  "sparkasse-kreditkarte-gold": {
+   "id": "DE-sparkasse-kreditkarte-gold",
+   "uid": "de:sparkasse-kreditkarte-gold"
+  },
+  "sparkasse-visa-business-gold": {
+   "id": "DE-sparkasse-visa-card-business-gold",
+   "uid": "de:sparkasse-visa-card-business-gold"
+  },
+  "sparkasse-visa-card-basis": {
+   "id": "DE-sparkasse-visa-card-basis",
+   "uid": "de:sparkasse-visa-card-basis"
+  },
+  "sumup-business-mastercard": {
+   "id": "DE-sumup-geschaeftskonto-mastercard",
+   "uid": "de:sumup-geschaeftskonto-mastercard"
+  },
+  "sumup-pay-mastercard": {
+   "id": "DE-sumup-pay-mastercard",
+   "uid": "de:sumup-pay-mastercard"
+  },
+  "targobank-business-kreditkarte-komfort": {
+   "id": "DE-targobank-business-kreditkarte-komfort",
+   "uid": "de:targobank-business-kreditkarte-komfort"
+  },
+  "targobank-business-kreditkarte-premium": {
+   "id": "DE-targobank-business-kreditkarte-premium",
+   "uid": "de:targobank-business-kreditkarte-premium"
+  },
+  "targobank-gold-karte": {
+   "id": "DE-targobank-gold-karte",
+   "uid": "de:targobank-gold-karte"
+  },
+  "targobank-online-classic-karte": {
+   "id": "DE-targobank-online-classic-karte",
+   "uid": "de:targobank-online-classic-karte"
+  },
+  "targobank-premium-karte": {
+   "id": "DE-targobank-premium-karte",
+   "uid": "de:targobank-premium-karte"
+  },
+  "tf-bank-mastercard-gold": {
+   "id": "DE-tf-bank-mastercard-gold",
+   "uid": "de:tf-bank-mastercard-gold"
+  },
+  "tomorrow-change": {
+   "id": "DE-tomorrow-change",
+   "uid": "de:tomorrow-change"
+  },
+  "tomorrow-now": {
+   "id": "DE-tomorrow-now",
+   "uid": "de:tomorrow-now"
+  },
+  "tomorrow-plus": {
+   "id": "DE-tomorrow-plus",
+   "uid": "de:tomorrow-plus"
+  },
+  "trade-republic-karte": {
+   "id": "DE-trade-republic-karte",
+   "uid": "de:trade-republic-karte"
+  },
+  "trading-212-card": {
+   "id": "DE-trading-212-card",
+   "uid": "de:trading-212-card"
+  },
+  "turkish-airlines-miles-smiles-mastercard-gold": {
+   "id": "DE-turkish-airlines-milesundsmiles-mastercard-gold",
+   "uid": "de:turkish-airlines-milesundsmiles-mastercard-gold"
+  },
+  "unitplus-mastercard": {
+   "id": "DE-unitplus-mastercard",
+   "uid": "de:unitplus-mastercard"
+  },
+  "vivid-plus": {
+   "id": "DE-vivid-money-plus",
+   "uid": "de:vivid-money-plus"
+  },
+  "vivid-prime": {
+   "id": "DE-vivid-money-prime",
+   "uid": "de:vivid-money-prime"
+  },
+  "vivid-standard": {
+   "id": "DE-vivid-money-standard",
+   "uid": "de:vivid-money-standard"
+  },
+  "volksbank-classiccard": {
+   "id": "DE-volksbank-classiccard",
+   "uid": "de:volksbank-classiccard"
+  },
+  "volksbank-goldcard": {
+   "id": "DE-volksbank-goldcard",
+   "uid": "de:volksbank-goldcard"
+  },
+  "volkswagen-bank-visa-card": {
+   "id": "DE-volkswagen-bank-audi-bank-visa-card",
+   "uid": "de:volkswagen-bank-audi-bank-visa-card"
+  },
+  "volkswagen-bank-visa-card-pur": {
+   "id": "DE-volkswagen-bank-audi-bank-visa-card-pur",
+   "uid": "de:volkswagen-bank-audi-bank-visa-card-pur"
+  },
+  "webcent-kreditkarte": {
+   "id": "DE-web-cent-mastercard-gold-gmx-web-de",
+   "uid": "de:web-cent-mastercard-gold-gmx-web-de"
+  },
+  "wise-karte": {
+   "id": "DE-wise-debitkarte",
+   "uid": "de:wise-debitkarte"
+  }
+ }
+}

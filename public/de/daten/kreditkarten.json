@@ -1,12 +1,14 @@
 {
+ "schema_version": 2,
  "quelle": "https://finvallo.com/de/kreditkarten/",
  "stand": "2026-10-14",
  "anzahl": 162,
  "lizenz": "Frei nutzbar mit Quellenangabe Finvallo",
- "hinweis": "stand = geprueft = Datum der letzten Prüfung der Karte. IDs sind dauerhaft und nicht lückenlos: Entfernte Karten hinterlassen eine Lücke (z. B. AT34, die Austrian Miles & More Smartcard gibt es nur als Business-Karte). url = Kartenseite bei Finvallo, quelle = Anbieterseite, preis = Preisblatt.",
+ "hinweis": "geprueft = Datum der letzten fachlichen Prüfung der Karte (stand ist dasselbe Datum und bleibt nur für ältere Auswertungen). Fehlende Werte sind null und bedeuten nicht, dass eine Leistung ausgeschlossen ist. uid identifiziert Produkt und Markt dauerhaft und bleibt auch bei einer neuen URL gleich. url = Kartenseite bei Finvallo, quelle = Anbieterseite, preis = Preisblatt.",
  "karten": [
   {
-   "id": null,
+   "uid": "de:tf-bank-mastercard-gold",
+   "id": "DE-tf-bank-mastercard-gold",
    "slug": "tf-bank-mastercard-gold",
    "anbieter": "TF Bank",
    "herausgeber": "Avarda Bank AB (TF Bank ist Zweitname)",
@@ -56,7 +58,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:advanzia-bank-gebuehrenfrei-mastercard-gold",
+   "id": "DE-advanzia-bank-gebuehrenfrei-mastercard-gold",
    "slug": "advanzia-bank-gebuehrenfrei-mastercard-gold",
    "anbieter": "Advanzia Bank",
    "herausgeber": null,
@@ -106,7 +109,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:web-cent-mastercard-gold-gmx-web-de",
+   "id": "DE-web-cent-mastercard-gold-gmx-web-de",
    "slug": "web-cent-mastercard-gold-gmx-web-de",
    "anbieter": "GMX / WEB.DE",
    "herausgeber": "Advanzia Bank",
@@ -155,7 +159,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:hilton-honors-kreditkarte",
+   "id": "DE-hilton-honors-kreditkarte",
    "slug": "hilton-honors-kreditkarte",
    "anbieter": "Hilton Honors",
    "herausgeber": "Advanzia Bank",
@@ -206,7 +211,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:turkish-airlines-milesundsmiles-mastercard-gold",
+   "id": "DE-turkish-airlines-milesundsmiles-mastercard-gold",
    "slug": "turkish-airlines-milesundsmiles-mastercard-gold",
    "anbieter": "Turkish Airlines",
    "herausgeber": "Advanzia Bank",
@@ -256,7 +262,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:deutschland-kreditkarte-classic",
+   "id": "DE-deutschland-kreditkarte-classic",
    "slug": "deutschland-kreditkarte-classic",
    "anbieter": "Deutschland-Kreditkarte",
    "herausgeber": "Hanseatic Bank (Vertrieb PaySol)",
@@ -308,7 +315,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:deutschland-kreditkarte-gold",
+   "id": "DE-deutschland-kreditkarte-gold",
    "slug": "deutschland-kreditkarte-gold",
    "anbieter": "Deutschland-Kreditkarte",
    "herausgeber": "Hanseatic Bank (Vertrieb PaySol)",
@@ -359,7 +367,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:instabank-kreditkarte",
+   "id": "DE-instabank-kreditkarte",
    "slug": "instabank-kreditkarte",
    "anbieter": "Instabank",
    "herausgeber": null,
@@ -409,7 +418,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bank-dimare-extra-karte-mastercard",
+   "id": "DE-bank-dimare-extra-karte-mastercard",
    "slug": "bank-dimare-extra-karte-mastercard",
    "anbieter": "Bank DiMare",
    "herausgeber": "Bank DiMare Limited (Malta, bis 07/2026 Novum Bank)",
@@ -460,7 +470,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:klarna-card",
+   "id": "DE-klarna-card",
    "slug": "klarna-card",
    "anbieter": "Klarna",
    "herausgeber": "Klarna Bank AB (publ)",
@@ -511,7 +522,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:klarna-kreditkarte-everywhere",
+   "id": "DE-klarna-kreditkarte-everywhere",
    "slug": "klarna-kreditkarte-everywhere",
    "anbieter": "Klarna",
    "herausgeber": "Klarna Bank AB (publ)",
@@ -561,7 +573,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:klarna-plus",
+   "id": "DE-klarna-plus",
    "slug": "klarna-plus",
    "anbieter": "Klarna",
    "herausgeber": "Klarna Bank AB (publ)",
@@ -610,7 +623,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:klarna-premium",
+   "id": "DE-klarna-premium",
    "slug": "klarna-premium",
    "anbieter": "Klarna",
    "herausgeber": "Klarna Bank AB (publ)",
@@ -660,7 +674,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:klarna-max",
+   "id": "DE-klarna-max",
    "slug": "klarna-max",
    "anbieter": "Klarna",
    "herausgeber": "Klarna Bank AB (publ)",
@@ -710,7 +725,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:easybank-kreditkarte",
+   "id": "DE-easybank-kreditkarte",
    "slug": "easybank-kreditkarte",
    "anbieter": "easybank",
    "herausgeber": "BAWAG AG Niederlassung Deutschland (ehem. Barclays)",
@@ -762,7 +778,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:easybank-kreditkarte-gold",
+   "id": "DE-easybank-kreditkarte-gold",
    "slug": "easybank-kreditkarte-gold",
    "anbieter": "easybank",
    "herausgeber": "BAWAG AG Niederlassung Deutschland (ehem. Barclays)",
@@ -814,7 +831,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:easybank-kreditkarte-platinum",
+   "id": "DE-easybank-kreditkarte-platinum",
    "slug": "easybank-kreditkarte-platinum",
    "anbieter": "easybank",
    "herausgeber": "BAWAG AG Niederlassung Deutschland (ehem. Barclays)",
@@ -865,7 +883,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:eurowings-kreditkarte-classic",
+   "id": "DE-eurowings-kreditkarte-classic",
    "slug": "eurowings-kreditkarte-classic",
    "anbieter": "Eurowings",
    "herausgeber": "easybank (BAWAG AG Niederlassung Deutschland, ehem. Barclays)",
@@ -916,7 +935,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:eurowings-kreditkarte-premium",
+   "id": "DE-eurowings-kreditkarte-premium",
    "slug": "eurowings-kreditkarte-premium",
    "anbieter": "Eurowings",
    "herausgeber": "easybank (BAWAG AG Niederlassung Deutschland, ehem. Barclays)",
@@ -966,7 +986,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:consorsbank-credit-card-gold-light",
+   "id": "DE-consorsbank-credit-card-gold-light",
    "slug": "consorsbank-credit-card-gold-light",
    "anbieter": "Consorsbank",
    "herausgeber": "BNP Paribas S.A. Niederlassung Deutschland",
@@ -1016,7 +1037,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:consorsbank-visa-card-gold",
+   "id": "DE-consorsbank-visa-card-gold",
    "slug": "consorsbank-visa-card-gold",
    "anbieter": "Consorsbank",
    "herausgeber": "BNP Paribas S.A. Niederlassung Deutschland",
@@ -1067,7 +1089,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:consorsbank-visa-card-debit",
+   "id": "DE-consorsbank-visa-card-debit",
    "slug": "consorsbank-visa-card-debit",
    "anbieter": "Consorsbank",
    "herausgeber": "BNP Paribas S.A. Niederlassung Deutschland",
@@ -1115,7 +1138,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:consors-finanz-mastercard",
+   "id": "DE-consors-finanz-mastercard",
    "slug": "consors-finanz-mastercard",
    "anbieter": "Consors Finanz",
    "herausgeber": "BNP Paribas S.A. Niederlassung Deutschland",
@@ -1165,7 +1189,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:amazon-visa",
+   "id": "DE-amazon-visa",
    "slug": "amazon-visa",
    "anbieter": "Amazon",
    "herausgeber": "Open Bank S.A. (Openbank Pay, ehem. Zinia; Santander)",
@@ -1215,7 +1240,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:ikea-family-kreditkarte",
+   "id": "DE-ikea-family-kreditkarte",
    "slug": "ikea-family-kreditkarte",
    "anbieter": "IKEA",
    "herausgeber": "Ikano Bank AB (publ), Zweigniederlassung Deutschland",
@@ -1266,7 +1292,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:deutsche-bank-mastercard-standard",
+   "id": "DE-deutsche-bank-mastercard-standard",
    "slug": "deutsche-bank-mastercard-standard",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1314,7 +1341,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:deutsche-bank-mastercard-gold",
+   "id": "DE-deutsche-bank-mastercard-gold",
    "slug": "deutsche-bank-mastercard-gold",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1363,7 +1391,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:deutsche-bank-mastercard-travel",
+   "id": "DE-deutsche-bank-mastercard-travel",
    "slug": "deutsche-bank-mastercard-travel",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1411,7 +1440,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:deutsche-bank-mastercard-platin",
+   "id": "DE-deutsche-bank-mastercard-platin",
    "slug": "deutsche-bank-mastercard-platin",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1460,7 +1490,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:deutsche-bank-mastercard-black",
+   "id": "DE-deutsche-bank-mastercard-black",
    "slug": "deutsche-bank-mastercard-black",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1507,7 +1538,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:deutsche-bank-businesscard",
+   "id": "DE-deutsche-bank-businesscard",
    "slug": "deutsche-bank-businesscard",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1552,7 +1584,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:deutsche-bank-businesscard-mit-plus-paket",
+   "id": "DE-deutsche-bank-businesscard-mit-plus-paket",
    "slug": "deutsche-bank-businesscard-mit-plus-paket",
    "anbieter": "Deutsche Bank",
    "herausgeber": null,
@@ -1596,7 +1629,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:miles-und-more-gold-credit-card",
+   "id": "DE-miles-und-more-gold-credit-card",
    "slug": "miles-und-more-gold-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1645,7 +1679,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:miles-und-more-blue-credit-card",
+   "id": "DE-miles-und-more-blue-credit-card",
    "slug": "miles-und-more-blue-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1694,7 +1729,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:miles-und-more-myflex-credit-card",
+   "id": "DE-miles-und-more-myflex-credit-card",
    "slug": "miles-und-more-myflex-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1743,7 +1779,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:miles-und-more-lufthansa-frequent-traveller-credit-card",
+   "id": "DE-miles-und-more-lufthansa-frequent-traveller-credit-card",
    "slug": "miles-und-more-lufthansa-frequent-traveller-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1790,7 +1827,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:miles-und-more-lufthansa-senator-credit-card",
+   "id": "DE-miles-und-more-lufthansa-senator-credit-card",
    "slug": "miles-und-more-lufthansa-senator-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1838,7 +1876,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:miles-und-more-lufthansa-hon-circle-credit-card",
+   "id": "DE-miles-und-more-lufthansa-hon-circle-credit-card",
    "slug": "miles-und-more-lufthansa-hon-circle-credit-card",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1886,7 +1925,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:miles-und-more-gold-credit-card-business",
+   "id": "DE-miles-und-more-gold-credit-card-business",
    "slug": "miles-und-more-gold-credit-card-business",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1931,7 +1971,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:miles-und-more-blue-credit-card-business",
+   "id": "DE-miles-und-more-blue-credit-card-business",
    "slug": "miles-und-more-blue-credit-card-business",
    "anbieter": "Miles & More",
    "herausgeber": "Deutsche Bank AG",
@@ -1975,7 +2016,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:postbank-mastercard",
+   "id": "DE-postbank-mastercard",
    "slug": "postbank-mastercard",
    "anbieter": "Postbank",
    "herausgeber": "Deutsche Bank AG (Postbank - eine Niederlassung der Deutsche Bank AG)",
@@ -2024,7 +2066,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:postbank-mastercard-gold",
+   "id": "DE-postbank-mastercard-gold",
    "slug": "postbank-mastercard-gold",
    "anbieter": "Postbank",
    "herausgeber": "Deutsche Bank AG (Postbank - eine Niederlassung der Deutsche Bank AG)",
@@ -2074,7 +2117,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:postbank-mastercard-platinum",
+   "id": "DE-postbank-mastercard-platinum",
    "slug": "postbank-mastercard-platinum",
    "anbieter": "Postbank",
    "herausgeber": "Deutsche Bank AG (Postbank - eine Niederlassung der Deutsche Bank AG)",
@@ -2124,7 +2168,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:postbank-mastercard-business-card-classic",
+   "id": "DE-postbank-mastercard-business-card-classic",
    "slug": "postbank-mastercard-business-card-classic",
    "anbieter": "Postbank",
    "herausgeber": "Deutsche Bank AG (Postbank - eine Niederlassung der Deutsche Bank AG)",
@@ -2166,7 +2211,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:postbank-mastercard-business-card-gold",
+   "id": "DE-postbank-mastercard-business-card-gold",
    "slug": "postbank-mastercard-business-card-gold",
    "anbieter": "Postbank",
    "herausgeber": "Deutsche Bank AG (Postbank - eine Niederlassung der Deutsche Bank AG)",
@@ -2206,7 +2252,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:norisbank-mastercard-kreditkarte",
+   "id": "DE-norisbank-mastercard-kreditkarte",
    "slug": "norisbank-mastercard-kreditkarte",
    "anbieter": "norisbank",
    "herausgeber": null,
@@ -2252,7 +2299,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:openbank-bestcard-basic",
+   "id": "DE-openbank-bestcard-basic",
    "slug": "openbank-bestcard-basic",
    "anbieter": "Openbank",
    "herausgeber": "Openbank Deutschland AG (ehem. Santander Consumer Bank AG)",
@@ -2300,7 +2348,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:openbank-bestcard-smart",
+   "id": "DE-openbank-bestcard-smart",
    "slug": "openbank-bestcard-smart",
    "anbieter": "Openbank",
    "herausgeber": "Openbank Deutschland AG (ehem. Santander Consumer Bank AG)",
@@ -2350,7 +2399,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:openbank-bestcard-extra",
+   "id": "DE-openbank-bestcard-extra",
    "slug": "openbank-bestcard-extra",
    "anbieter": "Openbank",
    "herausgeber": "Openbank Deutschland AG (ehem. Santander Consumer Bank AG)",
@@ -2399,7 +2449,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:openbank-bestcard-premium",
+   "id": "DE-openbank-bestcard-premium",
    "slug": "openbank-bestcard-premium",
    "anbieter": "Openbank",
    "herausgeber": "Openbank Deutschland AG (ehem. Santander Consumer Bank AG)",
@@ -2448,7 +2499,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:targobank-online-classic-karte",
+   "id": "DE-targobank-online-classic-karte",
    "slug": "targobank-online-classic-karte",
    "anbieter": "TARGOBANK",
    "herausgeber": null,
@@ -2497,7 +2549,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:targobank-gold-karte",
+   "id": "DE-targobank-gold-karte",
    "slug": "targobank-gold-karte",
    "anbieter": "TARGOBANK",
    "herausgeber": null,
@@ -2546,7 +2599,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:targobank-premium-karte",
+   "id": "DE-targobank-premium-karte",
    "slug": "targobank-premium-karte",
    "anbieter": "TARGOBANK",
    "herausgeber": null,
@@ -2597,7 +2651,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:targobank-business-kreditkarte-komfort",
+   "id": "DE-targobank-business-kreditkarte-komfort",
    "slug": "targobank-business-kreditkarte-komfort",
    "anbieter": "TARGOBANK",
    "herausgeber": null,
@@ -2641,7 +2696,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:targobank-business-kreditkarte-premium",
+   "id": "DE-targobank-business-kreditkarte-premium",
    "slug": "targobank-business-kreditkarte-premium",
    "anbieter": "TARGOBANK",
    "herausgeber": null,
@@ -2685,7 +2741,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:commerzbank-prepaid-kreditkarte",
+   "id": "DE-commerzbank-prepaid-kreditkarte",
    "slug": "commerzbank-prepaid-kreditkarte",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -2734,7 +2791,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:commerzbank-mastercard-debit",
+   "id": "DE-commerzbank-mastercard-debit",
    "slug": "commerzbank-mastercard-debit",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -2783,7 +2841,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:commerzbank-classickreditkarte",
+   "id": "DE-commerzbank-classickreditkarte",
    "slug": "commerzbank-classickreditkarte",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -2830,7 +2889,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:commerzbank-goldkreditkarte",
+   "id": "DE-commerzbank-goldkreditkarte",
    "slug": "commerzbank-goldkreditkarte",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -2877,7 +2937,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:commerzbank-premiumkreditkarte",
+   "id": "DE-commerzbank-premiumkreditkarte",
    "slug": "commerzbank-premiumkreditkarte",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -2927,7 +2988,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:commerzbank-young-visa-kreditkarte",
+   "id": "DE-commerzbank-young-visa-kreditkarte",
    "slug": "commerzbank-young-visa-kreditkarte",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -2973,7 +3035,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:commerzbank-business-card-classic",
+   "id": "DE-commerzbank-business-card-classic",
    "slug": "commerzbank-business-card-classic",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -3018,7 +3081,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:commerzbank-business-card-premium",
+   "id": "DE-commerzbank-business-card-premium",
    "slug": "commerzbank-business-card-premium",
    "anbieter": "Commerzbank",
    "herausgeber": null,
@@ -3064,7 +3128,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:comdirect-visa-kreditkarte",
+   "id": "DE-comdirect-visa-kreditkarte",
    "slug": "comdirect-visa-kreditkarte",
    "anbieter": "comdirect",
    "herausgeber": "Commerzbank AG",
@@ -3112,7 +3177,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:comdirect-visa-debitkarte",
+   "id": "DE-comdirect-visa-debitkarte",
    "slug": "comdirect-visa-debitkarte",
    "anbieter": "comdirect",
    "herausgeber": "Commerzbank AG",
@@ -3162,7 +3228,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:dkb-visa-debitkarte",
+   "id": "DE-dkb-visa-debitkarte",
    "slug": "dkb-visa-debitkarte",
    "anbieter": "DKB",
    "herausgeber": "Deutsche Kreditbank AG",
@@ -3213,7 +3280,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:dkb-visa-kreditkarte",
+   "id": "DE-dkb-visa-kreditkarte",
    "slug": "dkb-visa-kreditkarte",
    "anbieter": "DKB",
    "herausgeber": "Deutsche Kreditbank AG",
@@ -3259,7 +3327,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:ing-visa-card",
+   "id": "DE-ing-visa-card",
    "slug": "ing-visa-card",
    "anbieter": "ING",
    "herausgeber": "ING-DiBa AG",
@@ -3310,7 +3379,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:1822direkt-visa-classic-kreditkarte",
+   "id": "DE-1822direkt-visa-classic-kreditkarte",
    "slug": "1822direkt-visa-classic-kreditkarte",
    "anbieter": "1822direkt",
    "herausgeber": "Frankfurter Sparkasse",
@@ -3358,7 +3428,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:1822direkt-visa-gold-kreditkarte",
+   "id": "DE-1822direkt-visa-gold-kreditkarte",
    "slug": "1822direkt-visa-gold-kreditkarte",
    "anbieter": "1822direkt",
    "herausgeber": "Frankfurter Sparkasse",
@@ -3409,7 +3480,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:hypovereinsbank-mastercard",
+   "id": "DE-hypovereinsbank-mastercard",
    "slug": "hypovereinsbank-mastercard",
    "anbieter": "HypoVereinsbank",
    "herausgeber": "UniCredit Bank GmbH",
@@ -3457,7 +3529,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:hypovereinsbank-mastercard-gold",
+   "id": "DE-hypovereinsbank-mastercard-gold",
    "slug": "hypovereinsbank-mastercard-gold",
    "anbieter": "HypoVereinsbank",
    "herausgeber": "UniCredit Bank GmbH",
@@ -3507,7 +3580,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:sparkasse-kreditkarte-classic",
+   "id": "DE-sparkasse-kreditkarte-classic",
    "slug": "sparkasse-kreditkarte-classic",
    "anbieter": "Sparkasse",
    "herausgeber": "Berliner Sparkasse (Beispiel; Herausgeber ist die jeweilige Sparkasse)",
@@ -3555,7 +3629,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:sparkasse-kreditkarte-gold",
+   "id": "DE-sparkasse-kreditkarte-gold",
    "slug": "sparkasse-kreditkarte-gold",
    "anbieter": "Sparkasse",
    "herausgeber": "Berliner Sparkasse (Beispiel; Herausgeber ist die jeweilige Sparkasse)",
@@ -3605,7 +3680,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:sparkasse-visa-card-basis",
+   "id": "DE-sparkasse-visa-card-basis",
    "slug": "sparkasse-visa-card-basis",
    "anbieter": "Sparkasse",
    "herausgeber": "Berliner Sparkasse (Beispiel; Herausgeber ist die jeweilige Sparkasse)",
@@ -3653,7 +3729,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:sparkasse-visa-card-business-gold",
+   "id": "DE-sparkasse-visa-card-business-gold",
    "slug": "sparkasse-visa-card-business-gold",
    "anbieter": "Sparkasse",
    "herausgeber": "Berliner Sparkasse (Beispiel; Herausgeber ist die jeweilige Sparkasse)",
@@ -3696,7 +3773,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:volksbank-classiccard",
+   "id": "DE-volksbank-classiccard",
    "slug": "volksbank-classiccard",
    "anbieter": "Volksbank",
    "herausgeber": "Berliner Volksbank eG (Beispiel; Herausgeber ist die jeweilige Volksbank, Kartenprodukt DG Nexolution)",
@@ -3744,7 +3822,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:volksbank-goldcard",
+   "id": "DE-volksbank-goldcard",
    "slug": "volksbank-goldcard",
    "anbieter": "Volksbank",
    "herausgeber": "Berliner Volksbank eG (Beispiel; Herausgeber ist die jeweilige Volksbank, Kartenprodukt DG Nexolution)",
@@ -3794,7 +3873,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:olb-mastercard-prepaid",
+   "id": "DE-olb-mastercard-prepaid",
    "slug": "olb-mastercard-prepaid",
    "anbieter": "OLB",
    "herausgeber": "Oldenburgische Landesbank AG",
@@ -3842,7 +3922,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:olb-mastercard-standard",
+   "id": "DE-olb-mastercard-standard",
    "slug": "olb-mastercard-standard",
    "anbieter": "OLB",
    "herausgeber": "Oldenburgische Landesbank AG",
@@ -3887,7 +3968,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:olb-mastercard-gold",
+   "id": "DE-olb-mastercard-gold",
    "slug": "olb-mastercard-gold",
    "anbieter": "OLB",
    "herausgeber": "Oldenburgische Landesbank AG",
@@ -3932,7 +4014,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:olb-mastercard-world-elite",
+   "id": "DE-olb-mastercard-world-elite",
    "slug": "olb-mastercard-world-elite",
    "anbieter": "OLB",
    "herausgeber": "Oldenburgische Landesbank AG",
@@ -3977,7 +4060,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:american-express-platinum-card",
+   "id": "DE-american-express-platinum-card",
    "slug": "american-express-platinum-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4028,7 +4112,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:american-express-gold-card",
+   "id": "DE-american-express-gold-card",
    "slug": "american-express-gold-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4079,7 +4164,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:american-express-gold-card-rose",
+   "id": "DE-american-express-gold-card-rose",
    "slug": "american-express-gold-card-rose",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4130,7 +4216,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:american-express-card",
+   "id": "DE-american-express-card",
    "slug": "american-express-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4177,7 +4264,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:american-express-blue-card",
+   "id": "DE-american-express-blue-card",
    "slug": "american-express-blue-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4225,7 +4313,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:payback-american-express-karte",
+   "id": "DE-payback-american-express-karte",
    "slug": "payback-american-express-karte",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4275,7 +4364,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:dm-payback-american-express-karte",
+   "id": "DE-dm-payback-american-express-karte",
    "slug": "dm-payback-american-express-karte",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4324,7 +4414,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bmw-card-von-american-express",
+   "id": "DE-bmw-card-von-american-express",
    "slug": "bmw-card-von-american-express",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4372,7 +4463,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bmw-premium-card-carbon",
+   "id": "DE-bmw-premium-card-carbon",
    "slug": "bmw-premium-card-carbon",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4423,7 +4515,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:american-express-business-platinum-card",
+   "id": "DE-american-express-business-platinum-card",
    "slug": "american-express-business-platinum-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4474,7 +4567,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:american-express-business-gold-card",
+   "id": "DE-american-express-business-gold-card",
    "slug": "american-express-business-gold-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4525,7 +4619,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:american-express-business-green-card",
+   "id": "DE-american-express-business-green-card",
    "slug": "american-express-business-green-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4574,7 +4669,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:amazon-business-american-express-card",
+   "id": "DE-amazon-business-american-express-card",
    "slug": "amazon-business-american-express-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4622,7 +4718,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:amazon-business-prime-american-express-card",
+   "id": "DE-amazon-business-prime-american-express-card",
    "slug": "amazon-business-prime-american-express-card",
    "anbieter": "American Express",
    "herausgeber": "American Express Europe S.A. (Germany branch)",
@@ -4672,7 +4769,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:payback-visa-kreditkarte",
+   "id": "DE-payback-visa-kreditkarte",
    "slug": "payback-visa-kreditkarte",
    "anbieter": "PAYBACK",
    "herausgeber": "BW-Bank (Baden-Württembergische Bank)",
@@ -4719,7 +4817,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:payback-visa-kreditkarte-auf-guthabenbasis",
+   "id": "DE-payback-visa-kreditkarte-auf-guthabenbasis",
    "slug": "payback-visa-kreditkarte-auf-guthabenbasis",
    "anbieter": "PAYBACK",
    "herausgeber": "BW-Bank (Baden-Württembergische Bank)",
@@ -4766,7 +4865,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:adac-kreditkarte",
+   "id": "DE-adac-kreditkarte",
    "slug": "adac-kreditkarte",
    "anbieter": "ADAC",
    "herausgeber": "Solaris SE",
@@ -4817,7 +4917,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:adac-kreditkarte-mit-paket-schutz",
+   "id": "DE-adac-kreditkarte-mit-paket-schutz",
    "slug": "adac-kreditkarte-mit-paket-schutz",
    "anbieter": "ADAC",
    "herausgeber": "Solaris SE",
@@ -4866,7 +4967,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:adac-kreditkarte-mit-paket-sparen",
+   "id": "DE-adac-kreditkarte-mit-paket-sparen",
    "slug": "adac-kreditkarte-mit-paket-sparen",
    "anbieter": "ADAC",
    "herausgeber": "Solaris SE",
@@ -4916,7 +5018,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:adac-kreditkarte-mit-paket-reise",
+   "id": "DE-adac-kreditkarte-mit-paket-reise",
    "slug": "adac-kreditkarte-mit-paket-reise",
    "anbieter": "ADAC",
    "herausgeber": "Solaris SE",
@@ -4968,7 +5071,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:adac-kreditkarte-mit-paket-platin",
+   "id": "DE-adac-kreditkarte-mit-paket-platin",
    "slug": "adac-kreditkarte-mit-paket-platin",
    "anbieter": "ADAC",
    "herausgeber": "Solaris SE",
@@ -5019,7 +5123,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:n26-standard",
+   "id": "DE-n26-standard",
    "slug": "n26-standard",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5071,7 +5176,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:n26-smart",
+   "id": "DE-n26-smart",
    "slug": "n26-smart",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5121,7 +5227,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:n26-go",
+   "id": "DE-n26-go",
    "slug": "n26-go",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5172,7 +5279,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:n26-metal",
+   "id": "DE-n26-metal",
    "slug": "n26-metal",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5226,7 +5334,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:n26-business-standard",
+   "id": "DE-n26-business-standard",
    "slug": "n26-business-standard",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5274,7 +5383,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:n26-business-smart",
+   "id": "DE-n26-business-smart",
    "slug": "n26-business-smart",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5321,7 +5431,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:n26-business-go",
+   "id": "DE-n26-business-go",
    "slug": "n26-business-go",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5368,7 +5479,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:n26-business-metal",
+   "id": "DE-n26-business-metal",
    "slug": "n26-business-metal",
    "anbieter": "N26",
    "herausgeber": null,
@@ -5417,7 +5529,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:c24-bank-smart",
+   "id": "DE-c24-bank-smart",
    "slug": "c24-bank-smart",
    "anbieter": "C24 Bank",
    "herausgeber": null,
@@ -5468,7 +5581,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:c24-bank-plus",
+   "id": "DE-c24-bank-plus",
    "slug": "c24-bank-plus",
    "anbieter": "C24 Bank",
    "herausgeber": null,
@@ -5516,7 +5630,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:c24-bank-max",
+   "id": "DE-c24-bank-max",
    "slug": "c24-bank-max",
    "anbieter": "C24 Bank",
    "herausgeber": null,
@@ -5566,7 +5681,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:tomorrow-now",
+   "id": "DE-tomorrow-now",
    "slug": "tomorrow-now",
    "anbieter": "Tomorrow",
    "herausgeber": "Solaris SE",
@@ -5616,7 +5732,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:tomorrow-change",
+   "id": "DE-tomorrow-change",
    "slug": "tomorrow-change",
    "anbieter": "Tomorrow",
    "herausgeber": "Solaris SE",
@@ -5664,7 +5781,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:tomorrow-plus",
+   "id": "DE-tomorrow-plus",
    "slug": "tomorrow-plus",
    "anbieter": "Tomorrow",
    "herausgeber": "Solaris SE",
@@ -5716,7 +5834,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:revolut-standard",
+   "id": "DE-revolut-standard",
    "slug": "revolut-standard",
    "anbieter": "Revolut",
    "herausgeber": "Revolut Bank UAB, Zweigniederlassung Deutschland",
@@ -5768,7 +5887,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:revolut-plus",
+   "id": "DE-revolut-plus",
    "slug": "revolut-plus",
    "anbieter": "Revolut",
    "herausgeber": "Revolut Bank UAB, Zweigniederlassung Deutschland",
@@ -5818,7 +5938,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:revolut-premium",
+   "id": "DE-revolut-premium",
    "slug": "revolut-premium",
    "anbieter": "Revolut",
    "herausgeber": "Revolut Bank UAB, Zweigniederlassung Deutschland",
@@ -5868,7 +5989,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:revolut-metal",
+   "id": "DE-revolut-metal",
    "slug": "revolut-metal",
    "anbieter": "Revolut",
    "herausgeber": "Revolut Bank UAB, Zweigniederlassung Deutschland",
@@ -5919,7 +6041,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:revolut-ultra",
+   "id": "DE-revolut-ultra",
    "slug": "revolut-ultra",
    "anbieter": "Revolut",
    "herausgeber": "Revolut Bank UAB, Zweigniederlassung Deutschland",
@@ -5973,7 +6096,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bunq-free",
+   "id": "DE-bunq-free",
    "slug": "bunq-free",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6022,7 +6146,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bunq-core",
+   "id": "DE-bunq-core",
    "slug": "bunq-core",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6070,7 +6195,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bunq-pro",
+   "id": "DE-bunq-pro",
    "slug": "bunq-pro",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6119,7 +6245,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bunq-elite",
+   "id": "DE-bunq-elite",
    "slug": "bunq-elite",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6172,7 +6299,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bunq-free-business",
+   "id": "DE-bunq-free-business",
    "slug": "bunq-free-business",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6219,7 +6347,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bunq-core-business",
+   "id": "DE-bunq-core-business",
    "slug": "bunq-core-business",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6266,7 +6395,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bunq-pro-business",
+   "id": "DE-bunq-pro-business",
    "slug": "bunq-pro-business",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6315,7 +6445,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bunq-elite-business",
+   "id": "DE-bunq-elite-business",
    "slug": "bunq-elite-business",
    "anbieter": "bunq",
    "herausgeber": "bunq B.V.",
@@ -6365,7 +6496,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:vivid-money-standard",
+   "id": "DE-vivid-money-standard",
    "slug": "vivid-money-standard",
    "anbieter": "Vivid Money",
    "herausgeber": "Vivid Money S.A. (Luxemburg)",
@@ -6416,7 +6548,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:vivid-money-plus",
+   "id": "DE-vivid-money-plus",
    "slug": "vivid-money-plus",
    "anbieter": "Vivid Money",
    "herausgeber": "Vivid Money S.A. (Luxemburg)",
@@ -6465,7 +6598,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:vivid-money-prime",
+   "id": "DE-vivid-money-prime",
    "slug": "vivid-money-prime",
    "anbieter": "Vivid Money",
    "herausgeber": "Vivid Money S.A. (Luxemburg)",
@@ -6516,7 +6650,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:wise-debitkarte",
+   "id": "DE-wise-debitkarte",
    "slug": "wise-debitkarte",
    "anbieter": "Wise",
    "herausgeber": "Wise Europe SA (Belgien)",
@@ -6568,7 +6703,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:trade-republic-karte",
+   "id": "DE-trade-republic-karte",
    "slug": "trade-republic-karte",
    "anbieter": "Trade Republic",
    "herausgeber": "Trade Republic Bank GmbH",
@@ -6618,7 +6754,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:trading-212-card",
+   "id": "DE-trading-212-card",
    "slug": "trading-212-card",
    "anbieter": "Trading 212",
    "herausgeber": "Paynetics AD",
@@ -6669,7 +6806,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:unitplus-mastercard",
+   "id": "DE-unitplus-mastercard",
    "slug": "unitplus-mastercard",
    "anbieter": "UnitPlus",
    "herausgeber": null,
@@ -6717,7 +6855,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:kraken-krak-card",
+   "id": "DE-kraken-krak-card",
    "slug": "kraken-krak-card",
    "anbieter": "Kraken",
    "herausgeber": null,
@@ -6767,7 +6906,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bbva-debitkarte",
+   "id": "DE-bbva-debitkarte",
    "slug": "bbva-debitkarte",
    "anbieter": "BBVA",
    "herausgeber": "Banco Bilbao Vizcaya Argentaria S.A., Zweigniederlassung Deutschland",
@@ -6815,7 +6955,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bitpanda-visa-card",
+   "id": "DE-bitpanda-visa-card",
    "slug": "bitpanda-visa-card",
    "anbieter": "Bitpanda",
    "herausgeber": null,
@@ -6865,7 +7006,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:crypto-com-visa-card-midnight",
+   "id": "DE-crypto-com-visa-card-midnight",
    "slug": "crypto-com-visa-card-midnight",
    "anbieter": "Crypto.com",
    "herausgeber": "Foris MT Limited (Malta)",
@@ -6916,7 +7058,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:crypto-com-visa-card-ruby-steel",
+   "id": "DE-crypto-com-visa-card-ruby-steel",
    "slug": "crypto-com-visa-card-ruby-steel",
    "anbieter": "Crypto.com",
    "herausgeber": "Foris MT Limited (Malta)",
@@ -6969,7 +7112,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:crypto-com-visa-card-jade-indigo",
+   "id": "DE-crypto-com-visa-card-jade-indigo",
    "slug": "crypto-com-visa-card-jade-indigo",
    "anbieter": "Crypto.com",
    "herausgeber": "Foris MT Limited (Malta)",
@@ -7023,7 +7167,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:curve-pay",
+   "id": "DE-curve-pay",
    "slug": "curve-pay",
    "anbieter": "Curve",
    "herausgeber": "Curve Europe UAB (Litauen)",
@@ -7073,7 +7218,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:curve-pay-x",
+   "id": "DE-curve-pay-x",
    "slug": "curve-pay-x",
    "anbieter": "Curve",
    "herausgeber": "Curve Europe UAB (Litauen)",
@@ -7124,7 +7270,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:curve-pay-pro",
+   "id": "DE-curve-pay-pro",
    "slug": "curve-pay-pro",
    "anbieter": "Curve",
    "herausgeber": "Curve Europe UAB (Litauen)",
@@ -7175,7 +7322,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:curve-pay-proplus",
+   "id": "DE-curve-pay-proplus",
    "slug": "curve-pay-proplus",
    "anbieter": "Curve",
    "herausgeber": "Curve Europe UAB (Litauen)",
@@ -7227,7 +7375,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:magenta-pay-visa-debitkarte",
+   "id": "DE-magenta-pay-visa-debitkarte",
    "slug": "magenta-pay-visa-debitkarte",
    "anbieter": "Magenta Pay (Telekom)",
    "herausgeber": "Telekom Payments S.A. (ehem. COSMOTE Payments, Griechenland)",
@@ -7278,7 +7427,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:sumup-pay-mastercard",
+   "id": "DE-sumup-pay-mastercard",
    "slug": "sumup-pay-mastercard",
    "anbieter": "SumUp",
    "herausgeber": "SumUp Limited (E-Geld-Institut, Irland)",
@@ -7328,7 +7478,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:sumup-geschaeftskonto-mastercard",
+   "id": "DE-sumup-geschaeftskonto-mastercard",
    "slug": "sumup-geschaeftskonto-mastercard",
    "anbieter": "SumUp",
    "herausgeber": "SumUp Limited (E-Geld-Institut, Irland)",
@@ -7378,7 +7529,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:monese-mastercard-pay-as-you-go",
+   "id": "DE-monese-mastercard-pay-as-you-go",
    "slug": "monese-mastercard-pay-as-you-go",
    "anbieter": "Monese",
    "herausgeber": "PPS EU SA (Belgien), Vermittler Monese EU SA",
@@ -7427,7 +7579,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:monese-mastercard-everyday",
+   "id": "DE-monese-mastercard-everyday",
    "slug": "monese-mastercard-everyday",
    "anbieter": "Monese",
    "herausgeber": "PPS EU SA (Belgien), Vermittler Monese EU SA",
@@ -7475,7 +7628,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:monese-mastercard-cashback",
+   "id": "DE-monese-mastercard-cashback",
    "slug": "monese-mastercard-cashback",
    "anbieter": "Monese",
    "herausgeber": "PPS EU SA (Belgien), Vermittler Monese EU SA",
@@ -7526,7 +7680,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:monese-mastercard-premium",
+   "id": "DE-monese-mastercard-premium",
    "slug": "monese-mastercard-premium",
    "anbieter": "Monese",
    "herausgeber": "PPS EU SA (Belgien), Vermittler Monese EU SA",
@@ -7576,7 +7731,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:volkswagen-bank-audi-bank-visa-card",
+   "id": "DE-volkswagen-bank-audi-bank-visa-card",
    "slug": "volkswagen-bank-audi-bank-visa-card",
    "anbieter": "Volkswagen Bank / Audi Bank",
    "herausgeber": null,
@@ -7625,7 +7781,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:volkswagen-bank-audi-bank-visa-card-pur",
+   "id": "DE-volkswagen-bank-audi-bank-visa-card-pur",
    "slug": "volkswagen-bank-audi-bank-visa-card-pur",
    "anbieter": "Volkswagen Bank / Audi Bank",
    "herausgeber": null,
@@ -7672,7 +7829,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:mercedes-benz-bw-bank-mercedes-credit-card-silber",
+   "id": "DE-mercedes-benz-bw-bank-mercedes-credit-card-silber",
    "slug": "mercedes-benz-bw-bank-mercedes-credit-card-silber",
    "anbieter": "Mercedes-Benz / BW-Bank",
    "herausgeber": "Baden-Württembergische Bank (BW-Bank, LBBW)",
@@ -7718,7 +7876,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:mercedes-benz-bw-bank-mercedes-credit-card-gold",
+   "id": "DE-mercedes-benz-bw-bank-mercedes-credit-card-gold",
    "slug": "mercedes-benz-bw-bank-mercedes-credit-card-gold",
    "anbieter": "Mercedes-Benz / BW-Bank",
    "herausgeber": "Baden-Württembergische Bank (BW-Bank, LBBW)",
@@ -7765,7 +7924,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:hanseatic-bank-genialcard",
+   "id": "DE-hanseatic-bank-genialcard",
    "slug": "hanseatic-bank-genialcard",
    "anbieter": "Hanseatic Bank",
    "herausgeber": null,
@@ -7815,7 +7975,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:awa7-visa-kreditkarte",
+   "id": "DE-awa7-visa-kreditkarte",
    "slug": "awa7-visa-kreditkarte",
    "anbieter": "Hanseatic Bank",
    "herausgeber": null,
@@ -7863,7 +8024,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:hanseatic-bank-goldcard",
+   "id": "DE-hanseatic-bank-goldcard",
    "slug": "hanseatic-bank-goldcard",
    "anbieter": "Hanseatic Bank",
    "herausgeber": null,
@@ -7913,7 +8075,8 @@
    "sek": []
   },
   {
-   "id": null,
+   "uid": "de:bank-norwegian-visa-kreditkarte",
+   "id": "DE-bank-norwegian-visa-kreditkarte",
    "slug": "bank-norwegian-visa-kreditkarte",
    "anbieter": "Bank Norwegian",
    "herausgeber": null,
