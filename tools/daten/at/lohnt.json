@@ -114,8 +114,8 @@
     "guests_free": "unbegrenzt",
     "hinweis": "pro Besuch 1 Gast kostenlos"
    },
-   "punkte_pro_100": 1,
-   "punkte_hinweis": "1 Membership-Rewards-Punkt pro €, 1 Punkt = 1 Cent",
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 Membership-Rewards-Punkt pro €, 1 Punkt = 0,5 Cent",
    "extra": [
     {
      "name": "Hotel- und Mietwagenstatus",
@@ -143,8 +143,8 @@
     "hinweis": "für Haupt- und Zusatzkarteninhaber, nur in Wien",
     "scope": "wien"
    },
-   "punkte_pro_100": 1,
-   "punkte_hinweis": "1 Membership-Rewards-Punkt pro €, 1 Punkt = 1 Cent",
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 Membership-Rewards-Punkt pro €, 1 Punkt = 0,5 Cent",
    "extra": [
     {
      "name": "Teilnahme an Membership Rewards",
@@ -166,8 +166,8 @@
     "guests_free": 0,
     "hinweis": "für dich unbegrenzt, Gäste kosten extra"
    },
-   "punkte_pro_100": 1,
-   "punkte_hinweis": "1 RevPoint pro €, 1 RevPoint = 1 Cent",
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 RevPoint pro €, 1 RevPoint = 0,5 Cent",
    "subs_names": [
     "ChatGPT Go",
     "WeWork (nur im Ausland)",
@@ -199,8 +199,8 @@
   {
    "slug": "revolut-metal",
    "geprueft": "2026-10-13",
-   "punkte_pro_100": 0.5,
-   "punkte_hinweis": "1 RevPoint pro 2 €, 1 RevPoint = 1 Cent",
+   "punkte_pro_100": 0.25,
+   "punkte_hinweis": "1 RevPoint pro 2 €, 1 RevPoint = 0,5 Cent",
    "subs_names": [
     "ChatGPT Go",
     "WeWork (nur im Ausland)",
@@ -348,8 +348,8 @@
     "hinweis": "4 Zutritte bei mindestens 3.600 € Umsatz in 365 Tagen",
     "min_umsatz": 3600
    },
-   "punkte_pro_100": 0.5,
-   "punkte_hinweis": "1 Bonuspunkt pro 8 € = 4 Miles & More Meilen, 1 Meile = 1 Cent",
+   "punkte_pro_100": 0.25,
+   "punkte_hinweis": "1 Bonuspunkt pro 8 € = 4 Miles & More Meilen, 1 Meile = 0,5 Cent",
    "extra": [
     {
      "name": "Umtausch in Meilen",
@@ -372,8 +372,8 @@
     "guests_free": 0,
     "hinweis": "4 Zutritte im Jahr, Begleitpersonen nutzen sie mit"
    },
-   "punkte_pro_100": 0.67,
-   "punkte_hinweis": "1 Meile pro 1,50 €, 1 Meile = 1 Cent",
+   "punkte_pro_100": 0.335,
+   "punkte_hinweis": "1 Meile pro 1,50 €, 1 Meile = 0,5 Cent",
    "welcome": {
     "text": "5.000 Meilen bei Antrag bis 31.10.2026",
     "eur": 50

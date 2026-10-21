@@ -1,5 +1,5 @@
 {
- "hinweis": "Ertrag je Karte für den Rechner auf der Kartenliste. pct = Prozent vom Umsatz (Punkte und Meilen 1 Cent, Hotelpunkte 0,4 Cent), cap = höchstens € im Jahr, kosten = Teilnahmegebühr (wird nur gezählt, wenn sich die Teilnahme lohnt), anteil = Anteil des Umsatzes, für den es gilt, fx_only = nur auf Fremdwährungsumsatz. Premiumkarten stehen in lohnt.json.",
+ "hinweis": "Ertrag je Karte für den Rechner auf der Kartenliste. pct = Prozent vom Umsatz (bei Punkten und Meilen: Punkte pro 100 € Umsatz; der Wert pro Punkt kommt aus tools/sammeln.py, Standard 0,5 Cent), cap = höchstens € im Jahr, kosten = Teilnahmegebühr (wird nur gezählt, wenn sich die Teilnahme lohnt), anteil = Anteil des Umsatzes, für den es gilt, fx_only = nur auf Fremdwährungsumsatz. Premiumkarten stehen in lohnt.json.",
  "karten": {
   "web-cent-mastercard-gold-gmx-web-de": {
    "pct": 0.5,
@@ -7,9 +7,9 @@
    "hinweis": "0,5 % auf jeden Einkauf, ohne Obergrenze"
   },
   "hilton-honors-kreditkarte": {
-   "pct": 0.4,
+   "pct": 1,
    "art": "Hilton-Punkte",
-   "hinweis": "1 Punkt pro €, 1 Hilton-Punkt ≈ 0,4 Cent"
+   "hinweis": "1 Hilton-Punkt pro €"
   },
   "turkish-airlines-milesundsmiles-mastercard-gold": {
    "pct": 0.5,
@@ -205,17 +205,17 @@
   "revolut-standard": {
    "pct": 0.1,
    "art": "RevPoints",
-   "hinweis": "1 RevPoint pro 10 €, 1 RevPoint = 1 Cent"
+   "hinweis": "1 RevPoint pro 10 €"
   },
   "revolut-plus": {
    "pct": 0.1,
    "art": "RevPoints",
-   "hinweis": "1 RevPoint pro 10 €, 1 RevPoint = 1 Cent"
+   "hinweis": "1 RevPoint pro 10 €"
   },
   "revolut-premium": {
    "pct": 0.25,
    "art": "RevPoints",
-   "hinweis": "1 RevPoint pro 4 €, 1 RevPoint = 1 Cent"
+   "hinweis": "1 RevPoint pro 4 €"
   },
   "deutsche-bank-mastercard-black": {
    "lounge": {

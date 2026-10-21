@@ -60,9 +60,9 @@
     var add = function (t, v, d) { rows.push([t, v, d || '']); if (v >= 0) plus += v; else minus -= v; };
     /* Punkte, Cashback, Meilen */
     if (c.pct) {
-      var pvm = c.pk ? (I.has && I.has('pv') ? num('pv') : 1) : 1, base = c.fxo ? F : S * (c.anteil || 1), e = base * c.pct / 100 * pvm, capped = c.cap && e > c.cap * pvm;
+      var own = I.has && I.has('pv') && !(I.raw && I.raw('pv') === 'd'), pvm = !c.pk ? 1 : own ? num('pv') : (c.pv || 0.5), base = c.fxo ? F : S * (c.anteil || 1), e = base * c.pct / 100 * pvm, capped = c.cap && e > c.cap * pvm;
       if (capped) e = c.cap * pvm;
-      var d = pct(c.pct) + ' auf ' + eur(base) + (c.fxo ? ' Fremdwährungsumsatz' : c.anteil ? ' (geschätzter Online-Anteil ' + pct(c.anteil * 100) + ')' : ' Umsatz') + (capped ? ', gedeckelt auf ' + eur(c.cap * pvm) : '') + (c.pk ? ', bei ' + pct(pvm).replace(' %', '') + ' Cent pro Punkt (Annahme)' : '');
+      var d = pct(c.pct) + ' auf ' + eur(base) + (c.fxo ? ' Fremdwährungsumsatz' : c.anteil ? ' (geschätzter Online-Anteil ' + pct(c.anteil * 100) + ')' : ' Umsatz') + (capped ? ', gedeckelt auf ' + eur(c.cap * pvm) : '') + (c.pk ? ', bei ' + pct(pvm).replace(' %', '') + ' Cent pro Punkt ' + (!own && c.pv ? '(Wert laut Anbieter)' : '(Annahme)') : '');
       if (c.kosten) {
         if (e > c.kosten) { add('Cashback und Punkte', e, d + (c.ph ? '. ' + c.ph : '')); add('Teilnahme am Bonusprogramm', -c.kosten); }
         else rows.push(['Bonusprogramm', 0, 'Die Teilnahme (' + eur(c.kosten) + ') lohnt sich bei deinem Umsatz nicht, deshalb nicht gerechnet']);
@@ -135,7 +135,7 @@
   if (sort && !sort.querySelector('option[value="net"]')) { var o = document.createElement('option'); o.value = 'net'; o.textContent = 'Nach deinem Ergebnis'; sort.appendChild(o); }
 
 
-  var I = { num: num, on: function (k) { var e = q(k); return !!(e && e.checked); }, has: function (k) { return !!q(k); } };
+  var I = { num: num, on: function (k) { var e = q(k); return !!(e && e.checked); }, has: function (k) { return !!q(k); }, raw: function (k) { var e = q(k); return e ? String(e.value) : ''; } };
   function render(it, r) {
     var b = it.querySelector('[data-res]');
     it._r = r;
