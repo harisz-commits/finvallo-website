@@ -186,8 +186,12 @@ def pros(c):
     if c.get('giro') is False: p.append('Kein Girokonto beim Anbieter nötig')
     if c.get('auto') and c['typ']=='Kreditkarte': p.append('Volle Abbuchung per Lastschrift möglich')
     if c.get('auto') and c['typ']=='Charge' and c['land']=='at': p.append('Automatischer Rechnungsausgleich per Lastschrift')
+    m=mw(c)
+    if m and not m.get('optional'):
+        p.append(MW_PRO['kasko'] if 'kasko' in m['art'] else MW_PRO['sb'] if 'sb' in m['art'] else MW_PRO['haft'])
     for x in c.get('extra') or []:
         if c.get('feeBis') and re.match(r'Gratis bis',x): continue   # steht schon bei der Jahresgebühr
+        if m and MW_SKIP.search(x): continue   # Mietwagen steht einheitlich aus dem geprüften Profil
         if x not in p: p.append(x)
     return p[:9]
 def cons(c):
@@ -506,6 +510,25 @@ def steps(c):
         st=[('Online-Antrag ausfüllen',f'Du gibst deine Daten, deinen Job und deine Adresse in {L["name"]} an.'),L['ident'],
             ('Bonität prüfen lassen',f'{c["anbieter"]} fragt deine Bonität ab, {L["bonstep"]}{", und legt den Rahmen fest" if c["typ"] in ("Kreditkarte","Charge") else ""}.'),('Karte aktivieren',L['aktiv'])]
     return ''.join(f'<div class="step"><span class="no">{i+1}</span><div><b>{E(a)}</b><p>{E(b)}</p></div></div>' for i,(a,b) in enumerate(st))
+MWP=os.path.join(SP,'daten','mietwagen.json')
+MW=json.load(open(MWP))['karten'] if os.path.exists(MWP) else {}
+def mw(c): return MW.get(f"{c.get('land')}/{c['slug']}")
+MW_PRO={'kasko':'Mietwagen-Kasko enthalten','sb':'Mietwagen-Selbstbeteiligungsschutz enthalten','haft':'Zusätzliche Mietwagen-Haftpflicht enthalten'}
+MW_SKIP=re.compile(r'^Mietwagen-(Vollkasko|Selbstbehalt|Versicherung|Haftpflicht|Zusatzhaftpflicht)|^Mietwagen- und Carsharing')
+def mw_block(c):
+    """Block „Mietwagen: Versicherung und Voraussetzungen“ nur für Karten mit geprüftem Profil (tools/daten/mietwagen.json)."""
+    m=mw(c)
+    if not m: return ''
+    NL='In den geprüften Bedingungen nicht ausgewiesen'
+    rows=[('Kasko (Schäden am Mietwagen, Diebstahl)',m.get('kasko') or NL),('Erstattung der Selbstbeteiligung',m.get('sb') or NL),('Zusätzliche Haftpflicht',m.get('haft') or NL),
+          ('Eigenanteil',m.get('eigenanteil') or 'Eigenanteil nicht eindeutig angegeben'),('Mietdauer',m.get('dauer') or 'nicht angegeben'),('Voraussetzungen',m.get('bedingungen')),('Wichtige Ausschlüsse',m.get('ausschluesse'))]
+    if m.get('optional'): rows.insert(0,('Preis','Optional gegen Aufpreis: '+m['optional']))
+    t=''.join(f'<div class="r"><span>{E(a)}</span> <span>{E(b)}</span></div>' for a,b in rows if b)
+    k=f'<p class="note"><b>Abweichende Angaben in den Anbieterunterlagen:</b> {E(m["konflikt"])}</p>' if m.get('konflikt') else ''
+    src=f'<a class="lnk" href="{E(m["quelle"])}" target="_blank" rel="noopener">{E(m.get("fundstelle") or "Versicherungsbedingungen")}</a>'
+    return ('<h3 id="s-mietwagen">Mietwagen: Versicherung und Voraussetzungen</h3>'
+            f'<div class="cond" style="margin-bottom:10px">{t}</div>{k}'
+            f'<p class="src">Quelle: {src}, geprüft am 21.10.2026. Die aufgeführten Leistungen wurden einzeln geprüft. Maßgeblich sind die Bedingungen deines Vertrags.</p>')
 def ins_block(c):
     b=(c.get('blocks') or {}).get('ins') or {}
     if b.get('items'):
@@ -576,7 +599,7 @@ def card_page(c,cards,nrated,prov):
   </section>
   <section id="s-kond"><h2>Konditionen im Überblick</h2>{cond(c)}{extras}{fees}
   </section>
-  <section id="s-vers"><h2>Reiseversicherung</h2>{ins_block(c)}
+  <section id="s-vers"><h2>Reiseversicherung</h2>{ins_block(c)}{mw_block(c)}
   </section>
   <section id="s-bew"><h2>So kommt die Bewertung zustande</h2>{scorebox(c,P)}
   {f"<h2>Im Vergleich mit ähnlichen Karten</h2><div class='tbl wide'><table><thead><tr><th>Karte</th><th>Jahresgebühr</th><th>Zahlung Ausland</th><th>Bargeld</th><th>Bewertung</th></tr></thead><tbody>{simtbl}</tbody></table></div>" if simtbl else ""}
