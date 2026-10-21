@@ -89,7 +89,7 @@
     if (c.wel && y1) add('Willkommensbonus', c.wel[0], c.wel[1]);
     if (c.fee === null || c.fee === undefined) return null;
     var fee = y1 && c.fee1 !== undefined ? c.fee1 : c.fee;
-    add(y1 && c.fee1 !== undefined ? 'Jahresgebühr im 1. Jahr' : 'Jahresgebühr', -fee, y1 && c.fee1 !== undefined ? 'danach ' + eur2(c.fee) + ' im Jahr' : '');
+    add(y1 && c.fee1 !== undefined ? 'Jahresgebühr im 1. Jahr' : 'Jahresgebühr', -fee, y1 && c.fee1 !== undefined ? 'danach ' + eur2(c.fee) + ' im Jahr' : (c.fm ? 'bei Jahreszahlung, monatlich bezahlt ' + eur2(c.fm) + ' im Jahr' : ''));
     if (F) {
       if (c.fx === null || c.fx === undefined) { rows.push(['Fremdwährung', 0, 'Gebühr unbekannt, nicht gerechnet', 1]); inc = true; }
       else if (c.fx) add('Fremdwährungsgebühr', -F * c.fx / 100, pct(c.fx) + ' auf ' + eur(F));

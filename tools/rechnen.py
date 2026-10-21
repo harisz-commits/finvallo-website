@@ -31,6 +31,7 @@ def card_data(land, cards):
         e = ER.get(c['slug'], {}); x = LX.get(c['slug'])
         d = dict(fee=c.get('fee'), fx=c.get('fx'), cash=c.get('cash'), effz=c.get('effz'), tier=c.get('tier') or 0)
         if c.get('fee1') is not None and c.get('fee1') != c.get('fee'): d['fee1'] = c['fee1']
+        if c.get('feeMonat'): d['fm'] = c['feeMonat']
         if c.get('cashAus'): d['cashA'] = c['cashAus']
         if c.get('cashText') and (c.get('cash') or [''])[0] == 'freeN': d['ct'] = re.sub(r'\s*\(.*?\)', '', c['cashText']).split(';')[0][:90]
         if c.get('cashFx'): d['cfx'] = c['cashFx']
