@@ -1169,7 +1169,7 @@
   "pay": true,
   "payText": "Apple Pay und Google Pay",
   "tier": 1,
-  "insText": "Reisekrankenversicherung im Ausland (Gruppenpolice über Revolut Insurance Europe, Versicherer Steadfast/Cover Genius); Reise muss mit Revolut bezahlt werden, Reisen max. 30 Tage, Anspruch ab 18 Jahren. Zusätzlich Käufer-/Erstattungs- und Ticketstornoschutz. Ein deutschsprachiges Metal-IPID (Steadfast, 12/2025) nennt zusätzlich Reisestorno/-abbruch bis 5.000 €, Gepäck 1.000 €, Verspätung bis 500 € und Mietwagen-Selbstbeteiligungsschutz – Geltung für DE unklar.",
+  "insText": "Reisekrankenversicherung im Ausland (Gruppenpolice über Revolut Insurance Europe, Versicherer Steadfast/Cover Genius); Reise muss mit Revolut bezahlt werden, Reisen max. 30 Tage, Anspruch ab 18 Jahren. Zusätzlich Käufer-/Erstattungs- und Ticketstornoschutz. Ein deutschsprachiges Metal-IPID (Steadfast, 12/2025) nennt zusätzlich Reisestorno/-abbruch bis 5.000 €, Gepäck 1.000 €, Verspätung bis 500 € und Mietwagen-Selbstbeteiligungsschutz bis 2.000 € (laut Revolut-Hilfe auch in Deutschland).",
   "insQuelle": "https://cdn.revolut.com/terms_and_conditions/pdf/travel_protection_insurance_information_document_metal_d60e61bf_1.1.1_1766055793_de.pdf",
   "ex": {
    "cb": false,
@@ -1236,7 +1236,7 @@
   "pay": true,
   "payText": "Apple Pay und Google Pay",
   "tier": 2,
-  "insText": "Steadfast/Cover Genius: Reisestorno und Reiseabbruch je bis 5.000 €, medizinische Notfälle im Ausland bis 10 Mio. €, Gepäck bis 1.000 €, Reiseverspätung ab 4 Std. bis 500 €, Reisedokumente 500 €, Privathaftpflicht 1 Mio. €, Sportausrüstung. Reise muss mit Revolut bezahlt werden, max. 90 Tage, Selbstbeteiligung je Person und Schadenfall; Kinder bis 17 mitversichert. Keine Mietwagenversicherung im IPID.",
+  "insText": "Steadfast/Cover Genius: Reisestorno und Reiseabbruch je bis 5.000 €, medizinische Notfälle im Ausland bis 10 Mio. €, Gepäck bis 1.000 €, Reiseverspätung ab 4 Std. bis 500 €, Reisedokumente 500 €, Privathaftpflicht 1 Mio. €, Sportausrüstung. Reise muss mit Revolut bezahlt werden, max. 90 Tage, Selbstbeteiligung je Person und Schadenfall; Kinder bis 17 mitversichert. Mietwagen: Erstattung der Selbstbeteiligung bis 2.000 € laut Revolut-Hilfe.",
   "insQuelle": "https://cdn.revolut.com/terms_and_conditions/pdf/travel_protection_insurance_information_document_ultra_0b36a61a_1.0.1_1766056374_de.pdf",
   "ex": {
    "cb": false,
@@ -1775,7 +1775,7 @@
   "creditsText": null,
   "bonus": null,
   "extra": [
-   "Reiseversicherung inkl. Storno und Mietwagen-Selbstbehalt",
+   "Reiseversicherung inkl. Storno",
    "Bis zu 10 Mitarbeiterkarten kostenlos",
    "500 Echtzeit-Überweisungen/Jahr frei"
   ],

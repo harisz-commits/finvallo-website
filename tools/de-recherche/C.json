@@ -945,7 +945,7 @@
   "pay": true,
   "payText": "Apple Pay und Google Pay",
   "tier": 3,
-  "insText": "Gleiches Allianz-Paket wie Gold (Rücktritt/Abbruch bis 5.000 €, Mietwagen bis 75.000 €, Auslandskranken unbegrenzt), aber nur für geschäftlich veranlasste Reisen; mitversichert bis zu 5 Angestellte.",
+  "insText": "Gleiches Allianz-Paket wie Gold (Rücktritt/Abbruch bis 5.000 €, Mietwagen bis 75.000 €, Auslandskranken unbegrenzt), aber nur für geschäftlich veranlasste Reisen; bei Reiserücktritt und Auslandskranken höchstens 5 Personen einschließlich Karteninhaber.",
   "insQuelle": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/versicherungen/versicherungsbestaetigung-lufthansa-miles-and-more-credit-card.pdf",
   "ex": {
    "cb": false,

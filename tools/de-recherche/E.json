@@ -776,7 +776,7 @@
   "pay": true,
   "payText": "Google Pay (Apple Pay auf den Business-Seiten nicht erwähnt)",
   "tier": 2,
-  "insText": "Auslandsreise-Kranken für Reisen bis 62 Tage (SB 10 %, mind. 100 €, max. 500 €), Mietwagen-Kasko/Diebstahl/Haftpflicht bis 75.000 € (SB 200 €, Miete mit der Karte bezahlt), Reisekomfort (Flugverspätung 150 €, Gepäck 300 € + 475 €), Verkehrsmittel-Unfall bis 385.000 € (Vollinvalidität 770.000 €), Reise-Assistance und Kfz-Schutzbrief. Keine Reiserücktrittsversicherung.",
+  "insText": "Auslandsreise-Kranken für Reisen bis 62 Tage (SB 10 %, mind. 100 €, max. 500 €), Mietwagen: Kasko- und Diebstahlschutz bis 75.000 € je Leistungsfall, 200 € Selbstbehalt je Versicherungsfall, keine Zusatzhaftpflicht (Miete mit der Karte bezahlt), Reisekomfort (Flugverspätung 150 €, Gepäck 300 € + 475 €), Verkehrsmittel-Unfall bis 385.000 € (Vollinvalidität 770.000 €), Reise-Assistance und Kfz-Schutzbrief. Keine Reiserücktrittsversicherung.",
   "insQuelle": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Gold_Card_Informationen_NEU.pdf",
   "ex": {
    "cb": true,

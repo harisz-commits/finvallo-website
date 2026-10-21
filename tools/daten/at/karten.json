@@ -4590,8 +4590,7 @@
   "ftText": "12× FastTrack Wien",
   "lounge": 5.0,
   "extra": [
-   "Concierge-Service",
-   "Mietwagen-Vollkasko"
+   "Concierge-Service"
   ],
   "cons_extra": [],
   "quelle": "https://www.bankaustria.at/files/mastercard_kreditkartenbedingungen.pdf",
@@ -4606,7 +4605,7 @@
     "t": "Du bekommst einen Priority Pass Prestige mit unbegrenzten Besuchen und 12 FastTrack-Durchgänge pro Jahr am Flughafen Wien. Details bitte im Vertrag prüfen."
    }
   ],
-  "vorteile": "Priority Pass Prestige (unbegrenzt); 12× FastTrack Wien/Jahr; Concierge; Reiseschutz inkl. Mietwagen",
+  "vorteile": "Priority Pass Prestige (unbegrenzt); 12× FastTrack Wien/Jahr; Concierge; Reiseschutz",
   "seoTitle": "Bank Austria World Elite im Vergleich 2026 | Finvallo",
   "blocks": {
    "extras": [
