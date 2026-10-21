@@ -1,7 +1,7 @@
 # Kreditkartenvergleich Österreich und Deutschland: erzeugt alle Karten-, Listen-, Anbieter- und Bestenlisten-Seiten.
 # Daten: daten/at/*.json (Österreich) und de-recherche/*.json + overrides.py (Deutschland).
 # Jede Karte hat ein eigenes Prüfdatum ("geprueft", JJJJ-MM-TT); es steht auf der Seite, im Schema und in der Sitemap.
-import json,glob,os,re,html,sys,datetime,shutil
+import copy,json,glob,os,re,html,sys,datetime,shutil
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from score import score,note,eur,pct,cash200,TIER
 SP=os.path.dirname(os.path.abspath(__file__)); R=os.path.join(SP,'..','public')+'/'
@@ -117,7 +117,13 @@ def face(c,cls=''):
 def feeT(c):
     f=c.get('fee')
     if f is None: return 'unbekannt'
-    return 'kostenlos' if f==0 else f'{eur(f)} € pro Jahr'
+    return 'kostenlos' if f==0 else f'{eur(f)} € pro Jahr'+(' bei Jahreszahlung' if c.get('feeMonat') else '')
+def monat_hint(c):
+    """Hinweis für Abo-Karten: Bewertung mit Jahrespreis, Kosten und Platz bei monatlicher Zahlung."""
+    if not c.get('feeMonat'): return ''
+    t=f'Wir rechnen mit dem Jahrespreis von {eur(c["fee"])} €. Er gilt nur, wenn du das Abo jährlich bezahlst. Bei monatlicher Zahlung kostet die Karte {eur(c["feeMonat"])} € im Jahr'
+    if c.get('rankMonat') and c.get('rank'): t+=f' und läge in unserem Vergleich auf Platz {c["rankMonat"]} statt Platz {c["rank"]}' if c['rankMonat']!=c['rank'] else f', der Platz {c["rank"]} bliebe gleich'
+    return t+'.'
 def fxT(c):
     if c.get('fx') is None: return c.get('fxText') or 'unbekannt'
     return '0 %' if c['fx']==0 else (c.get('fxText') or pct(c['fx']))
@@ -227,7 +233,7 @@ def summary(c):
     s=f'Die {c["titel"]} ist eine {TYPLAB.get(c["typ"],c["typ"])} für Kunden in {L["name"]}. '
     f=c.get('fee')
     if f==0: s+='Sie hat keine Jahresgebühr. '
-    elif f is not None: s+=f'Sie kostet {eur(f)} € pro Jahr'+(f', im ersten Jahr {eur(c["fee1"])} €' if c.get('fee1') is not None and c['fee1']!=f else '')+'. '
+    elif f is not None: s+=f'Sie kostet {eur(f)} € pro Jahr'+(' bei Jahreszahlung' if c.get('feeMonat') else '')+(f', im ersten Jahr {eur(c["fee1"])} €' if c.get('fee1') is not None and c['fee1']!=f else '')+'. '
     s+= 'Zahlungen in fremder Währung kosten nichts extra. ' if c.get('fx')==0 else (f'Zahlungen in fremder Währung kosten {fxT(c)}. ' if c.get('fx') is not None else '')
     if cashT(c)!='unbekannt': s+= cash_sentence(c)+' '
     if c.get('tier') is not None: s+= f'Reiseversicherung: {re.sub(r"^Reiseversicherung ","",TIER[c["tier"]][1])}. '
@@ -276,6 +282,13 @@ def ratecards(cards):
     priv.sort(key=lambda c:(-c['stars'],c['fee'] if c['fee'] is not None else 1e9,c['titel'].lower()))
     for c in cards: c['rank']=None
     for i,c in enumerate(priv): c['rank']=i+1
+    # Abo-Karten mit Jahrespreis: Platz, den die Karte bei monatlicher Zahlung hätte (alle anderen Karten unverändert)
+    key=lambda c:(-c['stars'],c['fee'] if c['fee'] is not None else 1e9,c['titel'].lower())
+    for c in priv:
+        if c.get('feeMonat') and c['feeMonat']!=c['fee']:
+            m=copy.deepcopy(c); m['fee']=m['feeMonat']; m['fee1']=None if c.get('fee1')==c['fee'] else c.get('fee1')
+            m['stars']=score(m)['stars']; k=key(m)
+            c['rankMonat']=1+sum(1 for x in priv if x is not c and key(x)<k); c['starsMonat']=m['stars']
     return priv
 
 # ---------- HTML-Grundgerüst ----------
@@ -360,6 +373,7 @@ def cond(c):
     na='<span class="mut na">keine Angabe</span>'
     out='<div class="cond" style="margin-bottom:14px"><div class="gh">Kosten</div>'
     out+=r('Jahresgebühr',E(feeT(c))+(f' <small class="mut">({E(c["feeNote"])})</small>' if c.get('feeNote') else '') if c.get('fee') is not None else na)
+    if c.get('feeMonat'): out+=r('Bei Monatszahlung',f'{eur(c["feeMonat"])} € pro Jahr')
     out+=r('1. Jahr',f'{eur(c["fee1"])} €' if c.get('fee1') is not None else '–')
     out+=r('Willkommensangebot',E(c.get('bonus') or ((c.get('offer') or {}).get('head') if offer(c) else None) or '–'))
     out+=r('Zahlen im Ausland',E(fxT(c)) if (c.get('fx') is not None or c.get('fxText')) else na)
@@ -565,7 +579,7 @@ def card_page(c,cards,nrated,prov):
     ld=graph(rel,t,d,[(L['name'],f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Alle Karten',f'{code}/kreditkarten/alle/')]+([(c['anbieter'],f'{code}/kreditkarten/anbieter/{c["p"]}/')] if c['p'] in PROVPAGE.get(code,()) else [])+[(c['titel'],rel)],
              [ld_card,{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}],date=gp)
     rk=f', Platz {c["rank"]} von {nrated} bewerteten Privatkarten in {L["name"]}' if c.get('rank') else ''
-    glance=summary(c)+(f'Finvallo bewertet sie mit {de1(c["stars"])} von 5 Sternen{rk}. ' if c.get('stars') else '')+f'Stand: {dmy(gp)}.'
+    glance=summary(c)+(f'Finvallo bewertet sie mit {de1(c["stars"])} von 5 Sternen{rk}. ' if c.get('stars') else '')+(monat_hint(c)+' ' if c.get('feeMonat') else '')+f'Stand: {dmy(gp)}.'
     a,b=who(c)
     sim=similar(c,cards)
     simtbl=''.join(f'<tr><td><a class="lnk" href="../{x["slug"]}/">{E(x["titel"])}</a></td><td>{eur(x["fee"]) if x.get("fee") is not None else "–"} €</td><td>{E(fxT(x))}</td><td>{E(cashT(x))}</td><td style="white-space:nowrap">{de1(x["stars"])} ★ {x["note"]}</td></tr>' for x in sim[:3])
@@ -807,7 +821,7 @@ def uids(cards):
 def datafile(cards):
     out=[]; uids(cards)
     for c in cards:
-        out.append({'uid':c.get('_uid'),'id':c.get('_id')}|{k:c.get(k) for k in ['slug','anbieter','herausgeber','name','titel','art','typ','klasse','netz','fee','fee1','feeNote','fx','fxText','cashText','soll','effz','rahmen','giro','auto','pay','tier','stars','note','rank','pros','cons','quelle','preis','stand','geprueft']}
+        out.append({'uid':c.get('_uid'),'id':c.get('_id')}|{k:c.get(k) for k in ['slug','anbieter','herausgeber','name','titel','art','typ','klasse','netz','fee','fee1','feeMonat','feeNote','fx','fxText','cashText','soll','effz','rahmen','giro','auto','pay','tier','stars','note','rank','pros','cons','quelle','preis','stand','geprueft']}
                    |{'stand':c['geprueft'],'klasse':{'Std':'Standard'}.get(c.get('klasse'),c.get('klasse')),'versicherung':TIER[c['tier']][1] if c.get('tier') is not None else None,'url':f'https://finvallo.com/{L["code"]}/kreditkarten/{c["slug"]}/'})
     os.makedirs(R+f'{L["code"]}/daten',exist_ok=True)
     json.dump({'schema_version':2,'quelle':f'https://finvallo.com/{L["code"]}/kreditkarten/','stand':L['stand'],'anzahl':card_count(L['code'],'all'),'lizenz':'Frei nutzbar mit Quellenangabe Finvallo',

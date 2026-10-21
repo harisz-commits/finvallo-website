@@ -113,6 +113,94 @@
     "preis": "https://tfbank.at/media/n1yh5fqa/04_preis-leistungsverzeichnis_tf-bank_at_20260629.pdf",
     "rahmen": null
    }
+  },
+  {
+   "land": "at",
+   "titel": "Revolut Plus",
+   "quelle": "https://www.revolut.com/de-AT/legal/plus-fees/ (geprüft 21.10.2026)",
+   "set": {
+    "fee": 40,
+    "feeMonat": 47.88,
+    "feeNote": "40 € pro Jahr oder 3,99 € pro Monat",
+    "geprueft": "2026-10-21"
+   }
+  },
+  {
+   "land": "at",
+   "titel": "Revolut Premium",
+   "quelle": "https://www.revolut.com/de-AT/legal/premium-fees/ (geprüft 21.10.2026)",
+   "set": {
+    "fee": 99,
+    "feeMonat": 119.88,
+    "feeNote": "99 € pro Jahr oder 9,99 € pro Monat",
+    "geprueft": "2026-10-21"
+   }
+  },
+  {
+   "land": "at",
+   "titel": "Revolut Metal",
+   "quelle": "https://www.revolut.com/de-AT/legal/metal-fees/ (geprüft 21.10.2026)",
+   "set": {
+    "fee": 175,
+    "feeMonat": 215.88,
+    "feeNote": "175 € pro Jahr oder 17,99 € pro Monat",
+    "geprueft": "2026-10-21"
+   }
+  },
+  {
+   "land": "at",
+   "titel": "Revolut Ultra",
+   "quelle": "https://www.revolut.com/de-AT/legal/ultra-fees/ (geprüft 21.10.2026)",
+   "set": {
+    "fee": 650,
+    "feeMonat": 780,
+    "feeNote": "650 € pro Jahr oder 65 € pro Monat (Neukunden ab 14.10.2026)",
+    "geprueft": "2026-10-21"
+   }
+  },
+  {
+   "land": "de",
+   "titel": "Revolut Plus",
+   "quelle": "https://www.revolut.com/de-DE/legal/plus-fees/ (geprüft 21.10.2026)",
+   "set": {
+    "fee": 29.99,
+    "feeMonat": 35.88,
+    "feeNote": "29,99 € pro Jahr oder 2,99 € pro Monat",
+    "geprueft": "2026-10-21"
+   }
+  },
+  {
+   "land": "de",
+   "titel": "Revolut Premium",
+   "quelle": "https://www.revolut.com/de-DE/legal/premium-fees/ (geprüft 21.10.2026)",
+   "set": {
+    "fee": 89,
+    "feeMonat": 107.88,
+    "feeNote": "89 € pro Jahr oder 8,99 € pro Monat (Neukunden ab 07.05.2026)",
+    "geprueft": "2026-10-21"
+   }
+  },
+  {
+   "land": "de",
+   "titel": "Revolut Metal",
+   "quelle": "https://www.revolut.com/de-DE/legal/metal-fees/ (geprüft 21.10.2026)",
+   "set": {
+    "fee": 155,
+    "feeMonat": 191.88,
+    "feeNote": "155 € pro Jahr oder 15,99 € pro Monat (Neukunden ab 07.05.2026)",
+    "geprueft": "2026-10-21"
+   }
+  },
+  {
+   "land": "de",
+   "titel": "Revolut Ultra",
+   "quelle": "https://www.revolut.com/de-DE/legal/ultra-fees/ (geprüft 21.10.2026)",
+   "set": {
+    "fee": 650,
+    "feeMonat": 780,
+    "feeNote": "650 € pro Jahr oder 65 € pro Monat (Neukunden ab 07.05.2026)",
+    "geprueft": "2026-10-21"
+   }
   }
  ],
  "gruppen": {
