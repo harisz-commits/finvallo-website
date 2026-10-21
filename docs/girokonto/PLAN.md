@@ -146,3 +146,12 @@ Ja, aber als **Konto-Radar** statt klassischer News:
 Neo- und Direktbanken, rund 23 Konten: Trade Republic 1, N26 5, Revolut 5, bunq 4, Vivid 3, DKB 1, Tomorrow 3, Wise 1 (E-Geld, keine Einlagensicherung, kennzeichnen).
 
 Summe rund 61. Grenzfälle zum Entscheiden vor dem Start: Erste Bank (nur Wien, NÖ, Burgenland mit Filialen; Online-Eröffnung österreichweit prüfen), Kinderkonten (MegaCard 7-13, Wüstenrot START), Wise als E-Geld-Konto.
+
+## 14. Entscheidungen 2 (Haris, 21.10.2026)
+
+- **Erste Bank kommt rein** (Erste Bank Oesterreich, rund 5 Konten). Online-Eröffnung über George, das s Kompakt Konto gibt es nur online.
+- **Kinderkonten kommen rein**, mit eigener Kontoart „Kinder“ als Filter und Bestenliste wie bei Studenten und Jugend.
+- **Wise kommt nicht rein**: E-Geld-Institut, keine Einlagensicherung.
+- Grenzfall **Vivid**: E-Geld-Institut (Luxemburg), das Guthaben ist keine Einlage. Laut Vivid liegt Geld teilweise bei der Partnerbank Natixis mit französischer Einlagensicherung bis 100.000 €. Entscheidung offen.
+
+Neue Schätzung: rund 43 Konten österreichischer Banken plus rund 22 Neo- und Direktbanken, zusammen rund 65 (mit Vivid) bzw. 62 (ohne Vivid). Genaue Zahl vor dem Start.
