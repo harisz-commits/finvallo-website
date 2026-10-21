@@ -54,6 +54,8 @@ DE={
  'Crypto.com Visa Card Jade/Indigo':dict(rate=1.25,cap=345,txt='2,5 % in CRO (Kursrisiko, zur Hälfte bewertet), Umsatzdeckel 2.500 $/Monat'),
  'Magenta Pay Visa Debitkarte':dict(rate=1.0,txt='1 % in Coins'),
  'Monese Mastercard Cashback':dict(rate=0.5,cap=30,txt='0,5 %, max. 2,50 €/Monat'),
+ 'Revolut Standard':dict(rate=0.1,txt='1 RevPoint pro 10 €'),'Revolut Plus':dict(rate=0.1,txt='1 RevPoint pro 10 €'),
+ 'Revolut Premium':dict(rate=0.25,txt='1 RevPoint pro 4 €'),'Revolut Metal':dict(rate=0.5,txt='1 RevPoint pro 2 €'),'Revolut Ultra':dict(rate=1.0,txt='1 RevPoint pro €'),
 }
 def kind(m):
     if m.get('kind'): return m['kind']

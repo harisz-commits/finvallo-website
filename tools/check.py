@@ -124,6 +124,31 @@ if len(sm) != len(set(sm)): err.append('Sitemap: doppelte Einträge')
 for fn in ('at', 'de'):
     try: json.load(open(R + f'{fn}/daten/kreditkarten.json'))
     except Exception as e: err.append(f'{fn}/daten/kreditkarten.json ungültig: {e}')
+# Regressionsprüfungen Mietwagen und Daten (Astra-Prüfung 21.10.2026)
+def _txt(rel):
+    try: return re.sub(r'<[^>]+>', ' ', open(R + rel).read())
+    except Exception: return ''
+MWJ = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daten', 'mietwagen.json')))['karten']
+for k, m in MWJ.items():
+    t = _txt(k.split('/')[0] + '/kreditkarten/' + k.split('/')[1] + '/index.html')
+    if not t: err.append(f'Mietwagen-Profil ohne Kartenseite: {k}'); continue
+    if 'Mietwagen: Versicherung und Voraussetzungen' not in t: err.append(f'{k}: Mietwagen-Block fehlt')
+    if 'Mietwagen-Kasko enthalten' in t and 'kasko' not in m['art']: err.append(f'{k}: Kasko-Vorteil ohne Kasko')
+    if m.get('optional') and re.search(r'Mietwagen-\w+ enthalten', t): err.append(f'{k}: optionaler Schutz als enthalten angezeigt')
+    if not m.get('quelle'): err.append(f'{k}: Mietwagen-Profil ohne Quelle')
+for rel, bad in [('de/kreditkarten/revolut-ultra/index.html', 'Keine Mietwagenversicherung'), ('de/kreditkarten/american-express-business-gold-card/index.html', 'Kasko/Diebstahl/Haftpflicht'),
+                 ('at/kreditkarten/bank-austria-world-elite/index.html', 'Mietwagen-Vollkasko Das spricht'), ('de/kreditkarten/miles-und-more-gold-credit-card-business/index.html', 'bis zu 5 Angestellte'),
+                 ('at/ratgeber/mietwagen-kaution/index.html', 'Alle anderen Karten'), ('at/ratgeber/reiseversicherung/index.html', 'Alle anderen Karten lassen dich')]:
+    if re.search(re.escape(bad), re.sub(r'\s+', ' ', _txt(rel))): err.append(f'{rel}: alter Fehler wieder da („{bad}“)')
+for fn in ('at', 'de'):
+    try:
+        KJ = json.load(open(R + f'{fn}/daten/kreditkarten.json'))['karten']
+        U = [c.get('uid') for c in KJ]
+        if None in U or len(U) != len(set(U)) or any(not c.get('id') for c in KJ): err.append(f'{fn}/daten/kreditkarten.json: uid/id fehlt oder doppelt')
+    except Exception as e: err.append(f'{fn}/daten/kreditkarten.json: {e}')
+for rel in glob.glob(R + '*/kreditkarten/*/index.html'):
+    h = open(rel).read()
+    if 'Bei der Platinum Card kannst du Bargeld' in h and 'platinum' not in rel: err.append(f'{rel[len(R):]}: Platinum-Bargeldsatz auf fremder Karte')
 # Kontrollbeispiele des Kartenrechners (Bargeld, Zinsen)
 import subprocess
 kr = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rechner-kontrolle.js')], capture_output=True, text=True)
