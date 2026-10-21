@@ -335,7 +335,7 @@ def main():
             LASTMOD[rel] = c['geprueft']
             url = f'https://finvallo.com/{rel}'
             prod = {"@type": "Product", "@id": url + "#product", "name": c['titel'], "brand": {"@type": "Brand", "name": c['anbieter']}, "url": url}
-            if c.get('stars'): prod["review"] = {"@type": "Review", "author": AUTH, "datePublished": c['geprueft'], "reviewRating": {"@type": "Rating", "ratingValue": c['stars'], "bestRating": 5, "worstRating": 1}}
+            if c.get('stars'): prod["review"] = {"@id": url + "#review"}   # derselbe Review-Knoten wie bei der CreditCard
             extra.append(prod)
         # Listen und Bestenlisten
         elif land and len(parts) >= 3 and parts[1] == 'kreditkarten' and (parts[2] in ('', 'alle', 'business', 'bestenlisten')):

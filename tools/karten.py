@@ -380,7 +380,7 @@ def cond(c):
     out+=r('Reiseversicherung',re.sub(r'^Reiseversicherung ','',TIER[c['tier']][1]) if c.get('tier') is not None else na)
     out+='</div><div class="cond" style="margin-bottom:14px"><div class="gh">Voraussetzungen</div>'
     out+=r('Kartentyp',TYPLAB.get(c['typ'],c['typ']))+r('Kartennetz',E(c.get('netz')) if c.get('netz') else na)
-    out+=r('Girokonto beim Anbieter','nötig' if c.get('giro') else 'nicht nötig' if c.get('giro') is False else '–')
+    out+=r('Konto beim Anbieter','nötig' if c.get('giro') else 'nicht nötig' if c.get('giro') is False else '–')
     out+=r(L['bonrow'],('ja, meist mit Abfrage bei der Schufa' if L['bon']=='Schufa' else 'ja, meist mit Abfrage beim KSV1870') if c['typ'] in ('Kreditkarte','Charge') else 'meist nur bei Kontoeröffnung')
     out+=r('Für Kautionen','in der Regel ja' if c['typ'] in ('Kreditkarte','Charge') and 'American' not in (c.get('netz') or '') else 'oft nicht' if c['typ'] in ('Debit','Prepaid') else 'eingeschränkt')
     out+=r('Apple / Google Pay',wallet_row(c,b,na))
@@ -454,9 +454,9 @@ def faq(c):
     if c['typ']=='Kreditkarte' and z:
         q.append(('Was passiert, wenn ich die Rechnung nicht ganz bezahle?',f'Bei der {T} wird der offene Betrag in Raten zurückgezahlt und verzinst: {z}. Stell die Rückzahlung auf 100 %, dann fallen auf Einkäufe keine Zinsen an.'+(' Bargeld wird bei dieser Karte trotzdem ab dem Abhebungstag verzinst.' if (c.get('cash') or [''])[0]=='free_interest' or c.get('cashInterest') else '')+(' Die Rechnung wird abgebucht.' if c.get('auto') else ' Du überweist den Betrag selbst, also achte auf den Termin.' if c.get('auto') is False else '')))
     if c['typ'] in ('Kreditkarte','Charge'):
-        q.append((f'Kann ich mit der {T} ein Auto mieten oder ein Hotel reservieren?',f'Meist ja. Die {T} ist eine {TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung","")} mit Kreditrahmen, die Vermieter und Hotels in der Regel für Kautionen annehmen. Ob die Karte akzeptiert wird'+(' (American Express wird seltener genommen)' if 'American Express' in (c.get('netz') or '') else '')+', prüfst du am besten vorher beim Vermieter.'))
+        q.append((f'Kann ich mit der {T} ein Auto mieten oder ein Hotel reservieren?',f'Die {T} ist eine {TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung","")} mit Kreditrahmen und kann für die Kaution geeignet sein. Entscheidend sind die Bedingungen der Mietstation oder des Hotels, die akzeptierte Kartenmarke'+(' (American Express wird seltener genommen)' if 'American Express' in (c.get('netz') or '') else '')+', ein ausreichender freier Rahmen und oft eine physische Karte auf den Namen des Hauptfahrers. Eine allgemeine Annahmegarantie gibt es nicht.'))
     else:
-        q.append((f'Kann ich mit der {T} ein Auto mieten oder ein Hotel reservieren?',f'Oft nicht. Die {T} ist eine {TYPLAB.get(c["typ"],c["typ"])}, und viele Mietwagenfirmen und Hotels verlangen für die Kaution eine echte Kreditkarte. Frag vorher beim Vermieter nach.'))
+        q.append((f'Kann ich mit der {T} ein Auto mieten oder ein Hotel reservieren?',f'Das hängt vom Vermieter ab. Die {T} ist eine {TYPLAB.get(c["typ"],c["typ"])}, und viele Mietstationen und Hotels verlangen für die Kaution eine Kreditkarte. Ob eine Debitkarte angenommen wird, hängt von Station, Land und Fahrzeugklasse ab. Prüfe die Zahlungsbedingungen deiner Buchung.'))
     lim=ins_limits(c)
     if (c.get('tier') or 0)>0 and lim:
         q.append((f'Was deckt die Reiseversicherung bei der {T} nicht ab?',f'Laut Versicherungsbedingungen der {T}: '+' '.join(lim)))
@@ -499,8 +499,9 @@ def how(c):
     return 'Die Karte ist eine Prepaid-Karte: Du lädst Guthaben auf und kannst nur so viel ausgeben, wie darauf ist.'
 def steps(c):
     if c.get('giro'):
-        st=[('Konto prüfen',f'Hast du noch kein Girokonto bei {c["anbieter"]}, eröffnest du zuerst eines.'),('Karte beantragen','Du beantragst die Karte im Online-Banking, in der App oder in der Filiale.'),
-            ('Bonität prüfen lassen',f'Die Bank prüft deine Bonität{" und legt den Kartenrahmen fest" if c["typ"] in ("Kreditkarte","Charge") else ""}.'),('Karte aktivieren','Die Karte kommt per Post, und du schaltest sie in der App oder im Online-Banking frei.')]
+        cred=c['typ'] in ('Kreditkarte','Charge')
+        st=[('Konto prüfen',f'Die Karte gibt es nur mit einem Konto bei {c["anbieter"]}. Hast du noch keines, eröffnest du es zuerst.'),('Karte beantragen','Du stellst den Antrag über den Weg, den der Anbieter anbietet, und bestätigst deine Identität.'),
+            ('Bonität prüfen lassen' if cred else 'Voraussetzungen prüfen',f'{c["anbieter"]} prüft deine Bonität und legt den Kartenrahmen fest.' if cred else 'Der Anbieter prüft die geltenden Voraussetzungen.'),('Karte aktivieren','Du aktivierst die Karte nach den Anweisungen des Anbieters.')]
     else:
         st=[('Online-Antrag ausfüllen',f'Du gibst deine Daten, deinen Job und deine Adresse in {L["name"]} an.'),L['ident'],
             ('Bonität prüfen lassen',f'{c["anbieter"]} fragt deine Bonität ab, {L["bonstep"]}{", und legt den Rahmen fest" if c["typ"] in ("Kreditkarte","Charge") else ""}.'),('Karte aktivieren',L['aktiv'])]
@@ -534,7 +535,7 @@ def card_page(c,cards,nrated,prov):
     if c.get('effz'): ld_card['annualPercentageRate']=c['effz']
     if c.get('fee') is not None: ld_card['offers']={"@type":"Offer","price":c['fee'],"priceCurrency":"EUR","description":"Jahresgebühr","availability":"https://schema.org/InStock"}
     if c.get('stars') is not None:
-        ld_card['review']={"@type":"Review","author":{"@id":"https://finvallo.com/#org"},"datePublished":gp,"name":f"{c['titel']} im Finvallo-Vergleich","reviewRating":{"@type":"Rating","ratingValue":c['stars'],"bestRating":5,"worstRating":1},
+        ld_card['review']={"@type":"Review","@id":f"https://finvallo.com/{rel}#review","author":{"@id":"https://finvallo.com/ueber-uns/#haris"},"publisher":{"@id":"https://finvallo.com/#org"},"datePublished":gp,"name":f"{c['titel']} im Finvallo-Vergleich","reviewRating":{"@type":"Rating","ratingValue":c['stars'],"bestRating":5,"worstRating":1},
           "positiveNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":x} for i,x in enumerate(pc[:5])]},
           "negativeNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":x} for i,x in enumerate(kc[:5])]}}
     fq=faq(c)
@@ -561,7 +562,7 @@ def card_page(c,cards,nrated,prov):
     <h1>{E(c["titel"])}</h1>{starrow(c)}</div></div>
   <div class="feat">{feats(c)}</div>{f'<p class="note"><b>Hinweis:</b> {E(c["nurfuer"])}.</p>' if c.get('nurfuer') else ''}
   {offer(c,True)}
-  <div class="box feebox"><small>Jahresgebühr</small><span class="big{" good" if c.get("fee")==0 else ""}">{"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "keine Angabe"}</span>{f1}{f'<small class="mut">Nur mit Girokonto beim Anbieter: {E(c["konto"])}</small>' if c.get("giro") and c.get("konto") else ('<small class="mut">Nur mit Girokonto beim Anbieter</small>' if c.get("giro") else "")}
+  <div class="box feebox"><small>Jahresgebühr</small><span class="big{" good" if c.get("fee")==0 else ""}">{"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "keine Angabe"}</span>{f1}{f'<small class="mut">Nur mit Konto beim Anbieter: {E(c["konto"])}</small>' if c.get("giro") and c.get("konto") else ('<small class="mut">Nur mit Konto beim Anbieter</small>' if c.get("giro") else "")}
     <a class="btn primary block" href="{E(c.get("quelle"))}" target="_blank" rel="noopener">Zum Anbieter ↗</a>
     <div class="actrow"><a class="plink" href="{E(c.get("preis") or c.get("quelle"))}" target="_blank" rel="noopener">{"Preise &amp; Gebühren (PDF) ↗" if (c.get("preis") or "").lower().endswith(".pdf") else "Konditionen beim Anbieter ↗"}</a></div></div>
   <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
@@ -769,14 +770,25 @@ def alle_page(cards,prov):
 <div class="crumb"><span><a href="../../">{N}</a> › <a href="../">Kreditkarten</a> › Alle Karten</span><span>Stand {dmy(L["stand"])}</span></div><h1>Alle Kreditkarten in {N}</h1><p class="lede">{len(cards)} Karten von {len(by)} Anbietern. Ein Klick führt zur ausführlichen Kartenseite mit allen Kosten, der Versicherung und unserer Bewertung.</p>{sec}
 </main>
 {footer(P)}''')
-def datafile(cards):
-    out=[]
+UID_P=os.path.join(SP,'daten','uids.json')
+def uids(cards):
+    """Dauerhafte IDs je Karte: einmal vergeben, bei späterer URL-Änderung unverändert (Schlüssel: AT-id bzw. DE-key)."""
+    U=json.load(open(UID_P)) if os.path.exists(UID_P) else {}
+    code=L['code']; M=U.setdefault(code,{}); ch=False
     for c in cards:
-        out.append({k:c.get(k) for k in ['id','slug','anbieter','herausgeber','name','titel','art','typ','klasse','netz','fee','fee1','feeNote','fx','fxText','cashText','soll','effz','rahmen','giro','auto','pay','tier','stars','note','rank','pros','cons','quelle','preis','stand','geprueft']}
+        k=c.get('id') if code=='at' else c.get('key')
+        if not k: continue
+        if k not in M: M[k]={'uid':f'{code}:{c["slug"]}','id':c.get('id') or f'DE-{c["slug"]}'}; ch=True
+        c['_uid']=M[k]['uid']; c['_id']=c.get('id') or M[k]['id']
+    if ch: json.dump(U,open(UID_P,'w'),ensure_ascii=False,indent=1,sort_keys=True)
+def datafile(cards):
+    out=[]; uids(cards)
+    for c in cards:
+        out.append({'uid':c.get('_uid'),'id':c.get('_id')}|{k:c.get(k) for k in ['slug','anbieter','herausgeber','name','titel','art','typ','klasse','netz','fee','fee1','feeNote','fx','fxText','cashText','soll','effz','rahmen','giro','auto','pay','tier','stars','note','rank','pros','cons','quelle','preis','stand','geprueft']}
                    |{'stand':c['geprueft'],'klasse':{'Std':'Standard'}.get(c.get('klasse'),c.get('klasse')),'versicherung':TIER[c['tier']][1] if c.get('tier') is not None else None,'url':f'https://finvallo.com/{L["code"]}/kreditkarten/{c["slug"]}/'})
     os.makedirs(R+f'{L["code"]}/daten',exist_ok=True)
-    json.dump({'quelle':f'https://finvallo.com/{L["code"]}/kreditkarten/','stand':L['stand'],'anzahl':card_count(L['code'],'all'),'lizenz':'Frei nutzbar mit Quellenangabe Finvallo',
-               'hinweis':'stand = geprueft = Datum der letzten Prüfung der Karte. IDs sind dauerhaft und nicht lückenlos: Entfernte Karten hinterlassen eine Lücke (z. B. AT34, die Austrian Miles & More Smartcard gibt es nur als Business-Karte). url = Kartenseite bei Finvallo, quelle = Anbieterseite, preis = Preisblatt.','karten':out},open(R+f'{L["code"]}/daten/kreditkarten.json','w'),ensure_ascii=False,indent=1)
+    json.dump({'schema_version':2,'quelle':f'https://finvallo.com/{L["code"]}/kreditkarten/','stand':L['stand'],'anzahl':card_count(L['code'],'all'),'lizenz':'Frei nutzbar mit Quellenangabe Finvallo',
+               'hinweis':'geprueft = Datum der letzten fachlichen Prüfung der Karte (stand ist dasselbe Datum und bleibt nur für ältere Auswertungen). Fehlende Werte sind null und bedeuten nicht, dass eine Leistung ausgeschlossen ist. uid identifiziert Produkt und Markt dauerhaft und bleibt auch bei einer neuen URL gleich. url = Kartenseite bei Finvallo, quelle = Anbieterseite, preis = Preisblatt.','karten':out},open(R+f'{L["code"]}/daten/kreditkarten.json','w'),ensure_ascii=False,indent=1)
 
 # ---------- Methodik (DE; AT-Methodik ist eine feste Seite) ----------
 def methodik_page(cards,priv):
@@ -787,7 +799,7 @@ def methodik_page(cards,priv):
     rows=lambda X: ''.join(f'<tr><td>{a}</td><td>{b}</td></tr>' for a,b in X)
     rules=[('Jahresgebühr · 25 %','Was die Karte ab dem zweiten Jahr kostet. Aktionen im ersten Jahr zählen bei den Extras.',[('0 €','5,0'),('bis 25 €','4,6'),('bis 50 €','4,2'),('bis 100 €','3,6'),('bis 150 €','3,0'),('bis 250 €','2,4'),('bis 450 €','1,8'),('über 450 €','1,2')]),
            ('Zahlen im Ausland · 15 %','Was eine Zahlung in US-Dollar insgesamt extra kostet, also Auslandseinsatzentgelt und Kursaufschlag zusammen.',[('0 %','5,0'),('0 % mit Freigrenze oder Wochenendaufschlag','4,8'),('bis 0,5 %','4,8'),('bis 1 %','4,4'),('bis 1,5 %','4,0'),('bis 2 %','3,4'),('bis 2,7 %','2,6'),('bis 3,2 %','2,0'),('darüber','1,5')]),
-           ('Reiseversicherung · 20 %','Wie umfassend der Reiseschutz ist, der ohne Aufpreis enthalten ist.',[('Premium-Reiseschutz','5,0'),('umfassender Reiseschutz (mit Mietwagen)','4,7'),('Reiseversicherung mit Reiserücktritt','4,2'),('Basis-Reiseschutz','3,0'),('keine Reiseversicherung','1,0')]),
+           ('Reiseversicherung · 20 %','Wie umfassend der Reiseschutz ist, der ohne Aufpreis enthalten ist.',[('Premium-Reiseschutz','5,0'),('umfassender Reiseschutz','4,7'),('Reiseversicherung mit Reiserücktritt','4,2'),('Basis-Reiseschutz','3,0'),('keine Reiseversicherung','1,0')]),
            ('Kartenart & Akzeptanz · 10 %','Wo die Karte angenommen wird. Debit- und Prepaid-Karten gehen fast überall, werden aber bei Kautionen für Mietwagen oder Hotels oft abgelehnt.',[('Kredit- oder Charge-Karte mit Visa oder Mastercard','5,0'),('Kredit- oder Charge-Karte, Netz nicht bestätigt','4,5'),('Debit- oder Prepaid-Karte mit Visa oder Mastercard','3,5'),('American Express','3,0'),('Diners Club','2,0')]),
            ('Alltag & Flexibilität · 10 %','Durchschnitt aus drei Punkten. Ist ein Punkt nicht bestätigt, zählt er wie bei allen Kriterien mit 2,5 Sternen.',[('kein Konto beim Anbieter nötig','5,0 (sonst 2,5)'),('automatische Abbuchung','5,0 (sonst 3,0)'),('Apple Pay / Google Pay','5,0 (sonst 1,0)')]),
            ('Bargeld · 10 %','Was eine Abhebung von 200 € am Automaten in Deutschland kostet.',[('kostenlos','5,0'),('kostenlos, aber ab Tag 1 verzinst','4,5'),('kostenlos, aber nur begrenzt viele Abhebungen','4,5'),('bis 2 €','4,2'),('bis 4 €','3,4'),('bis 7 €','2,6'),('darüber','2,0')]),

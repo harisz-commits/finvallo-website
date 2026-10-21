@@ -1,11 +1,13 @@
 {
+ "schema_version": 2,
  "quelle": "https://finvallo.com/at/kreditkarten/",
  "stand": "2026-10-14",
  "anzahl": 77,
  "lizenz": "Frei nutzbar mit Quellenangabe Finvallo",
- "hinweis": "stand = geprueft = Datum der letzten Prüfung der Karte. IDs sind dauerhaft und nicht lückenlos: Entfernte Karten hinterlassen eine Lücke (z. B. AT34, die Austrian Miles & More Smartcard gibt es nur als Business-Karte). url = Kartenseite bei Finvallo, quelle = Anbieterseite, preis = Preisblatt.",
+ "hinweis": "geprueft = Datum der letzten fachlichen Prüfung der Karte (stand ist dasselbe Datum und bleibt nur für ältere Auswertungen). Fehlende Werte sind null und bedeuten nicht, dass eine Leistung ausgeschlossen ist. uid identifiziert Produkt und Markt dauerhaft und bleibt auch bei einer neuen URL gleich. url = Kartenseite bei Finvallo, quelle = Anbieterseite, preis = Preisblatt.",
  "karten": [
   {
+   "uid": "at:advanzia-bank-free-mastercard-gold",
    "id": "AT01",
    "slug": "advanzia-bank-free-mastercard-gold",
    "anbieter": "Advanzia Bank",
@@ -55,6 +57,7 @@
    "sek": []
   },
   {
+   "uid": "at:tf-bank-mastercard-gold",
    "id": "AT02",
    "slug": "tf-bank-mastercard-gold",
    "anbieter": "TF Bank",
@@ -106,6 +109,7 @@
    "sek": []
   },
   {
+   "uid": "at:advanzia-bank-hilton-honors-kreditkarte",
    "id": "AT03",
    "slug": "advanzia-bank-hilton-honors-kreditkarte",
    "anbieter": "Advanzia Bank",
@@ -155,6 +159,7 @@
    "sek": []
   },
   {
+   "uid": "at:american-express-gold-card",
    "id": "AT04",
    "slug": "american-express-gold-card",
    "anbieter": "American Express",
@@ -204,6 +209,7 @@
    "sek": []
   },
   {
+   "uid": "at:american-express-platinum-card",
    "id": "AT05",
    "slug": "american-express-platinum-card",
    "anbieter": "American Express",
@@ -256,6 +262,7 @@
    "sek": []
   },
   {
+   "uid": "at:american-express-card",
    "id": "AT06",
    "slug": "american-express-card",
    "anbieter": "American Express",
@@ -301,6 +308,7 @@
    "sek": []
   },
   {
+   "uid": "at:american-express-blue-card",
    "id": "AT07",
    "slug": "american-express-blue-card",
    "anbieter": "American Express",
@@ -345,6 +353,7 @@
    "sek": []
   },
   {
+   "uid": "at:american-express-aurum-card",
    "id": "AT08",
    "slug": "american-express-aurum-card",
    "anbieter": "American Express",
@@ -389,6 +398,7 @@
    "sek": []
   },
   {
+   "uid": "at:american-express-bmw-card",
    "id": "AT09",
    "slug": "american-express-bmw-card",
    "anbieter": "American Express",
@@ -435,6 +445,7 @@
    "sek": []
   },
   {
+   "uid": "at:american-express-bmw-card-gold",
    "id": "AT10",
    "slug": "american-express-bmw-card-gold",
    "anbieter": "American Express",
@@ -482,6 +493,7 @@
    "sek": []
   },
   {
+   "uid": "at:american-express-centurion-card",
    "id": "AT11",
    "slug": "american-express-centurion-card",
    "anbieter": "American Express",
@@ -527,6 +539,7 @@
    "sek": []
   },
   {
+   "uid": "at:card-complete-classic-ohne-versicherung",
    "id": "AT12",
    "slug": "card-complete-classic-ohne-versicherung",
    "anbieter": "card complete",
@@ -571,6 +584,7 @@
    "sek": []
   },
   {
+   "uid": "at:card-complete-classic-mit-versicherung",
    "id": "AT13",
    "slug": "card-complete-classic-mit-versicherung",
    "anbieter": "card complete",
@@ -614,6 +628,7 @@
    "sek": []
   },
   {
+   "uid": "at:card-complete-gold",
    "id": "AT14",
    "slug": "card-complete-gold",
    "anbieter": "card complete",
@@ -658,6 +673,7 @@
    "sek": []
   },
   {
+   "uid": "at:card-complete-platinum",
    "id": "AT15",
    "slug": "card-complete-platinum",
    "anbieter": "card complete",
@@ -704,6 +720,7 @@
    "sek": []
   },
   {
+   "uid": "at:card-complete-world-traveller-gold",
    "id": "AT16",
    "slug": "card-complete-world-traveller-gold",
    "anbieter": "card complete",
@@ -750,6 +767,7 @@
    "sek": []
   },
   {
+   "uid": "at:card-complete-world-traveller-black",
    "id": "AT17",
    "slug": "card-complete-world-traveller-black",
    "anbieter": "card complete",
@@ -798,6 +816,7 @@
    "sek": []
   },
   {
+   "uid": "at:card-complete-student",
    "id": "AT18",
    "slug": "card-complete-student",
    "anbieter": "card complete",
@@ -842,6 +861,7 @@
    "sek": []
   },
   {
+   "uid": "at:card-complete-prepaid",
    "id": "AT19",
    "slug": "card-complete-prepaid",
    "anbieter": "card complete",
@@ -887,6 +907,7 @@
    "sek": []
   },
   {
+   "uid": "at:diners-club-classic",
    "id": "AT20",
    "slug": "diners-club-classic",
    "anbieter": "Diners Club",
@@ -932,6 +953,7 @@
    "sek": []
   },
   {
+   "uid": "at:diners-club-gold",
    "id": "AT21",
    "slug": "diners-club-gold",
    "anbieter": "Diners Club",
@@ -978,6 +1000,7 @@
    "sek": []
   },
   {
+   "uid": "at:diners-club-golf",
    "id": "AT22",
    "slug": "diners-club-golf",
    "anbieter": "Diners Club",
@@ -1023,6 +1046,7 @@
    "sek": []
   },
   {
+   "uid": "at:diners-club-vintage",
    "id": "AT23",
    "slug": "diners-club-vintage",
    "anbieter": "Diners Club",
@@ -1069,6 +1093,7 @@
    "sek": []
   },
   {
+   "uid": "at:diners-club-student",
    "id": "AT24",
    "slug": "diners-club-student",
    "anbieter": "Diners Club",
@@ -1114,6 +1139,7 @@
    "sek": []
   },
   {
+   "uid": "at:diners-club-oe1",
    "id": "AT25",
    "slug": "diners-club-oe1",
    "anbieter": "Diners Club",
@@ -1158,6 +1184,7 @@
    "sek": []
   },
   {
+   "uid": "at:paylife-classic",
    "id": "AT26",
    "slug": "paylife-classic",
    "anbieter": "PayLife",
@@ -1201,6 +1228,7 @@
    "sek": []
   },
   {
+   "uid": "at:paylife-goldplus",
    "id": "AT27",
    "slug": "paylife-goldplus",
    "anbieter": "PayLife",
@@ -1245,6 +1273,7 @@
    "sek": []
   },
   {
+   "uid": "at:paylife-black",
    "id": "AT28",
    "slug": "paylife-black",
    "anbieter": "PayLife",
@@ -1291,6 +1320,7 @@
    "sek": []
   },
   {
+   "uid": "at:paylife-platinum",
    "id": "AT29",
    "slug": "paylife-platinum",
    "anbieter": "PayLife",
@@ -1338,6 +1368,7 @@
    "sek": []
   },
   {
+   "uid": "at:paylife-goldplus-student-maturant",
    "id": "AT30",
    "slug": "paylife-goldplus-student-maturant",
    "anbieter": "PayLife",
@@ -1383,6 +1414,7 @@
    "sek": []
   },
   {
+   "uid": "at:paylife-gold-bestand",
    "id": "AT31",
    "slug": "paylife-gold-bestand",
    "anbieter": "PayLife",
@@ -1425,6 +1457,7 @@
    "sek": []
   },
   {
+   "uid": "at:erste-bank-und-sparkassen-smartcard",
    "id": "AT32",
    "slug": "erste-bank-und-sparkassen-smartcard",
    "anbieter": "Erste Bank und Sparkassen",
@@ -1471,6 +1504,7 @@
    "sek": []
   },
   {
+   "uid": "at:erste-bank-und-sparkassen-premiumcard",
    "id": "AT33",
    "slug": "erste-bank-und-sparkassen-premiumcard",
    "anbieter": "Erste Bank und Sparkassen",
@@ -1520,6 +1554,7 @@
    "sek": []
   },
   {
+   "uid": "at:erste-bank-und-sparkassen-austrian-miles-und-more-premiumcard",
    "id": "AT35",
    "slug": "erste-bank-und-sparkassen-austrian-miles-und-more-premiumcard",
    "anbieter": "Erste Bank und Sparkassen",
@@ -1567,6 +1602,7 @@
    "sek": []
   },
   {
+   "uid": "at:erste-bank-und-sparkassen-goed-smartcard",
    "id": "AT36",
    "slug": "erste-bank-und-sparkassen-goed-smartcard",
    "anbieter": "Erste Bank und Sparkassen",
@@ -1612,6 +1648,7 @@
    "sek": []
   },
   {
+   "uid": "at:erste-bank-und-sparkassen-goed-premiumcard",
    "id": "AT37",
    "slug": "erste-bank-und-sparkassen-goed-premiumcard",
    "anbieter": "Erste Bank und Sparkassen",
@@ -1660,6 +1697,7 @@
    "sek": []
   },
   {
+   "uid": "at:raiffeisen-classic",
    "id": "AT38",
    "slug": "raiffeisen-classic",
    "anbieter": "Raiffeisen",
@@ -1704,6 +1742,7 @@
    "sek": []
   },
   {
+   "uid": "at:raiffeisen-gold",
    "id": "AT39",
    "slug": "raiffeisen-gold",
    "anbieter": "Raiffeisen",
@@ -1748,6 +1787,7 @@
    "sek": []
   },
   {
+   "uid": "at:raiffeisen-platinum",
    "id": "AT40",
    "slug": "raiffeisen-platinum",
    "anbieter": "Raiffeisen",
@@ -1793,6 +1833,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank-austria-classic",
    "id": "AT41",
    "slug": "bank-austria-classic",
    "anbieter": "Bank Austria",
@@ -1838,6 +1879,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank-austria-gold",
    "id": "AT42",
    "slug": "bank-austria-gold",
    "anbieter": "Bank Austria",
@@ -1883,6 +1925,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank-austria-gold-student",
    "id": "AT43",
    "slug": "bank-austria-gold-student",
    "anbieter": "Bank Austria",
@@ -1928,6 +1971,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank-austria-platinum",
    "id": "AT44",
    "slug": "bank-austria-platinum",
    "anbieter": "Bank Austria",
@@ -1973,6 +2017,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank-austria-world",
    "id": "AT45",
    "slug": "bank-austria-world",
    "anbieter": "Bank Austria",
@@ -2019,6 +2064,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank-austria-world-elite",
    "id": "AT46",
    "slug": "bank-austria-world-elite",
    "anbieter": "Bank Austria",
@@ -2068,6 +2114,7 @@
    "sek": []
   },
   {
+   "uid": "at:bawag-gold",
    "id": "AT47",
    "slug": "bawag-gold",
    "anbieter": "BAWAG",
@@ -2113,6 +2160,7 @@
    "sek": []
   },
   {
+   "uid": "at:bawag-weiss",
    "id": "AT48",
    "slug": "bawag-weiss",
    "anbieter": "BAWAG",
@@ -2157,6 +2205,7 @@
    "sek": []
   },
   {
+   "uid": "at:bawag-gold-student",
    "id": "AT49",
    "slug": "bawag-gold-student",
    "anbieter": "BAWAG",
@@ -2203,6 +2252,7 @@
    "sek": []
   },
   {
+   "uid": "at:easybank-kreditkarte",
    "id": "AT50",
    "slug": "easybank-kreditkarte",
    "anbieter": "easybank",
@@ -2246,6 +2296,7 @@
    "sek": []
   },
   {
+   "uid": "at:easybank-kreditkarte-gold",
    "id": "AT51",
    "slug": "easybank-kreditkarte-gold",
    "anbieter": "easybank",
@@ -2291,6 +2342,7 @@
    "sek": []
   },
   {
+   "uid": "at:easybank-gold-student",
    "id": "AT52",
    "slug": "easybank-gold-student",
    "anbieter": "easybank",
@@ -2336,6 +2388,7 @@
    "sek": []
   },
   {
+   "uid": "at:oberbank-mastercard-klassik",
    "id": "AT53",
    "slug": "oberbank-mastercard-klassik",
    "anbieter": "Oberbank",
@@ -2378,6 +2431,7 @@
    "sek": []
   },
   {
+   "uid": "at:oberbank-mastercard-gold",
    "id": "AT54",
    "slug": "oberbank-mastercard-gold",
    "anbieter": "Oberbank",
@@ -2421,6 +2475,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank99-classic",
    "id": "AT55",
    "slug": "bank99-classic",
    "anbieter": "bank99",
@@ -2466,6 +2521,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank99-gold",
    "id": "AT56",
    "slug": "bank99-gold",
    "anbieter": "bank99",
@@ -2512,6 +2568,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank99-platinum",
    "id": "AT57",
    "slug": "bank99-platinum",
    "anbieter": "bank99",
@@ -2559,6 +2616,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank-direkt-classic",
    "id": "AT58",
    "slug": "bank-direkt-classic",
    "anbieter": "Bank Direkt",
@@ -2602,6 +2660,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank-direkt-gold",
    "id": "AT59",
    "slug": "bank-direkt-gold",
    "anbieter": "Bank Direkt",
@@ -2646,6 +2705,7 @@
    "sek": []
   },
   {
+   "uid": "at:bank-direkt-platinum",
    "id": "AT60",
    "slug": "bank-direkt-platinum",
    "anbieter": "Bank Direkt",
@@ -2690,6 +2750,7 @@
    "sek": []
   },
   {
+   "uid": "at:santander-card",
    "id": "AT61",
    "slug": "santander-card",
    "anbieter": "Santander Consumer Bank",
@@ -2736,6 +2797,7 @@
    "sek": []
   },
   {
+   "uid": "at:revolut-standard",
    "id": "D01",
    "slug": "revolut-standard",
    "anbieter": "Revolut",
@@ -2780,6 +2842,7 @@
    "sek": []
   },
   {
+   "uid": "at:revolut-plus",
    "id": "D02",
    "slug": "revolut-plus",
    "anbieter": "Revolut",
@@ -2825,6 +2888,7 @@
    "sek": []
   },
   {
+   "uid": "at:revolut-premium",
    "id": "D03",
    "slug": "revolut-premium",
    "anbieter": "Revolut",
@@ -2869,6 +2933,7 @@
    "sek": []
   },
   {
+   "uid": "at:revolut-metal",
    "id": "D04",
    "slug": "revolut-metal",
    "anbieter": "Revolut",
@@ -2916,6 +2981,7 @@
    "sek": []
   },
   {
+   "uid": "at:revolut-ultra",
    "id": "D05",
    "slug": "revolut-ultra",
    "anbieter": "Revolut",
@@ -2963,6 +3029,7 @@
    "sek": []
   },
   {
+   "uid": "at:n26-standard",
    "id": "D06",
    "slug": "n26-standard",
    "anbieter": "N26",
@@ -3007,6 +3074,7 @@
    "sek": []
   },
   {
+   "uid": "at:n26-smart",
    "id": "D07",
    "slug": "n26-smart",
    "anbieter": "N26",
@@ -3052,6 +3120,7 @@
    "sek": []
   },
   {
+   "uid": "at:n26-go",
    "id": "D08",
    "slug": "n26-go",
    "anbieter": "N26",
@@ -3096,6 +3165,7 @@
    "sek": []
   },
   {
+   "uid": "at:n26-metal",
    "id": "D09",
    "slug": "n26-metal",
    "anbieter": "N26",
@@ -3144,6 +3214,7 @@
    "sek": []
   },
   {
+   "uid": "at:trade-republic-karte",
    "id": "D10",
    "slug": "trade-republic-karte",
    "anbieter": "Trade Republic",
@@ -3190,6 +3261,7 @@
    "sek": []
   },
   {
+   "uid": "at:bitpanda-karte",
    "id": "D11",
    "slug": "bitpanda-karte",
    "anbieter": "Bitpanda",
@@ -3234,6 +3306,7 @@
    "sek": []
   },
   {
+   "uid": "at:bunq-karte",
    "id": "D12",
    "slug": "bunq-karte",
    "anbieter": "bunq",
@@ -3276,6 +3349,7 @@
    "sek": []
   },
   {
+   "uid": "at:wise-karte",
    "id": "D13",
    "slug": "wise-karte",
    "anbieter": "Wise",
@@ -3322,6 +3396,7 @@
    "sek": []
   },
   {
+   "uid": "at:american-express-business-card",
    "id": "B01",
    "slug": "american-express-business-card",
    "anbieter": "American Express",
@@ -3367,6 +3442,7 @@
    "sek": []
   },
   {
+   "uid": "at:american-express-business-gold-card",
    "id": "B02",
    "slug": "american-express-business-gold-card",
    "anbieter": "American Express",
@@ -3413,6 +3489,7 @@
    "sek": []
   },
   {
+   "uid": "at:n26-business-metal",
    "id": "B03",
    "slug": "n26-business-metal",
    "anbieter": "N26",
@@ -3457,6 +3534,7 @@
    "sek": []
   },
   {
+   "uid": "at:oberbank-business-mastercard-klassik",
    "id": "B04",
    "slug": "oberbank-business-mastercard-klassik",
    "anbieter": "Oberbank",
