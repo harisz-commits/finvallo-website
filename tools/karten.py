@@ -1000,7 +1000,7 @@ COLS={
  'debit':[('Zahlung Ausland',k_fx),('Bargeld',k_cash),('Jahresgebühr',k_fee)],
 }
 TXTCOL=('Sammelrate','Cashback','Gilt für')
-COLNOTE={'punkte':'¹ Bei 1.000 € Umsatz im Monat, 1 Punkt oder Meile = 1 Cent. „Nach Gebühr“ = Wert minus Jahresgebühr.','cashback':'¹ Bei 1.000 € Umsatz im Monat, mit allen Höchstgrenzen. „Nach Gebühr“ = Wert minus Jahresgebühr.'}
+COLNOTE={'punkte':'¹ Bei 1.000 € Umsatz im Monat. Annahme zum Punktewert: 1 Punkt oder Meile = 1 Cent, Hotelpunkte 0,4 Cent. Der tatsächliche Gegenwert hängt von der Einlösung ab, Punkte sind kein garantiertes Cashback. „Nach Gebühr“ = Wert minus Jahresgebühr.','cashback':'¹ Bei 1.000 € Umsatz im Monat, mit allen Höchstgrenzen. „Nach Gebühr“ = Wert minus Jahresgebühr.'}
 def top_of(n): return f'Top 25 von {n} bewerteten Karten' if n>25 else f'Alle {n} bewerteten Karten'
 def bestenlisten(cards,lists,other_lists):
     code=L['code']; N=L['name']; S=dmy(L['stand'])
