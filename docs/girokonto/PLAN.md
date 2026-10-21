@@ -120,13 +120,29 @@ Ja, aber als **Konto-Radar** statt klassischer News:
 4. **Seiten:** Hub und Liste, Kontoseiten, Anbieterseiten, Bestenlisten, Rechner.
 5. **Ratgeber**, danach restliche regionale Banken, Konto-Radar.
 
-## 12. Offene Entscheidungen
+## 12. Entscheidungen (Haris, 21.10.2026)
 
-1. Start mit rund 60 Konten oder gleich alle rund 200?
-2. Regionale Banken mit Referenzinstitut und Bundesland-Filter?
-3. Gewichte der Bewertung wie in Punkt 7?
-4. AK-Nutzertypen als Standard übernehmen?
-5. Bonus nur in der Rechnung für das 1. Jahr, nicht in den Sternen?
-6. Nachhaltig-Filter nur mit Beleg?
-7. Adresse `/at/girokonto/` und Menüpunkt „Girokonten“ neben „Kreditkarten“?
-8. WKO-Frage klären?
+1. **Nur überregionale Angebote.** Keine regionalen Banken (keine Sparkassen, Raiffeisenbanken, Volksbanken, Hypos, Regionalbanken wie Oberbank, BKS, BTV, VKB). Kein Referenzinstitut.
+2. **Kein Bundesland-Filter.**
+3. **Gewichte** wie in Punkt 7 (vorläufig ja).
+4. **Nutzertypen von durchblicker** statt AK: Gehaltskonto 121 / 233 / 366 Buchungen pro Jahr, Pensionskonto 63 / 124 / 216, Sonstige (Privat, Schüler, Student) 43 / 111 / 241. Aufteilung je Buchungsart siehe konkurrenz.md, Abschnitt 2.3.
+5. **Bonus** zählt in Rechnung und Kosten im 1. Jahr, ab dem 2. Jahr nicht mehr, nicht in den Sternen.
+6. **Nachhaltig-Filter** nur mit Beleg, niedrige Priorität.
+7. **Aufbau genau wie bei den Kreditkarten**, nur mit Girokonten (Menü, Liste, Kontoseiten, Bestenlisten, Rechner, Ratgeber, Anbieterseiten).
+
+## 13. Umfang überregional (Schätzung aus markt.md, vor dem Start genau zählen)
+
+Österreichische Banken, rund 38 Konten:
+- BAWAG 6 (KontoBox Large, Small, B4-19, Studenten, Online KontoBox, Basiskonto)
+- Bank Austria 7
+- bank99 5
+- easybank 3
+- DADAT 4
+- Wüstenrot 5
+- Bank Direkt 3
+- Anadi 3
+- DenizBank 2 (Filialen in mehreren Bundesländern, prüfen)
+
+Neo- und Direktbanken, rund 23 Konten: Trade Republic 1, N26 5, Revolut 5, bunq 4, Vivid 3, DKB 1, Tomorrow 3, Wise 1 (E-Geld, keine Einlagensicherung, kennzeichnen).
+
+Summe rund 61. Grenzfälle zum Entscheiden vor dem Start: Erste Bank (nur Wien, NÖ, Burgenland mit Filialen; Online-Eröffnung österreichweit prüfen), Kinderkonten (MegaCard 7-13, Wüstenrot START), Wise als E-Geld-Konto.
