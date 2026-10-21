@@ -133,8 +133,8 @@
     "guests_free": 50,
     "hinweis": "50 Besuche im Jahr inklusive Gäste, pro Besuch 1 Gast kostenlos"
    },
-   "punkte_pro_100": 1,
-   "punkte_hinweis": "1 Membership-Rewards-Punkt pro €, 1 Punkt = 1 Cent",
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 Membership-Rewards-Punkt pro €, 1 Punkt = 0,5 Cent",
    "welcome": {
     "text": "bis 340 € Startguthaben bei 10.000 € Umsatz in den ersten 6 Monaten",
     "eur": 340
@@ -169,8 +169,8 @@
      "hinweis": "2 × 50 €, nur LODENFREY München oder online, ab 200 € Einkauf"
     }
    ],
-   "punkte_pro_100": 1,
-   "punkte_hinweis": "1 Membership-Rewards-Punkt pro €, 1 Punkt = 1 Cent",
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 Membership-Rewards-Punkt pro €, 1 Punkt = 0,5 Cent",
    "welcome": {
     "text": "bis 200 € Startguthaben bei 5.000 € Umsatz in den ersten 6 Monaten",
     "eur": 200
@@ -189,8 +189,8 @@
     "guests_free": 0,
     "hinweis": "für dich unbegrenzt, Gäste kosten extra"
    },
-   "punkte_pro_100": 1,
-   "punkte_hinweis": "1 RevPoint pro €, 1 RevPoint = 1 Cent",
+   "punkte_pro_100": 0.5,
+   "punkte_hinweis": "1 RevPoint pro €, 1 RevPoint = 0,5 Cent",
    "subs_names": [
     "ChatGPT Go",
     "WeWork (3 Tagespässe)",
@@ -219,8 +219,8 @@
   {
    "slug": "revolut-metal",
    "geprueft": "2026-10-13",
-   "punkte_pro_100": 0.5,
-   "punkte_hinweis": "1 RevPoint pro 2 €, 1 RevPoint = 1 Cent",
+   "punkte_pro_100": 0.25,
+   "punkte_hinweis": "1 RevPoint pro 2 €, 1 RevPoint = 0,5 Cent",
    "subs_names": [
     "ChatGPT Go",
     "WeWork (1 Tagespass)",
@@ -273,8 +273,8 @@
      "hinweis": "4,99 € pro Monat, nur wenn du bei Wolt bestellst"
     }
    ],
-   "punkte_pro_100": 0.5,
-   "punkte_hinweis": "1 Meile pro 2 €, 1 Meile = 1 Cent",
+   "punkte_pro_100": 0.25,
+   "punkte_hinweis": "1 Meile pro 2 €, 1 Meile = 0,5 Cent",
    "welcome": {
     "text": "20.000 Meilen und 4 Lufthansa Business Lounge Voucher bei Antrag bis 30.11.2026",
     "eur": 320
@@ -286,8 +286,8 @@
   {
    "slug": "eurowings-kreditkarte-premium",
    "geprueft": "2026-10-13",
-   "punkte_pro_100": 0.5,
-   "punkte_hinweis": "1 Meile pro 2 €, 1 Meile = 1 Cent",
+   "punkte_pro_100": 0.25,
+   "punkte_hinweis": "1 Meile pro 2 €, 1 Meile = 0,5 Cent",
    "extra": [
     {
      "name": "Kostenlose Sitzplatzwahl und Sportgepäck bei Eurowings",

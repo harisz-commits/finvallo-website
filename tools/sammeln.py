@@ -1,12 +1,15 @@
 import re
 # Sammelwert für die Bestenliste „Meilen & Punkte“: was eine Karte bei normalem Umsatz zurückbringt.
 # tier2 = (Höchstwert €/Jahr zur vollen Rate, Rate darüber)
-# rate = Wert in % vom allgemeinen Kartenumsatz (1 Punkt/Meile = 1 Cent, Hilton-Punkt = 0,4 Cent),
+# rate = Prozent vom Umsatz; bei Punkten und Meilen = Punkte pro 100 € Umsatz (Wert pro Punkt: pv, sonst PV),
 # cap = Höchstwert € pro Jahr, extra = Aufpreis € pro Jahr für das Programm, tier2 = (Grenze €/Jahr, Rate darüber)
 # Partner-, Reise- oder Kategorie-Rabatte zählen hier NICHT (rate 0).
 REF=12000  # Referenz: 1.000 € Kartenumsatz pro Monat
+# Wert eines Punkts oder einer Meile in Cent: 0,5 als vorsichtiger Standard (Amex nennt selbst 0,3 bis 0,5 Cent).
+# pv nur, wenn der Anbieter einen festen Wert nennt (PAYBACK: 1 °Punkt = 1 Cent, TARGOBANK: 100 Punkte = 1 €).
+PV=0.5
 AT={
- 'Advanzia Bank Hilton Honors Kreditkarte':dict(rate=0.4,txt='1 Hilton-Punkt pro € (≈ 0,4 %)'),
+ 'Advanzia Bank Hilton Honors Kreditkarte':dict(rate=1.0,txt='1 Hilton-Punkt pro €'),
  'American Express Gold Card':dict(rate=1.0,extra=30,txt='1 Membership-Rewards-Punkt pro € (Programm 30 €/Jahr)'),
  'American Express Platinum Card':dict(rate=1.0,txt='1 Membership-Rewards-Punkt pro €'),
  'American Express Card':dict(rate=1.0,extra=30,txt='1 Membership-Rewards-Punkt pro € (Programm 30 €/Jahr)'),
@@ -27,7 +30,7 @@ AT={
 }
 DE={
  'WEB.Cent Mastercard Gold (GMX / WEB.DE)':dict(rate=0.5,txt='0,5 % Cashback auf alles'),
- 'Hilton Honors Kreditkarte':dict(rate=0.4,txt='1 Hilton-Punkt pro € (≈ 0,4 %)'),
+ 'Hilton Honors Kreditkarte':dict(rate=1.0,txt='1 Hilton-Punkt pro €'),
  'Turkish Airlines Miles&Smiles Mastercard Gold':dict(rate=0.5,txt='1 Meile pro 2 €'),
  'Klarna Plus':dict(rate=0.5,txt='0,5 % Cashback'),'Klarna Premium':dict(rate=1.0,txt='1 % Cashback'),'Klarna Max':dict(rate=1.5,txt='1,5 % Cashback'),
  'Eurowings Kreditkarte Classic':dict(rate=0.5,txt='1 Prämienmeile pro 2 €'),'Eurowings Kreditkarte Premium':dict(rate=0.5,txt='1 Prämienmeile pro 2 €'),
@@ -35,14 +38,14 @@ DE={
  'IKEA Family Kreditkarte':dict(rate=1.0,cap=30,txt='1 % als IKEA-Guthaben, max. 30 €/Jahr'),
  'Miles & More Gold Credit Card':dict(rate=0.5,txt='1 Meile pro 2 €'),'Miles & More Blue Credit Card':dict(rate=0.5,txt='1 Meile pro 2 €'),'Miles & More MyFlex Credit Card':dict(rate=0.5,txt='1 Meile pro 2 €'),
  'TARGOBANK Gold-Karte':dict(rate=1.0,cap=100,txt='1 % Cashback, max. 100 €/Jahr'),
- 'TARGOBANK Premium-Karte':dict(rate=1.0,cap=200,txt='1 Punkt pro € (100 Punkte = 1 €), max. 200 €/Jahr'),
+ 'TARGOBANK Premium-Karte':dict(rate=1.0,pv=1,cap=200,txt='1 Punkt pro € (100 Punkte = 1 €), max. 200 €/Jahr'),
  'American Express Platinum Card':dict(rate=1.0,txt='1 Membership-Rewards-Punkt pro €'),
  'American Express Gold Card':dict(rate=1.0,txt='1 Membership-Rewards-Punkt pro €'),
  'American Express Gold Card Rosé':dict(rate=1.0,txt='1 Membership-Rewards-Punkt pro €'),
  'American Express Card':dict(rate=1.0,txt='1 Membership-Rewards-Punkt pro €'),
- 'PAYBACK American Express Karte':dict(rate=0.33,txt='1 °Punkt pro 3 €'),'dm PAYBACK American Express Karte':dict(rate=0.33,txt='1 °Punkt pro 3 € (doppelt bei dm)'),
+ 'PAYBACK American Express Karte':dict(rate=0.33,pv=1,txt='1 °Punkt pro 3 €'),'dm PAYBACK American Express Karte':dict(rate=0.33,pv=1,txt='1 °Punkt pro 3 € (doppelt bei dm)'),
  'BMW Card von American Express':dict(rate=1.0,txt='1 Membership-Rewards-Punkt pro €'),'BMW Premium Card Carbon':dict(rate=1.0,txt='1 Membership-Rewards-Punkt pro €'),
- 'PAYBACK Visa Kreditkarte':dict(rate=0.2,txt='1 °Punkt pro 5 €'),'PAYBACK Visa Kreditkarte auf Guthabenbasis':dict(rate=0.2,txt='1 °Punkt pro 5 €'),
+ 'PAYBACK Visa Kreditkarte':dict(rate=0.2,pv=1,txt='1 °Punkt pro 5 €'),'PAYBACK Visa Kreditkarte auf Guthabenbasis':dict(rate=0.2,pv=1,txt='1 °Punkt pro 5 €'),
  'C24 Bank Smart':dict(rate=0.05,txt='0,05 % Basis-Cashback'),
  'C24 Bank Plus':dict(rate=0.5,tier2=(144,0.1),txt='0,5 % bis 12 €/Monat, danach 0,1 %'),
  'C24 Bank Max':dict(rate=1.0,tier2=(288,0.2),txt='1 % bis 24 €/Monat, danach 0,2 %'),
@@ -63,6 +66,12 @@ def kind(m):
     if re.search(r'Meile|Miles',t,re.I): return 'miles'
     if re.search(r'Membership|Hilton|°Punkt|RevPoint|Punkt je|Bonuspunkt|Punkte',t): return 'points'
     return 'cash'
+def pv(m):
+    """Wert pro Punkt in Cent (1 bei Cashback)."""
+    return 1 if kind(m)=='cash' else m.get('pv',PV)
+def pv_of(land,titel):
+    m=(AT if land=='at' else DE).get(titel)
+    return pv(m) if m else PV
 def value(land,titel,spend=REF):
     m=(AT if land=='at' else DE).get(titel)
     if not m or not m.get('rate'): return None
@@ -70,6 +79,7 @@ def value(land,titel,spend=REF):
         capv,r2=m['tier2']; s1=capv/(m['rate']/100)   # Umsatz, bis zu dem die volle Rate gilt
         v=min(spend,s1)*m['rate']/100+max(0,spend-s1)*r2/100
     else: v=spend*m['rate']/100
+    v*=pv(m)
     if m.get('cap') is not None: v=min(v,m['cap'])
     return round(v-m.get('extra',0),2), m
 def note(v):

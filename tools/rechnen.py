@@ -66,7 +66,9 @@ def card_data(land, cards):
         if d.get('pct'):
             v = SM.value(land, c['titel'])
             kind = SM.kind(v[1]) if v else ('cash' if re.search(r'cashback|saveback|gutschrift|coins|guthaben', ((e.get('art') or '') + ' ' + ((x or {}).get('punkte_hinweis') or '')), re.I) else 'points')
-            if kind != 'cash': d['pk'] = 1
+            if kind != 'cash':
+                d['pk'] = 1
+                if SM.pv_of(land, c['titel']) != SM.PV: d['pv'] = SM.pv_of(land, c['titel'])
         out[c['slug']] = d
     tags = {k: ', '.join(dict.fromkeys(v)) for k, v in prov.items() if k != 'crx'}
     if prov.get('crx'): tags['crx'] = max(prov['crx'])
@@ -100,10 +102,10 @@ def box(land, tags, wien, page=False):
     <label><span class="flab">Monate mit Auslandsreisen</span><input type="number" min="1" max="12" value="2" data-r="rm" name="rm"></label>
     <label><span class="flab">Tage bis zur Rückzahlung</span><input type="number" min="0" max="60" value="30" data-r="td" name="td"></label>
     {lounge}{LO.vers_field('r')}
-    <label><span class="flab">Wert pro Punkt oder Meile</span><select data-r="pv" name="pv"><option value="1">1 Cent (Standard)</option><option value="1.5">1,5 Cent</option><option value="0.5">0,5 Cent</option><option value="0">nicht als Geld bewerten</option></select></label></div>
+    <label><span class="flab">Wert pro Punkt oder Meile</span><select data-r="pv" name="pv"><option value="d">Standard: 0,5 Cent (fester Anbieterwert, wo es einen gibt)</option><option value="1">1 Cent</option><option value="1.5">1,5 Cent</option><option value="0.5">0,5 Cent für alle</option><option value="0">nicht als Geld bewerten</option></select></label></div>
     <div class="lchecks">{cb}</div>
     {filt}
-    <p class="note" style="margin:0"><b>Annahme zum Punktewert:</b> Punkte und Meilen rechnen wir standardmäßig mit 1 Cent, Hotelpunkte mit 0,4 Cent. Den Wert kannst du oben ändern. Der tatsächliche Gegenwert hängt von der Einlösung ab, Punkte sind kein garantiertes Cashback. Wir rechnen außerdem einen Lounge-Besuch mit 30 € und die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)}. Fremdwährung heißt: Zahlungen und Abhebungen außerhalb des Euroraums. Abhebungen im Inland verteilen wir gleichmäßig auf 12 Monate, im Ausland auf deine Reisemonate, und rechnen die Freigrenzen pro Monat. Bei Karten, die Bargeld sofort verzinsen, rechnen wir den Sollzins für die angegebenen Tage. Unter jeder Karte siehst du, wie das Ergebnis zustande kommt.</p>
+    <p class="note" style="margin:0"><b>Annahme zum Punktewert:</b> Punkte und Meilen rechnen wir standardmäßig mit 0,5 Cent. Nennt der Anbieter einen festen Wert, nehmen wir diesen, etwa bei PAYBACK 1 Cent pro °Punkt. Den Wert kannst du oben ändern. Der tatsächliche Gegenwert hängt von der Einlösung ab, Punkte sind kein garantiertes Cashback. Wir rechnen außerdem einen Lounge-Besuch mit 30 € und die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)}. Fremdwährung heißt: Zahlungen und Abhebungen außerhalb des Euroraums. Abhebungen im Inland verteilen wir gleichmäßig auf 12 Monate, im Ausland auf deine Reisemonate, und rechnen die Freigrenzen pro Monat. Bei Karten, die Bargeld sofort verzinsen, rechnen wir den Sollzins für die angegebenen Tage. Unter jeder Karte siehst du, wie das Ergebnis zustande kommt.</p>
   </{tag}><!--/rechnen-->
   '''
 
@@ -158,7 +160,7 @@ def page(land, cards, D, tags):
 <p class="note calc-ex"><b>Beispiel:</b> Die Liste ist für 1.000 € Kartenumsatz im Monat vorgerechnet, davon 1.200 € im Jahr in Fremdwährung (10 %), 2 Abhebungen zu je 200 € im Inland und ohne Reiseversicherung. Ändere die Werte oben, dann rechnet sie für dich neu.</p>
 <div class="fbot" style="margin:6px 0 10px"><b data-rcount>{len(cards)} Karten</b><span class="mut">sortiert nach deinem Ergebnis</span></div>
 <div id="rlist" class="rlist">{prerendered(cards, D, item, box(land, tags, wien, page=True))}</div>
-<h2>So rechnen wir</h2><div class="prose"><p>Cashback, Punkte und Meilen zählen mit ihrem Wert in Euro: ein Punkt oder eine Meile mit 1 Cent, Hotelpunkte mit 0,4 Cent, jeweils bis zur Obergrenze der Karte. Ein Bonusprogramm mit Teilnahmegebühr zählt nur, wenn es sich bei deinem Umsatz lohnt. Ein Lounge-Besuch zählt mit 30 €, die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)} in der gewünschten Stufe. Davon ziehen wir die Jahresgebühr, die Gebühr auf Zahlungen in Fremdwährung und die Kosten für Bargeld ab. Bei Kreditkarten ohne Automatengebühr rechnen wir einen Monat Zinsen auf das abgehobene Geld.</p></div>
+<h2>So rechnen wir</h2><div class="prose"><p>Cashback, Punkte und Meilen zählen mit ihrem Wert in Euro: ein Punkt oder eine Meile mit 0,5 Cent, bei einem festen Anbieterwert wie PAYBACK mit diesem Wert, jeweils bis zur Obergrenze der Karte. Ein Bonusprogramm mit Teilnahmegebühr zählt nur, wenn es sich bei deinem Umsatz lohnt. Ein Lounge-Besuch zählt mit 30 €, die Reiseversicherung mit dem Preis einer eigenen {K.t("jahrespolizze", land)} in der gewünschten Stufe. Davon ziehen wir die Jahresgebühr, die Gebühr auf Zahlungen in Fremdwährung und die Kosten für Bargeld ab. Bei Kreditkarten ohne Automatengebühr rechnen wir einen Monat Zinsen auf das abgehobene Geld.</p></div>
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in fq)}</div>
 <p class="note" style="margin-top:18px"><a class="lnk" href="../">Alle Kreditkarten im Vergleich →</a> · <a class="lnk" href="../bestenlisten/lohnt-sich/">Premiumkarten: ab wann sie sich lohnen →</a></p>
 </main>
