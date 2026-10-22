@@ -21,6 +21,9 @@ def load(p):
 def lim(v): return None if v in (None, 'unbegrenzt', math.inf) else v
 
 CASHRULES = load(SP + '/daten/bargeld-regeln.json').get('regeln', {})
+ESIM = load(SP + '/daten/esim.json')
+# „Einige Abos“: die bekanntesten Alltags-Abos in dieser Reihenfolge, höchstens 4 je Karte, zum regulären Preis
+ALLTAG = ['ChatGPT Go', 'Wolt+', 'Super Duolingo', 'Uber One', 'Freeletics', 'Headspace']
 
 def card_data(land, cards):
     ER = load(SP + f'/daten/{land}/ertrag.json').get('karten', {})
@@ -52,7 +55,11 @@ def card_data(land, cards):
             if crx: d['crx'] = round(crx, 2); prov.setdefault('crx', []).append(crx)
             sb = sum(g['eur'] for g in LO.priced(x, A))
             if cr: d['cr'] = round(cr, 2); prov['cr'].append(c['titel'].replace('American Express', 'Amex') + ': ' + ', '.join(f"{g.get('kurz') or g['name']} {eur(g['eur'])} €" for g in x.get('credits') or [] if not g.get('ausland')))
-            if sb: d['sb'] = round(sb, 2); prov['sb'].append(LO.tag(c))
+            if sb:
+                d['sb'] = round(sb, 2); prov['sb'].append(LO.tag(c))
+                pr = {g['name']: g['eur'] for g in LO.priced(x, A)}
+                few = [n for n in ALLTAG if n in pr][:4]
+                if few: d['sbl'] = round(sum(pr[n] for n in few), 2); d['sbn'] = ', '.join(few); prov.setdefault('sbn', []).append(f"{c['titel']}: {', '.join(few)}")
             lg = x.get('lounge')
         else:
             for k in ('pct', 'cap', 'kosten', 'anteil'):
@@ -74,8 +81,10 @@ def card_data(land, cards):
                 if x and x.get('punkte_pro_100'):
                     d['pct'] = round(x['punkte_pro_100'] / pv, 4)
                     if d.get('cap'): d['cap'] = round(d['cap'] / pv, 2)
+        es = (ESIM.get('karten') or {}).get(f"{land}/{c['slug']}")
+        if es: d['esim'] = [es['gb'], ESIM['eur_pro_gb']]; prov.setdefault('esim', []).append(c['titel'])
         out[c['slug']] = d
-    tags = {k: ('; ' if k == 'cr' else ', ').join(dict.fromkeys(v)) for k, v in prov.items() if k != 'crx'}
+    tags = {k: ('; ' if k in ('cr', 'sbn') else ', ').join(dict.fromkeys(v)) for k, v in prov.items() if k != 'crx'}
     if prov.get('crx'): tags['crx'] = max(prov['crx'])
     return dict(cards=out, lounge=A.get('lounge_eur', 30), vers=A.get('vers', {}), tiers={str(k): K.TIER[k][1] for k in range(1, 5)}, polizze=K.t('polizze', land)), tags
 
@@ -88,7 +97,10 @@ def box(land, tags, wien, page=False):
     if tags.get('cr'):
         x = f'; weitere {eur(tags["crx"])} € Gourmet-Guthaben im Ausland, nicht gerechnet' if tags.get('crx') else ''
         cb += f'<label class="lc"><input type="checkbox" data-r="cr" name="cr"><span>Guthaben der Karte nutzen <span class="mut">({E(tags["cr"])}{x})</span></span></label>'
-    if tags.get('sb'): cb += f'<label class="lc"><input type="checkbox" data-r="sb" name="sb"><span>Partner-Abos nutzen, die du sonst selbst zahlen würdest <span class="mut">(nur {E(tags["sb"])}, gerechnet mit 60 % Nutzung)</span></span></label>'
+    if tags.get('sb'):
+        cb += (f'<label class="lc"><input type="checkbox" data-r="sbl" name="sbl"><span>Einige Partner-Abos nutzen <span class="mut">(nur {E(tags["sb"])}; gerechnet nur die bekanntesten Alltags-Abos, die du sonst selbst zahlen würdest: {E(tags.get("sbn", ""))})</span></span></label>'
+               f'<label class="lc"><input type="checkbox" data-r="sb" name="sb"><span>Viele Partner-Abos nutzen <span class="mut">(gerechnet mit 60 % des Werts aller Abos der Karte; ersetzt die Auswahl oben)</span></span></label>')
+    if tags.get('esim'): cb += f'<label class="lc"><input type="checkbox" data-r="esim" name="esim"><span>eSIM-Daten bei Reisen außerhalb der EU nutzen <span class="mut">(nur {E(tags["esim"])}; gerechnet für deine Reisemonate, zum Revolut-Preis ab {eur(ESIM["eur_pro_gb"])} € pro GB; in der EU kostet Roaming nichts extra)</span></span></label>'
     cb += '<label class="lc"><input type="checkbox" data-r="wel" name="wel"><span>Erstes Jahr rechnen <span class="mut">(mit Willkommensbonus und Aktionspreis)</span></span></label>'
     filt = ('<div class="lgrid rfilt"><label><span class="flab">Kartenart</span><select data-f="typ" name="typ"><option value="" selected>Alle Kartenarten</option><option value="Kreditkarte">Kreditkarte mit Teilzahlung</option><option value="Charge">Charge-Karte</option><option value="Debit">Debitkarte</option><option value="Prepaid">Prepaid-Karte</option></select></label>'
             '<label><span class="flab">Kartennetzwerk</span><select data-f="netz" name="netz"><option value="" selected>Alle Kartennetzwerke</option><option value="visa">Visa</option><option value="mastercard">Mastercard</option><option value="american express">American Express</option><option value="diners">Diners Club</option></select></label>'

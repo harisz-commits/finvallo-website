@@ -1,0 +1,13 @@
+{
+ "hinweis": "Im Abo enthaltene eSIM-Daten pro Monat (Revolut, Abo-Vergleich geprüft 22.10.2026). Wert im Rechner nur für Reisemonate außerhalb der EU (in der EU gilt Roaming ohne Aufpreis), zum Einstiegspreis von Revolut für gekaufte Daten.",
+ "eur_pro_gb": 3.99,
+ "preis_quelle": "https://www.revolut.com/de-AT/data-plans/ (ab 3,99 € für 1 GB)",
+ "karten": {
+  "at/revolut-premium": {"gb": 1, "quelle": "https://www.revolut.com/de-AT/our-pricing-plans/"},
+  "at/revolut-metal": {"gb": 3, "quelle": "https://www.revolut.com/de-AT/our-pricing-plans/"},
+  "at/revolut-ultra": {"gb": 3, "quelle": "https://www.revolut.com/de-AT/our-pricing-plans/", "hinweis": "Abo-Vergleich nennt 3 GB, die Ultra-Seite 5 GB; gerechnet mit 3 GB"},
+  "de/revolut-premium": {"gb": 1, "quelle": "https://www.revolut.com/de-DE/our-pricing-plans/"},
+  "de/revolut-metal": {"gb": 3, "quelle": "https://www.revolut.com/de-DE/our-pricing-plans/"},
+  "de/revolut-ultra": {"gb": 5, "quelle": "https://www.revolut.com/de-DE/ultra-plan/"}
+ }
+}
