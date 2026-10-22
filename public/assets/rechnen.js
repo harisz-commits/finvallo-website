@@ -81,6 +81,8 @@
     /* Guthaben und Abos */
     if (c.cr && I.on('cr')) add('Guthaben der Karte', c.cr, (c.crn || '') + (c.crx ? '; weitere ' + eur(c.crx) + ' Gourmet-Guthaben im Ausland möglich, nicht gerechnet' : ''));
     if (c.sb && I.on('sb')) add('Partner-Abos', c.sb * 0.6, '60 % von ' + eur(c.sb) + ', zum günstigsten regulären Preis');
+    else if (c.sbl && I.on('sbl')) add('Partner-Abos', c.sbl, c.sbn + ', zum regulären Preis');
+    if (c.esim && I.on('esim')) add('eSIM-Daten', Math.min(rm, 12) * c.esim[0] * c.esim[1], Math.min(rm, 12) + ' Reisemonate × ' + c.esim[0] + ' GB × ' + eur2(c.esim[1]) + ', nur außerhalb der EU sinnvoll');
     /* Reiseversicherung */
     var low = lvl > 0 && c.tier < lvl;
     if (lvl > 0 && !low) add('Reiseversicherung', D.vers[String(lvl)], 'statt eigener ' + (D.polizze || 'Polizze') + ' (' + D.tiers[String(lvl)] + ')');
