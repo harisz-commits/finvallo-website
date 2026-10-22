@@ -22,6 +22,8 @@ const F = [
 // Partner-Abos und eSIM (Vorzeichen: Ertrag negativ)
 F.push(['Einige Abos: 246 €', { ...base, sb: 1090, sbl: 246, sbn: 'A, B' }, { on_sbl: 1 }, -246, /^Partner-Abos/]);
 F.push(['Viele Abos ersetzt einige: 60 % von 1.090 € = 654 €', { ...base, sb: 1090, sbl: 246, sbn: 'A, B' }, { on_sbl: 1, on_sb: 1 }, -654, /^Partner-Abos/]);
+F.push(['ChatGPT Go nur im 1. Jahr: ohne Haken 0 €', { ...base, sy1: [95.88, 'ChatGPT Go'] }, {}, 0, /^Abos im 1/]);
+F.push(['ChatGPT Go mit Haken „Erstes Jahr“ = 95,88 €', { ...base, sy1: [95.88, 'ChatGPT Go'] }, { on_wel: 1 }, -95.88, /^Abos im 1/]);
 F.push(['eSIM 3 GB, 2 Reisemonate, 3,99 € pro GB = 23,94 €', { ...base, esim: [3, 3.99] }, { on_esim: 1, rm: 2 }, -23.94, /^eSIM/]);
 let bad = 0;
 for (const [t, c, v, want, rx] of F) { const got = Math.round(run(c, v, rx) * 100) / 100; if (Math.abs(got - want) > 0.01) { bad++; console.log(`Rechner-Kontrolle FEHLER: ${t}, gerechnet ${got} €`); } }

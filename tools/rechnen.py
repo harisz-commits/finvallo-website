@@ -22,8 +22,6 @@ def lim(v): return None if v in (None, 'unbegrenzt', math.inf) else v
 
 CASHRULES = load(SP + '/daten/bargeld-regeln.json').get('regeln', {})
 ESIM = load(SP + '/daten/esim.json')
-# „Einige Abos“: die bekanntesten Alltags-Abos in dieser Reihenfolge, höchstens 4 je Karte, zum regulären Preis
-ALLTAG = ['ChatGPT Go', 'Wolt+', 'Super Duolingo', 'Uber One', 'Freeletics', 'Headspace']
 
 def card_data(land, cards):
     ER = load(SP + f'/daten/{land}/ertrag.json').get('karten', {})
@@ -53,13 +51,13 @@ def card_data(land, cards):
             crx = sum(g['eur'] for g in x.get('credits') or [] if g.get('ausland'))
             if cr: d['crn'] = ', '.join(g['name'] for g in x.get('credits') or [] if not g.get('ausland'))
             if crx: d['crx'] = round(crx, 2); prov.setdefault('crx', []).append(crx)
-            sb = sum(g['eur'] for g in LO.priced(x, A))
+            tr = LO.tiers(x, A); sb = tr['alle']
             if cr: d['cr'] = round(cr, 2); prov['cr'].append(c['titel'].replace('American Express', 'Amex') + ': ' + ', '.join(f"{g.get('kurz') or g['name']} {eur(g['eur'])} €" for g in x.get('credits') or [] if not g.get('ausland')))
             if sb:
                 d['sb'] = round(sb, 2); prov['sb'].append(LO.tag(c))
-                pr = {g['name']: g['eur'] for g in LO.priced(x, A)}
-                few = [n for n in ALLTAG if n in pr][:4]
-                if few: d['sbl'] = round(sum(pr[n] for n in few), 2); d['sbn'] = ', '.join(few); prov.setdefault('sbn', []).append(f"{c['titel']}: {', '.join(few)}")
+                few = [g['name'] for g in tr['few']]
+                if few: d['sbl'] = tr['few_eur']; d['sbn'] = ', '.join(few); prov.setdefault('sbn', []).append(f"{c['titel']}: {', '.join(few)}")
+            if tr['y1']: d['sy1'] = [tr['y1_eur'], ', '.join(g['name'] for g in tr['y1'])]; prov.setdefault('sy1', []).append(', '.join(g['name'] for g in tr['y1']))
             lg = x.get('lounge')
         else:
             for k in ('pct', 'cap', 'kosten', 'anteil'):
@@ -99,9 +97,9 @@ def box(land, tags, wien, page=False):
         cb += f'<label class="lc"><input type="checkbox" data-r="cr" name="cr"><span>Guthaben der Karte nutzen <span class="mut">({E(tags["cr"])}{x})</span></span></label>'
     if tags.get('sb'):
         cb += (f'<label class="lc"><input type="checkbox" data-r="sbl" name="sbl"><span>Einige Partner-Abos nutzen <span class="mut">(nur {E(tags["sb"])}; gerechnet nur die bekanntesten Alltags-Abos, die du sonst selbst zahlen würdest: {E(tags.get("sbn", ""))})</span></span></label>'
-               f'<label class="lc"><input type="checkbox" data-r="sb" name="sb"><span>Viele Partner-Abos nutzen <span class="mut">(gerechnet mit 60 % des Werts aller Abos der Karte; ersetzt die Auswahl oben)</span></span></label>')
+               f'<label class="lc"><input type="checkbox" data-r="sb" name="sb"><span>Viele Partner-Abos nutzen <span class="mut">(gerechnet mit {int(LO.NUTZUNG * 100)} % des Werts aller Abos der Karte; ersetzt die Auswahl oben)</span></span></label>')
     if tags.get('esim'): cb += f'<label class="lc"><input type="checkbox" data-r="esim" name="esim"><span>eSIM-Daten bei Reisen außerhalb der EU nutzen <span class="mut">(nur {E(tags["esim"])}; gerechnet für deine Reisemonate, zum Revolut-Preis ab {eur(ESIM["eur_pro_gb"])} € pro GB; in der EU kostet Roaming nichts extra)</span></span></label>'
-    cb += '<label class="lc"><input type="checkbox" data-r="wel" name="wel"><span>Erstes Jahr rechnen <span class="mut">(mit Willkommensbonus und Aktionspreis)</span></span></label>'
+    cb += '<label class="lc"><input type="checkbox" data-r="wel" name="wel"><span>Erstes Jahr rechnen <span class="mut">(mit Willkommensbonus und Aktionspreis' + (f'; dazu Abos, die nur 12 Monate inklusive sind: {E(tags["sy1"])}' if tags.get('sy1') else '') + ')</span></span></label>'
     filt = ('<div class="lgrid rfilt"><label><span class="flab">Kartenart</span><select data-f="typ" name="typ"><option value="" selected>Alle Kartenarten</option><option value="Kreditkarte">Kreditkarte mit Teilzahlung</option><option value="Charge">Charge-Karte</option><option value="Debit">Debitkarte</option><option value="Prepaid">Prepaid-Karte</option></select></label>'
             '<label><span class="flab">Kartennetzwerk</span><select data-f="netz" name="netz"><option value="" selected>Alle Kartennetzwerke</option><option value="visa">Visa</option><option value="mastercard">Mastercard</option><option value="american express">American Express</option><option value="diners">Diners Club</option></select></label>'
             '<label><span class="flab">Jahresgebühr</span><select data-f="fee" name="fee"><option value="" selected>egal</option><option value="0">nur ohne Jahresgebühr</option><option value="100">bis 100 €</option><option value="300">bis 300 €</option></select></label></div>') if page else ''
@@ -160,7 +158,7 @@ def page(land, cards, D, tags):
     fq = [('Wie rechnet der Kreditkarten-Rechner?', 'Er zählt, was dir die Karte im Jahr bringt (Cashback, Punkte und Meilen, Lounge-Besuche, Reiseversicherung, Guthaben und Abos, die du wirklich nutzt) und zieht ab, was sie kostet (Jahresgebühr, Gebühren für Zahlungen in Fremdwährung und für Bargeld). Unter jeder Karte steht die ganze Rechnung.'),
           ('Was ist mit Fremdwährung gemeint?', 'Zahlungen und Abhebungen in einer anderen Währung als Euro, zum Beispiel im Urlaub außerhalb des Euroraums oder in Online-Shops, die in Dollar oder Pfund abrechnen. Im Euroraum fällt keine Fremdwährungsgebühr an.'),
           ('Warum stehen manche Karten weiter hinten, obwohl das Ergebnis gut ist?', 'Wenn für eine Karte eine Gebühr nicht bekannt ist oder ihre Reiseversicherung schwächer ist als die gewünschte, steht sie hinter den Karten mit vollständiger Rechnung. Das ist an der Karte gekennzeichnet.'),
-          ('Zählt der Willkommensbonus?', 'Nur, wenn du „Erstes Jahr rechnen“ anhakst. Dann zählen der Willkommensbonus und ein Aktionspreis für das erste Jahr. Ohne Haken rechnet der Rechner mit dem Normalpreis der Folgejahre.')]
+          ('Zählt der Willkommensbonus?', 'Nur, wenn du „Erstes Jahr rechnen“ anhakst. Dann zählen der Willkommensbonus, ein Aktionspreis für das erste Jahr und Abos, die nur 12 Monate inklusive sind, etwa ChatGPT Go bei Revolut. Ohne Haken rechnet der Rechner mit dem Normalpreis der Folgejahre.')]
     ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Rechner', rel)],
                  [{"@type": "WebApplication", "name": f"Kreditkarten-Rechner {N}", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}},
                   {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in fq]}])

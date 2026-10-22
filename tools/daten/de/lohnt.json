@@ -18,7 +18,9 @@
   "abos": {
    "ChatGPT Go": {
     "eur_monat": 7.99,
-    "quelle": "https://apps.apple.com/de/app/id6448311069"
+    "quelle": "https://apps.apple.com/de/app/id6448311069",
+    "nur_12_monate": true,
+    "hinweis": "bei Revolut nur 12 Monate inklusive (Revolut Metal- und Ultra-Seite, geprüft 22.10.2026)"
    },
    "Headspace": {
     "eur_monat": 4.83,
@@ -202,7 +204,8 @@
     "Financial Times Premium Digital",
     "Super Duolingo",
     "Freeletics",
-    "The Athletic"
+    "The Athletic",
+    "Sleep Cycle Premium"
    ],
    "extra": [
     {
@@ -230,7 +233,10 @@
     "Headspace",
     "ClassPass (10 Credits)",
     "Financial Times Standard Digital",
-    "Super Duolingo"
+    "Super Duolingo",
+    "Freeletics",
+    "The Athletic",
+    "Sleep Cycle Premium"
    ],
    "extra": [
     {

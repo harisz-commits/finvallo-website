@@ -14,7 +14,8 @@
     var pts = spend * 12 / 100 * D.pp100; if (D.pmax) pts = Math.min(pts, D.pmax);
     var v = (lv + gv) * D.lounge + pts;
     D.credits.forEach(function (c, i) { if (I.credit(i)) v += c.v; });
-    if (I.welcome) v += D.welcome;
+    if (I.many) v += D.many || 0; else if (I.few) v += D.few || 0;
+    if (I.welcome) v += (D.welcome || 0) + (D.y1 || 0);
     if (I.vers) v += D.vers;
     var net = v - D.fee, txt;
     if (net >= 0) txt = 'Bei dieser Nutzung holst du die Jahresgebühr wieder herein und hast ' + eur(net) + ' im Jahr mehr, als die Karte kostet.';
@@ -35,7 +36,8 @@
     function calc() {
       var r = result(D, { spend: num(q('[data-in="spend"]')), lounge: num(q('[data-in="lounge"]')), guests: num(q('[data-in="guests"]')),
         credit: function (i) { var c = q('[data-credit="' + i + '"]'); return !!(c && c.checked); },
-        welcome: !!(q('[data-welcome]') && q('[data-welcome]').checked), vers: !!(q('[data-vers]') && q('[data-vers]').checked) });
+        welcome: !!(q('[data-welcome]') && q('[data-welcome]').checked), vers: !!(q('[data-vers]') && q('[data-vers]').checked),
+        few: !!(q('[data-subs="few"]') && q('[data-subs="few"]').checked), many: !!(q('[data-subs="many"]') && q('[data-subs="many"]').checked) });
       q('[data-out="val"]').textContent = r.val;
       var n = q('[data-out="net"]'); n.textContent = r.net; n.className = r.good ? 'good' : 'bad';
       q('[data-out="txt"]').textContent = r.txt;
@@ -51,12 +53,13 @@
     function calc() {
       var wien = num(q('[data-in="wien"]')), lounge = num(q('[data-in="lounge"]')), guests = num(q('[data-in="guests"]')), spend = num(q('[data-in="spend"]'));
       var lvl = +q('[data-in="vers"]').value, wel = q('[data-welcome]').checked;
+      var sf = !!(q('[data-subs="few"]') && q('[data-subs="few"]').checked), sm = !!(q('[data-subs="many"]') && q('[data-subs="many"]').checked);
       var want = [].slice.call(hub.querySelectorAll('[data-item]')).filter(function (c) { return c.checked; }).map(function (c) { return c.dataset.item; });
       var res = {};
       D.cards.forEach(function (c) {
         var lv = c.minsp && spend * 12 < c.minsp ? 0 : Math.min(c.wien ? wien : wien + lounge, lim(c.visits)), gv = Math.min(guests, lv, lim(c.guests));
         var pts = spend * 12 / 100 * c.pp100; if (c.pmax) pts = Math.min(pts, c.pmax);
-        var v = (lv + gv) * D.lounge + pts + c.fix + (wel ? c.welcome : 0);
+        var v = (lv + gv) * D.lounge + pts + c.fix + (wel ? c.welcome + (c.y1 || 0) : 0) + (sm ? c.many || 0 : sf ? c.few || 0 : 0);
         want.forEach(function (k) { if (c.it[k]) v += c.it[k]; });
         var low = lvl > 0 && c.tier < lvl;
         if (lvl > 0 && !low) v += D.vers[String(lvl)];
