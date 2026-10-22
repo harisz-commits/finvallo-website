@@ -51,7 +51,7 @@ def card_data(land, cards):
             if cr: d['crn'] = ', '.join(g['name'] for g in x.get('credits') or [] if not g.get('ausland'))
             if crx: d['crx'] = round(crx, 2); prov.setdefault('crx', []).append(crx)
             sb = sum(g['eur'] for g in LO.priced(x, A))
-            if cr: d['cr'] = round(cr, 2); prov['cr'].append(LO.tag(c))
+            if cr: d['cr'] = round(cr, 2); prov['cr'].append(c['titel'].replace('American Express', 'Amex') + ': ' + ', '.join(f"{g.get('kurz') or g['name']} {eur(g['eur'])} €" for g in x.get('credits') or [] if not g.get('ausland')))
             if sb: d['sb'] = round(sb, 2); prov['sb'].append(LO.tag(c))
             lg = x.get('lounge')
         else:
@@ -68,9 +68,14 @@ def card_data(land, cards):
             kind = SM.kind(v[1]) if v else ('cash' if re.search(r'cashback|saveback|gutschrift|coins|guthaben', ((e.get('art') or '') + ' ' + ((x or {}).get('punkte_hinweis') or '')), re.I) else 'points')
             if kind != 'cash':
                 d['pk'] = 1
-                if SM.pv_of(land, c['titel']) != SM.PV: d['pv'] = SM.pv_of(land, c['titel'])
+                pv = SM.pv_of(land, c['titel']) if v else SM.PV
+                if pv != SM.PV: d['pv'] = pv
+                # lohnt.json nennt den Punktewert schon in € pro 100 € Umsatz: zurück auf Punkte pro 100 €, der Rechner multipliziert mit dem Punktewert
+                if x and x.get('punkte_pro_100'):
+                    d['pct'] = round(x['punkte_pro_100'] / pv, 4)
+                    if d.get('cap'): d['cap'] = round(d['cap'] / pv, 2)
         out[c['slug']] = d
-    tags = {k: ', '.join(dict.fromkeys(v)) for k, v in prov.items() if k != 'crx'}
+    tags = {k: ('; ' if k == 'cr' else ', ').join(dict.fromkeys(v)) for k, v in prov.items() if k != 'crx'}
     if prov.get('crx'): tags['crx'] = max(prov['crx'])
     return dict(cards=out, lounge=A.get('lounge_eur', 30), vers=A.get('vers', {}), tiers={str(k): K.TIER[k][1] for k in range(1, 5)}, polizze=K.t('polizze', land)), tags
 
@@ -81,8 +86,8 @@ def box(land, tags, wien, page=False):
               if wien else '<label><span class="flab">Lounge-Besuche pro Jahr</span><input type="number" min="0" max="200" value="0" data-r="lounge" name="lounge"></label><label><span class="flab">davon mit Begleitung</span><input type="number" min="0" max="200" value="0" data-r="guests" name="guests"></label>')
     cb = ''
     if tags.get('cr'):
-        x = f'; Gourmet nur in Österreich, weitere {eur(tags["crx"])} € im Ausland möglich' if tags.get('crx') else ''
-        cb += f'<label class="lc"><input type="checkbox" data-r="cr" name="cr"><span>Guthaben der Karte nutzen <span class="mut">(nur {E(tags["cr"])}{x})</span></span></label>'
+        x = f'; weitere {eur(tags["crx"])} € Gourmet-Guthaben im Ausland, nicht gerechnet' if tags.get('crx') else ''
+        cb += f'<label class="lc"><input type="checkbox" data-r="cr" name="cr"><span>Guthaben der Karte nutzen <span class="mut">({E(tags["cr"])}{x})</span></span></label>'
     if tags.get('sb'): cb += f'<label class="lc"><input type="checkbox" data-r="sb" name="sb"><span>Partner-Abos nutzen, die du sonst selbst zahlen würdest <span class="mut">(nur {E(tags["sb"])}, gerechnet mit 60 % Nutzung)</span></span></label>'
     cb += '<label class="lc"><input type="checkbox" data-r="wel" name="wel"><span>Erstes Jahr rechnen <span class="mut">(mit Willkommensbonus und Aktionspreis)</span></span></label>'
     filt = ('<div class="lgrid rfilt"><label><span class="flab">Kartenart</span><select data-f="typ" name="typ"><option value="" selected>Alle Kartenarten</option><option value="Kreditkarte">Kreditkarte mit Teilzahlung</option><option value="Charge">Charge-Karte</option><option value="Debit">Debitkarte</option><option value="Prepaid">Prepaid-Karte</option></select></label>'
