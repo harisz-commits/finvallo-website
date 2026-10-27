@@ -1,0 +1,2840 @@
+[
+  {
+    "id": "deutsche-bank-festzinssparen-de",
+    "markt": "de",
+    "bank": "Deutsche Bank",
+    "institut": "Deutsche Bank AG",
+    "produkt": "FestzinsSparen",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/festzinssparen.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 72,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 84,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 96,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": null,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "jährlich bzw. zum Ende des Festzinszeitraums",
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Verfügungen während des Festzinszeitraums nicht möglich; Kündigung mit mind. 3 Monaten Frist zum Ende der Festzinsdauer nötig",
+    "verlaengerung": "automatisch",
+    "konto_noetig": null,
+    "referenzkonto": null,
+    "neukunden_only": false,
+    "gemeinschaftskonto": true,
+    "eroeffnung": "beides",
+    "legitimation": "VideoIdent, PostIdent oder Filiale",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/festzinssparen.html",
+    "quelle2": null,
+    "stand": "2026-10-01",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Spareinlage, keine Termineinlage: ohne Kündigung (3 Monate zum Festzinsende) wird automatisch zum dann gültigen Zins für dieselbe Dauer wieder angelegt. Tabelle laut Bank 'Konditionen für bestehende Guthaben'; für Neugeld gilt bei 12 Monaten ein Sonderzins (eigener Eintrag).",
+    "sek": []
+  },
+  {
+    "id": "deutsche-bank-festzinssparen-de-neugeld",
+    "markt": "de",
+    "bank": "Deutsche Bank",
+    "institut": "Deutsche Bank AG",
+    "produkt": "FestzinsSparen",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/festzinssparen.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 12,
+        "zins": 3.0,
+        "min": 2500,
+        "max": 250000
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": 250000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "jährlich bzw. zum Ende des Festzinszeitraums",
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Verfügungen während des Festzinszeitraums nicht möglich; Kündigung mit mind. 3 Monaten Frist zum Ende der Festzinsdauer nötig",
+    "verlaengerung": "automatisch",
+    "konto_noetig": null,
+    "referenzkonto": null,
+    "neukunden_only": false,
+    "gemeinschaftskonto": true,
+    "eroeffnung": "beides",
+    "legitimation": "VideoIdent, PostIdent oder Filiale",
+    "kosten": "kostenlos",
+    "aktion": "3,0 % p. a. für 12 Monate auf Neuanlagen von 2.500 bis 250.000 € (Gelder, die bisher nicht bei Deutsche Bank, Postbank, norisbank, BHW oder DWS lagen); Angebot freibleibend, Stand 1. Oktober 2026",
+    "quelle": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/festzinssparen.html",
+    "quelle2": null,
+    "stand": "2026-10-01",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Neugeld-Angebot; gilt nur für Privatvermögen. Spareinlage mit Kündigungsfrist von 3 Monaten zum Festzinsende, sonst automatische Wiederanlage.",
+    "sek": []
+  },
+  {
+    "id": "credit-agricole-festgeld-de-zinsmarkt-deutsche-bank",
+    "markt": "de",
+    "bank": "Crédit Agricole Personal Finance & Mobility",
+    "institut": "Crédit Agricole Personal Finance & Mobility S.A. (auf der Deutsche-Bank-Seite 'Crédit Agricole Savings')",
+    "produkt": "Festgeld",
+    "vertrieb": "ZinsMarkt",
+    "vertrieb_url": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "sitz": "FR",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Fonds de Garantie des Dépôts et de Résolution (FGDR), Frankreich",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.75,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": null,
+    "max_anlage": null,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bei Fälligkeit; bei Laufzeiten über 12 Monaten nach jedem Laufzeitjahr und am Ende auf das Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die Deutsche Bank behält Kapitalertragsteuer, Soli und ggf. Kirchensteuer ein und berücksichtigt den bei ihr hinterlegten Freistellungsauftrag; laut Bankenliste keine ausländische Quellensteuer.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht kündbar",
+    "verlaengerung": "keine",
+    "konto_noetig": "Deutsche Bank Zahlungsverkehrskonto oder kostenloses ZinsMarkt-Verrechnungskonto (nur Einzelkonto, Online-Banking-Zugang)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "Legitimation bei der Deutschen Bank; manche Partnerbanken verlangen aktuelle Ausweisdaten (VideoIdent oder Filiale)",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "über den ZinsMarkt der Deutschen Bank. Die Deutsche-Bank-Seite zeigt öffentlich nur diese Teaser-Angebote (Angebotszeitraum bis 29.10.2026); die vollständige Tabelle lädt eine Web-Anwendung, die nicht auslesbar war. Mindest-/Höchstbetrag nicht angegeben.",
+    "sek": []
+  },
+  {
+    "id": "aareal-bank-festgeld-de-zinsmarkt-deutsche-bank",
+    "markt": "de",
+    "bank": "Aareal Bank",
+    "institut": "Aareal Bank AG",
+    "produkt": "Festgeld",
+    "vertrieb": "ZinsMarkt",
+    "vertrieb_url": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 60,
+        "zins": 3.5,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": null,
+    "max_anlage": null,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bei Fälligkeit; bei Laufzeiten über 12 Monaten nach jedem Laufzeitjahr und am Ende auf das Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die Deutsche Bank behält Kapitalertragsteuer, Soli und ggf. Kirchensteuer ein und berücksichtigt den bei ihr hinterlegten Freistellungsauftrag; laut Bankenliste keine ausländische Quellensteuer.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht kündbar",
+    "verlaengerung": "keine",
+    "konto_noetig": "Deutsche Bank Zahlungsverkehrskonto oder kostenloses ZinsMarkt-Verrechnungskonto (nur Einzelkonto, Online-Banking-Zugang)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "Legitimation bei der Deutschen Bank; manche Partnerbanken verlangen aktuelle Ausweisdaten (VideoIdent oder Filiale)",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "über den ZinsMarkt der Deutschen Bank (Treuhandanlage, deutsche Steuer-ID erforderlich). Öffentlich nur als Teaser sichtbar (Angebotszeitraum bis 29.10.2026); Mindest-/Höchstbetrag nicht angegeben.",
+    "sek": []
+  },
+  {
+    "id": "postbank-zinssparen-de",
+    "markt": "de",
+    "bank": "Postbank",
+    "institut": "Deutsche Bank AG (Postbank – eine Niederlassung der Deutsche Bank AG)",
+    "produkt": "Zinssparen",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.postbank.de/privatkunden/produkte/wertpapiere-sparen/sparen/zinssparen.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 2.7,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 72,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 84,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 96,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": null,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "jährlich bzw. zum Ende des Festzinszeitraums",
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Verfügungen erst zum Ende der Festzinsdauer mit mind. 3 Monaten Kündigungsfrist; vorzeitige Auflösung nur bei ernster wirtschaftlicher Notlage mit Zustimmung der Bank",
+    "verlaengerung": "automatisch",
+    "konto_noetig": null,
+    "referenzkonto": null,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": "VideoIdent (Neukunden) oder Filiale",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.postbank.de/privatkunden/produkte/wertpapiere-sparen/sparen/zinssparen.html",
+    "quelle2": "https://www.postbank.de/dam/postbank/pdf/privatkunden/sparen/Postbank-Zinssparen-Produktinformationsblatt-20250520.pdf",
+    "stand": "2026-10-02",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Spareinlage (Festzinssparen): ohne Kündigung automatische Wiederanlage zum dann gültigen Zins. Tabelle laut Postbank für 'bestehendes Guthaben'; Neugeld-Sonderzins als eigener Eintrag.",
+    "sek": []
+  },
+  {
+    "id": "postbank-zinssparen-de-neugeld",
+    "markt": "de",
+    "bank": "Postbank",
+    "institut": "Deutsche Bank AG (Postbank – eine Niederlassung der Deutsche Bank AG)",
+    "produkt": "Zinssparen",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.postbank.de/privatkunden/produkte/wertpapiere-sparen/sparen/zinssparen.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 12,
+        "zins": 2.8,
+        "min": 2500,
+        "max": 250000
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": 250000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "jährlich bzw. zum Ende des Festzinszeitraums",
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Verfügungen erst zum Ende der Festzinsdauer mit mind. 3 Monaten Kündigungsfrist; vorzeitige Auflösung nur bei ernster wirtschaftlicher Notlage mit Zustimmung der Bank",
+    "verlaengerung": "automatisch",
+    "konto_noetig": null,
+    "referenzkonto": null,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": "VideoIdent (Neukunden) oder Filiale",
+    "kosten": "kostenlos",
+    "aktion": "2,80 % p. a. für 12 Monate auf Neugeld von 2.500 bis 250.000 € (nicht aus Konten/Depots der Deutsche Bank Gruppe); Angebot freibleibend",
+    "quelle": "https://www.postbank.de/privatkunden/produkte/wertpapiere-sparen/sparen/zinssparen.html",
+    "quelle2": "https://www.postbank.de/dam/postbank/pdf/privatkunden/sparen/Postbank-Zinssparen-Produktinformationsblatt-20250520.pdf",
+    "stand": "2026-10-02",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Neugeld-Angebot, nur Privatvermögen. Spareinlage mit 3 Monaten Kündigungsfrist zum Festzinsende.",
+    "sek": []
+  },
+  {
+    "id": "norisbank-festzins-sparen-de",
+    "markt": "de",
+    "bank": "norisbank",
+    "institut": "norisbank GmbH",
+    "produkt": "Festzins-Sparen",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festzins-sparen.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.9,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 3.2,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.3,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 3.45,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 3.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 72,
+        "zins": 3.55,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 84,
+        "zins": 3.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 96,
+        "zins": 3.75,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": null,
+    "zinszahlung": null,
+    "zinszahlung_text": null,
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Verfügungen während der Laufzeit grundsätzlich nicht möglich; Kündigung mit 3 Monaten Frist zum Festzinsende (bei Krankheit/Tod Einzelfallprüfung)",
+    "verlaengerung": "automatisch",
+    "konto_noetig": null,
+    "referenzkonto": null,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": "VideoIdent, eID oder PostIdent",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.norisbank.de/dam/norisbank/de/shared/pdf/nb_Zinsaushang.pdf",
+    "quelle2": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festzins-sparen.html",
+    "stand": "2026-10-01",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Spareinlage: Auszahlung nur nach Kündigung (3 Monate zum Festzinsende), sonst automatische Verlängerung zu den dann gültigen Konditionen.",
+    "sek": []
+  },
+  {
+    "id": "norisbank-festzins-sparen-de-neugeld",
+    "markt": "de",
+    "bank": "norisbank",
+    "institut": "norisbank GmbH",
+    "produkt": "Festzins-Sparen",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festzins-sparen.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 3.2,
+        "min": 2500,
+        "max": 250000
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": 250000,
+    "zinszahlung": null,
+    "zinszahlung_text": null,
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Verfügungen während der Laufzeit grundsätzlich nicht möglich; Kündigung mit 3 Monaten Frist zum Festzinsende (bei Krankheit/Tod Einzelfallprüfung)",
+    "verlaengerung": "automatisch",
+    "konto_noetig": null,
+    "referenzkonto": null,
+    "neukunden_only": true,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": "VideoIdent, eID oder PostIdent",
+    "kosten": "kostenlos",
+    "aktion": "Neugeld-/'Fresh Money'-Angebot: 3,2 % für 6 Monate bis 250.000 €; nur für Kunden, die bislang kein Festzins-Sparen bei der Deutsche Bank Gruppe hatten",
+    "quelle": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festzins-sparen.html",
+    "quelle2": "https://www.norisbank.de/dam/norisbank/de/shared/pdf/nb_Zinsaushang.pdf",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Zinsaushang vom 01.10.2026 nennt für 6 Monate regulär 2,90 %.",
+    "sek": []
+  },
+  {
+    "id": "credit-agricole-festgeld-de-zinsmarkt-norisbank",
+    "markt": "de",
+    "bank": "Crédit Agricole Personal Finance & Mobility",
+    "institut": "Crédit Agricole Personal Finance & Mobility S.A.",
+    "produkt": "Festgeld",
+    "vertrieb": "ZinsMarkt",
+    "vertrieb_url": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "sitz": "FR",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Fonds de Garantie des Dépôts et de Résolution (FGDR), Frankreich",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 1,
+        "zins": 2.3,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 2,
+        "zins": 2.35,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 3,
+        "zins": 2.4,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 6,
+        "zins": 2.6,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 9,
+        "zins": 2.8,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 12,
+        "zins": 2.95,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 15,
+        "zins": 3.0,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 18,
+        "zins": 3.05,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 24,
+        "zins": 3.5,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 36,
+        "zins": 3.75,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 48,
+        "zins": 3.45,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 60,
+        "zins": 3.45,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 72,
+        "zins": 3.45,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 84,
+        "zins": 3.45,
+        "min": 1000,
+        "max": 100000
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 100000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bei Fälligkeit; bei Laufzeiten über 12 Monaten nach jedem Laufzeitjahr und am Ende auf das norisbank-Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die norisbank übernimmt die steuerliche Abwicklung (Kapitalertragsteuer, Soli, ggf. Kirchensteuer) und berücksichtigt den bei ihr hinterlegten Freistellungsauftrag.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht kündbar (nur 14 Tage Widerruf)",
+    "verlaengerung": "keine",
+    "konto_noetig": "norisbank-Girokonto oder kostenloses norisbank-Tagesgeldkonto als Verrechnungskonto (Einzelkonto)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "norisbank-Legitimation (VideoIdent, eID oder PostIdent); einzelne Partnerbanken verlangen Neulegitimation per VideoIdent",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "quelle2": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "stand": "2026-10-14",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote.",
+    "sek": []
+  },
+  {
+    "id": "creditplus-festgeld-de-zinsmarkt-norisbank",
+    "markt": "de",
+    "bank": "Creditplus Bank",
+    "institut": "Creditplus Bank AG",
+    "produkt": "Festgeld",
+    "vertrieb": "ZinsMarkt",
+    "vertrieb_url": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 1,
+        "zins": 1.85,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 2,
+        "zins": 2.0,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 3,
+        "zins": 2.15,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 4,
+        "zins": 2.2,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 5,
+        "zins": 2.25,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 6,
+        "zins": 2.3,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 9,
+        "zins": 2.5,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 12,
+        "zins": 2.7,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 18,
+        "zins": 2.8,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 24,
+        "zins": 3.15,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 36,
+        "zins": 3.25,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 48,
+        "zins": 3.25,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 60,
+        "zins": 3.25,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 72,
+        "zins": 3.1,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 84,
+        "zins": 3.1,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 120,
+        "zins": 3.1,
+        "min": 1000,
+        "max": 100000
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 100000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bei Fälligkeit; bei Laufzeiten über 12 Monaten nach jedem Laufzeitjahr und am Ende auf das norisbank-Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die norisbank übernimmt die steuerliche Abwicklung (Kapitalertragsteuer, Soli, ggf. Kirchensteuer) und berücksichtigt den bei ihr hinterlegten Freistellungsauftrag.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht kündbar (nur 14 Tage Widerruf)",
+    "verlaengerung": "wahlweise",
+    "konto_noetig": "norisbank-Girokonto oder kostenloses norisbank-Tagesgeldkonto als Verrechnungskonto (Einzelkonto)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "norisbank-Legitimation (VideoIdent, eID oder PostIdent); einzelne Partnerbanken verlangen Neulegitimation per VideoIdent",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "quelle2": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "stand": "2026-10-14",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Treuhandanlage; Wiederanlage (gleicher Betrag, gleiche Laufzeit, dann gültiger Zins) wählbar.",
+    "sek": []
+  },
+  {
+    "id": "resurs-bank-festgeld-de-zinsmarkt-norisbank",
+    "markt": "de",
+    "bank": "Resurs Bank",
+    "institut": "Resurs Bank AB",
+    "produkt": "Festgeld",
+    "vertrieb": "ZinsMarkt",
+    "vertrieb_url": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "sitz": "SE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Schwedische Einlagensicherung (Riksgälden)",
+      "betrag": null,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 2.0,
+        "min": 1000,
+        "max": 95000
+      },
+      {
+        "monate": 6,
+        "zins": 2.15,
+        "min": 1000,
+        "max": 95000
+      },
+      {
+        "monate": 9,
+        "zins": 2.2,
+        "min": 1000,
+        "max": 95000
+      },
+      {
+        "monate": 12,
+        "zins": 2.75,
+        "min": 1000,
+        "max": 95000
+      },
+      {
+        "monate": 24,
+        "zins": 3.1,
+        "min": 1000,
+        "max": 95000
+      },
+      {
+        "monate": 36,
+        "zins": 3.15,
+        "min": 1000,
+        "max": 95000
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 95000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bei Fälligkeit; bei Laufzeiten über 12 Monaten nach jedem Laufzeitjahr und am Ende auf das norisbank-Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die norisbank übernimmt die steuerliche Abwicklung (Kapitalertragsteuer, Soli, ggf. Kirchensteuer) und berücksichtigt den bei ihr hinterlegten Freistellungsauftrag.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht kündbar (nur 14 Tage Widerruf)",
+    "verlaengerung": "keine",
+    "konto_noetig": "norisbank-Girokonto oder kostenloses norisbank-Tagesgeldkonto als Verrechnungskonto (Einzelkonto)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "norisbank-Legitimation (VideoIdent, eID oder PostIdent); einzelne Partnerbanken verlangen Neulegitimation per VideoIdent",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "quelle2": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "stand": "2026-10-14",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Einlagensicherung bis 1,05 Mio. SEK; deutsche Meldeadresse und Steuer-ID erforderlich.",
+    "sek": []
+  },
+  {
+    "id": "muenchener-hypothekenbank-festgeld-de-zinsmarkt-norisbank",
+    "markt": "de",
+    "bank": "Münchener Hypothekenbank",
+    "institut": "Münchener Hypothekenbank eG",
+    "produkt": "Festgeld",
+    "vertrieb": "ZinsMarkt",
+    "vertrieb_url": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "gesetzliche Einlagensicherung (EU-harmonisiert, laut Deutsche-Bank-ZinsMarkt bis 100.000 €)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 1,
+        "zins": 1.96,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 3,
+        "zins": 2.16,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 6,
+        "zins": 2.41,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 12,
+        "zins": 2.81,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 24,
+        "zins": 3.26,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 36,
+        "zins": 3.36,
+        "min": 1000,
+        "max": 100000
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 100000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bei Fälligkeit; bei Laufzeiten über 12 Monaten nach jedem Laufzeitjahr und am Ende auf das norisbank-Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die norisbank übernimmt die steuerliche Abwicklung (Kapitalertragsteuer, Soli, ggf. Kirchensteuer) und berücksichtigt den bei ihr hinterlegten Freistellungsauftrag.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht kündbar (nur 14 Tage Widerruf)",
+    "verlaengerung": "keine",
+    "konto_noetig": "norisbank-Girokonto oder kostenloses norisbank-Tagesgeldkonto als Verrechnungskonto (Einzelkonto)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "norisbank-Legitimation (VideoIdent, eID oder PostIdent); einzelne Partnerbanken verlangen Neulegitimation per VideoIdent",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "quelle2": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "stand": "2026-10-14",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Treuhandanlage.",
+    "sek": []
+  },
+  {
+    "id": "my-money-bank-festgeld-de-zinsmarkt-norisbank",
+    "markt": "de",
+    "bank": "My Money Bank",
+    "institut": "My Money Bank S.A.",
+    "produkt": "Festgeld",
+    "vertrieb": "ZinsMarkt",
+    "vertrieb_url": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "sitz": "FR",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Fonds de Garantie des Dépôts et de Résolution (FGDR), Frankreich",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 1.2,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 9,
+        "zins": 1.2,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 12,
+        "zins": 1.5,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 24,
+        "zins": 1.8,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 36,
+        "zins": 2.0,
+        "min": 1000,
+        "max": 100000
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 100000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bei Fälligkeit; bei Laufzeiten über 12 Monaten nach jedem Laufzeitjahr und am Ende auf das norisbank-Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die norisbank übernimmt die steuerliche Abwicklung (Kapitalertragsteuer, Soli, ggf. Kirchensteuer) und berücksichtigt den bei ihr hinterlegten Freistellungsauftrag.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht kündbar (nur 14 Tage Widerruf)",
+    "verlaengerung": "keine",
+    "konto_noetig": "norisbank-Girokonto oder kostenloses norisbank-Tagesgeldkonto als Verrechnungskonto (Einzelkonto)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "norisbank-Legitimation (VideoIdent, eID oder PostIdent); einzelne Partnerbanken verlangen Neulegitimation per VideoIdent",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "quelle2": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "stand": "2026-10-14",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Treuhandanlage.",
+    "sek": []
+  },
+  {
+    "id": "aareal-bank-festgeld-de-zinsmarkt-norisbank",
+    "markt": "de",
+    "bank": "Aareal Bank",
+    "institut": "Aareal Bank AG",
+    "produkt": "Festgeld",
+    "vertrieb": "ZinsMarkt",
+    "vertrieb_url": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.01,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 24,
+        "zins": 2.0,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 36,
+        "zins": 2.15,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 48,
+        "zins": 2.35,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 60,
+        "zins": 3.5,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 72,
+        "zins": 2.9,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 84,
+        "zins": 3.3,
+        "min": 1000,
+        "max": 100000
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 100000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bei Fälligkeit; bei Laufzeiten über 12 Monaten nach jedem Laufzeitjahr und am Ende auf das norisbank-Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die norisbank übernimmt die steuerliche Abwicklung (Kapitalertragsteuer, Soli, ggf. Kirchensteuer) und berücksichtigt den bei ihr hinterlegten Freistellungsauftrag.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht kündbar (nur 14 Tage Widerruf)",
+    "verlaengerung": "keine",
+    "konto_noetig": "norisbank-Girokonto oder kostenloses norisbank-Tagesgeldkonto als Verrechnungskonto (Einzelkonto)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "norisbank-Legitimation (VideoIdent, eID oder PostIdent); einzelne Partnerbanken verlangen Neulegitimation per VideoIdent",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "quelle2": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "stand": "2026-10-14",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Treuhandanlage.",
+    "sek": []
+  },
+  {
+    "id": "morgan-stanley-europe-festgeld-de-zinsmarkt-norisbank",
+    "markt": "de",
+    "bank": "Morgan Stanley",
+    "institut": "Morgan Stanley Europe SE",
+    "produkt": "Festgeld",
+    "vertrieb": "ZinsMarkt",
+    "vertrieb_url": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.5,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 9,
+        "zins": 2.55,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 12,
+        "zins": 2.8,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 24,
+        "zins": 2.95,
+        "min": 1000,
+        "max": 100000
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 100000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bei Fälligkeit; bei Laufzeiten über 12 Monaten nach jedem Laufzeitjahr und am Ende auf das norisbank-Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die norisbank übernimmt die steuerliche Abwicklung (Kapitalertragsteuer, Soli, ggf. Kirchensteuer) und berücksichtigt den bei ihr hinterlegten Freistellungsauftrag.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht kündbar (nur 14 Tage Widerruf)",
+    "verlaengerung": "keine",
+    "konto_noetig": "norisbank-Girokonto oder kostenloses norisbank-Tagesgeldkonto als Verrechnungskonto (Einzelkonto)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "norisbank-Legitimation (VideoIdent, eID oder PostIdent); einzelne Partnerbanken verlangen Neulegitimation per VideoIdent",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.norisbank.de/geldanlage/tagesgeld-festgeld/festgeld-vergleich.html",
+    "quelle2": "https://www.deutsche-bank.de/pk/sparen-und-anlegen/sparen/zinsmarkt.html",
+    "stand": "2026-10-14",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Treuhandanlage.",
+    "sek": []
+  },
+  {
+    "id": "commerzbank-festgeld-de",
+    "markt": "de",
+    "bank": "Commerzbank",
+    "institut": "Commerzbank AG",
+    "produkt": "Festgeld (Online-Termingeld)",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.commerzbank.de/privatkunden/sparen-anlegen/festgeld/",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.05,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 7,
+        "zins": 2.25,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 8,
+        "zins": 2.35,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 9,
+        "zins": 2.45,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 10,
+        "zins": 2.55,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 11,
+        "zins": 2.65,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 12,
+        "zins": 2.75,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 24,
+        "zins": 2.95,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 36,
+        "zins": 2.95,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 48,
+        "zins": 3.0,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 60,
+        "zins": 3.0,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 72,
+        "zins": 3.0,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 84,
+        "zins": 3.0,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 96,
+        "zins": 3.0,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 108,
+        "zins": 3.0,
+        "min": 1000,
+        "max": 5000000
+      },
+      {
+        "monate": 120,
+        "zins": 3.1,
+        "min": 1000,
+        "max": 5000000
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 5000000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bis 12 Monate bei Fälligkeit, darüber laufzeitjährlich und zur Fälligkeit auf das Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "kein vorzeitiges Kündigungsrecht",
+    "verlaengerung": "wahlweise",
+    "konto_noetig": "Commerzbank-Konto (Giro-, Tagesgeld- oder Sparkonto) mit Online-Banking als Verrechnungskonto",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": "über bestehendes Commerzbank-Konto (Abschluss im Online-Banking oder telefonisch)",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.commerzbank.de/ms/documents/de-DE/online-termingeld-eur-14-09-26.pdf",
+    "quelle2": "https://www.commerzbank.de/privatkunden/sparen-anlegen/festgeld/",
+    "stand": "2026-09-14",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Laufzeiten 3–5 Monate nur für Unternehmerkunden (nicht erfasst). Abschluss nur für Bestandskunden mit Online-Banking; automatische Wiederanlage wählbar.",
+    "sek": []
+  },
+  {
+    "id": "comdirect-festgeld-de",
+    "markt": "de",
+    "bank": "comdirect",
+    "institut": "Commerzbank AG (comdirect – eine Marke der Commerzbank AG)",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.comdirect.de/geldanlage/festgeld.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 12,
+        "zins": 1.7,
+        "min": 500,
+        "max": 100000
+      },
+      {
+        "monate": 24,
+        "zins": 1.9,
+        "min": 500,
+        "max": 100000
+      },
+      {
+        "monate": 36,
+        "zins": 2.2,
+        "min": 500,
+        "max": 100000
+      },
+      {
+        "monate": 60,
+        "zins": 2.3,
+        "min": 500,
+        "max": 100000
+      }
+    ],
+    "min_anlage": 500,
+    "max_anlage": 100000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "jährlich auf das Abrechnungskonto; bei 1 Jahr Laufzeit am Ende",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht möglich",
+    "verlaengerung": "keine",
+    "konto_noetig": "comdirect-Abrechnungskonto",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": "eID (Online-Ausweis), VideoIdent oder PostIdent",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.comdirect.de/geldanlage/festgeld.html",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Vereinbarter Zins gilt, wenn die Anlagesumme innerhalb von 30 Tagen eingezahlt wird; mehrere Festgeldanlagen möglich.",
+    "sek": []
+  },
+  {
+    "id": "hypovereinsbank-festgeld-de",
+    "markt": "de",
+    "bank": "HypoVereinsbank",
+    "institut": "UniCredit Bank GmbH",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.hypovereinsbank.de/hvb/privatkunden/geldanlage/festgeld",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 12,
+        "zins": 3.5,
+        "min": 5000,
+        "max": 100000
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": 100000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "zum vereinbarten Zinstermin, spätestens zum Laufzeitende auf das Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "vorzeitige Kündigung in der Regel nicht vorgesehen",
+    "verlaengerung": null,
+    "konto_noetig": "HVB Girokonto oder kostenloses HVB Verrechnungskonto für Termineinlagen",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": "PostIdent oder HVB-Filiale",
+    "kosten": "kostenlos",
+    "aktion": "Aktionszins 3,50 % p. a. für 12 Monate, einmalig je Kunde, für private Gelder (5.000–100.000 €), die noch nicht bei der HVB liegen; jederzeit beendbar",
+    "quelle": "https://www.hypovereinsbank.de/hvb/privatkunden/geldanlage/festgeld",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Für bestehende HVB-Guthaben oder andere Laufzeiten nur individuelle Angebote im Beratungstermin (keine öffentlichen Zinsen).",
+    "sek": []
+  },
+  {
+    "id": "ing-festgeld-de",
+    "markt": "de",
+    "bank": "ING",
+    "institut": "ING-DiBa AG",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.ing.de/sparen-anlegen/sparen/festgeld/",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 2.1,
+        "min": 5000,
+        "max": null
+      },
+      {
+        "monate": 6,
+        "zins": 2.5,
+        "min": 5000,
+        "max": 99999.99
+      },
+      {
+        "monate": 6,
+        "zins": 2.6,
+        "min": 100000,
+        "max": 249999.99
+      },
+      {
+        "monate": 6,
+        "zins": 2.7,
+        "min": 250000,
+        "max": 1000000
+      },
+      {
+        "monate": 12,
+        "zins": 2.9,
+        "min": 100000,
+        "max": 249999.99
+      },
+      {
+        "monate": 12,
+        "zins": 3.0,
+        "min": 250000,
+        "max": 1000000
+      },
+      {
+        "monate": 18,
+        "zins": 2.8,
+        "min": 5000,
+        "max": 99999.99
+      },
+      {
+        "monate": 18,
+        "zins": 2.9,
+        "min": 100000,
+        "max": 249999.99
+      },
+      {
+        "monate": 18,
+        "zins": 3.0,
+        "min": 250000,
+        "max": 1000000
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": 1000000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "zum Laufzeitende",
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht möglich",
+    "verlaengerung": "automatisch",
+    "konto_noetig": "ING Extra-Konto oder Girokonto als Verrechnungskonto (nur für bestehende ING-Kunden)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": true,
+    "eroeffnung": "online",
+    "legitimation": "bestehendes ING-Konto (Abschluss im Online-Banking)",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.ing.de/sparen-anlegen/sparen/festgeld/konditionen/",
+    "quelle2": "https://www.ing.de/sparen-anlegen/sparen/festgeld/verbraucherschutzinformationen/",
+    "stand": "2026-10-15",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "12 Monate laut Konditionenseite erst ab 100.000 €. Ohne Auszahlungsauftrag automatische Verlängerung um dieselbe Laufzeit zum dann gültigen Zins; bis zu 5 Einzel- und 5 Gemeinschafts-Festgelder.",
+    "sek": []
+  },
+  {
+    "id": "ing-sparbrief-de",
+    "markt": "de",
+    "bank": "ING",
+    "institut": "ING-DiBa AG",
+    "produkt": "Sparbrief",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.ing.de/sparen-anlegen/sparen/sparbrief/",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 12,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.9,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 3.1,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 3.2,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": 1000000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "jährlich zum 31.12. dem Sparbrief gutgeschrieben und mitverzinst; Auszahlung am Laufzeitende",
+    "zinseszins": true,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht möglich",
+    "verlaengerung": "keine",
+    "konto_noetig": "ING-Konto (nur für bestehende Kunden, Abschluss im Online-Banking)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": "bestehendes ING-Konto (Abschluss im Online-Banking)",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.ing.de/sparen-anlegen/sparen/sparbrief/konditionen/",
+    "quelle2": "https://www.ing.de/sparen-anlegen/sparen/sparbrief/verbraucherschutzinformationen/",
+    "stand": "2026-10-15",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Sparbrief wird nie verlängert, sondern am Laufzeitende ausgezahlt.",
+    "sek": []
+  },
+  {
+    "id": "dkb-festgeld-de",
+    "markt": "de",
+    "bank": "DKB",
+    "institut": "Deutsche Kreditbank AG",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.dkb.de/privatkunden/sparen/festgeld",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes Öffentlicher Banken Deutschlands e. V. (ESF)"
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 1.6,
+        "min": 2500,
+        "max": 500000
+      },
+      {
+        "monate": 6,
+        "zins": 2.2,
+        "min": 2500,
+        "max": 500000
+      },
+      {
+        "monate": 12,
+        "zins": 2.7,
+        "min": 2500,
+        "max": 500000
+      },
+      {
+        "monate": 24,
+        "zins": 3.0,
+        "min": 2500,
+        "max": 500000
+      },
+      {
+        "monate": 36,
+        "zins": 3.0,
+        "min": 2500,
+        "max": 500000
+      },
+      {
+        "monate": 48,
+        "zins": 3.0,
+        "min": 2500,
+        "max": 500000
+      },
+      {
+        "monate": 60,
+        "zins": 3.0,
+        "min": 2500,
+        "max": 500000
+      },
+      {
+        "monate": 120,
+        "zins": 3.2,
+        "min": 2500,
+        "max": 500000
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": 500000,
+    "zinszahlung": "quartalsweise",
+    "zinszahlung_text": "vierteljährlich ab Laufzeitbeginn auf dem Festgeldkonto gutgeschrieben und mitverzinst; Auszahlung am Ende",
+    "zinseszins": true,
+    "steuer": "Jede Zinsgutschrift ist kapitalertragsteuerpflichtig; die DKB führt Abgeltungsteuer automatisch ab, Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht möglich",
+    "verlaengerung": "keine",
+    "konto_noetig": "DKB-Girokonto als Referenz-/Verrechnungskonto",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "über DKB-Girokonto (Neukunden eröffnen zuerst ein Girokonto)",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://dok.dkb.de/pdf/plv_pk_sparprodukte.pdf",
+    "quelle2": "https://www.dkb.de/privatkunden/sparen/festgeld",
+    "stand": "2026-10-06",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Nicht als Gemeinschaftskonto oder für u18-Konten möglich.",
+    "sek": []
+  },
+  {
+    "id": "consorsbank-festgeld-de",
+    "markt": "de",
+    "bank": "Consorsbank",
+    "institut": "BNP Paribas S.A. Niederlassung Deutschland",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.consorsbank.de/web/Sparen-Anlegen/Sparen/Festgeld",
+    "sitz": "FR",
+    "zweigniederlassung": true,
+    "einlagensicherung": {
+      "system": "Fonds de Garantie des Dépôts et de Résolution (FGDR), Frankreich",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 1.6,
+        "min": 2500,
+        "max": 1000000
+      },
+      {
+        "monate": 12,
+        "zins": 2.5,
+        "min": 2500,
+        "max": 1000000
+      },
+      {
+        "monate": 24,
+        "zins": 2.5,
+        "min": 2500,
+        "max": 1000000
+      },
+      {
+        "monate": 36,
+        "zins": 2.5,
+        "min": 2500,
+        "max": 1000000
+      },
+      {
+        "monate": 48,
+        "zins": 2.7,
+        "min": 2500,
+        "max": 1000000
+      },
+      {
+        "monate": 60,
+        "zins": 2.7,
+        "min": 2500,
+        "max": 1000000
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": 1000000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "einmal jährlich auf das Abrechnungskonto; bei Laufzeiten bis 12 Monate bei Fälligkeit",
+    "zinseszins": false,
+    "steuer": "Als deutsche Zweigniederlassung führt die Consorsbank Abgeltungsteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht möglich",
+    "verlaengerung": "wahlweise",
+    "konto_noetig": "Consorsbank-Depot mit Abrechnungskonto",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": true,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.consorsbank.de/web/Sparen-Anlegen/Sparen/Festgeld",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Anlage in 100-€-Schritten. Nicht für Kunden der Geschäftsbereiche DAB BNP Paribas / BNP Paribas Wealth Management.",
+    "sek": []
+  },
+  {
+    "id": "1822direkt-festgeld-de",
+    "markt": "de",
+    "bank": "1822direkt",
+    "institut": "Frankfurter Sparkasse (über 1822direkt Gesellschaft der Frankfurter Sparkasse mbH)",
+    "produkt": "Festgeldkonto",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.1822direkt.de/sparen/festgeldkonto/",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Institutssicherung der Sparkassen-Finanzgruppe (amtlich anerkanntes Einlagensicherungssystem)",
+      "betrag": 100000,
+      "freiwillig": "Institutsschutz der Sparkassen-Finanzgruppe"
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.4,
+        "min": 5000,
+        "max": 1000000
+      },
+      {
+        "monate": 12,
+        "zins": 2.8,
+        "min": 5000,
+        "max": 1000000
+      },
+      {
+        "monate": 24,
+        "zins": 3.0,
+        "min": 5000,
+        "max": 1000000
+      },
+      {
+        "monate": 36,
+        "zins": 3.1,
+        "min": 5000,
+        "max": 1000000
+      },
+      {
+        "monate": 48,
+        "zins": 3.1,
+        "min": 5000,
+        "max": 1000000
+      },
+      {
+        "monate": 60,
+        "zins": 3.1,
+        "min": 5000,
+        "max": 1000000
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": 1000000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "bei Laufzeiten unter 2 Jahren am Ende dem Festgeldkonto gutgeschrieben; ab 2 Jahren jährlich auf das Verrechnungskonto",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht möglich",
+    "verlaengerung": "automatisch",
+    "konto_noetig": "1822direkt Tagesgeld- oder Girokonto als Verrechnungskonto (für Neukunden wird ein Tagesgeldkonto mit eröffnet)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": "VideoIdent per Smartphone (deutsche Meldeadresse und Mobilnummer nötig)",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.1822direkt.de/sparen/festgeldkonto/",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "6- und 12-Monats-Festgelder werden automatisch um dieselbe Laufzeit verlängert (abwählbar bis 3 Geschäftstage vor Fälligkeit). 3 Monate (1,60 %) nur bei Verlängerung bestehender Festgelder.",
+    "sek": []
+  },
+  {
+    "id": "targobank-festgeld-de",
+    "markt": "de",
+    "bank": "TARGOBANK",
+    "institut": "TARGOBANK AG",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.targobank.de/de/sparen-geldanlage/festgeld.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.1,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 18,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.55,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.55,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 2.55,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 72,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": null,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "jährlich bzw. bei Fälligkeit auf das Referenzkonto",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "vorzeitige Kündigung nur in Ausnahmefällen",
+    "verlaengerung": "wahlweise",
+    "konto_noetig": "Referenzkonto für Zins- und Kapitalauszahlung",
+    "referenzkonto": true,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.targobank.de/de/sparen-geldanlage/festgeld.html",
+    "quelle2": "https://www.targobank.de/de/sparen-geldanlage/festgeld-produkte.html",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Keine Höchstgrenze. Online direkt über die Website, im Online-Banking oder in der Filiale abschließbar.",
+    "sek": []
+  },
+  {
+    "id": "targobank-extra-festgeld-de",
+    "markt": "de",
+    "bank": "TARGOBANK",
+    "institut": "TARGOBANK AG",
+    "produkt": "Extra-Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.targobank.de/de/sparen-geldanlage/extra-festgeld.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V."
+    },
+    "zinsen": [
+      {
+        "monate": 60,
+        "zins": 2.1,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": null,
+    "zinszahlung": null,
+    "zinszahlung_text": "Zinstreppe: 1,90 % (1. Jahr), 2,00 %, 2,10 %, 2,20 %, 2,30 % (5. Jahr); Auszahlungsrhythmus nicht angegeben",
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "ja",
+    "kuendigung_text": "nach mindestens 2 Jahren Laufzeit jederzeit ohne Kündigung vorzeitig auflösbar",
+    "verlaengerung": "keine",
+    "konto_noetig": "Referenzkonto für Zins- und Kapitalauszahlung (kein Bankwechsel nötig)",
+    "referenzkonto": true,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.targobank.de/de/sparen-geldanlage/extra-festgeld.html",
+    "quelle2": "https://www.targobank.de/de/sparen-geldanlage/festgeld-produkte.html",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Stufenzins-Festgeld über 5 Jahre; als Zins ist der von der Bank genannte Effektivzins über die Gesamtlaufzeit (2,10 % p. a.) eingetragen.",
+    "sek": []
+  },
+  {
+    "id": "openbank-festgeld-de",
+    "markt": "de",
+    "bank": "Openbank",
+    "institut": "Openbank Deutschland AG",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.openbank.de/festgeld",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "betrag": 100000,
+      "freiwillig": "Einlagensicherungsfonds des Bundesverbandes deutscher Banken e. V. (laut Bank seit 01.01.2025 bis 3 Mio. € je natürliche Person)"
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.75,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.1,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 3.2,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 3.25,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 72,
+        "zins": 3.25,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 84,
+        "zins": 3.25,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 96,
+        "zins": 3.5,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": null,
+    "zinszahlung": "wahlweise",
+    "zinszahlung_text": "wahlweise jährlich zum Ende jedes Laufzeitjahres oder einmalig am Laufzeitende, jeweils auf das Openbank Tagesgeldkonto",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht möglich",
+    "verlaengerung": "keine",
+    "konto_noetig": "kostenloses Openbank Tagesgeldkonto als Abrechnungskonto",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.openbank.de/festgeld",
+    "quelle2": "https://www.openbank.de/einlagensicherung",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Nur für Privatpersonen mit Wohnsitz in Deutschland. Seite per Bot-Schutz nur über Abruf-Tool lesbar; kein Stand-Datum angegeben (Zinserhöhung laut Presseberichten zum 07.10.2026).",
+    "sek": []
+  },
+  {
+    "id": "bunq-festgeld-de",
+    "markt": "de",
+    "bank": "bunq",
+    "institut": "bunq B.V.",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.bunq.com/de-de/personal/features/term-deposits",
+    "sitz": "NL",
+    "zweigniederlassung": null,
+    "einlagensicherung": {
+      "system": "Niederländische Einlagensicherung (Depositogarantiestelsel, De Nederlandsche Bank)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 1.76,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 6,
+        "zins": 1.86,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 12,
+        "zins": 2.11,
+        "min": 1000,
+        "max": 100000
+      },
+      {
+        "monate": 24,
+        "zins": 1.91,
+        "min": 1000,
+        "max": 100000
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 100000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Zinsen und Anlagebetrag am Laufzeitende auf das bunq-Konto",
+    "zinseszins": false,
+    "steuer": "Keine Angabe zur Steuerabführung auf der Produktseite.",
+    "steuer_auto": null,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "vorzeitige Auszahlung des vollen Betrags möglich: 1 % des Betrags je angefangenem Restlaufzeitjahr, keine Zinsen; Widerruf innerhalb 14 Tagen kostenlos",
+    "verlaengerung": "keine",
+    "konto_noetig": "bunq-Konto (in jedem Tarif, auch bunq Free)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": "Ausweisfoto und Selfie in der App",
+    "kosten": "Festgeld kostenlos; bunq-Kontotarif ab 0 € (Free)",
+    "aktion": null,
+    "quelle": "https://www.bunq.com/de-de/personal/features/term-deposits",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Nur in der App. Zinsen als Bruttojahreszins angegeben.",
+    "sek": []
+  },
+  {
+    "id": "scalable-capital-festgeld-de",
+    "markt": "de",
+    "bank": "Scalable Capital",
+    "institut": "Partnerbank(en) von Scalable Capital (Vertrieb: Scalable Capital Bank GmbH)",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://de.scalable.capital/festgeld",
+    "sitz": null,
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "gesetzliche Einlagensicherung der jeweiligen Partnerbank(en)",
+      "betrag": 100000,
+      "freiwillig": "zusätzliche freiwillige Einlagensicherung möglich (laut Scalable)"
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.75,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.25,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 1,
+    "max_anlage": null,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "am Laufzeitende auf Tagesgeld-, Broker-Verrechnungs- oder Referenzkonto",
+    "zinseszins": false,
+    "steuer": "Scalable führt Kapitalertragsteuer, Soli und ggf. Kirchensteuer automatisch ab und berücksichtigt den Freistellungsauftrag.",
+    "steuer_auto": true,
+    "kuendigung": null,
+    "kuendigung_text": null,
+    "verlaengerung": null,
+    "konto_noetig": "Scalable-Konto (Einzahlung über Tagesgeld- oder Broker-Verrechnungskonto)",
+    "referenzkonto": null,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://de.scalable.capital/festgeld",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Guthaben wird auf eine oder mehrere Partnerbanken verteilt (Banken nicht genannt); bis zu 5 Festgeldkonten, auch für Kinder. Kein Maximalbetrag.",
+    "sek": []
+  },
+  {
+    "id": "gls-bank-festgeld-de",
+    "markt": "de",
+    "bank": "GLS Bank",
+    "institut": "GLS Gemeinschaftsbank eG",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.gls.de/sparen-investieren/sparen/festgeld/",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "BVR Institutssicherung GmbH (amtlich anerkanntes institutsbezogenes Sicherungssystem)",
+      "betrag": 100000,
+      "freiwillig": "zusätzlich freiwillige Sicherungseinrichtung des BVR (Institutsschutz)"
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 1.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 6,
+        "zins": 2.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.3,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": null,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "nach Fälligkeit auf das angegebene Konto",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht möglich",
+    "verlaengerung": null,
+    "konto_noetig": "Girokonto als Verrechnungskonto (auch bei anderer Bank)",
+    "referenzkonto": true,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": "PostIdent, VideoIdent oder Online-Ausweis",
+    "kosten": "GLS-Beitrag: 1 €/Monat (18–27 J.), 5 €/Monat ab 28 J. (einmal für alle GLS-Angebote)",
+    "aktion": null,
+    "quelle": "https://www.gls.de/sparen-investieren/sparen/festgeld/",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Laufzeiten 90, 180 und 360 Tage (als 3/6/12 Monate erfasst). Zinsen können nicht dem Festgeldkonto gutgeschrieben werden.",
+    "sek": []
+  },
+  {
+    "id": "gls-bank-sparbrief-de",
+    "markt": "de",
+    "bank": "GLS Bank",
+    "institut": "GLS Gemeinschaftsbank eG",
+    "produkt": "Sparbrief",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.gls.de/sparen-investieren/sparen/sparbrief/",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "BVR Institutssicherung GmbH (amtlich anerkanntes institutsbezogenes Sicherungssystem)",
+      "betrag": 100000,
+      "freiwillig": "zusätzlich freiwillige Sicherungseinrichtung des BVR (Institutsschutz)"
+    },
+    "zinsen": [
+      {
+        "monate": 24,
+        "zins": 2.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 84,
+        "zins": 2.7,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 120,
+        "zins": 2.9,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": null,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "jährlich zum 31.12. auf das angegebene Konto",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Verfügung vor Ende der Laufzeit nicht möglich",
+    "verlaengerung": "keine",
+    "konto_noetig": "Girokonto als Verrechnungskonto (auch bei anderer Bank)",
+    "referenzkonto": true,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": "PostIdent, VideoIdent oder Online-Ausweis",
+    "kosten": "GLS-Beitrag: 1 €/Monat (18–27 J.), 5 €/Monat ab 28 J. (einmal für alle GLS-Angebote)",
+    "aktion": null,
+    "quelle": "https://www.gls.de/sparen-investieren/sparen/sparbrief/gls-sparbrief/",
+    "quelle2": "https://www.gls.de/sparen-investieren/sparen/sparbrief/",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "7 Jahre = 'GLS Sparbrief – Energiewende', 10 Jahre = 'GLS Sparbrief – Soziales & Gesundheit' (zweckgebundene Kreditvergabe). Neukunden über Beratungstermin.",
+    "sek": []
+  },
+  {
+    "id": "umweltbank-festgeld-de",
+    "markt": "de",
+    "bank": "UmweltBank",
+    "institut": "UmweltBank AG",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.umweltbank.de/sparen/festgeld/",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "gesetzliche Einlagensicherung (laut Bank bis 100.000 € pro Person)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 1.2,
+        "min": 2500,
+        "max": 1000000
+      },
+      {
+        "monate": 12,
+        "zins": 1.75,
+        "min": 2500,
+        "max": 1000000
+      },
+      {
+        "monate": 36,
+        "zins": 2.0,
+        "min": 2500,
+        "max": 1000000
+      },
+      {
+        "monate": 60,
+        "zins": 2.5,
+        "min": 2500,
+        "max": 1000000
+      },
+      {
+        "monate": 84,
+        "zins": 2.85,
+        "min": 2500,
+        "max": 1000000
+      },
+      {
+        "monate": 120,
+        "zins": 3.25,
+        "min": 2500,
+        "max": 1000000
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": 1000000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "jährlich auf das Verrechnungskonto; bei 6 Monaten nach Laufzeitende",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit unkündbar",
+    "verlaengerung": "keine",
+    "konto_noetig": "UmweltBank-Tagesgeldkonto oder -Girokonto (Basis für alle Produkte)",
+    "referenzkonto": true,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.umweltbank.de/sparen/festgeld/",
+    "quelle2": null,
+    "stand": "2026-10-01",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Auszahlung auf das UmweltBank-Verrechnungskonto oder ein inländisches Referenzkonto.",
+    "sek": []
+  },
+  {
+    "id": "ethikbank-festgeld-de",
+    "markt": "de",
+    "bank": "EthikBank",
+    "institut": "EthikBank eG",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.ethikbank.de/privatkunden/geld-anlegen/festgeld",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "BVR Institutssicherung GmbH (amtlich anerkanntes institutsbezogenes Sicherungssystem)",
+      "betrag": 100000,
+      "freiwillig": "zusätzlich freiwillige Sicherungseinrichtung des BVR (Institutsschutz)"
+    },
+    "zinsen": [
+      {
+        "monate": 12,
+        "zins": 1.2,
+        "min": 5000,
+        "max": 100000
+      },
+      {
+        "monate": 24,
+        "zins": 1.1,
+        "min": 5000,
+        "max": 100000
+      },
+      {
+        "monate": 36,
+        "zins": 1.2,
+        "min": 5000,
+        "max": 100000
+      },
+      {
+        "monate": 48,
+        "zins": 1.3,
+        "min": 5000,
+        "max": 100000
+      },
+      {
+        "monate": 60,
+        "zins": 1.4,
+        "min": 5000,
+        "max": 100000
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": 100000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Zinsgutschrift jeweils zur Fälligkeit",
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "während der Laufzeit nicht möglich",
+    "verlaengerung": "keine",
+    "konto_noetig": null,
+    "referenzkonto": true,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.ethikbank.de/privatkunden/geld-anlegen/festgeld",
+    "quelle2": null,
+    "stand": "2025-05-19",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Zinstabelle laut Bank zuletzt am 19.05.2025 geändert. Nach Fälligkeit Gutschrift auf das Referenzkonto (auch Fremdbank).",
+    "sek": []
+  },
+  {
+    "id": "skatbank-termingeld-de",
+    "markt": "de",
+    "bank": "Deutsche Skatbank",
+    "institut": "VR-Bank Altenburger Land eG (Deutsche Skatbank)",
+    "produkt": "Termingeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.skatbank.de/privatkunden/geldanlage-und-sparen/produkte/geldanlage/festgeld.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "BVR Institutssicherung GmbH (amtlich anerkanntes institutsbezogenes Sicherungssystem)",
+      "betrag": 100000,
+      "freiwillig": "zusätzlich freiwillige Sicherungseinrichtung des BVR (Institutsschutz)"
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 1.7,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 6,
+        "zins": 2.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.16,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": null,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "am Ende des Anlagezeitraums",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "vorzeitige Kündigung ausgeschlossen",
+    "verlaengerung": "automatisch",
+    "konto_noetig": null,
+    "referenzkonto": null,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.skatbank.de/privatkunden/geldanlage-und-sparen/produkte/geldanlage/festgeld.html",
+    "quelle2": null,
+    "stand": "2026-10-01",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Termingeldkonto mit Prolongation; Zins für die Laufzeit fest, Neusatz monatlich angepasst (65 % des jeweiligen Euribor). Nur als Einzelkonto.",
+    "sek": []
+  },
+  {
+    "id": "skatbank-festgeld-de",
+    "markt": "de",
+    "bank": "Deutsche Skatbank",
+    "institut": "VR-Bank Altenburger Land eG (Deutsche Skatbank)",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.skatbank.de/privatkunden/geldanlage-und-sparen/produkte/geldanlage/festgeld.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "BVR Institutssicherung GmbH (amtlich anerkanntes institutsbezogenes Sicherungssystem)",
+      "betrag": 100000,
+      "freiwillig": "zusätzlich freiwillige Sicherungseinrichtung des BVR (Institutsschutz)"
+    },
+    "zinsen": [
+      {
+        "monate": 24,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 2.55,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 2.55,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 72,
+        "zins": 2.55,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 84,
+        "zins": 2.55,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 96,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 108,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 120,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": null,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "nach Ablauf jedes Anlagejahres",
+    "zinseszins": false,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "vorzeitige Kündigung ausgeschlossen",
+    "verlaengerung": "keine",
+    "konto_noetig": null,
+    "referenzkonto": null,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.skatbank.de/privatkunden/geldanlage-und-sparen/produkte/geldanlage/festgeld.html",
+    "quelle2": null,
+    "stand": "2026-10-01",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Festgeldkonto als Einmalanlage (2–10 Jahre). Nur als Einzelkonto.",
+    "sek": []
+  },
+  {
+    "id": "bbbank-festgeld-de",
+    "markt": "de",
+    "bank": "BBBank",
+    "institut": "BBBank eG",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.bbbank.de/privatkunden/geldanlage/festgeld.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "BVR Institutssicherung GmbH (amtlich anerkanntes institutsbezogenes Sicherungssystem)",
+      "betrag": 100000,
+      "freiwillig": "zusätzlich freiwillige Sicherungseinrichtung des BVR (Institutsschutz)"
+    },
+    "zinsen": [
+      {
+        "monate": 12,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 18,
+        "zins": 2.75,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 3.05,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 3.1,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 72,
+        "zins": 3.1,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 84,
+        "zins": 3.15,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 96,
+        "zins": 3.15,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 108,
+        "zins": 3.15,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 120,
+        "zins": 3.2,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": null,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "am Ende des Anlagezeitraums, bei Laufzeiten über 1 Jahr nach jedem Anlagejahr",
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "vorzeitige Kündigung ausgeschlossen",
+    "verlaengerung": null,
+    "konto_noetig": null,
+    "referenzkonto": null,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.bbbank.de/privatkunden/geldanlage/festgeld.html",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "1 Jahr mit automatischer Prolongation. Online-Abschluss für Kunden mit Online-Banking; längere Laufzeiten als 10 Jahre auf Anfrage.",
+    "sek": []
+  },
+  {
+    "id": "bbbank-festgeld-de-neugeld",
+    "markt": "de",
+    "bank": "BBBank",
+    "institut": "BBBank eG",
+    "produkt": "Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.bbbank.de/privatkunden/geldanlage/festgeld.html",
+    "sitz": "DE",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "BVR Institutssicherung GmbH (amtlich anerkanntes institutsbezogenes Sicherungssystem)",
+      "betrag": 100000,
+      "freiwillig": "zusätzlich freiwillige Sicherungseinrichtung des BVR (Institutsschutz)"
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.0,
+        "min": 5000,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 3.0,
+        "min": 5000,
+        "max": null
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": null,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "am Ende des Anlagezeitraums, bei Laufzeiten über 1 Jahr nach jedem Anlagejahr",
+    "zinseszins": null,
+    "steuer": "Die Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "vorzeitige Kündigung ausgeschlossen",
+    "verlaengerung": "automatisch",
+    "konto_noetig": null,
+    "referenzkonto": null,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": "Online-Legitimation (Neukunden)",
+    "kosten": "kostenlos",
+    "aktion": "Festgeld-Special 3,00 % für 1 Jahr (und 2,00 % für 6 Monate) nur für neues Geld per Einzug von einer Fremdbank",
+    "quelle": "https://www.bbbank.de/privatkunden/geldanlage/festgeld.html",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Special wird nach Ablauf automatisch zum dann gültigen Zins verlängert. 6 Monate nur über Berater und mit internem Verrechnungskonto.",
+    "sek": []
+  }
+]

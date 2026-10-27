@@ -1,0 +1,92 @@
+[
+ {
+  "name": "Fibank – Flexgeld über Raisin",
+  "markt": "at",
+  "grund": "Einziges Produkt auf raisin.com/de-at mit 0,00 % p. a. ausgewiesen (Zinssatz seit 2021-03-16 unverändert) – faktisch kein Neugeschäft."
+ },
+ {
+  "name": "Raisin AT – Tagesgeld/Kündigungsgeld (Avida, Inbank, Holm, Morrow, Lea Bank, Alisa, BluOr, Deutsche Bank/Euro Extra, Bank DiMare, Creditplus, FCM Bank, Wormser)",
+  "markt": "at",
+  "grund": "Kein Festgeld (OVERNIGHT/NOTICE-Produkte in der Raisin-Produkt-API)."
+ },
+ {
+  "name": "Raisin AT – Einzel-Laufzeiten mit 0,00–0,01 % (BluOr 3 Monate, Guber Banca 9 und 18 Monate, LHV 2 Jahre)",
+  "markt": "at",
+  "grund": "Auf der Plattform gelistet, aber mit 0,00–0,01 % p. a. seit 2022–2024 unverändert – faktisch geschlossen; im jeweiligen Angebot unter hinweis vermerkt."
+ },
+ {
+  "name": "Zinspilot Österreich",
+  "markt": "at",
+  "grund": "zinspilot.at leitet per Frame auf zinspilot.de weiter, das auf raisin.com/de-de umleitet – Zinspilot ist in Raisin aufgegangen, kein eigenes AT-Angebot."
+ },
+ {
+  "name": "Zinsfuchs",
+  "markt": "at",
+  "grund": "zinsfuchs.at nicht erreichbar; keine aktive Festgeld-Plattform für Österreich gefunden."
+ },
+ {
+  "name": "durchblicker.at (Sparzinsen)",
+  "markt": "at",
+  "grund": "Reines Vergleichsportal ohne eigenen Abschluss (Weiterleitung zur Bank); Seite blockiert zudem automatisierte Abrufe (HTTP 403)."
+ },
+ {
+  "name": "TF Bank Österreich",
+  "markt": "at",
+  "grund": "tfbank.at bietet in Österreich nur Kreditkarte/Kredit an, kein Festgeld."
+ },
+ {
+  "name": "Ikano Bank Österreich",
+  "markt": "at",
+  "grund": "ikanobank.at bietet in Österreich nur IKEA-Finanzierung, kein Einlagengeschäft."
+ },
+ {
+  "name": "Inbank (direkt)",
+  "markt": "at",
+  "grund": "Kein Direktangebot für Österreich gefunden; Inbank-Festgeld für Österreich läuft über Raisin (aufgenommen als inbank-festgeld-at-raisin). inbank.at nicht erreichbar."
+ },
+ {
+  "name": "Lea Bank (direkt)",
+  "markt": "at",
+  "grund": "Kein Direkt-Festgeld für Österreich gefunden (leabank.at nicht erreichbar); über Raisin AT nur Tagesgeld/Kündigungsgeld."
+ },
+ {
+  "name": "Collector Bank",
+  "markt": "at",
+  "grund": "Kein Einlagenangebot für Österreich gefunden (collector.at gehört nicht der Bank)."
+ },
+ {
+  "name": "NOBA / Nordax Bank",
+  "markt": "at",
+  "grund": "Kein Festgeld für Österreich gefunden (noba.at ist ein Küchenhersteller)."
+ },
+ {
+  "name": "Banca Progetto",
+  "markt": "at",
+  "grund": "Kein Festgeld für Österreich gefunden (bancaprogetto.at nicht erreichbar, nicht bei Raisin AT gelistet)."
+ },
+ {
+  "name": "Holvi",
+  "markt": "at",
+  "grund": "Geschäftskonto für Selbstständige, kein Festgeld für Privatkunden."
+ },
+ {
+  "name": "Santander Consumer Bank Österreich",
+  "markt": "at",
+  "grund": "Laut Auftrag Gruppe AT_A."
+ },
+ {
+  "name": "DKB Festgeld",
+  "markt": "at",
+  "grund": "capitalo.at und etf.at führen das DKB-Festgeld für Österreich (nicht steuereinfach), die DKB-Seite selbst nennt aber keine Annahme von Kunden mit Wohnsitz Österreich und zeigt andere Zinsen (z. B. 1 Jahr 2,7 % statt 2,1 %). AT-Verfügbarkeit nicht primär belegt – bitte prüfen (ggf. Gruppe DE)."
+ },
+ {
+  "name": "Hello bank! (BNP Paribas S.A. Niederlassung Österreich)",
+  "markt": "at",
+  "grund": "Website nicht erreichbar (Proxy), kein Festgeld-Angebot in Quellen gefunden; als österreichische Niederlassung vermutlich Gruppe AT_A."
+ },
+ {
+  "name": "Bigbank Tagesgeld-Aktion / Klarna Flexkonto / Renault Tagesgeld",
+  "markt": "at",
+  "grund": "Tagesgeld, kein Festgeld."
+ }
+]

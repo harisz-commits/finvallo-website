@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Erste Bank und Sparkassen – s Kapital Sparen (George)",
+    "markt": "at",
+    "grund": "Online-Eröffnung nur für Bestandskund:innen; Zinssätze werden auf der Webseite nicht veröffentlicht (nur in George/Filiale), regional je Sparkasse unterschiedlich."
+  },
+  {
+    "name": "HYPO Oberösterreich – Online Sparen fix",
+    "markt": "at",
+    "grund": "Keine öffentlich abrufbaren Zinssätze; nur als Ergänzung zum HYPO OÖ Girokonto (Mein ELBA)."
+  },
+  {
+    "name": "Hypo Salzburg – Online Sparen",
+    "markt": "at",
+    "grund": "Nur Online-Sparkonto ohne feste Bindung gefunden, kein Festgeld."
+  },
+  {
+    "name": "Raiffeisenbanken – Online Sparen (regional)",
+    "markt": "at",
+    "grund": "Regionale Raiffeisenbanken mit eigenem Kundenkreis; bundesweites Online-Angebot ist Bank Direkt (RLB OÖ), dieses ist erfasst."
+  },
+  {
+    "name": "Volksbanken Österreich",
+    "markt": "at",
+    "grund": "Kein bundesweites Online-Festgeld der Volksbanken gefunden; regionale Institute."
+  },
+  {
+    "name": "SPARDA-BANK (Marke der Volksbank Wien AG) – webfix Festgeld Sparkonto",
+    "markt": "at",
+    "grund": "Online-Abschluss nur über bestehendes Internetbanking (Bestandskunden) einer regionalen Volksbank; bundesweite Neukundenöffnung nicht belegt. Konditionen ab 01.10.2026: 6 M 2,00 %, 12 M 2,30 %, 24 M 2,45 %."
+  },
+  {
+    "name": "Oberbank – Sparkonto Festzins",
+    "markt": "at",
+    "grund": "Zinssätze nicht öffentlich; Abschluss nur im eShop für Bestandskunden."
+  },
+  {
+    "name": "BTV – Anlagekonto fix",
+    "markt": "at",
+    "grund": "Zinssätze nicht öffentlich; Abschluss nur für Kunden über meineBTV-eShop bzw. Betreuer."
+  },
+  {
+    "name": "DolomitenBank Osttirol-Westkärnten eG",
+    "markt": "at",
+    "grund": "Regionale Genossenschaftsbank; kein Online-Festgeld auf der Webseite gefunden (nur Sparbücher)."
+  },
+  {
+    "name": "Marchfelder Bank eG – Jubiläumskombi Festgeld/Kapitalsparbuch",
+    "markt": "at",
+    "grund": "Regionale Genossenschaftsbank; Festgeld 3,125 % nur in Kombination mit Fondskauf (mind. 50 %) und Beratungsgespräch, kein reines Festgeld-Angebot."
+  },
+  {
+    "name": "VakifBank International AG – Termingeld",
+    "markt": "at",
+    "grund": "Zinstabelle auf der Bankseite nicht abrufbar (eingebettetes Widget meldet Fehler), nur 'bis zu 3,00 %' sichtbar; keine verlässliche Primärquelle für die einzelnen Laufzeiten."
+  },
+  {
+    "name": "AutoBank AG",
+    "markt": "at",
+    "grund": "Webseite nicht erreichbar (HTTP 503), keine aktuellen Konditionen aus Primärquelle."
+  },
+  {
+    "name": "Generali Bank AG",
+    "markt": "at",
+    "grund": "Bietet laut Preisblatt (Stand 01.10.2026) nur Tagesgeldkonten, kein Festgeld."
+  },
+  {
+    "name": "Schelhammer Capital Bank AG (Schelhammer)",
+    "markt": "at",
+    "grund": "Festgeld der Bank läuft über die Marke DADAT (erfasst); kein eigenes öffentliches Festgeldangebot von Schelhammer."
+  },
+  {
+    "name": "DenizBank – Sparbuch mit Fixzinsgarantie",
+    "markt": "at",
+    "grund": "Nur in der Filiale eröffnungsfähig (gleiche Zinsen wie Online-Festgeld, das erfasst ist)."
+  },
+  {
+    "name": "Hypo Vorarlberg – Prämiensparbuch fixer Zinssatz",
+    "markt": "at",
+    "grund": "Sparbuch mit Prämie, nur Filialprodukt; Online-Kapitalkonto und Festgeld-Aktion sind erfasst."
+  },
+  {
+    "name": "Ziraat Bank",
+    "markt": "at",
+    "grund": "Keine österreichische Einlagenbank (Ziraat Bank International AG sitzt in Frankfurt)."
+  },
+  {
+    "name": "TeamBank Österreich",
+    "markt": "at",
+    "grund": "Nur Ratenkredite, keine Einlagenprodukte."
+  }
+]
