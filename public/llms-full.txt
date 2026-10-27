@@ -322,6 +322,93 @@ i Kurzantwort: In Deutschland lohnt sich Punktesammeln deutlich mehr als in Öst
 - [Miles & More MyFlex Credit Card](https://finvallo.com/de/kreditkarten/miles-und-more-myflex-credit-card/): Typ: Kreditkarte; Netz: Mastercard; Jahresgebühr: 0 €; Fremdwährung: 1,95 % (Mastercard-Kurs); Bargeld: 2 %, mind. 5 € am Geldautomaten im Inland und in Euro im EWR; außerhalb EWR/Fremdwährung zzgl. 1,95 %; Tageslimit 1.000 €; Reiseversicherung: Keine Reiseversicherung; Sammelrate: 1 Meile pro 2 € Kartenumsatz; Meilen verfallen nach den normalen Miles & More Regeln; Bewertung: 3,6/5 (Befriedigend); geprüft am 12.10.2026
 - [Volksbank ClassicCard](https://finvallo.com/de/kreditkarten/volksbank-classiccard/): Typ: Charge; Netz: Mastercard; Jahresgebühr: 0 €; Fremdwährung: 1,8 %; Bargeld: Inland 2 %; im Ausland ohne Bankentgelt (ggf. Betreiberentgelt); Reiseversicherung: Keine Reiseversicherung; Sammelrate: Bis 4 % (Classic) bzw. 10 % (Gold) Reisebonus nur bei Buchung über vr-meinereise.de/Urlaubsplus - kein Cashback auf normale Einkäufe; Bewertung: 3,6/5 (Befriedigend); geprüft am 12.10.2026
 
+## Deutschland: Girokonten
+- [Girokonto-Vergleich Deutschland](https://finvallo.com/de/girokonto/): 81 Konten von Banken mit Angebot in ganz Deutschland, Jahreskosten selbst rechnen, Stand 27.10.2026
+- [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder
+- [So bewerten wir Girokonten](https://finvallo.com/de/girokonto/methodik/)
+- [Daten als JSON](https://finvallo.com/de/daten/girokonten.json)
+- [Consorsbank! Girokonto (Consorsbank)](https://finvallo.com/de/girokonto/consorsbank-girokonto/): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
+- [Top-Girokonto (norisbank)](https://finvallo.com/de/girokonto/norisbank-top-girokonto/): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
+- [BestGiro (Openbank)](https://finvallo.com/de/girokonto/openbank-bestgiro/): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
+- [Skatbank-TrumpfKonto (Deutsche Skatbank)](https://finvallo.com/de/girokonto/skatbank-trumpfkonto/): Konten für alle, 4,6/5, 5 € im Jahr im Beispiel
+- [GiroDirekt (1822direkt)](https://finvallo.com/de/girokonto/1822direkt-girodirekt/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [BetterSmart Konto (BBBank)](https://finvallo.com/de/girokonto/bbbank-bettersmart-konto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [Girokonto (DKB)](https://finvallo.com/de/girokonto/dkb-girokonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [Standard (Revolut)](https://finvallo.com/de/girokonto/revolut-standard/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [Girokonto mit Karte (Trade Republic)](https://finvallo.com/de/girokonto/trade-republic-girokonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [Girokonto (ING)](https://finvallo.com/de/girokonto/ing-girokonto/): Konten für alle, 4,4/5, 0 € im Jahr im Beispiel
+- [Giro pur (Postbank)](https://finvallo.com/de/girokonto/postbank-giro-pur/): Konten für alle, 4,4/5, 0 € im Jahr im Beispiel
+- [Plus-Konto (TARGOBANK)](https://finvallo.com/de/girokonto/targobank-plus-konto/): Konten für alle, 4,4/5, 0 € im Jahr im Beispiel
+- [C24 Smartkonto (C24)](https://finvallo.com/de/girokonto/c24-smart/): Konten für alle, 4,2/5, 0 € im Jahr im Beispiel
+- [Girokonto Future (ING)](https://finvallo.com/de/girokonto/ing-girokonto-future/): Konten für alle, 4,2/5, 12 € im Jahr im Beispiel
+- [Plus (Revolut)](https://finvallo.com/de/girokonto/revolut-plus/): Konten für alle, 4,1/5, 29,99 € im Jahr im Beispiel
+- [Giro plus (Postbank)](https://finvallo.com/de/girokonto/postbank-giro-plus/): Konten für alle, 4,0/5, 70,80 € im Jahr im Beispiel
+- [Girokonto Extra (comdirect)](https://finvallo.com/de/girokonto/comdirect-girokonto-extra/): Konten für alle, 3,9/5, 34,80 € im Jahr im Beispiel
+- [Online-Konto (TARGOBANK)](https://finvallo.com/de/girokonto/targobank-online-konto/): Konten für alle, 3,9/5, 47,40 € im Jahr im Beispiel
+- [GiroKonto (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-girokonto/): Konten für alle, 3,9/5, 58,80 € im Jahr im Beispiel
+- [GLS Konto Mitglied (GLS Bank)](https://finvallo.com/de/girokonto/gls-konto-mitglied/): Konten für alle, 3,9/5, 105,60 € im Jahr im Beispiel
+- [N26 Standard (N26)](https://finvallo.com/de/girokonto/n26-standard/): Konten für alle, 3,8/5, 48 € im Jahr im Beispiel
+- [BBBank-Girokonto (BBBank)](https://finvallo.com/de/girokonto/bbbank-girokonto/): Konten für alle, 3,7/5, 50,35 € im Jahr im Beispiel
+- [AktivKonto (Deutsche Bank)](https://finvallo.com/de/girokonto/deutsche-bank-aktivkonto/): Konten für alle, 3,7/5, 82,80 € im Jahr im Beispiel
+- [Girokonto plus (norisbank)](https://finvallo.com/de/girokonto/norisbank-girokonto-plus/): Konten für alle, 3,7/5, 94,80 € im Jahr im Beispiel
+- [KlassikKonto (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-klassikkonto/): Konten für alle, 3,7/5, 118,80 € im Jahr im Beispiel
+- [Girokonto Aktiv (comdirect)](https://finvallo.com/de/girokonto/comdirect-girokonto-aktiv/): Konten für alle, 3,6/5, 58,80 € im Jahr im Beispiel
+- [C24 Pluskonto (C24)](https://finvallo.com/de/girokonto/c24-plus/): Konten für alle, 3,6/5, 70,80 € im Jahr im Beispiel
+- [Girokonto Plus (comdirect)](https://finvallo.com/de/girokonto/comdirect-girokonto-plus/): Konten für alle, 3,6/5, 118,80 € im Jahr im Beispiel
+- [Giro extra plus (Postbank)](https://finvallo.com/de/girokonto/postbank-giro-extra-plus/): Konten für alle, 3,6/5, 142,80 € im Jahr im Beispiel
+- [PremiumKonto (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-premiumkonto/): Konten für alle, 3,6/5, 154,80 € im Jahr im Beispiel
+- [Premium (Revolut)](https://finvallo.com/de/girokonto/revolut-premium/): Konten für alle, 3,5/5, 89 € im Jahr im Beispiel
+- [Komfort-Konto (TARGOBANK)](https://finvallo.com/de/girokonto/targobank-komfort-konto/): Konten für alle, 3,5/5, 119,40 € im Jahr im Beispiel
+- [BestKonto (Deutsche Bank)](https://finvallo.com/de/girokonto/deutsche-bank-bestkonto/): Konten für alle, 3,5/5, 166,80 € im Jahr im Beispiel
+- [C24 Maxkonto (C24)](https://finvallo.com/de/girokonto/c24-max/): Konten für alle, 3,4/5, 118,80 € im Jahr im Beispiel
+- [bunq Pro (bunq)](https://finvallo.com/de/girokonto/bunq-pro/): Konten für alle, 3,4/5, 119,88 € im Jahr im Beispiel
+- [Change (Tomorrow)](https://finvallo.com/de/girokonto/tomorrow-change/): Konten für alle, 3,3/5, 106,80 € im Jahr im Beispiel
+- [N26 Go (N26)](https://finvallo.com/de/girokonto/n26-go/): Konten für alle, 3,3/5, 118,80 € im Jahr im Beispiel
+- [GLS Konto (GLS Bank)](https://finvallo.com/de/girokonto/gls-konto/): Konten für alle, 3,3/5, 120,60 € im Jahr im Beispiel
+- [Metal (Revolut)](https://finvallo.com/de/girokonto/revolut-metal/): Konten für alle, 3,3/5, 155 € im Jahr im Beispiel
+- [Premium-Konto (TARGOBANK)](https://finvallo.com/de/girokonto/targobank-premium-konto/): Konten für alle, 3,3/5, 155,40 € im Jahr im Beispiel
+- [N26 Smart (N26)](https://finvallo.com/de/girokonto/n26-smart/): Konten für alle, 3,2/5, 82,80 € im Jahr im Beispiel
+- [Now (Tomorrow)](https://finvallo.com/de/girokonto/tomorrow-now/): Konten für alle, 3,2/5, 108 € im Jahr im Beispiel
+- [bunq Core (bunq)](https://finvallo.com/de/girokonto/bunq-core/): Konten für alle, 3,1/5, 95,40 € im Jahr im Beispiel
+- [bunq Free (bunq)](https://finvallo.com/de/girokonto/bunq-free/): Konten für alle, 3,1/5, 143,52 € im Jahr im Beispiel
+- [Plus (Tomorrow)](https://finvallo.com/de/girokonto/tomorrow-plus/): Konten für alle, 3,0/5, 214,80 € im Jahr im Beispiel
+- [bunq Elite (bunq)](https://finvallo.com/de/girokonto/bunq-elite/): Konten für alle, 3,0/5, 227,88 € im Jahr im Beispiel
+- [N26 Metal (N26)](https://finvallo.com/de/girokonto/n26-metal/): Konten für alle, 2,9/5, 202,80 € im Jahr im Beispiel
+- [Ultra (Revolut)](https://finvallo.com/de/girokonto/revolut-ultra/): Konten für alle, 2,9/5, 650 € im Jahr im Beispiel
+- [N26 Flex (N26)](https://finvallo.com/de/girokonto/n26-flex/): Konten für alle, 2,6/5, 202,80 € im Jahr im Beispiel
+- [StartKonto (Studierende und Azubis) (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-startkonto/): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [Plus-Konto für junge Leute (Starter-Konditionen) (TARGOBANK)](https://finvallo.com/de/girokonto/targobank-plus-konto-junge-leute/): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [Junges BBBank-Girokonto (18 bis 29 Jahre) (BBBank)](https://finvallo.com/de/girokonto/bbbank-junges-girokonto-18-29/): Für Studierende und junge Erwachsene, 4,6/5, 0 € im Jahr im Beispiel
+- [Das Junge Konto (Deutsche Bank)](https://finvallo.com/de/girokonto/deutsche-bank-junges-konto/): Für Studierende und junge Erwachsene, 4,6/5, 0 € im Jahr im Beispiel
+- [Giro start direkt (Postbank)](https://finvallo.com/de/girokonto/postbank-giro-start-direkt/): Für Studierende und junge Erwachsene, 4,6/5, 0 € im Jahr im Beispiel
+- [GLS Konto Mitglied 18-27 (GLS Bank)](https://finvallo.com/de/girokonto/gls-konto-mitglied-18-27/): Für Studierende und junge Erwachsene, 4,4/5, 12 € im Jahr im Beispiel
+- [GLS Konto 18-27 (GLS Bank)](https://finvallo.com/de/girokonto/gls-konto-18-27/): Für Studierende und junge Erwachsene, 4,1/5, 18 € im Jahr im Beispiel
+- [StartKonto (Kinder und Jugendliche) (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-startkonto-jugend/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [GLS Konto U18 (GLS Bank)](https://finvallo.com/de/girokonto/gls-konto-u18/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [Junges BBBank-Girokonto (BBBank)](https://finvallo.com/de/girokonto/bbbank-junges-girokonto/): Jugendkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Starter-Konto (TARGOBANK)](https://finvallo.com/de/girokonto/targobank-starter-konto/): Jugendkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [BambiniKonto (Kinderkonto) (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-bambinikonto/): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Girokonto u18 (DKB)](https://finvallo.com/de/girokonto/dkb-girokonto-u18/): Kinderkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Girokonto Junior (ING)](https://finvallo.com/de/girokonto/ing-girokonto-junior/): Kinderkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Top-Girokonto für Minderjährige (Kinderkonto / Jugendkonto) (norisbank)](https://finvallo.com/de/girokonto/norisbank-top-girokonto-minderjaehrige/): Kinderkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Junior Giro (comdirect)](https://finvallo.com/de/girokonto/comdirect-junior-giro/): Kinderkonten, 4,2/5, 0 € im Jahr im Beispiel
+- [Basiskonto (ING)](https://finvallo.com/de/girokonto/ing-basiskonto/): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Zahlungskonto mit grundlegenden Funktionen (Revolut)](https://finvallo.com/de/girokonto/revolut-basiskonto/): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Basiskonto (Consorsbank)](https://finvallo.com/de/girokonto/consorsbank-basiskonto/): Basiskonten, 4,1/5, 48 € im Jahr im Beispiel
+- [Skatbank-BasisKonto (Deutsche Skatbank)](https://finvallo.com/de/girokonto/skatbank-basiskonto/): Basiskonten, 3,9/5, 39,80 € im Jahr im Beispiel
+- [Basiskonto (Openbank)](https://finvallo.com/de/girokonto/openbank-basiskonto/): Basiskonten, 3,9/5, 47,40 € im Jahr im Beispiel
+- [Basiskonto (DKB)](https://finvallo.com/de/girokonto/dkb-basiskonto/): Basiskonten, 3,9/5, 54 € im Jahr im Beispiel
+- [Giro Basis (Postbank)](https://finvallo.com/de/girokonto/postbank-giro-basis/): Basiskonten, 3,9/5, 58,80 € im Jahr im Beispiel
+- [Basiskonto (norisbank)](https://finvallo.com/de/girokonto/norisbank-basiskonto/): Basiskonten, 3,8/5, 70,80 € im Jahr im Beispiel
+- [Basis-Konto (TARGOBANK)](https://finvallo.com/de/girokonto/targobank-basis-konto/): Basiskonten, 3,8/5, 71,40 € im Jahr im Beispiel
+- [GLS Konto Basis (GLS Bank)](https://finvallo.com/de/girokonto/gls-basiskonto/): Basiskonten, 3,7/5, 60,60 € im Jahr im Beispiel
+- [Basiskonto (BBBank)](https://finvallo.com/de/girokonto/bbbank-basiskonto/): Basiskonten, 3,6/5, 50,35 € im Jahr im Beispiel
+- [BasisKonto (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-basiskonto/): Basiskonten, 3,6/5, 82,80 € im Jahr im Beispiel
+- [Basiskonto (Deutsche Bank)](https://finvallo.com/de/girokonto/deutsche-bank-basiskonto/): Basiskonten, 3,6/5, 82,80 € im Jahr im Beispiel
+- [C24 Basiskonto (C24)](https://finvallo.com/de/girokonto/c24-basiskonto/): Basiskonten, 2,8/5, 166,80 € im Jahr im Beispiel
+- [Basiskonto (Tomorrow)](https://finvallo.com/de/girokonto/tomorrow-basiskonto/): Basiskonten, 2,6/5, 188 € im Jahr im Beispiel
+- [N26 Basiskonto (N26)](https://finvallo.com/de/girokonto/n26-basiskonto/): Basiskonten, 2,6/5, 202,80 € im Jahr im Beispiel
+
 ## Finanzrechner
 - [Zinseszinsrechner & Sparrechner (Deutschland)](https://finvallo.com/de/rechner/zinseszins/)
 - [Kreditrechner (Deutschland)](https://finvallo.com/de/rechner/kreditrechner/)

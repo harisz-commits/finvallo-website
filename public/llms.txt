@@ -118,7 +118,29 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [easybank Kreditkarte Gold](https://finvallo.com/de/kreditkarten/easybank-kreditkarte-gold/): Typ: Kreditkarte; Netz: Visa; Jahresgebühr: 59 €; Fremdwährung: 1,99 % (in Euro gebührenfrei); Bargeld: 0 € im Inland und im Euro-Ausland; in Fremdwährung 1,99 %; Zinsen ab Buchungstag; Reiseversicherung: inkl. Storno; Zins: 19,64 % Soll / 21,51 % effektiv; Sammelrate: 5 % Rückvergütung auf Reisen über easybank Reiseservice Plus (PTG); Bewertung: 4,1/5 (Gut); geprüft am 12.10.2026
 - [Deutsche Bank Mastercard Travel](https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-travel/): Typ: Charge; Netz: Mastercard; Jahresgebühr: 94 €; Fremdwährung: 0,50 % (kein Auslandseinsatzentgelt, nur Währungsumrechnungsentgelt); Bargeld: 2,5 %, mind. 5,75 € am Geldautomaten im Inland und in Euro im EWR (Schalter 3 %, mind. 5,75 €); in Fremdwährung zzgl. 0,50 % Umrechnungsentgelt (kein Zuschlag von 1,75 %); Reiseversicherung: inkl. Storno; Sammelrate: 6 % Rückvergütung auf Reisebuchungen über den Reiseservice-Partner PTG (kartenreiseservice.de); Bewertung: 4,1/5 (Gut); geprüft am 12.10.2026
 
+## Deutschland: Girokonten
+- [Girokonto-Vergleich Deutschland](https://finvallo.com/de/girokonto/): 81 Konten von Banken mit Angebot in ganz Deutschland, Jahreskosten selbst rechnen, Stand 27.10.2026
+- [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder
+- [So bewerten wir Girokonten](https://finvallo.com/de/girokonto/methodik/)
+- [Daten als JSON](https://finvallo.com/de/daten/girokonten.json)
+- [Consorsbank! Girokonto (Consorsbank)](https://finvallo.com/de/girokonto/consorsbank-girokonto/): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
+- [Top-Girokonto (norisbank)](https://finvallo.com/de/girokonto/norisbank-top-girokonto/): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
+- [BestGiro (Openbank)](https://finvallo.com/de/girokonto/openbank-bestgiro/): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
+- [Skatbank-TrumpfKonto (Deutsche Skatbank)](https://finvallo.com/de/girokonto/skatbank-trumpfkonto/): Konten für alle, 4,6/5, 5 € im Jahr im Beispiel
+- [GiroDirekt (1822direkt)](https://finvallo.com/de/girokonto/1822direkt-girodirekt/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [StartKonto (Studierende und Azubis) (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-startkonto/): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [Plus-Konto für junge Leute (Starter-Konditionen) (TARGOBANK)](https://finvallo.com/de/girokonto/targobank-plus-konto-junge-leute/): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [StartKonto (Kinder und Jugendliche) (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-startkonto-jugend/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [GLS Konto U18 (GLS Bank)](https://finvallo.com/de/girokonto/gls-konto-u18/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [BambiniKonto (Kinderkonto) (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-bambinikonto/): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Girokonto u18 (DKB)](https://finvallo.com/de/girokonto/dkb-girokonto-u18/): Kinderkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Basiskonto (ING)](https://finvallo.com/de/girokonto/ing-basiskonto/): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Zahlungskonto mit grundlegenden Funktionen (Revolut)](https://finvallo.com/de/girokonto/revolut-basiskonto/): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
+
 ## Deutschland: Ratgeber
+- [Kostenloses Girokonto in Deutschland: Worauf du achten musst (Deutschland)](https://finvallo.com/de/ratgeber/kostenloses-girokonto/): Kostenloses Girokonto in Deutschland: 7 Konten ohne Bedingung, 13 gratis mit Geldeingang oder unter einem bestimmten Alter. Welche Kosten trotzdem anfallen.
+- [Girokonto wechseln in Deutschland: So hilft dir die neue Bank (Deutschland)](https://finvallo.com/de/ratgeber/girokonto-wechseln/): Girokonto wechseln in Deutschland: Die neue Bank muss dir laut Zahlungskontengesetz helfen. Ablauf, Fristen, was kostenlos ist und was bei Banken im EU-Ausland gilt.
+- [Basiskonto in Deutschland: Das Recht auf ein Girokonto (Deutschland)](https://finvallo.com/de/ratgeber/basiskonto/): Basiskonto in Deutschland: Wer Anspruch hat, was dabei ist, wann die Bank ablehnen darf und was es kostet. 16 Basiskonten im Vergleich.
 - [Kostenlose Kreditkarte in Deutschland: Was „ohne Jahresgebühr“ wirklich heißt (Deutschland)](https://finvallo.com/de/ratgeber/kostenlose-kreditkarte/): Kostenlose Kreditkarte in Deutschland: 23 echte Karten ohne Jahresgebühr, wo sie bei Bargeld, Ausland und Teilzahlung trotzdem Geld kosten, mit Rechenbeispielen.
 - [Kreditkarte als Student in Deutschland: Was du ohne Einkommen bekommst und was nach dem Studium passiert (Deutschland)](https://finvallo.com/de/ratgeber/kreditkarte-studenten/): Kreditkarte als Student in Deutschland: Karten ohne Einkommen, SCHUFA-Prüfung, wann die Jung-Konditionen enden und was im Auslandssemester zählt.
 - [Kreditkarte beantragen in Deutschland: so geht es Schritt für Schritt (Deutschland)](https://finvallo.com/de/ratgeber/kreditkarte-beantragen/): Kreditkarte beantragen in Deutschland: welche Unterlagen du brauchst, wie die Schufa-Prüfung abläuft, wie lange es dauert und warum Anträge abgelehnt werden.

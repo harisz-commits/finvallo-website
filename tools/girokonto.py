@@ -20,7 +20,7 @@ CFG={'at':dict(N='Österreich',code='AT',iban_pro='Österreichische IBAN',iban_c
      'de':dict(N='Deutschland',code='DE',iban_pro='Deutsche IBAN',iban_con='Keine deutsche IBAN',iban_a='eine deutsche IBAN',
         basis='Das Basiskonto nach dem Zahlungskontengesetz. Banken, die Girokonten für Verbraucher anbieten, müssen es jedem Menschen mit rechtmäßigem Aufenthalt in der EU anbieten, auch ohne Einkommen und trotz Schulden. Das Entgelt muss angemessen sein.',
         regional='Sparkassen, Volks- und Raiffeisenbanken und regionale Sparda- und PSD-Banken haben je nach Region eigene Preise und nehmen meist nur Kundinnen und Kunden aus ihrer Region. Sie fehlen deshalb, genauso wie E-Geld-Konten ohne Einlagensicherung.',
-        extern='',rg=[],anb={'HVB':'hypovereinsbank','HypoVereinsbank':'hypovereinsbank'},llms_vor='\n## Deutschland: Ratgeber')}
+        extern='',rg=[('kostenloses-girokonto','Kostenloses Girokonto'),('girokonto-wechseln','Konto wechseln'),('basiskonto','Basiskonto')],anb={'HVB':'hypovereinsbank','HypoVereinsbank':'hypovereinsbank'},llms_vor='\n## Deutschland: Ratgeber')}
 CC=CFG['at']; OTHER={}
 ART={'standard':'Gehalts- und Privatkonto','premium':'Premiumkonto','student':'Studenten- und U28-Konto','jugend':'Jugendkonto','kinder':'Kinderkonto','basis':'Basiskonto'}
 SEK=[('standard','Konten für alle',None),('student','Für Studierende und junge Erwachsene','Für Studierende, Menschen in Ausbildung oder bis zu einem bestimmten Alter. Danach stellt die Bank auf ein normales Konto um, das meist etwas kostet.'),
@@ -276,8 +276,9 @@ def hdr(P,rel):
 
 def konto_page(k,ks,n,BL):
     rel=f'{LAND}/girokonto/{k["slug"]}/'; P='../../../'
-    t=f'{k["name"]} ({k["bank"]}): Kosten und Bewertung | Finvallo'
-    if len(t)>65: t=f'{k["name"]} {k["bank"]} | Finvallo'
+    t=f'{k["name"]} ({k["bank"]}) {CC["N"]}: Kosten und Bewertung | Finvallo'
+    if len(t)>65: t=f'{k["name"]} ({k["bank"]}) {CC["N"]}: Kosten | Finvallo'
+    if len(t)>65: t=f'{k["name"]} {k["bank"]} ({LAND.upper()}) | Finvallo'
     d=f'{k["name"]} von {k["bank"]}: Kontoführung {kfT(k)}'+(f', {kurzbed(k).lower()}' if k.get('gratis') else '')+f'. Bewertung {de1(k["stars"])}/5, alle Kosten mit Quelle.'
     d=K.fit_desc(d) if hasattr(K,'fit_desc') else d[:155]
     gp=k['geprueft']
