@@ -142,7 +142,8 @@ def page(rel, build):
     open(f,'w').write(head+'<body class="hp">\n'+hdr+'\n<main id="app">\n'+body+'\n</main>\n'+footer(P,hdr,AT['stand'][:4],'.'.join(reversed(AT['stand'].split('-'))),'de' if rel.startswith('de/') else 'at')+'\n</body>\n</html>\n')
 
 AT=load('AT'); DD=load('DE')
-nA=len(AT['karten']); nG=len(json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten','at','girokonten.json')))['konten']); anbA=len({c['anbieter'] for c in AT['karten']})
+_gp=lambda l:os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten',l,'girokonten.json')
+nA=len(AT['karten']); nG=len(json.load(open(_gp('at')))['konten']); nGD=len(json.load(open(_gp('de')))['konten']) if os.path.exists(_gp('de')) else 0; anbA=len({c['anbieter'] for c in AT['karten']})
 
 def b_root(P,hdr):
     t,tc=topcards(P,AT,'Österreich',AT_TOP)
@@ -151,6 +152,7 @@ def b_root(P,hdr):
     tiles=''.join([tile(P,'at/kreditkarten/','card','Kreditkarten Österreich',f'{nA} Karten im Vergleich'),
       tile(P,'de/kreditkarten/','card','Kreditkarten Deutschland',f'{len(DD["karten"])} Karten im Vergleich' if DD else 'Ratgeber · Vergleich in Arbeit'),
       tile(P,'at/girokonto/','bank','Girokonten Österreich',f'{nG} Konten im Vergleich'),
+      *([tile(P,'de/girokonto/','bank','Girokonten Deutschland',f'{nGD} Konten im Vergleich')] if nGD else []),
       tile(P,'at/kreditkarten/bestenlisten/','trophy','Bestenlisten','Die besten Karten nach Kategorie'),
       tile(P,'at/kreditkarten/business/','brief','Business-Kreditkarten','Firmenkarten für Selbstständige'),
       tile(P,'at/kreditkarten/rechner/','calc','Kartenrechner','Was kostet dich deine Karte wirklich?'),
@@ -162,7 +164,7 @@ def b_root(P,hdr):
         'Banken, Preise und Bedingungen unterscheiden sich. Wähle dein Land, dann siehst du nur Angebote, die du dort auch bekommst.',
         herolands(P,AT,DD),art(t[0],None))
       + stats([(nA,'Karten in Österreich'),(len(DD['karten']) if DD else '-','Karten in Deutschland'),(len({c['anbieter'].split()[0].lower().strip(',') for c in AT['karten']+(DD['karten'] if DD else [])}),'Banken und Anbieter'),(7,'offene Bewertungskriterien')])
-      + sec('Unsere Vergleiche im Überblick','Finde das passende Finanzprodukt.',f'<div class="hp-tiles">{tiles}</div><p class="hp-sub" style="margin-top:16px">Weitere Vergleiche (Girokonto Deutschland, Tagesgeld, Depot) sind in Arbeit.</p>')
+      + sec('Unsere Vergleiche im Überblick','Finde das passende Finanzprodukt.',f'<div class="hp-tiles">{tiles}</div><p class="hp-sub" style="margin-top:16px">Weitere Vergleiche ({"" if nGD else "Girokonto Deutschland, "}Tagesgeld, Depot) sind in Arbeit.</p>')
       + tc + tcd + trust(P)
       + sec('Ratgeber','Kreditkarten einfach erklärt.',f'<div class="hp-posts">{guides(P,AT_GUIDES[:3]+DE_GUIDES[:3])}</div><div class="hp-more"><a class="btn" href="{P}at/ratgeber/">Ratgeber Österreich →</a> <a class="btn ghost" href="{P}de/ratgeber/">Ratgeber Deutschland →</a></div>',True)
       + fq), ld
@@ -203,6 +205,7 @@ def b_de(P,hdr):
     else:
         nD=None; t=None; tc=''
     tiles=''.join([tile(P,'de/kreditkarten/','card','Kreditkarten',f'{nD} Karten im Vergleich') if DD else tile(P,'','card','Kreditkarten-Vergleich','Wir sammeln und prüfen gerade alle Karten',True),
+      *([tile(P,'de/girokonto/','bank','Girokonten',f'{nGD} Konten im Vergleich')] if nGD else []),
       tile(P,'de/ratgeber/punkte-sammeln-de/','star','Punkte & Meilen','Amex, Miles & More, Payback'),
       tile(P,'de/ratgeber/fremdwaehrung/','globe','Zahlen im Ausland','Gebühren und Kursaufschläge'),
       tile(P,'de/ratgeber/reiseversicherung/','plane','Reiseversicherung','Was die Karte wirklich abdeckt'),
@@ -225,7 +228,7 @@ def b_de(P,hdr):
         p='Unabhängige Ratgeber zu Punkten, Meilen, Auslandsgebühren und Reiseversicherung. Der Kreditkartenvergleich für Deutschland ist in Arbeit.'
     return (hero(f'{FLAG["DE"]} Deutschland · unabhängig bewertet','Kreditkarten in Deutschland unabhängig vergleichen.',p,cta,art(t[0] if t else None,'DE'))
       + st + tc
-      + sec('Alles für Deutschland','Vergleich und Ratgeber.',f'<div class="hp-tiles">{tiles}</div><p class="hp-sub" style="margin-top:16px">Weitere Vergleiche (Girokonto, Tagesgeld, Depot) sind in Arbeit.</p>', not DD)
+      + sec('Alles für Deutschland','Vergleich und Ratgeber.',f'<div class="hp-tiles">{tiles}</div><p class="hp-sub" style="margin-top:16px">Weitere Vergleiche ({"" if nGD else "Girokonto, "}Tagesgeld, Depot) sind in Arbeit.</p>', not DD)
       + ('' if DD else '')
       + trust(P,'de')
       + sec('Ratgeber für Deutschland','Kreditkarten einfach erklärt.',f'<div class="hp-posts">{guides(P,DE_GUIDES)}</div><div class="hp-more"><a class="btn" href="{P}de/ratgeber/">Alle Ratgeber →</a></div>',True)

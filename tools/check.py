@@ -155,9 +155,10 @@ kr = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file
 if kr.returncode: err += [x for x in kr.stdout.splitlines() if x] or ['Rechner-Kontrolle: Fehler ' + kr.stderr[:200]]
 # Girokonto: Rechnung im Browser (giro.js) = Rechnung im Generator (girokonto.py), für jedes Konto und mehrere Fälle
 import girokonto as GK
-if os.path.exists(GK.DP):
-    _gk = GK.load()[1]
-    _t = [dict(name=k['slug'], k=GK.jsdata(k), ein=e, alter=a, abh=b, want=GK.kosten(k, e, a, b)['total'])
+for _l in GK.CFG:
+    if not os.path.exists(GK.dpath(_l)): continue
+    _gk = GK.load(_l)[1]
+    _t = [dict(name=_l + '/' + k['slug'], k=GK.jsdata(k), ein=e, alter=a, abh=b, want=GK.kosten(k, e, a, b)['total'])
           for k in _gk for e, a, b in ((0, 35, 0), (450, 25, 3), (1500, 35, 4), (3000, 50, 12), (800, 17, 1), (0, 10, 6))]
     gr = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'giro-kontrolle.js')], input=json.dumps(_t), capture_output=True, text=True)
     if gr.returncode: err += [x for x in gr.stdout.splitlines() if x] or ['Girokonto-Kontrolle: Fehler ' + gr.stderr[:200]]

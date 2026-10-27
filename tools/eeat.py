@@ -281,11 +281,13 @@ def main():
     rdates = RG.dates()
     n = {'author': 0, 'quelle': 0, 'liste': 0, 'ratgeber': 0}
     global LASTMOD, NOINDEX; LASTMOD, NOINDEX = {}, {}
-    gp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daten', 'at', 'girokonten.json')
-    GIRO = {}
-    if os.path.exists(gp):
-        gd = json.load(open(gp, encoding='utf-8')); GIRO = {k['slug']: k.get('geprueft') or gd['stand'] for k in gd['konten']}
-        GIRO[''] = GIRO['methodik'] = max(GIRO.values())
+    GIRO = {}   # (land, slug) -> Prüfdatum der Girokonto-Seiten
+    for gl in ('at', 'de'):
+        gp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daten', gl, 'girokonten.json')
+        if not os.path.exists(gp): continue
+        gd = json.load(open(gp, encoding='utf-8'))
+        for k in gd['konten']: GIRO[(gl, k['slug'])] = k.get('geprueft') or gd['stand']
+        GIRO[(gl, '')] = GIRO[(gl, 'methodik')] = max(v for (l_, _), v in GIRO.items() if l_ == gl)
     for f in sorted(glob.glob(R + '**/*.html', recursive=True)):
         rel = f[len(R):]
         rel = '' if rel == 'index.html' else rel[:-len('index.html')] if rel.endswith('index.html') else rel
@@ -389,8 +391,8 @@ def main():
                 if _d and 'description' in x and (x.get('url') == _u or (x.get('@id') or '').startswith(_u + '#')): x['description'] = _d
         s = ld_merge(s, extra, patch2)
         s = set_hreflang(s, rel)
-        if rel not in LASTMOD and rel.startswith('at/girokonto/'):
-            LASTMOD[rel] = GIRO.get(rel[len('at/girokonto/'):].strip('/'), GIRO.get(''))
+        if rel not in LASTMOD and rel[3:].startswith('girokonto/') and (rel[:2], '') in GIRO:
+            LASTMOD[rel] = GIRO.get((rel[:2], rel[len('at/girokonto/'):].strip('/')), GIRO[(rel[:2], '')])
         if rel not in LASTMOD:
             if land:
                 linked = set(re.findall(r'href="(?:\.\./)*(?:(?:at|de)/kreditkarten/)?([a-z0-9-]+)/"', s)) & set(cards[land])

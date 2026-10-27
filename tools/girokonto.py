@@ -1,5 +1,5 @@
-# Girokonto-Vergleich Österreich: Liste mit Filtern und persönlicher Rechnung, Kontoseiten, Methodik.
-# Daten: daten/at/girokonten.json (jede Zahl aus der Entgeltinformation oder Preisliste der Bank, mit Quelle und Prüfdatum).
+# Girokonto-Vergleich Österreich und Deutschland: Liste mit Filtern und persönlicher Rechnung, Kontoseiten, Methodik.
+# Daten: daten/<land>/girokonten.json (jede Zahl aus der Entgeltinformation oder Preisliste der Bank, mit Quelle und Prüfdatum).
 # Rechenlogik für die Jahreskosten gibt es zweimal: kosten() hier und calc() in public/assets/giro.js.
 # check.py vergleicht beide (tools/giro-kontrolle.js). Läuft nach karten.py, vor header.py.
 import json,os,re,sys
@@ -9,19 +9,32 @@ from score import eur,pct
 
 E=K.E; dmy=K.dmy; de1=K.de1; R=K.R; SP=K.SP
 LAND='at'
-DP=os.path.join(SP,'daten',LAND,'girokonten.json')
+def dpath(land): return os.path.join(SP,'daten',land,'girokonten.json')
+# Länderwerte. Rechtliches zum Basiskonto: AT laut Arbeiterkammer (Stand 10/2026), DE laut § 41 ZKG (angemessenes Entgelt)
+CFG={'at':dict(N='Österreich',code='AT',iban_pro='Österreichische IBAN',iban_con='Keine österreichische IBAN',iban_a='eine österreichische IBAN',
+        basis='Das gesetzliche Zahlungskonto mit grundlegenden Funktionen. Jede Bank muss es jedem Menschen mit rechtmäßigem Aufenthalt in der EU anbieten, auch ohne Einkommen und trotz Schulden. Es kostet laut Arbeiterkammer höchstens 83,45 € im Jahr, für besonders schutzbedürftige Menschen höchstens 41,73 €.',
+        regional='Regionale Banken wie Sparkassen, Raiffeisenbanken, Volksbanken und Landes-Hypos haben je nach Bundesland eigene Preise. Sie fehlen deshalb, genauso wie E-Geld-Konten ohne Einlagensicherung.',
+        extern='<p>Alle Konten in Österreich findest du im <a href="https://bankenrechner.arbeiterkammer.at/" target="_blank" rel="noopener">Bankenrechner der Arbeiterkammer ↗</a>.</p>',
+        rg=[('kostenloses-girokonto','Kostenloses Girokonto'),('girokonto-wechseln','Konto wechseln'),('basiskonto','Basiskonto')],
+        anb={'Erste Bank':'erste'},llms_vor='\n## Deutschland: Kreditkarten'),
+     'de':dict(N='Deutschland',code='DE',iban_pro='Deutsche IBAN',iban_con='Keine deutsche IBAN',iban_a='eine deutsche IBAN',
+        basis='Das Basiskonto nach dem Zahlungskontengesetz. Banken, die Girokonten für Verbraucher anbieten, müssen es jedem Menschen mit rechtmäßigem Aufenthalt in der EU anbieten, auch ohne Einkommen und trotz Schulden. Das Entgelt muss angemessen sein.',
+        regional='Sparkassen, Volks- und Raiffeisenbanken und regionale Sparda- und PSD-Banken haben je nach Region eigene Preise und nehmen meist nur Kundinnen und Kunden aus ihrer Region. Sie fehlen deshalb, genauso wie E-Geld-Konten ohne Einlagensicherung.',
+        extern='',rg=[('kostenloses-girokonto','Kostenloses Girokonto'),('girokonto-wechseln','Konto wechseln'),('basiskonto','Basiskonto')],anb={'HVB':'hypovereinsbank','HypoVereinsbank':'hypovereinsbank'},llms_vor='\n## Deutschland: Ratgeber')}
+CC=CFG['at']; OTHER={}
 ART={'standard':'Gehalts- und Privatkonto','premium':'Premiumkonto','student':'Studenten- und U28-Konto','jugend':'Jugendkonto','kinder':'Kinderkonto','basis':'Basiskonto'}
 SEK=[('standard','Konten für alle',None),('student','Für Studierende und junge Erwachsene','Für Studierende, Menschen in Ausbildung oder bis zu einem bestimmten Alter. Danach stellt die Bank auf ein normales Konto um, das meist etwas kostet.'),
      ('jugend','Jugendkonten','Für Jugendliche, meist ab 14 Jahren. Danach stellt die Bank auf ein normales Konto um.'),
      ('kinder','Kinderkonten','Für Kinder unter 14 Jahren. Eröffnen können nur die Eltern oder andere gesetzliche Vertreter.'),
-     ('basis','Basiskonten','Das gesetzliche Zahlungskonto mit grundlegenden Funktionen. Jede Bank muss es jedem Menschen mit rechtmäßigem Aufenthalt in der EU anbieten, auch ohne Einkommen und trotz Schulden. Es kostet höchstens 80 € im Jahr, für besonders schutzbedürftige Menschen höchstens 40 €.')]
+     ('basis','Basiskonten',None)]
+def sektxt(a,txt): return CC['basis'] if a=='basis' else txt
 # Standardfall für die Liste: so rechnen wir, bis du eigene Zahlen eingibst
 PROFIL={'standard':dict(ein=1500,alter=35,abh=4),'premium':dict(ein=1500,alter=35,abh=4),'student':dict(ein=500,alter=22,abh=4),
         'jugend':dict(ein=0,alter=16,abh=2),'kinder':dict(ein=0,alter=10,abh=1),'basis':dict(ein=0,alter=35,abh=4)}
 W=[('Kosten',40),('Bedingungen',10),('Bargeld',15),('Karten',10),('Zinsen',10),('Alltag &amp; Service',15)]
 
-def load():
-    d=json.load(open(DP)); ks=[k for k in d['konten'] if k.get('aufnehmen',True)]
+def load(land=None):
+    d=json.load(open(dpath(land or LAND))); ks=[k for k in d['konten'] if k.get('aufnehmen',True)]
     for k in ks:
         k.setdefault('slug',K.slug(k['bank']+' '+k['name']))
     return d,ks
@@ -89,7 +102,7 @@ def pros(k):
     if k.get('kreditkarte_inkl'): p.append('Kreditkarte ohne Aufpreis: '+k['kreditkarte'])
     b=k.get('bargeld') or {}
     if b.get('frei_monat') is None and b.get('danach_eur') is None and re.search(r'kostenlos|inklusive|gratis|0 €',b.get('text') or '',re.I) and not re.search(r'nur|bis|ab ',b.get('text') or ''): p.append('Bargeld am Automaten kostenlos')
-    if k.get('iban')=='AT': p.append('Österreichische IBAN')
+    if k.get('iban')==CC['code']: p.append(CC['iban_pro'])
     if k.get('eroeffnung') in ('online','beides'): p.append('Online eröffnen')
     if k.get('eroeffnung') in ('filiale','beides'): p.append('Beratung in der Filiale möglich')
     if k.get('gemeinschaftskonto'): p.append('Auch als Gemeinschaftskonto')
@@ -104,7 +117,7 @@ def cons(k):
     if dk.get('inkl') is False: c.append('Debitkarte kostet extra'+(f' ({eur(dk["preis_jahr"])} € im Jahr)' if dk.get('preis_jahr') else ''))
     b=k.get('bargeld') or {}
     if b.get('frei_monat') is not None and b.get('danach_eur') is not None: c.append(f'Nur {b["frei_monat"]} Abhebung{"en" if b["frei_monat"]!=1 else ""} pro Monat gratis, danach {eur(b["danach_eur"])} €' if b['frei_monat'] else f'Jede Abhebung kostet {eur(b["danach_eur"])} €')
-    if k.get('iban') and k['iban']!='AT': c.append('Keine österreichische IBAN')
+    if k.get('iban') and k['iban']!=CC['code']: c.append(CC['iban_con'])
     if k.get('eroeffnung')=='online': c.append('Keine Filialen')
     if (k.get('ueberschreitung') or k.get('sollzins') or 0)>=13: c.append(f'Hoher Überziehungszins ({pct(k.get("ueberschreitung") or k.get("sollzins"))})')
     if (k.get('fremdwaehrung_prozent') or 0)>=1: c.append(f'{pct(k["fremdwaehrung_prozent"])} Aufschlag bei Kartenzahlung in Fremdwährung')
@@ -146,7 +159,7 @@ def score(k):
         sz=5.0 if z<=7 else 4.0 if z<=9 else 3.0 if z<=11 else 2.5 if z<=13 else 2.0; vz=f'Überziehung {pct(z)}'; okz=True
         if (k.get('habenzins') or 0)>=1: sz=min(5.0,sz+0.5); vz+=f', Guthaben {pct(k["habenzins"])}'
     parts.append(dict(k='Zinsen',w=10,s=sz,v=vz,ok=okz))
-    ss=2.0+(1 if k.get('iban')=='AT' else 0)+(1 if k.get('eroeffnung') in ('online','beides') else 0)+(1 if k.get('eroeffnung') in ('filiale','beides') else 0)
+    ss=2.0+(1 if k.get('iban')==CC['code'] else 0)+(1 if k.get('eroeffnung') in ('online','beides') else 0)+(1 if k.get('eroeffnung') in ('filiale','beides') else 0)
     parts.append(dict(k='Alltag &amp; Service',w=15,s=float(ss),v=', '.join(x for x in (ibanT(k),wegT(k)) if x),ok=True))
     tot=round(sum(p['s']*p['w'] for p in parts)/100+1e-9,1)
     return dict(parts=parts,stars=tot,kosten=ko)
@@ -171,7 +184,7 @@ def flags(k):
     f=[]
     if k['kf_jahr']==0: f.append('gratis')
     if k.get('gratis') and k['gratis'].get('kf_bedingt')==0: f.append('bedingt')
-    if k.get('iban')=='AT': f.append('atiban')
+    if k.get('iban')==CC['code']: f.append('landiban')
     if k.get('eroeffnung') in ('filiale','beides'): f.append('filiale')
     if k.get('eroeffnung') in ('online','beides'): f.append('online')
     if k.get('kreditkarte_inkl'): f.append('kk')
@@ -182,7 +195,7 @@ def item(k,P,base):
     pr=PROFIL[k['art']]; ko=k['score']['kosten']
     st=lambda good,t: f'<b class="{"good" if good else ""}">{E(t)}</b>'
     kf='kostenlos' if k['kf_jahr']==0 else f'{eur(k["kf_jahr"])} € im Jahr'
-    tags=f'<span class="tag typ">{E(ART[k["art"]])}</span>'+('<span class="tag kl">AT-IBAN</span>' if k.get('iban')=='AT' else f'<span class="tag out">{E(k.get("iban") or "")}-IBAN</span>' if k.get('iban') else '')+f'<span class="tag out">{E(wegT(k).capitalize())}</span>'
+    tags=f'<span class="tag typ">{E(ART[k["art"]])}</span>'+(f'<span class="tag kl">{CC["code"]}-IBAN</span>' if k.get('iban')==CC['code'] else f'<span class="tag out">{E(k.get("iban") or "")}-IBAN</span>' if k.get('iban') else '')+f'<span class="tag out">{E(wegT(k).capitalize())}</span>'
     rank=f'<span class="rank r{k["rank"]}">{k["rank"]}</span>' if k['rank']<=3 else f'<span class="rank">{k["rank"]}</span>'
     akt=f'<div class="earn"><span>Aktion</span><b>{E(k["aktion"])}</b></div>' if k.get('aktion') else ''
     return f'''<article class="item" id="gk-{k["slug"]}" data-k='{E(json.dumps(jsdata(k),separators=(",",":")))}' data-f="{flags(k)}" data-art="{k["art"]}" data-cost="{ko["total"]}" data-q="{E((k["bank"]+" "+k["name"]).lower())}">
@@ -253,18 +266,25 @@ def faq(k):
     return q
 
 def head(t,d,rel,P,ld): return K.head(t,d,rel,P,ld)
-def hdr(P,rel): return K.HDR(P,rel,'de/')
+def hdr(P,rel):
+    o='de' if LAND=='at' else 'at'; rest=rel.split('/',1)[1]
+    sl=rest.split('/')[1] if rest.startswith('girokonto/') and rest.count('/')>=2 else ''
+    if not OTHER.get(o): other=f'{o}/'
+    elif sl and sl not in ('methodik','bestenlisten') and sl not in OTHER[o]: other=f'{o}/girokonto/'
+    else: other=f'{o}/{rest}'
+    return K.HDR(P,rel,other)
 
 def konto_page(k,ks,n,BL):
     rel=f'{LAND}/girokonto/{k["slug"]}/'; P='../../../'
-    t=f'{k["name"]} ({k["bank"]}): Kosten und Bewertung | Finvallo'
-    if len(t)>65: t=f'{k["name"]} {k["bank"]} | Finvallo'
+    t=f'{k["name"]} ({k["bank"]}) {CC["N"]}: Kosten und Bewertung | Finvallo'
+    if len(t)>65: t=f'{k["name"]} ({k["bank"]}) {CC["N"]}: Kosten | Finvallo'
+    if len(t)>65: t=f'{k["name"]} {k["bank"]} ({LAND.upper()}) | Finvallo'
     d=f'{k["name"]} von {k["bank"]}: Kontoführung {kfT(k)}'+(f', {kurzbed(k).lower()}' if k.get('gratis') else '')+f'. Bewertung {de1(k["stars"])}/5, alle Kosten mit Quelle.'
     d=K.fit_desc(d) if hasattr(K,'fit_desc') else d[:155]
     gp=k['geprueft']
-    ld=K.graph(rel,t,d,[('Österreich',f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),(k['name'],rel)],
+    ld=K.graph(rel,t,d,[(CC['N'],f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),(k['name'],rel)],
         [{"@type":"BankAccount","@id":f"https://finvallo.com/{rel}#konto","name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{rel}","provider":{"@type":"BankOrCreditUnion","name":k['bank']},
-          "areaServed":{"@type":"Country","name":"Österreich"},"feesAndCommissionsSpecification":f'Kontoführung {kfT(k)}; {gratisT(k)}',
+          "areaServed":{"@type":"Country","name":CC['N']},"feesAndCommissionsSpecification":f'Kontoführung {kfT(k)}; {gratisT(k)}',
           "review":{"@type":"Review","@id":f"https://finvallo.com/{rel}#review","author":{"@id":"https://finvallo.com/ueber-uns/#haris"},"publisher":{"@id":"https://finvallo.com/#org"},"datePublished":gp,
                     "reviewRating":{"@type":"Rating","ratingValue":k['stars'],"bestRating":5,"worstRating":1}}},
          {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq(k)]}],date=gp)
@@ -311,7 +331,7 @@ def calcbox():
     <p class="note" style="margin:8px 0 0">Gehalt oder Pension zählt bei allen Banken als Geldeingang. Manche Banken zählen nur Gehalt oder Pension, das steht beim Konto.</p>
   </div>'''
 def filterbox(n):
-    chips=[('gratis','Kostenlos ohne Bedingung'),('bedingt','Gratis mit Bedingung'),('atiban','Österreichische IBAN'),('filiale','Mit Filiale'),('online','Online eröffnen'),('kk','Kreditkarte ohne Aufpreis'),('gem','Gemeinschaftskonto')]
+    chips=[('gratis','Kostenlos ohne Bedingung'),('bedingt','Gratis mit Bedingung'),('landiban',CC['iban_pro']),('filiale','Mit Filiale'),('online','Online eröffnen'),('kk','Kreditkarte ohne Aufpreis'),('gem','Gemeinschaftskonto')]
     opt=lambda xs:''.join(f'<option value="{v}">{t}</option>' for v,t in xs)
     return f'''<div class="box filt" id="filt" hidden>
     <label class="fq"><span class="sr">Suche</span><input type="search" data-q placeholder="Konto oder Bank suchen" autocomplete="off"></label>
@@ -323,22 +343,24 @@ def filterbox(n):
 
 def list_page(ks,secs,d):
     rel=f'{LAND}/girokonto/'; P='../../'; n=len(ks); nb=len({k['bank'] for k in ks})
-    t='Girokonto-Vergleich Österreich 2026: Kosten und Bewertung | Finvallo'
-    ds=f'{n} Girokonten von {nb} überregionalen Banken in Österreich verglichen: Kontoführung, Gratis-Bedingungen, Karten, Bargeld und Zinsen. Mit Kostenrechner.'
+    N=CC['N']
+    t=f'Girokonto-Vergleich {N} 2026: Kosten und Bewertung | Finvallo'
+    ds=f'{n} Girokonten von {nb} überregionalen Banken in {N} verglichen: Kontoführung, Gratis-Bedingungen, Karten, Bargeld und Zinsen. Mit Kostenrechner.'
     top=secs['standard'][:10]
-    ld=K.graph(rel,t,ds,[('Österreich',f'{LAND}/'),('Girokonten',rel)],[{"@type":"ItemList","name":"Beste Girokonten Österreich","itemListElement":[{"@type":"ListItem","position":k['rank'],"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{rel}{k['slug']}/"} for k in top]}])
+    ld=K.graph(rel,t,ds,[(CC['N'],f'{LAND}/'),('Girokonten',rel)],[{"@type":"ItemList","name":f"Beste Girokonten {N}","itemListElement":[{"@type":"ListItem","position":k['rank'],"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{rel}{k['slug']}/"} for k in top]}])
     sections=''
     for a,h,txt in SEK:
         xs=secs[a]
         if not xs: continue
+        txt=sektxt(a,txt)
         sections+=f'<section class="gsec" data-sec="{a}"><h2>{h} <small class="mut">({len(xs)})</small></h2>{f"<p class=note>{E(txt)}</p>" if txt else ""}<div class="list">{"".join(item(k,P,"") for k in xs)}</div></section>'
     raus=d.get('nicht_aufgenommen') or []
     rtxt=''.join(f'<li><b>{E(x["name"])}</b>: {E(x["grund"])}</li>' for x in raus)
     body=f'''{hdr(P,rel)}
 <div class="wrap"><main id="app">
-<h1>Girokonto-Vergleich Österreich</h1>
-  <p class="lede">{n} Girokonten von {nb} Banken, die überall in Österreich Kundinnen und Kunden annehmen. Jede Zahl stammt aus der Entgeltinformation oder Preisliste der Bank. Sortiert nach unserer Bewertung, Provisionen haben keinen Einfluss.</p>
-  <p class="note" style="margin:6px 0 14px">Bestenlisten: {" · ".join(f'<a class="lnk" href="bestenlisten/{c["k"]}/">{E(c["t"])}</a>' for c in GCATS)}<br>Ratgeber: <a class="lnk" href="{P}at/ratgeber/kostenloses-girokonto/">Kostenloses Girokonto</a> · <a class="lnk" href="{P}at/ratgeber/girokonto-wechseln/">Konto wechseln</a> · <a class="lnk" href="{P}at/ratgeber/basiskonto/">Basiskonto</a></p>
+<h1>Girokonto-Vergleich {N}</h1>
+  <p class="lede">{n} Girokonten von {nb} Banken, die überall in {N} Kundinnen und Kunden annehmen. Jede Zahl stammt aus der Entgeltinformation oder Preisliste der Bank. Sortiert nach unserer Bewertung, Provisionen haben keinen Einfluss.</p>
+  <p class="note" style="margin:6px 0 14px">Bestenlisten: {" · ".join(f'<a class="lnk" href="bestenlisten/{c["k"]}/">{E(c["t"])}</a>' for c in GCATS)}{rgline(P,"<br>")}</p>
   {calcbox()}
   {filterbox(n)}
   <details class="box howscore"><summary><span><b>So entstehen die Sterne</b><br><small>6 Kriterien, feste Regeln, offene Gewichtung</small></span><span class="lnk">anzeigen</span></summary>
@@ -346,7 +368,7 @@ def list_page(ks,secs,d):
     <p class="note">Die Kosten rechnen wir für einen typischen Fall: bei Konten für alle mit 1.500 € Gehalt pro Monat und 4 Abhebungen pro Monat. Jedes Kriterium bekommt nach festen Regeln 1 bis 5 Sterne, die Gesamtnote ist der gewichtete Durchschnitt. Fehlende Angaben zählen mit 2,5 Sternen. Studenten-, Jugend-, Kinder- und Basiskonten stehen in eigenen Listen.</p>
     <a class="lnk" href="methodik/">Alle Regeln →</a></details>
   {sections}
-  <h2>Welche Banken fehlen und warum?</h2><div class="prose"><p>Wir nehmen nur Konten auf, die man von überall in Österreich eröffnen kann und deren Guthaben über eine gesetzliche Einlagensicherung geschützt ist. Regionale Banken wie Sparkassen, Raiffeisenbanken, Volksbanken und Landes-Hypos haben je nach Bundesland eigene Preise. Sie fehlen deshalb, genauso wie E-Geld-Konten ohne Einlagensicherung.</p>{f"<ul>{rtxt}</ul>" if rtxt else ""}<p>Alle Konten in Österreich findest du im <a href="https://bankenrechner.arbeiterkammer.at/" target="_blank" rel="noopener">Bankenrechner der Arbeiterkammer ↗</a>.</p></div>
+  <h2>Welche Banken fehlen und warum?</h2><div class="prose"><p>Wir nehmen nur Konten auf, die man von überall in {N} eröffnen kann und deren Guthaben über eine gesetzliche Einlagensicherung geschützt ist. {CC["regional"]}</p>{f"<ul>{rtxt}</ul>" if rtxt else ""}{CC["extern"]}</div>
 </main>
 {K.footer(P)}'''
     v=__import__('hashlib').sha256(open(R+'assets/giro.js','rb').read()).hexdigest()[:8]
@@ -355,15 +377,15 @@ def list_page(ks,secs,d):
 
 def methodik_page(ks):
     rel=f'{LAND}/girokonto/methodik/'; P='../../../'
-    t='So bewerten wir Girokonten in Österreich | Finvallo'
+    t=f'So bewerten wir Girokonten in {CC["N"]} | Finvallo'
     d='Die Regeln hinter den Sternen im Girokonto-Vergleich: 6 Kriterien, Gewichtung, Rechnung der Jahreskosten und Umgang mit fehlenden Daten.'
-    ld=K.graph(rel,t,d,[('Österreich',f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),('So bewerten wir',rel)])
+    ld=K.graph(rel,t,d,[(CC['N'],f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),('So bewerten wir',rel)])
     rows=[('Kosten',40,'Jahreskosten im typischen Fall: Kontoführung, Debitkarte, wenn sie extra kostet, und Abhebungen über die Gratis-Menge. 0 € = 5 Sterne, bis 30 € = 4,6, bis 50 € = 4,2, bis 80 € = 3,8, bis 120 € = 3,2, bis 180 € = 2,6, bis 250 € = 2,0, darüber 1,5.'),
           ('Bedingungen',10,'Wie leicht du den günstigen Preis bekommst. Gleicher Preis für alle = 5 Sterne. Gratis ab bis zu 500 € Eingang = 4,5, bis 1.000 € = 4,0, bis 1.500 € = 3,5, darüber 2,5. Bedingungen mit Alter oder Ausbildung = 4,0. Kein Gratis-Modell = 3,0.'),
           ('Bargeld',15,'Abhebungen am Automaten ohne Entgelt = 5 Sterne. Begrenzte Gratis-Menge: ab 5 pro Monat 4,0, ab 2 pro Monat 3,0, 1 pro Monat 2,5, jede Abhebung kostet 2,0.'),
           ('Karten',10,'Debitkarte inklusive = 3,5 Sterne. Gibt es dazu eine Kreditkarte gegen Aufpreis oder nur im 1. Jahr gratis = 4,0. Kreditkarte ohne Aufpreis dabei = 5,0. Debitkarte kostet extra = 2,0.'),
           ('Zinsen',10,'Zins für die Überziehung (bei zwei Sätzen der höhere): bis 7 % = 5 Sterne, bis 9 % = 4,0, bis 11 % = 3,0, bis 13 % = 2,5, darüber 2,0. Ab 1 % Zinsen auf Guthaben gibt es 0,5 Sterne dazu. Ohne Überziehung 3,0.'),
-          ('Alltag &amp; Service',15,'2 Sterne als Basis, je 1 Stern mehr für eine österreichische IBAN, für Online-Eröffnung und für Filialen.')]
+          ('Alltag &amp; Service',15,f'2 Sterne als Basis, je 1 Stern mehr für {CC["iban_a"]}, für Online-Eröffnung und für Filialen.')]
     tb=''.join(f'<tr><td><b>{a}</b></td><td>{w} %</td><td>{E(x)}</td></tr>' for a,w,x in rows)
     body=f'''{hdr(P,rel)}
 <div class="wrap"><main id="app">
@@ -390,7 +412,7 @@ ALLE=('standard','premium')
 GCATS=[
  dict(k='kostenlos',t='Kostenlos',h='Die besten kostenlosen Girokonten',d='Konten für alle, bei denen die Kontoführung ohne jede Bedingung nichts kostet. Ob Karte oder Abhebungen extra kosten, steht in der Tabelle.',f=lambda k:k['art'] in ALLE and k['kf_jahr']==0),
  dict(k='gehaltskonto',t='Gratis mit Gehalt',h='Die besten Gehaltskonten',d='Konten für alle, die mit einem regelmäßigen Geldeingang wie Gehalt oder Pension gratis werden. Wie viel Geld dafür jeden Monat eingehen muss, steht in der Tabelle.',f=lambda k:k['art'] in ALLE and bool(k.get('gratis')) and k['gratis'].get('eingang_min') is not None and k['gratis'].get('kf_bedingt')==0),
- dict(k='filiale',t='Mit Filiale',h='Die besten Girokonten mit Filiale',d='Konten für alle von Banken mit Filialen in Österreich, für alle, die ihre Bankgeschäfte auch persönlich erledigen wollen.',f=lambda k:k['art'] in ALLE and k.get('eroeffnung') in ('filiale','beides')),
+ dict(k='filiale',t='Mit Filiale',h='Die besten Girokonten mit Filiale',d='Konten für alle von Banken mit Filialen, für alle, die ihre Bankgeschäfte auch persönlich erledigen wollen.',f=lambda k:k['art'] in ALLE and k.get('eroeffnung') in ('filiale','beides')),
  dict(k='ausland',t='Ohne Fremdwährungsgebühr',h='Die besten Girokonten für Zahlungen im Ausland',d='Konten für alle, bei denen Kartenzahlungen in fremder Währung laut Bank 0 % Aufschlag kosten. Manche Banken haben Limits oder Aufschläge am Wochenende, das steht auf der Kontoseite.',f=lambda k:k['art'] in ALLE and k.get('fremdwaehrung_prozent')==0),
  dict(k='gemeinschaftskonto',t='Gemeinschaftskonto',h='Die besten Girokonten als Gemeinschaftskonto',d='Konten für alle, die die Bank auch als Gemeinschaftskonto für zwei Personen anbietet. Konten ohne bestätigte Angabe fehlen hier.',f=lambda k:k['art'] in ALLE and k.get('gemeinschaftskonto') is True),
  dict(k='studenten',t='Studierende',h='Die besten Studentenkonten',d='Konten für Studierende, Menschen in Ausbildung oder junge Erwachsene bis zu einem bestimmten Alter. Danach stellt die Bank meist auf ein normales Konto um.',f=lambda k:k['art']=='student'),
@@ -423,17 +445,17 @@ def bcols(c):
     if c['k'] in ('studenten','jugend','kinder'): return [('Alter',altT),kfc,('Günstiger, wenn',kurzbed),cost]
     return [kfc,('Günstiger, wenn',kurzbed),cost]
 def bestenlisten(ks,BL):
-    base=f'{LAND}/girokonto/bestenlisten/'; S=dmy(max(k['geprueft'] for k in ks))
+    N=CC['N']; base=f'{LAND}/girokonto/bestenlisten/'; S=dmy(max(k['geprueft'] for k in ks))
     cats=[c for c in GCATS if BL[c['k']]]
     tiles=''.join(f'<a class="catcard" href="{c["k"]}/"><span class="ct">{E(c["t"])}</span><b>{E(BL[c["k"]][0]["name"])} ({E(BL[c["k"]][0]["bank"])})</b><span>{K.stars(BL[c["k"]][0]["stars"])} {de1(BL[c["k"]][0]["stars"])}</span><small>{len(BL[c["k"]])} Konten · Liste ansehen →</small></a>' for c in cats)
     P='../../../'
-    t='Beste Girokonten Österreich 2026 nach Kategorie | Finvallo'
-    d='Die besten Girokonten in Österreich: kostenlos, mit Gehalt gratis, mit Filiale, fürs Ausland, als Gemeinschaftskonto, für Studierende, Jugendliche und Kinder.'
-    ld=K.graph(base,t,d,[('Österreich',f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),('Bestenlisten',base)],[{"@type":"ItemList","name":"Bestenlisten Girokonten Österreich","itemListElement":[{"@type":"ListItem","position":i+1,"name":c['h'],"url":f"https://finvallo.com/{base}{c['k']}/"} for i,c in enumerate(cats)]}])
+    t=f'Beste Girokonten {N} 2026 nach Kategorie | Finvallo'
+    d=f'Die besten Girokonten in {N}: kostenlos, mit Gehalt gratis, mit Filiale, fürs Ausland, als Gemeinschaftskonto, für Studierende, Jugendliche und Kinder.'
+    ld=K.graph(base,t,d,[(CC['N'],f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),('Bestenlisten',base)],[{"@type":"ItemList","name":f"Bestenlisten Girokonten {N}","itemListElement":[{"@type":"ListItem","position":i+1,"name":c['h'],"url":f"https://finvallo.com/{base}{c['k']}/"} for i,c in enumerate(cats)]}])
     K.write(base,head(t,d,base,P,ld)+f'''{hdr(P,base)}
 <div class="wrap"><main id="app">
 <div class="crumb"><span><a href="../">Girokonten</a> › Bestenlisten</span><span>Stand {S}</span></div>
-<h1>Beste Girokonten in Österreich nach Kategorie</h1><p class="lede">Nicht jedes Konto passt zu jedem. Hier findest du die besten Konten für deinen Fall. Die Reihenfolge folgt unserer Bewertung, bei gleicher Note steht das günstigere Konto vorn. Stand: {S}.</p>
+<h1>Beste Girokonten in {N} nach Kategorie</h1><p class="lede">Nicht jedes Konto passt zu jedem. Hier findest du die besten Konten für deinen Fall. Die Reihenfolge folgt unserer Bewertung, bei gleicher Note steht das günstigere Konto vorn. Stand: {S}.</p>
 <div class="catgrid">{tiles}</div>
 <h2>Wie entstehen die Listen?</h2><div class="prose"><p>Jede Liste zeigt nur Konten, die eine klare Bedingung erfüllen, etwa „Kontoführung ohne Bedingung kostenlos“ oder „Filiale vorhanden“. Innerhalb der Liste zählt dieselbe Note wie im <a href="../">Girokonto-Vergleich</a>. Wie die Note entsteht, steht in der <a href="../methodik/">Methodik</a>. Mit deinen eigenen Zahlen rechnest du im Rechner des Vergleichs.</p></div>
 </main>
@@ -441,40 +463,39 @@ def bestenlisten(ks,BL):
     chips=lambda kk:''.join(f'<a class="chip" href="../{c["k"]}/" aria-pressed="{"true" if c["k"]==kk else "false"}" style="text-decoration:none">{E(c["t"])}</a>' for c in cats)
     for c in cats:
         X=BL[c['k']]; rel=f'{base}{c["k"]}/'; P2='../../../../'; top=X[0]
-        t=f'{c["h"]} in Österreich 2026 | Finvallo'
-        if len(t)>65: t=f'{c["h"]} (AT) 2026 | Finvallo'
-        d=f'{c["h"]} in Österreich, Stand {S}: Platz 1 ist das {top["name"]} von {top["bank"]} ({de1(top["stars"])} Sterne). {len(X)} Konten im Vergleich.'
-        if len(d)>155: d=f'{c["h"]} in Österreich: Platz 1 ist das {top["name"]} von {top["bank"]}. {len(X)} Konten, Stand {S}.'
-        if len(d)>155: d=f'{c["h"]} in Österreich: Platz 1 ist das {top["name"]}. Stand {S}.'
+        t=f'{c["h"]} in {N} 2026 | Finvallo'
+        if len(t)>65: t=f'{c["h"]} ({LAND.upper()}) 2026 | Finvallo'
+        d=f'{c["h"]} in {N}, Stand {S}: Platz 1 ist das {top["name"]} von {top["bank"]} ({de1(top["stars"])} Sterne). {len(X)} Konten im Vergleich.'
+        if len(d)>155: d=f'{c["h"]} in {N}: Platz 1 ist das {top["name"]} von {top["bank"]}. {len(X)} Konten, Stand {S}.'
+        if len(d)>155: d=f'{c["h"]} in {N}: Platz 1 ist das {top["name"]}. Stand {S}.'
         cols=bcols(c)
         rows=''.join(f'<tr><td><b>{i+1}</b></td><td><a class="lnk" href="../../{k["slug"]}/">{E(k["name"])}</a><br><small class="mut">{E(k["bank"])}</small></td>'+''.join(f'<td{" style=white-space:nowrap" if h=="Alter" else ""}>{E(fn(k))}</td>' for h,fn in cols)+f'<td style="white-space:nowrap"><b>{de1(k["stars"])} ★</b></td></tr>' for i,k in enumerate(X))
         thead='<tr><th>#</th><th>Konto</th>'+''.join(f'<th>{E(h)}</th>' for h,_ in cols)+'<th>Bewertung</th></tr>'
         pr=PROFIL[top['art']]
         bsp=f'„Im Beispiel“ = Kosten im Jahr bei {"einem Geldeingang von "+eur(pr["ein"])+" € pro Monat, " if pr["ein"] else ""}{pr["alter"]} Jahren und {pr["abh"]} {"Abhebung" if pr["abh"]==1 else "Abhebungen"} pro Monat. Mit deinen Zahlen rechnest du im <a class="lnk" href="../../">Girokonto-Vergleich</a>.'
         kurz=f'<b>Kurz gesagt:</b> Platz 1 ist laut Finvallo das {E(top["name"])} von {E(top["bank"])} mit {de1(top["stars"])} von 5 Sternen'+(f', vor dem {E(X[1]["name"])} von {E(X[1]["bank"])}' if len(X)>1 else '')+(f' und dem {E(X[2]["name"])} von {E(X[2]["bank"])}' if len(X)>2 else '')+f'. {len(X)} Konten in dieser Liste. Stand: {S}.'
-        fq=[(f'Welches Konto ist in Österreich am besten in der Kategorie „{c["t"]}“?',f'Laut Finvallo-Bewertung liegt das {top["name"]} von {top["bank"]} vorn, mit {de1(top["stars"])} von 5 Sternen. Stand: {S}.'),
+        fq=[(f'Welches Konto ist in {N} am besten in der Kategorie „{c["t"]}“?',f'Laut Finvallo-Bewertung liegt das {top["name"]} von {top["bank"]} vorn, mit {de1(top["stars"])} von 5 Sternen. Stand: {S}.'),
             ('Welche Konten kommen in diese Liste?',c['d']),
             ('Spielen Provisionen eine Rolle?','Nein. Provisionen haben keinen Einfluss auf Sterne oder Reihenfolge, und es gibt keine bezahlten Platzierungen.')]
-        ld=K.graph(rel,t,d,[('Österreich',f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),('Bestenlisten',base),(c['t'],rel)],
-            [{"@type":"ItemList","name":c['h']+' in Österreich',"numberOfItems":len(X),"itemListElement":[{"@type":"ListItem","position":i+1,"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{LAND}/girokonto/{k['slug']}/"} for i,k in enumerate(X)]},
+        ld=K.graph(rel,t,d,[(CC['N'],f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),('Bestenlisten',base),(c['t'],rel)],
+            [{"@type":"ItemList","name":c['h']+' in {N}',"numberOfItems":len(X),"itemListElement":[{"@type":"ListItem","position":i+1,"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{LAND}/girokonto/{k['slug']}/"} for i,k in enumerate(X)]},
              {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}])
         K.write(rel,head(t,d,rel,P2,ld)+f'''{hdr(P2,rel)}
 <div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../../">Girokonten</a> › <a href="../">Bestenlisten</a> › {E(c["t"])}</span><span>Stand {S}</span></div><h1>{E(c["h"])} in Österreich</h1><p class="lede">{E(c["d"])}</p>
+<div class="crumb"><span><a href="../../">Girokonten</a> › <a href="../">Bestenlisten</a> › {E(c["t"])}</span><span>Stand {S}</span></div><h1>{E(c["h"])} in {N}</h1><p class="lede">{E(c["d"])}</p>
 <div class="facts prose"><p>{kurz}</p></div>
 <div class="chips" style="margin:14px 0">{chips(c["k"])}</div>
 <div class="tbl wide blt" style="margin-top:16px"><table><thead>{thead}</thead><tbody>{rows}</tbody></table></div>
 <p class="note" style="margin-top:8px">{bsp} Bei gleicher Note steht das günstigere Konto vorn.</p>
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div>
 <p class="note" style="margin-top:18px"><a class="lnk" href="../../">Zum Girokonto-Vergleich mit Rechner →</a> · <a class="lnk" href="../../methodik/">So bewerten wir →</a></p>
-<p class="note">Ratgeber: <a class="lnk" href="{P2}at/ratgeber/kostenloses-girokonto/">Kostenloses Girokonto</a> · <a class="lnk" href="{P2}at/ratgeber/girokonto-wechseln/">Konto wechseln</a> · <a class="lnk" href="{P2}at/ratgeber/basiskonto/">Basiskonto</a></p>
+{rgline(P2,"P","</p>")}
 </main>
 {K.footer(P2)}''')
 
 # ---------- Anbieterseiten der Kreditkarten: Abschnitt „Girokonten von …“ ----------
-ANB={'Bank Austria':'bank-austria','Bank Direkt':'bank-direkt','bank99':'bank99','BAWAG':'bawag','easybank':'easybank','Erste Bank':'erste','N26':'n26','Revolut':'revolut'}
 def anb_rel(bank):
-    sl=ANB.get(bank)
+    sl=CC['anb'].get(bank) or K.slug(bank)
     return f'{LAND}/kreditkarten/anbieter/{sl}/' if sl and os.path.exists(R+f'{LAND}/kreditkarten/anbieter/{sl}/index.html') else None
 def anbieter_giro(ks):
     by={}
@@ -493,25 +514,36 @@ def anbieter_giro(ks):
         open(f,'w',encoding='utf-8').write(s)
 
 def llms(secs,d):
-    """Abschnitt „Österreich: Girokonten“ in llms.txt und llms-full.txt (ersetzt den alten Abschnitt)."""
+    """Abschnitt „<Land>: Girokonten“ in llms.txt und llms-full.txt (ersetzt den alten Abschnitt)."""
+    N=CC['N']
     st='.'.join(reversed(d['stand'].split('-')))
     for fn in ('llms.txt','llms-full.txt'):
         p=R+fn
         if not os.path.exists(p): continue
         t=open(p,encoding='utf-8').read()
-        t=re.sub(r'\n## Österreich: Girokonten\n(?:- [^\n]*\n?)*','\n',t)
+        t=re.sub(r'\n## '+N+r': Girokonten\n(?:- [^\n]*\n?)*','\n',t)
         n=sum(len(v) for v in secs.values())
-        b=f'\n## Österreich: Girokonten\n- [Girokonto-Vergleich Österreich](https://finvallo.com/at/girokonto/): {n} Konten von Banken mit Angebot in ganz Österreich, Jahreskosten selbst rechnen, Stand {st}\n- [Bestenlisten Girokonten Österreich](https://finvallo.com/at/girokonto/bestenlisten/): {", ".join(c["t"] for c in GCATS)}\n- [So bewerten wir Girokonten](https://finvallo.com/at/girokonto/methodik/)\n- [Daten als JSON](https://finvallo.com/at/daten/girokonten.json)\n'
+        b=f'\n## {N}: Girokonten\n- [Girokonto-Vergleich {N}](https://finvallo.com/{LAND}/girokonto/): {n} Konten von Banken mit Angebot in ganz {N}, Jahreskosten selbst rechnen, Stand {st}\n- [Bestenlisten Girokonten {N}](https://finvallo.com/{LAND}/girokonto/bestenlisten/): {", ".join(c["t"] for c in GCATS)}\n- [So bewerten wir Girokonten](https://finvallo.com/{LAND}/girokonto/methodik/)\n- [Daten als JSON](https://finvallo.com/{LAND}/daten/girokonten.json)\n'
         for a,h,_ in SEK:
             xs=secs.get(a) or []
             if fn=='llms.txt': xs=xs[:5 if a=='standard' else 2]
-            b+=''.join(f'- [{k["name"]} ({k["bank"]})](https://finvallo.com/at/girokonto/{k["slug"]}/): {h}, {de1(k["stars"])}/5, {eur(kosten(k,PROFIL[k["art"]]["ein"],PROFIL[k["art"]]["alter"],PROFIL[k["art"]]["abh"])["total"])} € im Jahr im Beispiel\n' for k in xs)
-        i=t.find('\n## Deutschland: Kreditkarten'); t=t[:i]+b+t[i:] if i>=0 else t.rstrip()+'\n'+b
+            b+=''.join(f'- [{k["name"]} ({k["bank"]})](https://finvallo.com/{LAND}/girokonto/{k["slug"]}/): {h}, {de1(k["stars"])}/5, {eur(kosten(k,PROFIL[k["art"]]["ein"],PROFIL[k["art"]]["alter"],PROFIL[k["art"]]["abh"])["total"])} € im Jahr im Beispiel\n' for k in xs)
+        i=t.find(CC['llms_vor']); t=t[:i]+b+t[i:] if i>=0 else t.rstrip()+'\n'+b
         open(p,'w',encoding='utf-8').write(re.sub(r'\n{3,}','\n\n',t))
 
+def rgline(P,pre,post=''):
+    if not CC['rg']: return ''
+    return ('<p class="note">' if pre=='P' else pre)+'Ratgeber: '+' · '.join(f'<a class="lnk" href="{P}{LAND}/ratgeber/{a}/">{E(b)}</a>' for a,b in CC['rg'])+post
 def main():
+    global LAND,CC
+    for l in CFG:
+        if os.path.exists(dpath(l)): OTHER[l]={k.get('slug') or K.slug(k['bank']+' '+k['name']) for k in json.load(open(dpath(l)))['konten']}
+    for l in CFG:
+        if l not in OTHER: continue
+        LAND,CC=l,CFG[l]; build_land()
+    LAND,CC='at',CFG['at']
+def build_land():
     K.use(LAND)
-    if not os.path.exists(DP): print('girokonten.json fehlt'); return
     d,ks=load()
     K.L.setdefault('stand',d['stand'])
     for k in ks: k.setdefault('geprueft',d['stand'])
