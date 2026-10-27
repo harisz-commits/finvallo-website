@@ -10,6 +10,10 @@ AT_MORE=[('at/kreditkarten/business/','Business-Kreditkarten'),('at/girokonto/be
 DE_MAIN=[('de/kreditkarten/','Kreditkarten'),('de/kreditkarten/bestenlisten/','Bestenlisten'),('de/ratgeber/','Ratgeber'),('de/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
 DE_MORE=[('de/kreditkarten/business/','Business-Kreditkarten'),('de/kreditkarten/alle/','Alle Karten nach Anbieter'),('de/kreditkarten/methodik/','So entstehen die Sterne'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
 INFO=[]
+# Girokonten Deutschland erst ins Menü, wenn die Daten da sind
+if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten','de','girokonten.json')):
+    DE_MAIN.insert(1,('de/girokonto/','Girokonten'))
+    DE_MORE[1:1]=[('de/girokonto/bestenlisten/','Girokonto-Bestenlisten'),('de/girokonto/methodik/','So bewerten wir Girokonten')]
 
 def active(rel, items):
     # longest matching prefix wins; card pages fall under Kreditkarten

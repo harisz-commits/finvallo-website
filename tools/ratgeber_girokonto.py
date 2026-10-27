@@ -20,7 +20,7 @@ def _ext(u,t): return f'<a href="{E(u)}" target="_blank" rel="noopener">{E(t)} â
 def register(art,P,eur):
     import girokonto as G
     G.K.use('at')
-    d,ks=G.load()
+    d,ks=G.load('at')
     for k in ks: k.setdefault('geprueft',d['stand'])
     G.rate(ks)
     def L(k,label=None): return f'<a class="lnk" href="{P}at/girokonto/{k["slug"]}/">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
