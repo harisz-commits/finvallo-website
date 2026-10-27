@@ -38,6 +38,11 @@ def norm(a):
         z={'monate':num(z.get('monate')),'zins':num(z.get('zins')),'min':num(z.get('min')),'max':num(z.get('max'))}
         if isinstance(z['monate'],float) and z['monate'].is_integer(): z['monate']=int(z['monate'])
         zs.append(z)
+    # Laufzeiten in Wochen (Recherche: 0,25 Monate je Woche) passen nicht in die Monatsrechnung: weglassen, im Hinweis nennen
+    wo=[z for z in zs if z['monate'] is not None and z['monate']!=int(z['monate'])]
+    if wo:
+        zs=[z for z in zs if z not in wo]
+        a['hinweis']=((a.get('hinweis') or '')+' Zusätzlich Laufzeiten in Wochen, die wir nicht vergleichen.').strip()
     a['zinsen']=sorted(zs,key=lambda z:(z['monate'] or 0,z['min'] or 0))
     a['es']=a.get('einlagensicherung') or {}
     a.setdefault('sek',[]); a.setdefault('status','ok')

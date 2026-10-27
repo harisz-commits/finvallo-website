@@ -223,5 +223,14 @@
   "rating_stand": "2026-10-27",
   "rating_seit": "2026-04-25",
   "sek": true
+ },
+ "CZ": {
+  "name": "Tschechien",
+  "sicherung": "Garanční systém finančního trhu (Einlagensicherungsfonds)",
+  "betrag": 100000,
+  "rating_sp": "AA-",
+  "rating_quelle": "https://www.spglobal.com/ratings/",
+  "rating_stand": "2026-10-27",
+  "sek": true
  }
 }

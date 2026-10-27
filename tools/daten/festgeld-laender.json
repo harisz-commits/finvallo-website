@@ -1,0 +1,236 @@
+{
+ "AT": {
+  "name": "Österreich",
+  "sicherung": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+  "betrag": 100000,
+  "rating_sp": "AA+",
+  "rating_quelle": "https://tradingeconomics.com/austria/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2025-02-14",
+  "sek": true
+ },
+ "DE": {
+  "name": "Deutschland",
+  "sicherung": "Entschädigungseinrichtung deutscher Banken GmbH (EdB); für Sparkassen und Genossenschaftsbanken die als Einlagensicherungssysteme anerkannten institutsbezogenen Sicherungssysteme (DSGV-Sicherungssystem, BVR Institutssicherung GmbH)",
+  "betrag": 100000,
+  "rating_sp": "AAA",
+  "rating_quelle": "https://tradingeconomics.com/germany/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2012-01-13",
+  "sek": true
+ },
+ "BE": {
+  "name": "Belgien",
+  "sicherung": "Garantiefonds voor financiële diensten / Fonds de garantie pour les services financiers",
+  "betrag": 100000,
+  "rating_sp": "AA-",
+  "rating_quelle": "https://tradingeconomics.com/belgium/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2026-04-25",
+  "sek": true
+ },
+ "BG": {
+  "name": "Bulgarien",
+  "sicherung": "Bulgarian Deposit Insurance Fund (BDIF)",
+  "betrag": 100000,
+  "rating_sp": "BBB+",
+  "rating_quelle": "https://tradingeconomics.com/bulgaria/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2026-05-15",
+  "sek": true
+ },
+ "DK": {
+  "name": "Dänemark",
+  "sicherung": "Garantiformuen (Finansiel Stabilitet)",
+  "betrag": 100000,
+  "rating_sp": "AAA",
+  "rating_quelle": "https://tradingeconomics.com/denmark/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2001-02-27",
+  "sek": true
+ },
+ "EE": {
+  "name": "Estland",
+  "sicherung": "Tagatisfond (Estnischer Einlagensicherungsfonds)",
+  "betrag": 100000,
+  "rating_sp": "NR",
+  "rating_quelle": "https://tradingeconomics.com/estonia/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2024-12-31",
+  "sek": true,
+  "hinweis": "S&P-Rating für Estland seit 31.12.2024 zurückgezogen (NR); letztes S&P-Rating A+ (stabil, 31.05.2024)."
+ },
+ "ES": {
+  "name": "Spanien",
+  "sicherung": "Fondo de Garantía de Depósitos de Entidades de Crédito (FGD)",
+  "betrag": 100000,
+  "rating_sp": "A+",
+  "rating_quelle": "https://tradingeconomics.com/spain/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2025-09-12",
+  "sek": true
+ },
+ "FI": {
+  "name": "Finnland",
+  "sicherung": "Finnische Einlagensicherung (Talletussuoja) der Finanzstabilitätsbehörde (Rahoitusvakausvirasto)",
+  "betrag": 100000,
+  "rating_sp": "AA+",
+  "rating_quelle": "https://tradingeconomics.com/finland/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2026-04-24",
+  "sek": true
+ },
+ "FR": {
+  "name": "Frankreich",
+  "sicherung": "Fonds de Garantie des Dépôts et de Résolution (FGDR)",
+  "betrag": 100000,
+  "rating_sp": "A+",
+  "rating_quelle": "https://tradingeconomics.com/france/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2025-10-17",
+  "sek": true
+ },
+ "GR": {
+  "name": "Griechenland",
+  "sicherung": "Hellenic Deposit and Investment Guarantee Fund (HDIGF/TEKE)",
+  "betrag": 100000,
+  "rating_sp": "BBB",
+  "rating_quelle": "https://tradingeconomics.com/greece/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2025-04-18",
+  "sek": true
+ },
+ "HR": {
+  "name": "Kroatien",
+  "sicherung": "Hrvatska agencija za osiguranje depozita (HAOD, Kroatische Einlagensicherungsagentur)",
+  "betrag": 100000,
+  "rating_sp": "A",
+  "rating_quelle": "https://tradingeconomics.com/croatia/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2026-03-13",
+  "sek": true
+ },
+ "IT": {
+  "name": "Italien",
+  "sicherung": "Fondo Interbancario di Tutela dei Depositi (FITD); für Genossenschaftsbanken Fondo di Garanzia dei Depositanti del Credito Cooperativo",
+  "betrag": 100000,
+  "rating_sp": "BBB+",
+  "rating_quelle": "https://tradingeconomics.com/italy/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2026-01-30",
+  "sek": true
+ },
+ "LI": {
+  "name": "Liechtenstein",
+  "sicherung": "Einlagensicherungs- und Anlegerentschädigungs-Stiftung SV (EAS Liechtenstein)",
+  "betrag": 100000,
+  "waehrung": "CHF",
+  "rating_sp": "AAA",
+  "rating_quelle": "https://tradingeconomics.com/liechtenstein/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2016-02-26",
+  "sek": true,
+  "hinweis": "Sicherung laut Raisin 100.000 CHF je Kunde und Bank."
+ },
+ "LT": {
+  "name": "Litauen",
+  "sicherung": "Indėlių ir investicijų draudimas (Einlagen- und Investitionsversicherung, Litauen)",
+  "betrag": 100000,
+  "rating_sp": "A",
+  "rating_quelle": "https://tradingeconomics.com/lithuania/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2024-05-31",
+  "sek": true
+ },
+ "LU": {
+  "name": "Luxemburg",
+  "sicherung": "Fonds de garantie des dépôts Luxembourg (FGDL)",
+  "betrag": 100000,
+  "rating_sp": "AAA",
+  "rating_quelle": "https://tradingeconomics.com/luxembourg/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2013-01-14",
+  "sek": true
+ },
+ "LV": {
+  "name": "Lettland",
+  "sicherung": "Noguldījumu garantiju fonds (Lettischer Einlagensicherungsfonds)",
+  "betrag": 100000,
+  "rating_sp": "A",
+  "rating_quelle": "https://tradingeconomics.com/latvia/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2024-05-31",
+  "sek": true
+ },
+ "MT": {
+  "name": "Malta",
+  "sicherung": "Depositor Compensation Scheme (DCS), c/o Malta Financial Services Authority",
+  "betrag": 100000,
+  "rating_sp": "A-",
+  "rating_quelle": "https://tradingeconomics.com/malta/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2020-03-13",
+  "sek": true
+ },
+ "NL": {
+  "name": "Niederlande",
+  "sicherung": "Depositogarantiestelsel (De Nederlandsche Bank)",
+  "betrag": 100000,
+  "rating_sp": "AAA",
+  "rating_quelle": "https://tradingeconomics.com/netherlands/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2015-11-20",
+  "sek": true
+ },
+ "NO": {
+  "name": "Norwegen",
+  "sicherung": "Bankenes sikringsfond (Norwegischer Bankengarantiefonds)",
+  "betrag": 100000,
+  "rating_sp": "AAA",
+  "rating_quelle": "https://tradingeconomics.com/norway/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "1990-11-08",
+  "sek": true
+ },
+ "PT": {
+  "name": "Portugal",
+  "sicherung": "Fundo de Garantia de Depósitos (FGD)",
+  "betrag": 100000,
+  "rating_sp": "A+",
+  "rating_quelle": "https://tradingeconomics.com/portugal/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2026-02-27",
+  "sek": true
+ },
+ "SE": {
+  "name": "Schweden",
+  "sicherung": "Riksgälden – Insättningsgarantin (schwedische Einlagensicherung)",
+  "betrag": 1150000,
+  "waehrung": "SEK",
+  "rating_sp": "AAA",
+  "rating_quelle": "https://tradingeconomics.com/sweden/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2004-02-16",
+  "sek": true,
+  "hinweis": "Sicherung 1.150.000 SEK je Kunde und Bank (Raisin/CHECK24 begrenzen Anlagen auf 100.000 €)."
+ },
+ "SK": {
+  "name": "Slowakei",
+  "sicherung": "Fond ochrany vkladov (FOV)",
+  "betrag": 100000,
+  "rating_sp": "A",
+  "rating_quelle": "https://tradingeconomics.com/slovakia/rating",
+  "rating_stand": "2026-10-27",
+  "rating_seit": "2026-04-25",
+  "sek": true
+ },
+ "CZ": {
+  "name": "Tschechien",
+  "sicherung": "Garanční systém finančního trhu (Einlagensicherungsfonds)",
+  "betrag": 100000,
+  "rating_sp": "AA-",
+  "rating_quelle": "https://www.spglobal.com/ratings/",
+  "rating_stand": "2026-10-27",
+  "sek": true
+ }
+}

@@ -62,7 +62,9 @@ def topzins(a,m=None):
 # ---------- Länder und Texte ----------
 def land(a): return LAENDER.get(a['sitz']) or {}
 def landN(a): return land(a).get('name') or a['sitz']
-def rating(a): return land(a).get('rating_sp')
+def rating(a):
+    r=land(a).get('rating_sp')
+    return None if r in (None,'','NR') else r
 def ratnum(a): return RAT.get(rating(a) or '',0)
 def heim(a): return a['sitz']==CC['code']
 def plattform(a): return a['vertrieb']!='direkt'
@@ -77,7 +79,9 @@ def anlT(a):
     return t+(f' bis {eur(hi)} €' if hi is not None else '')
 def sichT(a):
     l=land(a); s=a.get('einlagensicherung') or {}
-    t=(s.get('system') or l.get('sicherung') or f'gesetzliche Einlagensicherung {landN(a)}')+f', bis {eur(s.get("betrag") or l.get("betrag") or 100000)} € pro Person'
+    w=s.get('waehrung')
+    bt=f'{eur(s["betrag"])} {w}' if w and s.get('betrag') else f'{eur(s.get("betrag") or l.get("betrag") or 100000)} €'
+    t=(s.get('system') or l.get('sicherung') or f'gesetzliche Einlagensicherung {landN(a)}')+f', bis {bt} pro Person'
     return t
 def steuerT(a):
     if a.get('steuer_auto') is True: return f'{CC["steuer_kurz"]} wird automatisch abgeführt'
@@ -346,7 +350,7 @@ def methodik_page(xs):
     d='Wie der Festgeld-Vergleich rechnet und sortiert: Zins für Betrag und Laufzeit, Zinseszins, Einlagensicherung, Länderrating, Steuer und Datenquellen.'
     ld=K.graph(rel,t,d,[(N,f'{LAND}/'),('Festgeld',f'{LAND}/festgeld/'),('So vergleichen wir',rel)],date=max(a['geprueft'] for a in xs))
     ls=sorted({a['sitz'] for a in xs},key=lambda c:(-(RAT.get((LAENDER.get(c) or {}).get('rating_sp') or '',0)),c))
-    lrows=''.join(f'<tr><td>{E((LAENDER.get(c) or {}).get("name") or c)}</td><td>{E((LAENDER.get(c) or {}).get("sicherung") or "")}</td><td>{E((LAENDER.get(c) or {}).get("rating_sp") or "keine Angabe")}</td><td>{sum(1 for a in xs if a["sitz"]==c)}</td></tr>' for c in ls)
+    lrows=''.join(f'<tr><td>{E((LAENDER.get(c) or {}).get("name") or c)}</td><td>{E((LAENDER.get(c) or {}).get("sicherung") or "")}</td><td>{E({"NR":"kein Rating","":"keine Angabe"}.get((LAENDER.get(c) or {}).get("rating_sp") or "",(LAENDER.get(c) or {}).get("rating_sp")))}</td><td>{sum(1 for a in xs if a["sitz"]==c)}</td></tr>' for c in ls)
     body=f'''{hdr(P,rel)}
 <div class="wrap"><main id="app">
 <div class="crumb"><span><a href="../">Festgeld</a> › So vergleichen wir</span><span>Stand {S(xs)}</span></div>
@@ -354,7 +358,7 @@ def methodik_page(xs):
 <p class="lede">Beim Festgeld zählt vor allem eins: wie viel Zinsen du für deinen Betrag und deine Laufzeit bekommst. Deshalb vergeben wir keine Sterne, sondern sortieren nach Zins. Alles, was für die Sicherheit wichtig ist, zeigen wir offen daneben.</p>
 <h2>Reihenfolge</h2><div class="prose"><p>Standard ist der höchste Zins für den gewählten Betrag (anfangs {eur(DEF_B)} €) und die gewählte Laufzeit (anfangs {lzt(DEF_M)}). Bei gleichem Zins steht das Angebot mit dem besseren Länderrating vorn. Angebote, die zu deinem Betrag nicht passen (Mindest- oder Höchstanlage), stehen am Ende. Du kannst auch nach Länderrating oder Name sortieren.</p></div>
 <h2>So rechnen wir die Zinsen</h2><div class="prose"><p>Bis 12 Monate: Betrag × Zins × Monate / 12. Bei mehr als 12 Monaten rechnen wir mit Zinseszins (Betrag × ((1 + Zins)<sup>Jahre</sup> − 1)), wenn die Bank die jährlichen Zinsen mitverzinst; sonst ohne. Alle Beträge sind vor Steuern. Hängt der Zins vom Betrag ab, nehmen wir die Stufe, in die dein Betrag fällt. Banken rechnen tagesgenau, deshalb kann der Betrag um ein paar Cent abweichen.</p></div>
-<h2>Einlagensicherung und Länderrating</h2><div class="prose"><p>{E(CC["sich"])} Als Hinweis auf die Finanzkraft zeigen wir das langfristige Länderrating von S&amp;P Global für das Land, dessen Einlagensicherung zuständig ist.</p></div>
+<h2>Einlagensicherung und Länderrating</h2><div class="prose"><p>{E(CC["sich"])} Als Hinweis auf die Finanzkraft zeigen wir das langfristige Länderrating von S&amp;P Global für das Land, dessen Einlagensicherung zuständig ist. Die Ratings haben wir am {dmy(max((v.get("rating_stand") or "2026-01-01") for v in LAENDER.values()))} über tradingeconomics.com abgeglichen; S&amp;P veröffentlicht sie nicht frei abrufbar. Hat S&amp;P ein Land nicht (mehr) bewertet, steht „kein Rating“.</p></div>
 <div class="tbl wide"><table><thead><tr><th>Land</th><th>Einlagensicherung</th><th>Rating (S&amp;P)</th><th>Angebote</th></tr></thead><tbody>{lrows}</tbody></table></div>
 <h2>Steuern</h2><div class="prose"><p>{E(CC["steuer"])}</p></div>
 <h2>Woher die Daten kommen</h2><div class="prose"><p>Jede Zahl stammt von der Konditionsseite, dem Preisaushang oder dem Informationsbogen der Bank oder von der Produktseite der Plattform, über die du abschließt. Bei jedem Angebot stehen Quelle und Prüfdatum. Zinsen ändern sich oft; prüfe die Konditionen vor dem Abschluss beim Anbieter. Die Daten gibt es offen als <a class="lnk" href="../../daten/festgeld.json">JSON</a> und <a class="lnk" href="../../daten/festgeld.csv">CSV</a>.</p></div>
