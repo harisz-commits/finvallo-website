@@ -4,6 +4,8 @@
 # Aufruf: python3 tools/festgeld_daten.py   (danach festgeld.py bauen)
 import csv,glob,json,os,re,sys
 SP=os.path.dirname(os.path.abspath(__file__)); RD=os.path.join(SP,'festgeld-recherche'); DD=os.path.join(SP,'daten')
+# Redaktionell nicht aufgenommen: id -> Grund
+AUS={'opel-direktbank-festgeld-de':'Marke der Stellantis Bank mit denselben Konditionen; steht als Stellantis Bank im Vergleich.'}
 ZZ={'jaehrlich','endfaellig','monatlich','quartalsweise','halbjaehrlich','wahlweise'}
 KD={'nein','ja','ja_mit_abschlag'}; VL={'automatisch','keine','wahlweise'}
 
@@ -57,6 +59,8 @@ def main():
             a=norm(a); a['gruppe']=n
             if a['status']!='ok':
                 raus[a.get('markt','de')].append({'name':f'{a["bank"]} {a["produkt"]}','grund':a.get('hinweis') or 'kein Neugeschäft','gruppe':n}); continue
+            if a['id'] in AUS:
+                raus[a['markt']].append({'name':f'{a["bank"]} {a["produkt"]}','grund':AUS[a['id']],'gruppe':n}); continue
             if not a['sitz']:
                 raus[a.get('markt','de')].append({'name':f'{a["bank"]} {a["produkt"]}','grund':'Die Bank nennt nicht, bei welcher Einlagenbank das Geld liegt; Einlagensicherung damit nicht prüfbar.','gruppe':n}); continue
             check(a,fehler)
