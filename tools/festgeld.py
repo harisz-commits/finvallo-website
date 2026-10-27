@@ -25,7 +25,7 @@ CC=CFG['de']; OTHER={}
 LZ=[(1,'1-monat','1 Monat'),(3,'3-monate','3 Monate'),(6,'6-monate','6 Monate'),(9,'9-monate','9 Monate'),(12,'1-jahr','1 Jahr'),(18,'18-monate','18 Monate'),
     (24,'2-jahre','2 Jahre'),(36,'3-jahre','3 Jahre'),(48,'4-jahre','4 Jahre'),(60,'5-jahre','5 Jahre'),(72,'6-jahre','6 Jahre'),(84,'7-jahre','7 Jahre'),(96,'8-jahre','8 Jahre'),(120,'10-jahre','10 Jahre')]
 LZT={m:t for m,_,t in LZ}
-DEF_B=10000; DEF_M=12; MIN_LZ_SEITE=3
+DEF_B=10000; DEF_M=12; MIN_LZ_SEITE=5
 RAT={'AAA':22,'AA+':21,'AA':20,'AA-':19,'A+':18,'A':17,'A-':16,'BBB+':15,'BBB':14,'BBB-':13,'BB+':12,'BB':11,'BB-':10,'B+':9,'B':8,'B-':7}
 ZZT={'jaehrlich':'jährlich','endfaellig':'am Ende der Laufzeit','monatlich':'monatlich','quartalsweise':'vierteljährlich','halbjaehrlich':'halbjährlich','wahlweise':'nach Wahl'}
 LAENDER={}
@@ -33,6 +33,7 @@ LAENDER={}
 def lzt(m):
     if m in LZT: return LZT[m]
     if m<1: return f'{round(m*4)} Wochen' if m!=0.25 else '1 Woche'
+    if m%12==0: return f'{m//12} Jahre'
     return f'{eur(m)} Monate'
 def load(land=None):
     d=json.load(open(dpath(land or LAND),encoding='utf-8')); xs=d['angebote']
@@ -145,7 +146,7 @@ def item(a,P,base,m,rank,hide=False):
   </article>'''
 
 def calcbox(m,nav=None):
-    opts=''.join(f'<option value="{x}"{" selected" if x==m else ""}>{t}</option>' for x,_,t in LZ if x in LZ_DA)
+    opts=''.join(f'<option value="{x}"{" selected" if x==m else ""}>{lzt(x)}</option>' for x in sorted(LZ_DA))
     return f'''<div class="box lcalc" id="fcalc" hidden>
     <h2 style="margin-top:0">Wie viel Zinsen bekommst du?</h2>
     <div class="lgrid"><label><span class="flab">Anlagebetrag (€)</span><input type="number" min="0" step="500" value="{DEF_B}" data-in="betrag" name="betrag" inputmode="numeric"></label>
@@ -325,6 +326,7 @@ def offer_page(a,xs):
   <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
   <h2>Zinsen nach Laufzeit</h2>
   <div class="tbl"><table><thead><tr><th>Laufzeit</th><th>Zins p. a.</th><th>Zinsen für {eur(DEF_B)} €</th></tr></thead><tbody>{rows}</tbody></table></div>
+  {'<p class="note"><b>Hinweis zur Quelle:</b> Einzelne Angaben zu diesem Angebot stammen aus Vergleichsportalen, weil die Bank sie nicht frei abrufbar veröffentlicht. Bitte vor dem Abschluss beim Anbieter prüfen.</p>' if a.get('sek') else ''}
   <p class="note">Zinsen vor Steuern{", mit Zinseszins bei mehr als 12 Monaten" if a.get("zinseszins") is True else ""}. Quelle: {K.ext(a["quelle"])}, Stand {dmy(a.get("stand") or gp)}.</p>
   <h2>Vorteile und Nachteile</h2>
   <div class="pc"><div class="box pro"><h3>Das spricht dafür</h3>{'<ul class="checks">'+"".join(f"<li>{E(x)}</li>" for x in pc)+'</ul>' if pc else '<p class="note">Keine besonderen Vorteile.</p>'}</div>
@@ -395,7 +397,7 @@ def build_land():
     cnt={}
     for a in xs:
         for m in laufzeiten(a): cnt[m]=cnt.get(m,0)+1
-    LZ_DA={m for m,_,_ in LZ if cnt.get(m)}
+    LZ_DA=set(cnt)
     LZ_SEITEN={m for m,_,_ in LZ if cnt.get(m,0)>=MIN_LZ_SEITE}
     for a in xs: offer_page(a,xs)
     list_page(xs,d)

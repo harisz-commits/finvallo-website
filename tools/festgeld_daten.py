@@ -57,6 +57,8 @@ def main():
             a=norm(a); a['gruppe']=n
             if a['status']!='ok':
                 raus[a.get('markt','de')].append({'name':f'{a["bank"]} {a["produkt"]}','grund':a.get('hinweis') or 'kein Neugeschäft','gruppe':n}); continue
+            if not a['sitz']:
+                raus[a.get('markt','de')].append({'name':f'{a["bank"]} {a["produkt"]}','grund':'Die Bank nennt nicht, bei welcher Einlagenbank das Geld liegt; Einlagensicherung damit nicht prüfbar.','gruppe':n}); continue
             check(a,fehler)
             if not a.get('zinsen'): continue
             k=a['id']
