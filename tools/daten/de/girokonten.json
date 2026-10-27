@@ -3620,6 +3620,56 @@
    "status": "unsicher",
    "abweichung": "Kontoführung 2,90 € pro Monat plus 0,10 € je beleglose Buchung (kf_jahr ohne Buchungsentgelte). Eingeräumte Überziehung nicht möglich. Eröffnungsweg und Kartenausstattung für das Basiskonto nicht ausdrücklich angegeben.",
    "slug": "skatbank-basiskonto"
+  },
+  {
+   "bank": "HypoVereinsbank",
+   "name": "HVB PlusKonto",
+   "art": "standard",
+   "kf_betrag": 9.9,
+   "kf_periode": "Monat",
+   "kf_jahr": 118.8,
+   "gratis": {
+    "kf_bedingt": 0,
+    "eingang_min": 1000,
+    "eingang_art": "Gutschriften aus Überweisungen (z. B. Gehalt), keine Bareinzahlungen, keine Überträge von eigenen HVB-Konten",
+    "alter_unter": null,
+    "verknuepfung": "oder",
+    "sonst": "Nur für Neukundinnen und Neukunden (kein privates HVB-Girokonto in den letzten 12 Monaten) und nur mit Teilnahme am Vorteilsprogramm HVB valyou, für das du Werbung per E-Mail und Telefon zustimmen musst. Der Eingang muss in 2 von 3 Prüfmonaten erreicht werden. Für Bestandskunden sinkt der Preis je nach valyou-Stufe um 25 bis 100 %.",
+    "text": "Gratis für Neukunden ab 1.000 € Geldeingang pro Monat und mit Teilnahme an HVB valyou.",
+    "extra": true
+   },
+   "alter": null,
+   "debitkarte": {
+    "inkl": true,
+    "preis_jahr": 0,
+    "text": "UniCredit Card (Debitkarte) 0 €; girocard 12 € pro Jahr"
+   },
+   "kreditkarte": "HVB Mastercard 15 € pro Jahr, HVB Visa Card 30 €, HVB Mastercard Gold 60 € (Family 80 €)",
+   "kreditkarte_inkl": false,
+   "bargeld": {
+    "text": "UniCredit Card: kostenlos an Automaten der UniCredit Group und der Cash Group, an anderen Automaten 2,50 €. girocard: im Inland kostenlos, auch außerhalb der Cash Group.",
+    "frei_monat": null,
+    "danach_eur": null,
+    "ausland": "UniCredit Card: an Automaten der UniCredit Group kostenlos, an anderen Automaten in Fremdwährung 2,50 €"
+   },
+   "fremdwaehrung_prozent": 1.75,
+   "sollzins": 13.28,
+   "ueberschreitung": 13.28,
+   "habenzins": null,
+   "einzelposten": "Dauerauftrag einrichten oder ändern in der Filiale 1,00 €; berechtigte Ablehnung einer Lastschrift oder Überweisung je 2,00 €",
+   "eroeffnung": "beides",
+   "iban": "DE",
+   "einlagensicherung": "gesetzliche Einlagensicherung (EdB), 100.000 €",
+   "gemeinschaftskonto": null,
+   "aktion": null,
+   "aktion_eur": null,
+   "bundesweit": true,
+   "quelle": "https://www.hypovereinsbank.de/content/dam/hypovereinsbank/shared/pdf/FID/FID_Plus.pdf",
+   "quelle2": null,
+   "stand": "2026-07-31",
+   "status": "ok",
+   "abweichung": "Entgeltinformation vom 31.07.2026 und Produktseite (Screenshots), von Haris bereitgestellt. Im Eröffnungsquartal immer gratis. Ohne valyou-Zustimmung Eröffnung nur in der Filiale oder per Telefon, ggf. zu abweichenden Konditionen. Dispo-Rabatt über valyou möglich.",
+   "slug": "hvb-pluskonto"
   }
  ],
  "nicht_aufgenommen": [
@@ -3784,8 +3834,8 @@
    "grund": "gleiches Konto wie das norisbank Top-Girokonto mit denselben Preisen, nur eine eigene Werbeseite"
   },
   {
-   "name": "HypoVereinsbank",
-   "grund": "Konditionen konnten wir noch nicht direkt bei der Bank prüfen, die Konten folgen"
+   "name": "HypoVereinsbank AktivKonto, ExklusivKonto, StartKonto und Basiskonten",
+   "grund": "Entgeltinformationen konnten wir noch nicht direkt bei der Bank abrufen, die Konten folgen"
   }
  ]
 }

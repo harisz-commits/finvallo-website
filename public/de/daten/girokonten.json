@@ -1,7 +1,7 @@
 {
  "quelle": "https://finvallo.com/de/girokonto/",
  "stand": "2026-10-27",
- "anzahl": 81,
+ "anzahl": 82,
  "lizenz": "Frei nutzbar mit Quellenangabe Finvallo",
  "konten": [
   {
@@ -42,7 +42,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 3.7,
-   "rank": 23
+   "rank": 24
   },
   {
    "slug": "deutsche-bank-bestkonto",
@@ -82,7 +82,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 3.5,
-   "rank": 33
+   "rank": 34
   },
   {
    "slug": "deutsche-bank-junges-konto",
@@ -214,7 +214,7 @@
    "stand": "2025-12-01",
    "geprueft": "2026-10-27",
    "stars": 3.9,
-   "rank": 19
+   "rank": 20
   },
   {
    "slug": "commerzbank-klassikkonto",
@@ -254,7 +254,7 @@
    "stand": "2025-12-01",
    "geprueft": "2026-10-27",
    "stars": 3.7,
-   "rank": 25
+   "rank": 26
   },
   {
    "slug": "commerzbank-premiumkonto",
@@ -294,7 +294,7 @@
    "stand": "2025-12-01",
    "geprueft": "2026-10-27",
    "stars": 3.6,
-   "rank": 30
+   "rank": 31
   },
   {
    "slug": "commerzbank-startkonto",
@@ -526,7 +526,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 4.4,
-   "rank": 11
+   "rank": 12
   },
   {
    "slug": "postbank-giro-plus",
@@ -574,7 +574,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 4.0,
-   "rank": 16
+   "rank": 17
   },
   {
    "slug": "postbank-giro-extra-plus",
@@ -622,7 +622,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 3.6,
-   "rank": 29
+   "rank": 30
   },
   {
    "slug": "postbank-giro-start-direkt",
@@ -762,7 +762,7 @@
    "stand": "2026-09-30",
    "geprueft": "2026-10-27",
    "stars": 3.9,
-   "rank": 18
+   "rank": 19
   },
   {
    "slug": "targobank-plus-konto",
@@ -810,7 +810,7 @@
    "stand": "2026-09-30",
    "geprueft": "2026-10-27",
    "stars": 4.4,
-   "rank": 12
+   "rank": 13
   },
   {
    "slug": "targobank-komfort-konto",
@@ -858,7 +858,7 @@
    "stand": "2026-09-30",
    "geprueft": "2026-10-27",
    "stars": 3.5,
-   "rank": 32
+   "rank": 33
   },
   {
    "slug": "targobank-premium-konto",
@@ -906,7 +906,7 @@
    "stand": "2026-09-30",
    "geprueft": "2026-10-27",
    "stars": 3.3,
-   "rank": 40
+   "rank": 41
   },
   {
    "slug": "targobank-plus-konto-junge-leute",
@@ -1174,7 +1174,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 4.4,
-   "rank": 10
+   "rank": 11
   },
   {
    "slug": "ing-girokonto-future",
@@ -1222,7 +1222,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 4.2,
-   "rank": 14
+   "rank": 15
   },
   {
    "slug": "ing-girokonto-junior",
@@ -1494,7 +1494,7 @@
    "stand": "2026-10-22",
    "geprueft": "2026-10-27",
    "stars": 3.6,
-   "rank": 26
+   "rank": 27
   },
   {
    "slug": "comdirect-girokonto-extra",
@@ -1534,7 +1534,7 @@
    "stand": "2026-10-22",
    "geprueft": "2026-10-27",
    "stars": 3.9,
-   "rank": 17
+   "rank": 18
   },
   {
    "slug": "comdirect-girokonto-plus",
@@ -1574,7 +1574,7 @@
    "stand": "2026-10-22",
    "geprueft": "2026-10-27",
    "stars": 3.6,
-   "rank": 28
+   "rank": 29
   },
   {
    "slug": "comdirect-junior-giro",
@@ -1854,7 +1854,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 3.7,
-   "rank": 24
+   "rank": 25
   },
   {
    "slug": "norisbank-top-girokonto-minderjaehrige",
@@ -1982,7 +1982,7 @@
    "stand": "2026-08-03",
    "geprueft": "2026-10-27",
    "stars": 3.8,
-   "rank": 21
+   "rank": 22
   },
   {
    "slug": "n26-smart",
@@ -2026,7 +2026,7 @@
    "stand": "2026-08-03",
    "geprueft": "2026-10-27",
    "stars": 3.2,
-   "rank": 41
+   "rank": 42
   },
   {
    "slug": "n26-go",
@@ -2070,7 +2070,7 @@
    "stand": "2026-08-03",
    "geprueft": "2026-10-27",
    "stars": 3.3,
-   "rank": 37
+   "rank": 38
   },
   {
    "slug": "n26-metal",
@@ -2114,7 +2114,7 @@
    "stand": "2026-08-03",
    "geprueft": "2026-10-27",
    "stars": 2.9,
-   "rank": 47
+   "rank": 48
   },
   {
    "slug": "n26-flex",
@@ -2158,7 +2158,7 @@
    "stand": "2026-08-03",
    "geprueft": "2026-10-27",
    "stars": 2.6,
-   "rank": 49
+   "rank": 50
   },
   {
    "slug": "n26-basiskonto",
@@ -2242,7 +2242,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 4.5,
-   "rank": 8
+   "rank": 9
   },
   {
    "slug": "revolut-plus",
@@ -2282,7 +2282,7 @@
    "stand": "2026-05-07",
    "geprueft": "2026-10-27",
    "stars": 4.1,
-   "rank": 15
+   "rank": 16
   },
   {
    "slug": "revolut-premium",
@@ -2322,7 +2322,7 @@
    "stand": "2026-05-07",
    "geprueft": "2026-10-27",
    "stars": 3.5,
-   "rank": 31
+   "rank": 32
   },
   {
    "slug": "revolut-metal",
@@ -2362,7 +2362,7 @@
    "stand": "2025-09-12",
    "geprueft": "2026-10-27",
    "stars": 3.3,
-   "rank": 39
+   "rank": 40
   },
   {
    "slug": "revolut-ultra",
@@ -2402,7 +2402,7 @@
    "stand": "2026-05-07",
    "geprueft": "2026-10-27",
    "stars": 2.9,
-   "rank": 48
+   "rank": 49
   },
   {
    "slug": "revolut-basiskonto",
@@ -2482,7 +2482,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 3.1,
-   "rank": 44
+   "rank": 45
   },
   {
    "slug": "bunq-core",
@@ -2522,7 +2522,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 3.1,
-   "rank": 43
+   "rank": 44
   },
   {
    "slug": "bunq-pro",
@@ -2562,7 +2562,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 3.4,
-   "rank": 35
+   "rank": 36
   },
   {
    "slug": "bunq-elite",
@@ -2602,7 +2602,7 @@
    "stand": "2026-10-15",
    "geprueft": "2026-10-27",
    "stars": 3.0,
-   "rank": 46
+   "rank": 47
   },
   {
    "slug": "tomorrow-now",
@@ -2650,7 +2650,7 @@
    "stand": "2026-06-02",
    "geprueft": "2026-10-27",
    "stars": 3.2,
-   "rank": 42
+   "rank": 43
   },
   {
    "slug": "tomorrow-change",
@@ -2690,7 +2690,7 @@
    "stand": "2026-06-02",
    "geprueft": "2026-10-27",
    "stars": 3.3,
-   "rank": 36
+   "rank": 37
   },
   {
    "slug": "tomorrow-plus",
@@ -2730,7 +2730,7 @@
    "stand": "2026-06-02",
    "geprueft": "2026-10-27",
    "stars": 3.0,
-   "rank": 45
+   "rank": 46
   },
   {
    "slug": "tomorrow-basiskonto",
@@ -2814,7 +2814,7 @@
    "stand": "2025-01-01",
    "geprueft": "2026-10-27",
    "stars": 4.5,
-   "rank": 9
+   "rank": 10
   },
   {
    "slug": "c24-smart",
@@ -2854,7 +2854,7 @@
    "stand": "2026-05-05",
    "geprueft": "2026-10-27",
    "stars": 4.2,
-   "rank": 13
+   "rank": 14
   },
   {
    "slug": "c24-plus",
@@ -2894,7 +2894,7 @@
    "stand": "2026-07-01",
    "geprueft": "2026-10-27",
    "stars": 3.6,
-   "rank": 27
+   "rank": 28
   },
   {
    "slug": "c24-max",
@@ -2934,7 +2934,7 @@
    "stand": "2026-07-01",
    "geprueft": "2026-10-27",
    "stars": 3.4,
-   "rank": 34
+   "rank": 35
   },
   {
    "slug": "c24-basiskonto",
@@ -3018,7 +3018,7 @@
    "stand": "2026-10-01",
    "geprueft": "2026-10-27",
    "stars": 3.3,
-   "rank": 38
+   "rank": 39
   },
   {
    "slug": "gls-konto-18-27",
@@ -3150,7 +3150,7 @@
    "stand": "2026-10-01",
    "geprueft": "2026-10-27",
    "stars": 3.9,
-   "rank": 20
+   "rank": 21
   },
   {
    "slug": "gls-konto-mitglied-18-27",
@@ -3330,7 +3330,7 @@
    "stand": "2026-07-06",
    "geprueft": "2026-10-27",
    "stars": 3.7,
-   "rank": 22
+   "rank": 23
   },
   {
    "slug": "bbbank-junges-girokonto",
@@ -3539,6 +3539,55 @@
    "geprueft": "2026-10-27",
    "stars": 3.9,
    "rank": 4
+  },
+  {
+   "slug": "hvb-pluskonto",
+   "bank": "HypoVereinsbank",
+   "name": "HVB PlusKonto",
+   "art": "standard",
+   "kf_betrag": 9.9,
+   "kf_periode": "Monat",
+   "kf_jahr": 118.8,
+   "gratis": {
+    "kf_bedingt": 0,
+    "eingang_min": 1000,
+    "eingang_art": "Gutschriften aus Überweisungen (z. B. Gehalt), keine Bareinzahlungen, keine Überträge von eigenen HVB-Konten",
+    "alter_unter": null,
+    "verknuepfung": "oder",
+    "sonst": "Nur für Neukundinnen und Neukunden (kein privates HVB-Girokonto in den letzten 12 Monaten) und nur mit Teilnahme am Vorteilsprogramm HVB valyou, für das du Werbung per E-Mail und Telefon zustimmen musst. Der Eingang muss in 2 von 3 Prüfmonaten erreicht werden. Für Bestandskunden sinkt der Preis je nach valyou-Stufe um 25 bis 100 %.",
+    "text": "Gratis für Neukunden ab 1.000 € Geldeingang pro Monat und mit Teilnahme an HVB valyou.",
+    "extra": true
+   },
+   "alter": null,
+   "debitkarte": {
+    "inkl": true,
+    "preis_jahr": 0,
+    "text": "UniCredit Card (Debitkarte) 0 €; girocard 12 € pro Jahr"
+   },
+   "kreditkarte": "HVB Mastercard 15 € pro Jahr, HVB Visa Card 30 €, HVB Mastercard Gold 60 € (Family 80 €)",
+   "kreditkarte_inkl": false,
+   "bargeld": {
+    "text": "UniCredit Card: kostenlos an Automaten der UniCredit Group und der Cash Group, an anderen Automaten 2,50 €. girocard: im Inland kostenlos, auch außerhalb der Cash Group.",
+    "frei_monat": null,
+    "danach_eur": null,
+    "ausland": "UniCredit Card: an Automaten der UniCredit Group kostenlos, an anderen Automaten in Fremdwährung 2,50 €"
+   },
+   "fremdwaehrung_prozent": 1.75,
+   "sollzins": 13.28,
+   "ueberschreitung": 13.28,
+   "habenzins": null,
+   "einzelposten": "Dauerauftrag einrichten oder ändern in der Filiale 1,00 €; berechtigte Ablehnung einer Lastschrift oder Überweisung je 2,00 €",
+   "eroeffnung": "beides",
+   "iban": "DE",
+   "einlagensicherung": "gesetzliche Einlagensicherung (EdB), 100.000 €",
+   "gemeinschaftskonto": null,
+   "aktion": null,
+   "quelle": "https://www.hypovereinsbank.de/content/dam/hypovereinsbank/shared/pdf/FID/FID_Plus.pdf",
+   "quelle2": null,
+   "stand": "2026-07-31",
+   "geprueft": "2026-10-27",
+   "stars": 4.5,
+   "rank": 8
   }
  ]
 }

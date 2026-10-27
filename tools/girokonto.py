@@ -137,6 +137,7 @@ def score(k):
     elif g.get('eingang_min') is not None and g.get('alter_unter') is None:
         e=g['eingang_min']; sb=4.5 if e<=500 else 4.0 if e<=1000 else 3.5 if e<=1500 else 2.5; vb=f'gratis ab {eur(e)} € Eingang'
     else: sb,vb=4.0,'Bedingung: '+(g.get('text') or 'siehe Bank')
+    if g and g.get('extra'): sb=max(2.5,sb-0.5); vb+=', dazu weitere Bedingungen'
     parts.append(dict(k='Bedingungen',w=10,s=sb,v=vb,ok=True))
     b=k.get('bargeld') or {}
     if not b.get('text'): sc,vc,okc=2.5,'nicht bestätigt',False
@@ -381,7 +382,7 @@ def methodik_page(ks):
     d='Die Regeln hinter den Sternen im Girokonto-Vergleich: 6 Kriterien, Gewichtung, Rechnung der Jahreskosten und Umgang mit fehlenden Daten.'
     ld=K.graph(rel,t,d,[(CC['N'],f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),('So bewerten wir',rel)])
     rows=[('Kosten',40,'Jahreskosten im typischen Fall: Kontoführung, Debitkarte, wenn sie extra kostet, und Abhebungen über die Gratis-Menge. 0 € = 5 Sterne, bis 30 € = 4,6, bis 50 € = 4,2, bis 80 € = 3,8, bis 120 € = 3,2, bis 180 € = 2,6, bis 250 € = 2,0, darüber 1,5.'),
-          ('Bedingungen',10,'Wie leicht du den günstigen Preis bekommst. Gleicher Preis für alle = 5 Sterne. Gratis ab bis zu 500 € Eingang = 4,5, bis 1.000 € = 4,0, bis 1.500 € = 3,5, darüber 2,5. Bedingungen mit Alter oder Ausbildung = 4,0. Kein Gratis-Modell = 3,0.'),
+          ('Bedingungen',10,'Wie leicht du den günstigen Preis bekommst. Gleicher Preis für alle = 5 Sterne. Gratis ab bis zu 500 € Eingang = 4,5, bis 1.000 € = 4,0, bis 1.500 € = 3,5, darüber 2,5. Bedingungen mit Alter oder Ausbildung = 4,0. Kein Gratis-Modell = 3,0. Gilt der Gratis-Preis nur für Neukunden oder nur mit Zustimmung zu Werbung, gibt es 0,5 Sterne weniger.'),
           ('Bargeld',15,'Abhebungen am Automaten ohne Entgelt = 5 Sterne. Begrenzte Gratis-Menge: ab 5 pro Monat 4,0, ab 2 pro Monat 3,0, 1 pro Monat 2,5, jede Abhebung kostet 2,0.'),
           ('Karten',10,'Debitkarte inklusive = 3,5 Sterne. Gibt es dazu eine Kreditkarte gegen Aufpreis oder nur im 1. Jahr gratis = 4,0. Kreditkarte ohne Aufpreis dabei = 5,0. Debitkarte kostet extra = 2,0.'),
           ('Zinsen',10,'Zins für die Überziehung (bei zwei Sätzen der höhere): bis 7 % = 5 Sterne, bis 9 % = 4,0, bis 11 % = 3,0, bis 13 % = 2,5, darüber 2,0. Ab 1 % Zinsen auf Guthaben gibt es 0,5 Sterne dazu. Ohne Überziehung 3,0.'),
