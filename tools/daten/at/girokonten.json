@@ -15,7 +15,8 @@
     "preis_jahr": 0,
     "text": "1 BankCard (Debit Mastercard) im Paket inkludiert"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebung an Bank-Austria-Geldautomaten inkludiert; Debitkarten-Aushang (Stand 01.07.2026): Behebung im Inland/EU in EUR kostenlos; an der Kassa 4,10 € (Online/GoGreen)",
     "frei_monat": null,
@@ -56,7 +57,8 @@
     "preis_jahr": 0,
     "text": "1 BankCard (Debit Mastercard) im Paket inkludiert"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebung an Bank-Austria-Geldautomaten inkludiert; Debitkarten-Aushang (Stand 01.07.2026): Behebung im Inland/EU in EUR kostenlos; an der Kassa 4,10 € (Online/GoGreen)",
     "frei_monat": null,
@@ -97,7 +99,8 @@
     "preis_jahr": 0,
     "text": "1 BankCard (Debit Mastercard) im Paket inkludiert"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Alle Behebungen (Kassa und Bank-Austria-Automaten) inkludiert; Debitkarten-Aushang: Inland/EU in EUR kostenlos",
     "frei_monat": null,
@@ -150,7 +153,8 @@
     "preis_jahr": 0,
     "text": "BankCard für Studenten kostenlos"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Alle Behebungen inkludiert; Inland/EU in EUR kostenlos",
     "frei_monat": null,
@@ -195,7 +199,8 @@
     "preis_jahr": 0,
     "text": "MegaCard (Debitkarte) kostenlos; Behebung bis 200 € pro Woche im Rahmen des Guthabens"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Alle Behebungen inkludiert; max. 200 € pro Woche am Bankomaten",
     "frei_monat": null,
@@ -240,7 +245,8 @@
     "preis_jahr": 0,
     "text": "MegaCard (Debitkarte) kostenlos; Behebung max. 50 € pro Woche"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Alle Behebungen inkludiert; max. 50 € pro Woche am Bankomaten, keine Überschreitung",
     "frei_monat": null,
@@ -281,7 +287,8 @@
     "preis_jahr": 0,
     "text": "1 BankCard inkludiert; nur im EWR nutzbar"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebung an Kassa und BA-Automaten inkludiert; nur innerhalb des EWR",
     "frei_monat": null,
@@ -322,7 +329,8 @@
     "preis_jahr": 0,
     "text": "1 Kontokarte (Debit, NFC) inkludiert; weitere 2,63 € pro Monat"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "1 Automaten-Transaktion pro Monat inkludiert (Behebung, Einzahlung, Scan); Automaten-Transaktion = Behebung in BAWAG-SB-Zone und laut Produktseite an Geldautomaten in der EU in Euro (Preisblatt: 'BAWAG Geldautomaten in der EU'); allfällige Fremdspesen Dritter werden weiterverrechnet; Schalter 4,12 €",
     "frei_monat": 1,
@@ -363,7 +371,8 @@
     "preis_jahr": 0,
     "text": "1 Kontokarte inkludiert"
    },
-   "kreditkarte_inkl": "Kreditkarte GOLD Hauptkarte inkludiert (positive Bonitätsprüfung vorausgesetzt)",
+   "kreditkarte": "Kreditkarte GOLD Hauptkarte inkludiert (positive Bonitätsprüfung vorausgesetzt)",
+   "kreditkarte_inkl": true,
    "bargeld": {
     "text": "Alle Automaten-Transaktionen inkludiert; Automaten-Transaktion = Behebung in BAWAG-SB-Zone und laut Produktseite an Geldautomaten in der EU in Euro (Preisblatt: 'BAWAG Geldautomaten in der EU'); allfällige Fremdspesen Dritter werden weiterverrechnet; Schalter 4,12 €",
     "frei_monat": null,
@@ -412,7 +421,8 @@
     "preis_jahr": 0,
     "text": "1 Kontokarte inkludiert"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "1 Automaten-Transaktion pro Monat inkludiert; Automaten-Transaktion = Behebung in BAWAG-SB-Zone und laut Produktseite an Geldautomaten in der EU in Euro (Preisblatt: 'BAWAG Geldautomaten in der EU'); allfällige Fremdspesen Dritter werden weiterverrechnet; Schalter 6,00 €",
     "frei_monat": 1,
@@ -465,7 +475,8 @@
     "preis_jahr": 29.86,
     "text": "29,86 € pro Jahr laut Preisblatt (die Produktseite nennt sie gratis)"
    },
-   "kreditkarte_inkl": "Kreditkarte GOLD für Studenten optional: 1. Jahr gratis, danach 30,76 € pro Jahr (nicht inkludiert)",
+   "kreditkarte": "Kreditkarte GOLD für Studenten optional: 1. Jahr gratis, danach 30,76 € pro Jahr (nicht inkludiert)",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Alle Automaten-Transaktionen inkludiert; Automaten-Transaktion = Behebung in BAWAG-SB-Zone und laut Produktseite an Geldautomaten in der EU in Euro (Preisblatt: 'BAWAG Geldautomaten in der EU'); allfällige Fremdspesen Dritter werden weiterverrechnet; Schalter 3,50 €",
     "frei_monat": null,
@@ -510,7 +521,8 @@
     "preis_jahr": 0,
     "text": "1 Kontokarte gratis inkludiert"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Alle Automaten-Transaktionen inkludiert; Automaten-Transaktion = Behebung in BAWAG-SB-Zone und laut Produktseite an Geldautomaten in der EU in Euro (Preisblatt: 'BAWAG Geldautomaten in der EU'); allfällige Fremdspesen Dritter werden weiterverrechnet; Schalter 3,50 €",
     "frei_monat": null,
@@ -555,7 +567,8 @@
     "preis_jahr": 0,
     "text": "Kontokarte gratis, ohne NFC/Kontaktlos; Limit 10 €/Tag, 50 €/Woche"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebung/Zahlung max. 10 € pro Tag bzw. 50 € pro Woche; höhere Behebungen nur durch gesetzlichen Vertreter",
     "frei_monat": null,
@@ -596,7 +609,8 @@
     "preis_jahr": 0,
     "text": "1 Kontokarte inkludiert; für Zeichnungsberechtigte 29,86 € pro Jahr"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebungen in BAWAG-Filialen und an Geldautomaten im EWR inkludiert",
     "frei_monat": null,
@@ -649,7 +663,8 @@
     "preis_jahr": 0,
     "text": "easy karte (Debit Mastercard, kontaktlos) gratis; für Zeichnungsberechtigte 28,08 € pro Jahr"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "12 Automaten-Transaktionen pro Quartal inkludiert, ab der 13. je 1,00 €; Automaten-Transaktionen = Behebungen in BAWAG-SB-Zone und an BAWAG-Geldautomaten in EU/EWR in EUR; fremde Spesen (institutsfremde Bankomaten) werden weiterbelastet; Schalter 4,90 € (12 Abhebungen pro Quartal inklusive, wir rechnen mit 4 pro Monat)",
     "frei_monat": 4,
@@ -690,7 +705,8 @@
     "preis_jahr": 0,
     "text": "easy karte gratis; für Mitinhaber/Zeichnungsberechtigte 14,04 € pro Jahr"
    },
-   "kreditkarte_inkl": "easy kreditkarte gold mit Versicherungsschutz für Kontoinhaber (positive Bonitätsprüfung)",
+   "kreditkarte": "easy kreditkarte gold mit Versicherungsschutz für Kontoinhaber (positive Bonitätsprüfung)",
+   "kreditkarte_inkl": true,
    "bargeld": {
     "text": "Alle Automaten-Transaktionen und Bankomat-Behebungen innerhalb des Euroraums gratis; Schalter 4,90 €",
     "frei_monat": null,
@@ -735,7 +751,8 @@
     "preis_jahr": 0,
     "text": "easy karte (kontaktlos) gratis"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Alle Automaten-Transaktionen gratis; Automaten-Transaktionen = Behebungen in BAWAG-SB-Zone und an BAWAG-Geldautomaten in EU/EWR in EUR; fremde Spesen (institutsfremde Bankomaten) werden weiterbelastet",
     "frei_monat": null,
@@ -780,7 +797,8 @@
     "preis_jahr": 0,
     "text": "easy kids Karte gratis, ohne Kontaktlos-Funktion; Nutzung ab 6"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Verfügungen (Automat, Kassa, Überweisung) ab 6 Jahren max. 10 € pro Tag und 50 € pro Woche",
     "frei_monat": null,
@@ -825,7 +843,8 @@
     "preis_jahr": 0,
     "text": "Debitkarte (Erstkarte) inkl.; zusätzliche Debitkarte 24,71 € pro Jahr"
    },
-   "kreditkarte_inkl": "Kreditkarte (card complete) auf Wunsch vermittelt, nicht inkludiert; Neukunden 1. Jahr gratis, danach Classic 1,80 € pro Monat, Gold 6,70 € pro Monat, Platinum 11,55 € pro Monat",
+   "kreditkarte": "Kreditkarte (card complete) auf Wunsch vermittelt, nicht inkludiert; Neukunden 1. Jahr gratis, danach Classic 1,80 € pro Monat, Gold 6,70 € pro Monat, Platinum 11,55 € pro Monat",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "SB-Geräte bank99 bzw. Geldautomaten in Euro im EU-Raum: 1 Transaktion/Monat frei (Behebung oder SB-Einzahlung), danach 0,80 €; Schalter-Behebung 4,79 €",
     "frei_monat": 1,
@@ -870,7 +889,8 @@
     "preis_jahr": 0,
     "text": "Debitkarte (Erstkarte) inkl.; zusätzliche Debitkarte 24,71 € pro Jahr"
    },
-   "kreditkarte_inkl": "Kreditkarte (card complete) auf Wunsch vermittelt, nicht inkludiert; Neukunden 1. Jahr gratis, danach Classic 1,80 € pro Monat, Gold 6,70 € pro Monat, Platinum 11,55 € pro Monat",
+   "kreditkarte": "Kreditkarte (card complete) auf Wunsch vermittelt, nicht inkludiert; Neukunden 1. Jahr gratis, danach Classic 1,80 € pro Monat, Gold 6,70 € pro Monat, Platinum 11,55 € pro Monat",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "SB-Geräte bank99 und Geldautomaten in Euro im EU-Raum unbegrenzt gratis; Schalter-Behebung 4,79 €",
     "frei_monat": null,
@@ -915,7 +935,8 @@
     "preis_jahr": 0,
     "text": "Debitkarte (Erstkarte) inkl.; zusätzliche Debitkarte 24,71 € pro Jahr"
    },
-   "kreditkarte_inkl": "Kreditkarte (card complete) auf Wunsch vermittelt, nicht inkludiert; Neukunden 1. Jahr gratis, danach Classic 1,80 € pro Monat, Gold 6,70 € pro Monat, Platinum 11,55 € pro Monat",
+   "kreditkarte": "Kreditkarte (card complete) auf Wunsch vermittelt, nicht inkludiert; Neukunden 1. Jahr gratis, danach Classic 1,80 € pro Monat, Gold 6,70 € pro Monat, Platinum 11,55 € pro Monat",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "SB-Geräte und Geldautomaten in Euro im EU-Raum sowie Schalter unbegrenzt gratis",
     "frei_monat": null,
@@ -968,7 +989,8 @@
     "preis_jahr": 0,
     "text": "Debitkarte (Erstkarte) inkl.; zusätzliche Debitkarte 24,71 € pro Jahr"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "SB-Geräte und Geldautomaten in Euro im EU-Raum unbegrenzt gratis; Schalter bis 21. Geburtstag gratis",
     "frei_monat": null,
@@ -1021,7 +1043,8 @@
     "preis_jahr": 0,
     "text": "Debitkarte (Erstkarte) inkl.; zusätzliche Debitkarte 24,71 € pro Jahr"
    },
-   "kreditkarte_inkl": "Studentenkreditkarte (card complete) optional, 1. Jahr gratis",
+   "kreditkarte": "Studentenkreditkarte (card complete) optional, 1. Jahr gratis",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "SB-Geräte und Geldautomaten in Euro im EU-Raum unbegrenzt gratis; Schalter-Leistungen während Rabattzeitraum gratis",
     "frei_monat": null,
@@ -1066,7 +1089,8 @@
     "preis_jahr": 0,
     "text": "Debitkarte inkl."
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebung/Einzahlung an SB-Geräten, Geldautomaten im EWR und am Schalter unbegrenzt inkl.",
     "frei_monat": null,
@@ -1119,7 +1143,8 @@
     "preis_jahr": 0,
     "text": "Debitkarte gratis (laut Studentenseite Debit Mastercard)"
    },
-   "kreditkarte_inkl": "Kreditkarte (Visa/Mastercard Classic/Gold) nicht inkl.: Classic 1,24 € pro Monat im 1. Jahr, danach 1,85 € pro Monat; Gold 3,05 € pro Monat, danach 6,09 € pro Monat",
+   "kreditkarte": "Kreditkarte (Visa/Mastercard Classic/Gold) nicht inkl.: Classic 1,24 € pro Monat im 1. Jahr, danach 1,85 € pro Monat; Gold 3,05 € pro Monat, danach 6,09 € pro Monat",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebung in Euro an allen Bankomaten im EWR gratis (Raiffeisen- und Fremdautomaten), unbegrenzt; Schalter 3,91 €",
     "frei_monat": null,
@@ -1172,7 +1197,8 @@
     "preis_jahr": 0,
     "text": "Debitkarte gratis (laut Studentenseite Debit Mastercard)"
    },
-   "kreditkarte_inkl": "Kreditkarte (Visa/Mastercard Classic/Gold) nicht inkl.: Classic 1,24 € pro Monat im 1. Jahr, danach 1,85 € pro Monat; Gold 3,05 € pro Monat, danach 6,09 € pro Monat",
+   "kreditkarte": "Kreditkarte (Visa/Mastercard Classic/Gold) nicht inkl.: Classic 1,24 € pro Monat im 1. Jahr, danach 1,85 € pro Monat; Gold 3,05 € pro Monat, danach 6,09 € pro Monat",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebung in Euro an allen Bankomaten im EWR gratis (Raiffeisen- und Fremdautomaten), unbegrenzt; Schalter 3,91 €",
     "frei_monat": null,
@@ -1217,7 +1243,8 @@
     "preis_jahr": 0,
     "text": "Debit Mastercard inkl."
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Bankomatbehebung und POS im Euro-Raum gratis (unbegrenzt); Bargeld ein-/auszahlen in MARIE-Trafiken 2,00 €",
     "frei_monat": null,
@@ -1270,7 +1297,8 @@
     "preis_jahr": 0,
     "text": "Debit Mastercard inkl."
    },
-   "kreditkarte_inkl": "PayLife Classic (Visa/Mastercard) auf separaten Antrag nach 3 Gehaltseingängen ab 1.340 € pro Monat und Bonität; gratis ab 3.000 € Kartenumsatz/Jahr (sonst 14,15 bzw. 28,30 € pro Jahr)",
+   "kreditkarte": "PayLife Classic (Visa/Mastercard) auf separaten Antrag nach 3 Gehaltseingängen ab 1.340 € pro Monat und Bonität; gratis ab 3.000 € Kartenumsatz/Jahr (sonst 14,15 bzw. 28,30 € pro Jahr)",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Bankomatbehebung und POS im Euro-Raum gratis (unbegrenzt); Bargeld ein-/auszahlen in MARIE-Trafiken 2,00 €",
     "frei_monat": null,
@@ -1311,7 +1339,8 @@
     "preis_jahr": 0,
     "text": "Debit Mastercard inkl."
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Bankomatbehebung im EWR gratis; Barein-/auszahlung in MARIE-Partnertrafiken inkludiert (max. 400 €/Tag Behebung, 1.000 €/Tag Einzahlung)",
     "frei_monat": null,
@@ -1352,7 +1381,8 @@
     "preis_jahr": 0,
     "text": "1 Debitkarte in Kontoführung enthalten"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Automatenbehebung/-einzahlung inkludiert; Behebung am Schalter 4,55 €",
     "frei_monat": null,
@@ -1393,7 +1423,8 @@
     "preis_jahr": 0,
     "text": "1 Debitkarte in Kontoführung enthalten"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Automatenbehebung inkludiert; Schalterbehebung 2,82 €",
     "frei_monat": null,
@@ -1439,7 +1470,8 @@
     "preis_jahr": 0,
     "text": "Debitkarte „Student-ID“ (mit ISIC) gratis"
    },
-   "kreditkarte_inkl": "Smartcard (Mastercard/Visa) für Studierende gratis bis 27; Premiumcard 1. Jahr gratis (bis 31.12.2026), danach halber Preis 4,12 € pro Monat",
+   "kreditkarte": "Smartcard (Mastercard/Visa) für Studierende gratis bis 27; Premiumcard 1. Jahr gratis (bis 31.12.2026), danach halber Preis 4,12 € pro Monat",
+   "kreditkarte_inkl": true,
    "bargeld": {
     "text": "Alle Buchungen kostenlos laut Produktseite; Automatenbehebung EU/EWR in Euro kostenlos",
     "frei_monat": null,
@@ -1484,7 +1516,8 @@
     "preis_jahr": 0,
     "text": "spark7 Debitkarte gratis (Wochenlimit max. 400 €)"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Alle Bargeldtransaktionen in Selbstbedienung inkludiert",
     "frei_monat": null,
@@ -1525,7 +1558,8 @@
     "preis_jahr": 0,
     "text": "1 Debitkarte inkl."
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Alle Bargeldtransaktionen in SB und am Schalter inkludiert",
     "frei_monat": null,
@@ -1571,7 +1605,8 @@
     "preis_jahr": 15.18,
     "text": "Debit Mastercard 15,18 € pro Jahr"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebungen und Zahlungen mit Debit Mastercard im EU-Raum in Euro kostenlos seitens DADAT; Fremdbetreiber-Entgelte möglich",
     "frei_monat": null,
@@ -1624,7 +1659,8 @@
     "preis_jahr": 0,
     "text": "Debit Mastercard 1. Inhaber kostenlos"
    },
-   "kreditkarte_inkl": "Visa Gold: Neukundenaktion bis 31.12.2027 - Kartengebühr 1. Vertragsjahr übernommen (bei mind. 1.000 € Eingang/Nettoeinkommen und Bonität), danach 80,40 € pro Jahr",
+   "kreditkarte": "Visa Gold: Neukundenaktion bis 31.12.2027 - Kartengebühr 1. Vertragsjahr übernommen (bei mind. 1.000 € Eingang/Nettoeinkommen und Bonität), danach 80,40 € pro Jahr",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebungen und Zahlungen mit Debit Mastercard im EU-Raum in Euro kostenlos seitens DADAT; Fremdbetreiber-Entgelte möglich",
     "frei_monat": null,
@@ -1677,7 +1713,8 @@
     "preis_jahr": 0,
     "text": "Debit Mastercard 1. Inhaber kostenlos"
    },
-   "kreditkarte_inkl": "Visa Gold: Neukundenaktion bis 31.12.2027 - Kartengebühr 1. Vertragsjahr übernommen (bei mind. 1.000 € Eingang/Nettoeinkommen und Bonität), danach 80,40 € pro Jahr",
+   "kreditkarte": "Visa Gold: Neukundenaktion bis 31.12.2027 - Kartengebühr 1. Vertragsjahr übernommen (bei mind. 1.000 € Eingang/Nettoeinkommen und Bonität), danach 80,40 € pro Jahr",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebungen und Zahlungen mit Debit Mastercard im EU-Raum in Euro kostenlos seitens DADAT; Fremdbetreiber-Entgelte möglich",
     "frei_monat": null,
@@ -1730,7 +1767,8 @@
     "preis_jahr": 0,
     "text": "Debit Mastercard kostenlos"
    },
-   "kreditkarte_inkl": "Visa Gold 1. Vertragsjahr gratis (Aktion bis 31.12.2027) bei monatlichem Geldeingang ab  1.000 €",
+   "kreditkarte": "Visa Gold 1. Vertragsjahr gratis (Aktion bis 31.12.2027) bei monatlichem Geldeingang ab  1.000 €",
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Behebungen und Zahlungen mit Debit Mastercard im EU-Raum in Euro kostenlos seitens DADAT; Fremdbetreiber-Entgelte möglich",
     "frei_monat": null,
@@ -1783,7 +1821,8 @@
     "preis_jahr": 0,
     "text": "1 Visa Debitkarte inkl."
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Automatenbehebung im Euroraum inkludiert; Bargeld+ (bis 4.000 €) 3,50 € je Transaktion; Fremdspesen werden weiterbelastet",
     "frei_monat": null,
@@ -1828,7 +1867,8 @@
     "preis_jahr": 0,
     "text": "1 Visa Debitkarte inkl.; weitere 3,10 € pro Monat"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Automatenbehebung im Euroraum inkludiert; Bargeld+ 1x/Monat gratis, jede weitere 3,50 €",
     "frei_monat": null,
@@ -1873,7 +1913,8 @@
     "preis_jahr": 0,
     "text": "1 Visa Debitkarte inkl."
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Automatenbehebung im Euroraum inkludiert; Bargeld+ 1x/Monat gratis, jede weitere 3,50 €",
     "frei_monat": null,
@@ -1918,7 +1959,8 @@
     "preis_jahr": 0,
     "text": "Visa Debitkarte inkl. (Limit 400 €/Woche)"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Automatenbehebung im Euroraum inkludiert",
     "frei_monat": null,
@@ -1963,7 +2005,8 @@
     "preis_jahr": 0,
     "text": "Visa Debitkarte im Kids-Design inkl. (Standardlimit 50 €/Woche)"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Automatenbehebung an Visa-Automaten kostenlos",
     "frei_monat": null,
@@ -2004,7 +2047,8 @@
     "preis_jahr": 0,
     "text": "1 Visa Debitkarte inkl."
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Automatenbehebung inkludiert; Bargeld+ 1x/Monat gratis, jede weitere 3,50 €",
     "frei_monat": null,
@@ -2044,6 +2088,8 @@
     "preis_jahr": null,
     "text": "virtuelle Mastercard-Debitkarte gratis; physische Karte 10 € einmalig (inkl. Versand)"
    },
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (Fair-Use gilt laut Preisliste NICHT für Kunden mit Lieferadresse Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
     "frei_monat": null,
@@ -2056,7 +2102,6 @@
     "max": null,
     "text": "ab 18 Jahren, Wohnsitz in unterstütztem Land, Smartphone"
    },
-   "kreditkarte_inkl": null,
    "fremdwaehrung_prozent": 0,
    "sollzins": 8.9,
    "ueberschreitung": 8.9,
@@ -2089,6 +2134,8 @@
     "preis_jahr": 0,
     "text": "physische Mastercard-Debitkarte inkl."
    },
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (Fair-Use gilt laut Preisliste NICHT für Kunden mit Lieferadresse Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
     "frei_monat": null,
@@ -2101,7 +2148,6 @@
     "max": null,
     "text": "ab 18 Jahren, Wohnsitz in unterstütztem Land, Smartphone"
    },
-   "kreditkarte_inkl": null,
    "fremdwaehrung_prozent": 0,
    "sollzins": 8.9,
    "ueberschreitung": 8.9,
@@ -2134,6 +2180,8 @@
     "preis_jahr": 0,
     "text": "physische Mastercard-Debitkarte inkl."
    },
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (Fair-Use gilt laut Preisliste NICHT für Kunden mit Lieferadresse Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
     "frei_monat": null,
@@ -2146,7 +2194,6 @@
     "max": null,
     "text": "ab 18 Jahren, Wohnsitz in unterstütztem Land, Smartphone"
    },
-   "kreditkarte_inkl": null,
    "fremdwaehrung_prozent": 0,
    "sollzins": 8.9,
    "ueberschreitung": 8.9,
@@ -2179,6 +2226,8 @@
     "preis_jahr": 0,
     "text": "Metal-Debitkarte (World Elite Mastercard) inkl."
    },
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (Fair-Use gilt laut Preisliste NICHT für Kunden mit Lieferadresse Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
     "frei_monat": null,
@@ -2191,7 +2240,6 @@
     "max": null,
     "text": "ab 18 Jahren, Wohnsitz in unterstütztem Land, Smartphone"
    },
-   "kreditkarte_inkl": null,
    "fremdwaehrung_prozent": 0,
    "sollzins": 8.9,
    "ueberschreitung": 8.9,
@@ -2224,7 +2272,8 @@
     "preis_jahr": null,
     "text": "virtuelle Karte gratis; erste physische Karte gratis, aber Liefergebühr 7,99 € (lokal Standard)"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "5 Abhebungen oder 200 € pro laufendem Monat gratis (was zuerst eintritt), danach 2 % mind. 1 €",
     "frei_monat": 5,
@@ -2269,7 +2318,8 @@
     "preis_jahr": 0,
     "text": "Plus-Karte inkl., Standardlieferung gratis"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "200 € pro laufendem Monat gratis, danach 2 % mind. 1 €",
     "frei_monat": null,
@@ -2314,7 +2364,8 @@
     "preis_jahr": 0,
     "text": "Premium-Karte inkl., Lieferung gratis"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "400 € pro rollierendem Monat gratis, danach 2 % mind. 1 €",
     "frei_monat": null,
@@ -2359,7 +2410,8 @@
     "preis_jahr": 0,
     "text": "Metal-Karte inkl. (40 € fällig bei Kündigung binnen 14 Tagen)"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "800 € pro rollierendem Monat gratis, danach 2 % mind. 1 €",
     "frei_monat": null,
@@ -2404,7 +2456,8 @@
     "preis_jahr": 0,
     "text": "Ultra-Karte inkl. (50 € fällig bei Kündigung binnen 6 Monaten)"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "2.000 € pro rollierendem Monat gratis, danach 2 % mind. 1 €",
     "frei_monat": null,
@@ -2449,6 +2502,8 @@
     "preis_jahr": null,
     "text": "nur 1 digitale Karte"
    },
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Abhebungen nur an Apple-Pay/Google-Pay-fähigen Automaten, je 2,99 €",
     "frei_monat": 0,
@@ -2464,7 +2519,6 @@
     "max": null,
     "text": null
    },
-   "kreditkarte_inkl": null,
    "sollzins": null,
    "ueberschreitung": null,
    "einzelposten": null,
@@ -2494,6 +2548,8 @@
     "preis_jahr": 0,
     "text": "1 physische + 1 digitale Karte"
    },
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "erste 5 Abhebungen/Monat je 0,99 €, danach je 2,99 €",
     "frei_monat": 0,
@@ -2509,7 +2565,6 @@
     "max": null,
     "text": null
    },
-   "kreditkarte_inkl": null,
    "sollzins": null,
    "ueberschreitung": null,
    "einzelposten": null,
@@ -2539,6 +2594,8 @@
     "preis_jahr": 0,
     "text": "3 physische + 25 digitale Karten"
    },
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "6 Abhebungen/Monat gratis, nächste 5 je 0,99 €, danach je 2,99 €",
     "frei_monat": 6,
@@ -2554,7 +2611,6 @@
     "max": null,
     "text": null
    },
-   "kreditkarte_inkl": null,
    "sollzins": null,
    "ueberschreitung": null,
    "einzelposten": null,
@@ -2584,6 +2640,8 @@
     "preis_jahr": 0,
     "text": "3 physische + 25 digitale Karten"
    },
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "6 Abhebungen/Monat gratis, nächste 5 je 0,99 €, danach je 2,99 €",
     "frei_monat": 6,
@@ -2599,7 +2657,6 @@
     "max": null,
     "text": null
    },
-   "kreditkarte_inkl": null,
    "sollzins": null,
    "ueberschreitung": null,
    "einzelposten": null,
@@ -2635,7 +2692,8 @@
     "preis_jahr": null,
     "text": "Visa-Debit: virtuell gratis; Classic 5 € einmalig; Mirror 50 € einmalig"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Abhebungen weltweit ab 100 € gratis, unter 100 € je 1 €",
     "frei_monat": null,
@@ -2688,7 +2746,8 @@
     "preis_jahr": 0,
     "text": "Visa-Debitkarte (V-Pay) + virtuelle Karte inkl.; Ersatzkarte 10 € bei Verschulden"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "1 kostenlose Abhebung pro Monat, danach 3 € je Abhebung; laut FAQ in Österreich kostenlose Abhebungen nur eingeschränkt möglich",
     "frei_monat": 1,
@@ -2733,7 +2792,8 @@
     "preis_jahr": 0,
     "text": "Visa-Debitkarte (4 Designs) + virtuelle Karte inkl."
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "5 kostenlose Abhebungen pro Monat, danach 3 €; in Österreich laut FAQ eingeschränkt",
     "frei_monat": 5,
@@ -2778,7 +2838,8 @@
     "preis_jahr": 0,
     "text": "Visa-Debitkarte (4 Designs oder Holzkarte) + virtuelle Karte inkl."
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Unbegrenzt kostenlose Abhebungen; in Österreich laut FAQ eingeschränkt",
     "frei_monat": null,
@@ -2831,7 +2892,8 @@
     "preis_jahr": 0,
     "text": "Visa Debitkarte kostenlos; Girokarte optional 0,99 € pro Monat"
    },
-   "kreditkarte_inkl": null,
+   "kreditkarte": null,
+   "kreditkarte_inkl": false,
    "bargeld": {
     "text": "Visa Debit: Abhebung in Euro an Geldautomaten kostenlos seitens DKB, Mindestabhebebetrag 50 €",
     "frei_monat": null,

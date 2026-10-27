@@ -6,7 +6,7 @@ BURGER='<svg class="ic-burger" width="26" height="26" viewBox="0 0 24 24" fill="
 
 # Hauptnavigation und „Mehr“ ohne Überschneidung (jeder Link nur einmal im DOM).
 AT_MAIN=[('at/kreditkarten/','Kreditkarten'),('at/girokonto/','Girokonten'),('at/kreditkarten/bestenlisten/','Bestenlisten'),('at/ratgeber/','Ratgeber'),('at/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
-AT_MORE=[('at/kreditkarten/business/','Business-Kreditkarten'),('at/girokonto/methodik/','So bewerten wir Girokonten'),('at/kreditkarten/alle/','Alle Karten nach Anbieter'),('at/kreditkarten/methodik/','So entstehen die Sterne'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
+AT_MORE=[('at/kreditkarten/business/','Business-Kreditkarten'),('at/girokonto/bestenlisten/','Girokonto-Bestenlisten'),('at/girokonto/methodik/','So bewerten wir Girokonten'),('at/kreditkarten/alle/','Alle Karten nach Anbieter'),('at/kreditkarten/methodik/','So entstehen die Sterne'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
 DE_MAIN=[('de/kreditkarten/','Kreditkarten'),('de/kreditkarten/bestenlisten/','Bestenlisten'),('de/ratgeber/','Ratgeber'),('de/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
 DE_MORE=[('de/kreditkarten/business/','Business-Kreditkarten'),('de/kreditkarten/alle/','Alle Karten nach Anbieter'),('de/kreditkarten/methodik/','So entstehen die Sterne'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
 INFO=[]
