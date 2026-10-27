@@ -2010,7 +2010,7 @@
    "kreditkarte": null,
    "kreditkarte_inkl": false,
    "bargeld": {
-    "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (Fair-Use gilt laut Preisliste NICHT für Kunden mit Lieferadresse Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
+    "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (laut Preisliste ohne Fair-Use-Grenze für Kunden mit Lieferadresse in Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
     "frei_monat": null,
     "danach_eur": null,
     "ausland": "Nicht-Euro-Abhebung 1,7 % vom Betrag; Kartenzahlung in Fremdwährung ohne Aufschlag"
@@ -2054,7 +2054,7 @@
    "kreditkarte": null,
    "kreditkarte_inkl": false,
    "bargeld": {
-    "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (Fair-Use gilt laut Preisliste NICHT für Kunden mit Lieferadresse Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
+    "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (laut Preisliste ohne Fair-Use-Grenze für Kunden mit Lieferadresse in Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
     "frei_monat": null,
     "danach_eur": null,
     "ausland": "Nicht-Euro-Abhebung 1,7 % vom Betrag; Kartenzahlung in Fremdwährung ohne Aufschlag"
@@ -2098,7 +2098,7 @@
    "kreditkarte": null,
    "kreditkarte_inkl": false,
    "bargeld": {
-    "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (Fair-Use gilt laut Preisliste NICHT für Kunden mit Lieferadresse Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
+    "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (laut Preisliste ohne Fair-Use-Grenze für Kunden mit Lieferadresse in Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
     "frei_monat": null,
     "danach_eur": null,
     "ausland": "Abhebungen in Fremdwährung kostenlos; Kartenzahlung ohne Aufschlag"
@@ -2142,7 +2142,7 @@
    "kreditkarte": null,
    "kreditkarte_inkl": false,
    "bargeld": {
-    "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (Fair-Use gilt laut Preisliste NICHT für Kunden mit Lieferadresse Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
+    "text": "Abhebungen in Euro mit Mastercard kostenlos, unbegrenzt (laut Preisliste ohne Fair-Use-Grenze für Kunden mit Lieferadresse in Österreich); CASH26 Abhebung gratis, Einzahlung 1,5 %.",
     "frei_monat": null,
     "danach_eur": null,
     "ausland": "Abhebungen in Fremdwährung kostenlos; Kartenzahlung ohne Aufschlag"

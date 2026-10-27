@@ -144,7 +144,7 @@ def render(land,slug):
         {"@type":"WebSite","@id":"https://finvallo.com/#website","name":"Finvallo","url":"https://finvallo.com/","inLanguage":"de","publisher":{"@id":"https://finvallo.com/#org"}},
         {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":LAND[land]['name'],"item":f"https://finvallo.com/{land}/"},{"@type":"ListItem","position":2,"name":"Ratgeber","item":f"https://finvallo.com/{land}/ratgeber/"},{"@type":"ListItem","position":3,"name":a['h1'],"item":url}]},
         {"@type":"Article","@id":url+"#article","headline":a['h1'],"description":a['desc'],"inLanguage":LAND[land]['lang'],"datePublished":a.get('pub',STAND),"dateModified":STAND,
-         "author":{"@id":"https://finvallo.com/#org"},"publisher":{"@id":"https://finvallo.com/#org"},"mainEntityOfPage":url,"about":f"Kreditkarten in {LAND[land]['name']}","image":"https://finvallo.com/assets/og.png"}]}
+         "author":{"@id":"https://finvallo.com/#org"},"publisher":{"@id":"https://finvallo.com/#org"},"mainEntityOfPage":url,"about":a.get('about') or f"Kreditkarten in {LAND[land]['name']}","image":"https://finvallo.com/assets/og.png"}]}
     if fq: ld['@graph'].append({"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":re.sub(r'<[^>]+>','',x)}} for q,x in fq]})
     land_div=(f'<div class="land" role="group" aria-label="Land wählen"><a href="{P}at/ratgeber/{oslug if land=="de" else slug}/" hreflang="de-AT" aria-current="{"true" if land=="at" else "false"}" title="Österreich">AT</a>'
               f'<a href="{P}de/ratgeber/{oslug if land=="at" else slug}/" hreflang="de-DE" aria-current="{"true" if land=="de" else "false"}" title="Deutschland">DE</a></div>') if alt else None
@@ -285,6 +285,7 @@ def build(land):
         import ratgeber_bargeld; ratgeber_bargeld.register(art,P,best,cards.D['at'][0],karten.card_count('at','private'),eur,karten)
         import ratgeber_studenten; ratgeber_studenten.register(art,P,best,cards.D['at'][0],karten.card_count('at','private'),eur,karten)
         import ratgeber_wallet; ratgeber_wallet.register(art,P,best,cards.D['at'][0],karten.card_count('at','private'),eur,karten)
+        import ratgeber_girokonto; ratgeber_girokonto.register(art,P,eur)
     if land=='de':
         import karten, ratgeber_bargeld_de
         ratgeber_bargeld_de.register(art,P,best,cards.D['de'][0],karten.card_count('de','private'),eur,karten)
@@ -389,7 +390,7 @@ def meta(land,slug):
     h1=html.unescape(re.sub(r'<[^>]+>','',re.search(r'<h1>(.*?)</h1>',s,re.S).group(1)))
     d=html.unescape(re.search(r'<meta name="description" content="([^"]*)"',s).group(1))
     return h1,d
-ORDER=['kostenlose-kreditkarte','kreditkarte-studenten','kreditkarte-beantragen','fremdwaehrung','bargeld-beheben','bargeld-abheben','reiseversicherung','flugverspaetung-gepaeck','punkte-sammeln-at','punkte-sammeln-de','lounges','visa-mastercard-amex','apple-pay-google-pay','mietwagen-kaution','ohne-bonitaetspruefung','kartentypen','teilzahlung','business']
+ORDER=['kostenloses-girokonto','girokonto-wechseln','basiskonto','kostenlose-kreditkarte','kreditkarte-studenten','kreditkarte-beantragen','fremdwaehrung','bargeld-beheben','bargeld-abheben','reiseversicherung','flugverspaetung-gepaeck','punkte-sammeln-at','punkte-sammeln-de','lounges','visa-mastercard-amex','apple-pay-google-pay','mietwagen-kaution','ohne-bonitaetspruefung','kartentypen','teilzahlung','business']
 def index_pages():
     for land in ('at','de'):
         f=R+f'{land}/ratgeber/index.html'; s=open(f).read()

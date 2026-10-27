@@ -67,7 +67,7 @@ def eingangT(g):
 def kurzbed(k):
     if k['kf_jahr']==0: return 'Ohne Bedingung'
     g=k.get('gratis')
-    if not g: return '–'
+    if not g: return 'kein Gratis-Modell'
     bits=[x for x in (eingangT(g),f'unter {g["alter_unter"]} Jahren' if g.get('alter_unter') else None) if x]
     t=(' oder ' if g.get('verknuepfung')!='und' else ' und ').join(bits) if bits else (g.get('text') or 'mit Bedingung')
     pre='Gratis ' if g.get('kf_bedingt')==0 else f'{eur(g["kf_bedingt"])} € pro Monat '
@@ -338,7 +338,7 @@ def list_page(ks,secs,d):
 <div class="wrap"><main id="app">
 <h1>Girokonto-Vergleich Österreich</h1>
   <p class="lede">{n} Girokonten von {nb} Banken, die überall in Österreich Kundinnen und Kunden annehmen. Jede Zahl stammt aus der Entgeltinformation oder Preisliste der Bank. Sortiert nach unserer Bewertung, Provisionen haben keinen Einfluss.</p>
-  <p class="note" style="margin:6px 0 14px">Bestenlisten: {" · ".join(f'<a class="lnk" href="bestenlisten/{c["k"]}/">{E(c["t"])}</a>' for c in GCATS)}</p>
+  <p class="note" style="margin:6px 0 14px">Bestenlisten: {" · ".join(f'<a class="lnk" href="bestenlisten/{c["k"]}/">{E(c["t"])}</a>' for c in GCATS)}<br>Ratgeber: <a class="lnk" href="{P}at/ratgeber/kostenloses-girokonto/">Kostenloses Girokonto</a> · <a class="lnk" href="{P}at/ratgeber/girokonto-wechseln/">Konto wechseln</a> · <a class="lnk" href="{P}at/ratgeber/basiskonto/">Basiskonto</a></p>
   {calcbox()}
   {filterbox(n)}
   <details class="box howscore"><summary><span><b>So entstehen die Sterne</b><br><small>6 Kriterien, feste Regeln, offene Gewichtung</small></span><span class="lnk">anzeigen</span></summary>
@@ -467,6 +467,7 @@ def bestenlisten(ks,BL):
 <p class="note" style="margin-top:8px">{bsp} Bei gleicher Note steht das günstigere Konto vorn.</p>
 <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div>
 <p class="note" style="margin-top:18px"><a class="lnk" href="../../">Zum Girokonto-Vergleich mit Rechner →</a> · <a class="lnk" href="../../methodik/">So bewerten wir →</a></p>
+<p class="note">Ratgeber: <a class="lnk" href="{P2}at/ratgeber/kostenloses-girokonto/">Kostenloses Girokonto</a> · <a class="lnk" href="{P2}at/ratgeber/girokonto-wechseln/">Konto wechseln</a> · <a class="lnk" href="{P2}at/ratgeber/basiskonto/">Basiskonto</a></p>
 </main>
 {K.footer(P2)}''')
 
