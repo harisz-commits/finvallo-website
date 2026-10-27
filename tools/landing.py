@@ -21,6 +21,7 @@ I={
 'trophy':'<path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7M10 17h4"/>',
 'brief':'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/>',
 'calc':'<rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 14.5h.01M12 14.5h.01M16 14.5h.01M8 18h.01M12 18h4"/>',
+'coin':'<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M14.5 9.5c-.5-.8-1.4-1.2-2.5-1.2-1.5 0-2.5.8-2.5 1.9 0 2.6 5 1.4 5 4 0 1.1-1 1.9-2.5 1.9-1.1 0-2-.4-2.5-1.2"/>',
 'bank':'<path d="M3 9.5L12 4l9 5.5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/>',
 'chart':'<path d="M3 17l5.5-5.5 4 4L21 7M15 7h6v6"/>',
 'pie':'<path d="M12 3v9h9a9 9 0 1 1-9-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
@@ -78,7 +79,7 @@ def footer(P,hdr,year,stand,land='at'):
     return f'''<footer class="hp-foot"><div class="hp-w">
 <div class="hp-foot-grid">
 <div class="hp-foot-brand"><a class="brand" href="{P or './'}">{mark(hdr)}<b>fin<span>vallo</span></b></a><p>Unabhängiger Finanzvergleich für Österreich und Deutschland.</p><div class="hp-foot-lands"><a href="{P}at/" hreflang="de-AT">{FLAG['AT']} Österreich</a><a href="{P}de/" hreflang="de-DE">{FLAG['DE']} Deutschland</a></div></div>
-<div><h4>Vergleiche</h4><a href="{P}{land}/kreditkarten/">Kreditkarten {N[land]}</a><a href="{P}{o}/kreditkarten/" hreflang="de-{o.upper()}">Kreditkarten {N[o]}</a><a href="{P}{land}/kreditkarten/bestenlisten/">Bestenlisten</a><a href="{P}{land}/kreditkarten/business/">Business-Kreditkarten</a><a href="{P}{land}/kreditkarten/rechner/">Kartenrechner</a></div>
+<div><h4>Vergleiche</h4><a href="{P}{land}/kreditkarten/">Kreditkarten {N[land]}</a><a href="{P}{o}/kreditkarten/" hreflang="de-{o.upper()}">Kreditkarten {N[o]}</a><a href="{P}{land}/kreditkarten/bestenlisten/">Bestenlisten</a><a href="{P}{land}/kreditkarten/rechner/">Kartenrechner</a></div>
 <div><h4>Ratgeber</h4><a href="{P}at/ratgeber/" hreflang="de-AT">Ratgeber Österreich</a><a href="{P}de/ratgeber/" hreflang="de-DE">Ratgeber Deutschland</a><a href="{P}{land}/ratgeber/teilzahlung/">Teilzahlung</a><a href="{P}{land}/ratgeber/reiseversicherung/">Reiseversicherung</a><a href="{P}{land}/ratgeber/kartentypen/">Kartentypen</a></div>
 <div><h4>Unternehmen</h4><a href="{P}ueber-uns/">Über Finvallo</a><a href="{P}{land}/kreditkarten/methodik/">So bewerten wir</a><a href="{P}so-verdienen-wir-geld/">So verdienen wir Geld</a></div>
 <div><h4>Rechtliches</h4><a href="{P}impressum/">Impressum</a><a href="{P}datenschutz/">Datenschutz</a><a href="{P}llms.txt">Für KI-Assistenten</a></div>
@@ -144,6 +145,9 @@ def page(rel, build):
 AT=load('AT'); DD=load('DE')
 _gp=lambda l:os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten',l,'girokonten.json')
 nA=len(AT['karten']); nG=len(json.load(open(_gp('at')))['konten']); nGD=len(json.load(open(_gp('de')))['konten']) if os.path.exists(_gp('de')) else 0; anbA=len({c['anbieter'] for c in AT['karten']})
+_fp=lambda l:os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten',l,'festgeld.json')
+nF={l:(len(json.load(open(_fp(l)))['angebote']) if os.path.exists(_fp(l)) else 0) for l in ('at','de')}
+def ftile(P,l,t): return [tile(P,f'{l}/festgeld/','coin',t,f'{nF[l]} Angebote im Vergleich')] if nF[l] else []
 
 def b_root(P,hdr):
     t,tc=topcards(P,AT,'Österreich',AT_TOP)
@@ -153,6 +157,7 @@ def b_root(P,hdr):
       tile(P,'de/kreditkarten/','card','Kreditkarten Deutschland',f'{len(DD["karten"])} Karten im Vergleich' if DD else 'Ratgeber · Vergleich in Arbeit'),
       tile(P,'at/girokonto/','bank','Girokonten Österreich',f'{nG} Konten im Vergleich'),
       *([tile(P,'de/girokonto/','bank','Girokonten Deutschland',f'{nGD} Konten im Vergleich')] if nGD else []),
+      *ftile(P,'at','Festgeld Österreich'),*ftile(P,'de','Festgeld Deutschland'),
       tile(P,'at/kreditkarten/bestenlisten/','trophy','Bestenlisten','Die besten Karten nach Kategorie'),
       tile(P,'at/kreditkarten/business/','brief','Business-Kreditkarten','Firmenkarten für Selbstständige'),
       tile(P,'at/kreditkarten/rechner/','calc','Kartenrechner','Was kostet dich deine Karte wirklich?'),
@@ -180,6 +185,7 @@ def b_at(P,hdr):
     t,tc=topcards(P,AT,'Österreich',AT_TOP,'at/kreditkarten/')
     tiles=''.join([tile(P,'at/kreditkarten/','card','Kreditkarten',f'{nA} Karten im Vergleich'),
       tile(P,'at/girokonto/','bank','Girokonten',f'{nG} Konten im Vergleich'),
+      *ftile(P,'at','Festgeld'),
       tile(P,'at/kreditkarten/bestenlisten/','trophy','Bestenlisten','Die besten Karten nach Kategorie'),
       tile(P,'at/kreditkarten/business/','brief','Business-Kreditkarten','Firmenkarten für Selbstständige'),
       tile(P,'at/kreditkarten/anbieter/','bank','Anbieter',f'{anbA} Banken und Kartenanbieter'),
@@ -206,6 +212,7 @@ def b_de(P,hdr):
         nD=None; t=None; tc=''
     tiles=''.join([tile(P,'de/kreditkarten/','card','Kreditkarten',f'{nD} Karten im Vergleich') if DD else tile(P,'','card','Kreditkarten-Vergleich','Wir sammeln und prüfen gerade alle Karten',True),
       *([tile(P,'de/girokonto/','bank','Girokonten',f'{nGD} Konten im Vergleich')] if nGD else []),
+      *ftile(P,'de','Festgeld'),
       tile(P,'de/ratgeber/punkte-sammeln-de/','star','Punkte & Meilen','Amex, Miles & More, Payback'),
       tile(P,'de/ratgeber/fremdwaehrung/','globe','Zahlen im Ausland','Gebühren und Kursaufschläge'),
       tile(P,'de/ratgeber/reiseversicherung/','plane','Reiseversicherung','Was die Karte wirklich abdeckt'),

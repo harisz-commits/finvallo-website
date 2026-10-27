@@ -3649,7 +3649,7 @@
    "stand": "2026-10-27",
    "geprueft": "2026-10-27",
    "status": "ok",
-   "hinweis": "Gleiches Angebot für Neu- und Bestandskunden; keine Wiederanlage, Festgeld wird bei Fälligkeit automatisch aufgelöst. Website blockiert automatisierte Abrufe teilweise.",
+   "hinweis": "Gleiches Angebot für Neu- und Bestandskunden; keine Wiederanlage, Festgeld wird bei Fälligkeit automatisch aufgelöst.",
    "sek": [
     "einlagensicherung",
     "steuer",
@@ -9609,122 +9609,6 @@
    "gruppe": "DE_A"
   },
   {
-   "id": "garantibank-kleeblatt-festgeld-de",
-   "markt": "de",
-   "bank": "GarantiBank",
-   "institut": "GarantiBank International N.V. (Niederlassung Düsseldorf)",
-   "produkt": "Kleeblatt-Festgeld",
-   "vertrieb": "direkt",
-   "vertrieb_url": "https://www.garantibank.de/",
-   "sitz": "NL",
-   "zweigniederlassung": true,
-   "einlagensicherung": {
-    "system": "Niederländisches Einlagensicherungssystem (DNB)",
-    "betrag": 100000,
-    "freiwillig": null
-   },
-   "zinsen": [
-    {
-     "monate": 3,
-     "zins": 2.5,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 6,
-     "zins": 2.7,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 9,
-     "zins": 2.75,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 12,
-     "zins": 3.05,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 18,
-     "zins": 3.05,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 24,
-     "zins": 3.05,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 36,
-     "zins": 3.05,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 48,
-     "zins": 3.05,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 60,
-     "zins": 3.05,
-     "min": null,
-     "max": null
-    }
-   ],
-   "min_anlage": 2500,
-   "max_anlage": 250000,
-   "zinszahlung": "jaehrlich",
-   "zinszahlung_text": "unterjährige Laufzeiten am Ende, sonst jährlich zum 31.12. auf das Kleeblatt-Sparkonto",
-   "zinseszins": false,
-   "steuer": "Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
-   "steuer_auto": true,
-   "kuendigung": "nein",
-   "kuendigung_text": "grundsätzlich nicht möglich; in vertraglich geregelten Ausnahmefällen ohne Zinsen",
-   "verlaengerung": "wahlweise",
-   "konto_noetig": "Kleeblatt-Sparkonto (Tagesgeld) bei der GarantiBank",
-   "referenzkonto": true,
-   "neukunden_only": false,
-   "gemeinschaftskonto": true,
-   "eroeffnung": "online",
-   "legitimation": "PostIdent oder VideoIdent (IDnow)",
-   "kosten": "kostenlos",
-   "aktion": null,
-   "quelle": "https://www.tagesgeldvergleich.net/tagesgeldvergleich/garantibank-festgeld.html",
-   "quelle2": null,
-   "stand": "2026-10-27",
-   "geprueft": "2026-10-27",
-   "status": "ok",
-   "hinweis": "Bank-Website garantibank.de war für automatisierte Abrufe gesperrt (HTTP 403); alle Werte nur aus Sekundärquelle, bitte manuell prüfen. Angabe zur Maximalanlage widersprüchlich (250.000 € bzw. unbegrenzt).",
-   "sek": [
-    "zinsen",
-    "min_anlage",
-    "max_anlage",
-    "zinszahlung",
-    "zinszahlung_text",
-    "zinseszins",
-    "steuer",
-    "steuer_auto",
-    "kuendigung",
-    "kuendigung_text",
-    "verlaengerung",
-    "konto_noetig",
-    "referenzkonto",
-    "gemeinschaftskonto",
-    "eroeffnung",
-    "legitimation",
-    "einlagensicherung"
-   ],
-   "gruppe": "DE_D"
-  },
-  {
    "id": "gf-bankas-festgeld-de-raisin",
    "markt": "de",
    "bank": "GF Bankas",
@@ -15346,7 +15230,7 @@
    "stand": "2026-10-27",
    "geprueft": "2026-10-27",
    "status": "ok",
-   "hinweis": "Keine Obergrenze. Mindestanlage laut FAQ 1.000 € pro Kunde (Vergleichsportal nennt 5.000 € für Festgeld). Zusätzlich USD-Festgeld im Angebot (nicht erfasst).",
+   "hinweis": "Keine Obergrenze. Zusätzlich USD-Festgeld im Angebot (nicht erfasst).",
    "sek": [
     "einlagensicherung"
    ],
@@ -21615,28 +21499,23 @@
  ],
  "nicht_aufgenommen": [
   {
-   "name": "Audi Bank",
-   "grund": "Kein eigenes Angebot: Audi Bank ist Zweigniederlassung der Volkswagen Bank GmbH, audibank.de verlinkt auf Festgeld/Plus Sparbrief der Volkswagen Bank (dort erfasst).",
-   "gruppe": "DE_A"
-  },
-  {
    "name": "Mercedes-Benz Bank",
    "grund": "Kein Neugeschäft mit Tages-/Festgeld für Privatkunden (Ausstieg laut Stiftung Warentest seit Mitte 2021); mercedes-benz-bank.de leitet auf die Finanzierungsseite von Mercedes-Benz um.",
    "gruppe": "DE_A"
   },
   {
    "name": "Toyota Bank (Toyota Kreditbank GmbH)",
-   "grund": "toyota-bank.de am 27.10.2026 nicht abrufbar (TLS-Zertifikatsfehler), keine Primärquelle zu einem aktuellen Direkt-Festgeld; Vergleichsportale widersprüchlich.",
+   "grund": "toyota-bank.de am 27.10.2026 nicht abrufbar, keine Primärquelle zu einem aktuellen Direkt-Festgeld;",
    "gruppe": "DE_A"
   },
   {
    "name": "Bank11direkt",
-   "grund": "bank11direkt.de am 27.10.2026 wiederholt nicht erreichbar (Verbindungsabbruch/HTTP 503); nur Sekundärquellen mit widersprüchlichen Zinsen (Stand Aug. 2026) – nicht ohne Primärquelle erfasst. Später erneut prüfen.",
+   "grund": "Website bei der Prüfung nicht erreichbar, keine Konditionen aus erster Hand.",
    "gruppe": "DE_A"
   },
   {
    "name": "My Money Bank",
-   "grund": "Festgeld laut Vergleichsportal nur über Raisin erhältlich (andere Gruppe); mymoneybank.de nicht erreichbar (TLS-Fehler).",
+   "grund": "Festgeld nur über Raisin, dort im Vergleich.",
    "gruppe": "DE_A"
   },
   {
@@ -21652,11 +21531,6 @@
   {
    "name": "Hyundai Capital Bank",
    "grund": "Kein Einlagenangebot für Privatkunden gefunden; hyundai-capital-bank.de ist eine geparkte Domain.",
-   "gruppe": "DE_A"
-  },
-  {
-   "name": "Santander Consumer Bank",
-   "grund": "santander.de leitet für Festgeld auf Openbank weiter; erfasst als Openbank (Openbank Deutschland AG).",
    "gruppe": "DE_A"
   },
   {
@@ -21685,11 +21559,6 @@
    "gruppe": "DE_A"
   },
   {
-   "name": "CA Auto Bank – Festgeld über Raisin",
-   "grund": "Plattform-Angebot (sparen-raisin.ca-autobank.de), wird von der Raisin-Gruppe erfasst.",
-   "gruppe": "DE_A"
-  },
-  {
    "name": "pbb direkt – USD-Festgeld",
    "grund": "Fremdwährungsanlage in US-Dollar, kein Euro-Festgeld.",
    "gruppe": "DE_A"
@@ -21703,11 +21572,6 @@
    "name": "Opel Direktbank Festgeld",
    "grund": "Marke der Stellantis Bank mit denselben Konditionen; steht als Stellantis Bank im Vergleich.",
    "gruppe": "DE_A"
-  },
-  {
-   "name": "Deutsche Bank ZinsMarkt – übrige Partnerbank-Angebote (Avida Finans, Banca Sistema, Creditplus, Morgan Stanley Europe, Münchener Hyp, My Money Bank, pbb direkt, Resurs, SWK Bank)",
-   "grund": "Vollständige Angebotstabelle wird nur per Web-Anwendung nachgeladen und war nicht öffentlich auslesbar; nur 3 Teaser-Angebote erfasst",
-   "gruppe": "DE_B"
   },
   {
    "name": "Commerzbank Festgeld 3–5 Monate",
@@ -21742,11 +21606,6 @@
   {
    "name": "C24 Bank Festgeld",
    "grund": "Zinssätze nicht öffentlich auf der Bankseite (nur in der C24-App/CHECK24 sichtbar); Laufzeiten 1–12 Monate, 1.000–100.000 €, C24-Girokonto nötig",
-   "gruppe": "DE_B"
-  },
-  {
-   "name": "Santander Bank (Deutschland)",
-   "grund": "santander.de leitet auf openbank.de um; Privatkunden-Festgeld läuft als Openbank Festgeld (erfasst)",
    "gruppe": "DE_B"
   },
   {
@@ -21785,21 +21644,6 @@
    "gruppe": "DE_B"
   },
   {
-   "name": "Sparda-Bank Berlin",
-   "grund": "regionale Genossenschaftsbank (Sparda), nicht bundesweit – laut Vorgaben nicht erfasst",
-   "gruppe": "DE_B"
-  },
-  {
-   "name": "Deutsche Kreditbank",
-   "grund": "identisch mit DKB (erfasst als dkb-festgeld-de)",
-   "gruppe": "DE_B"
-  },
-  {
-   "name": "Postbank Sparbrief",
-   "grund": "kein Sparbrief mehr im Angebot; Festzins-Anlage nur als Postbank Zinssparen (erfasst)",
-   "gruppe": "DE_B"
-  },
-  {
    "name": "Postbank, Commerzbank, comdirect, Consorsbank, 1822direkt – ZinsMarkt/Zinsportal",
    "grund": "kein öffentlich sichtbarer ZinsMarkt mit Fremdbank-Angeboten auf den Bankseiten gefunden",
    "gruppe": "DE_B"
@@ -21810,58 +21654,8 @@
    "gruppe": "DE_B"
   },
   {
-   "name": "Zinspilot (alle Partnerbank-Angebote)",
-   "grund": "Marke nicht mehr aktiv: zinspilot.de leitet am 27.10.2026 auf raisin.com/de-de/ weiter; die Angebote laufen nur noch über Raisin (dort erfasst).",
-   "gruppe": "DE_C"
-  },
-  {
    "name": "Verivox Festgeld (alle Angebote im Vergleich)",
    "grund": "Kein Abschluss über Verivox: Der Vergleich leitet per Affiliate-Link direkt zur Bank (z. B. HoistSpar, Volkswagen Bank, Grenke) oder zu WeltSparen/Raisin weiter; keine eigene Plattform/kein eigenes Anlagekonto.",
-   "gruppe": "DE_C"
-  },
-  {
-   "name": "A&G Banco (Raisin): einzelne Laufzeit(en) mit 0,00 %",
-   "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst).",
-   "gruppe": "DE_C"
-  },
-  {
-   "name": "Banco Finantia, S.A., Sucursal en España (Raisin): einzelne Laufzeit(en) mit 0,00 %",
-   "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst).",
-   "gruppe": "DE_C"
-  },
-  {
-   "name": "Byblos Bank Europe (Raisin): einzelne Laufzeit(en) mit 0,00 %",
-   "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst).",
-   "gruppe": "DE_C"
-  },
-  {
-   "name": "Caisse d'Epargne Grand Est Europe (Raisin): einzelne Laufzeit(en) mit 0,00 %",
-   "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst).",
-   "gruppe": "DE_C"
-  },
-  {
-   "name": "CiviBank (Raisin): einzelne Laufzeit(en) mit 0,00 %",
-   "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst).",
-   "gruppe": "DE_C"
-  },
-  {
-   "name": "Deutsche Pfandbriefbank AG (Raisin): einzelne Laufzeit(en) mit 0,00 %",
-   "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst).",
-   "gruppe": "DE_C"
-  },
-  {
-   "name": "LHV Pank (Raisin): einzelne Laufzeit(en) mit 0,00 %",
-   "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst).",
-   "gruppe": "DE_C"
-  },
-  {
-   "name": "Raiffeisenbank Straubing eG (Raisin): einzelne Laufzeit(en) mit 0,00 %",
-   "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst).",
-   "gruppe": "DE_C"
-  },
-  {
-   "name": "SIGMA Bank AG (Raisin): einzelne Laufzeit(en) mit 0,00 %",
-   "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst).",
    "gruppe": "DE_C"
   },
   {
@@ -21880,21 +21674,6 @@
    "gruppe": "DE_D"
   },
   {
-   "name": "Banque PSA / PSA Direktbank",
-   "grund": "Marke aufgegangen in Stellantis Bank SA Niederlassung Deutschland – unter diesem Namen erfasst.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "FCA Bank",
-   "grund": "Heute CA Auto Bank S.p.A. – unter diesem Namen erfasst.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "Cosmos Direkt",
-   "grund": "Keine Bank (Versicherer), laut Auftrag weggelassen.",
-   "gruppe": "DE_D"
-  },
-  {
    "name": "ICICI Bank Germany",
    "grund": "Deutsche Präsenz (ICICI Bank UK Plc, Frankfurt) bietet nur Sperrkonto, NRI-Dienste und Firmenkundengeschäft, kein Privatkunden-Festgeld.",
    "gruppe": "DE_D"
@@ -21902,31 +21681,6 @@
   {
    "name": "State Bank of India Frankfurt",
    "grund": "Kein Festgeld-Direktangebot für Privatkunden mit Wohnsitz in Deutschland gefunden.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "pbb direkt",
-   "grund": "Laut Auftrag Gruppe DE_A.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "Bigbank",
-   "grund": "Laut Auftrag Gruppe DE_A.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "Revolut",
-   "grund": "Laut Auftrag Gruppe DE_B.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "Wüstenrot",
-   "grund": "Laut Auftrag Gruppe DE_A.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "Lea Bank",
-   "grund": "Kein deutsches Direktangebot gefunden (leabank.de nicht erreichbar); in Deutschland nur über Plattformen (Raisin, Check24) – erfasst eine andere Gruppe.",
    "gruppe": "DE_D"
   },
   {
@@ -21990,33 +21744,8 @@
    "gruppe": "DE_D"
   },
   {
-   "name": "Ikano Bank",
-   "grund": "Wird von Gruppe DE_A erfasst (nicht doppelt aufgenommen).",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "Renault Bank direkt (RCI Banque S.A. Niederlassung Deutschland)",
-   "grund": "Ausländische Bank mit Direkt-Festgeld, wird aber bereits von Gruppe DE_A erfasst – zur Vermeidung von Dubletten nicht aufgenommen.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "TF Bank (Avarda Bank AB)",
-   "grund": "Ausländische Bank mit Direkt-Festgeld, wird bereits von Gruppe DE_A erfasst – nicht doppelt aufgenommen.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "Klarna Festgeld+",
-   "grund": "Ausländische Bank mit Direkt-Festgeld, wird bereits von Gruppe DE_A erfasst – nicht doppelt aufgenommen.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "Openbank (Openbank Deutschland AG, Santander)",
-   "grund": "Wird bereits von Gruppe DE_A erfasst – nicht doppelt aufgenommen.",
-   "gruppe": "DE_D"
-  },
-  {
-   "name": "Toyota Bank, Ford Bank, Ayvens Bank, Hyundai",
-   "grund": "Banken mit ausländischem Mutterhaus, werden bereits von Gruppe DE_A erfasst.",
+   "name": "GarantiBank Kleeblatt-Festgeld",
+   "grund": "Die Bank-Website war bei der Prüfung nicht abrufbar; ohne Konditionen aus erster Hand nehmen wir das Angebot nicht auf.",
    "gruppe": "DE_D"
   }
  ]

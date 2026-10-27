@@ -68,7 +68,11 @@ def rating(a):
 def ratnum(a): return RAT.get(rating(a) or '',0)
 def heim(a): return a['sitz']==CC['code']
 def plattform(a): return a['vertrieb']!='direkt'
-def vtT(a): return 'direkt bei der Bank' if not plattform(a) else f'über {a["vertrieb"].replace("andere: ","")}'
+ZM={'zinsmarkt-deutsche-bank':'Deutsche Bank','zinsmarkt-norisbank':'norisbank'}
+def vtT(a):
+    if not plattform(a): return 'direkt bei der Bank'
+    zm=next((v for k,v in ZM.items() if a['id'].endswith(k)),None)
+    return f'über den ZinsMarkt der {zm}' if zm else f'über {a["vertrieb"].replace("andere: ","")}'
 def zzT(a): return ZZT.get(a.get('zinszahlung'),'keine Angabe')
 def kdT(a): return {'nein':'nicht möglich','ja':'möglich','ja_mit_abschlag':'möglich, mit Abschlag'}.get(a.get('kuendigung'),'keine Angabe')
 def vlT(a): return {'automatisch':'verlängert sich automatisch','keine':'Geld wird ausgezahlt','wahlweise':'Verlängerung wählbar'}.get(a.get('verlaengerung'),'keine Angabe')
@@ -87,7 +91,7 @@ def steuerT(a):
     if a.get('steuer_auto') is True: return f'{CC["steuer_kurz"]} wird automatisch abgeführt'
     if a.get('steuer_auto') is False: return 'Zinsen selbst in der Steuererklärung angeben'
     return 'keine Angabe'
-def titel(a): return f'{a["bank"]} {a["produkt"]}'
+def titel(a): return (a['bank'] if a['produkt'].lower() in a['bank'].lower() else f'{a["bank"]} {a["produkt"]}')+(' (Neugeld-Angebot)' if a['id'].endswith('-neugeld') else '')
 def lzspan(a):
     l=laufzeiten(a)
     return lzt(l[0]) if len(l)==1 else f'{lzt(l[0])} bis {lzt(l[-1])}'
@@ -102,7 +106,7 @@ def pros(a):
     if a.get('kuendigung') in ('ja','ja_mit_abschlag'): p.append('Vorzeitig kündbar'+(' (mit Abschlag)' if a['kuendigung']=='ja_mit_abschlag' else ''))
     if a.get('min_anlage') is not None and a['min_anlage']<=1000: p.append(f'Schon ab {eur(a["min_anlage"])} € anlegen')
     if len(laufzeiten(a))>=6: p.append(f'{len(laufzeiten(a))} Laufzeiten zur Wahl')
-    if a.get('verlaengerung')=='keine': p.append('Keine automatische Verlängerung')
+    if a.get('verlaengerung')=='keine': p.append('Auszahlung am Laufzeitende, ohne automatische Verlängerung')
     return p
 def cons(a):
     c=[]
@@ -136,7 +140,9 @@ def item(a,P,base,m,rank,hide=False):
     r=ertrag(a,DEF_B,m)
     zt=f'{pct(r["zins"])}' if r.get('zins') is not None else '–'
     et=f'{eur(r["ertrag"])} €' if r['fit'] else 'passt nicht'
-    akt=f'<div class="earn"><span>Aktion</span><b>{E(a["aktion"])}</b></div>' if a.get('aktion') else ''
+    ak=a.get('aktion') or ''
+    if len(ak)>140: ak=ak[:140].rsplit(' ',1)[0].rstrip(' .,;:!')+' …'
+    akt=f'<div class="earn"><span>Aktion</span><b>{E(ak)}</b></div>' if ak else ''
     rk=f'<span class="rank{" r"+str(rank) if rank<=3 else ""}">{rank}</span>' if rank else ''
     return f'''<article class="item" id="fg-{a["slug"]}" data-k='{E(json.dumps(jsdata(a),separators=(",",":")))}' data-f="{flags(a)}" data-sitz="{a["sitz"]}" data-rat="{ratnum(a)}" data-zz="{a.get("zinszahlung") or ""}" data-q="{E((a["bank"]+" "+a["produkt"]+" "+a["vertrieb"]).lower())}"{" hidden" if hide else ""}>
     <div class="ihead"><div style="display:flex;gap:10px;align-items:center">{rk}</div></div>
@@ -198,12 +204,19 @@ def kennzahlen(xs,m):
     bh=ordnen(hb,m)[0] if hb else None
     zs=sorted(ertrag(a,DEF_B,m)['zins'] for a in ok)
     return dict(best=best,bz=ertrag(best,DEF_B,m)['zins'],bh=bh,bhz=ertrag(bh,DEF_B,m)['zins'] if bh else None,med=zs[len(zs)//2],n=len(ok))
-def gen_fq(xs,m=None):
+def gen_fq(xs,m=None,wo='Im Gesamtvergleich'):
     N=CC['N']; kz=kennzahlen(xs,m or DEF_M)
     fq=[]
     if kz:
         t=lzt(m or DEF_M)
-        fq.append((f'Wo gibt es aktuell die höchsten Festgeldzinsen für {t}?',f'Am meisten zahlt laut unserem Vergleich {titel(kz["best"])} mit {pct(kz["bz"])} pro Jahr ({vtT(kz["best"])}, Einlagensicherung {landN(kz["best"])}).'+(f' Bei {CC["heimB"]} liegt {titel(kz["bh"])} mit {pct(kz["bhz"])} vorn.' if kz['bh'] and kz['bh'] is not kz['best'] else '')+f' Stand: {S(xs)}.'))
+        fq.append((f'Wo gibt es aktuell die höchsten Festgeldzinsen für {t}?',f'{wo} zahlt laut unserer Auswertung {titel(kz["best"])} mit {pct(kz["bz"])} pro Jahr ({vtT(kz["best"])}, Einlagensicherung {landN(kz["best"])}).'+(f' Bei {CC["heimB"]} liegt {titel(kz["bh"])} mit {pct(kz["bhz"])} vorn.' if kz['bh'] and kz['bh'] is not kz['best'] else '')+f' Stand: {S(xs)}.'))
+    if wo!='Im Gesamtvergleich' and kz:
+        if m and m!=DEF_M:
+            k12=kennzahlen(xs,DEF_M)
+            fq.append((f'Lohnt sich Festgeld mit {lzt(m)} Laufzeit?',f'Von den {kz["n"]} passenden Angeboten mit {lzt(m)} Laufzeit zahlt die Hälfte mindestens {pct(kz["med"])} pro Jahr'+(f', bei 1 Jahr Laufzeit sind es {pct(k12["med"])}' if k12 else '')+'. '+('Längere Bindung bringt hier also mehr Zins.' if k12 and kz['med']>k12['med'] else 'Längere Bindung bringt hier also nicht mehr Zins.' if k12 and kz['med']<k12['med'] else '')+' Binde nur Geld, das du in dieser Zeit sicher nicht brauchst.'))
+        else:
+            fq.append((f'Wie viele Angebote gibt es in dieser Liste?',f'{kz["n"]} Angebote passen zu {eur(DEF_B)} € und {lzt(m or DEF_M)} Laufzeit. Mit dem Rechner oben siehst du die Zinsen für deinen eigenen Betrag.'))
+        return fq
     fq+=[('Wie sicher ist Festgeld?',CC['sich']),
          ('Wie werden Festgeld-Zinsen versteuert?',CC['steuer']),
          ('Kann ich Festgeld vorzeitig kündigen?','Meist nicht: Das Geld ist bis zum Ende der Laufzeit fest angelegt. Manche Banken erlauben eine vorzeitige Auflösung, dann meist mit Zinsabschlag. Ob das geht, steht bei jedem Angebot. Geld, das du kurzfristig brauchen könntest, liegt besser auf einem Tagesgeldkonto.'),
@@ -235,7 +248,7 @@ def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
         t=f'Festgeld-Vergleich {N} 2026: {n} Angebote | Finvallo'
         ds=f'{n} Festgeld-Angebote von {nb} Banken für {N} verglichen: Zinsen nach Laufzeit und Betrag, Einlagensicherung, Länderrating, Zinszahlung und Steuer.'
     ds=K.fit_desc(ds) if hasattr(K,'fit_desc') else ds[:155]
-    fq=gen_fq(X,m)
+    fq=gen_fq(X,m,f'Unter den Angeboten mit {lzt(m)} Laufzeit' if lzslug else f'Unter den Angeboten im Vergleich „{sub[1]}“' if sub else 'Im Gesamtvergleich')
     crumbs=[(N,f'{LAND}/'),('Festgeld',f'{LAND}/festgeld/')]+([(lzt(m) if lzslug else sub[1],rel)] if (lzslug or sub) else [])
     top=[a for a in X if ertrag(a,DEF_B,m)['fit']][:10]
     ld=K.graph(rel,t,ds,crumbs,[{"@type":"ItemList","name":h1,"itemListElement":[{"@type":"ListItem","position":i+1,"name":titel(a),"url":f"https://finvallo.com/{LAND}/festgeld/{a['slug']}/"} for i,a in enumerate(top)]},faqld(fq)],date=max(a['geprueft'] for a in xs))
@@ -281,18 +294,20 @@ def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
 def offer_page(a,xs):
     rel=f'{LAND}/festgeld/{a["slug"]}/'; P='../../../'; N=CC['N']
     tz=topzins(a); lzs=laufzeiten(a)
-    t=f'{titel(a)}{" über "+a["vertrieb"] if plattform(a) else ""}: Zinsen {N} | Finvallo'
-    if len(t)>65: t=f'{titel(a)}: Festgeld-Zinsen {CC["code"]} | Finvallo'
-    if len(t)>65: t=f'{titel(a)} ({CC["code"]}) | Finvallo'
+    vs='' if not plattform(a) else ' '+vtT(a).replace('über den ZinsMarkt der ','im ZinsMarkt ')
+    t=f'{titel(a)}{vs}: Zinsen {N} | Finvallo'
+    if len(t)>65: t=f'{titel(a)}{vs} ({CC["code"]}) | Finvallo'
+    if len(t)>65: t=f'{a["bank"]} Festgeld{vs} ({CC["code"]}) | Finvallo'
     d=f'{titel(a)} {vtT(a)}: bis {pct(tz)} Zinsen, Laufzeit {lzspan(a)}, Anlage {anlT(a)}. Einlagensicherung {landN(a)}, Zinsen {zzT(a)}.'
     d=K.fit_desc(d) if hasattr(K,'fit_desc') else d[:155]
     gp=a['geprueft']
-    fq=[(f'Wie viel Zinsen zahlt {titel(a)}?',f'{titel(a)} zahlt je nach Laufzeit bis {pct(tz)} pro Jahr ({lzspan(a)}). Stand: {dmy(a.get("stand") or gp)}.'),
-        ('Wie sicher ist das Geld?',f'Die Einlagen sind über die {sichT(a)} geschützt'+(f'. Länderrating {landN(a)} (S&P): {rating(a)}.' if rating(a) else '.')+(f' Zusätzlich: {a["einlagensicherung"]["freiwillig"]}.' if (a.get('einlagensicherung') or {}).get('freiwillig') else '')),
-        ('Wann werden die Zinsen gezahlt?',(a.get('zinszahlung_text') or zzT(a)).rstrip('.')+'.'),
-        ('Wird die Steuer automatisch abgezogen?',(a.get('steuer') or steuerT(a)).rstrip('.')+'.'),
-        ('Kann ich vorzeitig an mein Geld?',(a.get('kuendigung_text') or kdT(a)).rstrip('.')+'.')]
-    if plattform(a): fq.append((f'Wie schließe ich das Festgeld ab?',f'Über {a["vertrieb"].replace("andere: ","")}. '+(f'Dafür brauchst du: {a["konto_noetig"]}.' if a.get('konto_noetig') else 'Das Konto dort ist kostenlos.' if (a.get('kosten') or '').startswith('kostenlos') else '')))
+    nm=f'{titel(a)} {vtT(a)}'; kurz=lambda x:x[:1].lower()+x[1:] if x and not x[:2].isupper() else x
+    fq=[(f'Wie viel Zinsen zahlt {titel(a)}?',f'{nm} zahlt Kundinnen und Kunden in {N} je nach Laufzeit bis {pct(tz)} pro Jahr ({lzspan(a)}), laut Angabe vom {dmy(a.get("stand") or gp)}.'),
+        ('Wie sicher ist das Geld?',f'Bei {nm} sind die Einlagen über die {sichT(a)} geschützt'+(f'. Länderrating {landN(a)} (S&P): {rating(a)}.' if rating(a) else '.')+(f' Zusätzlich: {a["einlagensicherung"]["freiwillig"]}.' if (a.get('einlagensicherung') or {}).get('freiwillig') else '')),
+        ('Wann werden die Zinsen gezahlt?',f'Bei {nm}: '+kurz((a.get('zinszahlung_text') or zzT(a)).rstrip('.'))+'.'),
+        ('Wird die Steuer automatisch abgezogen?',f'Bei {nm}: '+kurz((a.get('steuer') or steuerT(a)).rstrip('.'))+'.'),
+        ('Kann ich vorzeitig an mein Geld?',f'Bei {nm}: '+kurz((a.get('kuendigung_text') or kdT(a)).rstrip('.'))+'.')]
+    if plattform(a): fq.append((f'Wie schließe ich das Festgeld ab?',f'In {N} schließt du {titel(a)} {vtT(a)} ab. '+(f'Dafür brauchst du: {a["konto_noetig"]}.' if a.get('konto_noetig') else 'Das Konto dort ist kostenlos.' if (a.get('kosten') or '').startswith('kostenlos') else '')))
     ld=K.graph(rel,t,d,[(N,f'{LAND}/'),('Festgeld',f'{LAND}/festgeld/'),(titel(a),rel)],
         [{"@type":"DepositAccount","@id":f"https://finvallo.com/{rel}#angebot","name":titel(a),"url":f"https://finvallo.com/{rel}","provider":{"@type":"BankOrCreditUnion","name":a.get('institut') or a['bank']},
           "areaServed":{"@type":"Country","name":N},"interestRate":tz,"amount":{"@type":"MonetaryAmount","currency":"EUR","minValue":a.get('min_anlage'),"maxValue":a.get('max_anlage')}},faqld(fq)],date=gp)
@@ -317,7 +332,7 @@ def offer_page(a,xs):
     sim=[x for x in xs if x is not a and m0 in laufzeiten(x) and ertrag(x,DEF_B,m0)['fit']]
     sim=ordnen(sim,m0)[:5]
     simt=''.join(f'<tr><td><a class="lnk" href="../{x["slug"]}/">{E(titel(x))}</a><br><small class="mut">{E(vtT(x))}</small></td><td><b>{pct(ertrag(x,DEF_B,m0)["zins"])}</b></td><td>{E(landN(x))}{" ("+E(rating(x))+")" if rating(x) else ""}</td></tr>' for x in sim)
-    glance=f'{titel(a)} ist ein Festgeld der {a.get("institut") or a["bank"]}, abgeschlossen {vtT(a)}. Es gibt {len(lzs)} Laufzeit{"en" if len(lzs)>1 else ""} ({lzspan(a)}) mit bis zu {pct(tz)} Zinsen pro Jahr. Anlage {anlT(a)}, Zinsen {zzT(a)}. Die Einlagen sichert {landN(a)}. Stand: {dmy(a.get("stand") or gp)}.'
+    glance=f'{titel(a)} ist ein Festgeld der {a.get("institut") or a["bank"]}, abgeschlossen {vtT(a)}. Es gibt {len(lzs)} Laufzeit{"en" if len(lzs)>1 else ""} ({lzspan(a)}) mit bis zu {pct(tz)} Zinsen pro Jahr. Anlage {anlT(a)}, Zinsen {zzT(a)}. Die Einlagen sichert {landN(a)}. Zinsen laut Bank vom {dmy(a.get("stand") or gp)}.'
     pc,kc=pros(a),cons(a)
     body=f'''{hdr(P,rel)}
 <div class="wrap"><main id="app">
@@ -395,6 +410,8 @@ LZ_DA=set(); LZ_SEITEN=set()
 def build_land():
     global LZ_DA,LZ_SEITEN
     K.use(LAND)
+    # der Ordner wird komplett neu erzeugt: Seiten weggefallener Angebote verschwinden
+    import shutil; shutil.rmtree(R+f'{LAND}/festgeld',ignore_errors=True)
     d,xs=load()
     K.L.setdefault('stand',d['stand'])
     for a in xs: a.setdefault('geprueft',d['stand'])

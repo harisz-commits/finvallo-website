@@ -1,0 +1,3347 @@
+{
+ "quelle": "https://finvallo.com/at/festgeld/",
+ "stand": "2026-10-27",
+ "anzahl": 51,
+ "lizenz": "Frei nutzbar mit Quellenangabe Finvallo",
+ "angebote": [
+  {
+   "slug": "aareal-bank-festgeld-at-raisin",
+   "bank": "Aareal Bank",
+   "institut": "Aareal Bank AG",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/aareal-bank-ag/",
+   "sitz": "DE",
+   "einlagensicherung": {
+    "system": "Entschädigungseinrichtung deutscher Banken GmbH",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 24,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/aareal-bank-ag/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AAA"
+  },
+  {
+   "slug": "achmea-bank-festgeld-at-raisin",
+   "bank": "Achmea Bank",
+   "institut": "Achmea Bank N.V.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/achmea-bank/",
+   "sitz": "NL",
+   "einlagensicherung": {
+    "system": "Nederlandse Depositogarantie",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 9,
+     "zins": 2.65,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.74,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.28,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.48,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.56,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 72,
+     "zins": 3.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 84,
+     "zins": 3.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 96,
+     "zins": 4.05,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 108,
+     "zins": 4.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 120,
+     "zins": 4.25,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/achmea-bank/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AAA"
+  },
+  {
+   "slug": "addiko-festgeld-at",
+   "bank": "Addiko Bank",
+   "institut": "Addiko Bank AG",
+   "produkt": "Addiko Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.addiko.at/festgeld/",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 150000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": "Addiko Tagesgeld Konto (kostenlos) als Referenzkonto der Festgeldkonten",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.addiko.at/static/uploads/2026/10/1.6_Konditionenblatt_2026.10.23.pdf",
+   "stand": "2026-10-23",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "alisa-bank-festgeld-at-raisin",
+   "bank": "Alisa Bank",
+   "institut": "Alisa Bank Plc",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/alisa-bank-plc/",
+   "sitz": "FI",
+   "einlagensicherung": {
+    "system": "das Finnische Einlagesicherungssystem",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.4,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": true,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/alisa-bank-plc/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "anadi-bank-online-festgeld-at",
+   "bank": "Austrian Anadi Bank",
+   "institut": "Austrian Anadi Bank AG",
+   "produkt": "Online-Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://anadibank.com/online-festgeld",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.75,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 500000,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": true,
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Anadi Online-Sparen (kostenlos) als Festgeld-Verrechnungskonto; Einzug von einem EU-Girokonto auf eigenen Namen",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://anadibank.com/online-festgeld",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "avida-bank-festgeld-at-raisin",
+   "bank": "Avida Bank",
+   "institut": "Avida Bank AB",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/avida-finans-ab/",
+   "sitz": "SE",
+   "einlagensicherung": {
+    "system": "Riksgälden (schwedische Einlagensicherung)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/avida-finans-ab/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AAA"
+  },
+  {
+   "slug": "banca-investis-festgeld-at-raisin",
+   "bank": "Banca Investis",
+   "institut": "BANCA INVESTIS S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banca-investis/",
+   "sitz": "IT",
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.86,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.86,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 50000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banca-investis/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "BBB+"
+  },
+  {
+   "slug": "banca-profilo-festgeld-at-raisin",
+   "bank": "Banca Profilo",
+   "institut": "Banca Profilo S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banca-profilo/",
+   "sitz": "IT",
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1.9,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 20000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banca-profilo/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "BBB+"
+  },
+  {
+   "slug": "banca-profilo-flexgeld-at-raisin",
+   "bank": "Banca Profilo",
+   "institut": "Banca Profilo S.p.A.",
+   "produkt": "Flexgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banca-profilo/",
+   "sitz": "IT",
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.95,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 20000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banca-profilo/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "BBB+"
+  },
+  {
+   "slug": "banca-sistema-festgeld-at-raisin",
+   "bank": "Banca Sistema",
+   "institut": "Banca Sistema S.p.A",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banca-sistema/",
+   "sitz": "IT",
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 120,
+     "zins": 3,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banca-sistema/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "BBB+"
+  },
+  {
+   "slug": "banco-bai-europa-festgeld-at-raisin",
+   "bank": "Banco BAI Europa",
+   "institut": "Banco BAI Europa S.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banco-bai-europa/",
+   "sitz": "PT",
+   "einlagensicherung": {
+    "system": "Der portugiesische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.46,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 0.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 0.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 0.5,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banco-bai-europa/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A+"
+  },
+  {
+   "slug": "banco-bni-europa-festgeld-at-raisin",
+   "bank": "Banco BNI Europa",
+   "institut": "BNI - Banco de Negócios Internacional Europa, S.A",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banco-bni-europa/",
+   "sitz": "PT",
+   "einlagensicherung": {
+    "system": "Der portugiesische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.58,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1.48,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 1.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1.77,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 1.92,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 1.92,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 1.92,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 1.92,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banco-bni-europa/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A+"
+  },
+  {
+   "slug": "bank-austria-sparkonto-fix-at",
+   "bank": "Bank Austria",
+   "institut": "UniCredit Bank Austria AG",
+   "produkt": "Sparkonto fix",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.bankaustria.at/sparen-sparkonto.jsp",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.2,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 500,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "keine",
+   "konto_noetig": "Bank Austria Internetbanking-Zugang (Kundenbeziehung, z. B. Girokonto)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.bankaustria.at/sparen-sparkonto.jsp",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "bank-dimare-festgeld-at-raisin",
+   "bank": "Bank DiMare",
+   "institut": "Bank DiMare Limited",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/bank-dimare-limited/",
+   "sitz": "MT",
+   "einlagensicherung": {
+    "system": "Der maltesische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.95,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.11,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/bank-dimare-limited/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A-"
+  },
+  {
+   "slug": "bank-direkt-fixzinskonto-at",
+   "bank": "Bank Direkt",
+   "institut": "Raiffeisenlandesbank Oberösterreich AG",
+   "produkt": "Fixzinskonto",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto.html",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Österreichische Raiffeisen-Sicherungseinrichtung eGen (ÖRS)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.5,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 500000,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": true,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": null,
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto.html",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "bank99-fixsparen99-at",
+   "bank": "bank99",
+   "institut": "bank99 AG",
+   "produkt": "fixsparen99",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://bank99.at/sparen/fixsparen99",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.05,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "keine",
+   "konto_noetig": "bank99 Giro- oder Sparkonto als Referenzkonto, z. B. kostenloses Tagesgeldkonto flexsparen99",
+   "neukunden_only": false,
+   "eroeffnung": "beides",
+   "aktion": "Weltspartag-Aktion nur bis 02.11.2026: Aktionszinsen bis 3,10 % p.a.",
+   "quelle": "https://assets.bank99.at/documents/W204_Konditionen_fixsparen99.pdf",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "banque-wormser-freres-festgeld-at-raisin",
+   "bank": "Banque Wormser Frères",
+   "institut": "Banque Wormser Frères",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/wormser/",
+   "sitz": "FR",
+   "einlagensicherung": {
+    "system": "der französische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.65,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 25000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/wormser/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A+"
+  },
+  {
+   "slug": "bawag-sparbox-fix-at",
+   "bank": "BAWAG",
+   "institut": "BAWAG P.S.K. Bank für Arbeit und Wirtschaft und Österreichische Postsparkasse AG",
+   "produkt": "SparBox Fix",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.bawag.at/bawag/privatkunden/sparen/sparbox-fix",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 1.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 13,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 1.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.05,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 84,
+     "zins": 2.15,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 100,
+   "max_anlage": 1000000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": "SparBox Flex (täglich fälliges BAWAG-Sparkonto) bzw. BAWAG Giro-/Anlagekonto als Referenzkonto; BAWAG eBanking verpflichtend",
+   "neukunden_only": false,
+   "eroeffnung": "beides",
+   "aktion": "13 Monate mit 3,00 % p.a. (Konditionen gültig ab 14.10.2026).",
+   "quelle": "https://www.bawag.at/resource/blob/20504/54b6ae29551cfccdfaa096ef15d2f8fa/konditionen-sparbox-fix-data.pdf",
+   "stand": "2026-10-14",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "bks-bank-mein-geld-konto-fix-at",
+   "bank": "BKS Bank",
+   "institut": "BKS Bank AG",
+   "produkt": "Mein Geld-Konto fix",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.bks.at/privatkunden/sparen/mein-geld-konto-fix",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 2.75,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 5000000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "keine",
+   "konto_noetig": "BKS Bank Konto mit Internetbanking (BKS Verrechnungskonto oder Mein Geld-Onlinekonto)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.bks.at/privatkunden/sparen/mein-geld-konto-fix",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "bluor-bank-festgeld-at-raisin",
+   "bank": "BluOr Bank",
+   "institut": "AS BlueOrange Bank",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/blu-or-bank-as/",
+   "sitz": "LV",
+   "einlagensicherung": {
+    "system": "Der lettische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/blu-or-bank-as/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A"
+  },
+  {
+   "slug": "btg-pactual-festgeld-at-raisin",
+   "bank": "BTG Pactual",
+   "institut": "BTG Pactual Europe S.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/btg-pactual/",
+   "sitz": "LU",
+   "einlagensicherung": {
+    "system": "Einlagensicherungsfonds Luxemburg",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 1.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1.86,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.82,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.18,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.21,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.31,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/btg-pactual/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AAA"
+  },
+  {
+   "slug": "ca-auto-bank-festgeld-at-raisin",
+   "bank": "CA Auto Bank",
+   "institut": "CA Auto Bank S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/ca-auto-bank/",
+   "sitz": "IT",
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.95,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.45,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 30000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/ca-auto-bank/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "BBB+"
+  },
+  {
+   "slug": "coop-pank-festgeld-at-raisin",
+   "bank": "Coop Pank",
+   "institut": "Coop Pank AS",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/coop-pank/",
+   "sitz": "EE",
+   "einlagensicherung": {
+    "system": "Der estnische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 3.06,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 3.06,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.26,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/coop-pank/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": null
+  },
+  {
+   "slug": "creditplus-bank-festgeld-at-raisin",
+   "bank": "Creditplus Bank",
+   "institut": "Creditplus Bank AG",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/creditplus-bank/",
+   "sitz": "DE",
+   "einlagensicherung": {
+    "system": "Entschädigungseinrichtung deutscher Banken GmbH",
+    "betrag": 100000,
+    "freiwillig": "zusätzlich freiwilliger Einlagensicherungsfonds des Bundesverbandes deutscher Banken (Sicherungsgrenze unter einlagensicherung.de)"
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.75,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 72,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 84,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 120,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 1000000,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/creditplus-bank/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AAA"
+  },
+  {
+   "slug": "dadat-festgeld-at",
+   "bank": "DADAT Bank",
+   "institut": "Schelhammer Capital Bank AG",
+   "produkt": "Online Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.dad.at/sparen-anlegen/sparen/festgeld",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.75,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 500000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "keine",
+   "konto_noetig": "DADAT-Konto als Referenzkonto (Spar-, Giro- oder Wertpapier-Verrechnungskonto)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.dad.at/sparen-anlegen/sparen/festgeld",
+   "stand": "2026-09-11",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "denizbank-festgeld-at",
+   "bank": "DenizBank",
+   "institut": "DenizBank AG",
+   "produkt": "Festgeld (Online Sparen)",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.denizbank.at/at/privatkunden/festgeld",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 72,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 84,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 96,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 108,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 120,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "kostenloses DenizBank Stammkonto",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": "6 Monate Sonderzins 3,15 % p.a. gültig 30.09.-31.10.2026, danach Standardzins laut Preisaushang.",
+   "quelle": "https://www.denizbank.at/at/privatkunden/festgeld",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "denzel-bank-onlinesparen-festgeld-at",
+   "bank": "Denzel Bank",
+   "institut": "Bankhaus Denzel AG",
+   "produkt": "Onlinesparen Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.denzelbank.at/denzel-bank-festgeld",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 500,
+   "max_anlage": 500000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "keine",
+   "konto_noetig": "Onlinesparen Täglich Fällig-Konto",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://cms.denzelbank.at/sites/default/files/users/user4/Konditionenblatt_Festgeld_2026-10-22_PDF-UA.pdf",
+   "stand": "2026-10-22",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "easybank-easy-geldmarkt-at",
+   "bank": "easybank",
+   "institut": "BAWAG P.S.K. Bank für Arbeit und Wirtschaft und Österreichische Postsparkasse AG",
+   "produkt": "easy geldmarkt",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.easybank.at/easybank/sparen/easy-geldmarkt",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 1.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 13,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.25,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 100,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": null,
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": "Neue Laufzeit 13 Monate mit 3,00 % p.a. seit 15.10.2026.",
+   "quelle": "https://www.easybank.at/resource/blob/55244/bad97997c68716572a843e4a306af89d/preisblatt-easy-geldmarkt-data.pdf",
+   "stand": "2026-10-15",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "guber-banca-festgeld-at-raisin",
+   "bank": "Guber Banca",
+   "institut": "Guber Banca S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/guber-banca/",
+   "sitz": "IT",
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 3.27,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.36,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.36,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 20000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/guber-banca/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "BBB+"
+  },
+  {
+   "slug": "haitong-bank-festgeld-at-raisin",
+   "bank": "Haitong Bank",
+   "institut": "Haitong Bank, S.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/haitong-bank-s-a-zweigniederlassung-in-spanien/",
+   "sitz": "PT",
+   "einlagensicherung": {
+    "system": "Der portugiesische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 1.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 1.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.4,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/haitong-bank-s-a-zweigniederlassung-in-spanien/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A+"
+  },
+  {
+   "slug": "hamburg-commercial-bank-festgeld-at-raisin",
+   "bank": "Hamburg Commercial Bank",
+   "institut": "Hamburg Commercial Bank AG",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/hamburg-commercial-bank/",
+   "sitz": "DE",
+   "einlagensicherung": {
+    "system": "Entschädigungseinrichtung deutscher Banken GmbH",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 24,
+     "zins": 3.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.37,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.4,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/hamburg-commercial-bank/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AAA"
+  },
+  {
+   "slug": "hoist-finance-festgeld-at-raisin",
+   "bank": "Hoist Finance (HoistSpar)",
+   "institut": "Hoist Finance AB.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/hoist-spar/",
+   "sitz": "SE",
+   "einlagensicherung": {
+    "system": "Riksgälden (schwedische Einlagensicherung)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 1.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 90000,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": true,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/hoist-spar/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AAA"
+  },
+  {
+   "slug": "holm-bank-festgeld-at-raisin",
+   "bank": "Holm Bank",
+   "institut": "Holm Bank AS",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/holm-bank-as/",
+   "sitz": "EE",
+   "einlagensicherung": {
+    "system": "Der estnische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.33,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.36,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.41,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/holm-bank-as/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": null
+  },
+  {
+   "slug": "hypo-noe-online-festgeld-at",
+   "bank": "HYPO NOE",
+   "institut": "HYPO NOE Landesbank für Niederösterreich und Wien AG",
+   "produkt": "HYPO NOE Online Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.hyponoe.at/private/sparen-und-veranlagen",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 2.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 300000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": true,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "keine",
+   "konto_noetig": "HYPO NOE Online Festgeld-Verrechnungskonto (kostenlos) oder HYPO NOE Girokonto",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.hyponoe.at/fileadmin/OE/Vertriebsstrategie/Sparen_Veranlagen/Konditionenblatt_Online_Festgeld.pdf",
+   "stand": "2026-09-23",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "hypo-tirol-online-festgeld-at",
+   "bank": "Hypo Tirol",
+   "institut": "Hypo Tirol Bank AG",
+   "produkt": "Online Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.hypotirol.com/product/privatkunden/sparen-mit-festgeld/",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1.75,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.125,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": null,
+   "max_anlage": null,
+   "zinszahlung": null,
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": null,
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Hypo Tirol Girokonto mit Internetbanking (Kontoführung ab 5,20 €/Monat)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.hypotirol.com/product/privatkunden/sparen-mit-festgeld/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "hypo-vorarlberg-festgeld-online-at",
+   "bank": "Hypo Vorarlberg",
+   "institut": "Hypo Vorarlberg Bank AG",
+   "produkt": "Festgeld Online (Aktion)",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.hypovbg.at/festgeld-aktion",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": "Sparkonto als Referenzkonto (wird bei Neukunden automatisch und kostenlos eröffnet)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": "Online-Aktion nur vom 27.10.2026 bis 06.11.2026: 3,10 % p.a. für 12 Monate.",
+   "quelle": "https://www.hypovbg.at/download/10784/Einlagen%20Konditionen%20Privatkunden_ONLINE.pdf?cHash=a4ddbd8ccad4d23b3cd1a52c7d199f89",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "hypo-vorarlberg-kapitalkonto-at",
+   "bank": "Hypo Vorarlberg",
+   "institut": "Hypo Vorarlberg Bank AG",
+   "produkt": "Kapitalkonto",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.hypovbg.at/anlage-vorsorge/kapitalkonto",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 1.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 25,
+     "zins": 2.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 2500,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "keine",
+   "konto_noetig": null,
+   "neukunden_only": false,
+   "eroeffnung": "beides",
+   "aktion": null,
+   "quelle": "https://www.hypovbg.at/download/10784/Einlagen%20Konditionen%20Privatkunden_ONLINE.pdf?cHash=a4ddbd8ccad4d23b3cd1a52c7d199f89",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "ibl-banca-festgeld-at-raisin",
+   "bank": "IBL Banca",
+   "institut": "IBL Banca S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/ibl-banca/",
+   "sitz": "IT",
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.76,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.96,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.01,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.81,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.86,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.91,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/ibl-banca/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "BBB+"
+  },
+  {
+   "slug": "inbank-festgeld-at-raisin",
+   "bank": "Inbank",
+   "institut": "Inbank AS",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/inbank/",
+   "sitz": "EE",
+   "einlagensicherung": {
+    "system": "Der estnische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.46,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.47,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.16,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.19,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.33,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 2000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": true,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/inbank/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": null
+  },
+  {
+   "slug": "investitionsbank-trentino-suedtirol-festgeld-at-raisin",
+   "bank": "Investitionsbank Trentino-Südtirol",
+   "institut": "Investitionsbank Trentino-Südtirol AG / Mediocredito Trentino-Alto Adige S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/investitionsbank-trentino-sudtirol/",
+   "sitz": "IT",
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.5,
+     "min": 50000,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1.5,
+     "min": 50000,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 1.5,
+     "min": 50000,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.1,
+     "min": 25000,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.2,
+     "min": 25000,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.3,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.4,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.5,
+     "min": 10000,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/investitionsbank-trentino-sudtirol/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "BBB+"
+  },
+  {
+   "slug": "klarna-festgeld-plus-at",
+   "bank": "Klarna",
+   "institut": "Klarna Bank AB (publ)",
+   "produkt": "Festgeld+",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.klarna.com/at/festgeldkonto/",
+   "sitz": "SE",
+   "einlagensicherung": {
+    "system": "Riksgälden (schwedische Einlagensicherung, bis 1.150.000 SEK)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.84,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.46,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.95,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3.11,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.19,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.24,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": null,
+   "max_anlage": null,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": "Klarna Bankkonto (Klarna Guthaben) in der Klarna App",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.klarna.com/at/festgeldkonto/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AAA"
+  },
+  {
+   "slug": "kommunalkredit-invest-festgeld-at",
+   "bank": "KOMMUNALKREDIT INVEST",
+   "institut": "Kommunalkredit Austria AG",
+   "produkt": "Festgeldanlage",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.kommunalkreditinvest.at/sparkonten/festgeld",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 1.7,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 6,
+     "zins": 2.3,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.4,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 12,
+     "zins": 3.0,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.4,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 18,
+     "zins": 3.0,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.7,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 24,
+     "zins": 3.3,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.7,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 36,
+     "zins": 3.3,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.8,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 60,
+     "zins": 3.4,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 96,
+     "zins": 2.8,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 96,
+     "zins": 3.4,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 120,
+     "zins": 2.8,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 120,
+     "zins": 3.4,
+     "min": 10000,
+     "max": null
+    }
+   ],
+   "min_anlage": null,
+   "max_anlage": 500000,
+   "zinszahlung": "wahlweise",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": "KOMMUNALKREDIT INVEST Transferkonto (kostenlos); Referenzkonto = Girokonto bei einer österreichischen Bank",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.kommunalkreditinvest.at/media/bedingungen__konditionen/konditionenblatt_festgeldanlagen_kommunalkredit_invest_at.pdf",
+   "stand": "2026-10-08",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "lhv-pank-festgeld-at-raisin",
+   "bank": "LHV Pank",
+   "institut": "LHV Pank AS",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/lhv-pank/",
+   "sitz": "EE",
+   "einlagensicherung": {
+    "system": "Der estnische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 500,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/lhv-pank/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": null
+  },
+  {
+   "slug": "lidion-bank-festgeld-at-pickthebank",
+   "bank": "Lidion Bank",
+   "institut": "Lidion Bank",
+   "produkt": "Festgeld",
+   "vertrieb": "andere: PickTheBank",
+   "vertrieb_url": "https://pickthebank.eu/de/lidion/",
+   "sitz": "MT",
+   "einlagensicherung": {
+    "system": "Einlagensicherungssystem Malta (Depositor Compensation Scheme)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.42,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.92,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.89,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.94,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3.02,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.11,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.08,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.08,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.08,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 20000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": null,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": null,
+   "konto_noetig": "PickTheBank-Konto (Registrierung auf der Plattform); Festgeldkonto wird direkt bei der Bank eröffnet, Einzahlung direkt an die Bank",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": "PickTheBank zahlt Erstanlegern einmalig 50 € Bonus bei einer ersten Einlage ab 20.000 €.",
+   "quelle": "https://pickthebank.eu/de/lidion/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A-"
+  },
+  {
+   "slug": "porsche-bank-sparen-fix-at",
+   "bank": "Porsche Bank",
+   "institut": "Porsche Bank AG",
+   "produkt": "SPAREN Fix",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.porschebank.at/produkte/sparen/fix/",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.3,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 500,
+   "max_anlage": 1000000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "SPAREN Flex Konto (kostenlos) als Verrechnungskonto",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.porschebank.at/files/at/downloads/Direktsparen-Formulare/Konditionenblatt.pdf",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "renault-bank-direkt-festgeld-at",
+   "bank": "Renault Bank direkt",
+   "institut": "RCI Banque S.A. Niederlassung Österreich",
+   "produkt": "Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.renault-bank-direkt.at/geldanlage/festgeld",
+   "sitz": "FR",
+   "einlagensicherung": {
+    "system": "Fonds de Garantie des Dépôts et de Résolution (FGDR), Frankreich",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 2.95,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.05,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.2,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 2500,
+   "max_anlage": 1000000,
+   "zinszahlung": "wahlweise",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "kostenloses Renault Bank direkt Tagesgeldkonto als Verrechnungskonto",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.renault-bank-direkt.at/pdf/20261021_Konditionenblatt.pdf",
+   "stand": "2026-10-21",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A+"
+  },
+  {
+   "slug": "rietumu-banka-festgeld-at-raisin",
+   "bank": "Rietumu Banka",
+   "institut": "JSC “Rietumu Banka”",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/rietumu-bank/",
+   "sitz": "LV",
+   "einlagensicherung": {
+    "system": "Der lettische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.3,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/rietumu-bank/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A"
+  },
+  {
+   "slug": "santander-bestfix-at",
+   "bank": "Santander Consumer Bank",
+   "institut": "Santander Consumer Bank GmbH",
+   "produkt": "Festgeldkonto BestFix",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.santanderconsumer.at/festgeld",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinseszins": true,
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "keine",
+   "konto_noetig": "Tagesgeldkonto BestFlex (kostenlos)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.santanderconsumer.at/storage/590/bestsparenkonditionenblatt.pdf",
+   "stand": "2026-10-22",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "urbo-bankas-flexgeld-at-raisin",
+   "bank": "Urbo Bankas",
+   "institut": "Urbo Bankas UAB",
+   "produkt": "Flexgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/urbo-bankas/",
+   "sitz": "LT",
+   "einlagensicherung": {
+    "system": "Der litauische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 3.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinseszins": false,
+   "steuer_auto": false,
+   "kuendigung": "ja_mit_abschlag",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/urbo-bankas/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A"
+  },
+  {
+   "slug": "wuestenrot-fix-festgeldkonto-at",
+   "bank": "Wüstenrot",
+   "institut": "Wüstenrot Bank AG",
+   "produkt": "Wüstenrot FIX Festgeldkonto",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.wuestenrot.at/de/kredite-und-sparen/sparen/festgeldkonto.html",
+   "sitz": "AT",
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.75,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": null,
+   "zinszahlung": "wahlweise",
+   "zinseszins": null,
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "verlaengerung": "keine",
+   "konto_noetig": "Wüstenrot FLEX Sparkonto (kostenlos) als Verrechnungskonto",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.wuestenrot.at/de/kredite-und-sparen/sparen/festgeldkonto.html",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "AA+"
+  },
+  {
+   "slug": "younited-festgeld-at-raisin",
+   "bank": "Younited",
+   "institut": "Younited Credit S.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/younited-credit/",
+   "sitz": "FR",
+   "einlagensicherung": {
+    "system": "der französische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 2.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 2000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinseszins": true,
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "neukunden_only": false,
+   "eroeffnung": "online",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/younited-credit/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "rating_sp": "A+"
+  }
+ ]
+}

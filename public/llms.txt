@@ -198,6 +198,52 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Ab wann lohnt sich die Deutsche Bank Mastercard Platin?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/deutsche-bank-mastercard-platin/): Sie lohnt sich ab etwa 7 Lounge-Besuchen im Jahr. Brauchst du sonst eine eigene Jahres-Reiseversicherung (etwa 130 €), lohnt sie sich ab etwa 3 Lounge-Besuchen im Jahr.
 - [Ab wann lohnt sich die TARGOBANK Premium-Karte?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/targobank-premium-karte/): Mit 1.000 € Kartenumsatz im Monat holst du die Jahresgebühr herein.
 
+## Deutschland: Festgeld
+- [Festgeld-Vergleich Deutschland](https://finvallo.com/de/festgeld/): 273 Angebote, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand 27.10.2026
+- [Festgeld 1 Monat](https://finvallo.com/de/festgeld/1-monat/)
+- [Festgeld 3 Monate](https://finvallo.com/de/festgeld/3-monate/)
+- [Festgeld 6 Monate](https://finvallo.com/de/festgeld/6-monate/)
+- [Festgeld 9 Monate](https://finvallo.com/de/festgeld/9-monate/)
+- [Festgeld 1 Jahr](https://finvallo.com/de/festgeld/1-jahr/)
+- [Festgeld 18 Monate](https://finvallo.com/de/festgeld/18-monate/)
+- [Festgeld 2 Jahre](https://finvallo.com/de/festgeld/2-jahre/)
+- [Festgeld 3 Jahre](https://finvallo.com/de/festgeld/3-jahre/)
+- [Festgeld 4 Jahre](https://finvallo.com/de/festgeld/4-jahre/)
+- [Festgeld 5 Jahre](https://finvallo.com/de/festgeld/5-jahre/)
+- [Festgeld 6 Jahre](https://finvallo.com/de/festgeld/6-jahre/)
+- [Festgeld 7 Jahre](https://finvallo.com/de/festgeld/7-jahre/)
+- [Festgeld 8 Jahre](https://finvallo.com/de/festgeld/8-jahre/)
+- [Festgeld 10 Jahre](https://finvallo.com/de/festgeld/10-jahre/)
+- [Festgeld bei deutschen Banken](https://finvallo.com/de/festgeld/deutsche-banken/)
+- [So vergleichen wir Festgeld](https://finvallo.com/de/festgeld/methodik/)
+- [Daten als JSON](https://finvallo.com/de/daten/festgeld.json)
+- [Bigbank Festgeld](https://finvallo.com/de/festgeld/bigbank-festgeld-de/): 3,60 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Estland
+- [MAX Festgeld](https://finvallo.com/de/festgeld/max-festgeld-festgeld-de-check24/): 3,53 % für 1 Jahr, über Check24, Einlagensicherung Slowakei
+- [Ecobank International Festgeld](https://finvallo.com/de/festgeld/ecobank-international-festgeld-de-raisin/): 3,52 % für 1 Jahr, über Raisin, Einlagensicherung Frankreich
+- [HypoVereinsbank Festgeld](https://finvallo.com/de/festgeld/hypovereinsbank-festgeld-de/): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [İşbank İŞWEB Festgeld](https://finvallo.com/de/festgeld/isbank-isweb-festgeld-de/): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+
+## Österreich: Festgeld
+- [Festgeld-Vergleich Österreich](https://finvallo.com/at/festgeld/): 51 Angebote, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand 27.10.2026
+- [Festgeld 3 Monate](https://finvallo.com/at/festgeld/3-monate/)
+- [Festgeld 6 Monate](https://finvallo.com/at/festgeld/6-monate/)
+- [Festgeld 9 Monate](https://finvallo.com/at/festgeld/9-monate/)
+- [Festgeld 1 Jahr](https://finvallo.com/at/festgeld/1-jahr/)
+- [Festgeld 18 Monate](https://finvallo.com/at/festgeld/18-monate/)
+- [Festgeld 2 Jahre](https://finvallo.com/at/festgeld/2-jahre/)
+- [Festgeld 3 Jahre](https://finvallo.com/at/festgeld/3-jahre/)
+- [Festgeld 4 Jahre](https://finvallo.com/at/festgeld/4-jahre/)
+- [Festgeld 5 Jahre](https://finvallo.com/at/festgeld/5-jahre/)
+- [Festgeld 10 Jahre](https://finvallo.com/at/festgeld/10-jahre/)
+- [Festgeld bei österreichischen Banken](https://finvallo.com/at/festgeld/oesterreichische-banken/)
+- [So vergleichen wir Festgeld](https://finvallo.com/at/festgeld/methodik/)
+- [Daten als JSON](https://finvallo.com/at/daten/festgeld.json)
+- [Banca Sistema Festgeld](https://finvallo.com/at/festgeld/banca-sistema-festgeld-at-raisin/): 3,45 % für 1 Jahr, über Raisin, Einlagensicherung Italien
+- [Urbo Bankas Flexgeld](https://finvallo.com/at/festgeld/urbo-bankas-flexgeld-at-raisin/): 3,40 % für 1 Jahr, über Raisin, Einlagensicherung Litauen
+- [Coop Pank Festgeld](https://finvallo.com/at/festgeld/coop-pank-festgeld-at-raisin/): 3,26 % für 1 Jahr, über Raisin, Einlagensicherung Estland
+- [BluOr Bank Festgeld](https://finvallo.com/at/festgeld/bluor-bank-festgeld-at-raisin/): 3,20 % für 1 Jahr, über Raisin, Einlagensicherung Lettland
+- [Creditplus Bank Festgeld](https://finvallo.com/at/festgeld/creditplus-bank-festgeld-at-raisin/): 3,10 % für 1 Jahr, über Raisin, Einlagensicherung Deutschland
+
 ## Finanzrechner
 - [Zinseszinsrechner & Sparrechner (Deutschland)](https://finvallo.com/de/rechner/zinseszins/)
 - [Kreditrechner (Deutschland)](https://finvallo.com/de/rechner/kreditrechner/)

@@ -415,6 +415,102 @@ i Kurzantwort: In Deutschland lohnt sich Punktesammeln deutlich mehr als in Öst
 - [Basiskonto (Tomorrow)](https://finvallo.com/de/girokonto/tomorrow-basiskonto/): Basiskonten, 2,6/5, 188 € im Jahr im Beispiel
 - [N26 Basiskonto (N26)](https://finvallo.com/de/girokonto/n26-basiskonto/): Basiskonten, 2,6/5, 202,80 € im Jahr im Beispiel
 
+## Deutschland: Festgeld
+- [Festgeld-Vergleich Deutschland](https://finvallo.com/de/festgeld/): 273 Angebote, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand 27.10.2026
+- [Festgeld 1 Monat](https://finvallo.com/de/festgeld/1-monat/)
+- [Festgeld 3 Monate](https://finvallo.com/de/festgeld/3-monate/)
+- [Festgeld 6 Monate](https://finvallo.com/de/festgeld/6-monate/)
+- [Festgeld 9 Monate](https://finvallo.com/de/festgeld/9-monate/)
+- [Festgeld 1 Jahr](https://finvallo.com/de/festgeld/1-jahr/)
+- [Festgeld 18 Monate](https://finvallo.com/de/festgeld/18-monate/)
+- [Festgeld 2 Jahre](https://finvallo.com/de/festgeld/2-jahre/)
+- [Festgeld 3 Jahre](https://finvallo.com/de/festgeld/3-jahre/)
+- [Festgeld 4 Jahre](https://finvallo.com/de/festgeld/4-jahre/)
+- [Festgeld 5 Jahre](https://finvallo.com/de/festgeld/5-jahre/)
+- [Festgeld 6 Jahre](https://finvallo.com/de/festgeld/6-jahre/)
+- [Festgeld 7 Jahre](https://finvallo.com/de/festgeld/7-jahre/)
+- [Festgeld 8 Jahre](https://finvallo.com/de/festgeld/8-jahre/)
+- [Festgeld 10 Jahre](https://finvallo.com/de/festgeld/10-jahre/)
+- [Festgeld bei deutschen Banken](https://finvallo.com/de/festgeld/deutsche-banken/)
+- [So vergleichen wir Festgeld](https://finvallo.com/de/festgeld/methodik/)
+- [Daten als JSON](https://finvallo.com/de/daten/festgeld.json)
+- [Bigbank Festgeld](https://finvallo.com/de/festgeld/bigbank-festgeld-de/): 3,60 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Estland
+- [MAX Festgeld](https://finvallo.com/de/festgeld/max-festgeld-festgeld-de-check24/): 3,53 % für 1 Jahr, über Check24, Einlagensicherung Slowakei
+- [Ecobank International Festgeld](https://finvallo.com/de/festgeld/ecobank-international-festgeld-de-raisin/): 3,52 % für 1 Jahr, über Raisin, Einlagensicherung Frankreich
+- [HypoVereinsbank Festgeld](https://finvallo.com/de/festgeld/hypovereinsbank-festgeld-de/): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [İşbank İŞWEB Festgeld](https://finvallo.com/de/festgeld/isbank-isweb-festgeld-de/): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [OYAK ANKER Bank Festgeld](https://finvallo.com/de/festgeld/oyak-anker-bank-festgeld-de/): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [Multitude Bank Festgeld](https://finvallo.com/de/festgeld/multitude-bank-festgeld-de-check24/): 3,50 % für 1 Jahr, über Check24, Einlagensicherung Malta
+- [Stellantis Bank Best Festgeld](https://finvallo.com/de/festgeld/stellantis-bank-festgeld-de/): 3,49 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Frankreich
+- [Magnetiq Bank Festgeld](https://finvallo.com/de/festgeld/magnetiq-bank-festgeld-de-check24/): 3,45 % für 1 Jahr, über Check24, Einlagensicherung Lettland
+- [Banca Sistema Festgeld](https://finvallo.com/de/festgeld/banca-sistema-festgeld-de-check24/): 3,45 % für 1 Jahr, über Check24, Einlagensicherung Italien
+- [Banca Sistema Festgeld](https://finvallo.com/de/festgeld/banca-sistema-festgeld-de-raisin/): 3,45 % für 1 Jahr, über Raisin, Einlagensicherung Italien
+- [Ziraat Bank Festgeld](https://finvallo.com/de/festgeld/ziraat-bank-festgeld-de/): 3,41 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [Bank of Scotland Festgeld](https://finvallo.com/de/festgeld/bank-of-scotland-festgeld-de/): 3,40 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [RIB Festgeld](https://finvallo.com/de/festgeld/rib-festgeld-de-check24/): 3,40 % für 1 Jahr, über Check24, Einlagensicherung Lettland
+- [URBO Festgeld](https://finvallo.com/de/festgeld/urbo-festgeld-de-check24/): 3,40 % für 1 Jahr, über Check24, Einlagensicherung Litauen
+- [Urbo Bankas Flexgeld (Festgeld mit vorzeitiger Kündigungsmöglichkeit)](https://finvallo.com/de/festgeld/urbo-bankas-festgeld-de-raisin/): 3,40 % für 1 Jahr, über Raisin, Einlagensicherung Litauen
+- [EMBank Festgeld](https://finvallo.com/de/festgeld/embank-festgeld-de-check24/): 3,35 % für 1 Jahr, über Check24, Einlagensicherung Litauen
+- [European Merchant Bank Festgeld](https://finvallo.com/de/festgeld/european-merchant-bank-festgeld-de-raisin/): 3,35 % für 1 Jahr, über Raisin, Einlagensicherung Litauen
+- [Tyche Bank Festgeld](https://finvallo.com/de/festgeld/tyche-bank-festgeld-de-raisin/): 3,35 % für 1 Jahr, über Raisin, Einlagensicherung Italien
+- [Coop Pank Festgeld](https://finvallo.com/de/festgeld/coop-pank-festgeld-de-check24/): 3,31 % für 1 Jahr, über Check24, Einlagensicherung Estland
+- [J&T Direktbank Festgeld](https://finvallo.com/de/festgeld/jt-direktbank-festgeld-de/): 3,30 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Tschechien
+- [Arab Banking Corporation SA Festgeld](https://finvallo.com/de/festgeld/arab-banking-corporation-sa-festgeld-de-raisin/): 3,30 % für 1 Jahr, über Raisin, Einlagensicherung Frankreich
+- [Akbank AK-Online Festgeld](https://finvallo.com/de/festgeld/akbank-ak-online-festgeld-de/): 3,26 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [Coop Pank Festgeld](https://finvallo.com/de/festgeld/coop-pank-festgeld-de-raisin/): 3,26 % für 1 Jahr, über Raisin, Einlagensicherung Estland
+- [Itaú Europe S.A. Festgeld](https://finvallo.com/de/festgeld/itau-europe-s-a-festgeld-de-raisin/): 3,25 % für 1 Jahr, über Raisin, Einlagensicherung Luxemburg
+- [KT Bank KT FestgeldKonto](https://finvallo.com/de/festgeld/kt-bank-festgeldkonto-de/): 3,25 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [Morgan Stanley Festgeld](https://finvallo.com/de/festgeld/morgan-stanley-festgeld-de-raisin/): 3,25 % für 1 Jahr, über Raisin, Einlagensicherung Deutschland
+- [Nexent Bank Festgeld](https://finvallo.com/de/festgeld/nexent-bank-festgeld-de/): 3,25 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Niederlande
+- [RiverBank Festgeld](https://finvallo.com/de/festgeld/riverbank-festgeld-de-raisin/): 3,25 % für 1 Jahr, über Raisin, Einlagensicherung Luxemburg
+- [SWK Bank Festgeld](https://finvallo.com/de/festgeld/swk-bank-festgeld-de/): 3,25 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+
+## Österreich: Festgeld
+- [Festgeld-Vergleich Österreich](https://finvallo.com/at/festgeld/): 51 Angebote, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand 27.10.2026
+- [Festgeld 3 Monate](https://finvallo.com/at/festgeld/3-monate/)
+- [Festgeld 6 Monate](https://finvallo.com/at/festgeld/6-monate/)
+- [Festgeld 9 Monate](https://finvallo.com/at/festgeld/9-monate/)
+- [Festgeld 1 Jahr](https://finvallo.com/at/festgeld/1-jahr/)
+- [Festgeld 18 Monate](https://finvallo.com/at/festgeld/18-monate/)
+- [Festgeld 2 Jahre](https://finvallo.com/at/festgeld/2-jahre/)
+- [Festgeld 3 Jahre](https://finvallo.com/at/festgeld/3-jahre/)
+- [Festgeld 4 Jahre](https://finvallo.com/at/festgeld/4-jahre/)
+- [Festgeld 5 Jahre](https://finvallo.com/at/festgeld/5-jahre/)
+- [Festgeld 10 Jahre](https://finvallo.com/at/festgeld/10-jahre/)
+- [Festgeld bei österreichischen Banken](https://finvallo.com/at/festgeld/oesterreichische-banken/)
+- [So vergleichen wir Festgeld](https://finvallo.com/at/festgeld/methodik/)
+- [Daten als JSON](https://finvallo.com/at/daten/festgeld.json)
+- [Banca Sistema Festgeld](https://finvallo.com/at/festgeld/banca-sistema-festgeld-at-raisin/): 3,45 % für 1 Jahr, über Raisin, Einlagensicherung Italien
+- [Urbo Bankas Flexgeld](https://finvallo.com/at/festgeld/urbo-bankas-flexgeld-at-raisin/): 3,40 % für 1 Jahr, über Raisin, Einlagensicherung Litauen
+- [Coop Pank Festgeld](https://finvallo.com/at/festgeld/coop-pank-festgeld-at-raisin/): 3,26 % für 1 Jahr, über Raisin, Einlagensicherung Estland
+- [BluOr Bank Festgeld](https://finvallo.com/at/festgeld/bluor-bank-festgeld-at-raisin/): 3,20 % für 1 Jahr, über Raisin, Einlagensicherung Lettland
+- [Creditplus Bank Festgeld](https://finvallo.com/at/festgeld/creditplus-bank-festgeld-at-raisin/): 3,10 % für 1 Jahr, über Raisin, Einlagensicherung Deutschland
+- [Hypo Vorarlberg Festgeld Online (Aktion)](https://finvallo.com/at/festgeld/hypo-vorarlberg-festgeld-online-at/): 3,10 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [IBL Banca Festgeld](https://finvallo.com/at/festgeld/ibl-banca-festgeld-at-raisin/): 3,01 % für 1 Jahr, über Raisin, Einlagensicherung Italien
+- [bank99 fixsparen99](https://finvallo.com/at/festgeld/bank99-fixsparen99-at/): 3 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Denzel Bank Onlinesparen Festgeld](https://finvallo.com/at/festgeld/denzel-bank-onlinesparen-festgeld-at/): 3 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [KOMMUNALKREDIT INVEST Festgeldanlage](https://finvallo.com/at/festgeld/kommunalkredit-invest-festgeld-at/): 3 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Porsche Bank SPAREN Fix](https://finvallo.com/at/festgeld/porsche-bank-sparen-fix-at/): 3 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Holm Bank Festgeld](https://finvallo.com/at/festgeld/holm-bank-festgeld-at-raisin/): 3 % für 1 Jahr, über Raisin, Einlagensicherung Estland
+- [Klarna Festgeld+](https://finvallo.com/at/festgeld/klarna-festgeld-plus-at/): 2,95 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Schweden
+- [Renault Bank direkt Festgeld](https://finvallo.com/at/festgeld/renault-bank-direkt-festgeld-at/): 2,95 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Frankreich
+- [DenizBank Festgeld (Online Sparen)](https://finvallo.com/at/festgeld/denizbank-festgeld-at/): 2,90 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Santander Consumer Bank Festgeldkonto BestFix](https://finvallo.com/at/festgeld/santander-bestfix-at/): 2,90 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Bank Direkt Fixzinskonto](https://finvallo.com/at/festgeld/bank-direkt-fixzinskonto-at/): 2,85 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Bank DiMare Festgeld](https://finvallo.com/at/festgeld/bank-dimare-festgeld-at-raisin/): 2,85 % für 1 Jahr, über Raisin, Einlagensicherung Malta
+- [Addiko Bank Addiko Festgeld](https://finvallo.com/at/festgeld/addiko-festgeld-at/): 2,80 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Austrian Anadi Bank Online-Festgeld](https://finvallo.com/at/festgeld/anadi-bank-online-festgeld-at/): 2,75 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [BKS Bank Mein Geld-Konto fix](https://finvallo.com/at/festgeld/bks-bank-mein-geld-konto-fix-at/): 2,75 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [DADAT Bank Online Festgeld](https://finvallo.com/at/festgeld/dadat-festgeld-at/): 2,75 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Achmea Bank Festgeld](https://finvallo.com/at/festgeld/achmea-bank-festgeld-at-raisin/): 2,74 % für 1 Jahr, über Raisin, Einlagensicherung Niederlande
+- [Alisa Bank Festgeld](https://finvallo.com/at/festgeld/alisa-bank-festgeld-at-raisin/): 2,70 % für 1 Jahr, über Raisin, Einlagensicherung Finnland
+- [Bank Austria Sparkonto fix](https://finvallo.com/at/festgeld/bank-austria-sparkonto-fix-at/): 2,70 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Wüstenrot Wüstenrot FIX Festgeldkonto](https://finvallo.com/at/festgeld/wuestenrot-fix-festgeldkonto-at/): 2,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Inbank Festgeld](https://finvallo.com/at/festgeld/inbank-festgeld-at-raisin/): 2,47 % für 1 Jahr, über Raisin, Einlagensicherung Estland
+- [Hypo Vorarlberg Kapitalkonto](https://finvallo.com/at/festgeld/hypo-vorarlberg-kapitalkonto-at/): 2,45 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [HYPO NOE HYPO NOE Online Festgeld](https://finvallo.com/at/festgeld/hypo-noe-online-festgeld-at/): 2,30 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Österreich
+- [Rietumu Banka Festgeld](https://finvallo.com/at/festgeld/rietumu-banka-festgeld-at-raisin/): 2,30 % für 1 Jahr, über Raisin, Einlagensicherung Lettland
+
 ## Finanzrechner
 - [Zinseszinsrechner & Sparrechner (Deutschland)](https://finvallo.com/de/rechner/zinseszins/)
 - [Kreditrechner (Deutschland)](https://finvallo.com/de/rechner/kreditrechner/)

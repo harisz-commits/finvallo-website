@@ -5,7 +5,25 @@
 import csv,glob,json,os,re,sys
 SP=os.path.dirname(os.path.abspath(__file__)); RD=os.path.join(SP,'festgeld-recherche'); DD=os.path.join(SP,'daten')
 # Redaktionell nicht aufgenommen: id -> Grund
-AUS={'opel-direktbank-festgeld-de':'Marke der Stellantis Bank mit denselben Konditionen; steht als Stellantis Bank im Vergleich.'}
+AUS={'opel-direktbank-festgeld-de':'Marke der Stellantis Bank mit denselben Konditionen; steht als Stellantis Bank im Vergleich.',
+     'garantibank-kleeblatt-festgeld-de':'Die Bank-Website war bei der Prüfung nicht abrufbar; ohne Konditionen aus erster Hand nehmen wir das Angebot nicht auf.',
+     'bigbank-festgeld-at':'Die Bank-Website war bei der Prüfung nicht abrufbar; ohne Konditionen aus erster Hand nehmen wir das Angebot nicht auf.'}
+# Gründe in der öffentlichen Liste „nicht aufgenommen“: redaktionell neu formuliert (Name -> Grund)
+GRUND={'Bank11direkt':'Website bei der Prüfung nicht erreichbar, keine Konditionen aus erster Hand.',
+       'DKB Festgeld':'Die DKB nennt auf ihrer Website keine Annahme von Kundinnen und Kunden mit Wohnsitz in Österreich.',
+       'AutoBank AG':'Website bei der Prüfung nicht erreichbar, keine aktuellen Konditionen aus erster Hand.',
+       'Hello bank! (BNP Paribas S.A. Niederlassung Österreich)':'Kein Festgeld-Angebot gefunden.',
+       'durchblicker.at (Sparzinsen)':'Vergleichsportal ohne eigenen Abschluss.',
+       'My Money Bank':'Festgeld nur über Raisin, dort im Vergleich.'}
+# interne Vermerke der Recherche (Aufteilung auf Gruppen, Dubletten, 0-%-Laufzeiten) nicht veröffentlichen
+INTERN=re.compile(r'Gruppe|API|aufgenommen als|0,00–|laut Vorgaben|Teaser|Auftrag|nicht doppelt|Dublette|0,00 %|identisch mit|\((?:dort )?erfasst|\berfasst\)|unter diesem Namen erfasst|dort im Vergleich|, (?:dieses|das) ist erfasst|sind erfasst|\(erfasst\)|erfasst als')
+def clean(t):
+    if not t: return t
+    t=t.replace('Kund:innen','Kundinnen und Kunden')
+    t=re.sub(r'\s*\((?:HTTP|Verbindungs|TLS|Proxy)[^)]*\)','',t)
+    ss=[x for x in re.split(r'(?<=[.;])\s+',t) if not re.search(r'HTTP|automatisierte Abrufe|gegengeprüft|manuell|[Ss]ekundärquelle|[Cc]apitalo|Vergleichsportal',x)]
+    return ' '.join(ss).strip() or None
+
 ZZ={'jaehrlich','endfaellig','monatlich','quartalsweise','halbjaehrlich','wahlweise'}
 KD={'nein','ja','ja_mit_abschlag'}; VL={'automatisch','keine','wahlweise'}
 
@@ -45,6 +63,7 @@ def norm(a):
         a['hinweis']=((a.get('hinweis') or '')+' Zusätzlich Laufzeiten in Wochen, die wir nicht vergleichen.').strip()
     a['zinsen']=sorted(zs,key=lambda z:(z['monate'] or 0,z['min'] or 0))
     a['es']=a.get('einlagensicherung') or {}
+    a['hinweis']=clean(a.get('hinweis'))
     a.setdefault('sek',[]); a.setdefault('status','ok')
     v=a.get('vertrieb') or ''
     a['vertrieb']='direkt' if v.lower()=='direkt' else v
@@ -57,7 +76,11 @@ def main():
         if n=='laender': continue
         d=json.load(open(p,encoding='utf-8'))
         if n.endswith('-nicht-aufgenommen'):
-            for x in d: raus[x.get('markt') if x.get('markt') in raus else 'de' if n.startswith('DE') else 'at'].append({'name':x['name'],'grund':x['grund'],'gruppe':n.split('-')[0]})
+            for x in d:
+                if x['name'] in GRUND: x['grund']=GRUND[x['name']]
+                elif INTERN.search(x['grund']): continue
+                x['grund']=clean(x['grund']) or 'Keine prüfbaren Konditionen.'
+                raus[x.get('markt') if x.get('markt') in raus else 'de' if n.startswith('DE') else 'at'].append({'name':x['name'],'grund':x['grund'],'gruppe':n.split('-')[0]})
             continue
         gruppen[n]=len(d)
         for a in d:

@@ -1395,153 +1395,6 @@
    "gruppe": "AT_A"
   },
   {
-   "id": "bigbank-festgeld-at",
-   "markt": "at",
-   "bank": "Bigbank",
-   "institut": "Bigbank AS",
-   "produkt": "Festgeld",
-   "vertrieb": "direkt",
-   "vertrieb_url": "https://www.bigbank.at/festgeld/",
-   "sitz": "EE",
-   "zweigniederlassung": false,
-   "einlagensicherung": {
-    "system": "Tagatisfond (estnischer Einlagensicherungsfonds)",
-    "betrag": 100000,
-    "freiwillig": null
-   },
-   "zinsen": [
-    {
-     "monate": 1,
-     "zins": 2.25,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 2,
-     "zins": 2.25,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 3,
-     "zins": 2.5,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 4,
-     "zins": 2.5,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 5,
-     "zins": 2.5,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 6,
-     "zins": 3.0,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 9,
-     "zins": 3.25,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 12,
-     "zins": 3.5,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 18,
-     "zins": 3.5,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 24,
-     "zins": 3.5,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 36,
-     "zins": 3.5,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 48,
-     "zins": 3.5,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 60,
-     "zins": 3.5,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 120,
-     "zins": 3.5,
-     "min": null,
-     "max": null
-    }
-   ],
-   "min_anlage": 1000,
-   "max_anlage": 100000,
-   "zinszahlung": "wahlweise",
-   "zinszahlung_text": "jährlich oder am Laufzeitende (bei Abschluss wählbar)",
-   "zinseszins": null,
-   "steuer": "Keine automatische KESt-Abfuhr (estnische Bank ohne Steuerabzug in Österreich): Zinsen in der Steuererklärung (Beilage E1kv, Sondersteuersatz 25 %) angeben. Estnische Quellensteuer fällt nach Angaben von Vergleichsportalen nicht an.",
-   "steuer_auto": false,
-   "kuendigung": "nein",
-   "kuendigung_text": "Vorzeitige Kündigung oder Teilauszahlung vertraglich ausgeschlossen.",
-   "verlaengerung": "automatisch",
-   "konto_noetig": null,
-   "referenzkonto": true,
-   "neukunden_only": false,
-   "gemeinschaftskonto": null,
-   "eroeffnung": "online",
-   "legitimation": null,
-   "kosten": "kostenlos",
-   "aktion": null,
-   "quelle": "https://www.capitalo.at/festgeld/vergleich",
-   "quelle2": "https://www.capitalo.at/anbieter/bigbank/produkte/festgeld",
-   "stand": "2026-10-23",
-   "geprueft": "2026-10-27",
-   "status": "ok",
-   "hinweis": "bigbank.at blockiert automatisierte Abrufe (HTTP 403); alle Werte stammen aus capitalo.at (Stand 23.10.2026) und sollten auf bigbank.at gegengeprüft werden. Einheitlich 3,50 % für 12 bis 120 Monate wirkt aktionsartig.",
-   "sek": [
-    "zinsen",
-    "min_anlage",
-    "max_anlage",
-    "zinszahlung",
-    "zinszahlung_text",
-    "zinseszins",
-    "steuer",
-    "steuer_auto",
-    "kuendigung",
-    "kuendigung_text",
-    "verlaengerung",
-    "referenzkonto",
-    "neukunden_only",
-    "zweigniederlassung",
-    "einlagensicherung",
-    "eroeffnung",
-    "kosten",
-    "stand"
-   ],
-   "gruppe": "AT_B"
-  },
-  {
    "id": "bks-bank-mein-geld-konto-fix-at",
    "markt": "at",
    "bank": "BKS Bank",
@@ -4231,11 +4084,6 @@
    "gruppe": "AT_A"
   },
   {
-   "name": "Raiffeisenbanken – Online Sparen (regional)",
-   "grund": "Regionale Raiffeisenbanken mit eigenem Kundenkreis; bundesweites Online-Angebot ist Bank Direkt (RLB OÖ), dieses ist erfasst.",
-   "gruppe": "AT_A"
-  },
-  {
    "name": "Volksbanken Österreich",
    "grund": "Kein bundesweites Online-Festgeld der Volksbanken gefunden; regionale Institute.",
    "gruppe": "AT_A"
@@ -4272,7 +4120,7 @@
   },
   {
    "name": "AutoBank AG",
-   "grund": "Webseite nicht erreichbar (HTTP 503), keine aktuellen Konditionen aus Primärquelle.",
+   "grund": "Website bei der Prüfung nicht erreichbar, keine aktuellen Konditionen aus erster Hand.",
    "gruppe": "AT_A"
   },
   {
@@ -4281,18 +4129,8 @@
    "gruppe": "AT_A"
   },
   {
-   "name": "Schelhammer Capital Bank AG (Schelhammer)",
-   "grund": "Festgeld der Bank läuft über die Marke DADAT (erfasst); kein eigenes öffentliches Festgeldangebot von Schelhammer.",
-   "gruppe": "AT_A"
-  },
-  {
    "name": "DenizBank – Sparbuch mit Fixzinsgarantie",
    "grund": "Nur in der Filiale eröffnungsfähig (gleiche Zinsen wie Online-Festgeld, das erfasst ist).",
-   "gruppe": "AT_A"
-  },
-  {
-   "name": "Hypo Vorarlberg – Prämiensparbuch fixer Zinssatz",
-   "grund": "Sparbuch mit Prämie, nur Filialprodukt; Online-Kapitalkonto und Festgeld-Aktion sind erfasst.",
    "gruppe": "AT_A"
   },
   {
@@ -4306,21 +4144,6 @@
    "gruppe": "AT_A"
   },
   {
-   "name": "Fibank – Flexgeld über Raisin",
-   "grund": "Einziges Produkt auf raisin.com/de-at mit 0,00 % p. a. ausgewiesen (Zinssatz seit 2021-03-16 unverändert) – faktisch kein Neugeschäft.",
-   "gruppe": "AT_B"
-  },
-  {
-   "name": "Raisin AT – Tagesgeld/Kündigungsgeld (Avida, Inbank, Holm, Morrow, Lea Bank, Alisa, BluOr, Deutsche Bank/Euro Extra, Bank DiMare, Creditplus, FCM Bank, Wormser)",
-   "grund": "Kein Festgeld (OVERNIGHT/NOTICE-Produkte in der Raisin-Produkt-API).",
-   "gruppe": "AT_B"
-  },
-  {
-   "name": "Raisin AT – Einzel-Laufzeiten mit 0,00–0,01 % (BluOr 3 Monate, Guber Banca 9 und 18 Monate, LHV 2 Jahre)",
-   "grund": "Auf der Plattform gelistet, aber mit 0,00–0,01 % p. a. seit 2022–2024 unverändert – faktisch geschlossen; im jeweiligen Angebot unter hinweis vermerkt.",
-   "gruppe": "AT_B"
-  },
-  {
    "name": "Zinspilot Österreich",
    "grund": "zinspilot.at leitet per Frame auf zinspilot.de weiter, das auf raisin.com/de-de umleitet – Zinspilot ist in Raisin aufgegangen, kein eigenes AT-Angebot.",
    "gruppe": "AT_B"
@@ -4332,7 +4155,7 @@
   },
   {
    "name": "durchblicker.at (Sparzinsen)",
-   "grund": "Reines Vergleichsportal ohne eigenen Abschluss (Weiterleitung zur Bank); Seite blockiert zudem automatisierte Abrufe (HTTP 403).",
+   "grund": "Keine prüfbaren Konditionen.",
    "gruppe": "AT_B"
   },
   {
@@ -4343,11 +4166,6 @@
   {
    "name": "Ikano Bank Österreich",
    "grund": "ikanobank.at bietet in Österreich nur IKEA-Finanzierung, kein Einlagengeschäft.",
-   "gruppe": "AT_B"
-  },
-  {
-   "name": "Inbank (direkt)",
-   "grund": "Kein Direktangebot für Österreich gefunden; Inbank-Festgeld für Österreich läuft über Raisin (aufgenommen als inbank-festgeld-at-raisin). inbank.at nicht erreichbar.",
    "gruppe": "AT_B"
   },
   {
@@ -4376,23 +4194,23 @@
    "gruppe": "AT_B"
   },
   {
-   "name": "Santander Consumer Bank Österreich",
-   "grund": "Laut Auftrag Gruppe AT_A.",
-   "gruppe": "AT_B"
-  },
-  {
    "name": "DKB Festgeld",
-   "grund": "capitalo.at und etf.at führen das DKB-Festgeld für Österreich (nicht steuereinfach), die DKB-Seite selbst nennt aber keine Annahme von Kunden mit Wohnsitz Österreich und zeigt andere Zinsen (z. B. 1 Jahr 2,7 % statt 2,1 %). AT-Verfügbarkeit nicht primär belegt – bitte prüfen (ggf. Gruppe DE).",
+   "grund": "Die DKB nennt auf ihrer Website keine Annahme von Kundinnen und Kunden mit Wohnsitz in Österreich.",
    "gruppe": "AT_B"
   },
   {
    "name": "Hello bank! (BNP Paribas S.A. Niederlassung Österreich)",
-   "grund": "Website nicht erreichbar (Proxy), kein Festgeld-Angebot in Quellen gefunden; als österreichische Niederlassung vermutlich Gruppe AT_A.",
+   "grund": "Kein Festgeld-Angebot gefunden.",
    "gruppe": "AT_B"
   },
   {
    "name": "Bigbank Tagesgeld-Aktion / Klarna Flexkonto / Renault Tagesgeld",
    "grund": "Tagesgeld, kein Festgeld.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "Bigbank Festgeld",
+   "grund": "Die Bank-Website war bei der Prüfung nicht abrufbar; ohne Konditionen aus erster Hand nehmen wir das Angebot nicht auf.",
    "gruppe": "AT_B"
   }
  ]

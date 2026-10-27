@@ -8,10 +8,12 @@ Alles neu bauen: `bash tools/build.sh` (idempotent, danach committen).
 - `daten/at/business.json` – weitere Business-Angebote Österreich.
 - `de-recherche/*.json` – alle Karten Deutschland (`geprueft` je Karte), `INSTRUCTIONS.md` = Erfassungsregeln; `overrides.py` = redaktionelle Korrekturen.
 - `daten/at/lohnt.json`, `daten/de/lohnt.json` – Guthaben, Lounges, Abos und Annahmen für „Ab wann lohnt sich …?“.
+- `festgeld-recherche/<GRUPPE>.json` – Rohdaten Festgeld je Recherche-Gruppe (`INSTRUCTIONS.md` = Erfassungsregeln, `laender.json` = Einlagensicherung und S&P-Rating je Land). `festgeld_daten.py` führt sie zu `daten/<land>/festgeld.json` und `.csv` zusammen (nach neuer Recherche einmal ausführen).
 - `sammeln.py` – Sammelraten für die Bestenlisten Meilen/Punkte und Cashback.
 
 ## Skripte (Reihenfolge wie in build.sh)
 - `karten.py` – Karten-, Listen-, Anbieter-, Bestenlisten-Seiten, JSON-Daten, Sitemap, llms.txt und Kreditkarten-Rechner für AT und DE.
+- `festgeld.py` – Festgeld-Vergleich je Land: Liste mit Zinsrechner und Filtern (`assets/festgeld.js`), Laufzeit-Seiten, Angebotsseiten, Methodik, JSON/CSV-Export; Rechnung wird in `check.py` gegen `festgeld.js` geprüft.
 - `lohnt.py` – Seiten „Ab wann lohnt sich …?“ und der Block „Top-Karten, je nachdem wie du sie nutzt“ auf den Bestenlisten.
 - `score.py` – Bewertung nach der Finvallo-Methodik.
 - `ratgeber.py`, `rechner.py`, `landing.py` – Ratgeber, Finanzrechner, Startseiten.
