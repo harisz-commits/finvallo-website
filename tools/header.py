@@ -15,6 +15,12 @@ if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten
     DE_MAIN.insert(1,('de/girokonto/','Girokonten'))
     DE_MORE[1:1]=[('de/girokonto/bestenlisten/','Girokonto-Bestenlisten'),('de/girokonto/methodik/','So bewerten wir Girokonten')]
 
+# Festgeld je Land ins Menü, sobald die Daten da sind
+for _l,_m,_x in (('at',AT_MAIN,AT_MORE),('de',DE_MAIN,DE_MORE)):
+    if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten',_l,'festgeld.json')):
+        _m.insert(2,(f'{_l}/festgeld/','Festgeld'))
+        _x.insert(2,(f'{_l}/festgeld/methodik/','So vergleichen wir Festgeld'))
+
 def active(rel, items):
     # longest matching prefix wins; card pages fall under Kreditkarten
     best=None

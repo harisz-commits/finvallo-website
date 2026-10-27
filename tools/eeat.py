@@ -288,6 +288,13 @@ def main():
         gd = json.load(open(gp, encoding='utf-8'))
         for k in gd['konten']: GIRO[(gl, k['slug'])] = k.get('geprueft') or gd['stand']
         GIRO[(gl, '')] = GIRO[(gl, 'methodik')] = max(v for (l_, _), v in GIRO.items() if l_ == gl)
+    FEST = {}   # (land, slug) -> Prüfdatum der Festgeld-Seiten
+    for gl in ('at', 'de'):
+        fp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daten', gl, 'festgeld.json')
+        if not os.path.exists(fp): continue
+        fd = json.load(open(fp, encoding='utf-8'))
+        for a in fd['angebote']: FEST[(gl, a['id'])] = a.get('geprueft') or fd['stand']
+        FEST[(gl, '')] = max(v for (l_, _), v in FEST.items() if l_ == gl)
     for f in sorted(glob.glob(R + '**/*.html', recursive=True)):
         rel = f[len(R):]
         rel = '' if rel == 'index.html' else rel[:-len('index.html')] if rel.endswith('index.html') else rel
@@ -391,6 +398,8 @@ def main():
                 if _d and 'description' in x and (x.get('url') == _u or (x.get('@id') or '').startswith(_u + '#')): x['description'] = _d
         s = ld_merge(s, extra, patch2)
         s = set_hreflang(s, rel)
+        if rel not in LASTMOD and rel[3:].startswith('festgeld/') and (rel[:2], '') in FEST:
+            LASTMOD[rel] = FEST.get((rel[:2], rel[len('at/festgeld/'):].strip('/')), FEST[(rel[:2], '')])
         if rel not in LASTMOD and rel[3:].startswith('girokonto/') and (rel[:2], '') in GIRO:
             LASTMOD[rel] = GIRO.get((rel[:2], rel[len('at/girokonto/'):].strip('/')), GIRO[(rel[:2], '')])
         if rel not in LASTMOD:

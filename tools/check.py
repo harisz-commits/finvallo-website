@@ -162,6 +162,14 @@ for _l in GK.CFG:
           for k in _gk for e, a, b in ((0, 35, 0), (450, 25, 3), (1500, 35, 4), (3000, 50, 12), (800, 17, 1), (0, 10, 6))]
     gr = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'giro-kontrolle.js')], input=json.dumps(_t), capture_output=True, text=True)
     if gr.returncode: err += [x for x in gr.stdout.splitlines() if x] or ['Girokonto-Kontrolle: Fehler ' + gr.stderr[:200]]
+# Festgeld: Rechnung im Browser (festgeld.js) = Rechnung im Generator (festgeld.py), für jedes Angebot, mehrere Beträge und alle Laufzeiten
+import festgeld as FG
+for _l in FG.CFG:
+    if not os.path.exists(FG.dpath(_l)): continue
+    _t = [dict(name=_l + '/' + a['slug'], k=FG.jsdata(a), b=b, m=m, want=FG.ertrag(a, b, m))
+          for a in FG.load(_l)[1] for b in (500, 5000, 10000, 50000, 250000) for m in FG.laufzeiten(a) + [7]]
+    fr = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'festgeld-kontrolle.js')], input=json.dumps(_t), capture_output=True, text=True)
+    if fr.returncode: err += [x for x in fr.stdout.splitlines() if x] or ['Festgeld-Kontrolle: Fehler ' + fr.stderr[:200]]
 print(f'{len(pages)} Seiten, {len(sm)} Sitemap-Einträge geprüft')
 if err:
     print('FEHLER:'); print('\n'.join(err[:100])); sys.exit(1)
