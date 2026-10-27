@@ -119,7 +119,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Deutsche Bank Mastercard Travel](https://finvallo.com/de/kreditkarten/deutsche-bank-mastercard-travel/): Typ: Charge; Netz: Mastercard; Jahresgebühr: 94 €; Fremdwährung: 0,50 % (kein Auslandseinsatzentgelt, nur Währungsumrechnungsentgelt); Bargeld: 2,5 %, mind. 5,75 € am Geldautomaten im Inland und in Euro im EWR (Schalter 3 %, mind. 5,75 €); in Fremdwährung zzgl. 0,50 % Umrechnungsentgelt (kein Zuschlag von 1,75 %); Reiseversicherung: inkl. Storno; Sammelrate: 6 % Rückvergütung auf Reisebuchungen über den Reiseservice-Partner PTG (kartenreiseservice.de); Bewertung: 4,1/5 (Gut); geprüft am 12.10.2026
 
 ## Deutschland: Girokonten
-- [Girokonto-Vergleich Deutschland](https://finvallo.com/de/girokonto/): 81 Konten von Banken mit Angebot in ganz Deutschland, Jahreskosten selbst rechnen, Stand 27.10.2026
+- [Girokonto-Vergleich Deutschland](https://finvallo.com/de/girokonto/): 82 Konten von Banken mit Angebot in ganz Deutschland, Jahreskosten selbst rechnen, Stand 27.10.2026
 - [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder
 - [So bewerten wir Girokonten](https://finvallo.com/de/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/de/daten/girokonten.json)
@@ -138,7 +138,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Zahlungskonto mit grundlegenden Funktionen (Revolut)](https://finvallo.com/de/girokonto/revolut-basiskonto/): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
 
 ## Deutschland: Ratgeber
-- [Kostenloses Girokonto in Deutschland: Worauf du achten musst (Deutschland)](https://finvallo.com/de/ratgeber/kostenloses-girokonto/): Kostenloses Girokonto in Deutschland: 7 Konten ohne Bedingung, 13 gratis mit Geldeingang oder unter einem bestimmten Alter. Welche Kosten trotzdem anfallen.
+- [Kostenloses Girokonto in Deutschland: Worauf du achten musst (Deutschland)](https://finvallo.com/de/ratgeber/kostenloses-girokonto/): Kostenloses Girokonto in Deutschland: 7 Konten ohne Bedingung, 14 gratis mit Geldeingang oder unter einem bestimmten Alter. Welche Kosten trotzdem anfallen.
 - [Girokonto wechseln in Deutschland: So hilft dir die neue Bank (Deutschland)](https://finvallo.com/de/ratgeber/girokonto-wechseln/): Girokonto wechseln in Deutschland: Die neue Bank muss dir laut Zahlungskontengesetz helfen. Ablauf, Fristen, was kostenlos ist und was bei Banken im EU-Ausland gilt.
 - [Basiskonto in Deutschland: Das Recht auf ein Girokonto (Deutschland)](https://finvallo.com/de/ratgeber/basiskonto/): Basiskonto in Deutschland: Wer Anspruch hat, was dabei ist, wann die Bank ablehnen darf und was es kostet. 16 Basiskonten im Vergleich.
 - [Kostenlose Kreditkarte in Deutschland: Was „ohne Jahresgebühr“ wirklich heißt (Deutschland)](https://finvallo.com/de/ratgeber/kostenlose-kreditkarte/): Kostenlose Kreditkarte in Deutschland: 23 echte Karten ohne Jahresgebühr, wo sie bei Bargeld, Ausland und Teilzahlung trotzdem Geld kosten, mit Rechenbeispielen.

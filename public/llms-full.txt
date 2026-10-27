@@ -323,7 +323,7 @@ i Kurzantwort: In Deutschland lohnt sich Punktesammeln deutlich mehr als in Öst
 - [Volksbank ClassicCard](https://finvallo.com/de/kreditkarten/volksbank-classiccard/): Typ: Charge; Netz: Mastercard; Jahresgebühr: 0 €; Fremdwährung: 1,8 %; Bargeld: Inland 2 %; im Ausland ohne Bankentgelt (ggf. Betreiberentgelt); Reiseversicherung: Keine Reiseversicherung; Sammelrate: Bis 4 % (Classic) bzw. 10 % (Gold) Reisebonus nur bei Buchung über vr-meinereise.de/Urlaubsplus - kein Cashback auf normale Einkäufe; Bewertung: 3,6/5 (Befriedigend); geprüft am 12.10.2026
 
 ## Deutschland: Girokonten
-- [Girokonto-Vergleich Deutschland](https://finvallo.com/de/girokonto/): 81 Konten von Banken mit Angebot in ganz Deutschland, Jahreskosten selbst rechnen, Stand 27.10.2026
+- [Girokonto-Vergleich Deutschland](https://finvallo.com/de/girokonto/): 82 Konten von Banken mit Angebot in ganz Deutschland, Jahreskosten selbst rechnen, Stand 27.10.2026
 - [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder
 - [So bewerten wir Girokonten](https://finvallo.com/de/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/de/daten/girokonten.json)
@@ -334,6 +334,7 @@ i Kurzantwort: In Deutschland lohnt sich Punktesammeln deutlich mehr als in Öst
 - [GiroDirekt (1822direkt)](https://finvallo.com/de/girokonto/1822direkt-girodirekt/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
 - [BetterSmart Konto (BBBank)](https://finvallo.com/de/girokonto/bbbank-bettersmart-konto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
 - [Girokonto (DKB)](https://finvallo.com/de/girokonto/dkb-girokonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [HVB PlusKonto (HypoVereinsbank)](https://finvallo.com/de/girokonto/hvb-pluskonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
 - [Standard (Revolut)](https://finvallo.com/de/girokonto/revolut-standard/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
 - [Girokonto mit Karte (Trade Republic)](https://finvallo.com/de/girokonto/trade-republic-girokonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
 - [Girokonto (ING)](https://finvallo.com/de/girokonto/ing-girokonto/): Konten für alle, 4,4/5, 0 € im Jahr im Beispiel
