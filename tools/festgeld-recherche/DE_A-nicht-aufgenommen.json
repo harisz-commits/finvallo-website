@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Audi Bank",
+    "markt": "de",
+    "grund": "Kein eigenes Angebot: Audi Bank ist Zweigniederlassung der Volkswagen Bank GmbH, audibank.de verlinkt auf Festgeld/Plus Sparbrief der Volkswagen Bank (dort erfasst)."
+  },
+  {
+    "name": "Mercedes-Benz Bank",
+    "markt": "de",
+    "grund": "Kein Neugeschäft mit Tages-/Festgeld für Privatkunden (Ausstieg laut Stiftung Warentest seit Mitte 2021); mercedes-benz-bank.de leitet auf die Finanzierungsseite von Mercedes-Benz um."
+  },
+  {
+    "name": "Toyota Bank (Toyota Kreditbank GmbH)",
+    "markt": "de",
+    "grund": "toyota-bank.de am 27.10.2026 nicht abrufbar (TLS-Zertifikatsfehler), keine Primärquelle zu einem aktuellen Direkt-Festgeld; Vergleichsportale widersprüchlich."
+  },
+  {
+    "name": "Bank11direkt",
+    "markt": "de",
+    "grund": "bank11direkt.de am 27.10.2026 wiederholt nicht erreichbar (Verbindungsabbruch/HTTP 503); nur Sekundärquellen mit widersprüchlichen Zinsen (Stand Aug. 2026) – nicht ohne Primärquelle erfasst. Später erneut prüfen."
+  },
+  {
+    "name": "My Money Bank",
+    "markt": "de",
+    "grund": "Festgeld laut Vergleichsportal nur über Raisin erhältlich (andere Gruppe); mymoneybank.de nicht erreichbar (TLS-Fehler)."
+  },
+  {
+    "name": "IKANO Bank",
+    "markt": "de",
+    "grund": "ikanobank.de bietet nur Tagesgeld an, kein Festgeld."
+  },
+  {
+    "name": "Degussa Bank",
+    "markt": "de",
+    "grund": "Bank 2024 in die Oldenburgische Landesbank (OLB) verschmolzen, kein eigenes Degussa-Festgeld mehr; degussa-bank.de nicht erreichbar."
+  },
+  {
+    "name": "Hyundai Capital Bank",
+    "markt": "de",
+    "grund": "Kein Einlagenangebot für Privatkunden gefunden; hyundai-capital-bank.de ist eine geparkte Domain."
+  },
+  {
+    "name": "Santander Consumer Bank",
+    "markt": "de",
+    "grund": "santander.de leitet für Festgeld auf Openbank weiter; erfasst als Openbank (Openbank Deutschland AG)."
+  },
+  {
+    "name": "Edekabank",
+    "markt": "de",
+    "grund": "Festgeld ab 10.000 € nur als Beratungsprodukt ohne veröffentlichte Zinsen, Zielgruppe v. a. EDEKA-Verbund; kein bundesweites Online-Direktangebot mit Konditionen."
+  },
+  {
+    "name": "Sutor Bank",
+    "markt": "de",
+    "grund": "Kein eigenes Direkt-Festgeld auf sutorbank.de gefunden (nur Infoseite 'Festgeld im Ausland')."
+  },
+  {
+    "name": "Codex",
+    "markt": "de",
+    "grund": "Keine Bank bzw. kein Festgeldangebot unter diesem Namen gefunden."
+  },
+  {
+    "name": "BMW Bank – BMW MobilBrief",
+    "markt": "de",
+    "grund": "Nur noch in den FAQ für Bestandsverträge erwähnt, nicht mehr im Produktangebot der Website."
+  },
+  {
+    "name": "CA Auto Bank – Festgeld Plus 48 Monate",
+    "markt": "de",
+    "grund": "Nur für Bestandskunden."
+  },
+  {
+    "name": "CA Auto Bank – Festgeld über Raisin",
+    "markt": "de",
+    "grund": "Plattform-Angebot (sparen-raisin.ca-autobank.de), wird von der Raisin-Gruppe erfasst."
+  },
+  {
+    "name": "pbb direkt – USD-Festgeld",
+    "markt": "de",
+    "grund": "Fremdwährungsanlage in US-Dollar, kein Euro-Festgeld."
+  },
+  {
+    "name": "OYAK ANKER Bank – Festgeld Plus / Wachstumssparen",
+    "markt": "de",
+    "grund": "Altbestand, laut Preisaushang nicht mehr im Angebot."
+  }
+]
