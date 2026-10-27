@@ -176,6 +176,73 @@ i Kurzantwort: In Deutschland lohnt sich Punktesammeln deutlich mehr als in Öst
 - [Ab wann lohnt sich die Deutsche Bank Mastercard Platin?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/deutsche-bank-mastercard-platin/): Sie lohnt sich ab etwa 7 Lounge-Besuchen im Jahr. Brauchst du sonst eine eigene Jahres-Reiseversicherung (etwa 130 €), lohnt sie sich ab etwa 3 Lounge-Besuchen im Jahr.
 - [Ab wann lohnt sich die TARGOBANK Premium-Karte?](https://finvallo.com/de/kreditkarten/bestenlisten/lohnt-sich/targobank-premium-karte/): Mit 1.000 € Kartenumsatz im Monat holst du die Jahresgebühr herein.
 
+## Österreich: Girokonten
+- [Girokonto-Vergleich Österreich](https://finvallo.com/at/girokonto/): 62 Konten von Banken mit Angebot in ganz Österreich, Jahreskosten selbst rechnen, Stand 27.10.2026
+- [So bewerten wir Girokonten](https://finvallo.com/at/girokonto/methodik/)
+- [Daten als JSON](https://finvallo.com/at/daten/girokonten.json)
+- [Online Gehalts-/Pensionskonto (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/anadi-online-gehalts-pensionskonto/): Konten für alle, 4,8/5, 0 € im Jahr im Beispiel
+- [Gehaltskonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-gehaltskonto/): Konten für alle, 4,8/5, 0 € im Jahr im Beispiel
+- [Pensionskonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-pensionskonto/): Konten für alle, 4,8/5, 0 € im Jahr im Beispiel
+- [Girokonto (Bank Direkt)](https://finvallo.com/at/girokonto/bank-direkt-girokonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [N26 Standard (N26)](https://finvallo.com/at/girokonto/n26-standard/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [Girokonto (Trade Republic)](https://finvallo.com/at/girokonto/trade-republic-girokonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [Wüstenrot ZERO (Wüstenrot Bank)](https://finvallo.com/at/girokonto/wuestenrot-bank-zero/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [Girokonto (DKB)](https://finvallo.com/at/girokonto/dkb-girokonto/): Konten für alle, 4,3/5, 0 € im Jahr im Beispiel
+- [Revolut Standard (Revolut)](https://finvallo.com/at/girokonto/revolut-standard/): Konten für alle, 4,2/5, 0 € im Jahr im Beispiel
+- [easy gratis (easybank)](https://finvallo.com/at/girokonto/easybank-easy-gratis/): Konten für alle, 4,1/5, 0 € im Jahr im Beispiel
+- [Online-Konto (Bank Austria)](https://finvallo.com/at/girokonto/bank-austria-online-konto/): Konten für alle, 4,1/5, 32,76 € im Jahr im Beispiel
+- [GoGreen-Konto (Bank Austria)](https://finvallo.com/at/girokonto/bank-austria-gogreen-konto/): Konten für alle, 4,1/5, 45,84 € im Jahr im Beispiel
+- [balancekonto99 (bank99)](https://finvallo.com/at/girokonto/bank99-balancekonto99/): Konten für alle, 4,1/5, 76,68 € im Jahr im Beispiel
+- [s Kompakt Konto (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-s-kompakt-konto/): Konten für alle, 4,0/5, 46,68 € im Jahr im Beispiel
+- [Online Girokonto (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/anadi-online-girokonto/): Konten für alle, 4,0/5, 77,64 € im Jahr im Beispiel
+- [Girokonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-girokonto/): Konten für alle, 3,9/5, 79,74 € im Jahr im Beispiel
+- [Revolut Plus (Revolut)](https://finvallo.com/at/girokonto/revolut-plus/): Konten für alle, 3,8/5, 40 € im Jahr im Beispiel
+- [N26 Smart (N26)](https://finvallo.com/at/girokonto/n26-smart/): Konten für alle, 3,8/5, 58,80 € im Jahr im Beispiel
+- [Wüstenrot LIFE (Wüstenrot Bank)](https://finvallo.com/at/girokonto/wuestenrot-bank-life/): Konten für alle, 3,8/5, 58,80 € im Jahr im Beispiel
+- [easy plus (easybank)](https://finvallo.com/at/girokonto/easybank-easy-plus/): Konten für alle, 3,8/5, 96 € im Jahr im Beispiel
+- [smartkonto99 (bank99)](https://finvallo.com/at/girokonto/bank99-smartkonto99/): Konten für alle, 3,7/5, 52,68 € im Jahr im Beispiel
+- [s Plus Konto (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-s-plus-konto/): Konten für alle, 3,7/5, 84,96 € im Jahr im Beispiel
+- [Online KontoBox (BAWAG)](https://finvallo.com/at/girokonto/bawag-online-kontobox/): Konten für alle, 3,5/5, 52,80 € im Jahr im Beispiel
+- [N26 Go (N26)](https://finvallo.com/at/girokonto/n26-go/): Konten für alle, 3,5/5, 118,80 € im Jahr im Beispiel
+- [KontoBox Large (BAWAG)](https://finvallo.com/at/girokonto/bawag-kontobox-large/): Konten für alle, 3,5/5, 142,08 € im Jahr im Beispiel
+- [Revolut Premium (Revolut)](https://finvallo.com/at/girokonto/revolut-premium/): Konten für alle, 3,4/5, 99 € im Jahr im Beispiel
+- [Relax-Konto (Bank Austria)](https://finvallo.com/at/girokonto/bank-austria-relax-konto/): Konten für alle, 3,4/5, 131,64 € im Jahr im Beispiel
+- [topkonto99 (bank99)](https://finvallo.com/at/girokonto/bank99-topkonto99/): Konten für alle, 3,4/5, 191,76 € im Jahr im Beispiel
+- [KontoBox Small (BAWAG)](https://finvallo.com/at/girokonto/bawag-kontobox-small/): Konten für alle, 3,3/5, 91,32 € im Jahr im Beispiel
+- [Change (Tomorrow)](https://finvallo.com/at/girokonto/tomorrow-change/): Konten für alle, 3,2/5, 106,80 € im Jahr im Beispiel
+- [bunq Pro (bunq)](https://finvallo.com/at/girokonto/bunq-pro/): Konten für alle, 3,2/5, 119,88 € im Jahr im Beispiel
+- [Now (Tomorrow)](https://finvallo.com/at/girokonto/tomorrow-now/): Konten für alle, 3,1/5, 108 € im Jahr im Beispiel
+- [Revolut Metal (Revolut)](https://finvallo.com/at/girokonto/revolut-metal/): Konten für alle, 3,1/5, 175 € im Jahr im Beispiel
+- [N26 Metal (N26)](https://finvallo.com/at/girokonto/n26-metal/): Konten für alle, 3,1/5, 202,80 € im Jahr im Beispiel
+- [bunq Core (bunq)](https://finvallo.com/at/girokonto/bunq-core/): Konten für alle, 2,9/5, 95,40 € im Jahr im Beispiel
+- [bunq Free (bunq)](https://finvallo.com/at/girokonto/bunq-free/): Konten für alle, 2,9/5, 143,52 € im Jahr im Beispiel
+- [Plus (Tomorrow)](https://finvallo.com/at/girokonto/tomorrow-plus/): Konten für alle, 2,9/5, 214,80 € im Jahr im Beispiel
+- [bunq Elite (bunq)](https://finvallo.com/at/girokonto/bunq-elite/): Konten für alle, 2,8/5, 227,88 € im Jahr im Beispiel
+- [Revolut Ultra (Revolut)](https://finvallo.com/at/girokonto/revolut-ultra/): Konten für alle, 2,7/5, 650 € im Jahr im Beispiel
+- [U28-Konto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-u28-konto/): Für Studierende und junge Erwachsene, 4,8/5, 0 € im Jahr im Beispiel
+- [Studentenkonto (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-studentenkonto/): Für Studierende und junge Erwachsene, 4,8/5, 0 € im Jahr im Beispiel
+- [aktivkonto99 bildung (bank99)](https://finvallo.com/at/girokonto/bank99-aktivkonto99-bildung/): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [Studentenkonto (Bank Austria)](https://finvallo.com/at/girokonto/bank-austria-studentenkonto/): Für Studierende und junge Erwachsene, 4,6/5, 0 € im Jahr im Beispiel
+- [Studentenkonto (Bank Direkt)](https://finvallo.com/at/girokonto/bank-direkt-studentenkonto/): Für Studierende und junge Erwachsene, 4,6/5, 0 € im Jahr im Beispiel
+- [Studenten KontoBox (BAWAG)](https://finvallo.com/at/girokonto/bawag-studenten-kontobox/): Für Studierende und junge Erwachsene, 4,6/5, 29,86 € im Jahr im Beispiel
+- [Wüstenrot Student LIFE (Wüstenrot Bank)](https://finvallo.com/at/girokonto/wuestenrot-bank-student-life/): Für Studierende und junge Erwachsene, 4,5/5, 0 € im Jahr im Beispiel
+- [Jugendkonto (B4-19 KontoBox) (BAWAG)](https://finvallo.com/at/girokonto/bawag-jugendkonto/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [spark7 Jugendkonto (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-spark7-jugendkonto/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [MegaCard-Konto 14-20 (Bank Austria)](https://finvallo.com/at/girokonto/bank-austria-megacard-konto-14-20/): Jugendkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [easy youth (easybank)](https://finvallo.com/at/girokonto/easybank-easy-youth/): Jugendkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Wüstenrot FIRST (Wüstenrot Bank)](https://finvallo.com/at/girokonto/wuestenrot-bank-first-jugendkonto/): Jugendkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [aktivkonto99 jugend (bank99)](https://finvallo.com/at/girokonto/bank99-aktivkonto99-jugend/): Jugendkonten, 4,4/5, 0 € im Jahr im Beispiel
+- [MegaCard-Konto 7-13 (Bank Austria)](https://finvallo.com/at/girokonto/bank-austria-megacard-konto-7-13/): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Kinderkonto (BAWAG)](https://finvallo.com/at/girokonto/bawag-kinderkonto/): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [easy kids (easybank)](https://finvallo.com/at/girokonto/easybank-easy-kids/): Kinderkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Wüstenrot START (Wüstenrot Bank)](https://finvallo.com/at/girokonto/wuestenrot-bank-start-kidskonto/): Kinderkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Basiskonto (VZKG-Konto) (Wüstenrot Bank)](https://finvallo.com/at/girokonto/wuestenrot-bank-vzkg-konto/): Basiskonten, 3,8/5, 58,80 € im Jahr im Beispiel
+- [Zahlungskonto mit grundlegenden Funktionen (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/anadi-zahlungskonto/): Basiskonten, 3,8/5, 80 € im Jahr im Beispiel
+- [Basiskonto (Bank Austria)](https://finvallo.com/at/girokonto/bank-austria-basiskonto/): Basiskonten, 3,8/5, 80 € im Jahr im Beispiel
+- [Basiskonto (VZKG-Konto) (bank99)](https://finvallo.com/at/girokonto/bank99-zahlungskonto/): Basiskonten, 3,8/5, 80 € im Jahr im Beispiel
+- [Basiskonto (VZKG-Konto) (BAWAG)](https://finvallo.com/at/girokonto/bawag-vzkg-konto/): Basiskonten, 3,8/5, 80 € im Jahr im Beispiel
+- [Zahlungskonto mit grundlegenden Funktionen (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-zahlungskonto-grundlegende-funktionen/): Basiskonten, 3,8/5, 80 € im Jahr im Beispiel
+
 ## Deutschland: Kreditkarten
 - [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 162 Karten, Stand 21.10.2026
 - [Alle Karten nach Anbieter](https://finvallo.com/de/kreditkarten/alle/)
