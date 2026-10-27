@@ -142,7 +142,7 @@ def page(rel, build):
     open(f,'w').write(head+'<body class="hp">\n'+hdr+'\n<main id="app">\n'+body+'\n</main>\n'+footer(P,hdr,AT['stand'][:4],'.'.join(reversed(AT['stand'].split('-'))),'de' if rel.startswith('de/') else 'at')+'\n</body>\n</html>\n')
 
 AT=load('AT'); DD=load('DE')
-nA=len(AT['karten']); anbA=len({c['anbieter'] for c in AT['karten']})
+nA=len(AT['karten']); nG=len(json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten','at','girokonten.json')))['konten']); anbA=len({c['anbieter'] for c in AT['karten']})
 
 def b_root(P,hdr):
     t,tc=topcards(P,AT,'Österreich',AT_TOP)
@@ -150,6 +150,7 @@ def b_root(P,hdr):
     tcd=tcd.replace('id="bestbewertet"','id="bestbewertet-de"')
     tiles=''.join([tile(P,'at/kreditkarten/','card','Kreditkarten Österreich',f'{nA} Karten im Vergleich'),
       tile(P,'de/kreditkarten/','card','Kreditkarten Deutschland',f'{len(DD["karten"])} Karten im Vergleich' if DD else 'Ratgeber · Vergleich in Arbeit'),
+      tile(P,'at/girokonto/','bank','Girokonten Österreich',f'{nG} Konten im Vergleich'),
       tile(P,'at/kreditkarten/bestenlisten/','trophy','Bestenlisten','Die besten Karten nach Kategorie'),
       tile(P,'at/kreditkarten/business/','brief','Business-Kreditkarten','Firmenkarten für Selbstständige'),
       tile(P,'at/kreditkarten/rechner/','calc','Kartenrechner','Was kostet dich deine Karte wirklich?'),
@@ -161,7 +162,7 @@ def b_root(P,hdr):
         'Banken, Preise und Bedingungen unterscheiden sich. Wähle dein Land, dann siehst du nur Angebote, die du dort auch bekommst.',
         herolands(P,AT,DD),art(t[0],None))
       + stats([(nA,'Karten in Österreich'),(len(DD['karten']) if DD else '-','Karten in Deutschland'),(len({c['anbieter'].split()[0].lower().strip(',') for c in AT['karten']+(DD['karten'] if DD else [])}),'Banken und Anbieter'),(7,'offene Bewertungskriterien')])
-      + sec('Unsere Vergleiche im Überblick','Finde das passende Finanzprodukt.',f'<div class="hp-tiles">{tiles}</div><p class="hp-sub" style="margin-top:16px">Weitere Vergleiche (Girokonto, Tagesgeld, Depot) sind in Arbeit.</p>')
+      + sec('Unsere Vergleiche im Überblick','Finde das passende Finanzprodukt.',f'<div class="hp-tiles">{tiles}</div><p class="hp-sub" style="margin-top:16px">Weitere Vergleiche (Girokonto Deutschland, Tagesgeld, Depot) sind in Arbeit.</p>')
       + tc + tcd + trust(P)
       + sec('Ratgeber','Kreditkarten einfach erklärt.',f'<div class="hp-posts">{guides(P,AT_GUIDES[:3]+DE_GUIDES[:3])}</div><div class="hp-more"><a class="btn" href="{P}at/ratgeber/">Ratgeber Österreich →</a> <a class="btn ghost" href="{P}de/ratgeber/">Ratgeber Deutschland →</a></div>',True)
       + fq), ld
@@ -176,6 +177,7 @@ def ROOT_FAQ(t,td=None): return [
 def b_at(P,hdr):
     t,tc=topcards(P,AT,'Österreich',AT_TOP,'at/kreditkarten/')
     tiles=''.join([tile(P,'at/kreditkarten/','card','Kreditkarten',f'{nA} Karten im Vergleich'),
+      tile(P,'at/girokonto/','bank','Girokonten',f'{nG} Konten im Vergleich'),
       tile(P,'at/kreditkarten/bestenlisten/','trophy','Bestenlisten','Die besten Karten nach Kategorie'),
       tile(P,'at/kreditkarten/business/','brief','Business-Kreditkarten','Firmenkarten für Selbstständige'),
       tile(P,'at/kreditkarten/anbieter/','bank','Anbieter',f'{anbA} Banken und Kartenanbieter'),
@@ -187,7 +189,7 @@ def b_at(P,hdr):
         f'<a class="btn primary" href="{P}at/kreditkarten/">Alle Kreditkarten {ic(I["arrow"])}</a><a class="btn ghost" href="{P}at/kreditkarten/bestenlisten/">Bestenlisten</a><a class="btn ghost" href="#bestbewertet">Bestbewertete Karten ansehen</a>',art(t[0],'AT'))
       + stats([(nA,'Kreditkarten verglichen'),(anbA,'Banken und Anbieter'),(7,'offene Bewertungskriterien'),(9,'Bestenlisten nach Kategorie')])
       + tc
-      + sec('Alles für Österreich','Vergleiche, Werkzeuge und Ratgeber.',f'<div class="hp-tiles">{tiles}</div><p class="hp-sub" style="margin-top:16px">Weitere Vergleiche (Girokonto, Tagesgeld, Depot) sind in Arbeit.</p>')
+      + sec('Alles für Österreich','Vergleiche, Werkzeuge und Ratgeber.',f'<div class="hp-tiles">{tiles}</div><p class="hp-sub" style="margin-top:16px">Weitere Vergleiche (Tagesgeld, Depot) sind in Arbeit.</p>')
       + trust(P,'at')
       + sec('Ratgeber für Österreich','Kreditkarten einfach erklärt.',f'<div class="hp-posts">{guides(P,AT_GUIDES)}</div><div class="hp-more"><a class="btn" href="{P}at/ratgeber/">Alle Ratgeber →</a></div>',True)
       + switch(P,'DE') + fq), ld

@@ -63,6 +63,24 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Teilzahlung bei Kreditkarten in Österreich: Was sie kostet und wie du sie abschaltest (Österreich)](https://finvallo.com/at/ratgeber/teilzahlung/): Teilzahlung bei Kreditkarten in Österreich: Effektivzinsen aller Karten mit Kreditrahmen, was 1.000 € mit Mindestrate kosten und wie du sie abschaltest.
 - [Firmenkreditkarte in Österreich: Haftung, Mitarbeiterkarten, Buchhaltung und Kosten (Österreich)](https://finvallo.com/at/ratgeber/business/): Firmenkreditkarte in Österreich: Haftung, Mitarbeiterkarten, Zahlungsziel, Buchhaltungsexport und Jahreskosten aller Business-Karten laut Anbieter.
 
+## Österreich: Girokonten
+- [Girokonto-Vergleich Österreich](https://finvallo.com/at/girokonto/): 62 Konten von Banken mit Angebot in ganz Österreich, Jahreskosten selbst rechnen, Stand 27.10.2026
+- [So bewerten wir Girokonten](https://finvallo.com/at/girokonto/methodik/)
+- [Daten als JSON](https://finvallo.com/at/daten/girokonten.json)
+- [Online Gehalts-/Pensionskonto (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/anadi-online-gehalts-pensionskonto/): Konten für alle, 4,8/5, 0 € im Jahr im Beispiel
+- [Gehaltskonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-gehaltskonto/): Konten für alle, 4,8/5, 0 € im Jahr im Beispiel
+- [Pensionskonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-pensionskonto/): Konten für alle, 4,8/5, 0 € im Jahr im Beispiel
+- [Girokonto (Bank Direkt)](https://finvallo.com/at/girokonto/bank-direkt-girokonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [N26 Standard (N26)](https://finvallo.com/at/girokonto/n26-standard/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [U28-Konto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-u28-konto/): Für Studierende und junge Erwachsene, 4,8/5, 0 € im Jahr im Beispiel
+- [Studentenkonto (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-studentenkonto/): Für Studierende und junge Erwachsene, 4,8/5, 0 € im Jahr im Beispiel
+- [Jugendkonto (B4-19 KontoBox) (BAWAG)](https://finvallo.com/at/girokonto/bawag-jugendkonto/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [spark7 Jugendkonto (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-spark7-jugendkonto/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [MegaCard-Konto 7-13 (Bank Austria)](https://finvallo.com/at/girokonto/bank-austria-megacard-konto-7-13/): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Kinderkonto (BAWAG)](https://finvallo.com/at/girokonto/bawag-kinderkonto/): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Basiskonto (VZKG-Konto) (Wüstenrot Bank)](https://finvallo.com/at/girokonto/wuestenrot-bank-vzkg-konto/): Basiskonten, 3,8/5, 58,80 € im Jahr im Beispiel
+- [Zahlungskonto mit grundlegenden Funktionen (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/anadi-zahlungskonto/): Basiskonten, 3,8/5, 80 € im Jahr im Beispiel
+
 ## Deutschland: Kreditkarten
 - [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 162 Karten, Stand 21.10.2026
 - [Alle Karten nach Anbieter](https://finvallo.com/de/kreditkarten/alle/)

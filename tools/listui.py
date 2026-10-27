@@ -113,7 +113,7 @@ def main():
     v = hashlib.sha256(open(R + 'assets/filter.js', 'rb').read()).hexdigest()[:8]
     for f in glob.glob(R + '**/*.html', recursive=True):
         rel = f[len(R):]
-        if 'kreditkarten/rechner/' in rel: continue
+        if 'kreditkarten/rechner/' in rel or '/girokonto/' in rel: continue  # Girokonten haben eigene Filter (giro.js)
         s0 = s = open(f, encoding='utf-8').read()
         s = s.replace('<label class="cmp"> Vergleichen</label>', '')
         if '<article class="item"' in s:

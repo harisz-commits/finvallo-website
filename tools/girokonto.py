@@ -10,8 +10,8 @@ from score import eur,pct
 E=K.E; dmy=K.dmy; de1=K.de1; R=K.R; SP=K.SP
 LAND='at'
 DP=os.path.join(SP,'daten',LAND,'girokonten.json')
-ART={'standard':'Gehalts- und Privatkonto','premium':'Premiumkonto','student':'Studentenkonto','jugend':'Jugendkonto','kinder':'Kinderkonto','basis':'Basiskonto'}
-SEK=[('standard','Konten für alle',None),('student','Studentenkonten','Nur für Studierende (oft auch Lehrlinge oder Menschen in Ausbildung), meist mit Altersgrenze. Danach stellt die Bank auf ein normales Konto um.'),
+ART={'standard':'Gehalts- und Privatkonto','premium':'Premiumkonto','student':'Studenten- und U28-Konto','jugend':'Jugendkonto','kinder':'Kinderkonto','basis':'Basiskonto'}
+SEK=[('standard','Konten für alle',None),('student','Für Studierende und junge Erwachsene','Für Studierende, Menschen in Ausbildung oder bis zu einem bestimmten Alter. Danach stellt die Bank auf ein normales Konto um, das meist etwas kostet.'),
      ('jugend','Jugendkonten','Für Jugendliche, meist ab 14 Jahren. Danach stellt die Bank auf ein normales Konto um.'),
      ('kinder','Kinderkonten','Für Kinder unter 14 Jahren. Eröffnen können nur die Eltern oder andere gesetzliche Vertreter.'),
      ('basis','Basiskonten','Das gesetzliche Zahlungskonto mit grundlegenden Funktionen. Jede Bank muss es jedem Menschen mit rechtmäßigem Aufenthalt in der EU anbieten, auch ohne Einkommen und trotz Schulden. Es kostet höchstens 80 € im Jahr, für besonders schutzbedürftige Menschen höchstens 40 €.')]
@@ -213,6 +213,7 @@ def cond_html(k):
     o+=r('Debitkarte',v(dk.get('text')))
     o+=r('Kreditkarte inklusive',E(k['kreditkarte_inkl']) if k.get('kreditkarte_inkl') else 'nein')
     if k.get('einzelposten'): o+=r('Extra-Kosten je Buchung',E(k['einzelposten']))
+    if k.get('hinweis'): o+=r('Hinweis',E(k['hinweis']))
     if k.get('aktion'): o+=r('Aktion',E(k['aktion']))
     o+='</div><div class="cond" style="margin-bottom:14px"><div class="gh">Bargeld und Ausland</div>'
     o+=r('Bargeld am Automaten',v(b.get('text')))+r('Bargeld außerhalb des Euroraums',v(b.get('ausland')))+r('Kartenzahlung in Fremdwährung',E(fwT(k)) if k.get('fremdwaehrung_prozent') is not None else na)
@@ -242,12 +243,12 @@ def beispiele(k):
     return f'<div class="tbl"><table><thead><tr><th>Geldeingang pro Monat</th><th>Kontoführung</th><th>Karte und Abhebungen</th><th>Im Jahr</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div><p class="note">Mit {PROFIL[k["art"]]["alter"]} Jahren und 4 Abhebungen am Automaten pro Monat. Nicht enthalten: Überziehungszinsen, Buchungen am Schalter und Leistungen, die du extra bestellst.</p>'
 def faq(k):
     g=k.get('gratis'); q=[]
-    q.append((f'Was kostet das {k["name"]} von {k["bank"]}?',f'Die Kontoführung kostet regulär {kfT(k)}'+(f'. {g["text"]}' if g else '')+'.'))
+    q.append((f'Was kostet das {k["name"]} von {k["bank"]}?',f'Die Kontoführung kostet regulär {kfT(k)}'+(f'. {g["text"].rstrip(".")}' if g else '')+'.'))
     if g: q.append(('Wann ist das Konto günstiger?',g['text']+(f' Weitere Bedingungen: {g["sonst"]}' if g.get('sonst') else '')))
     q.append(('Ist eine Debitkarte dabei?',(k.get('debitkarte') or {}).get('text') or 'Dazu haben wir keine bestätigte Angabe.'))
     q.append(('Kann ich das Konto online eröffnen?',{'online':'Ja, nur online.','filiale':'Nein, nur in der Filiale.','beides':'Ja, online oder in der Filiale.'}.get(k.get('eroeffnung'),'Dazu haben wir keine bestätigte Angabe.')))
     q.append(('Welche IBAN bekomme ich?',f'Eine {ibanT(k)}.' if k.get('iban') else 'Dazu haben wir keine bestätigte Angabe.'))
-    if k.get('einlagensicherung'): q.append(('Wie sicher ist mein Geld?',f'Guthaben ist über die gesetzliche Einlagensicherung geschützt: {k["einlagensicherung"]}.'))
+    if k.get('einlagensicherung'): q.append(('Wie sicher ist mein Geld?',f'Guthaben auf dem {k["name"]} von {k["bank"]} ist über die gesetzliche Einlagensicherung geschützt: {k["einlagensicherung"]}.'))
     return q
 
 def head(t,d,rel,P,ld): return K.head(t,d,rel,P,ld)
@@ -267,7 +268,7 @@ def konto_page(k,ks,n):
                     "reviewRating":{"@type":"Rating","ratingValue":k['stars'],"bestRating":5,"worstRating":1}}},
          {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq(k)]}],date=gp)
     sek=next(s for s in SEK if s[0]==('standard' if k['art']=='premium' else k['art']))
-    glance=f'Das {k["name"]} ist ein {ART[k["art"]]} von {k["bank"]}. Die Kontoführung kostet regulär {kfT(k)}'+(f'. {k["gratis"]["text"]}' if k.get('gratis') else '')+f'. Finvallo bewertet es mit {de1(k["stars"])} von 5 Sternen, Platz {k["rank"]} von {n[sek[0]]} in der Liste „{sek[1]}“. Stand: {dmy(gp)}.'
+    glance=f'Das {k["name"]} ist ein {ART[k["art"]]} von {k["bank"]}. Die Kontoführung kostet regulär {kfT(k)}'+(f'. {k["gratis"]["text"].rstrip(".")}' if k.get('gratis') else '')+f'. Finvallo bewertet es mit {de1(k["stars"])} von 5 Sternen, Platz {k["rank"]} von {n[sek[0]]} in der Liste „{sek[1]}“. Stand: {dmy(gp)}.'
     sim=[x for x in ks if x is not k and (x['art']==k['art'] or {x['art'],k['art']}<={'standard','premium'})]
     sim.sort(key=lambda x:abs(x['score']['kosten']['total']-k['score']['kosten']['total'])); sim=sorted(sim[:4],key=lambda x:-x['stars'])
     simt=''.join(f'<tr><td><a class="lnk" href="../{x["slug"]}/">{E(x["name"])}</a><br><small class="mut">{E(x["bank"])}</small></td><td>{E(kfT(x))}</td><td>{E(kurzbed(x))}</td><td style="white-space:nowrap">{de1(x["stars"])} ★</td></tr>' for x in sim)
@@ -377,14 +378,32 @@ def export(ks,d):
     out={'quelle':f'https://finvallo.com/{LAND}/girokonto/','stand':d['stand'],'anzahl':len(ks),'lizenz':'Frei nutzbar mit Quellenangabe Finvallo','konten':[{x:k.get(x) for x in keys} for k in ks]}
     open(R+f'{LAND}/daten/girokonten.json','w').write(json.dumps(out,ensure_ascii=False,indent=1))
 
+def llms(secs,d):
+    """Abschnitt „Österreich: Girokonten“ in llms.txt und llms-full.txt (ersetzt den alten Abschnitt)."""
+    st='.'.join(reversed(d['stand'].split('-')))
+    for fn in ('llms.txt','llms-full.txt'):
+        p=R+fn
+        if not os.path.exists(p): continue
+        t=open(p,encoding='utf-8').read()
+        t=re.sub(r'\n## Österreich: Girokonten\n(?:- [^\n]*\n?)*','\n',t)
+        n=sum(len(v) for v in secs.values())
+        b=f'\n## Österreich: Girokonten\n- [Girokonto-Vergleich Österreich](https://finvallo.com/at/girokonto/): {n} Konten von Banken mit Angebot in ganz Österreich, Jahreskosten selbst rechnen, Stand {st}\n- [So bewerten wir Girokonten](https://finvallo.com/at/girokonto/methodik/)\n- [Daten als JSON](https://finvallo.com/at/daten/girokonten.json)\n'
+        for a,h,_ in SEK:
+            xs=secs.get(a) or []
+            if fn=='llms.txt': xs=xs[:5 if a=='standard' else 2]
+            b+=''.join(f'- [{k["name"]} ({k["bank"]})](https://finvallo.com/at/girokonto/{k["slug"]}/): {h}, {de1(k["stars"])}/5, {eur(kosten(k,PROFIL[k["art"]]["ein"],PROFIL[k["art"]]["alter"],PROFIL[k["art"]]["abh"])["total"])} € im Jahr im Beispiel\n' for k in xs)
+        i=t.find('\n## Deutschland: Kreditkarten'); t=t[:i]+b+t[i:] if i>=0 else t.rstrip()+'\n'+b
+        open(p,'w',encoding='utf-8').write(re.sub(r'\n{3,}','\n\n',t))
+
 def main():
     K.use(LAND)
     if not os.path.exists(DP): print('girokonten.json fehlt'); return
     d,ks=load()
+    K.L.setdefault('stand',d['stand'])
     for k in ks: k.setdefault('geprueft',d['stand'])
     secs=rate(ks); n={a:len(v) for a,v in secs.items()}
     for k in ks: konto_page(k,ks,n)
-    list_page(ks,secs,d); methodik_page(ks); export(ks,d)
+    list_page(ks,secs,d); methodik_page(ks); export(ks,d); llms(secs,d)
     print('Girokonten:',len(ks))
 
 if __name__=='__main__': main()
