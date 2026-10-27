@@ -3,7 +3,7 @@
 # daten/festgeld-laender.json (Einlagensicherung und S&P-Länderrating je Sitzland).
 # Rechnung gibt es zweimal: ertrag() hier und calc() in public/assets/festgeld.js. check.py vergleicht beide (tools/festgeld-kontrolle.js).
 # Läuft nach girokonto.py, vor header.py.
-import hashlib,json,os,re,sys
+import hashlib,json,math,os,re,sys
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import karten as K
 from score import eur,pct
@@ -51,7 +51,7 @@ def ertrag(a,b,m):
         return dict(fit=False,why='betrag',zins=max(z['zins'] for z in rows))
     j=m/12; z=best['zins']/100
     e=b*((1+z)**j-1) if m>12 and a.get('zinseszins') is True else b*z*j
-    return dict(fit=True,zins=best['zins'],ertrag=round(e+1e-9,2))
+    return dict(fit=True,zins=best['zins'],ertrag=math.floor(e*100+0.5+1e-6)/100)  # kaufmännisch gerundet, wie festgeld.js
 def jsdata(a):
     return {'z':[[z['monate'],z['zins'],z['min'],z['max']] for z in a['zinsen']],'amin':a.get('min_anlage'),'amax':a.get('max_anlage'),'ze':a.get('zinseszins')}
 def laufzeiten(a): return sorted({z['monate'] for z in a['zinsen']})

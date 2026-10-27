@@ -14,7 +14,7 @@
     }
     var j = m / 12, z = best[1] / 100;
     var e = m > 12 && k.ze === true ? b * (Math.pow(1 + z, j) - 1) : b * z * j;
-    return { fit: true, zins: best[1], ertrag: Math.round(e * 100) / 100 };
+    return { fit: true, zins: best[1], ertrag: Math.floor(e * 100 + 0.5 + 1e-6) / 100 };  // kaufmännisch gerundet
   }
   if (typeof document === 'undefined') { module.exports = { calc: calc }; return; }
 
