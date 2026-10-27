@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<url><loc>https://finvallo.com/</loc><lastmod>2026-10-22</lastmod><xhtml:link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/"/><xhtml:link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://finvallo.com/"/></url>
+<url><loc>https://finvallo.com/</loc><lastmod>2026-10-27</lastmod><xhtml:link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/"/><xhtml:link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://finvallo.com/"/></url>
 <url><loc>https://finvallo.com/at/</loc><lastmod>2026-10-11</lastmod><xhtml:link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/"/><xhtml:link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://finvallo.com/"/></url>
 <url><loc>https://finvallo.com/de/</loc><lastmod>2026-10-12</lastmod><xhtml:link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/"/><xhtml:link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://finvallo.com/"/></url>
-<url><loc>https://finvallo.com/so-verdienen-wir-geld/</loc><lastmod>2026-10-19</lastmod></url>
-<url><loc>https://finvallo.com/ueber-uns/</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://finvallo.com/so-verdienen-wir-geld/</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://finvallo.com/ueber-uns/</loc><lastmod>2026-10-27</lastmod></url>
 <url><loc>https://finvallo.com/at/girokonto/</loc><lastmod>2026-10-27</lastmod></url>
 <url><loc>https://finvallo.com/at/kreditkarten/</loc><lastmod>2026-10-21</lastmod><xhtml:link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/kreditkarten/"/><xhtml:link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/kreditkarten/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://finvallo.com/"/></url>
 <url><loc>https://finvallo.com/at/ratgeber/</loc><lastmod>2026-10-21</lastmod><xhtml:link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/ratgeber/"/><xhtml:link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/ratgeber/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://finvallo.com/"/></url>
@@ -37,6 +37,7 @@
 <url><loc>https://finvallo.com/at/girokonto/bawag-online-kontobox/</loc><lastmod>2026-10-27</lastmod></url>
 <url><loc>https://finvallo.com/at/girokonto/bawag-studenten-kontobox/</loc><lastmod>2026-10-27</lastmod></url>
 <url><loc>https://finvallo.com/at/girokonto/bawag-vzkg-konto/</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://finvallo.com/at/girokonto/bestenlisten/</loc><lastmod>2026-10-27</lastmod></url>
 <url><loc>https://finvallo.com/at/girokonto/bunq-core/</loc><lastmod>2026-10-27</lastmod></url>
 <url><loc>https://finvallo.com/at/girokonto/bunq-elite/</loc><lastmod>2026-10-27</lastmod></url>
 <url><loc>https://finvallo.com/at/girokonto/bunq-free/</loc><lastmod>2026-10-27</lastmod></url>
@@ -371,6 +372,14 @@
 <url><loc>https://finvallo.com/de/rechner/renditerechner/</loc><lastmod>2026-10-21</lastmod><xhtml:link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/rechner/renditerechner/"/><xhtml:link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/rechner/renditerechner/"/></url>
 <url><loc>https://finvallo.com/de/rechner/teilzahlung/</loc><lastmod>2026-10-21</lastmod><xhtml:link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/rechner/teilzahlung/"/><xhtml:link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/rechner/teilzahlung/"/></url>
 <url><loc>https://finvallo.com/de/rechner/zinseszins/</loc><lastmod>2026-10-21</lastmod><xhtml:link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/rechner/zinseszins/"/><xhtml:link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/rechner/zinseszins/"/></url>
+<url><loc>https://finvallo.com/at/girokonto/bestenlisten/ausland/</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://finvallo.com/at/girokonto/bestenlisten/filiale/</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://finvallo.com/at/girokonto/bestenlisten/gehaltskonto/</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://finvallo.com/at/girokonto/bestenlisten/gemeinschaftskonto/</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://finvallo.com/at/girokonto/bestenlisten/jugend/</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://finvallo.com/at/girokonto/bestenlisten/kinder/</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://finvallo.com/at/girokonto/bestenlisten/kostenlos/</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://finvallo.com/at/girokonto/bestenlisten/studenten/</loc><lastmod>2026-10-27</lastmod></url>
 <url><loc>https://finvallo.com/at/kreditkarten/anbieter/advanzia/</loc><lastmod>2026-10-11</lastmod></url>
 <url><loc>https://finvallo.com/at/kreditkarten/anbieter/american-express/</loc><lastmod>2026-10-14</lastmod><xhtml:link rel="alternate" hreflang="de-AT" href="https://finvallo.com/at/kreditkarten/anbieter/american-express/"/><xhtml:link rel="alternate" hreflang="de-DE" href="https://finvallo.com/de/kreditkarten/anbieter/american-express/"/></url>
 <url><loc>https://finvallo.com/at/kreditkarten/anbieter/bank-austria/</loc><lastmod>2026-10-11</lastmod></url>

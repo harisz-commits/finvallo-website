@@ -65,15 +65,16 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 
 ## Österreich: Girokonten
 - [Girokonto-Vergleich Österreich](https://finvallo.com/at/girokonto/): 62 Konten von Banken mit Angebot in ganz Österreich, Jahreskosten selbst rechnen, Stand 27.10.2026
+- [Bestenlisten Girokonten Österreich](https://finvallo.com/at/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder
 - [So bewerten wir Girokonten](https://finvallo.com/at/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/at/daten/girokonten.json)
-- [Online Gehalts-/Pensionskonto (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/anadi-online-gehalts-pensionskonto/): Konten für alle, 4,8/5, 0 € im Jahr im Beispiel
-- [Gehaltskonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-gehaltskonto/): Konten für alle, 4,8/5, 0 € im Jahr im Beispiel
-- [Pensionskonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-pensionskonto/): Konten für alle, 4,8/5, 0 € im Jahr im Beispiel
-- [Girokonto (Bank Direkt)](https://finvallo.com/at/girokonto/bank-direkt-girokonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [Online Gehalts-/Pensionskonto (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/anadi-online-gehalts-pensionskonto/): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
+- [Gehaltskonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-gehaltskonto/): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
+- [Pensionskonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-pensionskonto/): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
 - [N26 Standard (N26)](https://finvallo.com/at/girokonto/n26-standard/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
-- [U28-Konto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-u28-konto/): Für Studierende und junge Erwachsene, 4,8/5, 0 € im Jahr im Beispiel
+- [Girokonto (Trade Republic)](https://finvallo.com/at/girokonto/trade-republic-girokonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
 - [Studentenkonto (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-studentenkonto/): Für Studierende und junge Erwachsene, 4,8/5, 0 € im Jahr im Beispiel
+- [U28-Konto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-u28-konto/): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
 - [Jugendkonto (B4-19 KontoBox) (BAWAG)](https://finvallo.com/at/girokonto/bawag-jugendkonto/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
 - [spark7 Jugendkonto (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-spark7-jugendkonto/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
 - [MegaCard-Konto 7-13 (Bank Austria)](https://finvallo.com/at/girokonto/bank-austria-megacard-konto-7-13/): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
