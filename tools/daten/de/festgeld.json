@@ -51,7 +51,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "0to9",
+   "bank_slug": "0to9"
   },
   {
    "id": "1822direkt-festgeld-de",
@@ -131,7 +133,9 @@
    "status": "ok",
    "hinweis": "6- und 12-Monats-Festgelder werden automatisch um dieselbe Laufzeit verlängert (abwählbar bis 3 Geschäftstage vor Fälligkeit). 3 Monate (1,60 %) nur bei Verlängerung bestehender Festgelder.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "frankfurter-sparkasse-ueber-1822direkt-gesellschaft-der-frankfurter-sparkasse-mbh",
+   "bank_slug": "1822direkt"
   },
   {
    "id": "a-g-banco-festgeld-de-raisin",
@@ -193,7 +197,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich. Laufzeit(en) 9 Monate, 18 Monate, 24 Monate mit 0,00 % nicht erfasst.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "aundg-banco-u",
+   "bank_slug": "aundg-banco"
   },
   {
    "id": "aareal-bank-festgeld-de-zinsmarkt-deutsche-bank",
@@ -243,7 +249,9 @@
    "status": "ok",
    "hinweis": "über den ZinsMarkt der Deutschen Bank (Treuhandanlage, deutsche Steuer-ID erforderlich). Öffentlich nur als Teaser sichtbar (Angebotszeitraum bis 29.10.2026); Mindest-/Höchstbetrag nicht angegeben.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "aareal-bank",
+   "bank_slug": "aareal-bank"
   },
   {
    "id": "aareal-bank-festgeld-de-zinsmarkt-norisbank",
@@ -329,12 +337,14 @@
    "status": "ok",
    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Treuhandanlage.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "aareal-bank",
+   "bank_slug": "aareal-bank"
   },
   {
    "id": "aareal-bank-ag-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Aareal Bank AG",
+   "bank": "Aareal Bank",
    "institut": "Aareal Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -415,12 +425,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "aareal-bank",
+   "bank_slug": "aareal-bank"
   },
   {
    "id": "ab-mano-bankas-festgeld-de-raisin",
    "markt": "de",
-   "bank": "AB Mano bankas",
+   "bank": "Mano bankas",
    "institut": "AB Mano bankas",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -501,7 +513,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "mano-bankas",
+   "bank_slug": "mano-bankas"
   },
   {
    "id": "achmea-bank-festgeld-de-raisin",
@@ -611,7 +625,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "achmea-bank",
+   "bank_slug": "achmea-bank"
   },
   {
    "id": "addiko-bank-festgeld-de-raisin",
@@ -697,7 +713,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 8 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "addiko-bank",
+   "bank_slug": "addiko-bank"
   },
   {
    "id": "aegean-baltic-bank-festgeld-de-check24",
@@ -747,12 +765,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag … Anlagestart einmal wöchentlich, nächster Start am Donnerstag, 29.10.2026.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "aegean-baltic-bank",
+   "bank_slug": "aegean-baltic-bank"
   },
   {
    "id": "aegean-baltic-bank-s-a-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Aegean Baltic Bank S.A.",
+   "bank": "Aegean Baltic Bank",
    "institut": "Aegean Baltic Bank S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -815,7 +835,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "aegean-baltic-bank",
+   "bank_slug": "aegean-baltic-bank"
   },
   {
    "id": "aka-festgeld-de-raisin",
@@ -919,7 +941,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "aka-ausfuhrkredit-gesellschaft-mbh",
+   "bank_slug": "aka"
   },
   {
    "id": "akbank-ak-festgeld-telefon-de",
@@ -1023,7 +1047,9 @@
    "status": "ok",
    "hinweis": "Telefonisch/per Formular geführte Variante mit deutlich niedrigeren Zinsen als AK-Online Festgeld.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "akbank",
+   "bank_slug": "akbank"
   },
   {
    "id": "akbank-ak-online-festgeld-de",
@@ -1127,7 +1153,9 @@
    "status": "ok",
    "hinweis": "Zinsen gültig ab 28.09.2026. Nur für Privatpersonen mit Wohnsitz in Deutschland; Anlagen über 3 Mio. € individuell.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "akbank",
+   "bank_slug": "akbank"
   },
   {
    "id": "akbank-festgeld-alleskoenner-de",
@@ -1207,12 +1235,14 @@
    "status": "ok",
    "hinweis": "Festzins für die gesamte Laufzeit, aber täglicher Zugriff auf bis zu 50 % der Anlage.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "akbank",
+   "bank_slug": "akbank"
   },
   {
    "id": "alisa-bank-plc-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Alisa Bank Plc",
+   "bank": "Alisa Bank",
    "institut": "Alisa Bank Plc",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1305,7 +1335,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "alisa-bank",
+   "bank_slug": "alisa-bank"
   },
   {
    "id": "alte-leipziger-festgeld-de-raisin",
@@ -1367,7 +1399,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "alte-leipziger-bauspar",
+   "bank_slug": "alte-leipziger"
   },
   {
    "id": "anyfin-festgeld-de-raisin",
@@ -1454,12 +1488,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "anyfin",
+   "bank_slug": "anyfin"
   },
   {
    "id": "arab-bank-europe-sa-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Arab Bank Europe SA",
+   "bank": "Arab Bank Europe",
    "institut": "Arab Bank Europe SA",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1516,12 +1552,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "arab-bank-europe",
+   "bank_slug": "arab-bank-europe"
   },
   {
    "id": "arab-banking-corporation-sa-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Arab Banking Corporation SA",
+   "bank": "Arab Banking Corporation",
    "institut": "Arab Banking Corporation SA, Zweigniederlassung Frankfurt",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1596,7 +1634,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "arab-banking-corporation",
+   "bank_slug": "arab-banking-corporation"
   },
   {
    "id": "arktika-festgeld-de-raisin",
@@ -1677,12 +1717,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "arktika-capital",
+   "bank_slug": "arktika"
   },
   {
    "id": "aros-kapital-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Aros Kapital AB",
+   "bank": "Aros Kapital",
    "institut": "Aros Kapital AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1746,12 +1788,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "aros-kapital",
+   "bank_slug": "aros-kapital"
   },
   {
    "id": "artea-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Artea AB",
+   "bank": "Artea",
    "institut": "AB Artea bankas",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1826,7 +1870,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "artea-bankas",
+   "bank_slug": "artea"
   },
   {
    "id": "avarda-bank-festgeld-de-raisin",
@@ -1901,7 +1947,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "avarda-bank",
+   "bank_slug": "avarda-bank"
   },
   {
    "id": "avida-festgeld-de-check24",
@@ -1963,7 +2011,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende; je nach Laufzeit Auszahlung oder Wiederanlage",
@@ -1988,12 +2036,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "avida-bank",
+   "bank_slug": "avida"
   },
   {
    "id": "avida-bank-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Avida Bank AB",
+   "bank": "Avida",
    "institut": "Avida Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2038,7 +2088,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "jaehrlich",
    "zinszahlung_text": "jährlich bei Laufzeiten ab 24 Monaten, bei kürzeren Laufzeiten am Laufzeitende; je nach Laufzeit Auszahlung oder Kapitalisierung",
@@ -2063,7 +2113,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "avida-bank",
+   "bank_slug": "avida"
   },
   {
    "id": "ayvens-bank-festgeld-de",
@@ -2141,7 +2193,9 @@
     "steuer_auto",
     "einlagensicherung"
    ],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "ayvens-bank",
+   "bank_slug": "ayvens-bank"
   },
   {
    "id": "banca-agricola-popolare-di-sicilia-festgeld-de-raisin",
@@ -2233,7 +2287,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden. Mindest-/Höchstbetrag je Laufzeit unterschiedlich (min. 25.000, 30.000 €; max. 100.000 €).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-agricola-popolare-di-sicilia-s-c-p-a",
+   "bank_slug": "banca-agricola-popolare-di-sicilia"
   },
   {
    "id": "banca-aidexa-festgeld-de-raisin",
@@ -2307,7 +2363,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-aidexa",
+   "bank_slug": "banca-aidexa"
   },
   {
    "id": "banca-cf-festgeld-de-raisin",
@@ -2405,7 +2463,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Mindest-/Höchstbetrag je Laufzeit unterschiedlich (min. 5.000, 30.000 €; max. 100.000 €).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-cf",
+   "bank_slug": "banca-cf"
   },
   {
    "id": "banca-del-fucino-festgeld-de-raisin",
@@ -2479,7 +2539,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-del-fucino",
+   "bank_slug": "banca-del-fucino"
   },
   {
    "id": "banca-finint-festgeld-de-raisin",
@@ -2535,7 +2597,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-finanziaria-internazionale",
+   "bank_slug": "banca-finint"
   },
   {
    "id": "banca-ifis-festgeld-de-raisin",
@@ -2621,7 +2685,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-ifis",
+   "bank_slug": "banca-ifis"
   },
   {
    "id": "banca-piu-festgeld-de-raisin",
@@ -2695,7 +2761,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-pi",
+   "bank_slug": "banca-pi"
   },
   {
    "id": "banca-popolare-di-cortona-festgeld-de-raisin",
@@ -2769,7 +2837,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-popolare-di-cortona",
+   "bank_slug": "banca-popolare-di-cortona"
   },
   {
    "id": "banca-popolare-di-fondi-societa-cooperativa-festgeld-de-raisin",
@@ -2831,7 +2901,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-popolare-di-fondi-societ-cooperativa",
+   "bank_slug": "banca-popolare-di-fondi-societ-cooperativa"
   },
   {
    "id": "banca-profilo-festgeld-de-raisin",
@@ -2893,7 +2965,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Weitere Varianten: 3 Monate: Flexgeld-Variante (vorzeitig kündbar) 2,3 % (je Laufzeit ist der höhere Zins der nicht vorzeitig kündbaren Variante erfasst).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-profilo",
+   "bank_slug": "banca-profilo"
   },
   {
    "id": "banca-promos-festgeld-de-raisin",
@@ -2955,7 +3029,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-promos",
+   "bank_slug": "banca-promos"
   },
   {
    "id": "banca-sistema-festgeld-de-check24",
@@ -3041,7 +3117,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: kann der Kunde auf der CHECK24 Plattform eine nochmalige Anlage des Festgeldes (Wiederanlage) über eine Checkbox aktivieren, wenn das Produkt weiterhin angeboten wird. Es gelten …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-sistema",
+   "bank_slug": "banca-sistema"
   },
   {
    "id": "banca-sistema-festgeld-de-raisin",
@@ -3127,7 +3205,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-sistema",
+   "bank_slug": "banca-sistema"
   },
   {
    "id": "banco-bai-europa-festgeld-de-raisin",
@@ -3207,7 +3287,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banco-bai-europa",
+   "bank_slug": "banco-bai-europa"
   },
   {
    "id": "banco-bni-europa-festgeld-de-raisin",
@@ -3299,7 +3381,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bni-banco-de-neg-cios-internacional-europa",
+   "bank_slug": "banco-bni-europa"
   },
   {
    "id": "banco-bradesco-festgeld-de-raisin",
@@ -3355,7 +3439,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bradesco-europa",
+   "bank_slug": "banco-bradesco"
   },
   {
    "id": "banco-do-brasil-festgeld-de-raisin",
@@ -3441,12 +3527,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banco-do-brasil",
+   "bank_slug": "banco-do-brasil"
   },
   {
    "id": "banco-finantia-s-a-sucursal-en-espana-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Banco Finantia, S.A., Sucursal en España",
+   "bank": "Banco Finantia",
    "institut": "Banco Finantia, S.A., Sucursal en España",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -3497,12 +3585,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden. Laufzeit(en) 24 Monate, 36 Monate mit 0,00 % nicht erfasst.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banco-finantia",
+   "bank_slug": "banco-finantia"
   },
   {
    "id": "bank-dimare-limited-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Bank DiMare Limited",
+   "bank": "Bank DiMare",
    "institut": "Bank DiMare Limited",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -3546,7 +3636,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende (Gutschrift auf dem Raisin-Konto)",
@@ -3571,7 +3661,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bank-dimare-limited",
+   "bank_slug": "bank-dimare"
   },
   {
    "id": "bank-of-scotland-festgeld-de",
@@ -3657,7 +3749,9 @@
     "kuendigung",
     "kuendigung_text"
    ],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "lloyds-bank-marke-bank-of-scotland",
+   "bank_slug": "bank-of-scotland"
   },
   {
    "id": "bank11-festgeld-de-raisin",
@@ -3719,7 +3813,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bank11-fuer-privatkunden-und-handel",
+   "bank_slug": "bank11"
   },
   {
    "id": "banka-kovanica-festgeld-de-check24",
@@ -3805,7 +3901,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag … Kroatische Steuernummer notwendig. Mindest-/Höchstbetrag je Laufzeit unterschiedlich (min. 2.500 €; max. 100.000, 250.000 €).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banka-kovanica-d-d",
+   "bank_slug": "banka-kovanica"
   },
   {
    "id": "bankb-festgeld-de-raisin",
@@ -3903,7 +4001,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bankb",
+   "bank_slug": "bankb"
   },
   {
    "id": "bankhaus-rautenschlein-festgeld-de-check24",
@@ -4001,12 +4101,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bankhaus-rautenschlein",
+   "bank_slug": "bankhaus-rautenschlein"
   },
   {
    "id": "bankhaus-rautenschlein-ag-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Bankhaus Rautenschlein AG",
+   "bank": "Bankhaus Rautenschlein",
    "institut": "Bankhaus Rautenschlein AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -4099,7 +4201,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Mindest-/Höchstbetrag je Laufzeit unterschiedlich (min. 25.000, 50.000 €; max. 250.000 €).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bankhaus-rautenschlein",
+   "bank_slug": "bankhaus-rautenschlein"
   },
   {
    "id": "banque-bcp-festgeld-de-raisin",
@@ -4155,7 +4259,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 5 Tage vor Laufzeitende deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banque-bcp-s",
+   "bank_slug": "banque-bcp"
   },
   {
    "id": "bbbank-festgeld-de",
@@ -4265,7 +4371,9 @@
    "status": "ok",
    "hinweis": "1 Jahr mit automatischer Prolongation. Online-Abschluss für Kunden mit Online-Banking; längere Laufzeiten als 10 Jahre auf Anfrage.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "bbbank",
+   "bank_slug": "bbbank"
   },
   {
    "id": "bbbank-festgeld-de-neugeld",
@@ -4321,7 +4429,9 @@
    "status": "ok",
    "hinweis": "Special wird nach Ablauf automatisch zum dann gültigen Zins verlängert. 6 Monate nur über Berater und mit internem Verrechnungskonto.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "bbbank",
+   "bank_slug": "bbbank"
   },
   {
    "id": "bff-festgeld-de-raisin",
@@ -4407,7 +4517,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung kann im Zeitraum zwischen 28 und 5 Kalendertagen vor Fälligkeit im Onlinebanking unter „Meine Anlagen“ ausgewählt werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bff-bank",
+   "bank_slug": "bff"
   },
   {
    "id": "bgfibank-europe-festgeld-de-check24",
@@ -4456,7 +4568,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende",
@@ -4481,7 +4593,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag … Anlagestart einmal wöchentlich, nächster Start am Mittwoch, 04.11.2026.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bgfibank-europe",
+   "bank_slug": "bgfibank-europe"
   },
   {
    "id": "bigbank-festgeld-de",
@@ -4636,7 +4750,9 @@
     "steuer",
     "steuer_auto"
    ],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "bigbank",
+   "bank_slug": "bigbank"
   },
   {
    "id": "bison-bank-festgeld-de-raisin",
@@ -4716,12 +4832,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 5 Tage vor Laufzeitende deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bison-bank",
+   "bank_slug": "bison-bank"
   },
   {
    "id": "bluestep-bank-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Bluestep Bank AB",
+   "bank": "Bluestep Bank",
    "institut": "Enity Bank Group AB (publ)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -4773,7 +4891,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "enity-bank-group",
+   "bank_slug": "bluestep-bank"
   },
   {
    "id": "bluor-bank-festgeld-de-check24",
@@ -4822,7 +4942,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende",
@@ -4847,12 +4967,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bluor-bank",
+   "bank_slug": "bluor-bank"
   },
   {
    "id": "bluor-bank-as-festgeld-de-raisin",
    "markt": "de",
-   "bank": "BluOr Bank AS",
+   "bank": "BluOr Bank",
    "institut": "AS BlueOrange Bank",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -4865,12 +4987,6 @@
     "freiwillig": null
    },
    "zinsen": [
-    {
-     "monate": 3,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
     {
      "monate": 6,
      "zins": 2.85,
@@ -4902,7 +5018,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende (Gutschrift auf dem Raisin-Konto)",
@@ -4925,9 +5041,11 @@
    "stand": "2026-10-27",
    "geprueft": "2026-10-27",
    "status": "ok",
-   "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
+   "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Einzelne Laufzeiten führt die Bank nur mit einem Platzhalterzins; sie fehlen hier.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "blueorange-bank",
+   "bank_slug": "blueorange-bank"
   },
   {
    "id": "bmw-bank-festgeld-de",
@@ -4945,12 +5063,6 @@
     "freiwillig": "Mitglied im Einlagensicherungsfonds des Bundesverbandes deutscher Banken (BdB)"
    },
    "zinsen": [
-    {
-     "monate": 1,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
     {
      "monate": 3,
      "zins": 0.5,
@@ -5023,14 +5135,16 @@
    "stand": "2026-06-10",
    "geprueft": "2026-10-27",
    "status": "ok",
-   "hinweis": "Anlagebetrag wird per Lastschrift vom Referenzkonto eingezogen. Ohne Weisung automatische Prolongation zur gleichen Laufzeit zum dann gültigen Zins; Auszahlung bis 3 Tage vor Fälligkeit im Online-Banking erfassen. Zinsen gleich für Beträge ab 5.000 € und ab 25.000 €.",
+   "hinweis": "Anlagebetrag wird per Lastschrift vom Referenzkonto eingezogen. Ohne Weisung automatische Prolongation zur gleichen Laufzeit zum dann gültigen Zins; Auszahlung bis 3 Tage vor Fälligkeit im Online-Banking erfassen. Zinsen gleich für Beträge ab 5.000 € und ab 25.000 €. Einzelne Laufzeiten führt die Bank nur mit einem Platzhalterzins; sie fehlen hier.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "bmw-bank",
+   "bank_slug": "bmw-bank"
   },
   {
    "id": "bn-bank-asa-festgeld-de-raisin",
    "markt": "de",
-   "bank": "BN Bank ASA",
+   "bank": "BN Bank",
    "institut": "BN Bank ASA",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5075,7 +5189,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bn-bank-asa",
+   "bank_slug": "bn-bank"
   },
   {
    "id": "bnf-bank-festgeld-de-raisin",
@@ -5131,7 +5247,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bnf-bank",
+   "bank_slug": "bnf-bank"
   },
   {
    "id": "bremische-volksbank-weser-wumme-festgeld-de-check24",
@@ -5223,12 +5341,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bank- arbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Für eine Verlängerung ist kein schriftlicher Antrag nötig, … Angebot nur noch 5 Tage gültig, danach 3,26 %. Angebot nur noch 5 Tage gültig, danach 3,35 %. Angebot nur noch 5 Tage gültig, danach 3,40 %. Angebot nur noch 5 Tage gültig, danach 3,52 %.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bremische-volksbank-weser-wuemme",
+   "bank_slug": "bremische-volksbank-weser-wuemme"
   },
   {
    "id": "bremische-volksbank-weser-wumme-eg-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Bremische Volksbank Weser-Wümme eG",
+   "bank": "Bremische Volksbank Weser-Wümme",
    "institut": "Bremische Volksbank Weser-Wümme eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5315,12 +5435,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bremische-volksbank-weser-wuemme",
+   "bank_slug": "bremische-volksbank-weser-wuemme"
   },
   {
    "id": "brocc-finance-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Brocc Finance AB",
+   "bank": "Brocc Finance",
    "institut": "Brocc Finance AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5432,7 +5554,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "brocc-finance",
+   "bank_slug": "brocc-finance"
   },
   {
    "id": "btg-pactual-festgeld-de-check24",
@@ -5554,7 +5678,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag … Anlagestart zweimal pro Woche, nächster Start am Dienstag, 03.11.2026. Anlagestart einmal wöchentlich, nächster Start am Dienstag, 03.11.2026.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "btg-pactual-europe",
+   "bank_slug": "btg-pactual"
   },
   {
    "id": "btg-pactual-festgeld-de-raisin",
@@ -5676,12 +5802,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "btg-pactual-europe",
+   "bank_slug": "btg-pactual"
   },
   {
    "id": "bulgarian-american-credit-bank-ad-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Bulgarian-American Credit Bank AD",
+   "bank": "Bulgarian-American Credit Bank",
    "institut": "Bulgarian-American Credit Bank AD",
    "produkt": "Flexgeld (Festgeld mit vorzeitiger Kündigungsmöglichkeit)",
    "vertrieb": "Raisin",
@@ -5732,7 +5860,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 7 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bulgarian-american-credit-bank-ad",
+   "bank_slug": "bulgarian-american-credit-bank"
   },
   {
    "id": "bunq-festgeld-de",
@@ -5800,7 +5930,9 @@
    "status": "ok",
    "hinweis": "Nur in der App. Zinsen als Bruttojahreszins angegeben.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "bunq-b-v",
+   "bank_slug": "bunq"
   },
   {
    "id": "byblos-bank-europe-festgeld-de-raisin",
@@ -5856,7 +5988,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Laufzeit(en) 3 Monate mit 0,00 % nicht erfasst.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "byblos-bank-europe",
+   "bank_slug": "byblos-bank-europe"
   },
   {
    "id": "c24-bank-festgeld-de-check24",
@@ -5930,7 +6064,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "c24-bank",
+   "bank_slug": "c24-bank"
   },
   {
    "id": "ca-auto-bank-festgeld-de",
@@ -6010,12 +6146,14 @@
    "status": "ok",
    "hinweis": "Automatische Verlängerung um die Erstlaufzeit (max. 12 Monate) zum dann gültigen Zins; Auflösung per schriftlichem Formular mit 32 Tagen Frist zum Laufzeitende. Höchstbetrag 1 Mio. € über alle Konten; die Bank bietet zusätzlich ein separates Angebot über Raisin (nicht erfasst).",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "ca-auto-bank",
+   "bank_slug": "ca-auto-bank"
   },
   {
    "id": "ca-auto-bank-s-p-a-niederlassung-deutschland-festgeld-de-raisin",
    "markt": "de",
-   "bank": "CA Auto Bank S.p.A. Niederlassung Deutschland",
+   "bank": "CA Auto Bank",
    "institut": "CA Auto Bank S.p.A. Niederlassung Deutschland",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -6078,7 +6216,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "ca-auto-bank",
+   "bank_slug": "ca-auto-bank"
   },
   {
    "id": "ca-savings-festgeld-de-raisin",
@@ -6134,7 +6274,9 @@
    "status": "ok",
    "hinweis": "Laufzeiten in Wochen (4 Wochen, 13 Wochen, 26 Wochen, 39 Wochen, 52 Wochen; monate = Wochen x 0,25). Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Kalendertage vor Laufzeitende deaktivieren. Zusätzlich Laufzeiten in Wochen, die wir nicht vergleichen.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "ca-consumer-finance",
+   "bank_slug": "ca-savings"
   },
   {
    "id": "caisse-d-epargne-cote-d-azur-festgeld-de-raisin",
@@ -6184,7 +6326,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich. Weitere Varianten: 12 Monate: weitere Variante 1,5 % (je Laufzeit ist der höhere Zins der nicht vorzeitig kündbaren Variante erfasst).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "caisse-d-epargne-c-te-d-azur",
+   "bank_slug": "caisse-d-epargne-c-te-d-azur"
   },
   {
    "id": "caisse-d-epargne-grand-est-europe-festgeld-de-raisin",
@@ -6240,7 +6384,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich. Laufzeit(en) 24 Monate mit 0,00 % nicht erfasst.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "caisse-d-epargne-grand-est-europe",
+   "bank_slug": "caisse-d-epargne-grand-est-europe"
   },
   {
    "id": "cbl-bank-festgeld-de-raisin",
@@ -6308,7 +6454,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "citadele-banka-cbl-bank",
+   "bank_slug": "cbl-bank"
   },
   {
    "id": "cherry-bank-festgeld-de-raisin",
@@ -6400,7 +6548,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "cherry-bank",
+   "bank_slug": "cherry-bank"
   },
   {
    "id": "civibank-festgeld-de-raisin",
@@ -6504,7 +6654,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Laufzeit(en) 3 Monate mit 0,00 % nicht erfasst.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banca-di-cividale",
+   "bank_slug": "civibank"
   },
   {
    "id": "collector-festgeld-de-raisin",
@@ -6603,7 +6755,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "norion-bank",
+   "bank_slug": "collector"
   },
   {
    "id": "comdirect-festgeld-de",
@@ -6671,7 +6825,9 @@
    "status": "ok",
    "hinweis": "Vereinbarter Zins gilt, wenn die Anlagesumme innerhalb von 30 Tagen eingezahlt wird; mehrere Festgeldanlagen möglich.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "commerzbank-comdirect-eine-marke-der-commerzbank",
+   "bank_slug": "comdirect"
   },
   {
    "id": "commerzbank-festgeld-de",
@@ -6811,7 +6967,9 @@
    "status": "ok",
    "hinweis": "Laufzeiten 3–5 Monate nur für Unternehmerkunden (nicht erfasst). Abschluss nur für Bestandskunden mit Online-Banking; automatische Wiederanlage wählbar.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "commerzbank",
+   "bank_slug": "commerzbank"
   },
   {
    "id": "consorsbank-festgeld-de",
@@ -6891,7 +7049,9 @@
    "status": "ok",
    "hinweis": "Anlage in 100-€-Schritten. Nicht für Kunden der Geschäftsbereiche DAB BNP Paribas / BNP Paribas Wealth Management.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "bnp-paribas",
+   "bank_slug": "consorsbank"
   },
   {
    "id": "coop-pank-festgeld-de-check24",
@@ -6965,7 +7125,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "coop-pank",
+   "bank_slug": "coop-pank"
   },
   {
    "id": "coop-pank-festgeld-de-raisin",
@@ -7039,7 +7201,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "coop-pank",
+   "bank_slug": "coop-pank"
   },
   {
    "id": "credito-lombardo-veneto-festgeld-de-raisin",
@@ -7119,7 +7283,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "credito-lombardo-veneto",
+   "bank_slug": "credito-lombardo-veneto"
   },
   {
    "id": "creditplus-bank-festgeld-de-check24",
@@ -7253,7 +7419,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 deutsche Bankarbeitstage vor Fälligkeit auf der CHECK24- Webseite beantragen. Bei erfolgreicher Verlängerung wird der … Weitere Varianten: 3 Monate: nachhaltige Variante 2,45 % (max. 100.000 €); 6 Monate: nachhaltige Variante 2,7 % (max. 100.000 €); 12 Monate: nachhaltige Variante 3,05 % (max. 100.000 €); 24 Monate: nachhaltige Variante 3,2 % (max. 100.000 €); 36 Monate: nachhaltige Variante 3,25 % (max. 100.000 €) (je Laufzeit höchster Zins erfasst).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "creditplus-bank",
+   "bank_slug": "creditplus-bank"
   },
   {
    "id": "creditplus-bank-festgeld-de-raisin",
@@ -7369,7 +7537,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Weitere Varianten: 3 Monate: Variante mit Nachhaltigkeitsfokus 2,45 %, max. 100.000 €; 6 Monate: Variante mit Nachhaltigkeitsfokus 2,7 %, max. 100.000 €; 12 Monate: Variante mit Nachhaltigkeitsfokus 3,05 %, max. 100.000 €; 24 Monate: Variante mit Nachhaltigkeitsfokus 3,2 %, max. 100.000 €; 36 Monate: Variante mit Nachhaltigkeitsfokus 3,25 %, max. 100.000 € (je Laufzeit ist der höhere Zins der nicht vorzeitig kündbaren Variante erfasst).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "creditplus-bank",
+   "bank_slug": "creditplus-bank"
   },
   {
    "id": "creditplus-festgeld-de-zinsmarkt-norisbank",
@@ -7509,7 +7679,9 @@
    "status": "ok",
    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Treuhandanlage; Wiederanlage (gleicher Betrag, gleiche Laufzeit, dann gültiger Zins) wählbar.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "creditplus-bank",
+   "bank_slug": "creditplus-bank"
   },
   {
    "id": "creditplus-bank-festgeld-de",
@@ -7625,7 +7797,9 @@
    "status": "ok",
    "hinweis": "Max. 1 Mio. € je Anlage, insgesamt 2,5 Mio. € pro Person. Ohne Weisung verlängert sich das Festgeld automatisch (ab 12 Monaten Laufzeit um 12 Monate) zum dann gültigen Zins; Antrag online, Unterlagen unterschrieben zurücksenden.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "creditplus-bank",
+   "bank_slug": "creditplus-bank"
   },
   {
    "id": "credit-agricole-festgeld-de-zinsmarkt-deutsche-bank",
@@ -7681,7 +7855,9 @@
    "status": "ok",
    "hinweis": "über den ZinsMarkt der Deutschen Bank. Die Deutsche-Bank-Seite zeigt öffentlich nur diese Teaser-Angebote (Angebotszeitraum bis 29.10.2026); die vollständige Tabelle lädt eine Web-Anwendung, die nicht auslesbar war. Mindest-/Höchstbetrag nicht angegeben.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "cr-dit-agricole-personal-finance-und-mobility-auf-der-deutsche-bank-seite-cr-dit-agricole-savings",
+   "bank_slug": "cr-dit-agricole-personal-finance-und-mobility-auf-der-deutsche-bank-seite-cr-dit-agricole-savings"
   },
   {
    "id": "credit-agricole-festgeld-de-zinsmarkt-norisbank",
@@ -7809,12 +7985,14 @@
    "status": "ok",
    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "cr-dit-agricole-personal-finance-und-mobility",
+   "bank_slug": "cr-dit-agricole-personal-finance-und-mobility"
   },
   {
    "id": "credit-agricole-savings-festgeld-de-check24",
    "markt": "de",
-   "bank": "Crédit Agricole Savings",
+   "bank": "CA Savings",
    "institut": "CA Consumer Finance S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -7889,7 +8067,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "ca-consumer-finance",
+   "bank_slug": "ca-savings"
   },
   {
    "id": "denizbank-festgeld-de",
@@ -8017,7 +8197,9 @@
    "status": "ok",
    "hinweis": "Bei Fälligkeit wählbar: Auszahlung aufs Stammkonto, Wiederanlage von Kapital und Zinsen oder nur des Kapitals. Laufzeiten bis 10 Jahre; unbegrenzte Anzahl Festgeldkonten.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "denizbank",
+   "bank_slug": "denizbank"
   },
   {
    "id": "deutsche-bank-festzinssparen-de",
@@ -8115,7 +8297,9 @@
    "status": "ok",
    "hinweis": "Spareinlage, keine Termineinlage: ohne Kündigung (3 Monate zum Festzinsende) wird automatisch zum dann gültigen Zins für dieselbe Dauer wieder angelegt. Tabelle laut Bank 'Konditionen für bestehende Guthaben'; für Neugeld gilt bei 12 Monaten ein Sonderzins (eigener Eintrag).",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "deutsche-bank",
+   "bank_slug": "deutsche-bank"
   },
   {
    "id": "deutsche-bank-festzinssparen-de-neugeld",
@@ -8165,12 +8349,14 @@
    "status": "ok",
    "hinweis": "Neugeld-Angebot; gilt nur für Privatvermögen. Spareinlage mit Kündigungsfrist von 3 Monaten zum Festzinsende, sonst automatische Wiederanlage.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "deutsche-bank",
+   "bank_slug": "deutsche-bank"
   },
   {
    "id": "deutsche-pfandbriefbank-ag-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Deutsche Pfandbriefbank AG",
+   "bank": "pbb direkt",
    "institut": "Deutsche Pfandbriefbank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8183,24 +8369,6 @@
     "freiwillig": "BdB Institutssicherung GmbH (laut Raisin bis 100.000 EUR)"
    },
    "zinsen": [
-    {
-     "monate": 12,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 18,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 24,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
     {
      "monate": 30,
      "zins": 3.55,
@@ -8243,9 +8411,11 @@
    "stand": "2026-10-27",
    "geprueft": "2026-10-27",
    "status": "ok",
-   "hinweis": "Verlängerung: Keine Verlängerung möglich. Laufzeit(en) 60 Monate mit 0,00 % nicht erfasst.",
+   "hinweis": "Verlängerung: Keine Verlängerung möglich. Laufzeit(en) 60 Monate mit 0,00 % nicht erfasst. Einzelne Laufzeiten führt die Bank nur mit einem Platzhalterzins; sie fehlen hier.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "deutsche-pfandbriefbank",
+   "bank_slug": "pbb-direkt"
   },
   {
    "id": "skatbank-festgeld-de",
@@ -8343,7 +8513,9 @@
    "status": "ok",
    "hinweis": "Festgeldkonto als Einmalanlage (2–10 Jahre). Nur als Einzelkonto.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "vr-bank-altenburger-land-deutsche-skatbank",
+   "bank_slug": "deutsche-skatbank"
   },
   {
    "id": "skatbank-termingeld-de",
@@ -8405,7 +8577,9 @@
    "status": "ok",
    "hinweis": "Termingeldkonto mit Prolongation; Zins für die Laufzeit fest, Neusatz monatlich angepasst (65 % des jeweiligen Euribor). Nur als Einzelkonto.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "vr-bank-altenburger-land-deutsche-skatbank",
+   "bank_slug": "deutsche-skatbank"
   },
   {
    "id": "dkb-festgeld-de",
@@ -8497,7 +8671,9 @@
    "status": "ok",
    "hinweis": "Nicht als Gemeinschaftskonto oder für u18-Konten möglich.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "deutsche-kreditbank",
+   "bank_slug": "dkb"
   },
   {
    "id": "dll-festgeld-de-raisin",
@@ -8547,7 +8723,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "de-lage-landen-international-b-v-dll-bank",
+   "bank_slug": "dll"
   },
   {
    "id": "ecobank-international-festgeld-de-raisin",
@@ -8590,7 +8768,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende (Gutschrift auf dem Raisin-Konto)",
@@ -8615,7 +8793,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "ebi",
+   "bank_slug": "ecobank-international"
   },
   {
    "id": "edekabank-festgeld-de-raisin",
@@ -8719,7 +8899,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "edekabank",
+   "bank_slug": "edekabank"
   },
   {
    "id": "embank-festgeld-de-check24",
@@ -8805,12 +8987,14 @@
    "status": "ok",
    "hinweis": "Deutsche Staatsbürgerschaft benötigt.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "european-merchant-bank",
+   "bank_slug": "embank"
   },
   {
    "id": "ep-bank-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "EP Bank AB",
+   "bank": "EP Bank",
    "institut": "EP Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8868,7 +9052,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "ep-bank",
+   "bank_slug": "ep-bank"
   },
   {
    "id": "ethikbank-festgeld-de",
@@ -8942,12 +9128,14 @@
    "status": "ok",
    "hinweis": "Zinstabelle laut Bank zuletzt am 19.05.2025 geändert. Nach Fälligkeit Gutschrift auf das Referenzkonto (auch Fremdbank).",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "ethikbank",
+   "bank_slug": "ethikbank"
   },
   {
    "id": "european-merchant-bank-festgeld-de-raisin",
    "markt": "de",
-   "bank": "European Merchant Bank",
+   "bank": "EMBank",
    "institut": "European Merchant Bank UAB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -9028,7 +9216,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "european-merchant-bank",
+   "bank_slug": "embank"
   },
   {
    "id": "fimbank-festgeld-de-check24",
@@ -9089,7 +9279,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende",
@@ -9114,7 +9304,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag … Anlagestart einmal wöchentlich, nächster Start am Mittwoch, 04.11.2026.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "fimbank",
+   "bank_slug": "fimbank"
   },
   {
    "id": "fimbank-festgeld-de-raisin",
@@ -9163,7 +9355,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende (Gutschrift auf dem Raisin-Konto)",
@@ -9188,7 +9380,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "fimbank",
+   "bank_slug": "fimbank"
   },
   {
    "id": "finora-bank-festgeld-de-raisin",
@@ -9274,7 +9468,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "finora-bank-eesti-filiaal",
+   "bank_slug": "finora-bank"
   },
   {
    "id": "finvesto-fnz-bank-festgeld-de-check24",
@@ -9336,7 +9532,9 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "fnz-bank-se",
+   "bank_slug": "finvesto-fnz-bank"
   },
   {
    "id": "fjord-bank-festgeld-de-check24",
@@ -9434,7 +9632,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "fjord-bank",
+   "bank_slug": "fjord-bank"
   },
   {
    "id": "fjord-bank-festgeld-de-raisin",
@@ -9532,7 +9732,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "fjord-bank",
+   "bank_slug": "fjord-bank"
   },
   {
    "id": "ford-money-festgeld-de",
@@ -9606,7 +9808,9 @@
    "status": "ok",
    "hinweis": "Einzahlungen nur in den ersten 14 Tagen nach Kontoeröffnung. Ohne Rückmeldung wird das Guthaben bei Fälligkeit in eine neue Laufzeit gleicher Länge zum dann gültigen Zins übertragen.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "ford-bank",
+   "bank_slug": "ford-money"
   },
   {
    "id": "gf-bankas-festgeld-de-raisin",
@@ -9668,7 +9872,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "gf-bankas",
+   "bank_slug": "gf-bankas"
   },
   {
    "id": "gls-bank-festgeld-de",
@@ -9730,7 +9936,9 @@
    "status": "ok",
    "hinweis": "Laufzeiten 90, 180 und 360 Tage (als 3/6/12 Monate erfasst). Zinsen können nicht dem Festgeldkonto gutgeschrieben werden.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "gls-gemeinschaftsbank",
+   "bank_slug": "gls-bank"
   },
   {
    "id": "gls-bank-sparbrief-de",
@@ -9804,12 +10012,14 @@
    "status": "ok",
    "hinweis": "7 Jahre = 'GLS Sparbrief – Energiewende', 10 Jahre = 'GLS Sparbrief – Soziales & Gesundheit' (zweckgebundene Kreditvergabe). Neukunden über Beratungstermin.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "gls-gemeinschaftsbank",
+   "bank_slug": "gls-bank"
   },
   {
    "id": "grenke-bank-ag-festgeld-de-raisin",
    "markt": "de",
-   "bank": "grenke Bank AG",
+   "bank": "grenke Bank",
    "institut": "grenke Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -9884,7 +10094,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "grenke-bank",
+   "bank_slug": "grenke-bank"
   },
   {
    "id": "guber-banca-festgeld-de-raisin",
@@ -9903,20 +10115,8 @@
    },
    "zinsen": [
     {
-     "monate": 9,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
      "monate": 12,
      "zins": 3.26,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 18,
-     "zins": 0.01,
      "min": null,
      "max": null
     },
@@ -9968,14 +10168,16 @@
    "stand": "2026-10-27",
    "geprueft": "2026-10-27",
    "status": "ok",
-   "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
+   "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden. Einzelne Laufzeiten führt die Bank nur mit einem Platzhalterzins; sie fehlen hier.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "guber-banca",
+   "bank_slug": "guber-banca"
   },
   {
    "id": "haitong-bank-s-a-zweigniederlassung-in-spanien-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Haitong Bank, S.A. Zweigniederlassung in Spanien",
+   "bank": "Haitong Bank",
    "institut": "Haitong Bank, S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -10056,7 +10258,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "haitong-bank",
+   "bank_slug": "haitong-bank"
   },
   {
    "id": "hamburg-direct-bank-festgeld-de-raisin",
@@ -10124,7 +10328,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "hamburg-commercial-bank",
+   "bank_slug": "hamburg-direct-bank"
   },
   {
    "id": "hanseatic-bank-sparbrief-de",
@@ -10204,7 +10410,9 @@
    "status": "ok",
    "hinweis": "Zinseszins nur bei Typ 2 (abgezinst, Kaufpreis um Zinsen reduziert). Bei Fälligkeit Auszahlung auf ein frei wählbares Konto; Wiederanlage auf Wunsch.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "hanseatic-bank-und-co-kg",
+   "bank_slug": "hanseatic-bank"
   },
   {
    "id": "hoistspar-festgeld-de-raisin",
@@ -10267,12 +10475,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "hoist-finance",
+   "bank_slug": "hoistspar"
   },
   {
    "id": "holm-bank-as-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Holm Bank AS",
+   "bank": "Holm Bank",
    "institut": "Holm Bank AS",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -10341,7 +10551,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "holm-bank",
+   "bank_slug": "holm-bank"
   },
   {
    "id": "hypovereinsbank-festgeld-de",
@@ -10391,7 +10603,9 @@
    "status": "ok",
    "hinweis": "Für bestehende HVB-Guthaben oder andere Laufzeiten nur individuelle Angebote im Beratungstermin (keine öffentlichen Zinsen).",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "unicredit-bank",
+   "bank_slug": "hypovereinsbank"
   },
   {
    "id": "ibl-banca-festgeld-de-raisin",
@@ -10444,18 +10658,6 @@
      "zins": 3.01,
      "min": null,
      "max": null
-    },
-    {
-     "monate": 48,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 60,
-     "zins": 0.1,
-     "min": null,
-     "max": null
     }
    ],
    "min_anlage": 10000,
@@ -10481,9 +10683,11 @@
    "stand": "2026-10-27",
    "geprueft": "2026-10-27",
    "status": "ok",
-   "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
+   "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden. Einzelne Laufzeiten führt die Bank nur mit einem Platzhalterzins; sie fehlen hier.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "ibl-banca",
+   "bank_slug": "ibl-banca"
   },
   {
    "id": "iig-bank-festgeld-de-check24",
@@ -10551,7 +10755,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 deutsche Bankarbeitstage vor Fälligkeit auf der CHECK24- Webseite beantragen. Bei erfolgreicher Verlängerung wird der …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "iig-bank-malta-ltd",
+   "bank_slug": "iig-bank"
   },
   {
    "id": "ikb-deutsche-industriebank-festgeld-de-check24",
@@ -10607,12 +10813,14 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "ikb-deutsche-industriebank",
+   "bank_slug": "ikb-deutsche-industriebank"
   },
   {
    "id": "ikb-deutsche-industriebank-ag-festgeld-de-raisin",
    "markt": "de",
-   "bank": "IKB Deutsche Industriebank AG",
+   "bank": "IKB Deutsche Industriebank",
    "institut": "IKB Deutsche Industriebank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -10663,7 +10871,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich. Mindest-/Höchstbetrag je Laufzeit unterschiedlich (min. 5.000, 25.000 €; max. 100.000 €).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "ikb-deutsche-industriebank",
+   "bank_slug": "ikb-deutsche-industriebank"
   },
   {
    "id": "imprebanca-festgeld-de-raisin",
@@ -10743,7 +10953,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "imprebanca",
+   "bank_slug": "imprebanca"
   },
   {
    "id": "inbank-festgeld-de-check24",
@@ -10823,7 +11035,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "inbank",
+   "bank_slug": "inbank"
   },
   {
    "id": "inbank-festgeld-de-raisin",
@@ -10903,7 +11117,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "inbank",
+   "bank_slug": "inbank"
   },
   {
    "id": "industra-bank-festgeld-de-check24",
@@ -10983,7 +11199,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "industra-bank",
+   "bank_slug": "industra-bank"
   },
   {
    "id": "industra-bank-festgeld-de-raisin",
@@ -11063,7 +11281,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Mindest-/Höchstbetrag je Laufzeit unterschiedlich (min. 20.000, 40.000 €; max. 100.000 €).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "industra-bank",
+   "bank_slug": "industra-bank"
   },
   {
    "id": "ing-festgeld-de",
@@ -11161,7 +11381,9 @@
    "status": "ok",
    "hinweis": "12 Monate laut Konditionenseite erst ab 100.000 €. Ohne Auszahlungsauftrag automatische Verlängerung um dieselbe Laufzeit zum dann gültigen Zins; bis zu 5 Einzel- und 5 Gemeinschafts-Festgelder.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "ing-diba",
+   "bank_slug": "ing"
   },
   {
    "id": "ing-sparbrief-de",
@@ -11235,7 +11457,9 @@
    "status": "ok",
    "hinweis": "Sparbrief wird nie verlängert, sondern am Laufzeitende ausgezahlt.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "ing-diba",
+   "bank_slug": "ing"
   },
   {
    "id": "internationales-bankhaus-bodensee-festgeld-de-check24",
@@ -11327,7 +11551,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 deutsche Bankarbeitstage vor Fälligkeit auf der CHECK24- Webseite beantragen. Bei erfolgreicher Verlängerung wird der …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "internationales-bankhaus-bodensee",
+   "bank_slug": "internationales-bankhaus-bodensee"
   },
   {
    "id": "investitionsbank-trentino-sudtirol-festgeld-de-raisin",
@@ -11419,12 +11645,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich. Mindest-/Höchstbetrag je Laufzeit unterschiedlich (min. 10.000, 25.000, 50.000 €; max. 100.000 €).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "investitionsbank-trentino-suedtirol-mediocredito-trentino-alto-adige",
+   "bank_slug": "investitionsbank-trentino-suedtirol"
   },
   {
    "id": "istituto-per-il-credito-sportivo-e-culturale-s-p-a-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Istituto per il Credito Sportivo e Culturale S.p.A.",
+   "bank": "Istituto per il Credito Sportivo e Culturale",
    "institut": "Istituto per il Credito Sportivo e Culturale S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -11493,12 +11721,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Verlängerung bei Fälligkeit ist nicht möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "istituto-per-il-credito-sportivo-e-culturale",
+   "bank_slug": "istituto-per-il-credito-sportivo-e-culturale"
   },
   {
    "id": "itau-europe-s-a-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Itaú Europe S.A.",
+   "bank": "Itaú Europe",
    "institut": "Itaú Europe S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -11555,7 +11785,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "ita-europe",
+   "bank_slug": "ita-europe"
   },
   {
    "id": "izola-bank-festgeld-de-check24",
@@ -11635,87 +11867,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag … Anlagestart einmal wöchentlich, nächster Start am Mittwoch, 04.11.2026.",
    "sek": [],
-   "gruppe": "DE_C"
-  },
-  {
-   "id": "izola-bank-festgeld-de-raisin",
-   "markt": "de",
-   "bank": "Izola Bank",
-   "institut": "Izola Bank p.l.c",
-   "produkt": "Festgeld",
-   "vertrieb": "Raisin",
-   "vertrieb_url": "https://www.raisin.com/de-de/bank/izola-bank/",
-   "sitz": "MT",
-   "zweigniederlassung": false,
-   "einlagensicherung": {
-    "system": "Maltesische Einlagensicherungsfonds (Malta Financial Services Authority)",
-    "betrag": 100000,
-    "freiwillig": null
-   },
-   "zinsen": [
-    {
-     "monate": 3,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 6,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 12,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 24,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 36,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 60,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    }
-   ],
-   "min_anlage": 25,
-   "max_anlage": 100000,
-   "zinszahlung": "endfaellig",
-   "zinszahlung_text": "am Laufzeitende (Gutschrift auf dem Raisin-Konto)",
-   "zinseszins": false,
-   "steuer": "Laut Raisin automatische Steuerabführung: Kapitalertragsteuer (Abgeltungsteuer), Solidaritätszuschlag und ggf. Kirchensteuer werden einbehalten; Freistellungsauftrag/NV-Bescheinigung im Raisin-Onlinebanking möglich. Einbehalt durch die Raisin Bank AG (Treuhandmodell). Quellensteuer: In Malta fällt keine Quellensteuer an.",
-   "steuer_auto": true,
-   "kuendigung": "nein",
-   "kuendigung_text": "Nicht vorzeitig kündbar (laut Produktinformationsblatt); nur 14-tägiges Widerrufsrecht nach Eröffnung.",
-   "verlaengerung": "automatisch",
-   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
-   "referenzkonto": false,
-   "neukunden_only": false,
-   "gemeinschaftskonto": null,
-   "eroeffnung": "online",
-   "legitimation": "PostIdent oder VideoIdent (einmalig bei Raisin)",
-   "kosten": "kostenlos",
-   "aktion": null,
-   "quelle": "https://www.raisin.com/de-de/bank/izola-bank/",
-   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/IZB007/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_deu",
-   "stand": "2026-10-27",
-   "geprueft": "2026-10-27",
-   "status": "ok",
-   "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Mindest-/Höchstbetrag je Laufzeit unterschiedlich (min. 25, 1.000, 25.000 €; max. 100.000 €).",
-   "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "izola-bank",
+   "bank_slug": "izola-bank"
   },
   {
    "id": "isbank-festgeld-de-filiale",
@@ -11807,7 +11961,9 @@
    "status": "ok",
    "hinweis": "Filialzinsen, niedriger als beim online abschließbaren İŞWEB Festgeld; bei Beträgen ab 250.000 € Kontakt zur Filiale.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "i-bank",
+   "bank_slug": "i-bank"
   },
   {
    "id": "isbank-isweb-festgeld-de",
@@ -11899,7 +12055,9 @@
    "status": "ok",
    "hinweis": "Festgeldauftrag wird per Fax, Post oder E-Mail-Scan erteilt; Anlagen über 250.000 € nur nach Rücksprache zu individuellen Zinsen. Nur für Wohnsitz in Deutschland, keine Minderjährigen.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "i-bank",
+   "bank_slug": "i-bank"
   },
   {
    "id": "jt-direktbank-festgeld-de",
@@ -11997,7 +12155,9 @@
    "status": "ok",
    "hinweis": "Höchstens 250.000 € pro Festgeldvertrag. Prolongation ab 35 Tagen vor Fälligkeit online wählbar, sonst Auszahlung aufs Tagesgeld.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "jundt-banka",
+   "bank_slug": "jundt-direktbank"
   },
   {
    "id": "kentbank-festgeld-de-check24",
@@ -12101,7 +12261,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Für eine Verlängerung ist kein schriftlicher Antrag nötig, das heißt, Sie können die Verlängerung komplett online abschließen. Im Falle einer Verlängerung wird der Zinsertrag auf … Kroatische Steuernummer notwendig.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "kentbank-d-d",
+   "bank_slug": "kentbank"
   },
   {
    "id": "klarna-festgeld-plus-de",
@@ -12201,12 +12363,14 @@
     "gemeinschaftskonto",
     "legitimation"
    ],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "klarna-bank-german",
+   "bank_slug": "klarna"
   },
   {
    "id": "klarna-bank-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Klarna Bank AB",
+   "bank": "Klarna Bank",
    "institut": "Klarna Bank AB (publ)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12294,7 +12458,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "klarna-bank",
+   "bank_slug": "klarna-bank"
   },
   {
    "id": "kompasbank-festgeld-de-raisin",
@@ -12356,7 +12522,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "kompasbank-a-s",
+   "bank_slug": "kompasbank"
   },
   {
    "id": "kreissparkasse-kusel-festgeld-de-check24",
@@ -12406,7 +12574,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 deutsche Bankarbeitstage vor Fälligkeit auf der CHECK24- Webseite beantragen. Bei erfolgreicher Verlängerung wird der …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "kreissparkasse-kusel",
+   "bank_slug": "kreissparkasse-kusel"
   },
   {
    "id": "kt-bank-festgeld-de-raisin",
@@ -12486,7 +12656,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "kt-bank",
+   "bank_slug": "kt-bank"
   },
   {
    "id": "kt-bank-festgeldkonto-de",
@@ -12572,7 +12744,9 @@
    "status": "ok",
    "hinweis": "Islamkonformes Festgeld: fester, garantierter Profitsatz p. a. statt Zins. Sätze gelten nur bei Abschluss im Mobile-/Online-Banking; Verlängerung nur telefonisch mit neuem Antrag.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "kt-bank",
+   "bank_slug": "kt-bank"
   },
   {
    "id": "lhv-pank-festgeld-de-raisin",
@@ -12628,7 +12802,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden. Laufzeit(en) 24 Monate mit 0,00 % nicht erfasst.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "lhv-pank",
+   "bank_slug": "lhv-pank"
   },
   {
    "id": "lidion-bank-festgeld-de-check24",
@@ -12726,7 +12902,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "lidion-bank",
+   "bank_slug": "lidion-bank"
   },
   {
    "id": "magnetiq-bank-festgeld-de-check24",
@@ -12794,7 +12972,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 deutsche Bankarbeitstage vor Fälligkeit auf der CHECK24- Webseite beantragen. Bei erfolgreicher Verlängerung wird der …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "magnetiq-bank",
+   "bank_slug": "magnetiq-bank"
   },
   {
    "id": "max-festgeld-festgeld-de-check24",
@@ -12868,12 +13048,14 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "v-eobecn-verov-banka-v-b",
+   "bank_slug": "max-festgeld"
   },
   {
    "id": "medirect-bank-malta-plc-festgeld-de-raisin",
    "markt": "de",
-   "bank": "MeDirect Bank (Malta) plc",
+   "bank": "MeDirect Bank (Malta)",
    "institut": "MeDirect Bank (Malta) plc",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12942,76 +13124,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 5 Kalendertage vor Laufzeitende deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
-  },
-  {
-   "id": "medmera-bank-ab-festgeld-de-raisin",
-   "markt": "de",
-   "bank": "MedMera Bank AB",
-   "institut": "MedMera Bank AB",
-   "produkt": "Festgeld",
-   "vertrieb": "Raisin",
-   "vertrieb_url": "https://www.raisin.com/de-de/bank/medmera-bank-ab/",
-   "sitz": "SE",
-   "zweigniederlassung": false,
-   "einlagensicherung": {
-    "system": "Riksgälden Insättningsgarantin (Sw. Riksgälden)",
-    "betrag": 1150000,
-    "freiwillig": null,
-    "waehrung": "SEK"
-   },
-   "zinsen": [
-    {
-     "monate": 3,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 6,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 12,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 24,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    }
-   ],
-   "min_anlage": 1000,
-   "max_anlage": 85000,
-   "zinszahlung": "jaehrlich",
-   "zinszahlung_text": "jährlich bei Laufzeiten ab 24 Monaten, bei kürzeren Laufzeiten am Laufzeitende; jährliche Zinsen werden kapitalisiert (Zinseszins)",
-   "zinseszins": true,
-   "steuer": "Keine automatische Abgeltungsteuer: Zinsen werden brutto auf das Raisin-Konto gezahlt und sind in der Steuererklärung (Anlage KAP) anzugeben. Quellensteuer: In Schweden fällt keine Quellensteuer an.",
-   "steuer_auto": false,
-   "kuendigung": "nein",
-   "kuendigung_text": "Nicht vorzeitig kündbar (laut Produktinformationsblatt); nur 14-tägiges Widerrufsrecht nach Eröffnung.",
-   "verlaengerung": "keine",
-   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
-   "referenzkonto": false,
-   "neukunden_only": false,
-   "gemeinschaftskonto": null,
-   "eroeffnung": "online",
-   "legitimation": "PostIdent oder VideoIdent (einmalig bei Raisin)",
-   "kosten": "kostenlos",
-   "aktion": null,
-   "quelle": "https://www.raisin.com/de-de/bank/medmera-bank-ab/",
-   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/MDM002/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_deu",
-   "stand": "2026-10-27",
-   "geprueft": "2026-10-27",
-   "status": "ok",
-   "hinweis": "Verlängerung: Keine Verlängerung möglich.",
-   "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "medirect-bank-malta",
+   "bank_slug": "medirect-bank-malta"
   },
   {
    "id": "memo-bank-festgeld-de-raisin",
@@ -13048,7 +13163,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende (Gutschrift auf dem Raisin-Konto)",
@@ -13073,7 +13188,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "memo-bank",
+   "bank_slug": "memo-bank"
   },
   {
    "id": "moank-festgeld-de-raisin",
@@ -13130,7 +13247,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "moank",
+   "bank_slug": "moank"
   },
   {
    "id": "morgan-stanley-festgeld-de-raisin",
@@ -13204,7 +13323,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Kalendertage vor Laufzeitende deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "morgan-stanley-bank",
+   "bank_slug": "morgan-stanley-bank"
   },
   {
    "id": "morgan-stanley-europe-festgeld-de-zinsmarkt-norisbank",
@@ -13272,12 +13393,14 @@
    "status": "ok",
    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Treuhandanlage.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "morgan-stanley-europe-se",
+   "bank_slug": "morgan-stanley-europe-se"
   },
   {
    "id": "morrow-bank-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Morrow Bank AB",
+   "bank": "Morrow Bank",
    "institut": "Morrow Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -13323,7 +13446,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "morrow-bank",
+   "bank_slug": "morrow-bank"
   },
   {
    "id": "multitude-bank-festgeld-de-check24",
@@ -13360,7 +13485,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "jaehrlich",
    "zinszahlung_text": "jährlich bei Laufzeiten über 12 Monaten, sonst am Laufzeitende; Auszahlung auf das CHECK24-Anlagekonto",
@@ -13385,7 +13510,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "multitude-bank",
+   "bank_slug": "multitude-bank"
   },
   {
    "id": "my-money-bank-festgeld-de-raisin",
@@ -13441,7 +13568,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "my-money-bank",
+   "bank_slug": "my-money-bank"
   },
   {
    "id": "my-money-bank-festgeld-de-zinsmarkt-norisbank",
@@ -13515,7 +13644,9 @@
    "status": "ok",
    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Treuhandanlage.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "my-money-bank",
+   "bank_slug": "my-money-bank"
   },
   {
    "id": "myntro-festgeld-de-raisin",
@@ -13614,7 +13745,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "myntro",
+   "bank_slug": "myntro"
   },
   {
    "id": "munchener-hypothekenbank-festgeld-de-check24",
@@ -13694,7 +13827,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag … Anlagestart einmal wöchentlich, nächster Start am Mittwoch, 04.11.2026.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "muenchener-hypothekenbank",
+   "bank_slug": "muenchener-hypothekenbank"
   },
   {
    "id": "muenchener-hypothekenbank-festgeld-de-zinsmarkt-norisbank",
@@ -13774,12 +13909,14 @@
    "status": "ok",
    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Treuhandanlage.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "muenchener-hypothekenbank",
+   "bank_slug": "muenchener-hypothekenbank"
   },
   {
    "id": "munchener-hypothekenbank-eg-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Münchener Hypothekenbank eG",
+   "bank": "Münchener Hypothekenbank",
    "institut": "Münchener Hypothekenbank eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -13830,7 +13967,9 @@
    "status": "ok",
    "hinweis": "Laufzeiten in Wochen (13 Wochen, 26 Wochen, 52 Wochen, 104 Wochen; monate = Wochen x 0,25). Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Weitere Varianten: 13 Wochen: Variante mit Nachhaltigkeitsfokus 2,36 %; 52 Wochen: Variante mit Nachhaltigkeitsfokus 3,01 % (je Laufzeit ist der höhere Zins der nicht vorzeitig kündbaren Variante erfasst). Zusätzlich Laufzeiten in Wochen, die wir nicht vergleichen.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "muenchener-hypothekenbank",
+   "bank_slug": "muenchener-hypothekenbank"
   },
   {
    "id": "nexent-bank-festgeld-de",
@@ -13934,12 +14073,14 @@
    "status": "ok",
    "hinweis": "Mindestanlage 500 € im Online-Banking (sonst 2.500 €); Kontoeröffnung über die Nexent Bank App. Höchstbetrag laut Zinsrechner 250.000 €.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "nexent-bank",
+   "bank_slug": "nexent-bank"
   },
   {
    "id": "nordax-bank-ab-publ-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Nordax Bank AB (publ)",
+   "bank": "Nordax Bank",
    "institut": "NOBA Bank Group AB (publ)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14009,7 +14150,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "noba-bank-group",
+   "bank_slug": "nordax-bank"
   },
   {
    "id": "nordiska-festgeld-de-raisin",
@@ -14072,7 +14215,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bankaktiebolaget-nordiska",
+   "bank_slug": "nordiska"
   },
   {
    "id": "norisbank-festzins-sparen-de",
@@ -14170,7 +14315,9 @@
    "status": "ok",
    "hinweis": "Spareinlage: Auszahlung nur nach Kündigung (3 Monate zum Festzinsende), sonst automatische Verlängerung zu den dann gültigen Konditionen.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "norisbank",
+   "bank_slug": "norisbank"
   },
   {
    "id": "norisbank-festzins-sparen-de-neugeld",
@@ -14220,7 +14367,9 @@
    "status": "ok",
    "hinweis": "Zinsaushang vom 01.10.2026 nennt für 6 Monate regulär 2,90 %.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "norisbank",
+   "bank_slug": "norisbank"
   },
   {
    "id": "norrvidd-finance-festgeld-de-raisin",
@@ -14271,12 +14420,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "norrvidd-finance",
+   "bank_slug": "norrvidd-finance"
   },
   {
    "id": "northmill-bank-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Northmill Bank AB",
+   "bank": "Northmill Bank",
    "institut": "Northmill Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14370,12 +14521,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "northmill-bank",
+   "bank_slug": "northmill-bank"
   },
   {
    "id": "novo-banco-sa-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Novo Banco, SA",
+   "bank": "Novo Banco",
    "institut": "Novo Banco, SA",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14438,7 +14591,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "novo-banco",
+   "bank_slug": "novo-banco"
   },
   {
    "id": "olb-festgeld-de-check24",
@@ -14530,12 +14685,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "oldenburgische-landesbank",
+   "bank_slug": "olb"
   },
   {
    "id": "olb-bank-festgeld-de-raisin",
    "markt": "de",
-   "bank": "OLB Bank",
+   "bank": "OLB",
    "institut": "Oldenburgische Landesbank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14622,12 +14779,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "oldenburgische-landesbank",
+   "bank_slug": "olb"
   },
   {
    "id": "oney-bank-s-a-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Oney bank S.A.",
+   "bank": "Oney bank",
    "institut": "Oney bank S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14683,7 +14842,7 @@
      "max": null
     }
    ],
-   "min_anlage": 15,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende (Gutschrift auf dem Raisin-Konto)",
@@ -14708,7 +14867,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "oney-bank",
+   "bank_slug": "oney-bank"
   },
   {
    "id": "openbank-festgeld-de",
@@ -14806,7 +14967,9 @@
    "status": "ok",
    "hinweis": "santander.de leitet für Festgeld auf Openbank weiter; Openbank Deutschland AG sitzt in Mönchengladbach (Santander-Gruppe). Laufzeiten 5–7 Jahre gleicher Zins; keine automatische Verlängerung.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "openbank-deutschland",
+   "bank_slug": "openbank-santander"
   },
   {
    "id": "opta-data-banking-festgeld-de-raisin",
@@ -14862,12 +15025,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "bankhaus-bauer-aktiengesellschaft",
+   "bank_slug": "opta-data-banking"
   },
   {
    "id": "otto-m-schroder-bank-ag-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Otto M. Schröder Bank AG",
+   "bank": "Otto M. Schröder Bank",
    "institut": "Otto M. Schröder Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14918,7 +15083,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "otto-m-schroeder-bank",
+   "bank_slug": "otto-m-schroeder-bank"
   },
   {
    "id": "oyak-anker-bank-festgeld-de-check24",
@@ -14992,12 +15159,14 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "oyak-anker-bank",
+   "bank_slug": "oyak-anker-bank"
   },
   {
    "id": "oyak-anker-bank-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Oyak Anker Bank",
+   "bank": "OYAK ANKER Bank",
    "institut": "OYAK ANKER Bank GmbH",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -15066,7 +15235,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "oyak-anker-bank",
+   "bank_slug": "oyak-anker-bank"
   },
   {
    "id": "oyak-anker-bank-festgeld-de",
@@ -15158,7 +15329,9 @@
    "status": "ok",
    "hinweis": "Auffällige Zinsstruktur: 1 Jahr (3,50 %) deutlich über längeren Laufzeiten. Höchstbetrag nicht angegeben.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "oyak-anker-bank",
+   "bank_slug": "oyak-anker-bank"
   },
   {
    "id": "pbb-direkt-festgeld-de",
@@ -15234,7 +15407,9 @@
    "sek": [
     "einlagensicherung"
    ],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "deutsche-pfandbriefbank",
+   "bank_slug": "pbb-direkt"
   },
   {
    "id": "peac-bank-festgeld-de-check24",
@@ -15320,7 +15495,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "peac-germany",
+   "bank_slug": "peac-bank"
   },
   {
    "id": "peac-bank-festgeld-de-raisin",
@@ -15406,7 +15583,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "peac-germany",
+   "bank_slug": "peac-bank"
   },
   {
    "id": "penta-festgeld-de-raisin",
@@ -15480,12 +15659,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "penta",
+   "bank_slug": "penta"
   },
   {
    "id": "podravska-banka-d-d-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Podravska banka d.d.",
+   "bank": "Podravska banka",
    "institut": "Podravska banka d.d.",
    "produkt": "Flexgeld (Festgeld mit vorzeitiger Kündigungsmöglichkeit)",
    "vertrieb": "Raisin",
@@ -15566,7 +15747,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung kann im Zeitraum zwischen 15 und 5 Kalendertagen vor Fälligkeit im Onlinebanking unter „Meine Anlagen“ ausgewählt werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "podravska-banka-d-d",
+   "bank_slug": "podravska-banka"
   },
   {
    "id": "postbank-zinssparen-de",
@@ -15664,7 +15847,9 @@
    "status": "ok",
    "hinweis": "Spareinlage (Festzinssparen): ohne Kündigung automatische Wiederanlage zum dann gültigen Zins. Tabelle laut Postbank für 'bestehendes Guthaben'; Neugeld-Sonderzins als eigener Eintrag.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "postbank",
+   "bank_slug": "postbank"
   },
   {
    "id": "postbank-zinssparen-de-neugeld",
@@ -15714,7 +15899,9 @@
    "status": "ok",
    "hinweis": "Neugeld-Angebot, nur Privatvermögen. Spareinlage mit 3 Monaten Kündigungsfrist zum Festzinsende.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "postbank",
+   "bank_slug": "postbank"
   },
   {
    "id": "psd-bank-rheinneckarsaar-festgeld-de-check24",
@@ -15770,12 +15957,14 @@
    "status": "ok",
    "hinweis": "Nur für Kunden ohne Direktanlagen bei der Bank abschließbar.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "psd-bank-rheinneckarsaar",
+   "bank_slug": "psd-bank-rheinneckarsaar"
   },
   {
    "id": "qliro-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Qliro AB",
+   "bank": "Qliro",
    "institut": "Qliro AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -15839,12 +16028,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "qliro",
+   "bank_slug": "qliro"
   },
   {
    "id": "qred-bank-ab-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Qred Bank AB",
+   "bank": "Qred Bank",
    "institut": "Qred Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -15908,7 +16099,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "qred-bank",
+   "bank_slug": "qred-bank"
   },
   {
    "id": "raiffeisenbank-auerbach-freihung-festgeld-de-check24",
@@ -15982,7 +16175,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "raiffeisenbank-auerbach-freihung",
+   "bank_slug": "raiffeisenbank-auerbach-freihung"
   },
   {
    "id": "raiffeisenbank-beuerberg-eurasburg-festgeld-de-check24",
@@ -16068,7 +16263,9 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "raiffeisenbank-beuerberg-eurasburg",
+   "bank_slug": "raiffeisenbank-beuerberg-eurasburg"
   },
   {
    "id": "raiffeisenbank-gymnich-festgeld-de-check24",
@@ -16136,7 +16333,9 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "raiffeisenbank-gymnich",
+   "bank_slug": "raiffeisenbank-gymnich"
   },
   {
    "id": "raiffeisenbank-hohenloher-land-festgeld-de-check24",
@@ -16240,12 +16439,14 @@
    "status": "ok",
    "hinweis": "Verzögerte Antragsbearbeitung.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "raiffeisenbank-hohenloher-land",
+   "bank_slug": "raiffeisenbank-hohenloher-land"
   },
   {
    "id": "raiffeisenbank-straubing-eg-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Raiffeisenbank Straubing eG",
+   "bank": "Raiffeisenbank Straubing",
    "institut": "Raiffeisenbank Straubing eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -16296,7 +16497,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Laufzeit(en) 18 Monate, 24 Monate mit 0,00 % nicht erfasst.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "raiffeisenbank-straubing",
+   "bank_slug": "raiffeisenbank-straubing"
   },
   {
    "id": "raiffeisenbank-werratal-landeck-festgeld-de-check24",
@@ -16376,7 +16579,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage auf der CHECK24- Webseite beantragen. Für eine Verlängerung ist kein schriftlicher Antrag nötig, das heißt, Sie können die Verlängerung …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "raiffeisenbank-werratal-landeck",
+   "bank_slug": "raiffeisenbank-werratal-landeck"
   },
   {
    "id": "rato-festgeld-de-raisin",
@@ -16438,7 +16643,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "rato-bankas",
+   "bank_slug": "rato"
   },
   {
    "id": "renault-bank-direkt-festgeld-de",
@@ -16512,7 +16719,9 @@
    "status": "ok",
    "hinweis": "Festgeld nur zusätzlich zum Tagesgeldkonto; Auszahlung bei Fälligkeit aufs Tagesgeld, keine automatische Verlängerung (Prolongation online möglich). Höchstbetrag grundsätzlich unbegrenzt.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "rci-banque",
+   "bank_slug": "renault-bank-direkt"
   },
   {
    "id": "resurs-bank-festgeld-de-raisin",
@@ -16581,7 +16790,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "resurs-bank",
+   "bank_slug": "resurs-bank"
   },
   {
    "id": "resurs-bank-festgeld-de-zinsmarkt-norisbank",
@@ -16661,7 +16872,9 @@
    "status": "ok",
    "hinweis": "über den ZinsMarkt der norisbank. Angebote gelten 14.10.–29.10.2026 (begrenzt verfügbar); ab 30.10.2026 neue Angebote. Einlagensicherung bis 1,05 Mio. SEK; deutsche Meldeadresse und Steuer-ID erforderlich.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "resurs-bank",
+   "bank_slug": "resurs-bank"
   },
   {
    "id": "rib-festgeld-de-check24",
@@ -16729,7 +16942,9 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "re-ion-l-invest-ciju-banka",
+   "bank_slug": "rib"
   },
   {
    "id": "rietumu-bank-festgeld-de-raisin",
@@ -16809,12 +17024,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "rietumu-bank",
+   "bank_slug": "rietumu-bank"
   },
   {
    "id": "rietumu-banka-festgeld-de-check24",
    "markt": "de",
-   "bank": "Rietumu Banka",
+   "bank": "Rietumu Bank",
    "institut": "JSC Rietumu Banka",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16889,7 +17106,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag … Deutsche Staatsbürgerschaft benötigt.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "rietumu-bank",
+   "bank_slug": "rietumu-bank"
   },
   {
    "id": "riverbank-festgeld-de-raisin",
@@ -16975,7 +17194,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden. Mindest-/Höchstbetrag je Laufzeit unterschiedlich (min. 10.000, 50.000 €; max. 100.000 €).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "riverbank",
+   "bank_slug": "riverbank"
   },
   {
    "id": "saldo-bank-festgeld-de-check24",
@@ -17103,12 +17324,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "saldo-bank",
+   "bank_slug": "saldo-bank"
   },
   {
    "id": "sigma-bank-ag-festgeld-de-raisin",
    "markt": "de",
-   "bank": "SIGMA Bank AG",
+   "bank": "SIGMA Bank",
    "institut": "SIGMA Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17154,12 +17377,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren. Laufzeit(en) 6 Monate mit 0,00 % nicht erfasst.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "sigma-bank",
+   "bank_slug": "sigma-bank"
   },
   {
    "id": "signal-iduna-bauspar-ag-festgeld-de-raisin",
    "markt": "de",
-   "bank": "SIGNAL IDUNA Bauspar AG",
+   "bank": "SIGNAL IDUNA Bauspar",
    "institut": "SIGNAL IDUNA Bauspar AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17234,12 +17459,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 2 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "signal-iduna-bauspar",
+   "bank_slug": "signal-iduna-bauspar"
   },
   {
    "id": "signet-bank-as-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Signet Bank AS",
+   "bank": "Signet Bank",
    "institut": "Signet Bank AS",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17308,7 +17535,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "signet-bank",
+   "bank_slug": "signet-bank"
   },
   {
    "id": "smart-bank-festgeld-de-check24",
@@ -17388,7 +17617,9 @@
    "status": "ok",
    "hinweis": "Mindest-/Höchstbetrag je Laufzeit unterschiedlich (min. 5.000, 10.000 €; max. 90.000 €).",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "smart-bank",
+   "bank_slug": "smart-bank"
   },
   {
    "id": "sme-bank-festgeld-de-check24",
@@ -17474,7 +17705,9 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "sme-bank",
+   "bank_slug": "sme-bank"
   },
   {
    "id": "sme-bank-festgeld-de-raisin",
@@ -17560,7 +17793,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "sme-bank",
+   "bank_slug": "sme-bank"
   },
   {
    "id": "solution-bank-festgeld-de-raisin",
@@ -17646,7 +17881,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "solution-bank",
+   "bank_slug": "solution-bank"
   },
   {
    "id": "sparda-bank-hannover-festgeld-de-check24",
@@ -17696,12 +17933,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 deutsche Bankarbeitstage vor Fälligkeit auf der CHECK24- Webseite beantragen. Bei erfolgreicher Verlängerung wird der …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "sparda-bank-hannover",
+   "bank_slug": "sparda-bank-hannover"
   },
   {
    "id": "sparda-bank-nurnberg-eg-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Sparda-Bank Nürnberg eG",
+   "bank": "Sparda-Bank Nürnberg",
    "institut": "Sparda-Bank Nürnberg eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17746,7 +17985,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Für Anlagen, die nach dem 27.03.2023 gestartet, oder ab dem 27.03. beantragt wurden, erfolgt eine automatische Verlängerung, sofern Sie diese nicht bis 6 Tage vor Laufzeitende deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "sparda-bank-nuernberg",
+   "bank_slug": "sparda-bank-nuernberg"
   },
   {
    "id": "sparkasse-chemnitz-festgeld-de-check24",
@@ -17826,7 +18067,9 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "sparkasse-chemnitz",
+   "bank_slug": "sparkasse-chemnitz"
   },
   {
    "id": "stadt-sparkasse-solingen-festgeld-de-raisin",
@@ -17900,7 +18143,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "stadt-sparkasse-solingen",
+   "bank_slug": "stadt-sparkasse-solingen"
   },
   {
    "id": "standard-chartered-bank-festgeld-de-raisin",
@@ -17974,7 +18219,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "standard-chartered-bank",
+   "bank_slug": "standard-chartered-bank"
   },
   {
    "id": "stellantis-bank-festgeld-de",
@@ -18060,7 +18307,9 @@
    "status": "ok",
    "hinweis": "Höchstanlage 1 Mio. € über alle Geldanlagen; Prolongation ab 28 Tage vor Fälligkeit im eBanking, sonst Auszahlung aufs Tagesgeld. Die Website meldet am 27.10.2026: \"Aufgrund von laufenden Wartungsarbeiten sind aktuell keine Kontoeröffnungen möglich\" (Systemumstellung).",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "stellantis-bank",
+   "bank_slug": "stellantis-bank"
   },
   {
    "id": "swk-bank-festgeld-de",
@@ -18188,7 +18437,9 @@
    "status": "ok",
    "hinweis": "Nur Einzelkonten. Wer zum Laufzeitende auszahlen will, muss spätestens drei Tage vorher kündigen (laut FAQ), sonst wird verlängert.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "swk-bank-suedwestdeutsche-kreditbank",
+   "bank_slug": "swk-bank"
   },
   {
    "id": "sylter-bank-festgeld-de-check24",
@@ -18262,7 +18513,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "sylter-bank",
+   "bank_slug": "sylter-bank"
   },
   {
    "id": "sudtiroler-sparkasse-cassa-di-risparmio-di-bolzano-festgeld-de-raisin",
@@ -18378,7 +18631,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "suedtiroler-sparkasse",
+   "bank_slug": "suedtiroler-sparkasse-cassa-di-risparmio-di-bolzano"
   },
   {
    "id": "targobank-extra-festgeld-de",
@@ -18428,7 +18683,9 @@
    "status": "ok",
    "hinweis": "Stufenzins-Festgeld über 5 Jahre; als Zins ist der von der Bank genannte Effektivzins über die Gesamtlaufzeit (2,10 % p. a.) eingetragen.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "targobank",
+   "bank_slug": "targobank"
   },
   {
    "id": "targobank-festgeld-de",
@@ -18520,7 +18777,9 @@
    "status": "ok",
    "hinweis": "Keine Höchstgrenze. Online direkt über die Website, im Online-Banking oder in der Filiale abschließbar.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "targobank",
+   "bank_slug": "targobank"
   },
   {
    "id": "tbi-bank-festgeld-de-check24",
@@ -18600,7 +18859,9 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "tbi-bank",
+   "bank_slug": "tbi-bank"
   },
   {
    "id": "tbi-bank-festgeld-de-raisin",
@@ -18618,18 +18879,6 @@
     "freiwillig": null
    },
    "zinsen": [
-    {
-     "monate": 6,
-     "zins": 0.05,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 9,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    },
     {
      "monate": 12,
      "zins": 3.4,
@@ -18690,9 +18939,11 @@
    "stand": "2026-10-27",
    "geprueft": "2026-10-27",
    "status": "ok",
-   "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
+   "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden. Einzelne Laufzeiten führt die Bank nur mit einem Platzhalterzins; sie fehlen hier.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "tbi-bank",
+   "bank_slug": "tbi-bank"
   },
   {
    "id": "tf-bank-festgeld-de-check24",
@@ -18742,7 +18993,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "jaehrlich",
    "zinszahlung_text": "jährlich (nach jedem Anlagejahr); je nach Laufzeit Auszahlung oder Wiederanlage",
@@ -18767,7 +19018,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag … Laut Informationsbogen ist 'TF Bank' ein zweiter Firmenname der Avarda Bank AB (publ); Einlagen sind bei der Avarda Bank gesichert.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "avarda-bank-firmenname-tf-bank",
+   "bank_slug": "avarda-bank-firmenname-tf-bank"
   },
   {
    "id": "tf-bank-festgeld-de",
@@ -18817,7 +19070,9 @@
    "status": "ok",
    "hinweis": "Nur 12 Monate Laufzeit; Mindestanlage per einer Überweisung vom deutschen Referenzkonto. Grenzüberschreitendes Angebot ohne deutsche Niederlassung; Sicherung in SEK (Wechselkursabhängig). Automatische Prolongation zum dann gültigen Zins, sofern nicht widersprochen.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "avarda-bank-zweitfirma-tf-bank",
+   "bank_slug": "avarda-bank-zweitfirma-tf-bank"
   },
   {
    "id": "tf-nordic-festgeld-de-check24",
@@ -18861,7 +19116,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 95000,
    "zinszahlung": "jaehrlich",
    "zinszahlung_text": "jährlich zum Kalenderjahresende und am Laufzeitende; Auszahlung auf das CHECK24-Anlagekonto",
@@ -18886,7 +19141,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "tf-bank-nordic",
+   "bank_slug": "tf-nordic"
   },
   {
    "id": "tyche-bank-festgeld-de-raisin",
@@ -18972,7 +19229,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "tyche-bank",
+   "bank_slug": "tyche-bank"
   },
   {
    "id": "umweltbank-festgeld-de",
@@ -19052,7 +19311,9 @@
    "status": "ok",
    "hinweis": "Auszahlung auf das UmweltBank-Verrechnungskonto oder ein inländisches Referenzkonto.",
    "sek": [],
-   "gruppe": "DE_B"
+   "gruppe": "DE_B",
+   "bank_key": "umweltbank",
+   "bank_slug": "umweltbank"
   },
   {
    "id": "unicredit-nv-sa-festgeld-de-raisin",
@@ -19101,7 +19362,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende (Gutschrift auf dem Raisin-Konto)",
@@ -19126,7 +19387,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 2 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "aion-bank-german",
+   "bank_slug": "unicredit-nv-sa"
   },
   {
    "id": "union-bank-festgeld-de-check24",
@@ -19182,7 +19445,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Für eine Verlängerung ist kein schriftlicher Antrag nötig, … Achtung: Produktinformationsblatt sagt 'Die Bank behält keine Steuern ein', CHECK24-Produktseite nennt Abzug der Kapitalertragsteuer.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "union-bank-aktiengesellschaft",
+   "bank_slug": "union-bank"
   },
   {
    "id": "urbo-festgeld-de-check24",
@@ -19256,12 +19521,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "urbo-bankas",
+   "bank_slug": "urbo"
   },
   {
    "id": "urbo-bankas-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Urbo Bankas",
+   "bank": "URBO",
    "institut": "Urbo Bankas UAB",
    "produkt": "Flexgeld (Festgeld mit vorzeitiger Kündigungsmöglichkeit)",
    "vertrieb": "Raisin",
@@ -19330,7 +19597,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "urbo-bankas",
+   "bank_slug": "urbo"
   },
   {
    "id": "vakifbank-international-festgeld-de-check24",
@@ -19422,7 +19691,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "vakifbank-international",
+   "bank_slug": "vakifbank-international"
   },
   {
    "id": "vakifbank-termingeld-de",
@@ -19520,7 +19791,9 @@
    "status": "ok",
    "hinweis": "Zinstabelle aus dem Zinsrechner der Website (Laufzeitbänder ab 3, 6, 9, 12 ... 60 Monaten). Ohne Weisung bis 2 Werktage vor Ablauf Verlängerung zum dann gültigen Zins.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "vak-fbank-international",
+   "bank_slug": "vak-fbank"
   },
   {
    "id": "vereinigte-volksbank-raiffeisenbank-festgeld-de-check24",
@@ -19648,7 +19921,9 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "vereinigte-volksbank-raiffeisenbank",
+   "bank_slug": "vereinigte-volksbank-raiffeisenbank"
   },
   {
    "id": "vivibanca-festgeld-de-check24",
@@ -19722,7 +19997,9 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "vivibanca",
+   "bank_slug": "vivibanca"
   },
   {
    "id": "vivibanca-festgeld-de-raisin",
@@ -19796,7 +20073,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "vivibanca",
+   "bank_slug": "vivibanca"
   },
   {
    "id": "volksbank-franken-festgeld-de-check24",
@@ -19852,7 +20131,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 deutsche Bankarbeitstage vor Fälligkeit auf der CHECK24- Webseite beantragen. Bei erfolgreicher Verlängerung wird der …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "volksbank-franken",
+   "bank_slug": "volksbank-franken"
   },
   {
    "id": "volksbank-hameln-stadthagen-festgeld-de-check24",
@@ -19914,7 +20195,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 deutsche Bankarbeitstage vor Fälligkeit auf der CHECK24- Webseite beantragen. Bei erfolgreicher Verlängerung wird der …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "volksbank-hameln-stadthagen",
+   "bank_slug": "volksbank-hameln-stadthagen"
   },
   {
    "id": "volksbank-kurpfalz-festgeld-de-check24",
@@ -19982,12 +20265,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "volksbank-kurpfalz",
+   "bank_slug": "volksbank-kurpfalz"
   },
   {
    "id": "volksbank-marl-recklinghausen-eg-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Volksbank Marl-Recklinghausen eG",
+   "bank": "Volksbank Marl-Recklinghausen",
    "institut": "Volksbank Marl-Recklinghausen eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -20038,7 +20323,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "volksbank-marl-recklinghausen",
+   "bank_slug": "volksbank-marl-recklinghausen"
   },
   {
    "id": "volksbank-mittweida-festgeld-de-raisin",
@@ -20124,7 +20411,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "volksbank-mittweida",
+   "bank_slug": "volksbank-mittweida"
   },
   {
    "id": "volksbank-raiffeisenbank-bayern-mitte-festgeld-de-check24",
@@ -20180,7 +20469,9 @@
    "status": "ok",
    "hinweis": "Achtung: Produktinformationsblatt sagt 'Die Bank behält keine Steuern ein', CHECK24-Produktseite nennt Abzug der Kapitalertragsteuer.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "volksbank-raiffeisenbank-bayern-mitte",
+   "bank_slug": "volksbank-raiffeisenbank-bayern-mitte"
   },
   {
    "id": "volksbank-raiffeisenbank-furstenfeldbruck-festgeld-de-check24",
@@ -20254,12 +20545,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "volksbank-raiffeisenbank-fuerstenfeldbruck",
+   "bank_slug": "volksbank-raiffeisenbank-fuerstenfeldbruck"
   },
   {
    "id": "volksbank-raiffeisenbank-regensburg-schwandorf-eg-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Volksbank Raiffeisenbank Regensburg-Schwandorf eG",
+   "bank": "Volksbank Raiffeisenbank Regensburg-Schwandorf",
    "institut": "Volksbank Raiffeisenbank Regensburg-Schwandorf eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -20346,12 +20639,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "volksbank-raiffeisenbank-regensburg-schwandorf",
+   "bank_slug": "volksbank-raiffeisenbank-regensburg-schwandorf"
   },
   {
    "id": "volksbank-rhein-ruhr-eg-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Volksbank Rhein-Ruhr eG",
+   "bank": "Volksbank Rhein-Ruhr",
    "institut": "Volksbank Rhein-Ruhr eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -20402,7 +20697,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Ab Eröffnung der Anlage kann die Verlängerungseinstellung jederzeit bis spätestens 6 Tage vor Fälligkeit verändert werden.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "volksbank-rhein-ruhr",
+   "bank_slug": "volksbank-rhein-ruhr"
   },
   {
    "id": "volksbank-zollernalb-festgeld-de-check24",
@@ -20464,7 +20761,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "volksbank-zollernalb",
+   "bank_slug": "volksbank-zollernalb"
   },
   {
    "id": "volkswagen-bank-festgeld-de",
@@ -20526,7 +20825,9 @@
    "status": "ok",
    "hinweis": "Laufzeit tagesgenau 90–359 Tage in drei Zinsstufen (90–179, 180–269, 270–359 Tage). Zurzeit keine Gemeinschaftskonten; auch für Audi Bank-Kunden (Zweigniederlassung).",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "volkswagen-bank",
+   "bank_slug": "volkswagen-bank"
   },
   {
    "id": "volkswagen-bank-plus-sparbrief-de",
@@ -20600,7 +20901,9 @@
    "status": "ok",
    "hinweis": "Zurzeit keine Gemeinschaftskonten. Auch über Audi Bank (Zweigniederlassung der Volkswagen Bank) beworben.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "volkswagen-bank",
+   "bank_slug": "volkswagen-bank"
   },
   {
    "id": "vr-bank-alsheim-festgeld-de-check24",
@@ -20668,7 +20971,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 deutsche Bankarbeitstage vor Fälligkeit auf der CHECK24- Webseite beantragen. Bei erfolgreicher Verlängerung wird der …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "vr-bank-alsheim",
+   "bank_slug": "vr-bank-alsheim"
   },
   {
    "id": "vr-bank-in-thuringen-festgeld-de-check24",
@@ -20724,12 +21029,14 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "vr-bank-in-thueringen",
+   "bank_slug": "vr-bank-in-thueringen"
   },
   {
    "id": "vr-bank-mittelfranken-mitte-eg-festgeld-de-raisin",
    "markt": "de",
-   "bank": "VR-Bank Mittelfranken Mitte eG",
+   "bank": "VR-Bank Mittelfranken Mitte",
    "institut": "VR-Bank Mittelfranken Mitte eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -20780,12 +21087,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "vr-bank-mittelfranken-mitte",
+   "bank_slug": "vr-bank-mittelfranken-mitte"
   },
   {
    "id": "vr-bank-rottal-inn-eg-festgeld-de-raisin",
    "markt": "de",
-   "bank": "VR-Bank Rottal-Inn eG",
+   "bank": "VR-Bank Rottal-Inn",
    "institut": "VR-Bank Rottal-Inn eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -20860,7 +21169,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "vr-bank-rottal-inn",
+   "bank_slug": "vr-bank-rottal-inn"
   },
   {
    "id": "western-union-international-bank-festgeld-de-raisin",
@@ -20916,7 +21227,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "western-union-international-bank",
+   "bank_slug": "western-union-international-bank"
   },
   {
    "id": "wiener-privatbank-festgeld-de-check24",
@@ -20972,7 +21285,9 @@
    "status": "ok",
    "hinweis": null,
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "wiener-privatbank-se",
+   "bank_slug": "wiener-privatbank"
   },
   {
    "id": "wormser-festgeld-de-raisin",
@@ -21064,7 +21379,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "banque-wormser-fr-res",
+   "bank_slug": "wormser"
   },
   {
    "id": "wuestenrot-top-festgeld-de",
@@ -21180,7 +21497,9 @@
    "status": "ok",
    "hinweis": "Festgeld nur zusammen mit Top Tagesgeldkonto; Auszahlung bei Fälligkeit aufs Tagesgeld. Anlagebetrag muss binnen 10 Tagen nach Kontoeinrichtung eingehen; keine Obergrenze.",
    "sek": [],
-   "gruppe": "DE_A"
+   "gruppe": "DE_A",
+   "bank_key": "wuestenrot-bausparkasse",
+   "bank_slug": "wuestenrot"
   },
   {
    "id": "yapi-kredi-nederland-festgeld-de-raisin",
@@ -21248,7 +21567,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Keine Verlängerung möglich.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "yapi-kredi-nederland",
+   "bank_slug": "yapi-kredi-nederland"
   },
   {
    "id": "younited-festgeld-de-check24",
@@ -21328,12 +21649,14 @@
    "status": "ok",
    "hinweis": "Verlängerung: Sie können eine Verlängerung Ihrer Anlage bis zu 3 Bankarbeitstage vor Fälligkeit auf der CHECK24-Webseite beantragen. Bei erfolgreicher Verlängerung wird der Anlagebetrag …",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "younited-credit",
+   "bank_slug": "younited"
   },
   {
    "id": "younited-credit-festgeld-de-raisin",
    "markt": "de",
-   "bank": "Younited Credit",
+   "bank": "Younited",
    "institut": "Younited Credit S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -21408,7 +21731,9 @@
    "status": "ok",
    "hinweis": "Verlängerung: Eine Verlängerung wird automatisch veranlasst, sofern Sie die automatische Verlängerung nicht bis 6 Tage vor Laufzeitende im Onlinebanking von Raisin deaktivieren.",
    "sek": [],
-   "gruppe": "DE_C"
+   "gruppe": "DE_C",
+   "bank_key": "younited-credit",
+   "bank_slug": "younited"
   },
   {
    "id": "ziraat-bank-festgeld-de",
@@ -21494,7 +21819,9 @@
    "status": "ok",
    "hinweis": "Zinsstaffel nach Laufzeitbändern (3–5, 6–11, 12–23, 24–35, 36–47, 48–59 Monate, 60 Monate); Zinsen gelten bis 1 Mio. € pro Kunde. Wiederanlage nur mit neuem Festgeldauftrag.",
    "sek": [],
-   "gruppe": "DE_D"
+   "gruppe": "DE_D",
+   "bank_key": "ziraat-bank-international",
+   "bank_slug": "ziraat-bank"
   }
  ],
  "nicht_aufgenommen": [
@@ -21656,6 +21983,16 @@
   {
    "name": "Verivox Festgeld (alle Angebote im Vergleich)",
    "grund": "Kein Abschluss über Verivox: Der Vergleich leitet per Affiliate-Link direkt zur Bank (z. B. HoistSpar, Volkswagen Bank, Grenke) oder zu WeltSparen/Raisin weiter; keine eigene Plattform/kein eigenes Anlagekonto.",
+   "gruppe": "DE_C"
+  },
+  {
+   "name": "Izola Bank Festgeld",
+   "grund": "Alle Laufzeiten nur mit Platzhalterzins, faktisch kein Angebot.",
+   "gruppe": "DE_C"
+  },
+  {
+   "name": "MedMera Bank AB Festgeld",
+   "grund": "Alle Laufzeiten nur mit Platzhalterzins, faktisch kein Angebot.",
    "gruppe": "DE_C"
   },
   {

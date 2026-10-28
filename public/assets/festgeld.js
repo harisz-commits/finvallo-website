@@ -22,7 +22,11 @@
   var box = document.getElementById('filt'), calcBox = document.getElementById('fcalc');
   if (!box || !calcBox) return;
   var list = document.querySelector('.list[data-fg]');
-  var items = [].slice.call(list.querySelectorAll('article.item[data-k]'));
+  // Einträge jenseits der ersten 60 stehen in einem <template>. Alle Einträge werden gefiltert und sortiert,
+  // aber nur die sichtbaren hängen im DOM; der Rest wartet in einem DocumentFragment (kleines DOM, schnelles Filtern).
+  var tpl = list.querySelector('template[data-rest]'), frag = document.createDocumentFragment();
+  if (tpl) { frag.appendChild(tpl.content); tpl.remove(); }
+  var items = [].slice.call(list.querySelectorAll('article.item[data-k]')).concat([].slice.call(frag.querySelectorAll('article.item[data-k]')));
   items.forEach(function (it, i) { it.dataset.ord = i; it._k = JSON.parse(it.dataset.k); });
   var $ = function (s, el) { return (el || box).querySelector(s); };
   var betrag = $('[data-in="betrag"]', calcBox), lz = $('[data-in="lz"]', calcBox);
@@ -68,9 +72,9 @@
     });
     var shown = 0;
     items.forEach(function (it) {
-      list.appendChild(it);
-      if (!it.hidden) { shown++; it.classList.toggle('over', LIMIT && !open && shown > LIMIT); }
-      else it.classList.remove('over');
+      it.classList.remove('over');
+      if (!it.hidden) shown++;
+      if (!it.hidden && (!LIMIT || open || shown <= LIMIT)) list.appendChild(it); else frag.appendChild(it);
     });
     if (more) { more.hidden = !LIMIT || open || shown <= LIMIT; more.textContent = 'Alle ' + shown + ' Angebote zeigen'; }
     count.textContent = n === 1 ? '1 Angebot' : n + ' Angebote';

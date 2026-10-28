@@ -15,6 +15,28 @@ GRUND={'Bank11direkt':'Website bei der Prüfung nicht erreichbar, keine Konditio
        'Hello bank! (BNP Paribas S.A. Niederlassung Österreich)':'Kein Festgeld-Angebot gefunden.',
        'durchblicker.at (Sparzinsen)':'Vergleichsportal ohne eigenen Abschluss.',
        'My Money Bank':'Festgeld nur über Raisin, dort im Vergleich.'}
+# Bankschlüssel: dieselbe Bank auf mehreren Wegen (direkt, Raisin, CHECK24, ZinsMarkt) bekommt denselben Schlüssel und Anzeigenamen
+ALIAS={'ca-savings':'ca-consumer-finance','credit-agricole-savings':'ca-consumer-finance','pbb-direkt':'deutsche-pfandbriefbank','olb-bank':'olb','urbo':'urbo-bankas',
+       'embank':'european-merchant-bank','rietumu-banka':'rietumu-bank','ca-auto-bank-s-p-a-niederlassung-deutschland':'ca-auto-bank','postbank':'postbank'}
+RECHT=r'\b(ag|gmbh|plc|p\.l\.c\.?|s\.?a\.?|s\.?p\.?a\.?|a\.?s\.?|ab|as|uab|ead|publ|eg|n\.?v\.?|jsc|sucursal en españa|zweigniederlassung.*|niederlassung.*|branch.*|\(.*?\))\b'
+def bank_key(a):
+    if a.get('bank','').lower().startswith('postbank'): return 'postbank'
+    s=(a.get('institut') or a['bank']).lower().replace('“','').replace('”','').replace('"','')
+    s=re.sub(RECHT,'',s); k=slug(s)
+    return ALIAS.get(k,k)
+def bank_kurz(xs):
+    """kürzester Markenname je Schlüssel, ohne Rechtsform"""
+    out={}
+    for a in xs:
+        n=a['bank'].strip().rstrip(',').strip()
+        n=re.sub(r'\s*,?\s*(S\.?A\.?,?\s*)?(Sucursal en España|Zweigniederlassung.*|Niederlassung.*|Branch.*)$','',n,flags=re.I).strip()
+        n=re.sub(r'^(AB|AS|UAB|JSC)\s+','',n)
+        for _ in range(2): n=re.sub(r'\s*,?\s+(AG|GmbH|plc|Plc|p\.l\.c\.?|S\.?A\.?|S\.?p\.?A\.?|A\.?S\.?|AB|AS|ASA|AD|EAD|UAB|eG|N\.?V\.?|Limited|Ltd\.?|d\.d\.)(\s*\(publ\))?\s*$','',n).strip().rstrip(',')
+        k=a['bank_key']
+        if k not in out or len(n)<len(out[k]): out[k]=n
+    return out
+MIN_ZINS=0.3   # Zinsstufen darunter sind Platzhalter der Plattform für geschlossene Laufzeiten
+MIN_ANLAGE=50  # Mindestanlagen darunter sind Datenfehler (z. B. 1 €)
 # interne Vermerke der Recherche (Aufteilung auf Gruppen, Dubletten, 0-%-Laufzeiten) nicht veröffentlichen
 INTERN=re.compile(r'Gruppe|API|aufgenommen als|0,00–|laut Vorgaben|Teaser|Auftrag|nicht doppelt|Dublette|0,00 %|identisch mit|\((?:dort )?erfasst|\berfasst\)|unter diesem Namen erfasst|dort im Vergleich|, (?:dieses|das) ist erfasst|sind erfasst|\(erfasst\)|erfasst als')
 def clean(t):
@@ -56,6 +78,12 @@ def norm(a):
         z={'monate':num(z.get('monate')),'zins':num(z.get('zins')),'min':num(z.get('min')),'max':num(z.get('max'))}
         if isinstance(z['monate'],float) and z['monate'].is_integer(): z['monate']=int(z['monate'])
         zs.append(z)
+    # Platzhalter-Zinsen (0,01 %) sind keine Angebote
+    tot=[z for z in zs if (z['zins'] or 0)<MIN_ZINS]
+    if tot:
+        zs=[z for z in zs if z not in tot]
+        a['hinweis']=((a.get('hinweis') or '')+' Einzelne Laufzeiten führt die Bank nur mit einem Platzhalterzins; sie fehlen hier.').strip()
+    if a.get('min_anlage') is not None and num(a['min_anlage'])<MIN_ANLAGE: a['min_anlage']=None
     # Laufzeiten in Wochen (Recherche: 0,25 Monate je Woche) passen nicht in die Monatsrechnung: weglassen, im Hinweis nennen
     wo=[z for z in zs if z['monate'] is not None and z['monate']!=int(z['monate'])]
     if wo:
@@ -91,8 +119,10 @@ def main():
                 raus[a['markt']].append({'name':f'{a["bank"]} {a["produkt"]}','grund':AUS[a['id']],'gruppe':n}); continue
             if not a['sitz']:
                 raus[a.get('markt','de')].append({'name':f'{a["bank"]} {a["produkt"]}','grund':'Die Bank nennt nicht, bei welcher Einlagenbank das Geld liegt; Einlagensicherung damit nicht prüfbar.','gruppe':n}); continue
+            if not a.get('zinsen'):
+                raus[a['markt']].append({'name':f'{a["bank"]} {a["produkt"]}','grund':'Alle Laufzeiten nur mit Platzhalterzins, faktisch kein Angebot.','gruppe':n}); continue
             check(a,fehler)
-            if not a.get('zinsen'): continue
+            a['bank_key']=bank_key(a)
             k=a['id']
             if k in angebote:
                 # gleiche ID aus zwei Gruppen: das jüngere Prüfdatum gewinnt
@@ -108,6 +138,13 @@ def main():
         xs=sorted([a for a in angebote.values() if a['markt']==land],key=lambda a:(a['bank'].lower(),a['produkt'].lower(),a['vertrieb']))
         if not xs: continue
         for a in xs: a.pop('es',None)
+        kurz=bank_kurz(xs)
+        for a in xs: a['bank']=kurz[a['bank_key']]
+        # Slug der Bankseite aus dem kurzen Namen; bei Namensgleichheit verschiedener Institute der Schlüssel
+        seen={}
+        for k,n in kurz.items(): seen.setdefault(slug(n),[]).append(k)
+        for a in xs:
+            sl=slug(a['bank']); a['bank_slug']=sl if len(seen[sl])==1 else a['bank_key']
         stand=max(a.get('geprueft') or a.get('stand') or '' for a in xs)
         os.makedirs(os.path.join(DD,land),exist_ok=True)
         json.dump({'land':land,'stand':stand,'angebote':xs,'nicht_aufgenommen':raus[land]},open(os.path.join(DD,land,'festgeld.json'),'w',encoding='utf-8'),ensure_ascii=False,indent=1)

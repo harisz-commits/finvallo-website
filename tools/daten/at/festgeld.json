@@ -70,7 +70,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "aareal-bank",
+   "bank_slug": "aareal-bank"
   },
   {
    "id": "achmea-bank-festgeld-at-raisin",
@@ -182,7 +184,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "achmea-bank",
+   "bank_slug": "achmea-bank"
   },
   {
    "id": "addiko-festgeld-at",
@@ -262,7 +266,9 @@
    "status": "ok",
    "hinweis": "Höchsteinlage 150.000 € pro Kunde über alle Addiko-Sparkonten. Der Zinsrechner der Webseite erwähnt jährliche Zinszuschreibung, das Konditionenblatt nennt Abschluss zum Laufzeitende.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "addiko-bank",
+   "bank_slug": "addiko-bank"
   },
   {
    "id": "alisa-bank-festgeld-at-raisin",
@@ -362,7 +368,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "alisa-bank",
+   "bank_slug": "alisa-bank"
   },
   {
    "id": "anadi-bank-online-festgeld-at",
@@ -430,7 +438,9 @@
    "status": "ok",
    "hinweis": "Mindest- und Maximaleinlage gelten pro Kunde und Festgeld-Aktion. Webseite nennt kein Datum zu den Zinsen.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "austrian-anadi-bank",
+   "bank_slug": "austrian-anadi-bank"
   },
   {
    "id": "avida-bank-festgeld-at-raisin",
@@ -455,7 +465,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
@@ -482,7 +492,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "avida-bank",
+   "bank_slug": "avida-bank"
   },
   {
    "id": "banca-investis-festgeld-at-raisin",
@@ -552,7 +564,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "banca-investis",
+   "bank_slug": "banca-investis"
   },
   {
    "id": "banca-profilo-festgeld-at-raisin",
@@ -616,7 +630,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "banca-profilo",
+   "bank_slug": "banca-profilo"
   },
   {
    "id": "banca-profilo-flexgeld-at-raisin",
@@ -668,7 +684,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "banca-profilo",
+   "bank_slug": "banca-profilo"
   },
   {
    "id": "banca-sistema-festgeld-at-raisin",
@@ -756,7 +774,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "banca-sistema",
+   "bank_slug": "banca-sistema"
   },
   {
    "id": "banco-bai-europa-festgeld-at-raisin",
@@ -838,7 +858,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "banco-bai-europa",
+   "bank_slug": "banco-bai-europa"
   },
   {
    "id": "banco-bni-europa-festgeld-at-raisin",
@@ -932,7 +954,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "bni-banco-de-neg-cios-internacional-europa",
+   "bank_slug": "banco-bni-europa"
   },
   {
    "id": "bank-austria-sparkonto-fix-at",
@@ -994,7 +1018,9 @@
    "status": "ok",
    "hinweis": "Gestaffelter Fixzins, angegeben ist der Durchschnittszins bei voller Laufzeit: 6 M (1,75 %/2,25 %), 12 M (2,55 %/2,7 %/3 %), 24 M (2 %/2,3 %/2,5 %). Nach Laufzeitende 0,01 % p.a.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "unicredit-bank-austria",
+   "bank_slug": "bank-austria"
   },
   {
    "id": "bank-dimare-festgeld-at-raisin",
@@ -1043,7 +1069,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
@@ -1070,7 +1096,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "bank-dimare-limited",
+   "bank_slug": "bank-dimare"
   },
   {
    "id": "bank-direkt-fixzinskonto-at",
@@ -1138,7 +1166,9 @@
    "status": "ok",
    "hinweis": "Bank Direkt ist die Direktbank der RLB OÖ. Nach Ablauf wird das Guthaben auf das Extrakonto gebucht bzw. das Fixzinskonto als Extrakonto zum Basiszins weitergeführt; die Bank kann ein Wiederveranlagungsangebot machen. Maximalsaldo ab 05.10.2026 500.000 €.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "raiffeisenlandesbank-oberoesterreich",
+   "bank_slug": "bank-direkt"
   },
   {
    "id": "bank99-fixsparen99-at",
@@ -1212,7 +1242,9 @@
    "status": "ok",
    "hinweis": "Nur Einzelkonto ab 18 Jahren; Konditionenblatt 'Stand Oktober 2026' zeigt die Aktionszinsen, nach dem 02.11.2026 sind niedrigere Zinsen zu erwarten. flexsparen99 setzt Hauptwohnsitz in Österreich voraus.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "bank99",
+   "bank_slug": "bank99"
   },
   {
    "id": "banque-wormser-freres-festgeld-at-raisin",
@@ -1306,7 +1338,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "banque-wormser-fr-res",
+   "bank_slug": "banque-wormser-fr-res"
   },
   {
    "id": "bawag-sparbox-fix-at",
@@ -1392,7 +1426,9 @@
    "status": "ok",
    "hinweis": "Pro Person nur ein Anlagekonto SparBox Fix (darin beliebig viele Fixzins-Einlagen); Maximaleinlage 1 Mio. € je SparBox Fix. Ein- und Auszahlungen nur über das BAWAG-Referenzkonto.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "bawag-p-s-k-bank-fuer-arbeit-und-wirtschaft-und-oesterreichische-postsparkasse",
+   "bank_slug": "bawag"
   },
   {
    "id": "bks-bank-mein-geld-konto-fix-at",
@@ -1448,7 +1484,9 @@
    "status": "ok",
    "hinweis": "Zinsangebot laut Bank für Neu- und Bestandskunden bis auf Widerruf; Abschluss im MyNet-eShop.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "bks-bank",
+   "bank_slug": "bks-bank"
   },
   {
    "id": "bluor-bank-festgeld-at-raisin",
@@ -1497,7 +1535,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
@@ -1524,7 +1562,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "blueorange-bank",
+   "bank_slug": "bluor-bank"
   },
   {
    "id": "btg-pactual-festgeld-at-raisin",
@@ -1618,7 +1658,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "btg-pactual-europe",
+   "bank_slug": "btg-pactual"
   },
   {
    "id": "ca-auto-bank-festgeld-at-raisin",
@@ -1694,7 +1736,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "ca-auto-bank",
+   "bank_slug": "ca-auto-bank"
   },
   {
    "id": "coop-pank-festgeld-at-raisin",
@@ -1770,7 +1814,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "coop-pank",
+   "bank_slug": "coop-pank"
   },
   {
    "id": "creditplus-bank-festgeld-at-raisin",
@@ -1888,7 +1934,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "creditplus-bank",
+   "bank_slug": "creditplus-bank"
   },
   {
    "id": "dadat-festgeld-at",
@@ -1944,7 +1992,9 @@
    "status": "ok",
    "hinweis": "Angebot laut Bank für bestehende inländische Privatkunden (DADAT-Konto nötig). Vereinbarter Zins gilt nur, wenn der Betrag binnen 4 Kalendertagen auf dem Referenzkonto verfügbar ist.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "schelhammer-capital-bank",
+   "bank_slug": "dadat-bank"
   },
   {
    "id": "denizbank-festgeld-at",
@@ -2072,7 +2122,9 @@
    "status": "ok",
    "hinweis": "Österreichische Bank (Sitz Wien, Mutter Emirates NBD). Beliebig viele Festgeldkonten; am Laufzeitende Auszahlung, Wiederveranlagung von Kapital oder Kapital+Zinsen wählbar.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "denizbank",
+   "bank_slug": "denizbank"
   },
   {
    "id": "denzel-bank-onlinesparen-festgeld-at",
@@ -2152,12 +2204,14 @@
    "status": "ok",
    "hinweis": "Max. 500.000 € pro Kunde über Täglich Fällig und Festgeld zusammen. Festgeld wird im Online-Banking aus dem Täglich-Fällig-Konto eröffnet.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "bankhaus-denzel",
+   "bank_slug": "denzel-bank"
   },
   {
    "id": "easybank-easy-geldmarkt-at",
    "markt": "at",
-   "bank": "easybank",
+   "bank": "BAWAG",
    "institut": "BAWAG P.S.K. Bank für Arbeit und Wirtschaft und Österreichische Postsparkasse AG",
    "produkt": "easy geldmarkt",
    "vertrieb": "direkt",
@@ -2228,7 +2282,9 @@
    "sek": [
     "zinszahlung"
    ],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "bawag-p-s-k-bank-fuer-arbeit-und-wirtschaft-und-oesterreichische-postsparkasse",
+   "bank_slug": "bawag"
   },
   {
    "id": "guber-banca-festgeld-at-raisin",
@@ -2304,7 +2360,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "guber-banca",
+   "bank_slug": "guber-banca"
   },
   {
    "id": "haitong-bank-festgeld-at-raisin",
@@ -2392,7 +2450,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "haitong-bank",
+   "bank_slug": "haitong-bank"
   },
   {
    "id": "hamburg-commercial-bank-festgeld-at-raisin",
@@ -2462,7 +2522,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "hamburg-commercial-bank",
+   "bank_slug": "hamburg-commercial-bank"
   },
   {
    "id": "hoist-finance-festgeld-at-raisin",
@@ -2544,7 +2606,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "hoist-finance",
+   "bank_slug": "hoist-finance-hoistspar"
   },
   {
    "id": "holm-bank-festgeld-at-raisin",
@@ -2620,7 +2684,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "holm-bank",
+   "bank_slug": "holm-bank"
   },
   {
    "id": "hypo-noe-online-festgeld-at",
@@ -2682,7 +2748,9 @@
    "status": "ok",
    "hinweis": "24 Monate als 'Festgeld Grün'. Voraussetzungen: Hauptwohnsitz und alleinige Steuerpflicht in Österreich, legitimiertes EU/EWR-Girokonto, nur Einzelkonto; max. 300.000 € pro Veranlagung.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "hypo-noe-landesbank-fuer-niederoesterreich-und-wien",
+   "bank_slug": "hypo-noe"
   },
   {
    "id": "hypo-tirol-online-festgeld-at",
@@ -2762,7 +2830,9 @@
    "status": "ok",
    "hinweis": "Nur mit Hypo-Tirol-Konto; Neukunden müssen zuerst ein Girokonto eröffnen. Keine Konditionenblatt-Details (Mindestbetrag, Zinszahlung, Kündigung) öffentlich gefunden.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "hypo-tirol-bank",
+   "bank_slug": "hypo-tirol"
   },
   {
    "id": "hypo-vorarlberg-festgeld-online-at",
@@ -2812,7 +2882,9 @@
    "status": "ok",
    "hinweis": "Höhe nach oben unbegrenzt; Einzug per SEPA-Lastschrift vom Referenzkonto. Laufzeit nur 12 Monate im Aktionszeitraum.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "hypo-vorarlberg-bank",
+   "bank_slug": "hypo-vorarlberg"
   },
   {
    "id": "hypo-vorarlberg-kapitalkonto-at",
@@ -2880,7 +2952,9 @@
    "status": "ok",
    "hinweis": "Online-Abschluss (Unterlagen per Post) für Volljährige mit Wohnsitz in AT, DE, LI oder CH; nach Ablauf gelten Tagesgeld-Konditionen. Aufstockung/Verlängerung während der Laufzeit nicht möglich.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "hypo-vorarlberg-bank",
+   "bank_slug": "hypo-vorarlberg"
   },
   {
    "id": "ibl-banca-festgeld-at-raisin",
@@ -2962,7 +3036,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "ibl-banca",
+   "bank_slug": "ibl-banca"
   },
   {
    "id": "inbank-festgeld-at-raisin",
@@ -3044,7 +3120,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "inbank",
+   "bank_slug": "inbank"
   },
   {
    "id": "investitionsbank-trentino-suedtirol-festgeld-at-raisin",
@@ -3138,7 +3216,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "investitionsbank-trentino-suedtirol-mediocredito-trentino-alto-adige",
+   "bank_slug": "investitionsbank-trentino-suedtirol"
   },
   {
    "id": "klarna-festgeld-plus-at",
@@ -3232,7 +3312,9 @@
    "sek": [
     "steuer_auto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "klarna-bank",
+   "bank_slug": "klarna"
   },
   {
    "id": "kommunalkredit-invest-festgeld-at",
@@ -3372,7 +3454,9 @@
    "status": "ok",
    "hinweis": "Zins hängt vom Betrag ab (ab 10.000 € höherer Satz). Keine Mindestanlage; max. 500.000 € pro Kunde über alle Einlagekonten. Keine automatische Prolongation, Erinnerung 30 Tage vor Ablauf.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "kommunalkredit-austria",
+   "bank_slug": "kommunalkredit-invest"
   },
   {
    "id": "lhv-pank-festgeld-at-raisin",
@@ -3430,7 +3514,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "lhv-pank",
+   "bank_slug": "lhv-pank"
   },
   {
    "id": "lidion-bank-festgeld-at-pickthebank",
@@ -3528,7 +3614,9 @@
    "status": "ok",
    "hinweis": "Auch USD- und GBP-Festgelder verfügbar (nicht erfasst). Die Bankseite nennt für 3 Monate abweichend 2,50 % statt 2,42 %.",
    "sek": [],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "lidion-bank",
+   "bank_slug": "lidion-bank"
   },
   {
    "id": "porsche-bank-sparen-fix-at",
@@ -3596,7 +3684,9 @@
    "status": "ok",
    "hinweis": "Nur volljährige Privatpersonen mit Hauptwohnsitz in Österreich, nur Einzelkonto. Höchsteinlage 1 Mio. € pro Kunde (Flex und Fix zusammen).",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "porsche-bank",
+   "bank_slug": "porsche-bank"
   },
   {
    "id": "renault-bank-direkt-festgeld-at",
@@ -3670,7 +3760,9 @@
    "status": "ok",
    "hinweis": "Festgeld wird aus dem Tagesgeldkonto angelegt; Verlängerung kann ab 30 Tagen vor Ablauf im E-Banking eingestellt werden. Zinsberechnung 30/360.",
    "sek": [],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "rci-banque",
+   "bank_slug": "renault-bank-direkt"
   },
   {
    "id": "rietumu-banka-festgeld-at-raisin",
@@ -3728,7 +3820,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "rietumu-bank",
+   "bank_slug": "rietumu-banka"
   },
   {
    "id": "santander-bestfix-at",
@@ -3814,7 +3908,9 @@
    "status": "ok",
    "hinweis": "Keine Eröffnung in Filialen; Abschluss im Online-Banking mit Freigabe über die OK Santander Secure App.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "santander-consumer-bank",
+   "bank_slug": "santander-consumer-bank"
   },
   {
    "id": "urbo-bankas-flexgeld-at-raisin",
@@ -3890,7 +3986,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "urbo-bankas",
+   "bank_slug": "urbo-bankas"
   },
   {
    "id": "wuestenrot-fix-festgeldkonto-at",
@@ -3982,7 +4080,9 @@
    "status": "ok",
    "hinweis": "Einmalerlag ab 1.000 €, ab 18 Jahren; Sparbetrag muss binnen 30 Bankwerktagen auf dem FLEX Sparkonto eingehen. Zinsen auf der Webseite ohne Datumsangabe.",
    "sek": [],
-   "gruppe": "AT_A"
+   "gruppe": "AT_A",
+   "bank_key": "wuestenrot-bank",
+   "bank_slug": "wuestenrot"
   },
   {
    "id": "younited-festgeld-at-raisin",
@@ -4064,7 +4164,9 @@
    "sek": [
     "gemeinschaftskonto"
    ],
-   "gruppe": "AT_B"
+   "gruppe": "AT_B",
+   "bank_key": "younited-credit",
+   "bank_slug": "younited"
   }
  ],
  "nicht_aufgenommen": [
