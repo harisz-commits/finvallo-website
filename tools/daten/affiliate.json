@@ -1,0 +1,70 @@
+{
+ "hinweis": "Partnerlinks (Affiliate). Schlüssel: Slug der Produktseite (kreditkarten, girokonto), bank_slug (festgeld, gilt nur für Direktangebote und die Bankseite, Angebote über Raisin oder CHECK24 behalten den Plattformlink) oder Anbieterkürzel p (anbieter). Nur Produkte eintragen, die es im Vergleich gibt; check.py meldet Schlüssel ohne Seite. Der Generator setzt rel=sponsored und den Stern am Button, Bewertung und Reihenfolge bleiben davon unberührt.",
+ "at": {
+  "kreditkarten": {
+   "n26-standard": "https://c.neqty.net/trck/eclick/695a01d5a57bd43acfd92b8abd31d983",
+   "n26-smart": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a683ee107e88469b1",
+   "n26-go": "https://c.neqty.net/trck/eclick/695a01d5a57bd43aa050f94a4c8341a8",
+   "n26-metal": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a408e25ed8f74c3a5",
+   "n26-business-metal": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a1ad511932524bd30",
+   "trade-republic-karte": "https://c.neqty.net/trck/eclick/51ea4e703ea075ad5a12de5ca9544f6a"
+  },
+  "girokonto": {
+   "anadi-online-girokonto": "https://c.neqty.net/trck/eclick/9e42d4ccc4079a074a7f89f4798043f0",
+   "anadi-online-gehalts-pensionskonto": "https://c.neqty.net/trck/eclick/4dd015113ff823c1c4b247137c4d4a40",
+   "dkb-girokonto": "https://c.neqty.net/trck/eclick/7e9e10c7c96c8815da8e0aeeaa31d39b",
+   "n26-standard": "https://c.neqty.net/trck/eclick/695a01d5a57bd43acfd92b8abd31d983",
+   "n26-smart": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a683ee107e88469b1",
+   "n26-go": "https://c.neqty.net/trck/eclick/695a01d5a57bd43aa050f94a4c8341a8",
+   "n26-metal": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a408e25ed8f74c3a5",
+   "trade-republic-girokonto": "https://c.neqty.net/trck/eclick/51ea4e703ea075ad0b600c1e9a3cb64e"
+  },
+  "festgeld": {
+   "austrian-anadi-bank": "https://c.neqty.net/trck/eclick/424e3d8267b09f8102c5819a4ae019d5",
+   "denizbank": "https://c.neqty.net/trck/eclick/4d977cc96c6d65a578d23e35bb149da5"
+  },
+  "anbieter": {
+   "n26": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a0cc681ddc6f22eec"
+  }
+ },
+ "de": {
+  "kreditkarten": {
+   "awa7-visa-kreditkarte": "https://c.neqty.net/trck/eclick/93b63fef6a020c658b5947534cc86dfd",
+   "dkb-visa-kreditkarte": "https://c.neqty.net/trck/eclick/40b41f1058bce3bcc3bde6472c9532ee",
+   "dkb-visa-debitkarte": "https://c.neqty.net/trck/eclick/40b41f1058bce3bc016ad28587768a41",
+   "n26-standard": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a78dc20221c81ec1a",
+   "n26-smart": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a479201db617f8385",
+   "n26-go": "https://c.neqty.net/trck/eclick/695a01d5a57bd43aa4342c7a07819346",
+   "n26-metal": "https://c.neqty.net/trck/eclick/695a01d5a57bd43adaffd89e64feb151",
+   "n26-business-standard": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a55de16604d7685e6",
+   "n26-business-smart": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a2e7a600ff61870e0",
+   "n26-business-go": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a3568fa4ed92c2757",
+   "n26-business-metal": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a96ab2b25cbc0af48",
+   "trade-republic-karte": "https://c.neqty.net/trck/eclick/51ea4e703ea075ad547267d521f8a034"
+  },
+  "girokonto": {
+   "dkb-girokonto": "https://c.neqty.net/trck/eclick/40b41f1058bce3bc7887b6557d075d2a",
+   "dkb-girokonto-u18": "https://c.neqty.net/trck/eclick/40b41f1058bce3bc89bafe53a12739e3",
+   "n26-standard": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a78dc20221c81ec1a",
+   "n26-smart": "https://c.neqty.net/trck/eclick/695a01d5a57bd43a479201db617f8385",
+   "n26-go": "https://c.neqty.net/trck/eclick/695a01d5a57bd43aa4342c7a07819346",
+   "n26-metal": "https://c.neqty.net/trck/eclick/695a01d5a57bd43adaffd89e64feb151",
+   "trade-republic-girokonto": "https://c.neqty.net/trck/eclick/51ea4e703ea075ad66648945c0afaa92",
+   "bbbank-girokonto": "https://c.neqty.net/trck/eclick/3199381de21fdcf979dc51423feb3a78300b896ad1ac587b",
+   "bbbank-bettersmart-konto": "https://c.neqty.net/trck/eclick/3199381de21fdcf979dc51423feb3a78300b896ad1ac587b",
+   "bbbank-junges-girokonto": "https://c.neqty.net/trck/eclick/3199381de21fdcf979dc51423feb3a78300b896ad1ac587b",
+   "bbbank-junges-girokonto-18-29": "https://c.neqty.net/trck/eclick/3199381de21fdcf979dc51423feb3a78300b896ad1ac587b"
+  },
+  "festgeld": {
+   "dkb": "https://c.neqty.net/trck/eclick/40b41f1058bce3bc6735754fa1eb8906",
+   "denizbank": "https://c.neqty.net/trck/eclick/4d977cc96c6d65a578d23e35bb149da5",
+   "jundt-direktbank": "https://c.neqty.net/trck/eclick/2e4ab0a8285b0cacb1532194babfdcb2",
+   "ikb-deutsche-industriebank": "https://c.neqty.net/trck/eclick/9ac4421b65abb4534de7a8b2373394e8",
+   "pbb-direkt": "https://c.neqty.net/trck/eclick/fce9e013a7617da1dd5041148e8d9f03"
+  },
+  "anbieter": {
+   "dkb": "https://c.neqty.net/trck/eclick/40b41f1058bce3bc54308bee64dc0f29",
+   "n26": "https://c.neqty.net/trck/eclick/695a01d5a57bd43ac707c494bdb98510"
+  }
+ }
+}
