@@ -33,7 +33,7 @@ anadi-bank-online-festgeld-at;Austrian Anadi Bank;Online-Festgeld;direkt;AT;3;2.
 anadi-bank-online-festgeld-at;Austrian Anadi Bank;Online-Festgeld;direkt;AT;6;2.45;;;1000;500000;jaehrlich;True;True;nein;wahlweise;False;2026-10-27;2026-10-27;https://anadibank.com/online-festgeld
 anadi-bank-online-festgeld-at;Austrian Anadi Bank;Online-Festgeld;direkt;AT;12;2.75;;;1000;500000;jaehrlich;True;True;nein;wahlweise;False;2026-10-27;2026-10-27;https://anadibank.com/online-festgeld
 anadi-bank-online-festgeld-at;Austrian Anadi Bank;Online-Festgeld;direkt;AT;24;2.8;;;1000;500000;jaehrlich;True;True;nein;wahlweise;False;2026-10-27;2026-10-27;https://anadibank.com/online-festgeld
-avida-bank-festgeld-at-raisin;Avida Bank;Festgeld;Raisin;SE;6;1;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/avida-finans-ab/
+avida-bank-festgeld-at-raisin;Avida Bank;Festgeld;Raisin;SE;6;1;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/avida-finans-ab/
 banca-investis-festgeld-at-raisin;Banca Investis;Festgeld;Raisin;IT;3;2.55;;;50000;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/banca-investis/
 banca-investis-festgeld-at-raisin;Banca Investis;Festgeld;Raisin;IT;6;2.86;;;50000;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/banca-investis/
 banca-investis-festgeld-at-raisin;Banca Investis;Festgeld;Raisin;IT;9;2.86;;;50000;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/banca-investis/
@@ -66,11 +66,11 @@ banco-bni-europa-festgeld-at-raisin;Banco BNI Europa;Festgeld;Raisin;PT;60;1.92;
 bank-austria-sparkonto-fix-at;Bank Austria;Sparkonto fix;direkt;AT;6;2.0;;;500;;endfaellig;;True;ja_mit_abschlag;keine;False;2026-10-27;2026-10-27;https://www.bankaustria.at/sparen-sparkonto.jsp
 bank-austria-sparkonto-fix-at;Bank Austria;Sparkonto fix;direkt;AT;12;2.7;;;500;;endfaellig;;True;ja_mit_abschlag;keine;False;2026-10-27;2026-10-27;https://www.bankaustria.at/sparen-sparkonto.jsp
 bank-austria-sparkonto-fix-at;Bank Austria;Sparkonto fix;direkt;AT;24;2.2;;;500;;endfaellig;;True;ja_mit_abschlag;keine;False;2026-10-27;2026-10-27;https://www.bankaustria.at/sparen-sparkonto.jsp
-bank-dimare-festgeld-at-raisin;Bank DiMare;Festgeld;Raisin;MT;6;2.85;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/bank-dimare-limited/
-bank-dimare-festgeld-at-raisin;Bank DiMare;Festgeld;Raisin;MT;12;2.85;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/bank-dimare-limited/
-bank-dimare-festgeld-at-raisin;Bank DiMare;Festgeld;Raisin;MT;18;2.95;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/bank-dimare-limited/
-bank-dimare-festgeld-at-raisin;Bank DiMare;Festgeld;Raisin;MT;24;3.11;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/bank-dimare-limited/
-bank-dimare-festgeld-at-raisin;Bank DiMare;Festgeld;Raisin;MT;36;3.15;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/bank-dimare-limited/
+bank-dimare-festgeld-at-raisin;Bank DiMare;Festgeld;Raisin;MT;6;2.85;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/bank-dimare-limited/
+bank-dimare-festgeld-at-raisin;Bank DiMare;Festgeld;Raisin;MT;12;2.85;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/bank-dimare-limited/
+bank-dimare-festgeld-at-raisin;Bank DiMare;Festgeld;Raisin;MT;18;2.95;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/bank-dimare-limited/
+bank-dimare-festgeld-at-raisin;Bank DiMare;Festgeld;Raisin;MT;24;3.11;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/bank-dimare-limited/
+bank-dimare-festgeld-at-raisin;Bank DiMare;Festgeld;Raisin;MT;36;3.15;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/bank-dimare-limited/
 bank-direkt-fixzinskonto-at;Bank Direkt;Fixzinskonto;direkt;AT;6;2.5;;;1000;500000;jaehrlich;True;True;ja_mit_abschlag;wahlweise;False;2026-10-27;2026-10-27;https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto.html
 bank-direkt-fixzinskonto-at;Bank Direkt;Fixzinskonto;direkt;AT;12;2.85;;;1000;500000;jaehrlich;True;True;ja_mit_abschlag;wahlweise;False;2026-10-27;2026-10-27;https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto.html
 bank-direkt-fixzinskonto-at;Bank Direkt;Fixzinskonto;direkt;AT;24;3.0;;;1000;500000;jaehrlich;True;True;ja_mit_abschlag;wahlweise;False;2026-10-27;2026-10-27;https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto.html
@@ -97,11 +97,11 @@ bawag-sparbox-fix-at;BAWAG;SparBox Fix;direkt;AT;60;2.1;;;100;1000000;endfaellig
 bawag-sparbox-fix-at;BAWAG;SparBox Fix;direkt;AT;84;2.15;;;100;1000000;endfaellig;;True;nein;keine;False;2026-10-14;2026-10-27;https://www.bawag.at/resource/blob/20504/54b6ae29551cfccdfaa096ef15d2f8fa/konditionen-sparbox-fix-data.pdf
 bks-bank-mein-geld-konto-fix-at;BKS Bank;Mein Geld-Konto fix;direkt;AT;12;2.75;;;1000;5000000;endfaellig;;True;ja_mit_abschlag;keine;False;2026-10-27;2026-10-27;https://www.bks.at/privatkunden/sparen/mein-geld-konto-fix
 bks-bank-mein-geld-konto-fix-at;BKS Bank;Mein Geld-Konto fix;direkt;AT;18;2.85;;;1000;5000000;endfaellig;;True;ja_mit_abschlag;keine;False;2026-10-27;2026-10-27;https://www.bks.at/privatkunden/sparen/mein-geld-konto-fix
-bluor-bank-festgeld-at-raisin;BluOr Bank;Festgeld;Raisin;LV;6;2.85;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/blu-or-bank-as/
-bluor-bank-festgeld-at-raisin;BluOr Bank;Festgeld;Raisin;LV;9;2.9;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/blu-or-bank-as/
-bluor-bank-festgeld-at-raisin;BluOr Bank;Festgeld;Raisin;LV;12;3.2;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/blu-or-bank-as/
-bluor-bank-festgeld-at-raisin;BluOr Bank;Festgeld;Raisin;LV;24;3.35;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/blu-or-bank-as/
-bluor-bank-festgeld-at-raisin;BluOr Bank;Festgeld;Raisin;LV;36;2;;;1;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/blu-or-bank-as/
+bluor-bank-festgeld-at-raisin;BluOr Bank;Festgeld;Raisin;LV;6;2.85;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/blu-or-bank-as/
+bluor-bank-festgeld-at-raisin;BluOr Bank;Festgeld;Raisin;LV;9;2.9;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/blu-or-bank-as/
+bluor-bank-festgeld-at-raisin;BluOr Bank;Festgeld;Raisin;LV;12;3.2;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/blu-or-bank-as/
+bluor-bank-festgeld-at-raisin;BluOr Bank;Festgeld;Raisin;LV;24;3.35;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/blu-or-bank-as/
+bluor-bank-festgeld-at-raisin;BluOr Bank;Festgeld;Raisin;LV;36;2;;;;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/blu-or-bank-as/
 btg-pactual-festgeld-at-raisin;BTG Pactual;Festgeld;Raisin;LU;3;1.6;;;5000;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/btg-pactual/
 btg-pactual-festgeld-at-raisin;BTG Pactual;Festgeld;Raisin;LU;6;1.6;;;5000;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/btg-pactual/
 btg-pactual-festgeld-at-raisin;BTG Pactual;Festgeld;Raisin;LU;9;1.6;;;5000;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/btg-pactual/
@@ -175,12 +175,12 @@ hamburg-commercial-bank-festgeld-at-raisin;Hamburg Commercial Bank;Festgeld;Rais
 hamburg-commercial-bank-festgeld-at-raisin;Hamburg Commercial Bank;Festgeld;Raisin;DE;36;3.35;;;5000;100000;jaehrlich;False;False;nein;keine;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hamburg-commercial-bank/
 hamburg-commercial-bank-festgeld-at-raisin;Hamburg Commercial Bank;Festgeld;Raisin;DE;48;3.37;;;5000;100000;jaehrlich;False;False;nein;keine;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hamburg-commercial-bank/
 hamburg-commercial-bank-festgeld-at-raisin;Hamburg Commercial Bank;Festgeld;Raisin;DE;60;3.4;;;5000;100000;jaehrlich;False;False;nein;keine;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hamburg-commercial-bank/
-hoist-finance-festgeld-at-raisin;Hoist Finance (HoistSpar);Festgeld;Raisin;SE;3;1;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
-hoist-finance-festgeld-at-raisin;Hoist Finance (HoistSpar);Festgeld;Raisin;SE;6;1;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
-hoist-finance-festgeld-at-raisin;Hoist Finance (HoistSpar);Festgeld;Raisin;SE;12;1;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
-hoist-finance-festgeld-at-raisin;Hoist Finance (HoistSpar);Festgeld;Raisin;SE;24;1.8;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
-hoist-finance-festgeld-at-raisin;Hoist Finance (HoistSpar);Festgeld;Raisin;SE;48;2.4;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
-hoist-finance-festgeld-at-raisin;Hoist Finance (HoistSpar);Festgeld;Raisin;SE;60;2.4;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
+hoist-finance-festgeld-at-raisin;HoistSpar;Festgeld;Raisin;SE;3;1;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
+hoist-finance-festgeld-at-raisin;HoistSpar;Festgeld;Raisin;SE;6;1;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
+hoist-finance-festgeld-at-raisin;HoistSpar;Festgeld;Raisin;SE;12;1;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
+hoist-finance-festgeld-at-raisin;HoistSpar;Festgeld;Raisin;SE;24;1.8;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
+hoist-finance-festgeld-at-raisin;HoistSpar;Festgeld;Raisin;SE;48;2.4;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
+hoist-finance-festgeld-at-raisin;HoistSpar;Festgeld;Raisin;SE;60;2.4;;;1000;90000;jaehrlich;True;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/hoist-spar/
 holm-bank-festgeld-at-raisin;Holm Bank;Festgeld;Raisin;EE;6;2;;;5000;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/holm-bank-as/
 holm-bank-festgeld-at-raisin;Holm Bank;Festgeld;Raisin;EE;12;3;;;5000;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/holm-bank-as/
 holm-bank-festgeld-at-raisin;Holm Bank;Festgeld;Raisin;EE;24;3.33;;;5000;100000;endfaellig;False;False;nein;automatisch;False;2026-10-27;2026-10-27;https://www.raisin.com/de-at/bank/holm-bank-as/

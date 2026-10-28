@@ -90,6 +90,7 @@ def plattN(a):
     return {'Check24':'CHECK24'}.get(v,v)
 def vtT(a): return 'direkt bei der Bank' if not plattform(a) else f'über {plattN(a)}'
 def vtK(a): return 'direkt' if not plattform(a) else plattN(a)
+def vtS(a): return vtK(a).replace('ZinsMarkt der Deutschen Bank','ZinsMarkt Deutsche Bank')
 def zzT(a): return ZZT.get(a.get('zinszahlung'),'keine Angabe')
 def kdT(a): return {'nein':'nicht möglich','ja':'möglich','ja_mit_abschlag':'möglich, mit Abschlag'}.get(a.get('kuendigung'),'keine Angabe')
 def vlT(a): return {'automatisch':'verlängert sich automatisch','keine':'Geld wird ausgezahlt','wahlweise':'Verlängerung wählbar'}.get(a.get('verlaengerung'),'keine Angabe')
@@ -342,9 +343,6 @@ def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
     elif sub: lede=sub['d']
     else: lede=f'{n} Festgeld-Angebote von {nb} Banken, die Kundinnen und Kunden aus {N} annehmen. Wähle Betrag und Laufzeit, filtere nach Einlagensicherung, Länderrating und Zinszahlung. Jede Zahl stammt von der Konditionsseite der Bank oder der Plattform. Provisionen haben keinen Einfluss auf die Reihenfolge.'
     nav=up if lzslug else None
-    raus=d.get('nicht_aufgenommen') or []
-    fehlt='' if (lzslug or sub) else f'''<h2>Welche Banken fehlen und warum?</h2><div class="prose"><p>Wir nehmen nur Angebote auf, die man von überall in {N} abschließen kann und deren Einlagen über eine gesetzliche Einlagensicherung in der EU geschützt sind. Regionale Banken, die nur Kundschaft aus ihrer Region nehmen, fehlen. {len(raus)} geprüfte Angebote haben wir nicht aufgenommen, etwa weil es kein Neugeschäft gibt oder die Bank keine überprüfbaren Konditionen veröffentlicht.</p>
-<details><summary>Liste ansehen</summary><ul>{"".join(f"<li><b>{E(x['name'])}</b>: {E(x['grund'])}</li>" for x in raus)}</ul></details></div>'''
     nb_lz=''
     if lzslug:
         ms=[x for x,_,_ in LZ if x in LZ_SEITEN]; i=ms.index(m)
@@ -370,7 +368,6 @@ def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
   <p><b>Sicherheit:</b> {E(CC["sich"])}</p><p><b>Steuern:</b> {E(CC["steuer"])} Was nach Steuern bleibt, rechnest du mit dem {steuerlink(P)} aus, wie dein Geld über viele Jahre wächst, mit dem {zinslink(P)}.</p>
   <p><b>Konto für die Auszahlung:</b> Die Zinsen und am Ende das Geld gehen auf ein Referenzkonto. Ein passendes, günstiges Konto findest du im <a href="{P}{LAND}/girokonto/">Girokonto-Vergleich</a>.</p></div>
   {"" if lzslug else "<h2>Zinsen nach Laufzeit</h2>"+zinskurve(xs,P)}
-  {fehlt}
   <h2>Fragen und Antworten</h2>{faqhtml(fq)}
   {"" if (lzslug or sub) else f'<p class="note" style="margin-top:18px">Die Daten gibt es offen als <a class="lnk" href="../daten/festgeld.json">JSON</a> und <a class="lnk" href="../daten/festgeld.csv">CSV</a>, frei nutzbar mit Quellenangabe.</p>'}
 </main>
@@ -435,8 +432,8 @@ def bank_pages(xs):
         mehr=''
         if gl: mehr+=f'<p class="note">Girokonten von {E(a["bank"])} im Vergleich: '+', '.join(f'<a class="lnk" href="{P}{LAND}/girokonto/{s}/">{E(n)}</a>' for s,n in gl)+'</p>'
         if ar: mehr+=f'<p class="note"><a class="lnk" href="{P}{ar}">Kreditkarten von {E(a["bank"])} →</a></p>'
-        fq=[(f'Wo bekomme ich bei {a["bank"]} den höchsten Festgeldzins?',f'Den höchsten Zins zahlt {a["bank"]} aktuell {vtT(max(ys,key=topzins))}: bis {pct(tz)} pro Jahr. Die Tabelle oben zeigt alle Wege nebeneinander. Stand: {st}.'),
-            (f'Wie sicher ist Festgeld bei {a["bank"]}?',f'Die Einlagen sind über die {sichT(a)} geschützt'+(f', Länderrating {landN(a)} (S&P) {rating(a)}.' if rating(a) else '.')+' Das gilt unabhängig davon, über welchen Weg du abschließt, weil das Geld immer bei dieser Bank liegt.')]
+        fq=[(f'Wo bekomme ich bei {a["bank"]} den höchsten Festgeldzins?',f'Für Kundinnen und Kunden in {N} zahlt {a["bank"]} den höchsten Zins aktuell {vtT(max(ys,key=topzins))}: bis {pct(tz)} pro Jahr. Die Tabelle oben zeigt alle Wege nebeneinander. Stand: {st}.'),
+            (f'Wie sicher ist Festgeld bei {a["bank"]}?',f'Einlagen bei {a["bank"]} ({a.get("institut") or a["bank"]}) sind über die {sichT(a)} geschützt'+(f', Länderrating {landN(a)} (S&P) {rating(a)}.' if rating(a) else '.')+' Das gilt unabhängig davon, über welchen Weg du abschließt, weil das Geld immer bei dieser Bank liegt.')]
         ld=K.graph(rel,t,d,[(N,f'{LAND}/'),('Festgeld',f'{LAND}/festgeld/'),('Banken',base),(a['bank'],rel)],[{"@type":"BankOrCreditUnion","@id":f"https://finvallo.com/{rel}#bank","name":a.get('institut') or a['bank'],"url":f"https://finvallo.com/{rel}"},faqld(fq)],date=max(y['geprueft'] for y in ys))
         K.write(rel,head(t,d,rel,P,ld)+f'''{hdr(P,rel)}
 <div class="wrap"><main id="app">
@@ -457,11 +454,11 @@ def bank_pages(xs):
 def offer_page(a,xs):
     rel=f'{LAND}/festgeld/{a["slug"]}/'; P='../../../'; N=CC['N']
     tz=topzins(a); lzs=laufzeiten(a)
-    vs='' if not plattform(a) else ' über '+plattN(a).replace('ZinsMarkt der Deutschen Bank','ZinsMarkt Deutsche Bank')
+    vs='' if not plattform(a) else ' über '+vtS(a)
     t=f'{titel(a)}{vs}: Zinsen {N} | Finvallo'
     if len(t)>62: t=f'{titel(a)}{vs} ({CC["code"]}) | Finvallo'
     if len(t)>62: t=f'{a["bank"]} Festgeld{vs} ({CC["code"]}) | Finvallo'
-    if len(t)>62: t=f'{a["bank"]} Festgeld ({CC["code"]}) | Finvallo'
+    if len(t)>66: t=f'{a["bank"]} Festgeld {vtS(a)} {CC["code"]} | Finvallo'
     anl=anlT(a)
     d=f'{titel(a)} {vtT(a)}: bis {pct(tz)} Zinsen, Laufzeit {lzspan(a)}'+(f', Anlage {anl}' if anl else '')+f'. Einlagensicherung {landN(a)}, Zinsen {zzT(a)}, Stand {dmy(a.get("stand") or a["geprueft"])}.'
     d=K.fit_desc(d) if hasattr(K,'fit_desc') else d[:155]
@@ -474,7 +471,7 @@ def offer_page(a,xs):
         ('Kann ich vorzeitig an mein Geld?',f'Bei {nm}: '+kurz((a.get('kuendigung_text') or kdT(a)).rstrip('.'))+'.')]
     if plattform(a): fq.append((f'Wie schließe ich das Festgeld ab?',f'In {N} schließt du {titel(a)} {vtT(a)} ab. '+(f'Dafür brauchst du: {a["konto_noetig"]}.' if a.get('konto_noetig') else 'Das Konto dort ist kostenlos.' if (a.get('kosten') or '').startswith('kostenlos') else '')))
     gs=geschwister(a,xs)
-    if gs: fq.append((f'Gibt es {a["bank"]} Festgeld auch auf anderen Wegen?','Ja: '+'; '.join(f'{vtT(g)} bis {pct(topzins(g))}' for g in gs)+'. Das Geld liegt in jedem Fall bei derselben Bank, die Einlagensicherung ist dieselbe; Zinsen, Mindestanlage und Steuerabzug können sich unterscheiden.'))
+    if gs: fq.append((f'Gibt es {a["bank"]} Festgeld auch auf anderen Wegen?',f'Ja, neben {titel(a)} ({vtT(a)}) gibt es '+'; '.join(f'{titel(g)} {vtT(g)} bis {pct(topzins(g))}' for g in gs)+f'. Das Geld liegt in jedem Fall bei {a.get("institut") or a["bank"]}, die Einlagensicherung ist dieselbe; Zinsen, Mindestanlage und Steuerabzug können sich unterscheiden.'))
     amt={"@type":"MonetaryAmount","currency":"EUR"}
     if a.get('min_anlage') is not None: amt["minValue"]=a['min_anlage']
     if a.get('max_anlage') is not None: amt["maxValue"]=a['max_anlage']
@@ -564,7 +561,7 @@ def methodik_page(xs):
 <div class="tbl wide"><table><thead><tr><th>Land</th><th>Einlagensicherung</th><th>Rating (S&amp;P)</th><th>Angebote</th></tr></thead><tbody>{lrows}</tbody></table></div>
 <h2>Steuern</h2><div class="prose"><p>{E(CC["steuer"])}</p></div>
 <h2>Woher die Daten kommen</h2><div class="prose"><p>Jede Zahl stammt von der Konditionsseite, dem Preisaushang oder dem Informationsbogen der Bank oder von der Produktseite der Plattform, über die du abschließt. Bei jedem Angebot stehen Quelle und Prüfdatum. Laufzeiten, die eine Plattform nur mit einem Platzhalterzins unter 0,3 % führt, lassen wir weg. Zinsen ändern sich oft; prüfe die Konditionen vor dem Abschluss beim Anbieter. Die Daten gibt es offen als <a class="lnk" href="../../daten/festgeld.json">JSON</a> und <a class="lnk" href="../../daten/festgeld.csv">CSV</a>.</p></div>
-<h2>Wer nicht im Vergleich ist</h2><div class="prose"><p>Regionale Banken, die nur Kundschaft aus ihrer Region nehmen, Angebote ohne gesetzliche Einlagensicherung in der EU, Produkte mit schwankendem Zins (etwa Zuwachssparen) und Angebote, deren Konditionen wir nicht aus erster Hand prüfen konnten, nehmen wir nicht auf. Die Liste steht im <a href="../">Festgeld-Vergleich</a> unter „Welche Banken fehlen“.</p></div>
+<h2>Was in den Vergleich kommt</h2><div class="prose"><p>Festgeld, Sparbriefe und Termineinlagen mit festem Zins, die man von überall im Land abschließen kann und deren Einlagen über eine gesetzliche Einlagensicherung in der EU geschützt sind. Regionale Angebote, Produkte mit schwankendem Zins (etwa Zuwachssparen) und Angebote, deren Konditionen wir nicht aus erster Hand prüfen konnten, nehmen wir nicht auf.</p></div>
 <h2>Fragen und Antworten</h2>{faqhtml(fq)}
 <p><a class="lnk" href="../">← Zum Festgeld-Vergleich</a> · {zinslink(P)} · {steuerlink(P)}</p>
 </main>

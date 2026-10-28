@@ -15,24 +15,28 @@ GRUND={'Bank11direkt':'Website bei der Prüfung nicht erreichbar, keine Konditio
        'Hello bank! (BNP Paribas S.A. Niederlassung Österreich)':'Kein Festgeld-Angebot gefunden.',
        'durchblicker.at (Sparzinsen)':'Vergleichsportal ohne eigenen Abschluss.',
        'My Money Bank':'Festgeld nur über Raisin, dort im Vergleich.'}
-# Bankschlüssel: dieselbe Bank auf mehreren Wegen (direkt, Raisin, CHECK24, ZinsMarkt) bekommt denselben Schlüssel und Anzeigenamen
-ALIAS={'ca-savings':'ca-consumer-finance','credit-agricole-savings':'ca-consumer-finance','pbb-direkt':'deutsche-pfandbriefbank','olb-bank':'olb','urbo':'urbo-bankas',
-       'embank':'european-merchant-bank','rietumu-banka':'rietumu-bank','ca-auto-bank-s-p-a-niederlassung-deutschland':'ca-auto-bank','postbank':'postbank'}
-RECHT=r'\b(ag|gmbh|plc|p\.l\.c\.?|s\.?a\.?|s\.?p\.?a\.?|a\.?s\.?|ab|as|uab|ead|publ|eg|n\.?v\.?|jsc|sucursal en españa|zweigniederlassung.*|niederlassung.*|branch.*|\(.*?\))\b'
+# Bankschlüssel: dieselbe Marke auf mehreren Wegen (direkt, Raisin, CHECK24, ZinsMarkt) bekommt denselben Schlüssel und Anzeigenamen.
+# Grundlage ist der Markenname (nicht die Rechtsperson): easybank bleibt getrennt von BAWAG, Postbank von der Deutschen Bank.
+ALIAS={'ca-savings':'credit-agricole','credit-agricole-savings':'credit-agricole','credit-agricole-personal-finance-und-mobility':'credit-agricole',
+       'deutsche-pfandbriefbank':'pbb-direkt','olb-bank':'olb','urbo':'urbo-bankas','embank':'european-merchant-bank','rietumu-banka':'rietumu-bank',
+       'klarna-bank':'klarna','avarda-bank':'tf-bank','hoist-finance-hoistspar':'hoistspar','openbank-santander':'openbank','blueorange-bank':'bluor-bank',
+       'morgan-stanley-europe':'morgan-stanley','morgan-stanley-bank':'morgan-stanley','vakifbank':'vakifbank-international','isbank':'isbank'}
+ANZEIGE={'credit-agricole':'Crédit Agricole','pbb-direkt':'pbb direkt','tf-bank':'TF Bank','klarna':'Klarna','hoistspar':'HoistSpar','openbank':'Openbank'}
+RECHT=r'\s*,?\s*\b(ag|gmbh|plc|p\.l\.c\.?|s\.?a\.?|s\.?p\.?a\.?|a\.?s\.?|ab|as|asa|ad|uab|ead|publ|eg|n\.?v\.?|jsc|limited|ltd\.?|d\.d\.|sucursal en españa|zweigniederlassung.*|niederlassung.*|branch.*|\(.*?\))\b'
+def kurzname(n):
+    n=n.strip().rstrip(',').strip()
+    n=re.sub(r'\s*,?\s*(S\.?A\.?,?\s*)?(Sucursal en España|Zweigniederlassung.*|Niederlassung.*|Branch.*)$','',n,flags=re.I).strip()
+    n=re.sub(r'^(AB|AS|UAB|JSC)\s+','',n)
+    for _ in range(2): n=re.sub(r'\s*,?\s+(AG|GmbH|plc|Plc|p\.l\.c\.?|S\.?A\.?|S\.?p\.?A\.?|A\.?S\.?|AB|AS|ASA|AD|EAD|UAB|eG|N\.?V\.?|Limited|Ltd\.?|d\.d\.)(\s*\(publ\))?\s*$','',n).strip().rstrip(',')
+    return n
 def bank_key(a):
-    if a.get('bank','').lower().startswith('postbank'): return 'postbank'
-    s=(a.get('institut') or a['bank']).lower().replace('“','').replace('”','').replace('"','')
-    s=re.sub(RECHT,'',s); k=slug(s)
+    k=slug(kurzname(a['bank']).replace('é','e').replace('ı','i').replace('İ','i').replace('ş','s'))
     return ALIAS.get(k,k)
 def bank_kurz(xs):
-    """kürzester Markenname je Schlüssel, ohne Rechtsform"""
+    """Anzeigename je Schlüssel: Vorgabe aus ANZEIGE, sonst der kürzeste Markenname ohne Rechtsform"""
     out={}
     for a in xs:
-        n=a['bank'].strip().rstrip(',').strip()
-        n=re.sub(r'\s*,?\s*(S\.?A\.?,?\s*)?(Sucursal en España|Zweigniederlassung.*|Niederlassung.*|Branch.*)$','',n,flags=re.I).strip()
-        n=re.sub(r'^(AB|AS|UAB|JSC)\s+','',n)
-        for _ in range(2): n=re.sub(r'\s*,?\s+(AG|GmbH|plc|Plc|p\.l\.c\.?|S\.?A\.?|S\.?p\.?A\.?|A\.?S\.?|AB|AS|ASA|AD|EAD|UAB|eG|N\.?V\.?|Limited|Ltd\.?|d\.d\.)(\s*\(publ\))?\s*$','',n).strip().rstrip(',')
-        k=a['bank_key']
+        k=a['bank_key']; n=ANZEIGE.get(k) or kurzname(a['bank'])
         if k not in out or len(n)<len(out[k]): out[k]=n
     return out
 MIN_ZINS=0.3   # Zinsstufen darunter sind Platzhalter der Plattform für geschlossene Laufzeiten
@@ -50,7 +54,7 @@ ZZ={'jaehrlich','endfaellig','monatlich','quartalsweise','halbjaehrlich','wahlwe
 KD={'nein','ja','ja_mit_abschlag'}; VL={'automatisch','keine','wahlweise'}
 
 def slug(s):
-    s=s.lower().replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss').replace('&','und')
+    s=s.lower().replace('é','e').replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','ss').replace('&','und')
     return re.sub(r'[^a-z0-9]+','-',s).strip('-')
 def num(x):
     if x is None or isinstance(x,(int,float)): return x

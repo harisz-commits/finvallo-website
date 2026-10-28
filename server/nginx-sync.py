@@ -17,7 +17,8 @@ INC = 'include /var/www/finvallo/server/redirects.conf;'
 HTML = 'add_header Cache-Control "public, max-age=600, must-revalidate";'
 SEC = 'include /var/www/finvallo/server/security-headers.conf;'
 CSS = 'location ~* \\.(css|js)$ { add_header Cache-Control "public, max-age=31536000, immutable"; ' + SEC + ' }'
-IMG = 'location ~* \\.(png|jpg|jpeg|webp|svg|ico|woff2?|webmanifest)$ { add_header Cache-Control "public, max-age=86400"; ' + SEC + ' }'
+IMG = 'location ~* \\.(png|jpg|jpeg|webp|svg|ico|webmanifest)$ { add_header Cache-Control "public, max-age=86400"; ' + SEC + ' }'
+FONT = 'location ~* \\.woff2?$ { add_header Cache-Control "public, max-age=31536000, immutable"; ' + SEC + ' }'
 BR = ('brotli on;\n    brotli_comp_level 5;\n    brotli_types text/css text/plain application/json application/javascript '
       'image/svg+xml application/xml application/manifest+json;')
 
@@ -37,8 +38,10 @@ s = re.sub(r'(location / \{ try_files \$uri \$uri/ =404;) add_header Cache-Contr
 # Asset-Regeln auf den neuen Stand bringen (je eine location für CSS/JS und für Bilder/Schriften)
 s = re.sub(r'location ~\* \\\.\([^)]*\bcss\b[^)]*\)\$ \{[^}]*\}', lambda m: CSS, s)
 s = re.sub(r'location ~\* \\\.\([^)]*\bpng\b[^)]*\)\$ \{[^}]*\}', lambda m: IMG, s)
+# Schriften: eigene location mit langem Cache (Dateien ändern sich nicht)
+if FONT not in s: s = s.replace(IMG, IMG + '\n    ' + FONT)
 # Sicherheits-Header auf Server-Ebene (gilt für alle locations ohne eigenes add_header)
-if SEC + '\n' not in s.replace(CSS, '').replace(IMG, ''): s = s.replace(ROOT, ROOT + '\n    ' + SEC)
+if SEC + '\n' not in s.replace(CSS, '').replace(IMG, '').replace(FONT, ''): s = s.replace(ROOT, ROOT + '\n    ' + SEC)
 # HTTP/2 auf allen 443-Listen-Zeilen
 s = re.sub(r'(listen\s+(?:\[::\]:)?443\s+ssl)(?![^;]*\bhttp2\b)', r'\1 http2', s)
 def apply(new, cur):

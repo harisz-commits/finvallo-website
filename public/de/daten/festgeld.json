@@ -1,12 +1,13 @@
 {
  "quelle": "https://finvallo.com/de/festgeld/",
  "stand": "2026-10-27",
- "anzahl": 273,
+ "anzahl": 271,
  "lizenz": "Frei nutzbar mit Quellenangabe Finvallo",
  "angebote": [
   {
    "slug": "0to9-festgeld-de-raisin",
    "bank": "0TO9",
+   "bank_key": "0to9",
    "institut": "0TO9 AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -45,6 +46,7 @@
   {
    "slug": "1822direkt-festgeld-de",
    "bank": "1822direkt",
+   "bank_key": "1822direkt",
    "institut": "Frankfurter Sparkasse (über 1822direkt Gesellschaft der Frankfurter Sparkasse mbH)",
    "produkt": "Festgeldkonto",
    "vertrieb": "direkt",
@@ -112,6 +114,7 @@
   {
    "slug": "a-g-banco-festgeld-de-raisin",
    "bank": "A&G Banco",
+   "bank_key": "aundg-banco",
    "institut": "A&G Banco S.A.U.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -161,6 +164,7 @@
   {
    "slug": "aareal-bank-festgeld-de-zinsmarkt-deutsche-bank",
    "bank": "Aareal Bank",
+   "bank_key": "aareal-bank",
    "institut": "Aareal Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "ZinsMarkt",
@@ -198,6 +202,7 @@
   {
    "slug": "aareal-bank-festgeld-de-zinsmarkt-norisbank",
    "bank": "Aareal Bank",
+   "bank_key": "aareal-bank",
    "institut": "Aareal Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "ZinsMarkt",
@@ -270,7 +275,8 @@
   },
   {
    "slug": "aareal-bank-ag-festgeld-de-raisin",
-   "bank": "Aareal Bank AG",
+   "bank": "Aareal Bank",
+   "bank_key": "aareal-bank",
    "institut": "Aareal Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -343,7 +349,8 @@
   },
   {
    "slug": "ab-mano-bankas-festgeld-de-raisin",
-   "bank": "AB Mano bankas",
+   "bank": "Mano bankas",
+   "bank_key": "mano-bankas",
    "institut": "AB Mano bankas",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -417,6 +424,7 @@
   {
    "slug": "achmea-bank-festgeld-de-raisin",
    "bank": "Achmea Bank",
+   "bank_key": "achmea-bank",
    "institut": "Achmea Bank N.V.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -514,6 +522,7 @@
   {
    "slug": "addiko-bank-festgeld-de-raisin",
    "bank": "Addiko Bank",
+   "bank_key": "addiko-bank",
    "institut": "Addiko Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -587,6 +596,7 @@
   {
    "slug": "aegean-baltic-bank-festgeld-de-check24",
    "bank": "Aegean Baltic Bank",
+   "bank_key": "aegean-baltic-bank",
    "institut": "Aegean Baltic Bank S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -623,7 +633,8 @@
   },
   {
    "slug": "aegean-baltic-bank-s-a-festgeld-de-raisin",
-   "bank": "Aegean Baltic Bank S.A.",
+   "bank": "Aegean Baltic Bank",
+   "bank_key": "aegean-baltic-bank",
    "institut": "Aegean Baltic Bank S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -679,6 +690,7 @@
   {
    "slug": "aka-festgeld-de-raisin",
    "bank": "AKA",
+   "bank_key": "aka",
    "institut": "AKA Ausfuhrkredit-Gesellschaft mbH",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -770,6 +782,7 @@
   {
    "slug": "akbank-ak-festgeld-telefon-de",
    "bank": "Akbank",
+   "bank_key": "akbank",
    "institut": "Akbank AG",
    "produkt": "AK Festgeld (telefonische Kontoführung)",
    "vertrieb": "direkt",
@@ -861,6 +874,7 @@
   {
    "slug": "akbank-ak-online-festgeld-de",
    "bank": "Akbank",
+   "bank_key": "akbank",
    "institut": "Akbank AG",
    "produkt": "AK-Online Festgeld",
    "vertrieb": "direkt",
@@ -952,6 +966,7 @@
   {
    "slug": "akbank-festgeld-alleskoenner-de",
    "bank": "Akbank",
+   "bank_key": "akbank",
    "institut": "Akbank AG",
    "produkt": "AK-Online Festgeld-Alleskönner",
    "vertrieb": "direkt",
@@ -1018,7 +1033,8 @@
   },
   {
    "slug": "alisa-bank-plc-festgeld-de-raisin",
-   "bank": "Alisa Bank Plc",
+   "bank": "Alisa Bank",
+   "bank_key": "alisa-bank",
    "institut": "Alisa Bank Plc",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1104,6 +1120,7 @@
   {
    "slug": "alte-leipziger-festgeld-de-raisin",
    "bank": "Alte Leipziger",
+   "bank_key": "alte-leipziger",
    "institut": "Alte Leipziger Bauspar AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1153,6 +1170,7 @@
   {
    "slug": "anyfin-festgeld-de-raisin",
    "bank": "Anyfin",
+   "bank_key": "anyfin",
    "institut": "Anyfin AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1226,7 +1244,8 @@
   },
   {
    "slug": "arab-bank-europe-sa-festgeld-de-raisin",
-   "bank": "Arab Bank Europe SA",
+   "bank": "Arab Bank Europe",
+   "bank_key": "arab-bank-europe",
    "institut": "Arab Bank Europe SA",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1275,7 +1294,8 @@
   },
   {
    "slug": "arab-banking-corporation-sa-festgeld-de-raisin",
-   "bank": "Arab Banking Corporation SA",
+   "bank": "Arab Banking Corporation",
+   "bank_key": "arab-banking-corporation",
    "institut": "Arab Banking Corporation SA, Zweigniederlassung Frankfurt",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1343,6 +1363,7 @@
   {
    "slug": "arktika-festgeld-de-raisin",
    "bank": "ARKTIKA",
+   "bank_key": "arktika",
    "institut": "ARKTIKA Capital AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1410,7 +1431,8 @@
   },
   {
    "slug": "aros-kapital-ab-festgeld-de-raisin",
-   "bank": "Aros Kapital AB",
+   "bank": "Aros Kapital",
+   "bank_key": "aros-kapital",
    "institut": "Aros Kapital AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1466,7 +1488,8 @@
   },
   {
    "slug": "artea-ab-festgeld-de-raisin",
-   "bank": "Artea AB",
+   "bank": "Artea",
+   "bank_key": "artea",
    "institut": "AB Artea bankas",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1533,7 +1556,8 @@
   },
   {
    "slug": "avarda-bank-festgeld-de-raisin",
-   "bank": "Avarda Bank",
+   "bank": "TF Bank",
+   "bank_key": "tf-bank",
    "institut": "Avarda Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1596,6 +1620,7 @@
   {
    "slug": "avida-festgeld-de-check24",
    "bank": "Avida",
+   "bank_key": "avida",
    "institut": "Avida Bank AB (publ)",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -1651,7 +1676,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": null,
@@ -1669,7 +1694,8 @@
   },
   {
    "slug": "avida-bank-ab-festgeld-de-raisin",
-   "bank": "Avida Bank AB",
+   "bank": "Avida Bank",
+   "bank_key": "avida-bank",
    "institut": "Avida Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1713,7 +1739,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "jaehrlich",
    "zinseszins": null,
@@ -1732,6 +1758,7 @@
   {
    "slug": "ayvens-bank-festgeld-de",
    "bank": "Ayvens Bank",
+   "bank_key": "ayvens-bank",
    "institut": "Ayvens Bank N.V.",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -1793,6 +1820,7 @@
   {
    "slug": "banca-agricola-popolare-di-sicilia-festgeld-de-raisin",
    "bank": "Banca Agricola Popolare di Sicilia",
+   "bank_key": "banca-agricola-popolare-di-sicilia",
    "institut": "Banca Agricola Popolare di Sicilia S.C.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1872,6 +1900,7 @@
   {
    "slug": "banca-aidexa-festgeld-de-raisin",
    "bank": "Banca AideXa",
+   "bank_key": "banca-aidexa",
    "institut": "Banca AideXa S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -1933,6 +1962,7 @@
   {
    "slug": "banca-cf-festgeld-de-raisin",
    "bank": "Banca CF+",
+   "bank_key": "banca-cf",
    "institut": "Banca CF+ S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2018,6 +2048,7 @@
   {
    "slug": "banca-del-fucino-festgeld-de-raisin",
    "bank": "Banca del Fucino",
+   "bank_key": "banca-del-fucino",
    "institut": "Banca del Fucino S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2079,6 +2110,7 @@
   {
    "slug": "banca-finint-festgeld-de-raisin",
    "bank": "Banca Finint",
+   "bank_key": "banca-finint",
    "institut": "Banca Finanziaria Internazionale S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2122,6 +2154,7 @@
   {
    "slug": "banca-ifis-festgeld-de-raisin",
    "bank": "Banca Ifis",
+   "bank_key": "banca-ifis",
    "institut": "Banca Ifis S.p.A",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2195,6 +2228,7 @@
   {
    "slug": "banca-piu-festgeld-de-raisin",
    "bank": "Banca Più",
+   "bank_key": "banca-pi",
    "institut": "Banca Più S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2256,6 +2290,7 @@
   {
    "slug": "banca-popolare-di-cortona-festgeld-de-raisin",
    "bank": "Banca Popolare di Cortona",
+   "bank_key": "banca-popolare-di-cortona",
    "institut": "Banca Popolare di Cortona",
    "produkt": "Flexgeld (Festgeld mit vorzeitiger Kündigungsmöglichkeit)",
    "vertrieb": "Raisin",
@@ -2317,6 +2352,7 @@
   {
    "slug": "banca-popolare-di-fondi-societa-cooperativa-festgeld-de-raisin",
    "bank": "Banca Popolare di Fondi Società Cooperativa",
+   "bank_key": "banca-popolare-di-fondi-societ-cooperativa",
    "institut": "Banca Popolare di Fondi Società Cooperativa",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2366,6 +2402,7 @@
   {
    "slug": "banca-profilo-festgeld-de-raisin",
    "bank": "Banca Profilo",
+   "bank_key": "banca-profilo",
    "institut": "Banca Profilo S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2415,6 +2452,7 @@
   {
    "slug": "banca-promos-festgeld-de-raisin",
    "bank": "Banca Promos",
+   "bank_key": "banca-promos",
    "institut": "Banca Promos S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2464,6 +2502,7 @@
   {
    "slug": "banca-sistema-festgeld-de-check24",
    "bank": "Banca Sistema",
+   "bank_key": "banca-sistema",
    "institut": "Banca Sistema S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -2537,6 +2576,7 @@
   {
    "slug": "banca-sistema-festgeld-de-raisin",
    "bank": "Banca Sistema",
+   "bank_key": "banca-sistema",
    "institut": "Banca Sistema S.p.A",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2610,6 +2650,7 @@
   {
    "slug": "banco-bai-europa-festgeld-de-raisin",
    "bank": "Banco BAI Europa",
+   "bank_key": "banco-bai-europa",
    "institut": "Banco BAI Europa S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2677,6 +2718,7 @@
   {
    "slug": "banco-bni-europa-festgeld-de-raisin",
    "bank": "Banco BNI Europa",
+   "bank_key": "banco-bni-europa",
    "institut": "BNI - Banco de Negócios Internacional Europa, S.A",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2756,6 +2798,7 @@
   {
    "slug": "banco-bradesco-festgeld-de-raisin",
    "bank": "Banco Bradesco",
+   "bank_key": "banco-bradesco",
    "institut": "Bradesco Europa SA",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2799,6 +2842,7 @@
   {
    "slug": "banco-do-brasil-festgeld-de-raisin",
    "bank": "Banco do Brasil",
+   "bank_key": "banco-do-brasil",
    "institut": "Banco do Brasil S.A., Zweigniederlassung Frankfurt/Main",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2871,7 +2915,8 @@
   },
   {
    "slug": "banco-finantia-s-a-sucursal-en-espana-festgeld-de-raisin",
-   "bank": "Banco Finantia, S.A., Sucursal en España",
+   "bank": "Banco Finantia",
+   "bank_key": "banco-finantia",
    "institut": "Banco Finantia, S.A., Sucursal en España",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2914,7 +2959,8 @@
   },
   {
    "slug": "bank-dimare-limited-festgeld-de-raisin",
-   "bank": "Bank DiMare Limited",
+   "bank": "Bank DiMare",
+   "bank_key": "bank-dimare",
    "institut": "Bank DiMare Limited",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2957,7 +3003,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": false,
@@ -2976,6 +3022,7 @@
   {
    "slug": "bank-of-scotland-festgeld-de",
    "bank": "Bank of Scotland",
+   "bank_key": "bank-of-scotland",
    "institut": "Lloyds Bank GmbH (Marke Bank of Scotland)",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -3043,6 +3090,7 @@
   {
    "slug": "bank11-festgeld-de-raisin",
    "bank": "Bank11",
+   "bank_key": "bank11",
    "institut": "Bank11 für Privatkunden und Handel GmbH",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -3092,6 +3140,7 @@
   {
    "slug": "banka-kovanica-festgeld-de-check24",
    "bank": "Banka Kovanica",
+   "bank_key": "banka-kovanica",
    "institut": "Banka Kovanica d.d.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -3165,6 +3214,7 @@
   {
    "slug": "bankb-festgeld-de-raisin",
    "bank": "BankB",
+   "bank_key": "bankb",
    "institut": "BankB N.V.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -3250,6 +3300,7 @@
   {
    "slug": "bankhaus-rautenschlein-festgeld-de-check24",
    "bank": "Bankhaus Rautenschlein",
+   "bank_key": "bankhaus-rautenschlein",
    "institut": "Bankhaus Rautenschlein AG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -3334,7 +3385,8 @@
   },
   {
    "slug": "bankhaus-rautenschlein-ag-festgeld-de-raisin",
-   "bank": "Bankhaus Rautenschlein AG",
+   "bank": "Bankhaus Rautenschlein",
+   "bank_key": "bankhaus-rautenschlein",
    "institut": "Bankhaus Rautenschlein AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -3420,6 +3472,7 @@
   {
    "slug": "banque-bcp-festgeld-de-raisin",
    "bank": "Banque BCP",
+   "bank_key": "banque-bcp",
    "institut": "Banque BCP S.A.S.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -3463,6 +3516,7 @@
   {
    "slug": "bbbank-festgeld-de",
    "bank": "BBBank",
+   "bank_key": "bbbank",
    "institut": "BBBank eG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -3560,6 +3614,7 @@
   {
    "slug": "bbbank-festgeld-de-neugeld",
    "bank": "BBBank",
+   "bank_key": "bbbank",
    "institut": "BBBank eG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -3603,6 +3658,7 @@
   {
    "slug": "bff-festgeld-de-raisin",
    "bank": "BFF",
+   "bank_key": "bff",
    "institut": "BFF BANK S.p.A. Sucursal en España",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -3676,6 +3732,7 @@
   {
    "slug": "bgfibank-europe-festgeld-de-check24",
    "bank": "BGFIBank Europe",
+   "bank_key": "bgfibank-europe",
    "institut": "BGFIBank Europe",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -3718,7 +3775,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": false,
@@ -3737,6 +3794,7 @@
   {
    "slug": "bigbank-festgeld-de",
    "bank": "Bigbank",
+   "bank_key": "bigbank",
    "institut": "Bigbank AS (Zweigniederlassung Deutschland)",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -3876,6 +3934,7 @@
   {
    "slug": "bison-bank-festgeld-de-raisin",
    "bank": "Bison Bank",
+   "bank_key": "bison-bank",
    "institut": "Bison Bank, S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -3942,7 +4001,8 @@
   },
   {
    "slug": "bluestep-bank-ab-festgeld-de-raisin",
-   "bank": "Bluestep Bank AB",
+   "bank": "Bluestep Bank",
+   "bank_key": "bluestep-bank",
    "institut": "Enity Bank Group AB (publ)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -3987,6 +4047,7 @@
   {
    "slug": "bluor-bank-festgeld-de-check24",
    "bank": "BluOr Bank",
+   "bank_key": "bluor-bank",
    "institut": "BluOr Bank AS",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -4029,7 +4090,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": false,
@@ -4047,7 +4108,8 @@
   },
   {
    "slug": "bluor-bank-as-festgeld-de-raisin",
-   "bank": "BluOr Bank AS",
+   "bank": "BluOr Bank",
+   "bank_key": "bluor-bank",
    "institut": "AS BlueOrange Bank",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -4059,12 +4121,6 @@
     "freiwillig": null
    },
    "zinsen": [
-    {
-     "monate": 3,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
     {
      "monate": 6,
      "zins": 2.85,
@@ -4096,7 +4152,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": false,
@@ -4115,6 +4171,7 @@
   {
    "slug": "bmw-bank-festgeld-de",
    "bank": "BMW Bank",
+   "bank_key": "bmw-bank",
    "institut": "BMW Bank GmbH",
    "produkt": "BMW Festgeld",
    "vertrieb": "direkt",
@@ -4126,12 +4183,6 @@
     "freiwillig": "Mitglied im Einlagensicherungsfonds des Bundesverbandes deutscher Banken (BdB)"
    },
    "zinsen": [
-    {
-     "monate": 1,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
     {
      "monate": 3,
      "zins": 0.5,
@@ -4199,7 +4250,8 @@
   },
   {
    "slug": "bn-bank-asa-festgeld-de-raisin",
-   "bank": "BN Bank ASA",
+   "bank": "BN Bank",
+   "bank_key": "bn-bank",
    "institut": "BN Bank ASA",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -4237,6 +4289,7 @@
   {
    "slug": "bnf-bank-festgeld-de-raisin",
    "bank": "BNF Bank",
+   "bank_key": "bnf-bank",
    "institut": "BNF Bank plc.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -4280,6 +4333,7 @@
   {
    "slug": "bremische-volksbank-weser-wumme-festgeld-de-check24",
    "bank": "Bremische Volksbank Weser-Wümme",
+   "bank_key": "bremische-volksbank-weser-wuemme",
    "institut": "Bremische Volksbank Weser-Wümme eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -4358,7 +4412,8 @@
   },
   {
    "slug": "bremische-volksbank-weser-wumme-eg-festgeld-de-raisin",
-   "bank": "Bremische Volksbank Weser-Wümme eG",
+   "bank": "Bremische Volksbank Weser-Wümme",
+   "bank_key": "bremische-volksbank-weser-wuemme",
    "institut": "Bremische Volksbank Weser-Wümme eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -4437,7 +4492,8 @@
   },
   {
    "slug": "brocc-finance-ab-festgeld-de-raisin",
-   "bank": "Brocc Finance AB",
+   "bank": "Brocc Finance",
+   "bank_key": "brocc-finance",
    "institut": "Brocc Finance AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -4542,6 +4598,7 @@
   {
    "slug": "btg-pactual-festgeld-de-check24",
    "bank": "BTG Pactual",
+   "bank_key": "btg-pactual",
    "institut": "BTG Pactual Europe S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -4651,6 +4708,7 @@
   {
    "slug": "btg-pactual-festgeld-de-raisin",
    "bank": "BTG Pactual",
+   "bank_key": "btg-pactual",
    "institut": "BTG Pactual Europe S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -4759,7 +4817,8 @@
   },
   {
    "slug": "bulgarian-american-credit-bank-ad-festgeld-de-raisin",
-   "bank": "Bulgarian-American Credit Bank AD",
+   "bank": "Bulgarian-American Credit Bank",
+   "bank_key": "bulgarian-american-credit-bank",
    "institut": "Bulgarian-American Credit Bank AD",
    "produkt": "Flexgeld (Festgeld mit vorzeitiger Kündigungsmöglichkeit)",
    "vertrieb": "Raisin",
@@ -4803,6 +4862,7 @@
   {
    "slug": "bunq-festgeld-de",
    "bank": "bunq",
+   "bank_key": "bunq",
    "institut": "bunq B.V.",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -4858,6 +4918,7 @@
   {
    "slug": "byblos-bank-europe-festgeld-de-raisin",
    "bank": "Byblos Bank Europe",
+   "bank_key": "byblos-bank-europe",
    "institut": "Byblos Bank Europe S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -4901,6 +4962,7 @@
   {
    "slug": "c24-bank-festgeld-de-check24",
    "bank": "C24 Bank",
+   "bank_key": "c24-bank",
    "institut": "C24 Bank GmbH",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -4962,6 +5024,7 @@
   {
    "slug": "ca-auto-bank-festgeld-de",
    "bank": "CA Auto Bank",
+   "bank_key": "ca-auto-bank",
    "institut": "CA Auto Bank S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -5028,7 +5091,8 @@
   },
   {
    "slug": "ca-auto-bank-s-p-a-niederlassung-deutschland-festgeld-de-raisin",
-   "bank": "CA Auto Bank S.p.A. Niederlassung Deutschland",
+   "bank": "CA Auto Bank",
+   "bank_key": "ca-auto-bank",
    "institut": "CA Auto Bank S.p.A. Niederlassung Deutschland",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5083,7 +5147,8 @@
   },
   {
    "slug": "ca-savings-festgeld-de-raisin",
-   "bank": "CA Savings",
+   "bank": "Crédit Agricole",
+   "bank_key": "credit-agricole",
    "institut": "CA Consumer Finance SA",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5127,6 +5192,7 @@
   {
    "slug": "caisse-d-epargne-cote-d-azur-festgeld-de-raisin",
    "bank": "Caisse d'Epargne Côte d'Azur",
+   "bank_key": "caisse-d-epargne-c-te-d-azur",
    "institut": "Caisse d'Epargne Côte d'Azur",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5164,6 +5230,7 @@
   {
    "slug": "caisse-d-epargne-grand-est-europe-festgeld-de-raisin",
    "bank": "Caisse d'Epargne Grand Est Europe",
+   "bank_key": "caisse-d-epargne-grand-est-europe",
    "institut": "Caisse d'Epargne Grand Est Europe",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5207,6 +5274,7 @@
   {
    "slug": "cbl-bank-festgeld-de-raisin",
    "bank": "CBL Bank",
+   "bank_key": "cbl-bank",
    "institut": "AS Citadele Banka (CBL Bank)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5262,6 +5330,7 @@
   {
    "slug": "cherry-bank-festgeld-de-raisin",
    "bank": "Cherry Bank",
+   "bank_key": "cherry-bank",
    "institut": "Cherry Bank S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5341,6 +5410,7 @@
   {
    "slug": "civibank-festgeld-de-raisin",
    "bank": "CiviBank",
+   "bank_key": "civibank",
    "institut": "Banca di Cividale S.p.A.",
    "produkt": "Flexgeld (Festgeld mit vorzeitiger Kündigungsmöglichkeit)",
    "vertrieb": "Raisin",
@@ -5432,6 +5502,7 @@
   {
    "slug": "collector-festgeld-de-raisin",
    "bank": "Collector",
+   "bank_key": "collector",
    "institut": "Norion Bank AB (publ)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5518,6 +5589,7 @@
   {
    "slug": "comdirect-festgeld-de",
    "bank": "comdirect",
+   "bank_key": "comdirect",
    "institut": "Commerzbank AG (comdirect - eine Marke der Commerzbank AG)",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -5573,6 +5645,7 @@
   {
    "slug": "commerzbank-festgeld-de",
    "bank": "Commerzbank",
+   "bank_key": "commerzbank",
    "institut": "Commerzbank AG",
    "produkt": "Festgeld (Online-Termingeld)",
    "vertrieb": "direkt",
@@ -5700,6 +5773,7 @@
   {
    "slug": "consorsbank-festgeld-de",
    "bank": "Consorsbank",
+   "bank_key": "consorsbank",
    "institut": "BNP Paribas S.A. Niederlassung Deutschland",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -5767,6 +5841,7 @@
   {
    "slug": "coop-pank-festgeld-de-check24",
    "bank": "Coop Pank",
+   "bank_key": "coop-pank",
    "institut": "Coop Pank AS",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -5828,6 +5903,7 @@
   {
    "slug": "coop-pank-festgeld-de-raisin",
    "bank": "Coop Pank",
+   "bank_key": "coop-pank",
    "institut": "Coop Pank AS",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5889,6 +5965,7 @@
   {
    "slug": "credito-lombardo-veneto-festgeld-de-raisin",
    "bank": "Credito Lombardo Veneto",
+   "bank_key": "credito-lombardo-veneto",
    "institut": "Credito Lombardo Veneto S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -5956,6 +6033,7 @@
   {
    "slug": "creditplus-bank-festgeld-de-check24",
    "bank": "Creditplus Bank",
+   "bank_key": "creditplus-bank",
    "institut": "Creditplus Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -6077,6 +6155,7 @@
   {
    "slug": "creditplus-bank-festgeld-de-raisin",
    "bank": "Creditplus Bank",
+   "bank_key": "creditplus-bank",
    "institut": "Creditplus Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -6180,6 +6259,7 @@
   {
    "slug": "creditplus-festgeld-de-zinsmarkt-norisbank",
    "bank": "Creditplus Bank",
+   "bank_key": "creditplus-bank",
    "institut": "Creditplus Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "ZinsMarkt",
@@ -6307,6 +6387,7 @@
   {
    "slug": "creditplus-bank-festgeld-de",
    "bank": "Creditplus Bank",
+   "bank_key": "creditplus-bank",
    "institut": "Creditplus Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -6409,7 +6490,8 @@
   },
   {
    "slug": "credit-agricole-festgeld-de-zinsmarkt-deutsche-bank",
-   "bank": "Crédit Agricole Personal Finance & Mobility",
+   "bank": "Crédit Agricole",
+   "bank_key": "credit-agricole",
    "institut": "Crédit Agricole Personal Finance & Mobility S.A. (auf der Deutsche-Bank-Seite 'Crédit Agricole Savings')",
    "produkt": "Festgeld",
    "vertrieb": "ZinsMarkt",
@@ -6452,7 +6534,8 @@
   },
   {
    "slug": "credit-agricole-festgeld-de-zinsmarkt-norisbank",
-   "bank": "Crédit Agricole Personal Finance & Mobility",
+   "bank": "Crédit Agricole",
+   "bank_key": "credit-agricole",
    "institut": "Crédit Agricole Personal Finance & Mobility S.A.",
    "produkt": "Festgeld",
    "vertrieb": "ZinsMarkt",
@@ -6567,7 +6650,8 @@
   },
   {
    "slug": "credit-agricole-savings-festgeld-de-check24",
-   "bank": "Crédit Agricole Savings",
+   "bank": "Crédit Agricole",
+   "bank_key": "credit-agricole",
    "institut": "CA Consumer Finance S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -6635,6 +6719,7 @@
   {
    "slug": "denizbank-festgeld-de",
    "bank": "DenizBank",
+   "bank_key": "denizbank",
    "institut": "DenizBank AG (Zweigniederlassung Deutschland)",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -6750,6 +6835,7 @@
   {
    "slug": "deutsche-bank-festzinssparen-de",
    "bank": "Deutsche Bank",
+   "bank_key": "deutsche-bank",
    "institut": "Deutsche Bank AG",
    "produkt": "FestzinsSparen",
    "vertrieb": "direkt",
@@ -6835,6 +6921,7 @@
   {
    "slug": "deutsche-bank-festzinssparen-de-neugeld",
    "bank": "Deutsche Bank",
+   "bank_key": "deutsche-bank",
    "institut": "Deutsche Bank AG",
    "produkt": "FestzinsSparen",
    "vertrieb": "direkt",
@@ -6871,7 +6958,8 @@
   },
   {
    "slug": "deutsche-pfandbriefbank-ag-festgeld-de-raisin",
-   "bank": "Deutsche Pfandbriefbank AG",
+   "bank": "pbb direkt",
+   "bank_key": "pbb-direkt",
    "institut": "Deutsche Pfandbriefbank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -6883,24 +6971,6 @@
     "freiwillig": "BdB Institutssicherung GmbH (laut Raisin bis 100.000 EUR)"
    },
    "zinsen": [
-    {
-     "monate": 12,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 18,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 24,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
     {
      "monate": 30,
      "zins": 3.55,
@@ -6939,6 +7009,7 @@
   {
    "slug": "skatbank-festgeld-de",
    "bank": "Deutsche Skatbank",
+   "bank_key": "deutsche-skatbank",
    "institut": "VR-Bank Altenburger Land eG (Deutsche Skatbank)",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -7024,6 +7095,7 @@
   {
    "slug": "skatbank-termingeld-de",
    "bank": "Deutsche Skatbank",
+   "bank_key": "deutsche-skatbank",
    "institut": "VR-Bank Altenburger Land eG (Deutsche Skatbank)",
    "produkt": "Termingeld",
    "vertrieb": "direkt",
@@ -7073,6 +7145,7 @@
   {
    "slug": "dkb-festgeld-de",
    "bank": "DKB",
+   "bank_key": "dkb",
    "institut": "Deutsche Kreditbank AG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -7152,6 +7225,7 @@
   {
    "slug": "dll-festgeld-de-raisin",
    "bank": "DLL",
+   "bank_key": "dll",
    "institut": "De Lage Landen International B.V („DLL Bank”)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -7189,6 +7263,7 @@
   {
    "slug": "ecobank-international-festgeld-de-raisin",
    "bank": "Ecobank International",
+   "bank_key": "ecobank-international",
    "institut": "EBI SA",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -7225,7 +7300,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": false,
@@ -7244,6 +7319,7 @@
   {
    "slug": "edekabank-festgeld-de-raisin",
    "bank": "Edekabank",
+   "bank_key": "edekabank",
    "institut": "EDEKABANK AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -7335,6 +7411,7 @@
   {
    "slug": "embank-festgeld-de-check24",
    "bank": "EMBank",
+   "bank_key": "european-merchant-bank",
    "institut": "European Merchant Bank UAB",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -7407,7 +7484,8 @@
   },
   {
    "slug": "ep-bank-ab-festgeld-de-raisin",
-   "bank": "EP Bank AB",
+   "bank": "EP Bank",
+   "bank_key": "ep-bank",
    "institut": "EP Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -7458,6 +7536,7 @@
   {
    "slug": "ethikbank-festgeld-de",
    "bank": "EthikBank",
+   "bank_key": "ethikbank",
    "institut": "EthikBank eG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -7518,7 +7597,8 @@
   },
   {
    "slug": "european-merchant-bank-festgeld-de-raisin",
-   "bank": "European Merchant Bank",
+   "bank": "EMBank",
+   "bank_key": "european-merchant-bank",
    "institut": "European Merchant Bank UAB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -7592,6 +7672,7 @@
   {
    "slug": "fimbank-festgeld-de-check24",
    "bank": "FIMBank",
+   "bank_key": "fimbank",
    "institut": "FIMBank plc",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -7646,7 +7727,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": false,
@@ -7665,6 +7746,7 @@
   {
    "slug": "fimbank-festgeld-de-raisin",
    "bank": "FIMBank",
+   "bank_key": "fimbank",
    "institut": "Fimbank Plc",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -7707,7 +7789,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": false,
@@ -7726,6 +7808,7 @@
   {
    "slug": "finora-bank-festgeld-de-raisin",
    "bank": "Finora Bank",
+   "bank_key": "finora-bank",
    "institut": "Finora Bank UAB Eesti filiaal",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -7799,6 +7882,7 @@
   {
    "slug": "finvesto-fnz-bank-festgeld-de-check24",
    "bank": "finvesto (FNZ Bank)",
+   "bank_key": "finvesto-fnz-bank",
    "institut": "FNZ Bank SE",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -7848,6 +7932,7 @@
   {
    "slug": "fjord-bank-festgeld-de-check24",
    "bank": "Fjord Bank",
+   "bank_key": "fjord-bank",
    "institut": "AB Fjord Bank",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -7933,6 +8018,7 @@
   {
    "slug": "fjord-bank-festgeld-de-raisin",
    "bank": "Fjord Bank",
+   "bank_key": "fjord-bank",
    "institut": "AB Fjord Bank",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8018,6 +8104,7 @@
   {
    "slug": "ford-money-festgeld-de",
    "bank": "Ford Money",
+   "bank_key": "ford-money",
    "institut": "Ford Bank GmbH",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -8079,6 +8166,7 @@
   {
    "slug": "gf-bankas-festgeld-de-raisin",
    "bank": "GF Bankas",
+   "bank_key": "gf-bankas",
    "institut": "UAB GF Bankas",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8128,6 +8216,7 @@
   {
    "slug": "gls-bank-festgeld-de",
    "bank": "GLS Bank",
+   "bank_key": "gls-bank",
    "institut": "GLS Gemeinschaftsbank eG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -8177,6 +8266,7 @@
   {
    "slug": "gls-bank-sparbrief-de",
    "bank": "GLS Bank",
+   "bank_key": "gls-bank",
    "institut": "GLS Gemeinschaftsbank eG",
    "produkt": "Sparbrief",
    "vertrieb": "direkt",
@@ -8237,7 +8327,8 @@
   },
   {
    "slug": "grenke-bank-ag-festgeld-de-raisin",
-   "bank": "grenke Bank AG",
+   "bank": "grenke Bank",
+   "bank_key": "grenke-bank",
    "institut": "grenke Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8305,6 +8396,7 @@
   {
    "slug": "guber-banca-festgeld-de-raisin",
    "bank": "Guber Banca",
+   "bank_key": "guber-banca",
    "institut": "Guber Banca S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8317,20 +8409,8 @@
    },
    "zinsen": [
     {
-     "monate": 9,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
      "monate": 12,
      "zins": 3.26,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 18,
-     "zins": 0.01,
      "min": null,
      "max": null
     },
@@ -8377,7 +8457,8 @@
   },
   {
    "slug": "haitong-bank-s-a-zweigniederlassung-in-spanien-festgeld-de-raisin",
-   "bank": "Haitong Bank, S.A. Zweigniederlassung in Spanien",
+   "bank": "Haitong Bank",
+   "bank_key": "haitong-bank",
    "institut": "Haitong Bank, S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8451,6 +8532,7 @@
   {
    "slug": "hamburg-direct-bank-festgeld-de-raisin",
    "bank": "Hamburg Direct Bank",
+   "bank_key": "hamburg-direct-bank",
    "institut": "Hamburg Commercial Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8506,6 +8588,7 @@
   {
    "slug": "hanseatic-bank-sparbrief-de",
    "bank": "Hanseatic Bank",
+   "bank_key": "hanseatic-bank",
    "institut": "Hanseatic Bank GmbH & Co KG",
    "produkt": "SparBrief",
    "vertrieb": "direkt",
@@ -8573,6 +8656,7 @@
   {
    "slug": "hoistspar-festgeld-de-raisin",
    "bank": "HoistSpar",
+   "bank_key": "hoistspar",
    "institut": "Hoist Finance AB.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8622,7 +8706,8 @@
   },
   {
    "slug": "holm-bank-as-festgeld-de-raisin",
-   "bank": "Holm Bank AS",
+   "bank": "Holm Bank",
+   "bank_key": "holm-bank",
    "institut": "Holm Bank AS",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8684,6 +8769,7 @@
   {
    "slug": "hypovereinsbank-festgeld-de",
    "bank": "HypoVereinsbank",
+   "bank_key": "hypovereinsbank",
    "institut": "UniCredit Bank GmbH",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -8721,6 +8807,7 @@
   {
    "slug": "ibl-banca-festgeld-de-raisin",
    "bank": "IBL Banca",
+   "bank_key": "ibl-banca",
    "institut": "IBL Banca S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8767,18 +8854,6 @@
      "zins": 3.01,
      "min": null,
      "max": null
-    },
-    {
-     "monate": 48,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 60,
-     "zins": 0.1,
-     "min": null,
-     "max": null
     }
    ],
    "min_anlage": 10000,
@@ -8800,6 +8875,7 @@
   {
    "slug": "iig-bank-festgeld-de-check24",
    "bank": "IIG Bank",
+   "bank_key": "iig-bank",
    "institut": "IIG Bank (Malta) Ltd",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -8855,6 +8931,7 @@
   {
    "slug": "ikb-deutsche-industriebank-festgeld-de-check24",
    "bank": "IKB Deutsche Industriebank",
+   "bank_key": "ikb-deutsche-industriebank",
    "institut": "IKB Deutsche Industriebank AG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -8897,7 +8974,8 @@
   },
   {
    "slug": "ikb-deutsche-industriebank-ag-festgeld-de-raisin",
-   "bank": "IKB Deutsche Industriebank AG",
+   "bank": "IKB Deutsche Industriebank",
+   "bank_key": "ikb-deutsche-industriebank",
    "institut": "IKB Deutsche Industriebank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -8941,6 +9019,7 @@
   {
    "slug": "imprebanca-festgeld-de-raisin",
    "bank": "imprebanca",
+   "bank_key": "imprebanca",
    "institut": "imprebanca S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -9008,6 +9087,7 @@
   {
    "slug": "inbank-festgeld-de-check24",
    "bank": "Inbank",
+   "bank_key": "inbank",
    "institut": "Inbank AS",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -9075,6 +9155,7 @@
   {
    "slug": "inbank-festgeld-de-raisin",
    "bank": "Inbank",
+   "bank_key": "inbank",
    "institut": "Inbank AS",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -9142,6 +9223,7 @@
   {
    "slug": "industra-bank-festgeld-de-check24",
    "bank": "Industra Bank",
+   "bank_key": "industra-bank",
    "institut": "AS Industra Bank",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -9209,6 +9291,7 @@
   {
    "slug": "industra-bank-festgeld-de-raisin",
    "bank": "Industra Bank",
+   "bank_key": "industra-bank",
    "institut": "AS Industra Bank",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -9276,6 +9359,7 @@
   {
    "slug": "ing-festgeld-de",
    "bank": "ING",
+   "bank_key": "ing",
    "institut": "ING-DiBa AG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -9361,6 +9445,7 @@
   {
    "slug": "ing-sparbrief-de",
    "bank": "ING",
+   "bank_key": "ing",
    "institut": "ING-DiBa AG",
    "produkt": "Sparbrief",
    "vertrieb": "direkt",
@@ -9422,6 +9507,7 @@
   {
    "slug": "internationales-bankhaus-bodensee-festgeld-de-check24",
    "bank": "Internationales Bankhaus Bodensee",
+   "bank_key": "internationales-bankhaus-bodensee",
    "institut": "Internationales Bankhaus Bodensee AG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -9501,6 +9587,7 @@
   {
    "slug": "investitionsbank-trentino-sudtirol-festgeld-de-raisin",
    "bank": "Investitionsbank Trentino-Südtirol",
+   "bank_key": "investitionsbank-trentino-suedtirol",
    "institut": "Investitionsbank Trentino-Südtirol AG / Mediocredito Trentino-Alto Adige S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -9579,7 +9666,8 @@
   },
   {
    "slug": "istituto-per-il-credito-sportivo-e-culturale-s-p-a-festgeld-de-raisin",
-   "bank": "Istituto per il Credito Sportivo e Culturale S.p.A.",
+   "bank": "Istituto per il Credito Sportivo e Culturale",
+   "bank_key": "istituto-per-il-credito-sportivo-e-culturale",
    "institut": "Istituto per il Credito Sportivo e Culturale S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -9640,7 +9728,8 @@
   },
   {
    "slug": "itau-europe-s-a-festgeld-de-raisin",
-   "bank": "Itaú Europe S.A.",
+   "bank": "Itaú Europe",
+   "bank_key": "ita-europe",
    "institut": "Itaú Europe S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -9690,6 +9779,7 @@
   {
    "slug": "izola-bank-festgeld-de-check24",
    "bank": "Izola Bank",
+   "bank_key": "izola-bank",
    "institut": "Izola Bank p.l.c.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -9755,75 +9845,9 @@
    "rating_sp": "A-"
   },
   {
-   "slug": "izola-bank-festgeld-de-raisin",
-   "bank": "Izola Bank",
-   "institut": "Izola Bank p.l.c",
-   "produkt": "Festgeld",
-   "vertrieb": "Raisin",
-   "vertrieb_url": "https://www.raisin.com/de-de/bank/izola-bank/",
-   "sitz": "MT",
-   "einlagensicherung": {
-    "system": "Maltesische Einlagensicherungsfonds (Malta Financial Services Authority)",
-    "betrag": 100000,
-    "freiwillig": null
-   },
-   "zinsen": [
-    {
-     "monate": 3,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 6,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 12,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 24,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 36,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 60,
-     "zins": 0.01,
-     "min": null,
-     "max": null
-    }
-   ],
-   "min_anlage": 25,
-   "max_anlage": 100000,
-   "zinszahlung": "endfaellig",
-   "zinseszins": false,
-   "steuer_auto": true,
-   "kuendigung": "nein",
-   "verlaengerung": "automatisch",
-   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
-   "neukunden_only": false,
-   "eroeffnung": "online",
-   "aktion": null,
-   "quelle": "https://www.raisin.com/de-de/bank/izola-bank/",
-   "stand": "2026-10-27",
-   "geprueft": "2026-10-27",
-   "rating_sp": "A-"
-  },
-  {
    "slug": "isbank-festgeld-de-filiale",
    "bank": "İşbank",
+   "bank_key": "isbank",
    "institut": "İşbank AG",
    "produkt": "Festgeld (Filiale)",
    "vertrieb": "direkt",
@@ -9903,6 +9927,7 @@
   {
    "slug": "isbank-isweb-festgeld-de",
    "bank": "İşbank",
+   "bank_key": "isbank",
    "institut": "İşbank AG",
    "produkt": "İŞWEB Festgeld",
    "vertrieb": "direkt",
@@ -9982,6 +10007,7 @@
   {
    "slug": "jt-direktbank-festgeld-de",
    "bank": "J&T Direktbank",
+   "bank_key": "jundt-direktbank",
    "institut": "J&T BANKA, a.s., Zweigniederlassung Deutschland",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -10067,6 +10093,7 @@
   {
    "slug": "kentbank-festgeld-de-check24",
    "bank": "KentBank",
+   "bank_key": "kentbank",
    "institut": "KentBank d.d.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -10158,6 +10185,7 @@
   {
    "slug": "klarna-festgeld-plus-de",
    "bank": "Klarna",
+   "bank_key": "klarna",
    "institut": "Klarna Bank AB (publ), German Branch",
    "produkt": "Festgeld+",
    "vertrieb": "direkt",
@@ -10236,7 +10264,8 @@
   },
   {
    "slug": "klarna-bank-ab-festgeld-de-raisin",
-   "bank": "Klarna Bank AB",
+   "bank": "Klarna",
+   "bank_key": "klarna",
    "institut": "Klarna Bank AB (publ)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -10317,6 +10346,7 @@
   {
    "slug": "kompasbank-festgeld-de-raisin",
    "bank": "Kompasbank",
+   "bank_key": "kompasbank",
    "institut": "kompasbank a/s",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -10366,6 +10396,7 @@
   {
    "slug": "kreissparkasse-kusel-festgeld-de-check24",
    "bank": "Kreissparkasse Kusel",
+   "bank_key": "kreissparkasse-kusel",
    "institut": "Kreissparkasse Kusel",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -10403,6 +10434,7 @@
   {
    "slug": "kt-bank-festgeld-de-raisin",
    "bank": "KT Bank",
+   "bank_key": "kt-bank",
    "institut": "KT Bank",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -10470,6 +10502,7 @@
   {
    "slug": "kt-bank-festgeldkonto-de",
    "bank": "KT Bank",
+   "bank_key": "kt-bank",
    "institut": "KT Bank AG",
    "produkt": "KT FestgeldKonto",
    "vertrieb": "direkt",
@@ -10543,6 +10576,7 @@
   {
    "slug": "lhv-pank-festgeld-de-raisin",
    "bank": "LHV Pank",
+   "bank_key": "lhv-pank",
    "institut": "LHV Pank AS",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -10586,6 +10620,7 @@
   {
    "slug": "lidion-bank-festgeld-de-check24",
    "bank": "Lidion Bank",
+   "bank_key": "lidion-bank",
    "institut": "Lidion Bank plc",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -10671,6 +10706,7 @@
   {
    "slug": "magnetiq-bank-festgeld-de-check24",
    "bank": "Magnetiq Bank",
+   "bank_key": "magnetiq-bank",
    "institut": "AS Magnetiq Bank",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -10726,6 +10762,7 @@
   {
    "slug": "max-festgeld-festgeld-de-check24",
    "bank": "MAX Festgeld",
+   "bank_key": "max-festgeld",
    "institut": "Všeobecná úverová banka, a.s. (VÚB)",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -10786,7 +10823,8 @@
   },
   {
    "slug": "medirect-bank-malta-plc-festgeld-de-raisin",
-   "bank": "MeDirect Bank (Malta) plc",
+   "bank": "MeDirect Bank (Malta)",
+   "bank_key": "medirect-bank-malta",
    "institut": "MeDirect Bank (Malta) plc",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -10846,64 +10884,9 @@
    "rating_sp": "A-"
   },
   {
-   "slug": "medmera-bank-ab-festgeld-de-raisin",
-   "bank": "MedMera Bank AB",
-   "institut": "MedMera Bank AB",
-   "produkt": "Festgeld",
-   "vertrieb": "Raisin",
-   "vertrieb_url": "https://www.raisin.com/de-de/bank/medmera-bank-ab/",
-   "sitz": "SE",
-   "einlagensicherung": {
-    "system": "Riksgälden Insättningsgarantin (Sw. Riksgälden)",
-    "betrag": 1150000,
-    "freiwillig": null,
-    "waehrung": "SEK"
-   },
-   "zinsen": [
-    {
-     "monate": 3,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 6,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 12,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 24,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    }
-   ],
-   "min_anlage": 1000,
-   "max_anlage": 85000,
-   "zinszahlung": "jaehrlich",
-   "zinseszins": true,
-   "steuer_auto": false,
-   "kuendigung": "nein",
-   "verlaengerung": "keine",
-   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
-   "neukunden_only": false,
-   "eroeffnung": "online",
-   "aktion": null,
-   "quelle": "https://www.raisin.com/de-de/bank/medmera-bank-ab/",
-   "stand": "2026-10-27",
-   "geprueft": "2026-10-27",
-   "rating_sp": "AAA"
-  },
-  {
    "slug": "memo-bank-festgeld-de-raisin",
    "bank": "Memo Bank",
+   "bank_key": "memo-bank",
    "institut": "Memo Bank SA",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -10934,7 +10917,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": false,
@@ -10953,6 +10936,7 @@
   {
    "slug": "moank-festgeld-de-raisin",
    "bank": "Moank",
+   "bank_key": "moank",
    "institut": "Moank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -10997,6 +10981,7 @@
   {
    "slug": "morgan-stanley-festgeld-de-raisin",
    "bank": "Morgan Stanley",
+   "bank_key": "morgan-stanley",
    "institut": "Morgan Stanley Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -11058,6 +11043,7 @@
   {
    "slug": "morgan-stanley-europe-festgeld-de-zinsmarkt-norisbank",
    "bank": "Morgan Stanley",
+   "bank_key": "morgan-stanley",
    "institut": "Morgan Stanley Europe SE",
    "produkt": "Festgeld",
    "vertrieb": "ZinsMarkt",
@@ -11112,7 +11098,8 @@
   },
   {
    "slug": "morrow-bank-ab-festgeld-de-raisin",
-   "bank": "Morrow Bank AB",
+   "bank": "Morrow Bank",
+   "bank_key": "morrow-bank",
    "institut": "Morrow Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -11151,6 +11138,7 @@
   {
    "slug": "multitude-bank-festgeld-de-check24",
    "bank": "Multitude Bank",
+   "bank_key": "multitude-bank",
    "institut": "Multitude Bank p.l.c.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -11181,7 +11169,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "jaehrlich",
    "zinseszins": false,
@@ -11200,6 +11188,7 @@
   {
    "slug": "my-money-bank-festgeld-de-raisin",
    "bank": "My Money Bank",
+   "bank_key": "my-money-bank",
    "institut": "My Money Bank S.A",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -11243,6 +11232,7 @@
   {
    "slug": "my-money-bank-festgeld-de-zinsmarkt-norisbank",
    "bank": "My Money Bank",
+   "bank_key": "my-money-bank",
    "institut": "My Money Bank S.A.",
    "produkt": "Festgeld",
    "vertrieb": "ZinsMarkt",
@@ -11304,6 +11294,7 @@
   {
    "slug": "myntro-festgeld-de-raisin",
    "bank": "Myntro",
+   "bank_key": "myntro",
    "institut": "Myntro AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -11390,6 +11381,7 @@
   {
    "slug": "munchener-hypothekenbank-festgeld-de-check24",
    "bank": "Münchener Hypothekenbank",
+   "bank_key": "muenchener-hypothekenbank",
    "institut": "Münchener Hypothekenbank eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -11457,6 +11449,7 @@
   {
    "slug": "muenchener-hypothekenbank-festgeld-de-zinsmarkt-norisbank",
    "bank": "Münchener Hypothekenbank",
+   "bank_key": "muenchener-hypothekenbank",
    "institut": "Münchener Hypothekenbank eG",
    "produkt": "Festgeld",
    "vertrieb": "ZinsMarkt",
@@ -11523,7 +11516,8 @@
   },
   {
    "slug": "munchener-hypothekenbank-eg-festgeld-de-raisin",
-   "bank": "Münchener Hypothekenbank eG",
+   "bank": "Münchener Hypothekenbank",
+   "bank_key": "muenchener-hypothekenbank",
    "institut": "Münchener Hypothekenbank eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -11567,6 +11561,7 @@
   {
    "slug": "nexent-bank-festgeld-de",
    "bank": "Nexent Bank",
+   "bank_key": "nexent-bank",
    "institut": "Nexent Bank N.V. (Zweigniederlassung Deutschland, ehemals Credit Europe Bank)",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -11657,7 +11652,8 @@
   },
   {
    "slug": "nordax-bank-ab-publ-festgeld-de-raisin",
-   "bank": "Nordax Bank AB (publ)",
+   "bank": "Nordax Bank",
+   "bank_key": "nordax-bank",
    "institut": "NOBA Bank Group AB (publ)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -11720,6 +11716,7 @@
   {
    "slug": "nordiska-festgeld-de-raisin",
    "bank": "Nordiska",
+   "bank_key": "nordiska",
    "institut": "Bankaktiebolaget Nordiska (publ.)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -11770,6 +11767,7 @@
   {
    "slug": "norisbank-festzins-sparen-de",
    "bank": "norisbank",
+   "bank_key": "norisbank",
    "institut": "norisbank GmbH",
    "produkt": "Festzins-Sparen",
    "vertrieb": "direkt",
@@ -11855,6 +11853,7 @@
   {
    "slug": "norisbank-festzins-sparen-de-neugeld",
    "bank": "norisbank",
+   "bank_key": "norisbank",
    "institut": "norisbank GmbH",
    "produkt": "Festzins-Sparen",
    "vertrieb": "direkt",
@@ -11892,6 +11891,7 @@
   {
    "slug": "norrvidd-finance-festgeld-de-raisin",
    "bank": "Norrvidd Finance",
+   "bank_key": "norrvidd-finance",
    "institut": "Norrvidd Finance AB (publ)",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -11929,7 +11929,8 @@
   },
   {
    "slug": "northmill-bank-ab-festgeld-de-raisin",
-   "bank": "Northmill Bank AB",
+   "bank": "Northmill Bank",
+   "bank_key": "northmill-bank",
    "institut": "Northmill Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12015,7 +12016,8 @@
   },
   {
    "slug": "novo-banco-sa-festgeld-de-raisin",
-   "bank": "Novo Banco, SA",
+   "bank": "Novo Banco",
+   "bank_key": "novo-banco",
    "institut": "Novo Banco, SA",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12071,6 +12073,7 @@
   {
    "slug": "olb-festgeld-de-check24",
    "bank": "OLB",
+   "bank_key": "olb",
    "institut": "Oldenburgische Landesbank AG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -12149,7 +12152,8 @@
   },
   {
    "slug": "olb-bank-festgeld-de-raisin",
-   "bank": "OLB Bank",
+   "bank": "OLB",
+   "bank_key": "olb",
    "institut": "Oldenburgische Landesbank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12228,7 +12232,8 @@
   },
   {
    "slug": "oney-bank-s-a-festgeld-de-raisin",
-   "bank": "Oney bank S.A.",
+   "bank": "Oney bank",
+   "bank_key": "oney-bank",
    "institut": "Oney bank S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12283,7 +12288,7 @@
      "max": null
     }
    ],
-   "min_anlage": 15,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": false,
@@ -12301,7 +12306,8 @@
   },
   {
    "slug": "openbank-festgeld-de",
-   "bank": "Openbank (Santander)",
+   "bank": "Openbank",
+   "bank_key": "openbank",
    "institut": "Openbank Deutschland AG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -12387,6 +12393,7 @@
   {
    "slug": "opta-data-banking-festgeld-de-raisin",
    "bank": "opta data banking",
+   "bank_key": "opta-data-banking",
    "institut": "Bankhaus Bauer Aktiengesellschaft",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12429,7 +12436,8 @@
   },
   {
    "slug": "otto-m-schroder-bank-ag-festgeld-de-raisin",
-   "bank": "Otto M. Schröder Bank AG",
+   "bank": "Otto M. Schröder Bank",
+   "bank_key": "otto-m-schroeder-bank",
    "institut": "Otto M. Schröder Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12473,6 +12481,7 @@
   {
    "slug": "oyak-anker-bank-festgeld-de-check24",
    "bank": "OYAK ANKER Bank",
+   "bank_key": "oyak-anker-bank",
    "institut": "OYAK ANKER Bank GmbH",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -12533,7 +12542,8 @@
   },
   {
    "slug": "oyak-anker-bank-festgeld-de-raisin",
-   "bank": "Oyak Anker Bank",
+   "bank": "OYAK ANKER Bank",
+   "bank_key": "oyak-anker-bank",
    "institut": "OYAK ANKER Bank GmbH",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12595,6 +12605,7 @@
   {
    "slug": "oyak-anker-bank-festgeld-de",
    "bank": "OYAK ANKER Bank",
+   "bank_key": "oyak-anker-bank",
    "institut": "OYAK ANKER Bank GmbH",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -12674,6 +12685,7 @@
   {
    "slug": "pbb-direkt-festgeld-de",
    "bank": "pbb direkt",
+   "bank_key": "pbb-direkt",
    "institut": "Deutsche Pfandbriefbank AG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -12735,6 +12747,7 @@
   {
    "slug": "peac-bank-festgeld-de-check24",
    "bank": "PEAC Bank",
+   "bank_key": "peac-bank",
    "institut": "PEAC (Germany) GmbH",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -12808,6 +12821,7 @@
   {
    "slug": "peac-bank-festgeld-de-raisin",
    "bank": "PEAC Bank",
+   "bank_key": "peac-bank",
    "institut": "PEAC (Germany) GmbH",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12881,6 +12895,7 @@
   {
    "slug": "penta-festgeld-de-raisin",
    "bank": "Penta",
+   "bank_key": "penta",
    "institut": "Penta",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -12941,7 +12956,8 @@
   },
   {
    "slug": "podravska-banka-d-d-festgeld-de-raisin",
-   "bank": "Podravska banka d.d.",
+   "bank": "Podravska banka",
+   "bank_key": "podravska-banka",
    "institut": "Podravska banka d.d.",
    "produkt": "Flexgeld (Festgeld mit vorzeitiger Kündigungsmöglichkeit)",
    "vertrieb": "Raisin",
@@ -13015,6 +13031,7 @@
   {
    "slug": "postbank-zinssparen-de",
    "bank": "Postbank",
+   "bank_key": "postbank",
    "institut": "Deutsche Bank AG (Postbank - eine Niederlassung der Deutsche Bank AG)",
    "produkt": "Zinssparen",
    "vertrieb": "direkt",
@@ -13100,6 +13117,7 @@
   {
    "slug": "postbank-zinssparen-de-neugeld",
    "bank": "Postbank",
+   "bank_key": "postbank",
    "institut": "Deutsche Bank AG (Postbank - eine Niederlassung der Deutsche Bank AG)",
    "produkt": "Zinssparen",
    "vertrieb": "direkt",
@@ -13137,6 +13155,7 @@
   {
    "slug": "psd-bank-rheinneckarsaar-festgeld-de-check24",
    "bank": "PSD Bank RheinNeckarSaar",
+   "bank_key": "psd-bank-rheinneckarsaar",
    "institut": "PSD Bank RheinNeckarSaar eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -13179,7 +13198,8 @@
   },
   {
    "slug": "qliro-ab-festgeld-de-raisin",
-   "bank": "Qliro AB",
+   "bank": "Qliro",
+   "bank_key": "qliro",
    "institut": "Qliro AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -13235,7 +13255,8 @@
   },
   {
    "slug": "qred-bank-ab-festgeld-de-raisin",
-   "bank": "Qred Bank AB",
+   "bank": "Qred Bank",
+   "bank_key": "qred-bank",
    "institut": "Qred Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -13292,6 +13313,7 @@
   {
    "slug": "raiffeisenbank-auerbach-freihung-festgeld-de-check24",
    "bank": "Raiffeisenbank Auerbach-Freihung",
+   "bank_key": "raiffeisenbank-auerbach-freihung",
    "institut": "Raiffeisenbank Auerbach-Freihung eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -13353,6 +13375,7 @@
   {
    "slug": "raiffeisenbank-beuerberg-eurasburg-festgeld-de-check24",
    "bank": "Raiffeisenbank Beuerberg-Eurasburg",
+   "bank_key": "raiffeisenbank-beuerberg-eurasburg",
    "institut": "Raiffeisenbank Beuerberg-Eurasburg eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -13426,6 +13449,7 @@
   {
    "slug": "raiffeisenbank-gymnich-festgeld-de-check24",
    "bank": "Raiffeisenbank Gymnich",
+   "bank_key": "raiffeisenbank-gymnich",
    "institut": "Raiffeisenbank Gymnich eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -13481,6 +13505,7 @@
   {
    "slug": "raiffeisenbank-hohenloher-land-festgeld-de-check24",
    "bank": "Raiffeisenbank Hohenloher Land",
+   "bank_key": "raiffeisenbank-hohenloher-land",
    "institut": "Raiffeisenbank Hohenloher Land eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -13571,7 +13596,8 @@
   },
   {
    "slug": "raiffeisenbank-straubing-eg-festgeld-de-raisin",
-   "bank": "Raiffeisenbank Straubing eG",
+   "bank": "Raiffeisenbank Straubing",
+   "bank_key": "raiffeisenbank-straubing",
    "institut": "Raiffeisenbank Straubing eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -13615,6 +13641,7 @@
   {
    "slug": "raiffeisenbank-werratal-landeck-festgeld-de-check24",
    "bank": "Raiffeisenbank Werratal-Landeck",
+   "bank_key": "raiffeisenbank-werratal-landeck",
    "institut": "Raiffeisenbank Werratal-Landeck eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -13682,6 +13709,7 @@
   {
    "slug": "rato-festgeld-de-raisin",
    "bank": "RATO",
+   "bank_key": "rato",
    "institut": "RATO bankas, UAB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -13731,6 +13759,7 @@
   {
    "slug": "renault-bank-direkt-festgeld-de",
    "bank": "Renault Bank direkt",
+   "bank_key": "renault-bank-direkt",
    "institut": "RCI Banque S.A. Niederlassung Deutschland",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -13792,6 +13821,7 @@
   {
    "slug": "resurs-bank-festgeld-de-raisin",
    "bank": "Resurs Bank",
+   "bank_key": "resurs-bank",
    "institut": "Resurs Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -13848,6 +13878,7 @@
   {
    "slug": "resurs-bank-festgeld-de-zinsmarkt-norisbank",
    "bank": "Resurs Bank",
+   "bank_key": "resurs-bank",
    "institut": "Resurs Bank AB",
    "produkt": "Festgeld",
    "vertrieb": "ZinsMarkt",
@@ -13915,6 +13946,7 @@
   {
    "slug": "rib-festgeld-de-check24",
    "bank": "RIB",
+   "bank_key": "rib",
    "institut": "AS \"Reģionālā investīciju banka\"",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -13970,6 +14002,7 @@
   {
    "slug": "rietumu-bank-festgeld-de-raisin",
    "bank": "Rietumu Bank",
+   "bank_key": "rietumu-bank",
    "institut": "JSC “Rietumu Banka”",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14036,7 +14069,8 @@
   },
   {
    "slug": "rietumu-banka-festgeld-de-check24",
-   "bank": "Rietumu Banka",
+   "bank": "Rietumu Bank",
+   "bank_key": "rietumu-bank",
    "institut": "JSC Rietumu Banka",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -14104,6 +14138,7 @@
   {
    "slug": "riverbank-festgeld-de-raisin",
    "bank": "RiverBank",
+   "bank_key": "riverbank",
    "institut": "RiverBank S.A",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14177,6 +14212,7 @@
   {
    "slug": "saldo-bank-festgeld-de-check24",
    "bank": "Saldo Bank",
+   "bank_key": "saldo-bank",
    "institut": "Saldo Bank UAB",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -14291,7 +14327,8 @@
   },
   {
    "slug": "sigma-bank-ag-festgeld-de-raisin",
-   "bank": "SIGMA Bank AG",
+   "bank": "SIGMA Bank",
+   "bank_key": "sigma-bank",
    "institut": "SIGMA Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14329,7 +14366,8 @@
   },
   {
    "slug": "signal-iduna-bauspar-ag-festgeld-de-raisin",
-   "bank": "SIGNAL IDUNA Bauspar AG",
+   "bank": "SIGNAL IDUNA Bauspar",
+   "bank_key": "signal-iduna-bauspar",
    "institut": "SIGNAL IDUNA Bauspar AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14396,7 +14434,8 @@
   },
   {
    "slug": "signet-bank-as-festgeld-de-raisin",
-   "bank": "Signet Bank AS",
+   "bank": "Signet Bank",
+   "bank_key": "signet-bank",
    "institut": "Signet Bank AS",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14458,6 +14497,7 @@
   {
    "slug": "smart-bank-festgeld-de-check24",
    "bank": "Smart Bank",
+   "bank_key": "smart-bank",
    "institut": "Smart Bank S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -14525,6 +14565,7 @@
   {
    "slug": "sme-bank-festgeld-de-check24",
    "bank": "SME Bank",
+   "bank_key": "sme-bank",
    "institut": "UAB SME Bank",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -14598,6 +14639,7 @@
   {
    "slug": "sme-bank-festgeld-de-raisin",
    "bank": "SME Bank",
+   "bank_key": "sme-bank",
    "institut": "UAB SME Bank",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14671,6 +14713,7 @@
   {
    "slug": "solution-bank-festgeld-de-raisin",
    "bank": "Solution Bank",
+   "bank_key": "solution-bank",
    "institut": "Solution Bank S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14744,6 +14787,7 @@
   {
    "slug": "sparda-bank-hannover-festgeld-de-check24",
    "bank": "Sparda-Bank Hannover",
+   "bank_key": "sparda-bank-hannover",
    "institut": "Sparda-Bank Hannover eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -14780,7 +14824,8 @@
   },
   {
    "slug": "sparda-bank-nurnberg-eg-festgeld-de-raisin",
-   "bank": "Sparda-Bank Nürnberg eG",
+   "bank": "Sparda-Bank Nürnberg",
+   "bank_key": "sparda-bank-nuernberg",
    "institut": "Sparda-Bank Nürnberg eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14818,6 +14863,7 @@
   {
    "slug": "sparkasse-chemnitz-festgeld-de-check24",
    "bank": "Sparkasse Chemnitz",
+   "bank_key": "sparkasse-chemnitz",
    "institut": "Sparkasse Chemnitz",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -14885,6 +14931,7 @@
   {
    "slug": "stadt-sparkasse-solingen-festgeld-de-raisin",
    "bank": "Stadt-Sparkasse Solingen",
+   "bank_key": "stadt-sparkasse-solingen",
    "institut": "Stadt-Sparkasse Solingen",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -14946,6 +14993,7 @@
   {
    "slug": "standard-chartered-bank-festgeld-de-raisin",
    "bank": "Standard Chartered Bank",
+   "bank_key": "standard-chartered-bank",
    "institut": "Standard Chartered Bank AG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -15007,6 +15055,7 @@
   {
    "slug": "stellantis-bank-festgeld-de",
    "bank": "Stellantis Bank",
+   "bank_key": "stellantis-bank",
    "institut": "Stellantis Bank SA Niederlassung Deutschland",
    "produkt": "Best Festgeld",
    "vertrieb": "direkt",
@@ -15080,6 +15129,7 @@
   {
    "slug": "swk-bank-festgeld-de",
    "bank": "SWK Bank",
+   "bank_key": "swk-bank",
    "institut": "SWK Bank (Südwestdeutsche Kreditbank)",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -15195,6 +15245,7 @@
   {
    "slug": "sylter-bank-festgeld-de-check24",
    "bank": "Sylter Bank",
+   "bank_key": "sylter-bank",
    "institut": "Sylter Bank eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -15256,6 +15307,7 @@
   {
    "slug": "sudtiroler-sparkasse-cassa-di-risparmio-di-bolzano-festgeld-de-raisin",
    "bank": "Südtiroler Sparkasse Cassa di Risparmio di Bolzano",
+   "bank_key": "suedtiroler-sparkasse-cassa-di-risparmio-di-bolzano",
    "institut": "Südtiroler Sparkasse AG Niederlassung München",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -15359,6 +15411,7 @@
   {
    "slug": "targobank-extra-festgeld-de",
    "bank": "TARGOBANK",
+   "bank_key": "targobank",
    "institut": "TARGOBANK AG",
    "produkt": "Extra-Festgeld",
    "vertrieb": "direkt",
@@ -15396,6 +15449,7 @@
   {
    "slug": "targobank-festgeld-de",
    "bank": "TARGOBANK",
+   "bank_key": "targobank",
    "institut": "TARGOBANK AG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -15475,6 +15529,7 @@
   {
    "slug": "tbi-bank-festgeld-de-check24",
    "bank": "TBI Bank",
+   "bank_key": "tbi-bank",
    "institut": "TBI Bank EAD",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -15542,6 +15597,7 @@
   {
    "slug": "tbi-bank-festgeld-de-raisin",
    "bank": "TBI Bank",
+   "bank_key": "tbi-bank",
    "institut": "TBI Bank EAD",
    "produkt": "Flexgeld (Festgeld mit vorzeitiger Kündigungsmöglichkeit)",
    "vertrieb": "Raisin",
@@ -15553,18 +15609,6 @@
     "freiwillig": null
    },
    "zinsen": [
-    {
-     "monate": 6,
-     "zins": 0.05,
-     "min": null,
-     "max": null
-    },
-    {
-     "monate": 9,
-     "zins": 0.1,
-     "min": null,
-     "max": null
-    },
     {
      "monate": 12,
      "zins": 3.4,
@@ -15621,6 +15665,7 @@
   {
    "slug": "tf-bank-festgeld-de-check24",
    "bank": "TF Bank",
+   "bank_key": "tf-bank",
    "institut": "Avarda Bank AB (publ) (Firmenname TF Bank)",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -15664,7 +15709,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "jaehrlich",
    "zinseszins": null,
@@ -15683,6 +15728,7 @@
   {
    "slug": "tf-bank-festgeld-de",
    "bank": "TF Bank",
+   "bank_key": "tf-bank",
    "institut": "Avarda Bank AB (publ) (Zweitfirma TF Bank)",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -15720,6 +15766,7 @@
   {
    "slug": "tf-nordic-festgeld-de-check24",
    "bank": "TF Nordic",
+   "bank_key": "tf-nordic",
    "institut": "TF Bank Nordic AB",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -15757,7 +15804,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 95000,
    "zinszahlung": "jaehrlich",
    "zinseszins": false,
@@ -15776,6 +15823,7 @@
   {
    "slug": "tyche-bank-festgeld-de-raisin",
    "bank": "Tyche Bank",
+   "bank_key": "tyche-bank",
    "institut": "Tyche Bank S.p.A",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -15849,6 +15897,7 @@
   {
    "slug": "umweltbank-festgeld-de",
    "bank": "UmweltBank",
+   "bank_key": "umweltbank",
    "institut": "UmweltBank AG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -15916,6 +15965,7 @@
   {
    "slug": "unicredit-nv-sa-festgeld-de-raisin",
    "bank": "UniCredit NV/SA",
+   "bank_key": "unicredit-nv-sa",
    "institut": "AION Bank SA/NV German branch",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -15958,7 +16008,7 @@
      "max": null
     }
    ],
-   "min_anlage": 1,
+   "min_anlage": null,
    "max_anlage": 100000,
    "zinszahlung": "endfaellig",
    "zinseszins": false,
@@ -15977,6 +16027,7 @@
   {
    "slug": "union-bank-festgeld-de-check24",
    "bank": "Union-Bank",
+   "bank_key": "union-bank",
    "institut": "Union-Bank Aktiengesellschaft",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16020,6 +16071,7 @@
   {
    "slug": "urbo-festgeld-de-check24",
    "bank": "URBO",
+   "bank_key": "urbo-bankas",
    "institut": "Urbo Bankas UAB",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16080,7 +16132,8 @@
   },
   {
    "slug": "urbo-bankas-festgeld-de-raisin",
-   "bank": "Urbo Bankas",
+   "bank": "URBO",
+   "bank_key": "urbo-bankas",
    "institut": "Urbo Bankas UAB",
    "produkt": "Flexgeld (Festgeld mit vorzeitiger Kündigungsmöglichkeit)",
    "vertrieb": "Raisin",
@@ -16141,7 +16194,8 @@
   },
   {
    "slug": "vakifbank-international-festgeld-de-check24",
-   "bank": "VakifBank International",
+   "bank": "VakıfBank",
+   "bank_key": "vakifbank-international",
    "institut": "VakifBank International AG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16221,6 +16275,7 @@
   {
    "slug": "vakifbank-termingeld-de",
    "bank": "VakıfBank",
+   "bank_key": "vakifbank-international",
    "institut": "VakıfBank International AG (Zweigniederlassung Deutschland)",
    "produkt": "Termingeld",
    "vertrieb": "direkt",
@@ -16306,6 +16361,7 @@
   {
    "slug": "vereinigte-volksbank-raiffeisenbank-festgeld-de-check24",
    "bank": "Vereinigte Volksbank Raiffeisenbank",
+   "bank_key": "vereinigte-volksbank-raiffeisenbank",
    "institut": "Vereinigte Volksbank Raiffeisenbank eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16421,6 +16477,7 @@
   {
    "slug": "vivibanca-festgeld-de-check24",
    "bank": "ViViBanca",
+   "bank_key": "vivibanca",
    "institut": "ViViBanca S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16482,6 +16539,7 @@
   {
    "slug": "vivibanca-festgeld-de-raisin",
    "bank": "ViViBanca",
+   "bank_key": "vivibanca",
    "institut": "ViViBanca S.p.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -16543,6 +16601,7 @@
   {
    "slug": "volksbank-franken-festgeld-de-check24",
    "bank": "Volksbank Franken",
+   "bank_key": "volksbank-franken",
    "institut": "Volksbank Franken eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16586,6 +16645,7 @@
   {
    "slug": "volksbank-hameln-stadthagen-festgeld-de-check24",
    "bank": "Volksbank Hameln-Stadthagen",
+   "bank_key": "volksbank-hameln-stadthagen",
    "institut": "Volksbank Hameln-Stadthagen eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16635,6 +16695,7 @@
   {
    "slug": "volksbank-kurpfalz-festgeld-de-check24",
    "bank": "Volksbank Kurpfalz",
+   "bank_key": "volksbank-kurpfalz",
    "institut": "Volksbank Kurpfalz eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16689,7 +16750,8 @@
   },
   {
    "slug": "volksbank-marl-recklinghausen-eg-festgeld-de-raisin",
-   "bank": "Volksbank Marl-Recklinghausen eG",
+   "bank": "Volksbank Marl-Recklinghausen",
+   "bank_key": "volksbank-marl-recklinghausen",
    "institut": "Volksbank Marl-Recklinghausen eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -16733,6 +16795,7 @@
   {
    "slug": "volksbank-mittweida-festgeld-de-raisin",
    "bank": "Volksbank Mittweida",
+   "bank_key": "volksbank-mittweida",
    "institut": "Volksbank Mittweida eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -16806,6 +16869,7 @@
   {
    "slug": "volksbank-raiffeisenbank-bayern-mitte-festgeld-de-check24",
    "bank": "Volksbank Raiffeisenbank Bayern Mitte",
+   "bank_key": "volksbank-raiffeisenbank-bayern-mitte",
    "institut": "Volksbank Raiffeisenbank Bayern Mitte eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16849,6 +16913,7 @@
   {
    "slug": "volksbank-raiffeisenbank-furstenfeldbruck-festgeld-de-check24",
    "bank": "Volksbank Raiffeisenbank Fürstenfeldbruck",
+   "bank_key": "volksbank-raiffeisenbank-fuerstenfeldbruck",
    "institut": "Volksbank Raiffeisenbank Fürstenfeldbruck eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -16909,7 +16974,8 @@
   },
   {
    "slug": "volksbank-raiffeisenbank-regensburg-schwandorf-eg-festgeld-de-raisin",
-   "bank": "Volksbank Raiffeisenbank Regensburg-Schwandorf eG",
+   "bank": "Volksbank Raiffeisenbank Regensburg-Schwandorf",
+   "bank_key": "volksbank-raiffeisenbank-regensburg-schwandorf",
    "institut": "Volksbank Raiffeisenbank Regensburg-Schwandorf eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -16988,7 +17054,8 @@
   },
   {
    "slug": "volksbank-rhein-ruhr-eg-festgeld-de-raisin",
-   "bank": "Volksbank Rhein-Ruhr eG",
+   "bank": "Volksbank Rhein-Ruhr",
+   "bank_key": "volksbank-rhein-ruhr",
    "institut": "Volksbank Rhein-Ruhr eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17032,6 +17099,7 @@
   {
    "slug": "volksbank-zollernalb-festgeld-de-check24",
    "bank": "Volksbank Zollernalb",
+   "bank_key": "volksbank-zollernalb",
    "institut": "Volksbank Zollernalb eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -17081,6 +17149,7 @@
   {
    "slug": "volkswagen-bank-festgeld-de",
    "bank": "Volkswagen Bank",
+   "bank_key": "volkswagen-bank",
    "institut": "Volkswagen Bank GmbH",
    "produkt": "Festgeld",
    "vertrieb": "direkt",
@@ -17130,6 +17199,7 @@
   {
    "slug": "volkswagen-bank-plus-sparbrief-de",
    "bank": "Volkswagen Bank",
+   "bank_key": "volkswagen-bank",
    "institut": "Volkswagen Bank GmbH",
    "produkt": "Plus Sparbrief",
    "vertrieb": "direkt",
@@ -17191,6 +17261,7 @@
   {
    "slug": "vr-bank-alsheim-festgeld-de-check24",
    "bank": "VR Bank Alsheim",
+   "bank_key": "vr-bank-alsheim",
    "institut": "VR Bank eG (Alsheim)",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -17246,6 +17317,7 @@
   {
    "slug": "vr-bank-in-thuringen-festgeld-de-check24",
    "bank": "VR Bank in Thüringen",
+   "bank_key": "vr-bank-in-thueringen",
    "institut": "VR Bank in Thüringen eG",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -17288,7 +17360,8 @@
   },
   {
    "slug": "vr-bank-mittelfranken-mitte-eg-festgeld-de-raisin",
-   "bank": "VR-Bank Mittelfranken Mitte eG",
+   "bank": "VR-Bank Mittelfranken Mitte",
+   "bank_key": "vr-bank-mittelfranken-mitte",
    "institut": "VR-Bank Mittelfranken Mitte eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17331,7 +17404,8 @@
   },
   {
    "slug": "vr-bank-rottal-inn-eg-festgeld-de-raisin",
-   "bank": "VR-Bank Rottal-Inn eG",
+   "bank": "VR-Bank Rottal-Inn",
+   "bank_key": "vr-bank-rottal-inn",
    "institut": "VR-Bank Rottal-Inn eG",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17399,6 +17473,7 @@
   {
    "slug": "western-union-international-bank-festgeld-de-raisin",
    "bank": "Western Union International Bank",
+   "bank_key": "western-union-international-bank",
    "institut": "Western Union International Bank",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17442,6 +17517,7 @@
   {
    "slug": "wiener-privatbank-festgeld-de-check24",
    "bank": "Wiener Privatbank",
+   "bank_key": "wiener-privatbank",
    "institut": "Wiener Privatbank SE",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -17485,6 +17561,7 @@
   {
    "slug": "wormser-festgeld-de-raisin",
    "bank": "Wormser",
+   "bank_key": "wormser",
    "institut": "Banque Wormser Frères",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17564,6 +17641,7 @@
   {
    "slug": "wuestenrot-top-festgeld-de",
    "bank": "Wüstenrot",
+   "bank_key": "wuestenrot",
    "institut": "Wüstenrot Bausparkasse AG",
    "produkt": "Top Festgeld",
    "vertrieb": "direkt",
@@ -17667,6 +17745,7 @@
   {
    "slug": "yapi-kredi-nederland-festgeld-de-raisin",
    "bank": "Yapi Kredi Nederland",
+   "bank_key": "yapi-kredi-nederland",
    "institut": "Yapi Kredi Nederland",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17722,6 +17801,7 @@
   {
    "slug": "younited-festgeld-de-check24",
    "bank": "Younited",
+   "bank_key": "younited",
    "institut": "Younited Credit S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Check24",
@@ -17789,6 +17869,7 @@
   {
    "slug": "younited-credit-festgeld-de-raisin",
    "bank": "Younited Credit",
+   "bank_key": "younited-credit",
    "institut": "Younited Credit S.A.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -17856,6 +17937,7 @@
   {
    "slug": "ziraat-bank-festgeld-de",
    "bank": "Ziraat Bank",
+   "bank_key": "ziraat-bank",
    "institut": "Ziraat Bank International AG",
    "produkt": "Festgeld",
    "vertrieb": "direkt",

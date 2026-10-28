@@ -307,6 +307,14 @@
   "D13": {
    "id": "D13",
    "uid": "at:wise-karte"
+  },
+  "D14": {
+   "id": "D14",
+   "uid": "at:curve-pay"
+  },
+  "D15": {
+   "id": "D15",
+   "uid": "at:crypto-com-visa-card"
   }
  },
  "de": {

@@ -16,7 +16,8 @@ Alles neu bauen: `bash tools/build.sh` (idempotent, danach committen).
 - `festgeld.py` – Festgeld-Vergleich je Land: Liste mit Zinsrechner und Filtern (`assets/festgeld.js`), Laufzeit-Seiten, Angebotsseiten, Methodik, JSON/CSV-Export; Rechnung wird in `check.py` gegen `festgeld.js` geprüft.
 - `lohnt.py` – Seiten „Ab wann lohnt sich …?“ und der Block „Top-Karten, je nachdem wie du sie nutzt“ auf den Bestenlisten.
 - `score.py` – Bewertung nach der Finvallo-Methodik.
-- `ratgeber.py`, `rechner.py`, `landing.py` – Ratgeber, Finanzrechner, Startseiten.
+- `ratgeber.py` (+ `ratgeber_*.py` je Thema und Land: Karten, Girokonto `ratgeber_girokonto*`/`ratgeber_konto*`, Festgeld `ratgeber_festgeld*`), `rechner.py`, `landing.py` – Ratgeber, Finanzrechner, Startseiten.
+- `hubs.py` – Übersichten je Land: `/bestenlisten/` (alle Bestenlisten der drei Vergleiche) und `/methodik/` (alle Bewertungsregeln).
 - `header.py` – Header/Navigation auf allen Seiten.
 - `cleanup.py` – entfernt interne Notizen und vereinheitlicht Texte.
 - `listui.py` – Filter und Fußnoten in den Kartenlisten.

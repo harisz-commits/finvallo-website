@@ -3887,10 +3887,6 @@
  ],
  "nicht_aufgenommen": [
   {
-   "name": "HypoVereinsbank (HVB) alle Girokonten",
-   "grund": "Nicht erfasst: hypovereinsbank.de sperrt den Zugriff aus dieser Umgebung (IP-Sperre, auch WebFetch 403). Keine Bankquelle prüfbar, daher lieber nichts als geraten."
-  },
-  {
    "name": "Deutsche Bank db PlusKonto, Guthabenkonto, Einzelabrechnung",
    "grund": "Laut PLV nicht mehr im Angebot, kein Neuabschluss"
   },

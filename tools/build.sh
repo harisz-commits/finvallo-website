@@ -4,6 +4,7 @@ set -e; cd "$(dirname "$0")/.."
 python3 tools/karten.py
 python3 tools/girokonto.py
 python3 tools/festgeld.py
+python3 tools/hubs.py
 python3 tools/lohnt.py
 python3 tools/rechnen.py seite
 python3 tools/ratgeber.py

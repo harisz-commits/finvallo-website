@@ -955,7 +955,7 @@
     "gemeinschaftskonto"
    ],
    "gruppe": "AT_B",
-   "bank_key": "bni-banco-de-neg-cios-internacional-europa",
+   "bank_key": "banco-bni-europa",
    "bank_slug": "banco-bni-europa"
   },
   {
@@ -1019,7 +1019,7 @@
    "hinweis": "Gestaffelter Fixzins, angegeben ist der Durchschnittszins bei voller Laufzeit: 6 M (1,75 %/2,25 %), 12 M (2,55 %/2,7 %/3 %), 24 M (2 %/2,3 %/2,5 %). Nach Laufzeitende 0,01 % p.a.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "unicredit-bank-austria",
+   "bank_key": "bank-austria",
    "bank_slug": "bank-austria"
   },
   {
@@ -1097,7 +1097,7 @@
     "gemeinschaftskonto"
    ],
    "gruppe": "AT_B",
-   "bank_key": "bank-dimare-limited",
+   "bank_key": "bank-dimare",
    "bank_slug": "bank-dimare"
   },
   {
@@ -1167,7 +1167,7 @@
    "hinweis": "Bank Direkt ist die Direktbank der RLB OÖ. Nach Ablauf wird das Guthaben auf das Extrakonto gebucht bzw. das Fixzinskonto als Extrakonto zum Basiszins weitergeführt; die Bank kann ein Wiederveranlagungsangebot machen. Maximalsaldo ab 05.10.2026 500.000 €.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "raiffeisenlandesbank-oberoesterreich",
+   "bank_key": "bank-direkt",
    "bank_slug": "bank-direkt"
   },
   {
@@ -1427,7 +1427,7 @@
    "hinweis": "Pro Person nur ein Anlagekonto SparBox Fix (darin beliebig viele Fixzins-Einlagen); Maximaleinlage 1 Mio. € je SparBox Fix. Ein- und Auszahlungen nur über das BAWAG-Referenzkonto.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "bawag-p-s-k-bank-fuer-arbeit-und-wirtschaft-und-oesterreichische-postsparkasse",
+   "bank_key": "bawag",
    "bank_slug": "bawag"
   },
   {
@@ -1563,7 +1563,7 @@
     "gemeinschaftskonto"
    ],
    "gruppe": "AT_B",
-   "bank_key": "blueorange-bank",
+   "bank_key": "bluor-bank",
    "bank_slug": "bluor-bank"
   },
   {
@@ -1659,7 +1659,7 @@
     "gemeinschaftskonto"
    ],
    "gruppe": "AT_B",
-   "bank_key": "btg-pactual-europe",
+   "bank_key": "btg-pactual",
    "bank_slug": "btg-pactual"
   },
   {
@@ -1993,7 +1993,7 @@
    "hinweis": "Angebot laut Bank für bestehende inländische Privatkunden (DADAT-Konto nötig). Vereinbarter Zins gilt nur, wenn der Betrag binnen 4 Kalendertagen auf dem Referenzkonto verfügbar ist.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "schelhammer-capital-bank",
+   "bank_key": "dadat-bank",
    "bank_slug": "dadat-bank"
   },
   {
@@ -2205,13 +2205,13 @@
    "hinweis": "Max. 500.000 € pro Kunde über Täglich Fällig und Festgeld zusammen. Festgeld wird im Online-Banking aus dem Täglich-Fällig-Konto eröffnet.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "bankhaus-denzel",
+   "bank_key": "denzel-bank",
    "bank_slug": "denzel-bank"
   },
   {
    "id": "easybank-easy-geldmarkt-at",
    "markt": "at",
-   "bank": "BAWAG",
+   "bank": "easybank",
    "institut": "BAWAG P.S.K. Bank für Arbeit und Wirtschaft und Österreichische Postsparkasse AG",
    "produkt": "easy geldmarkt",
    "vertrieb": "direkt",
@@ -2283,8 +2283,8 @@
     "zinszahlung"
    ],
    "gruppe": "AT_A",
-   "bank_key": "bawag-p-s-k-bank-fuer-arbeit-und-wirtschaft-und-oesterreichische-postsparkasse",
-   "bank_slug": "bawag"
+   "bank_key": "easybank",
+   "bank_slug": "easybank"
   },
   {
    "id": "guber-banca-festgeld-at-raisin",
@@ -2529,7 +2529,7 @@
   {
    "id": "hoist-finance-festgeld-at-raisin",
    "markt": "at",
-   "bank": "Hoist Finance (HoistSpar)",
+   "bank": "HoistSpar",
    "institut": "Hoist Finance AB.",
    "produkt": "Festgeld",
    "vertrieb": "Raisin",
@@ -2607,8 +2607,8 @@
     "gemeinschaftskonto"
    ],
    "gruppe": "AT_B",
-   "bank_key": "hoist-finance",
-   "bank_slug": "hoist-finance-hoistspar"
+   "bank_key": "hoistspar",
+   "bank_slug": "hoistspar"
   },
   {
    "id": "holm-bank-festgeld-at-raisin",
@@ -2749,7 +2749,7 @@
    "hinweis": "24 Monate als 'Festgeld Grün'. Voraussetzungen: Hauptwohnsitz und alleinige Steuerpflicht in Österreich, legitimiertes EU/EWR-Girokonto, nur Einzelkonto; max. 300.000 € pro Veranlagung.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "hypo-noe-landesbank-fuer-niederoesterreich-und-wien",
+   "bank_key": "hypo-noe",
    "bank_slug": "hypo-noe"
   },
   {
@@ -2831,7 +2831,7 @@
    "hinweis": "Nur mit Hypo-Tirol-Konto; Neukunden müssen zuerst ein Girokonto eröffnen. Keine Konditionenblatt-Details (Mindestbetrag, Zinszahlung, Kündigung) öffentlich gefunden.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "hypo-tirol-bank",
+   "bank_key": "hypo-tirol",
    "bank_slug": "hypo-tirol"
   },
   {
@@ -2883,7 +2883,7 @@
    "hinweis": "Höhe nach oben unbegrenzt; Einzug per SEPA-Lastschrift vom Referenzkonto. Laufzeit nur 12 Monate im Aktionszeitraum.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "hypo-vorarlberg-bank",
+   "bank_key": "hypo-vorarlberg",
    "bank_slug": "hypo-vorarlberg"
   },
   {
@@ -2953,7 +2953,7 @@
    "hinweis": "Online-Abschluss (Unterlagen per Post) für Volljährige mit Wohnsitz in AT, DE, LI oder CH; nach Ablauf gelten Tagesgeld-Konditionen. Aufstockung/Verlängerung während der Laufzeit nicht möglich.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "hypo-vorarlberg-bank",
+   "bank_key": "hypo-vorarlberg",
    "bank_slug": "hypo-vorarlberg"
   },
   {
@@ -3217,7 +3217,7 @@
     "gemeinschaftskonto"
    ],
    "gruppe": "AT_B",
-   "bank_key": "investitionsbank-trentino-suedtirol-mediocredito-trentino-alto-adige",
+   "bank_key": "investitionsbank-trentino-suedtirol",
    "bank_slug": "investitionsbank-trentino-suedtirol"
   },
   {
@@ -3313,7 +3313,7 @@
     "steuer_auto"
    ],
    "gruppe": "AT_B",
-   "bank_key": "klarna-bank",
+   "bank_key": "klarna",
    "bank_slug": "klarna"
   },
   {
@@ -3455,7 +3455,7 @@
    "hinweis": "Zins hängt vom Betrag ab (ab 10.000 € höherer Satz). Keine Mindestanlage; max. 500.000 € pro Kunde über alle Einlagekonten. Keine automatische Prolongation, Erinnerung 30 Tage vor Ablauf.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "kommunalkredit-austria",
+   "bank_key": "kommunalkredit-invest",
    "bank_slug": "kommunalkredit-invest"
   },
   {
@@ -3761,7 +3761,7 @@
    "hinweis": "Festgeld wird aus dem Tagesgeldkonto angelegt; Verlängerung kann ab 30 Tagen vor Ablauf im E-Banking eingestellt werden. Zinsberechnung 30/360.",
    "sek": [],
    "gruppe": "AT_B",
-   "bank_key": "rci-banque",
+   "bank_key": "renault-bank-direkt",
    "bank_slug": "renault-bank-direkt"
   },
   {
@@ -4081,7 +4081,7 @@
    "hinweis": "Einmalerlag ab 1.000 €, ab 18 Jahren; Sparbetrag muss binnen 30 Bankwerktagen auf dem FLEX Sparkonto eingehen. Zinsen auf der Webseite ohne Datumsangabe.",
    "sek": [],
    "gruppe": "AT_A",
-   "bank_key": "wuestenrot-bank",
+   "bank_key": "wuestenrot",
    "bank_slug": "wuestenrot"
   },
   {
@@ -4165,7 +4165,7 @@
     "gemeinschaftskonto"
    ],
    "gruppe": "AT_B",
-   "bank_key": "younited-credit",
+   "bank_key": "younited",
    "bank_slug": "younited"
   }
  ],

@@ -18,6 +18,8 @@ RewriteRule ^(.*)$ https://finvallo.com/$1 [R=301,L]
 Redirect 301 /at/kreditkarten/anbieter/ https://finvallo.com/at/kreditkarten/alle/
 Redirect 301 /at/kreditkarten/anbieter/bitpanda/ https://finvallo.com/at/kreditkarten/bitpanda-karte/
 Redirect 301 /at/kreditkarten/anbieter/bunq/ https://finvallo.com/at/kreditkarten/bunq-karte/
+Redirect 301 /at/kreditkarten/anbieter/crypto-com/ https://finvallo.com/at/kreditkarten/crypto-com-visa-card/
+Redirect 301 /at/kreditkarten/anbieter/curve/ https://finvallo.com/at/kreditkarten/curve-pay/
 Redirect 301 /at/kreditkarten/anbieter/santander/ https://finvallo.com/at/kreditkarten/santander-card/
 Redirect 301 /at/kreditkarten/anbieter/tf-bank/ https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/
 Redirect 301 /at/kreditkarten/anbieter/trade-republic/ https://finvallo.com/at/kreditkarten/trade-republic-karte/
