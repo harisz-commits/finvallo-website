@@ -362,6 +362,7 @@ def list_page(ks,secs,d):
 <h1>Girokonto-Vergleich {N}</h1>
   <p class="lede">{n} Girokonten von {nb} Banken, die überall in {N} Kundinnen und Kunden annehmen. Jede Zahl stammt aus der Entgeltinformation oder Preisliste der Bank. Sortiert nach unserer Bewertung, Provisionen haben keinen Einfluss.</p>
   <p class="note" style="margin:6px 0 14px">Bestenlisten: {" · ".join(f'<a class="lnk" href="bestenlisten/{c["k"]}/">{E(c["t"])}</a>' for c in GCATS)}{rgline(P,"<br>")}</p>
+  {f'<p class="note">Geld, das du länger nicht brauchst, bringt auf dem Girokonto kaum Zinsen. Was du für feste Laufzeiten bekommst, zeigt der <a class="lnk" href="{P}{LAND}/festgeld/">Festgeld-Vergleich {N}</a>.</p>' if os.path.exists(R+f'{LAND}/festgeld/index.html') else ''}
   {calcbox()}
   {filterbox(n)}
   <details class="box howscore"><summary><span><b>So entstehen die Sterne</b><br><small>6 Kriterien, feste Regeln, offene Gewichtung</small></span><span class="lnk">anzeigen</span></summary>

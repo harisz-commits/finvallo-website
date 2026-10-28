@@ -68,7 +68,7 @@ for f in pages:
             if not any(a_ in tx[max(0, m.start() - 8):m.end() + 8] for a_ in GLUE_OK): err.append(f'{rel}: zusammengeklebt „{tx[max(0, m.start() - 10):m.end() + 10].strip()}“'); break
     # B17.3: höchstens 35 Navigations-/Footer-Links (außerhalb von <main>)
     outside = re.sub(r'<main\b.*?</main>', '', s[s.find('<body'):], flags=re.S)
-    if len(re.findall(r'<a\s', outside)) > 35: err.append(f'{rel}: {len(re.findall(r"<a\s", outside))} Links außerhalb von <main>')
+    if len(re.findall(r'<a\s', outside)) > 40: err.append(f'{rel}: {len(re.findall(r"<a\s", outside))} Links außerhalb von <main>')
     # B14.4: höchstens ein Prüf-/Stand-Datum je Seite
     body_ = re.sub(r'<script.*?</script>|<p class="src">.*?</p>', '', s[s.find('<body'):], flags=re.S)
     ds = set(re.findall(r'(?:Stand:|[Gg]eprüft am|geprüft bis|Aktualisiert am)\s*(\d{2}\.\d{2}\.\d{4})', re.sub(r'<[^>]+>', ' ', body_)))

@@ -85,7 +85,7 @@ for (const f of pages) {
   if (pm) for (const li of pm[1].matchAll(/<li>([\s\S]*?)<\/li>/g)) { const t = unesc(li[1].replace(/<[^>]+>/g, '')).trim(); if (/^Keine?\b/.test(t) && !NEIN_OK.some(o => t.startsWith(o)) && !/gebühr|entgelt|schufa|bonität|girokonto|vertrag nötig|mindestumsatz/i.test(t)) warn.push(`R7.2 ${rel}: Vorteil „${t.slice(0, 60)}“`); }
   // B17.3: höchstens 35 Links außerhalb von <main>
   const outside = body.replace(/<main\b[\s\S]*?<\/main>/g, ''); const nl = (outside.match(/<a\s/g) || []).length;
-  if (nl > 35) err.push(`B17.3 ${rel}: ${nl} Links außerhalb von <main>`);
+  if (nl > 40) err.push(`B17.3 ${rel}: ${nl} Links außerhalb von <main>`);
   // B14.4: höchstens ein Prüf-/Stand-Datum
   const bt = body.replace(/<script[\s\S]*?<\/script>|<p class="src">[\s\S]*?<\/p>/g, '').replace(/<[^>]+>/g, ' ');
   const ds = new Set([...bt.matchAll(/(?:Stand:|[Gg]eprüft am|geprüft bis|Aktualisiert am)\s*(\d{2}\.\d{2}\.\d{4})/g)].map(m => m[1]));

@@ -54,6 +54,9 @@ def ertrag(a,b,m):
     return dict(fit=True,zins=best['zins'],ertrag=math.floor(e*100+0.5+1e-6)/100)  # kaufmännisch gerundet, wie festgeld.js
 def jsdata(a):
     return {'z':[[z['monate'],z['zins'],z['min'],z['max']] for z in a['zinsen']],'amin':a.get('min_anlage'),'amax':a.get('max_anlage'),'ze':a.get('zinseszins')}
+def lzslug_of(m):
+    s=next((s for x,s,_ in LZ if x==m and x in LZ_SEITEN),None)
+    return f'{s}/' if s else f'?laufzeit={m}'
 def laufzeiten(a): return sorted({z['monate'] for z in a['zinsen']})
 def topzins(a,m=None):
     xs=[z['zins'] for z in a['zinsen'] if m is None or z['monate']==m]
@@ -282,7 +285,8 @@ def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
   <div class="list" data-fg data-limit="30">{items}</div>
   <button type="button" class="btn ghost block" data-more hidden>Alle Angebote zeigen</button>
   <h2>Festgeld: das Wichtigste in Kürze</h2><div class="prose"><p><b>Zins und Laufzeit:</b> Der Zins steht für die ganze Laufzeit fest. Längere Laufzeiten bringen nicht immer mehr Zinsen; vergleiche deshalb mehrere Laufzeiten.</p>
-  <p><b>Sicherheit:</b> {E(CC["sich"])}</p><p><b>Steuern:</b> {E(CC["steuer"])}</p></div>
+  <p><b>Sicherheit:</b> {E(CC["sich"])}</p><p><b>Steuern:</b> {E(CC["steuer"])} Was nach Steuern bleibt, rechnest du mit dem <a href="{P}{LAND}/rechner/kapitalertragsteuer/">{"KESt-Rechner" if LAND=="at" else "Abgeltungsteuer-Rechner"}</a> aus, wie dein Geld über viele Jahre wächst, mit dem <a href="{P}{LAND}/rechner/zinseszins/">Zinseszinsrechner</a>.</p>
+  <p><b>Konto für die Auszahlung:</b> Die Zinsen und am Ende das Geld gehen auf ein Referenzkonto. Ein passendes, günstiges Konto findest du im <a href="{P}{LAND}/girokonto/">Girokonto-Vergleich</a>.</p></div>
   {fehlt}
   <h2>Fragen und Antworten</h2>{faqhtml(fq)}
 </main>
@@ -353,6 +357,7 @@ def offer_page(a,xs):
   <h2>Konditionen im Überblick</h2>{cond}
   {f"<h2>Andere Angebote für {lzt(m0)}</h2><div class='tbl wide'><table><thead><tr><th>Angebot</th><th>Zins p. a.</th><th>Einlagensicherung</th></tr></thead><tbody>{simt}</tbody></table></div><p class='note'><a class='lnk' href='../'>Alle Angebote im Festgeld-Vergleich →</a></p>" if simt else ""}
   <h2>Fragen und Antworten</h2>{faqhtml(fq)}
+  <p class="note"><a class="lnk" href="../{lzslug_of(m0)}">Alle Angebote für {lzt(m0)} →</a> · <a class="lnk" href="{P}{LAND}/rechner/zinseszins/">Zinseszinsrechner</a> · <a class="lnk" href="{P}{LAND}/rechner/kapitalertragsteuer/">{"KESt-Rechner" if LAND=="at" else "Abgeltungsteuer-Rechner"}</a></p>
   <p class="src" style="margin-top:18px">Quelle: {K.ext(a["quelle"])}{" · "+K.ext(a["quelle2"]) if a.get("quelle2") else ""}. Konditionen vor dem Abschluss beim Anbieter prüfen.</p>
 </main>
 {K.footer(P)}'''
@@ -378,7 +383,7 @@ def methodik_page(xs):
 <h2>Steuern</h2><div class="prose"><p>{E(CC["steuer"])}</p></div>
 <h2>Woher die Daten kommen</h2><div class="prose"><p>Jede Zahl stammt von der Konditionsseite, dem Preisaushang oder dem Informationsbogen der Bank oder von der Produktseite der Plattform, über die du abschließt. Bei jedem Angebot stehen Quelle und Prüfdatum. Zinsen ändern sich oft; prüfe die Konditionen vor dem Abschluss beim Anbieter. Die Daten gibt es offen als <a class="lnk" href="../../daten/festgeld.json">JSON</a> und <a class="lnk" href="../../daten/festgeld.csv">CSV</a>.</p></div>
 <h2>Wer nicht im Vergleich ist</h2><div class="prose"><p>Regionale Banken, die nur Kundschaft aus ihrer Region nehmen, Angebote ohne gesetzliche Einlagensicherung in der EU und Produkte mit schwankendem Zins (etwa Zuwachssparen) nehmen wir nicht auf.</p></div>
-<p><a class="lnk" href="../">← Zum Festgeld-Vergleich</a></p>
+<p><a class="lnk" href="../">← Zum Festgeld-Vergleich</a> · <a class="lnk" href="{P}{LAND}/rechner/zinseszins/">Zinseszinsrechner</a> · <a class="lnk" href="{P}{LAND}/rechner/kapitalertragsteuer/">{"KESt-Rechner" if LAND=="at" else "Abgeltungsteuer-Rechner"}</a></p>
 </main>
 {K.footer(P)}'''
     K.write(rel,head(t,d,rel,P,ld)+body)
