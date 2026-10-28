@@ -1,0 +1,1518 @@
+[
+ {
+  "id": "ziraat-bank-festgeld-de",
+  "markt": "de",
+  "bank": "Ziraat Bank",
+  "institut": "Ziraat Bank International AG",
+  "produkt": "Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://ziraatbank.de/de/festgeld",
+  "sitz": "DE",
+  "zweigniederlassung": false,
+  "einlagensicherung": {
+   "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+   "betrag": 100000,
+   "freiwillig": "Mitglied im Einlagensicherungsfonds des Bundesverbandes deutscher Banken (Sicherungsgrenze seit 2025 max. 3 Mio. € je natürliche Person bzw. 8,75 % der Eigenmittel)"
+  },
+  "zinsen": [
+   {
+    "monate": 3,
+    "zins": 2.4,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 2.8,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.41,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.41,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.41,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 2.95,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 2.85,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 2500,
+  "max_anlage": 1000000,
+  "zinszahlung": "wahlweise",
+  "zinszahlung_text": "bis 1 Jahr Laufzeit am Ende; ab 1 Jahr wahlweise jährlich oder am Laufzeitende (Gutschrift auf das Kombikonto)",
+  "zinseszins": false,
+  "steuer": "Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": "nein",
+  "kuendigung_text": "vorzeitige Verfügung grundsätzlich ausgeschlossen, nur im Einzelfall mit Genehmigung der Bank",
+  "verlaengerung": "keine",
+  "konto_noetig": "Kombikonto bei der Ziraat Bank als Verrechnungskonto",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": null,
+  "eroeffnung": "beides",
+  "legitimation": "PostIdent oder Filiale",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://ziraatbank.de/de/festgeld",
+  "quelle2": "https://ziraatbank.de/media/zaxit4m4/hinweis-zum-umfang-der-einlagensicherung.pdf",
+  "stand": "2026-10-27",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Zinsstaffel nach Laufzeitbändern (3–5, 6–11, 12–23, 24–35, 36–47, 48–59 Monate, 60 Monate); Zinsen gelten bis 1 Mio. € pro Kunde. Wiederanlage nur mit neuem Festgeldauftrag.",
+  "sek": []
+ },
+ {
+  "id": "isbank-isweb-festgeld-de",
+  "markt": "de",
+  "bank": "İşbank",
+  "institut": "İşbank AG",
+  "produkt": "İŞWEB Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.isbank.de/digitale-kanale/isweb-festgeld",
+  "sitz": "DE",
+  "zweigniederlassung": false,
+  "einlagensicherung": {
+   "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+   "betrag": 100000,
+   "freiwillig": "Mitglied im Einlagensicherungsfonds des Bundesverbandes deutscher Banken (Sicherungsgrenze seit 2025 max. 3 Mio. € je natürliche Person bzw. 8,75 % der Eigenmittel)"
+  },
+  "zinsen": [
+   {
+    "monate": 1,
+    "zins": 2.2,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 3,
+    "zins": 2.75,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 3.2,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.5,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.5,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.55,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 2500,
+  "max_anlage": 250000,
+  "zinszahlung": "jaehrlich",
+  "zinszahlung_text": "am Laufzeitende, bei mehrjährigen Laufzeiten jährlich (Gutschrift auf das İŞWEB-Konto)",
+  "zinseszins": false,
+  "steuer": "Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": "nein",
+  "kuendigung_text": "Verfügung während der Laufzeit nicht möglich; vorzeitige Auflösung nur aus wichtigem Grund (§ 314 BGB) nach Ermessen der Bank",
+  "verlaengerung": "keine",
+  "konto_noetig": "İŞWEB-Konto als Abwicklungskonto (kostenlos)",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": null,
+  "eroeffnung": "online",
+  "legitimation": "VideoIdent (Deutsche Post)",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.isbank.de/digitale-kanale/isweb-festgeld",
+  "quelle2": "https://www.isbank.de/Dosyalar/Detay/Kundenauftrag_ISWEB-Festgeld.pdf",
+  "stand": "2026-10-27",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Festgeldauftrag wird per Fax, Post oder E-Mail-Scan erteilt; Anlagen über 250.000 € nur nach Rücksprache zu individuellen Zinsen. Nur für Wohnsitz in Deutschland, keine Minderjährigen.",
+  "sek": []
+ },
+ {
+  "id": "isbank-festgeld-de-filiale",
+  "markt": "de",
+  "bank": "İşbank",
+  "institut": "İşbank AG",
+  "produkt": "Festgeld (Filiale)",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.isbank.de/produkte/festgeld",
+  "sitz": "DE",
+  "zweigniederlassung": false,
+  "einlagensicherung": {
+   "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+   "betrag": 100000,
+   "freiwillig": "Mitglied im Einlagensicherungsfonds des Bundesverbandes deutscher Banken (Sicherungsgrenze seit 2025 max. 3 Mio. € je natürliche Person bzw. 8,75 % der Eigenmittel)"
+  },
+  "zinsen": [
+   {
+    "monate": 1,
+    "zins": 2.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 3,
+    "zins": 2.25,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 2.75,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 2500,
+  "max_anlage": null,
+  "zinszahlung": "jaehrlich",
+  "zinszahlung_text": "am Laufzeitende bzw. jährlich bei Anlagezeitraum über 12 Monate",
+  "zinseszins": false,
+  "steuer": "Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": "nein",
+  "kuendigung_text": "vorzeitige Auflösung nur aus wichtigem Grund (§ 314 BGB) nach Ermessen der Bank",
+  "verlaengerung": null,
+  "konto_noetig": "Konto bei der İşbank",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": null,
+  "eroeffnung": "filiale",
+  "legitimation": "Filiale",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.isbank.de/produkte/festgeld",
+  "quelle2": "https://www.isbank.de/Dosyalar/FooterPdfs/Preis-_und_Leistungsverzeichnis.pdf",
+  "stand": "2026-10-27",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Filialzinsen, niedriger als beim online abschließbaren İŞWEB Festgeld; bei Beträgen ab 250.000 € Kontakt zur Filiale.",
+  "sek": []
+ },
+ {
+  "id": "akbank-ak-online-festgeld-de",
+  "markt": "de",
+  "bank": "Akbank",
+  "institut": "Akbank AG",
+  "produkt": "AK-Online Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.akbank.de/de/privatkunden/Seiten/Festgeld.aspx",
+  "sitz": "DE",
+  "zweigniederlassung": false,
+  "einlagensicherung": {
+   "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+   "betrag": 100000,
+   "freiwillig": "Mitglied im Einlagensicherungsfonds des Bundesverbandes deutscher Banken (Sicherungsgrenze seit 2025 max. 3 Mio. € je natürliche Person bzw. 8,75 % der Eigenmittel)"
+  },
+  "zinsen": [
+   {
+    "monate": 1,
+    "zins": 1.75,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 3,
+    "zins": 2.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 2.9,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 9,
+    "zins": 3.1,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.26,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 18,
+    "zins": 2.9,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 2.8,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 2.8,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 2.8,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 2.8,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 2000,
+  "max_anlage": null,
+  "zinszahlung": "wahlweise",
+  "zinszahlung_text": "bis 12 Monate bei Fälligkeit; 18 Monate bei Fälligkeit oder jährlich; ab 24 Monaten jährlich (Zinsen wie angegeben) oder vierteljährlich (0,01 Prozentpunkte niedriger); Gutschrift auf das Tagesgeldkonto",
+  "zinseszins": false,
+  "steuer": "Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": "nein",
+  "kuendigung_text": "teilweise oder komplette Einlösung nicht möglich, nur unter besonderen Umständen mit Genehmigung der Bank",
+  "verlaengerung": "keine",
+  "konto_noetig": "AK-Online Tagesgeldkonto (kostenlos) als Verrechnungskonto",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": null,
+  "eroeffnung": "online",
+  "legitimation": "VideoIdent oder PostIdent",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.akbank.de/de/privatkunden/Seiten/Zinss%C3%A4tze.aspx",
+  "quelle2": "https://www.akbank.de/de/seiten/faq.aspx",
+  "stand": "2026-09-28",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Zinsen gültig ab 28.09.2026. Nur für Privatpersonen mit Wohnsitz in Deutschland; Anlagen über 3 Mio. € individuell.",
+  "sek": []
+ },
+ {
+  "id": "akbank-festgeld-alleskoenner-de",
+  "markt": "de",
+  "bank": "Akbank",
+  "institut": "Akbank AG",
+  "produkt": "AK-Online Festgeld-Alleskönner",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.akbank.de/de/privatkunden/Seiten/Festgeld-Allesk%C3%B6nner.aspx",
+  "sitz": "DE",
+  "zweigniederlassung": false,
+  "einlagensicherung": {
+   "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+   "betrag": 100000,
+   "freiwillig": "Mitglied im Einlagensicherungsfonds des Bundesverbandes deutscher Banken (Sicherungsgrenze seit 2025 max. 3 Mio. € je natürliche Person bzw. 8,75 % der Eigenmittel)"
+  },
+  "zinsen": [
+   {
+    "monate": 12,
+    "zins": 3.15,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 18,
+    "zins": 2.7,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 2.6,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 2.6,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 2.6,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 2.6,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 2000,
+  "max_anlage": null,
+  "zinszahlung": "wahlweise",
+  "zinszahlung_text": "12 Monate bei Fälligkeit; 18 Monate bei Fälligkeit oder jährlich; ab 24 Monaten jährlich (Zinsen wie angegeben) oder vierteljährlich (0,01 Prozentpunkte niedriger)",
+  "zinseszins": false,
+  "steuer": "Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": "ja",
+  "kuendigung_text": "bis zu 50 % des ursprünglichen Anlagebetrags täglich verfügbar; die übrigen 50 % bis Laufzeitende gebunden",
+  "verlaengerung": "keine",
+  "konto_noetig": "AK-Online Tagesgeldkonto (kostenlos)",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": null,
+  "eroeffnung": "online",
+  "legitimation": "VideoIdent oder PostIdent",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.akbank.de/de/privatkunden/Seiten/Festgeld-Allesk%C3%B6nner.aspx",
+  "quelle2": "https://www.akbank.de/de/privatkunden/Seiten/Zinss%C3%A4tze.aspx",
+  "stand": "2026-09-28",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Festzins für die gesamte Laufzeit, aber täglicher Zugriff auf bis zu 50 % der Anlage.",
+  "sek": []
+ },
+ {
+  "id": "akbank-ak-festgeld-telefon-de",
+  "markt": "de",
+  "bank": "Akbank",
+  "institut": "Akbank AG",
+  "produkt": "AK Festgeld (telefonische Kontoführung)",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.akbank.de/de/privatkunden/Seiten/Festgeld.aspx",
+  "sitz": "DE",
+  "zweigniederlassung": false,
+  "einlagensicherung": {
+   "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+   "betrag": 100000,
+   "freiwillig": "Mitglied im Einlagensicherungsfonds des Bundesverbandes deutscher Banken (Sicherungsgrenze seit 2025 max. 3 Mio. € je natürliche Person bzw. 8,75 % der Eigenmittel)"
+  },
+  "zinsen": [
+   {
+    "monate": 1,
+    "zins": 0.3,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 3,
+    "zins": 0.3,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 0.5,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 9,
+    "zins": 0.6,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 1.3,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 18,
+    "zins": 1.2,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 1.1,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 1.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 0.95,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 0.95,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 2000,
+  "max_anlage": 1000000,
+  "zinszahlung": "wahlweise",
+  "zinszahlung_text": "bis 12 Monate bei Fälligkeit; 18 Monate bei Fälligkeit oder jährlich; ab 24 Monaten jährlich (Zinsen wie angegeben) oder vierteljährlich (0,01 Prozentpunkte niedriger)",
+  "zinseszins": false,
+  "steuer": "Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": "nein",
+  "kuendigung_text": "Einlösung vor Fälligkeit nur unter besonderen Umständen mit Genehmigung der Bank",
+  "verlaengerung": "keine",
+  "konto_noetig": "AK Tagesgeldkonto",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": null,
+  "eroeffnung": "online",
+  "legitimation": "VideoIdent oder PostIdent; Festgeldauftrag per Formular",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.akbank.de/de/privatkunden/Seiten/Zinss%C3%A4tze.aspx",
+  "quelle2": "https://www.akbank.de/de/seiten/faq.aspx",
+  "stand": "2026-09-28",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Telefonisch/per Formular geführte Variante mit deutlich niedrigeren Zinsen als AK-Online Festgeld.",
+  "sek": []
+ },
+ {
+  "id": "denizbank-festgeld-de",
+  "markt": "de",
+  "bank": "DenizBank",
+  "institut": "DenizBank AG (Zweigniederlassung Deutschland)",
+  "produkt": "Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.denizbank.de/de/privatkunden/festgeld",
+  "sitz": "AT",
+  "zweigniederlassung": true,
+  "einlagensicherung": {
+   "system": "Einlagensicherung AUSTRIA GmbH (Abwicklung in Deutschland über die EdB)",
+   "betrag": 100000,
+   "freiwillig": null
+  },
+  "zinsen": [
+   {
+    "monate": 3,
+    "zins": 2.35,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 3.15,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 9,
+    "zins": 2.5,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 2.9,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 18,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 2.8,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 2.8,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 2.8,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 2.8,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 72,
+    "zins": 2.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 84,
+    "zins": 2.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 96,
+    "zins": 2.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 108,
+    "zins": 2.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 120,
+    "zins": 2.0,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 1000,
+  "max_anlage": null,
+  "zinszahlung": "endfaellig",
+  "zinszahlung_text": "bei Fälligkeit auf das Festgeldkonto bzw. Stammkonto",
+  "zinseszins": null,
+  "steuer": "Deutsche Zweigniederlassung; Freistellungsauftrag möglich, Abgeltungsteuer wird bei Auszahlung einbehalten.",
+  "steuer_auto": true,
+  "kuendigung": "ja_mit_abschlag",
+  "kuendigung_text": "grundsätzlich ausgeschlossen, nur ausnahmsweise im Einzelfall; dann Zins rückwirkend 0 %, Vorschusszinsen (vereinbarter Zins + ein Viertel) und Fälligstellungsgebühr",
+  "verlaengerung": "wahlweise",
+  "konto_noetig": "kostenloses Stammkonto bei der DenizBank",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": null,
+  "eroeffnung": "beides",
+  "legitimation": "PostIdent oder Video-Identifizierung",
+  "kosten": "kostenlos",
+  "aktion": "Sonderzins 3,15 % p.a. für 6 Monate vom 30.09. bis 31.10.2026 (Jubiläum 30 Jahre), danach Standardzins",
+  "quelle": "https://www.denizbank.de/de/privatkunden/festgeld",
+  "quelle2": "https://www.denizbank.de/de/kundenservice/rechtliches/einlagensicherung",
+  "stand": "2026-09-01",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Bei Fälligkeit wählbar: Auszahlung aufs Stammkonto, Wiederanlage von Kapital und Zinsen oder nur des Kapitals. Laufzeiten bis 10 Jahre; unbegrenzte Anzahl Festgeldkonten.",
+  "sek": []
+ },
+ {
+  "id": "vakifbank-termingeld-de",
+  "markt": "de",
+  "bank": "VakıfBank",
+  "institut": "VakıfBank International AG (Zweigniederlassung Deutschland)",
+  "produkt": "Termingeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://vakifbank.de/de/privatkunden/festgeld/",
+  "sitz": "AT",
+  "zweigniederlassung": true,
+  "einlagensicherung": {
+   "system": "Einlagensicherung AUSTRIA GmbH",
+   "betrag": 100000,
+   "freiwillig": null
+  },
+  "zinsen": [
+   {
+    "monate": 3,
+    "zins": 2.3,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 2.45,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 9,
+    "zins": 2.5,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 18,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 3.0,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 5000,
+  "max_anlage": null,
+  "zinszahlung": "jaehrlich",
+  "zinszahlung_text": "bis 1 Jahr bei Vertragsablauf, bei mehrjährigen Anlagen jährlich; Auszahlung auf das Referenzkonto",
+  "zinseszins": false,
+  "steuer": "Bank behält Kapitalertragsteuer, Soli und ggf. Kirchensteuer ein; Freistellungsauftrag bzw. NV-Bescheinigung möglich.",
+  "steuer_auto": true,
+  "kuendigung": "ja_mit_abschlag",
+  "kuendigung_text": "ordentliche Kündigung ausgeschlossen; bei außerordentlicher Kündigung (§ 314 BGB) nur 0,01 % Zins für die bisherige Laufzeit, bereits gezahlte Zinsen werden verrechnet",
+  "verlaengerung": "automatisch",
+  "konto_noetig": "kostenloses Termingeldabwicklungskonto",
+  "referenzkonto": true,
+  "neukunden_only": false,
+  "gemeinschaftskonto": true,
+  "eroeffnung": "beides",
+  "legitimation": "PostIdent oder VideoIdent",
+  "kosten": "kostenlos",
+  "aktion": "Sonderzinsen gelten nur für Neueinlagen, nicht für Verlängerungen",
+  "quelle": "https://konto.vakifbank.at/node/zinsRules?country=de&mode=festgeld",
+  "quelle2": "https://vakifbank.de/de/bedingungen/",
+  "stand": "2026-10-27",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Zinstabelle aus dem Zinsrechner der Website (Laufzeitbänder ab 3, 6, 9, 12 ... 60 Monaten). Ohne Weisung bis 2 Werktage vor Ablauf Verlängerung zum dann gültigen Zins.",
+  "sek": []
+ },
+ {
+  "id": "oyak-anker-bank-festgeld-de",
+  "markt": "de",
+  "bank": "OYAK ANKER Bank",
+  "institut": "OYAK ANKER Bank GmbH",
+  "produkt": "Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.oyakankerbank.de/privatkunden/geldanlagen/festgeld/",
+  "sitz": "DE",
+  "zweigniederlassung": false,
+  "einlagensicherung": {
+   "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+   "betrag": 100000,
+   "freiwillig": "Mitglied im Einlagensicherungsfonds des Bundesverbandes deutscher Banken (Sicherungsgrenze seit 2025 max. 3 Mio. € je natürliche Person bzw. 8,75 % der Eigenmittel)"
+  },
+  "zinsen": [
+   {
+    "monate": 3,
+    "zins": 2.45,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 2.45,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 9,
+    "zins": 2.45,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.5,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 2.71,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 2.8,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 1.8,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 1.8,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 2500,
+  "max_anlage": null,
+  "zinszahlung": "wahlweise",
+  "zinszahlung_text": "3–12 Monate am Laufzeitende; 2–5 Jahre jährlich, wahlweise Gutschrift auf das Festgeldkonto (Zinseszins) oder Auszahlung aufs Tagesgeldkonto",
+  "zinseszins": null,
+  "steuer": "Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": null,
+  "kuendigung_text": null,
+  "verlaengerung": null,
+  "konto_noetig": "kostenloses Tagesgeldkonto wird zusätzlich geführt",
+  "referenzkonto": null,
+  "neukunden_only": false,
+  "gemeinschaftskonto": true,
+  "eroeffnung": "online",
+  "legitimation": "PostIdent",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.oyakankerbank.de/media/fojjp5qx/preisaushang_14102026.pdf",
+  "quelle2": "https://www.oyakankerbank.de/service/faq/",
+  "stand": "2026-10-14",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Deutsche Bank mit türkischem Mutterkonzern (OYAK). Anlage in Schritten von 250 €; keine Aufstockung während der Laufzeit.",
+  "sek": []
+ },
+ {
+  "id": "nexent-bank-festgeld-de",
+  "markt": "de",
+  "bank": "Nexent Bank",
+  "institut": "Nexent Bank N.V. (Zweigniederlassung Deutschland, ehemals Credit Europe Bank)",
+  "produkt": "Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.nexentbank.de/unsere-produkte/nexent-bank-festgeld/",
+  "sitz": "NL",
+  "zweigniederlassung": true,
+  "einlagensicherung": {
+   "system": "Niederländisches Einlagensicherungssystem (De Nederlandsche Bank, DNB)",
+   "betrag": 100000,
+   "freiwillig": null
+  },
+  "zinsen": [
+   {
+    "monate": 3,
+    "zins": 2.0,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 2.5,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.25,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 18,
+    "zins": 3.25,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.3,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.35,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 3.4,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 3.5,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 84,
+    "zins": 3.55,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 120,
+    "zins": 3.65,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 500,
+  "max_anlage": 250000,
+  "zinszahlung": "wahlweise",
+  "zinszahlung_text": "bis 12 Monate am Laufzeitende; mehrjährig jährlich und am Laufzeitende; bei 7 und 10 Jahren ab 20.000 € optional monatlich; Gutschrift aufs Tagesgeldkonto",
+  "zinseszins": false,
+  "steuer": "Deutsche Zweigniederlassung führt Abgeltungsteuer ab; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": "nein",
+  "kuendigung_text": "nicht vorzeitig auflösbar; nur fristlose Kündigung aus wichtigem Grund (z. B. Heirat, Wohneigentum, Tod, Arbeitslosigkeit) mit Nachweis",
+  "verlaengerung": null,
+  "konto_noetig": "kostenloses Nexent Bank Tagesgeldkonto als Verrechnungskonto",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": true,
+  "eroeffnung": "online",
+  "legitimation": null,
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.nexentbank.de/unsere-produkte/nexent-bank-festgeld/",
+  "quelle2": "https://www.nexentbank.de/service-kontakt/fragen-antworten/",
+  "stand": "2026-10-27",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Mindestanlage 500 € im Online-Banking (sonst 2.500 €); Kontoeröffnung über die Nexent Bank App. Höchstbetrag laut Zinsrechner 250.000 €.",
+  "sek": []
+ },
+ {
+  "id": "ca-auto-bank-festgeld-de",
+  "markt": "de",
+  "bank": "CA Auto Bank",
+  "institut": "CA Auto Bank S.p.A.",
+  "produkt": "Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://sparen.ca-autobank.de/",
+  "sitz": "IT",
+  "zweigniederlassung": false,
+  "einlagensicherung": {
+   "system": "Fondo Interbancario di Tutela dei Depositi (FITD, Italien)",
+   "betrag": 100000,
+   "freiwillig": null
+  },
+  "zinsen": [
+   {
+    "monate": 3,
+    "zins": 2.65,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 2.85,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.2,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 18,
+    "zins": 3.3,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.45,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.7,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 5000,
+  "max_anlage": 1000000,
+  "zinszahlung": "jaehrlich",
+  "zinszahlung_text": "am Laufzeitende, bei Laufzeiten über 12 Monaten jährlich auf das Referenzkonto",
+  "zinseszins": false,
+  "steuer": "Bank mit Sitz in Italien führt keine deutschen Steuern ab; Zinsen werden brutto gezahlt und sind selbst in der Steuererklärung anzugeben.",
+  "steuer_auto": false,
+  "kuendigung": "ja",
+  "kuendigung_text": "laut Website Zinsen zum vereinbarten Satz ohne Abzug bis zum Eingang des unterschriebenen Kündigungsformulars, Auszahlung binnen 32 Tagen; das Informationsblatt (Stand 2024) schließt die ordentliche Kündigung dagegen aus",
+  "verlaengerung": "automatisch",
+  "konto_noetig": null,
+  "referenzkonto": true,
+  "neukunden_only": false,
+  "gemeinschaftskonto": false,
+  "eroeffnung": "online",
+  "legitimation": "PostIdent (Filiale der Deutschen Post) plus unterschriebener Antrag per Post",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://sparen.ca-autobank.de/",
+  "quelle2": "https://sparen.ca-autobank.de/wp-content/uploads/sites/15/2024/06/202405-Informationsblatt-Festgeld-12-Monate.pdf",
+  "stand": "2026-10-13",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Automatische Verlängerung um die Erstlaufzeit bzw. bei über 12 Monaten um 12 Monate zum dann gültigen Zins, Widerspruch binnen 15 Tagen. Höchstbetrag 1 Mio. € über alle Konten; nur Einzelkonten. Angaben zur vorzeitigen Kündigung widersprüchlich.",
+  "sek": []
+ },
+ {
+  "id": "stellantis-bank-festgeld-de",
+  "markt": "de",
+  "bank": "Stellantis Bank (ehemals PSA Bank / Opel Bank)",
+  "institut": "Stellantis Bank SA Niederlassung Deutschland",
+  "produkt": "Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.stellantis-bank.de/festgeld",
+  "sitz": "FR",
+  "zweigniederlassung": true,
+  "einlagensicherung": {
+   "system": "Fonds de Garantie des Dépôts et de Résolution (FGDR, Frankreich)",
+   "betrag": 100000,
+   "freiwillig": null
+  },
+  "zinsen": [
+   {
+    "monate": 3,
+    "zins": 2.76,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 3.11,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.49,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.55,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 30,
+    "zins": 2.71,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.02,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 3.02,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 1000,
+  "max_anlage": 1000000,
+  "zinszahlung": "wahlweise",
+  "zinszahlung_text": "unter 12 Monaten zum Vertragsende; ab 12 Monaten jährlich, wahlweise Gutschrift auf das Festgeld (Zinseszins) oder aufs Tagesgeldkonto",
+  "zinseszins": null,
+  "steuer": "Deutsche Niederlassung führt Abgeltungsteuer, Soli und ggf. Kirchensteuer ab; Freistellungsauftrag bzw. NV-Bescheinigung möglich.",
+  "steuer_auto": true,
+  "kuendigung": "nein",
+  "kuendigung_text": "ordentliche Kündigung während der Laufzeit ausgeschlossen; nur außerordentliche Kündigung aus wichtigem Grund",
+  "verlaengerung": "wahlweise",
+  "konto_noetig": "kostenloses Stellantis Bank Tagesgeldkonto (wird miteröffnet)",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": true,
+  "eroeffnung": "online",
+  "legitimation": "VideoIdent, PostIdent oder eID",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.stellantis-bank.de/festgeld",
+  "quelle2": "https://www.stellantis-bank.de/PDF/Besondere_Geschaeftsbedingungen_Stellantis_Bank.pdf",
+  "stand": "2026-10-27",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Höchstanlage 1 Mio. € über alle Geldanlagen. Verlängerung um dieselbe Laufzeit im eBanking möglich, sonst Auszahlung aufs Tagesgeld. Wegen Systemumstellung längere Bearbeitungszeiten.",
+  "sek": []
+ },
+ {
+  "id": "jt-direktbank-festgeld-de",
+  "markt": "de",
+  "bank": "J&T Direktbank",
+  "institut": "J&T BANKA, a.s., Zweigniederlassung Deutschland",
+  "produkt": "Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.jtdirektbank.de/festgeld.html",
+  "sitz": "CZ",
+  "zweigniederlassung": true,
+  "einlagensicherung": {
+   "system": "Garantiesystem des Finanzmarktes der Tschechischen Republik",
+   "betrag": 100000,
+   "freiwillig": null
+  },
+  "zinsen": [
+   {
+    "monate": 6,
+    "zins": 2.7,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.3,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 18,
+    "zins": 3.35,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.35,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.4,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 3.4,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 3.4,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 84,
+    "zins": 3.4,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 120,
+    "zins": 3.5,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 1000,
+  "max_anlage": 250000,
+  "zinszahlung": "jaehrlich",
+  "zinszahlung_text": "jährlich zum 30.12. und am Laufzeitende auf das Tagesgeldkonto",
+  "zinseszins": false,
+  "steuer": "Bank führt Abgeltungsteuer, Soli und ggf. Kirchensteuer ab; Freistellungsauftrag möglich (kostenlos).",
+  "steuer_auto": true,
+  "kuendigung": "ja_mit_abschlag",
+  "kuendigung_text": "nur aus wichtigem Grund; dann Zins für das laufende Kalenderjahr 0 % und 60 € Bearbeitungsgebühr",
+  "verlaengerung": "wahlweise",
+  "konto_noetig": "kostenloses J&T Tagesgeldkonto (wird miteröffnet)",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": null,
+  "eroeffnung": "online",
+  "legitimation": "VideoIdent, PostIdent oder Online-Ausweisfunktion",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.jtdirektbank.de/festgeld.html",
+  "quelle2": "https://atruvia.scene7.com/is/content/atruvia/Preis-%20und-%20Leistungsverzeichnispdf-1",
+  "stand": "2026-10-27",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Höchstens 250.000 € pro Festgeldvertrag. Prolongation ab 35 Tagen vor Fälligkeit online wählbar, sonst Auszahlung aufs Tagesgeld.",
+  "sek": []
+ },
+ {
+  "id": "kt-bank-festgeldkonto-de",
+  "markt": "de",
+  "bank": "KT Bank",
+  "institut": "KT Bank AG",
+  "produkt": "KT FestgeldKonto",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.kt-bank.de/privatkunden/sparen/festgeldkonto/",
+  "sitz": "DE",
+  "zweigniederlassung": false,
+  "einlagensicherung": {
+   "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+   "betrag": 100000,
+   "freiwillig": null
+  },
+  "zinsen": [
+   {
+    "monate": 3,
+    "zins": 2.65,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 3.05,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.25,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.4,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.65,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 3.4,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 3.45,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 1000,
+  "max_anlage": 1000000,
+  "zinszahlung": "endfaellig",
+  "zinszahlung_text": "Anlagebetrag und Rendite werden nach Laufzeitende auf das KT GiroKonto ausgezahlt",
+  "zinseszins": null,
+  "steuer": "Deutsche Bank: Kapitalertragsteuer wird einbehalten; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": null,
+  "kuendigung_text": null,
+  "verlaengerung": "keine",
+  "konto_noetig": "kostenloses KT GiroKonto als Verrechnungskonto",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": null,
+  "eroeffnung": "beides",
+  "legitimation": null,
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://cal.kt-bank.de/api/DepositProduct",
+  "quelle2": "https://www.kt-bank.de/privatkunden/sparen/festgeldkonto/",
+  "stand": "2026-10-27",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Islamkonformes Festgeld: fester, garantierter Profitsatz p. a. statt Zins. Sätze gelten nur bei Abschluss im Mobile-/Online-Banking; Verlängerung nur telefonisch mit neuem Antrag.",
+  "sek": []
+ },
+ {
+  "id": "bank-of-scotland-festgeld-de",
+  "markt": "de",
+  "bank": "Bank of Scotland",
+  "institut": "Lloyds Bank GmbH (Marke Bank of Scotland)",
+  "produkt": "Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.bankofscotland.de/sparen/festgeld",
+  "sitz": "DE",
+  "zweigniederlassung": false,
+  "einlagensicherung": {
+   "system": "Entschädigungseinrichtung deutscher Banken (EdB)",
+   "betrag": 100000,
+   "freiwillig": null
+  },
+  "zinsen": [
+   {
+    "monate": 3,
+    "zins": 2.9,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 3.1,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 9,
+    "zins": 3.2,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.4,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.5,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.6,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 100,
+  "max_anlage": 500000,
+  "zinszahlung": "jaehrlich",
+  "zinszahlung_text": "bei Laufzeitende oder jährlich auf das Tagesgeldkonto",
+  "zinseszins": false,
+  "steuer": "Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": "nein",
+  "kuendigung_text": "Ein- und Auszahlungen während der Laufzeit nicht möglich",
+  "verlaengerung": "keine",
+  "konto_noetig": "kostenloses Bank of Scotland Tagesgeldkonto",
+  "referenzkonto": false,
+  "neukunden_only": false,
+  "gemeinschaftskonto": null,
+  "eroeffnung": "online",
+  "legitimation": null,
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.bankofscotland.de/sparen/festgeld",
+  "quelle2": "https://bankofscotland.de/dam/jcr:0c413433-6f9a-42fe-826b-bbf805fa38c3/Bedingungen%20Festgeld.pdf",
+  "stand": "2026-10-27",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Gleiches Angebot für Neu- und Bestandskunden; keine Wiederanlage, Festgeld wird bei Fälligkeit automatisch aufgelöst. Website blockiert automatisierte Abrufe teilweise.",
+  "sek": [
+   "einlagensicherung",
+   "steuer",
+   "steuer_auto",
+   "kuendigung",
+   "kuendigung_text"
+  ]
+ },
+ {
+  "id": "garantibank-kleeblatt-festgeld-de",
+  "markt": "de",
+  "bank": "GarantiBank",
+  "institut": "GarantiBank International N.V. (Niederlassung Düsseldorf)",
+  "produkt": "Kleeblatt-Festgeld",
+  "vertrieb": "direkt",
+  "vertrieb_url": "https://www.garantibank.de/",
+  "sitz": "NL",
+  "zweigniederlassung": true,
+  "einlagensicherung": {
+   "system": "Niederländisches Einlagensicherungssystem (DNB)",
+   "betrag": 100000,
+   "freiwillig": null
+  },
+  "zinsen": [
+   {
+    "monate": 3,
+    "zins": 2.5,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 6,
+    "zins": 2.7,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 9,
+    "zins": 2.75,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 12,
+    "zins": 3.05,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 18,
+    "zins": 3.05,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 24,
+    "zins": 3.05,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 36,
+    "zins": 3.05,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 48,
+    "zins": 3.05,
+    "min": null,
+    "max": null
+   },
+   {
+    "monate": 60,
+    "zins": 3.05,
+    "min": null,
+    "max": null
+   }
+  ],
+  "min_anlage": 2500,
+  "max_anlage": 250000,
+  "zinszahlung": "jaehrlich",
+  "zinszahlung_text": "unterjährige Laufzeiten am Ende, sonst jährlich zum 31.12. auf das Kleeblatt-Sparkonto",
+  "zinseszins": false,
+  "steuer": "Bank führt Abgeltungsteuer, Solidaritätszuschlag und ggf. Kirchensteuer automatisch ab; Freistellungsauftrag möglich.",
+  "steuer_auto": true,
+  "kuendigung": "nein",
+  "kuendigung_text": "grundsätzlich nicht möglich; in vertraglich geregelten Ausnahmefällen ohne Zinsen",
+  "verlaengerung": "wahlweise",
+  "konto_noetig": "Kleeblatt-Sparkonto (Tagesgeld) bei der GarantiBank",
+  "referenzkonto": true,
+  "neukunden_only": false,
+  "gemeinschaftskonto": true,
+  "eroeffnung": "online",
+  "legitimation": "PostIdent oder VideoIdent (IDnow)",
+  "kosten": "kostenlos",
+  "aktion": null,
+  "quelle": "https://www.tagesgeldvergleich.net/tagesgeldvergleich/garantibank-festgeld.html",
+  "quelle2": null,
+  "stand": "2026-10-27",
+  "geprueft": "2026-10-27",
+  "status": "ok",
+  "hinweis": "Bank-Website garantibank.de war für automatisierte Abrufe gesperrt (HTTP 403); alle Werte nur aus Sekundärquelle, bitte manuell prüfen. Angabe zur Maximalanlage widersprüchlich (250.000 € bzw. unbegrenzt).",
+  "sek": [
+   "zinsen",
+   "min_anlage",
+   "max_anlage",
+   "zinszahlung",
+   "zinszahlung_text",
+   "zinseszins",
+   "steuer",
+   "steuer_auto",
+   "kuendigung",
+   "kuendigung_text",
+   "verlaengerung",
+   "konto_noetig",
+   "referenzkonto",
+   "gemeinschaftskonto",
+   "eroeffnung",
+   "legitimation",
+   "einlagensicherung"
+  ]
+ }
+]

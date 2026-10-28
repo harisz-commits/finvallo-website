@@ -15,10 +15,10 @@ import karten as K
 
 R = K.R; E = K.E
 ORG = {"@type": "Organization", "@id": "https://finvallo.com/#org", "name": "Finvallo", "url": "https://finvallo.com/",
-       "logo": "https://finvallo.com/assets/og.png", "email": "hallo@finvallo.com", "founder": {"@id": "https://finvallo.com/ueber-uns/#haris"}}
+       "logo": "https://finvallo.com/assets/brand/logo-400x400.png", "email": "hallo@finvallo.com", "founder": {"@id": "https://finvallo.com/ueber-uns/#haris"}}
 PERSON = {"@type": "Person", "@id": "https://finvallo.com/ueber-uns/#haris", "name": "Haris", "url": "https://finvallo.com/ueber-uns/",
           "image": "https://finvallo.com/assets/haris.jpg", "jobTitle": "Gründer", "worksFor": {"@id": "https://finvallo.com/#org"},
-          "knowsAbout": ["Kreditkarten", "Datenanalyse", "Finanzvergleich"]}
+          "knowsAbout": ["Kreditkarten", "Girokonten", "Festgeld", "Datenanalyse", "Finanzvergleich"]}
 AUTH = {"@id": "https://finvallo.com/ueber-uns/#haris"}
 DATE = re.compile(r'\d{2}\.\d{2}\.\d{4}')
 SITE = json.load(open(os.path.join(K.SP, 'daten', 'site.json')))
@@ -31,29 +31,29 @@ def dmy(iso): return K.dmy(iso)
 # ---------- 1. Über Finvallo ----------
 UEBER = '''<h1>Über Finvallo</h1>
 <div class="prose">
-<p><b>Kurz gesagt:</b> Finvallo vergleicht Kreditkarten in Österreich und Deutschland nach festen, offenen Regeln. Wir sind keine Finanzberater, und Finvallo ist keine Finanzberatung. Wir kommen aus Daten und Analyse – und genau so arbeiten wir: Zahlen sauber sammeln, alle Karten gleich behandeln, das Ergebnis verständlich zeigen.</p>
+<p><b>Kurz gesagt:</b> Finvallo vergleicht Kreditkarten, Girokonten und Festgeld in Österreich und Deutschland nach festen, offenen Regeln. Wir sind keine Finanzberater, und Finvallo ist keine Finanzberatung. Wir kommen aus Daten und Analyse – und genau so arbeiten wir: Zahlen sauber sammeln, alle Produkte gleich behandeln, das Ergebnis verständlich zeigen.</p>
 <h2>Warum es Finvallo gibt</h2>
-<p>Finvallo ist aus einem eigenen Ärger entstanden. Wer eine Kreditkarte sucht, landet auf Vergleichsseiten mit Ranglisten ohne nachvollziehbare Regeln, „Testsiegern“ ohne Test und Konditionen, die mit dem Preisblatt der Bank nicht übereinstimmen.</p>
+<p>Finvallo ist aus einem eigenen Ärger entstanden. Wer eine Kreditkarte, ein Konto oder eine sichere Anlage sucht, landet auf Vergleichsseiten mit Ranglisten ohne nachvollziehbare Regeln, „Testsiegern“ ohne Test und Konditionen, die mit dem Preisblatt der Bank nicht übereinstimmen.</p>
 <p>Dazu kommt: „Welche Karte ist die beste?“ ist die falsche Frage. Wer viel reist, braucht etwas anderes als jemand, der nur eine Reserve für Online-Käufe will. Wer im Ausland Bargeld behebt, zahlt bei manchen Karten drauf, die sonst kostenlos sind. Die richtige Frage ist: Welche Karte passt zu dem, wie du sie nutzt? Dafür gibt es Finvallo – einen Vergleich, der von deiner Nutzung ausgeht und vorrechnet, was eine Karte dich dann wirklich kostet oder bringt.</p>
 <h2>Wie wir arbeiten</h2>
-<p><b>Quelle zuerst.</b> Jede Kondition stammt aus dem Preisblatt, den Bedingungen oder der Produktseite des Anbieters. Link und Prüfdatum stehen auf jeder Kartenseite.</p>
-<p><b>Gleiche Regeln für alle.</b> Sieben Kriterien, feste Gewichte, öffentlich einsehbar. Keine Karte bekommt einen Bonus, weil sie Provision zahlt, und keine einen Abzug, weil sie keine zahlt. <a class="lnk" href="../at/kreditkarten/methodik/">→ So entstehen die Sterne</a></p>
-<p><b>Nutzung statt Bauchgefühl.</b> Unsere Rechner zeigen, was eine Karte bei deinem Umsatz, deinem Auslandsanteil und deinen Bargeldbezügen kostet. Zwei Leute mit derselben Karte können völlig verschiedene Ergebnisse bekommen – das ist kein Fehler, das ist der Punkt.</p>
+<p><b>Quelle zuerst.</b> Jede Kondition stammt aus dem Preisblatt, der Entgeltinformation, den Bedingungen oder der Produktseite des Anbieters. Link und Prüfdatum stehen auf jeder Produktseite.</p>
+<p><b>Gleiche Regeln für alle.</b> Kreditkarten bewerten wir nach sieben, Girokonten nach sechs Kriterien mit festen Gewichten; Festgeld sortieren wir nach Zins für Betrag und Laufzeit. Alles öffentlich einsehbar. Kein Produkt bekommt einen Bonus, weil der Anbieter Provision zahlt, und keines einen Abzug, weil er keine zahlt. <a class="lnk" href="../at/methodik/">→ So bewerten wir (Österreich)</a> · <a class="lnk" href="../de/methodik/">→ Deutschland</a></p>
+<p><b>Nutzung statt Bauchgefühl.</b> Unsere Rechner zeigen, was eine Karte bei deinem Umsatz, deinem Auslandsanteil und deinen Bargeldbezügen kostet, was ein Konto bei deinem Gehaltseingang kostet und was Festgeld bei deinem Betrag und deiner Laufzeit bringt. Zwei Leute mit demselben Produkt können völlig verschiedene Ergebnisse bekommen – das ist kein Fehler, das ist der Punkt.</p>
 <p><b>Geld.</b> Finvallo finanziert sich über gekennzeichnete Affiliate-Links. Bewertung und Reihenfolge stehen fest, bevor wir prüfen, ob es ein Partnerprogramm gibt. <a class="lnk" href="../so-verdienen-wir-geld/">→ So verdient Finvallo Geld</a></p>
 <p><b>Aktualität.</b> Banken ändern Preise ohne Ankündigung. Wir prüfen die Konditionen regelmäßig nach, und jede Seite zeigt, wann zuletzt. Lückenlos ist das nicht. Wenn du eine Abweichung findest, melde sie uns – siehe unten.</p>
 <h2>Was Finvallo nicht ist</h2>
-<p>Finvallo ist keine Finanzberatung und ersetzt keine. Wir erklären, was im Preisblatt steht, und rechnen vor, was es für verschiedene Nutzungsprofile bedeutet. Ob eine Karte für dich richtig ist, entscheidest du. Beratung zu deiner persönlichen Situation bekommst du bei Stellen, die dafür da sind – in Österreich etwa beim Konsumentenschutz der Arbeiterkammer, in Deutschland bei der Verbraucherzentrale.</p>
+<p>Finvallo ist keine Finanzberatung und ersetzt keine. Wir erklären, was im Preisblatt steht, und rechnen vor, was es für verschiedene Nutzungsprofile bedeutet. Ob eine Karte, ein Konto oder eine Anlage für dich richtig ist, entscheidest du. Beratung zu deiner persönlichen Situation bekommst du bei Stellen, die dafür da sind – in Österreich etwa beim Konsumentenschutz der Arbeiterkammer, in Deutschland bei der Verbraucherzentrale.</p>
 <h2>Wer dahinter steht</h2>
 <p><img class="founder" src="/assets/haris.jpg" alt="Haris, Gründer von Finvallo" width="96" height="96"''' + IMG_ERR + '''></p>
 <p><b>Haris</b> – Gründer, Wien</p>
 <p>Hat Finvallo gebaut und betreibt es derzeit allein. Wir schreiben „wir“, weil Finvallo wachsen soll. Derzeit steckt hinter allem eine Person. Kommt aus Daten und Analyse: sammeln, prüfen, auswerten, aus Zahlen Entscheidungsgrundlagen machen. Kein Finanzberater, kein Banker – und das soll so bleiben. Finvallo liefert Regeln und Rechner, keine Empfehlungen.</p>
 <h2>Fehler gefunden?</h2>
-<p>Dann wollen wir es wissen. Schreib an <a class="lnk" href="mailto:korrektur@finvallo.com">korrektur@finvallo.com</a> mit Kartenname und Quelle. Wir korrigieren und vermerken das Datum der Korrektur auf der betroffenen Seite.</p>
+<p>Dann wollen wir es wissen. Schreib an <a class="lnk" href="mailto:korrektur@finvallo.com">korrektur@finvallo.com</a> mit Produktname und Quelle. Wir korrigieren und vermerken das Datum der Korrektur auf der betroffenen Seite.</p>
 <h2>Kontakt</h2>
 <p><a class="lnk" href="mailto:hallo@finvallo.com">hallo@finvallo.com</a> · Finvallo, Wien</p>
 </div>'''
 UT = 'Über Finvallo: Wer dahinter steht und wie wir arbeiten | Finvallo'
-UD = 'Finvallo vergleicht Kreditkarten in Österreich und Deutschland nach festen, offenen Regeln. Keine Finanzberatung. Wer dahinter steht, wie wir prüfen und wie wir Geld verdienen.'
+UD = 'Finvallo vergleicht Kreditkarten, Girokonten und Festgeld in Österreich und Deutschland nach festen, offenen Regeln. Keine Finanzberatung. Wer dahinter steht und wie wir prüfen.'
 
 def ueber(s):
     s = re.sub(r'<title>.*?</title>', f'<title>{E(UT)}</title>', s, count=1)
@@ -70,12 +70,14 @@ def ueber(s):
     return s
 
 # ---------- 2. Autorenbox ----------
-def author_box(land, title):
+def author_box(land, title, bereich='kreditkarten'):
     t = re.sub(r'\s*\|\s*Finvallo\s*$', '', H.unescape(title))
     mail = 'mailto:' + MAIL['korrektur'] + '?subject=' + quote('Korrektur: ' + t)
+    meth = {'kreditkarten': (f'/{land}/kreditkarten/methodik/', 'So entstehen die Sterne'), 'girokonto': (f'/{land}/girokonto/methodik/', 'So bewerten wir Girokonten'),
+            'festgeld': (f'/{land}/festgeld/methodik/', 'So vergleichen wir Festgeld')}.get(bereich, (f'/{land}/methodik/', 'So bewerten wir'))
     return (f'<!--author--><aside class="author-box" aria-label="Über den Autor"><img src="/assets/haris.jpg" alt="Haris" width="48" height="48"{IMG_ERR}>'
             f'<div><p><b>Haris</b> betreibt Finvallo. Er kommt aus Daten und Analyse, nicht aus der Finanzberatung – deshalb gibt es hier Regeln und Rechner statt persönlicher Beratung.</p>'
-            f'<p class="author-links"><a class="lnk" href="/ueber-uns/">Über Finvallo</a> · <a class="lnk" href="/{land}/kreditkarten/methodik/">So entstehen die Sterne</a> · <a class="lnk" href="{H.escape(mail)}">Fehler melden</a></p></div></aside><!--/author-->')
+            f'<p class="author-links"><a class="lnk" href="/ueber-uns/">Über Finvallo</a> · <a class="lnk" href="{meth[0]}">{meth[1]}</a> · <a class="lnk" href="{H.escape(mail)}">Fehler melden</a></p></div></aside><!--/author-->')
 
 def put_author(s, box, before):
     s = re.sub(r'<!--author-->.*?<!--/author-->\s*', '', s, flags=re.S)
@@ -111,7 +113,10 @@ def list_dates(s, maxd):
 
 # ---------- Links im eigenen Land (A8) ----------
 MAP = {}
-for _a, _b in json.load(open(os.path.join(K.SP, 'daten', 'hreflang-map.json')))['paare']: MAP[_a] = _b; MAP[_b] = _a
+for _fn in ('hreflang-map.json', 'hreflang-festgeld.json'):
+    _p = os.path.join(K.SP, 'daten', _fn)
+    if not os.path.exists(_p): continue
+    for _a, _b in json.load(open(_p))['paare']: MAP[_a] = _b; MAP[_b] = _a
 def land_links(s, rel):
     me = rel.split('/')[0]
     if me not in ('at', 'de'): return s
@@ -153,8 +158,7 @@ def unglue(s):
     return s[:i] + ''.join(p if p.startswith(('<script', '<style')) else GLUE.sub(r'\1 \2', p) for p in parts)
 
 # ---------- hreflang (B11) ----------
-XD = {'', 'at/', 'de/', 'at/kreditkarten/', 'de/kreditkarten/', 'at/ratgeber/', 'de/ratgeber/', 'at/rechner/', 'de/rechner/',
-      'at/kreditkarten/bestenlisten/', 'de/kreditkarten/bestenlisten/'}
+XD = {'', 'at/', 'de/'}   # x-default nur dort, wo es eine sprachneutrale Einstiegsseite gibt
 def partner(rel):
     if rel in MAP: return MAP[rel]
     me = rel.split('/')[0]
@@ -288,6 +292,13 @@ def main():
         gd = json.load(open(gp, encoding='utf-8'))
         for k in gd['konten']: GIRO[(gl, k['slug'])] = k.get('geprueft') or gd['stand']
         GIRO[(gl, '')] = GIRO[(gl, 'methodik')] = max(v for (l_, _), v in GIRO.items() if l_ == gl)
+    FEST = {}   # (land, slug) -> Prüfdatum der Festgeld-Seiten
+    for gl in ('at', 'de'):
+        fp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'daten', gl, 'festgeld.json')
+        if not os.path.exists(fp): continue
+        fd = json.load(open(fp, encoding='utf-8'))
+        for a in fd['angebote']: FEST[(gl, a['id'])] = a.get('geprueft') or fd['stand']
+        FEST[(gl, '')] = max(v for (l_, _), v in FEST.items() if l_ == gl)
     for f in sorted(glob.glob(R + '**/*.html', recursive=True)):
         rel = f[len(R):]
         rel = '' if rel == 'index.html' else rel[:-len('index.html')] if rel.endswith('index.html') else rel
@@ -391,6 +402,17 @@ def main():
                 if _d and 'description' in x and (x.get('url') == _u or (x.get('@id') or '').startswith(_u + '#')): x['description'] = _d
         s = ld_merge(s, extra, patch2)
         s = set_hreflang(s, rel)
+        if land and re.match(r'(at|de)/(girokonto|festgeld)/[a-z0-9-]+/$', rel) and not re.match(r'(at|de)/(girokonto|festgeld)/(methodik|bestenlisten|bank|[0-9]+-[a-z]+)/$', rel):
+            ttl = re.search(r'<title>(.*?)</title>', s, re.S)
+            s = put_author(s, author_box(land, ttl.group(1) if ttl else '', rel.split('/')[1]), ['<h2>Fragen und Antworten</h2>']); n['author'] += 1
+        # Vorschaubild je Bereich (Kreditkarten, Girokonto, Festgeld, Ratgeber, Rechner), sonst das allgemeine
+        sec = next((x for x in ('kreditkarten', 'girokonto', 'festgeld', 'ratgeber', 'rechner') if rel[3:].startswith(x + '/')), None) if land else None
+        og = f'https://finvallo.com/assets/og-{sec}.png' if sec and os.path.exists(R + f'assets/og-{sec}.png') else 'https://finvallo.com/assets/og.png'
+        s = re.sub(r'<meta property="og:image" content="[^"]*">(?:\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">)?', f'<meta property="og:image" content="{og}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">', s, count=1)
+        s = s.replace('"image": "https://finvallo.com/assets/og.png"', f'"image": "{og}"')
+        if rel == '404.html': s = re.sub(r'\n?<link rel="canonical" href="[^"]*">', '', s, count=1)
+        if rel not in LASTMOD and rel[3:].startswith('festgeld/') and (rel[:2], '') in FEST:
+            LASTMOD[rel] = FEST.get((rel[:2], rel[len('at/festgeld/'):].strip('/')), FEST[(rel[:2], '')])
         if rel not in LASTMOD and rel[3:].startswith('girokonto/') and (rel[:2], '') in GIRO:
             LASTMOD[rel] = GIRO.get((rel[:2], rel[len('at/girokonto/'):].strip('/')), GIRO[(rel[:2], '')])
         if rel not in LASTMOD:
@@ -427,7 +449,28 @@ def main():
         t = t.replace('\n## ', '\n## Zitieren\nBeim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.\n\n## ', 1)
         if fn == 'llms-full.txt':
             mx = max(c['geprueft'] for land in cards for c in cards[land].values() if c.get('geprueft'))
-            t = re.sub(r'\A# .*', f'# Finvallo – alle Kreditkarten in Österreich und Deutschland (Stand {dmy(mx)})', t, count=1)
+            t = re.sub(r'\A# .*', f'# Finvallo – Kreditkarten, Girokonten und Festgeld in Österreich und Deutschland (Stand {dmy(mx)})', t, count=1)
+        # „## Optional“ (überspringbar) ganz ans Ende; die Abschnitte dahinter sind regulärer Inhalt
+        m = re.search(r'\n## Optional\n(?:- .*\n?)*', t)
+        if m: t = t[:m.start()].rstrip() + '\n' + t[m.end():].rstrip() + '\n' + m.group(0).rstrip() + '\n'
+        # Schnellantworten zu Girokonto und Festgeld (nach den Kreditkarten-Zeilen)
+        t = re.sub(r'\n- (?:Bestes Girokonto|Höchster Festgeldzins)[^\n]*', '', t)
+        qa = ''
+        for land, name in (('de', 'Deutschland'), ('at', 'Österreich')):
+            gp, fp = R + f'{land}/daten/girokonten.json', R + f'{land}/daten/festgeld.json'
+            if os.path.exists(gp):
+                ks = [k for k in json.load(open(gp, encoding='utf-8'))['konten'] if k.get('rank') == 1 and k.get('art') in ('standard', 'premium')]
+                if ks: qa += f'\n- Bestes Girokonto {name} (Gesamtwertung): {ks[0]["name"]} ({ks[0]["bank"]}, {str(ks[0]["stars"]).replace(".", ",")}/5) – https://finvallo.com/{land}/girokonto/{ks[0]["slug"]}/'
+            if os.path.exists(fp):
+                best = None
+                for a in json.load(open(fp, encoding='utf-8'))['angebote']:
+                    for z in a['zinsen']:
+                        if z['monate'] == 12 and (z['min'] is None or z['min'] <= 10000) and (z['max'] is None or z['max'] >= 10000) and (a.get('min_anlage') is None or a['min_anlage'] <= 10000) and (best is None or z['zins'] > best[0]): best = (z['zins'], a)
+                if best: qa += f'\n- Höchster Festgeldzins {name} (1 Jahr, 10.000 €): {best[1]["bank"]} {best[1]["produkt"]} {str(best[0]).replace(".", ",")} % – https://finvallo.com/{land}/festgeld/{best[1]["slug"]}/'
+        i = t.find('\n## Schnellantworten')
+        if i >= 0 and qa:
+            j = t.find('\n## ', i + 1); j = j if j >= 0 else len(t)
+            t = t[:j].rstrip() + qa + '\n' + t[j:]
         open(p, 'w', encoding='utf-8').write(t)
     # C25.3: Volltext aufteilen, sobald er größer als 300 KB wird
     full = R + 'llms-full.txt'

@@ -1,0 +1,1463 @@
+[
+  {
+    "id": "easybank-easy-geldmarkt-at",
+    "markt": "at",
+    "bank": "easybank",
+    "institut": "BAWAG P.S.K. Bank für Arbeit und Wirtschaft und Österreichische Postsparkasse AG",
+    "produkt": "easy geldmarkt",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.easybank.at/easybank/sparen/easy-geldmarkt",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 1.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 13,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.2,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 2.25,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 100,
+    "max_anlage": null,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Am Laufzeitende werden Kapital und Zinsen auf das Referenzkonto überwiesen; Zeitpunkt der Zinsgutschrift bei 24/60 Monaten in den Bedingungen nicht geregelt",
+    "zinseszins": null,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig). (easybank ist eine Marke der BAWAG).",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Während der Laufzeit nicht kündbar, keine vorzeitigen Auszahlungen oder Teilbehebungen.",
+    "verlaengerung": "keine",
+    "konto_noetig": null,
+    "referenzkonto": true,
+    "neukunden_only": false,
+    "gemeinschaftskonto": true,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": "Neue Laufzeit 13 Monate mit 3,00 % p.a. seit 15.10.2026.",
+    "quelle": "https://www.easybank.at/resource/blob/55244/bad97997c68716572a843e4a306af89d/preisblatt-easy-geldmarkt-data.pdf",
+    "quelle2": "https://www.easybank.at/resource/blob/49226/0e1ec248193f30c5cb4122c292402ee1/bb-easy-geldmarkt-data.pdf",
+    "stand": "2026-10-15",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Einmalerlag je Konto (für jede neue Anlage ein neues easy geldmarkt); Referenzkonto muss ein Girokonto bei einer inländischen Bank sein. Nach Laufzeitende nur 0,01 % p.a. bis zur Auszahlung.",
+    "sek": [
+      "zinszahlung"
+    ]
+  },
+  {
+    "id": "bawag-sparbox-fix-at",
+    "markt": "at",
+    "bank": "BAWAG",
+    "institut": "BAWAG P.S.K. Bank für Arbeit und Wirtschaft und Österreichische Postsparkasse AG",
+    "produkt": "SparBox Fix",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.bawag.at/bawag/privatkunden/sparen/sparbox-fix",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 1.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 1.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 13,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 1.9,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.05,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 2.1,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 84,
+        "zins": 2.15,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 100,
+    "max_anlage": 1000000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Nach Ablauf werden Einlage und abgereifte Zinsen abgerechnet und der SparBox Flex gutgeschrieben",
+    "zinseszins": null,
+    "steuer": "KESt (bzw. EU-Quellensteuer) wird laut Bank einbehalten und an das Finanzamt abgeführt (Endbesteuerung).",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Einlagen während der Laufzeit nicht kündbar, keine vorzeitige Behebung.",
+    "verlaengerung": "keine",
+    "konto_noetig": "SparBox Flex (täglich fälliges BAWAG-Sparkonto) bzw. BAWAG Giro-/Anlagekonto als Referenzkonto; BAWAG eBanking verpflichtend",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": "13 Monate mit 3,00 % p.a. (Konditionen gültig ab 14.10.2026).",
+    "quelle": "https://www.bawag.at/resource/blob/20504/54b6ae29551cfccdfaa096ef15d2f8fa/konditionen-sparbox-fix-data.pdf",
+    "quelle2": "https://www.bawag.at/resource/blob/22464/fd2520f675d99fce399f5e41b611302e/bedingungen-und-erinnerungsservice-anlagekonto-sparbox-fix-data.pdf",
+    "stand": "2026-10-14",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Pro Person nur ein Anlagekonto SparBox Fix (darin beliebig viele Fixzins-Einlagen); Maximaleinlage 1 Mio. € je SparBox Fix. Ein- und Auszahlungen nur über das BAWAG-Referenzkonto.",
+    "sek": []
+  },
+  {
+    "id": "bank99-fixsparen99-at",
+    "markt": "at",
+    "bank": "bank99",
+    "institut": "bank99 AG",
+    "produkt": "fixsparen99",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://bank99.at/sparen/fixsparen99",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.7,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 9,
+        "zins": 2.85,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.05,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.1,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": null,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Zinsgutschrift am Ende der Laufzeit, Auszahlung (abzgl. KESt) auf das Verrechnungs-/Referenzkonto",
+    "zinseszins": null,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Vorzeitige Auflösung schriftlich oder im Online-Banking möglich; dann nur 0,01 % p.a. für die tatsächlich eingehaltene Laufzeit.",
+    "verlaengerung": "keine",
+    "konto_noetig": "bank99 Giro- oder Sparkonto als Referenzkonto, z. B. kostenloses Tagesgeldkonto flexsparen99",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "beides",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": "Weltspartag-Aktion nur bis 02.11.2026: Aktionszinsen bis 3,10 % p.a.",
+    "quelle": "https://assets.bank99.at/documents/W204_Konditionen_fixsparen99.pdf",
+    "quelle2": "https://bank99.at/sparen/fixsparen99",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Nur Einzelkonto ab 18 Jahren; Konditionenblatt 'Stand Oktober 2026' zeigt die Aktionszinsen, nach dem 02.11.2026 sind niedrigere Zinsen zu erwarten. flexsparen99 setzt Hauptwohnsitz in Österreich voraus.",
+    "sek": []
+  },
+  {
+    "id": "anadi-bank-online-festgeld-at",
+    "markt": "at",
+    "bank": "Austrian Anadi Bank",
+    "institut": "Austrian Anadi Bank AG",
+    "produkt": "Online-Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://anadibank.com/online-festgeld",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 2.35,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 6,
+        "zins": 2.45,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.75,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 500000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "Zinszuschreibung (abzgl. KESt) nach jedem vollen Laufzeitjahr, bei Laufzeiten bis 12 Monate am Laufzeitende",
+    "zinseszins": true,
+    "steuer": "KESt wird bei der Zinszuschreibung automatisch abgezogen (Endbesteuerung).",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Auszahlungen vor Laufzeitende nicht möglich; Kündigung nur aus wichtigem Grund.",
+    "verlaengerung": "wahlweise",
+    "konto_noetig": "Anadi Online-Sparen (kostenlos) als Festgeld-Verrechnungskonto; Einzug von einem EU-Girokonto auf eigenen Namen",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": "Video-Identifikation oder 1-Cent-Überweisung",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://anadibank.com/online-festgeld",
+    "quelle2": "https://anadibank.com/media/550/download",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Mindest- und Maximaleinlage gelten pro Kunde und Festgeld-Aktion. Webseite nennt kein Datum zu den Zinsen.",
+    "sek": []
+  },
+  {
+    "id": "addiko-festgeld-at",
+    "markt": "at",
+    "bank": "Addiko Bank",
+    "institut": "Addiko Bank AG",
+    "produkt": "Addiko Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.addiko.at/festgeld/",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 2.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 6,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 18,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": 150000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Kontoabschluss/Zinsgutschrift zum vereinbarten Laufzeitende (laut Konditionenblatt)",
+    "zinseszins": null,
+    "steuer": "25 % KESt wird automatisch abgezogen (Endbesteuerung).",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Vorzeitige Verfügung über die Einlage nicht möglich.",
+    "verlaengerung": "keine",
+    "konto_noetig": "Addiko Tagesgeld Konto (kostenlos) als Referenzkonto der Festgeldkonten",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "Unterschriebene Eröffnungsunterlagen per Post mit Kopie des Lichtbildausweises und der Bankkarte des Referenzkontos",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.addiko.at/static/uploads/2026/10/1.6_Konditionenblatt_2026.10.23.pdf",
+    "quelle2": "https://www.addiko.at/festgeld/",
+    "stand": "2026-10-23",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Höchsteinlage 150.000 € pro Kunde über alle Addiko-Sparkonten. Der Zinsrechner der Webseite erwähnt jährliche Zinszuschreibung, das Konditionenblatt nennt Abschluss zum Laufzeitende.",
+    "sek": []
+  },
+  {
+    "id": "denizbank-festgeld-at",
+    "markt": "at",
+    "bank": "DenizBank",
+    "institut": "DenizBank AG",
+    "produkt": "Festgeld (Online Sparen)",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.denizbank.at/at/privatkunden/festgeld",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 2.35,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 6,
+        "zins": 3.15,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 9,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.9,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 18,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 72,
+        "zins": 2.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 84,
+        "zins": 2.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 96,
+        "zins": 2.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 108,
+        "zins": 2.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 120,
+        "zins": 2.0,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": null,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Zinsen werden bei Fälligkeit gutgeschrieben",
+    "zinseszins": null,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Vorzeitige Auflösung möglich; Vorschusszinsen 1 ‰ pro vollem Monat der nicht eingehaltenen Bindung (max. bis zur Höhe der Zinsen).",
+    "verlaengerung": "wahlweise",
+    "konto_noetig": "kostenloses DenizBank Stammkonto",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": "Ident-Brief (Legitimation über die Post) bei Eröffnung des Stammkontos",
+    "kosten": "kostenlos",
+    "aktion": "6 Monate Sonderzins 3,15 % p.a. gültig 30.09.–31.10.2026, danach Standardzins laut Preisaushang.",
+    "quelle": "https://www.denizbank.at/at/privatkunden/festgeld",
+    "quelle2": "https://www.denizbank.at/at/privatkunden/stammkonto",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Österreichische Bank (Sitz Wien, Mutter Emirates NBD). Beliebig viele Festgeldkonten; am Laufzeitende Auszahlung, Wiederveranlagung von Kapital oder Kapital+Zinsen wählbar.",
+    "sek": []
+  },
+  {
+    "id": "kommunalkredit-invest-festgeld-at",
+    "markt": "at",
+    "bank": "KOMMUNALKREDIT INVEST",
+    "institut": "Kommunalkredit Austria AG",
+    "produkt": "Festgeldanlage",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.kommunalkreditinvest.at/sparkonten/festgeld",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 1.7,
+        "min": null,
+        "max": 9999.99
+      },
+      {
+        "monate": 6,
+        "zins": 2.3,
+        "min": 10000,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.4,
+        "min": null,
+        "max": 9999.99
+      },
+      {
+        "monate": 12,
+        "zins": 3.0,
+        "min": 10000,
+        "max": null
+      },
+      {
+        "monate": 18,
+        "zins": 2.4,
+        "min": null,
+        "max": 9999.99
+      },
+      {
+        "monate": 18,
+        "zins": 3.0,
+        "min": 10000,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.7,
+        "min": null,
+        "max": 9999.99
+      },
+      {
+        "monate": 24,
+        "zins": 3.3,
+        "min": 10000,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.7,
+        "min": null,
+        "max": 9999.99
+      },
+      {
+        "monate": 36,
+        "zins": 3.3,
+        "min": 10000,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 2.8,
+        "min": null,
+        "max": 9999.99
+      },
+      {
+        "monate": 60,
+        "zins": 3.4,
+        "min": 10000,
+        "max": null
+      },
+      {
+        "monate": 96,
+        "zins": 2.8,
+        "min": null,
+        "max": 9999.99
+      },
+      {
+        "monate": 96,
+        "zins": 3.4,
+        "min": 10000,
+        "max": null
+      },
+      {
+        "monate": 120,
+        "zins": 2.8,
+        "min": null,
+        "max": 9999.99
+      },
+      {
+        "monate": 120,
+        "zins": 3.4,
+        "min": 10000,
+        "max": null
+      }
+    ],
+    "min_anlage": null,
+    "max_anlage": 500000,
+    "zinszahlung": "wahlweise",
+    "zinszahlung_text": "Bis 12 Monate bei Fälligkeit; über 12 Monate wahlweise jährliche Zinsauszahlung aufs Transferkonto oder Endfälligkeit mit Zinseszins",
+    "zinseszins": null,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Vorzeitige Auflösung nach Ablauf des 14-tägigen Rücktrittsrechts vertraglich nicht vorgesehen.",
+    "verlaengerung": "keine",
+    "konto_noetig": "KOMMUNALKREDIT INVEST Transferkonto (kostenlos); Referenzkonto = Girokonto bei einer österreichischen Bank",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": true,
+    "eroeffnung": "online",
+    "legitimation": "Upload Ausweiskopie + 1-Euro-Referenzüberweisung oder VideoIdent (nur Einzelkonten)",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.kommunalkreditinvest.at/media/bedingungen__konditionen/konditionenblatt_festgeldanlagen_kommunalkredit_invest_at.pdf",
+    "quelle2": "https://www.kommunalkreditinvest.at/sparkonten/festgeld",
+    "stand": "2026-10-08",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Zins hängt vom Betrag ab (ab 10.000 € höherer Satz). Keine Mindestanlage; max. 500.000 € pro Kunde über alle Einlagekonten. Keine automatische Prolongation, Erinnerung 30 Tage vor Ablauf.",
+    "sek": []
+  },
+  {
+    "id": "bank-direkt-fixzinskonto-at",
+    "markt": "at",
+    "bank": "Bank Direkt",
+    "institut": "Raiffeisenlandesbank Oberösterreich AG",
+    "produkt": "Fixzinskonto",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto.html",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Österreichische Raiffeisen-Sicherungseinrichtung eGen (ÖRS)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.85,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 3.5,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 500000,
+    "zinszahlung": "jaehrlich",
+    "zinszahlung_text": "Zinsen werden zum Ende jedes Kalenderjahres (abzgl. KESt) dem Kapital zugeschrieben und mitverzinst; Rest am Laufzeitende",
+    "zinseszins": true,
+    "steuer": "KESt wird bei der Zinsverrechnung automatisch abgezogen (Endbesteuerung).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Rückzahlung des gesamten Betrags auf Kundenwunsch möglich; Vorschusszinsen 1 ‰ pro Monat bis Bindungsende (max. Höhe der Zinsen); keine Teilauszahlungen.",
+    "verlaengerung": "wahlweise",
+    "konto_noetig": null,
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto.html",
+    "quelle2": "https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto/_jcr_content/root/responsivegrid/tabaccordioncontaine/tabAccordionElements/tabaccordionelement/items/downloadlist.download.html/0/Bedingungen%20Fixzinskonto.pdf",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Bank Direkt ist die Direktbank der RLB OÖ. Nach Ablauf wird das Guthaben auf das Extrakonto gebucht bzw. das Fixzinskonto als Extrakonto zum Basiszins weitergeführt; die Bank kann ein Wiederveranlagungsangebot machen. Maximalsaldo ab 05.10.2026 500.000 €.",
+    "sek": []
+  },
+  {
+    "id": "wuestenrot-fix-festgeldkonto-at",
+    "markt": "at",
+    "bank": "Wüstenrot",
+    "institut": "Wüstenrot Bank AG",
+    "produkt": "Wüstenrot FIX Festgeldkonto",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.wuestenrot.at/de/kredite-und-sparen/sparen/festgeldkonto.html",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 1.55,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 6,
+        "zins": 2.35,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 18,
+        "zins": 2.55,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.75,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 2.85,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": null,
+    "zinszahlung": "wahlweise",
+    "zinszahlung_text": "'Ausschüttend': Zinsen jeweils zum Kalenderjahresende und bei Ablauf auf das FLEX Sparkonto; 'Thesaurierend': zum Kalenderjahresende dem FIX Festgeldkonto gutgeschrieben",
+    "zinseszins": null,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Keine ordentliche Kündigung vor Ablauf der Bindungsfrist, nur aus wichtigem Grund.",
+    "verlaengerung": "keine",
+    "konto_noetig": "Wüstenrot FLEX Sparkonto (kostenlos) als Verrechnungskonto",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": true,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.wuestenrot.at/de/kredite-und-sparen/sparen/festgeldkonto.html",
+    "quelle2": "https://www.wuestenrot.at/content/dam/wuestenrot-at/dokumente/bank/bedingungen-sparen.pdf.coredownload.inline.pdf",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Einmalerlag ab 1.000 €, ab 18 Jahren; Sparbetrag muss binnen 30 Bankwerktagen auf dem FLEX Sparkonto eingehen. Zinsen auf der Webseite ohne Datumsangabe.",
+    "sek": []
+  },
+  {
+    "id": "santander-bestfix-at",
+    "markt": "at",
+    "bank": "Santander Consumer Bank",
+    "institut": "Santander Consumer Bank GmbH",
+    "produkt": "Festgeldkonto BestFix",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.santanderconsumer.at/festgeld",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 2.2,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 6,
+        "zins": 2.4,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 9,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.9,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 18,
+        "zins": 2.9,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": null,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Kapitalisierung der Zinsen jeweils am 31.12.; Auszahlung samt Zinseszinsen abzgl. KESt am Laufzeitende auf das BestFlex-Konto",
+    "zinseszins": true,
+    "steuer": "Österreichische KESt (25 %) wird automatisch abgezogen (Endbesteuerung).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Jederzeit kostenlos im Online-Banking auflösbar; vereinbarter Zins bis zur Auflösung, aber Abzug von 0,10 % vom Auszahlungsbetrag pro vollem nicht eingehaltenem Monat.",
+    "verlaengerung": "keine",
+    "konto_noetig": "Tagesgeldkonto BestFlex (kostenlos)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.santanderconsumer.at/storage/590/bestsparenkonditionenblatt.pdf",
+    "quelle2": "https://www.santanderconsumer.at/festgeld",
+    "stand": "2026-10-22",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Keine Eröffnung in Filialen; Abschluss im Online-Banking mit Freigabe über die OK Santander Secure App.",
+    "sek": []
+  },
+  {
+    "id": "hypo-vorarlberg-festgeld-online-at",
+    "markt": "at",
+    "bank": "Hypo Vorarlberg",
+    "institut": "Hypo Vorarlberg Bank AG",
+    "produkt": "Festgeld Online (Aktion)",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.hypovbg.at/festgeld-aktion",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 12,
+        "zins": 3.1,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 5000,
+    "max_anlage": null,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Bei 12 Monaten Zinsgutschrift am Laufzeitende (über 12 Monate jährlich mit Zinseszins)",
+    "zinseszins": null,
+    "steuer": "KESt (25 %) wird für Kunden mit österreichischem Steuerdomizil von der Bank abgeführt (Endbesteuerung).",
+    "steuer_auto": true,
+    "kuendigung": "nein",
+    "kuendigung_text": "Kein Zugriff und keine vorzeitige Auflösung während der Laufzeit.",
+    "verlaengerung": "keine",
+    "konto_noetig": "Sparkonto als Referenzkonto (wird bei Neukunden automatisch und kostenlos eröffnet)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "ID Austria (Vollfunktion) für Neukunden",
+    "kosten": "kostenlos",
+    "aktion": "Online-Aktion nur vom 27.10.2026 bis 06.11.2026: 3,10 % p.a. für 12 Monate.",
+    "quelle": "https://www.hypovbg.at/download/10784/Einlagen%20Konditionen%20Privatkunden_ONLINE.pdf?cHash=a4ddbd8ccad4d23b3cd1a52c7d199f89",
+    "quelle2": "https://www.hypovbg.at/festgeld-aktion",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Höhe nach oben unbegrenzt; Einzug per SEPA-Lastschrift vom Referenzkonto. Laufzeit nur 12 Monate im Aktionszeitraum.",
+    "sek": []
+  },
+  {
+    "id": "hypo-vorarlberg-kapitalkonto-at",
+    "markt": "at",
+    "bank": "Hypo Vorarlberg",
+    "institut": "Hypo Vorarlberg Bank AG",
+    "produkt": "Kapitalkonto",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.hypovbg.at/anlage-vorsorge/kapitalkonto",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 1.8,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.45,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 25,
+        "zins": 2.7,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.8,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 2500,
+    "max_anlage": null,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Zinsgutschrift am Ende der vereinbarten Laufzeit auf das Kapitalkonto",
+    "zinseszins": null,
+    "steuer": "KESt (25 %) wird von der Bank abgeführt (Endbesteuerung).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Vorzeitige Auszahlung auf Antrag als Vorschuss; Vorschusszinsen 1 ‰ pro vollem Monat der nicht eingehaltenen Bindung (max. Höhe der Zinsen).",
+    "verlaengerung": "keine",
+    "konto_noetig": null,
+    "referenzkonto": true,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "beides",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.hypovbg.at/download/10784/Einlagen%20Konditionen%20Privatkunden_ONLINE.pdf?cHash=a4ddbd8ccad4d23b3cd1a52c7d199f89",
+    "quelle2": "https://www.hypovbg.at/download/252/Kapitalkonto_Ergaenzende-Bedingungen_Hypo-Vorarlberg.pdf?cHash=c1a3743d5d35c0eda314d86b9ebed10a",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Online-Abschluss (Unterlagen per Post) für Volljährige mit Wohnsitz in AT, DE, LI oder CH; nach Ablauf gelten Tagesgeld-Konditionen. Aufstockung/Verlängerung während der Laufzeit nicht möglich.",
+    "sek": []
+  },
+  {
+    "id": "hypo-noe-online-festgeld-at",
+    "markt": "at",
+    "bank": "HYPO NOE",
+    "institut": "HYPO NOE Landesbank für Niederösterreich und Wien AG",
+    "produkt": "HYPO NOE Online Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.hyponoe.at/private/sparen-und-veranlagen",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 12,
+        "zins": 2.3,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.1,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 300000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Gutschrift am Laufzeitende; bei Laufzeiten über 12 Monate jährliche Kapitalisierung (Zinseszins)",
+    "zinseszins": true,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Vorzeitige Kündigung möglich; dann Verzinsung mit nur 0,01 % p.a.; keine Teilauszahlung.",
+    "verlaengerung": "keine",
+    "konto_noetig": "HYPO NOE Online Festgeld-Verrechnungskonto (kostenlos) oder HYPO NOE Girokonto",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "ID Austria (Vollfunktion) oder FotoIdent-Chip-Verfahren",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.hyponoe.at/fileadmin/OE/Vertriebsstrategie/Sparen_Veranlagen/Konditionenblatt_Online_Festgeld.pdf",
+    "quelle2": "https://www.hyponoe.at/fileadmin/OE/Vertriebsstrategie/Sparen_Veranlagen/Allgemeine-Voraussetzungen-zur-Eroeffnung-Online-Festgeld.pdf",
+    "stand": "2026-09-23",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "24 Monate als 'Festgeld Grün'. Voraussetzungen: Hauptwohnsitz und alleinige Steuerpflicht in Österreich, legitimiertes EU/EWR-Girokonto, nur Einzelkonto; max. 300.000 € pro Veranlagung.",
+    "sek": []
+  },
+  {
+    "id": "porsche-bank-sparen-fix-at",
+    "markt": "at",
+    "bank": "Porsche Bank",
+    "institut": "Porsche Bank AG",
+    "produkt": "SPAREN Fix",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.porschebank.at/produkte/sparen/fix/",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.6,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.2,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.3,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 500,
+    "max_anlage": 1000000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Verzinsung am Ende der Laufzeit (abzgl. KESt)",
+    "zinseszins": null,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Nur aus wichtigem Grund mit 31 Tagen Frist; dann rückwirkend nur 0,01 % p.a.",
+    "verlaengerung": "wahlweise",
+    "konto_noetig": "SPAREN Flex Konto (kostenlos) als Verrechnungskonto",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": false,
+    "eroeffnung": "online",
+    "legitimation": "Unterschriebener Kontoeröffnungsantrag mit Kopie des Lichtbildausweises per Post",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.porschebank.at/files/at/downloads/Direktsparen-Formulare/Konditionenblatt.pdf",
+    "quelle2": "https://www.porschebank.at/produkte/sparen/fix/",
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Nur volljährige Privatpersonen mit Hauptwohnsitz in Österreich, nur Einzelkonto. Höchsteinlage 1 Mio. € pro Kunde (Flex und Fix zusammen).",
+    "sek": []
+  },
+  {
+    "id": "denzel-bank-onlinesparen-festgeld-at",
+    "markt": "at",
+    "bank": "Denzel Bank",
+    "institut": "Bankhaus Denzel AG",
+    "produkt": "Onlinesparen Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.denzelbank.at/denzel-bank-festgeld",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.45,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 60,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 500,
+    "max_anlage": 500000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Keine Zinsgutschrift während der Laufzeit; Anlagebetrag inkl. Zinsen (abzgl. KESt) am Laufzeitende",
+    "zinseszins": false,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Ordentliche Kündigung nicht möglich; bei vorzeitiger Auflösung Abzug von 0,1 % Vorschusszinsen pro vollem Monat der nicht eingehaltenen Bindung.",
+    "verlaengerung": "keine",
+    "konto_noetig": "Onlinesparen Täglich Fällig-Konto",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": "Online-Antrag ausdrucken, unterschreiben und mit Ausweiskopie per Post senden",
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://cms.denzelbank.at/sites/default/files/users/user4/Konditionenblatt_Festgeld_2026-10-22_PDF-UA.pdf",
+    "quelle2": "https://www.denzelbank.at/denzel-bank-festgeld-offene-fragen",
+    "stand": "2026-10-22",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Max. 500.000 € pro Kunde über Täglich Fällig und Festgeld zusammen. Festgeld wird im Online-Banking aus dem Täglich-Fällig-Konto eröffnet.",
+    "sek": []
+  },
+  {
+    "id": "dadat-festgeld-at",
+    "markt": "at",
+    "bank": "DADAT Bank",
+    "institut": "Schelhammer Capital Bank AG",
+    "produkt": "Online Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.dad.at/sparen-anlegen/sparen/festgeld",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.45,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.75,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 10000,
+    "max_anlage": 500000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Gutschrift von Betrag und Zinsen zum Fälligkeitstag auf das DADAT-Referenzkonto",
+    "zinseszins": null,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Vorzeitige Auflösung möglich, dann Zinssatz für die gesamte Laufzeit nur 0,01 % p.a.",
+    "verlaengerung": "keine",
+    "konto_noetig": "DADAT-Konto als Referenzkonto (Spar-, Giro- oder Wertpapier-Verrechnungskonto)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.dad.at/sparen-anlegen/sparen/festgeld",
+    "quelle2": "https://www.dad.at/medien/dateien/pdf/dadat82-antragsbedinungen-festgeldkonto-2023-04.pdf",
+    "stand": "2026-09-11",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Angebot laut Bank für bestehende inländische Privatkunden (DADAT-Konto nötig). Vereinbarter Zins gilt nur, wenn der Betrag binnen 4 Kalendertagen auf dem Referenzkonto verfügbar ist.",
+    "sek": []
+  },
+  {
+    "id": "bks-bank-mein-geld-konto-fix-at",
+    "markt": "at",
+    "bank": "BKS Bank",
+    "institut": "BKS Bank AG",
+    "produkt": "Mein Geld-Konto fix",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.bks.at/privatkunden/sparen/mein-geld-konto-fix",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 12,
+        "zins": 2.75,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 18,
+        "zins": 2.85,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 1000,
+    "max_anlage": 5000000,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Am Laufzeitende werden Guthaben inkl. Zinsen (abzgl. KESt und Entgelt) auf das BKS-Konto überwiesen",
+    "zinseszins": null,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Vorzeitige Behebung jederzeit online möglich; behobene Beträge erhalten nur einen reduzierten Zins (Angaben auf der Seite widersprüchlich: 0,125 % bzw. 0,375 % im 1. Jahr), Rest bleibt fix verzinst.",
+    "verlaengerung": "keine",
+    "konto_noetig": "BKS Bank Konto mit Internetbanking (BKS Verrechnungskonto oder Mein Geld-Onlinekonto)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "EUR 7,00 p.a. (max. in Höhe der Zinsen) bei Kontoschließung; bei erstmaligem Online-Abschluss durch Neukunden kostenlos",
+    "aktion": null,
+    "quelle": "https://www.bks.at/privatkunden/sparen/mein-geld-konto-fix",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Zinsangebot laut Bank für Neu- und Bestandskunden bis auf Widerruf; Abschluss im MyNet-eShop.",
+    "sek": []
+  },
+  {
+    "id": "bank-austria-sparkonto-fix-at",
+    "markt": "at",
+    "bank": "Bank Austria",
+    "institut": "UniCredit Bank Austria AG",
+    "produkt": "Sparkonto fix",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.bankaustria.at/sparen-sparkonto.jsp",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 6,
+        "zins": 2.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.7,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.2,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": 500,
+    "max_anlage": null,
+    "zinszahlung": "endfaellig",
+    "zinszahlung_text": "Gutschrift der Zinsen am Ende der Laufzeit",
+    "zinseszins": null,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": "ja_mit_abschlag",
+    "kuendigung_text": "Behebung vor Laufzeitende möglich; der behobene Betrag wird nach der gestaffelten Verzinsung für die eingehaltene Laufzeit verzinst.",
+    "verlaengerung": "keine",
+    "konto_noetig": "Bank Austria Internetbanking-Zugang (Kundenbeziehung, z. B. Girokonto)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "kostenlos",
+    "aktion": null,
+    "quelle": "https://www.bankaustria.at/sparen-sparkonto.jsp",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Gestaffelter Fixzins, angegeben ist der Durchschnittszins bei voller Laufzeit: 6 M (1,75 %/2,25 %), 12 M (2,55 %/2,7 %/3 %), 24 M (2 %/2,3 %/2,5 %). Nach Laufzeitende 0,01 % p.a.",
+    "sek": []
+  },
+  {
+    "id": "hypo-tirol-online-festgeld-at",
+    "markt": "at",
+    "bank": "Hypo Tirol",
+    "institut": "Hypo Tirol Bank AG",
+    "produkt": "Online Festgeld",
+    "vertrieb": "direkt",
+    "vertrieb_url": "https://www.hypotirol.com/product/privatkunden/sparen-mit-festgeld/",
+    "sitz": "AT",
+    "zweigniederlassung": false,
+    "einlagensicherung": {
+      "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+      "betrag": 100000,
+      "freiwillig": null
+    },
+    "zinsen": [
+      {
+        "monate": 3,
+        "zins": 1.5,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 6,
+        "zins": 1.75,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 12,
+        "zins": 2.0,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 24,
+        "zins": 2.125,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 36,
+        "zins": 2.25,
+        "min": null,
+        "max": null
+      },
+      {
+        "monate": 48,
+        "zins": 3.0,
+        "min": null,
+        "max": null
+      }
+    ],
+    "min_anlage": null,
+    "max_anlage": null,
+    "zinszahlung": null,
+    "zinszahlung_text": "nicht angegeben",
+    "zinseszins": null,
+    "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+    "steuer_auto": true,
+    "kuendigung": null,
+    "kuendigung_text": "nicht angegeben",
+    "verlaengerung": "wahlweise",
+    "konto_noetig": "Hypo Tirol Girokonto mit Internetbanking (Kontoführung ab 5,20 €/Monat)",
+    "referenzkonto": false,
+    "neukunden_only": false,
+    "gemeinschaftskonto": null,
+    "eroeffnung": "online",
+    "legitimation": null,
+    "kosten": "Festgeld selbst ohne Angabe; Girokonto kostenpflichtig (ab 5,20 €/Monat)",
+    "aktion": null,
+    "quelle": "https://www.hypotirol.com/product/privatkunden/sparen-mit-festgeld/",
+    "quelle2": null,
+    "stand": "2026-10-27",
+    "geprueft": "2026-10-27",
+    "status": "ok",
+    "hinweis": "Nur mit Hypo-Tirol-Konto; Neukunden müssen zuerst ein Girokonto eröffnen. Keine Konditionenblatt-Details (Mindestbetrag, Zinszahlung, Kündigung) öffentlich gefunden.",
+    "sek": []
+  }
+]

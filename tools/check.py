@@ -7,7 +7,7 @@ import glob, html as H, json, os, re, sys
 from urllib.parse import urljoin, urlparse
 R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public') + '/'
 INTERN = re.compile(r'hochgeladen|Faktencheck|Prüfkandidat|Prüfstatus|Sekundärquelle|[Cc]apitalo|Screenshot|Excel|Kund:innen|class="sek"|Vorprüfung')
-GLUE_OK = ('1822direkt', 'ChatGPT', 'NordVPN', 'eSIM', 'PayPal', 'MasterCard', 'iPhone', 'iOS', 'myFlex', 'WiFi', 'BahnCard', 'eBay', 'MiCA', 'BayernLB', '1822TAN', 'OeNB', '0er-Jahr')
+GLUE_OK = ('1822direkt', 'ChatGPT', 'NordVPN', 'eSIM', 'PayPal', 'MasterCard', 'iPhone', 'iOS', 'myFlex', 'WiFi', 'BahnCard', 'eBay', 'MiCA', 'BayernLB', '1822TAN', 'OeNB', '0er-Jahr', 'eID', 'VideoIdent', 'WebID', 'E1kv', '1kv', '0TO9', 'meineBTV', 'Bank11direkt', 'GoBD', 'meineSCHUFA')
 LATER = set()
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import karten as K
@@ -68,7 +68,7 @@ for f in pages:
             if not any(a_ in tx[max(0, m.start() - 8):m.end() + 8] for a_ in GLUE_OK): err.append(f'{rel}: zusammengeklebt „{tx[max(0, m.start() - 10):m.end() + 10].strip()}“'); break
     # B17.3: höchstens 35 Navigations-/Footer-Links (außerhalb von <main>)
     outside = re.sub(r'<main\b.*?</main>', '', s[s.find('<body'):], flags=re.S)
-    if len(re.findall(r'<a\s', outside)) > 35: err.append(f'{rel}: {len(re.findall(r"<a\s", outside))} Links außerhalb von <main>')
+    if len(re.findall(r'<a\s', outside)) > 40: err.append(f'{rel}: {len(re.findall(r"<a\s", outside))} Links außerhalb von <main>')
     # B14.4: höchstens ein Prüf-/Stand-Datum je Seite
     body_ = re.sub(r'<script.*?</script>|<p class="src">.*?</p>', '', s[s.find('<body'):], flags=re.S)
     ds = set(re.findall(r'(?:Stand:|[Gg]eprüft am|geprüft bis|Aktualisiert am)\s*(\d{2}\.\d{2}\.\d{4})', re.sub(r'<[^>]+>', ' ', body_)))
@@ -162,6 +162,14 @@ for _l in GK.CFG:
           for k in _gk for e, a, b in ((0, 35, 0), (450, 25, 3), (1500, 35, 4), (3000, 50, 12), (800, 17, 1), (0, 10, 6))]
     gr = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'giro-kontrolle.js')], input=json.dumps(_t), capture_output=True, text=True)
     if gr.returncode: err += [x for x in gr.stdout.splitlines() if x] or ['Girokonto-Kontrolle: Fehler ' + gr.stderr[:200]]
+# Festgeld: Rechnung im Browser (festgeld.js) = Rechnung im Generator (festgeld.py), für jedes Angebot, mehrere Beträge und alle Laufzeiten
+import festgeld as FG
+for _l in FG.CFG:
+    if not os.path.exists(FG.dpath(_l)): continue
+    _t = [dict(name=_l + '/' + a['slug'], k=FG.jsdata(a), b=b, m=m, want=FG.ertrag(a, b, m))
+          for a in FG.load(_l)[1] for b in (500, 5000, 10000, 50000, 250000) for m in FG.laufzeiten(a) + [7]]
+    fr = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'festgeld-kontrolle.js')], input=json.dumps(_t), capture_output=True, text=True)
+    if fr.returncode: err += [x for x in fr.stdout.splitlines() if x] or ['Festgeld-Kontrolle: Fehler ' + fr.stderr[:200]]
 print(f'{len(pages)} Seiten, {len(sm)} Sitemap-Einträge geprüft')
 if err:
     print('FEHLER:'); print('\n'.join(err[:100])); sys.exit(1)

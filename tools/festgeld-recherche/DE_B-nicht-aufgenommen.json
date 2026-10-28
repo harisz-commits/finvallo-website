@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Deutsche Bank ZinsMarkt – übrige Partnerbank-Angebote (Avida Finans, Banca Sistema, Creditplus, Morgan Stanley Europe, Münchener Hyp, My Money Bank, pbb direkt, Resurs, SWK Bank)",
+    "markt": "de",
+    "grund": "Vollständige Angebotstabelle wird nur per Web-Anwendung nachgeladen und war nicht öffentlich auslesbar; nur 3 Teaser-Angebote erfasst"
+  },
+  {
+    "name": "Commerzbank Festgeld 3–5 Monate",
+    "markt": "de",
+    "grund": "nur für Unternehmerkunden"
+  },
+  {
+    "name": "Commerzbank / Consorsbank Festgeld in USD bzw. GBP",
+    "markt": "de",
+    "grund": "Fremdwährungs-Festgeld, nicht EUR"
+  },
+  {
+    "name": "HypoVereinsbank Kombi-Angebot (Wertpapier-Festgeld)",
+    "markt": "de",
+    "grund": "nur in Kombination mit Wertpapieranlage"
+  },
+  {
+    "name": "Consorsbank Festgeld & Fonds",
+    "markt": "de",
+    "grund": "nur in Kombination mit 50 % Fondsanlage"
+  },
+  {
+    "name": "TARGOBANK Rendite-Plus",
+    "markt": "de",
+    "grund": "nur in Kombination mit Fonds/Zertifikaten (50 %)"
+  },
+  {
+    "name": "GLS Projektsparbrief",
+    "markt": "de",
+    "grund": "Zinsen werden vollständig an ein Projekt gespendet (kein Zinsertrag für Anleger)"
+  },
+  {
+    "name": "C24 Bank Festgeld",
+    "markt": "de",
+    "grund": "Zinssätze nicht öffentlich auf der Bankseite (nur in der C24-App/CHECK24 sichtbar); Laufzeiten 1–12 Monate, 1.000–100.000 €, C24-Girokonto nötig"
+  },
+  {
+    "name": "Santander Bank (Deutschland)",
+    "markt": "de",
+    "grund": "santander.de leitet auf openbank.de um; Privatkunden-Festgeld läuft als Openbank Festgeld (erfasst)"
+  },
+  {
+    "name": "N26",
+    "markt": "de",
+    "grund": "kein Festgeld"
+  },
+  {
+    "name": "Trade Republic",
+    "markt": "de",
+    "grund": "kein Festgeld (nur verzinstes Guthaben und anleihenbasierte Festzins-Produkte ohne Einlagensicherung)"
+  },
+  {
+    "name": "Tomorrow",
+    "markt": "de",
+    "grund": "kein Festgeld"
+  },
+  {
+    "name": "Revolut",
+    "markt": "de",
+    "grund": "kein Festgeld (in DE nur Tagesgeld/Geldmarktfonds)"
+  },
+  {
+    "name": "Chase (J.P. Morgan SE)",
+    "markt": "de",
+    "grund": "kein Festgeld (seit Mai 2026 in DE nur Tagesgeld)"
+  },
+  {
+    "name": "Triodos Bank",
+    "markt": "de",
+    "grund": "stellt Geschäft in Deutschland ein, keine Neukunden"
+  },
+  {
+    "name": "Netbank",
+    "markt": "de",
+    "grund": "existiert nicht mehr (Augsburger Aktienbank hat Geschäftstätigkeit eingestellt)"
+  },
+  {
+    "name": "Sparda-Bank Berlin",
+    "markt": "de",
+    "grund": "regionale Genossenschaftsbank (Sparda), nicht bundesweit – laut Vorgaben nicht erfasst"
+  },
+  {
+    "name": "Deutsche Kreditbank",
+    "markt": "de",
+    "grund": "identisch mit DKB (erfasst als dkb-festgeld-de)"
+  },
+  {
+    "name": "Postbank Sparbrief",
+    "markt": "de",
+    "grund": "kein Sparbrief mehr im Angebot; Festzins-Anlage nur als Postbank Zinssparen (erfasst)"
+  },
+  {
+    "name": "Postbank, Commerzbank, comdirect, Consorsbank, 1822direkt – ZinsMarkt/Zinsportal",
+    "markt": "de",
+    "grund": "kein öffentlich sichtbarer ZinsMarkt mit Fremdbank-Angeboten auf den Bankseiten gefunden"
+  }
+]

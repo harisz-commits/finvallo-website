@@ -5,15 +5,19 @@ DOWN='<svg class="ic-down" width="14" height="14" viewBox="0 0 24 24" fill="none
 BURGER='<svg class="ic-burger" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'
 
 # Hauptnavigation und „Mehr“ ohne Überschneidung (jeder Link nur einmal im DOM).
-AT_MAIN=[('at/kreditkarten/','Kreditkarten'),('at/girokonto/','Girokonten'),('at/kreditkarten/bestenlisten/','Bestenlisten'),('at/ratgeber/','Ratgeber'),('at/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
-AT_MORE=[('at/kreditkarten/business/','Business-Kreditkarten'),('at/girokonto/bestenlisten/','Girokonto-Bestenlisten'),('at/girokonto/methodik/','So bewerten wir Girokonten'),('at/kreditkarten/alle/','Alle Karten nach Anbieter'),('at/kreditkarten/methodik/','So entstehen die Sterne'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
-DE_MAIN=[('de/kreditkarten/','Kreditkarten'),('de/kreditkarten/bestenlisten/','Bestenlisten'),('de/ratgeber/','Ratgeber'),('de/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
-DE_MORE=[('de/kreditkarten/business/','Business-Kreditkarten'),('de/kreditkarten/alle/','Alle Karten nach Anbieter'),('de/kreditkarten/methodik/','So entstehen die Sterne'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
+AT_MAIN=[('at/kreditkarten/','Kreditkarten'),('at/girokonto/','Girokonten'),('at/bestenlisten/','Bestenlisten'),('at/ratgeber/','Ratgeber'),('at/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
+AT_MORE=[('at/kreditkarten/bestenlisten/','Kreditkarten-Bestenlisten'),('at/kreditkarten/business/','Business-Kreditkarten'),('at/kreditkarten/alle/','Alle Karten nach Anbieter'),('at/kreditkarten/rechner/','Kartenrechner'),('at/methodik/','So bewerten wir'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
+DE_MAIN=[('de/kreditkarten/','Kreditkarten'),('de/bestenlisten/','Bestenlisten'),('de/ratgeber/','Ratgeber'),('de/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
+DE_MORE=[('de/kreditkarten/bestenlisten/','Kreditkarten-Bestenlisten'),('de/kreditkarten/business/','Business-Kreditkarten'),('de/kreditkarten/alle/','Alle Karten nach Anbieter'),('de/kreditkarten/rechner/','Kartenrechner'),('de/methodik/','So bewerten wir'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
 INFO=[]
 # Girokonten Deutschland erst ins Menü, wenn die Daten da sind
 if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten','de','girokonten.json')):
     DE_MAIN.insert(1,('de/girokonto/','Girokonten'))
-    DE_MORE[1:1]=[('de/girokonto/bestenlisten/','Girokonto-Bestenlisten'),('de/girokonto/methodik/','So bewerten wir Girokonten')]
+
+# Festgeld je Land ins Menü, sobald die Daten da sind
+for _l,_m,_x in (('at',AT_MAIN,AT_MORE),('de',DE_MAIN,DE_MORE)):
+    if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten',_l,'festgeld.json')):
+        _m.insert(2,(f'{_l}/festgeld/','Festgeld'))
 
 def active(rel, items):
     # longest matching prefix wins; card pages fall under Kreditkarten

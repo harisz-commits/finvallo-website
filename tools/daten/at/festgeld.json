@@ -1,0 +1,4319 @@
+{
+ "land": "at",
+ "stand": "2026-10-27",
+ "angebote": [
+  {
+   "id": "aareal-bank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Aareal Bank",
+   "institut": "Aareal Bank AG",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/aareal-bank-ag/",
+   "sitz": "DE",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Entschädigungseinrichtung deutscher Banken GmbH",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 24,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Laufzeiten bis 12 Monate: am Laufzeitende; längere Laufzeiten: jährliche Zinsauszahlung auf das Raisin-Konto (kein Zinseszins)",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Deutschland).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/aareal-bank-ag/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/ARL503/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Anlage über eine Treuhandvereinbarung mit der Raisin Bank AG.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "aareal-bank",
+   "bank_slug": "aareal-bank"
+  },
+  {
+   "id": "achmea-bank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Achmea Bank",
+   "institut": "Achmea Bank N.V.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/achmea-bank/",
+   "sitz": "NL",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Nederlandse Depositogarantie",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 9,
+     "zins": 2.65,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.74,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.28,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.48,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.56,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 72,
+     "zins": 3.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 84,
+     "zins": 3.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 96,
+     "zins": 4.05,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 108,
+     "zins": 4.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 120,
+     "zins": 4.25,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Niederlande).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "keine",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/achmea-bank/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/AHB503/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "achmea-bank",
+   "bank_slug": "achmea-bank"
+  },
+  {
+   "id": "addiko-festgeld-at",
+   "markt": "at",
+   "bank": "Addiko Bank",
+   "institut": "Addiko Bank AG",
+   "produkt": "Addiko Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.addiko.at/festgeld/",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 150000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Kontoabschluss/Zinsgutschrift zum vereinbarten Laufzeitende (laut Konditionenblatt)",
+   "zinseszins": null,
+   "steuer": "25 % KESt wird automatisch abgezogen (Endbesteuerung).",
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Verfügung über die Einlage nicht möglich.",
+   "verlaengerung": "keine",
+   "konto_noetig": "Addiko Tagesgeld Konto (kostenlos) als Referenzkonto der Festgeldkonten",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "Unterschriebene Eröffnungsunterlagen per Post mit Kopie des Lichtbildausweises und der Bankkarte des Referenzkontos",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.addiko.at/static/uploads/2026/10/1.6_Konditionenblatt_2026.10.23.pdf",
+   "quelle2": "https://www.addiko.at/festgeld/",
+   "stand": "2026-10-23",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Höchsteinlage 150.000 € pro Kunde über alle Addiko-Sparkonten. Der Zinsrechner der Webseite erwähnt jährliche Zinszuschreibung, das Konditionenblatt nennt Abschluss zum Laufzeitende.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "addiko-bank",
+   "bank_slug": "addiko-bank"
+  },
+  {
+   "id": "alisa-bank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Alisa Bank",
+   "institut": "Alisa Bank Plc",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/alisa-bank-plc/",
+   "sitz": "FI",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "das Finnische Einlagesicherungssystem",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.4,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Laufzeiten bis 12 Monate: am Laufzeitende; längere Laufzeiten: jährliche Zinsgutschrift, die mitverzinst wird (Zinseszins)",
+   "zinseszins": true,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Finnland).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/alisa-bank-plc/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/FEB507/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "alisa-bank",
+   "bank_slug": "alisa-bank"
+  },
+  {
+   "id": "anadi-bank-online-festgeld-at",
+   "markt": "at",
+   "bank": "Austrian Anadi Bank",
+   "institut": "Austrian Anadi Bank AG",
+   "produkt": "Online-Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://anadibank.com/online-festgeld",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.75,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 500000,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Zinszuschreibung (abzgl. KESt) nach jedem vollen Laufzeitjahr, bei Laufzeiten bis 12 Monate am Laufzeitende",
+   "zinseszins": true,
+   "steuer": "KESt wird bei der Zinszuschreibung automatisch abgezogen (Endbesteuerung).",
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "kuendigung_text": "Auszahlungen vor Laufzeitende nicht möglich; Kündigung nur aus wichtigem Grund.",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Anadi Online-Sparen (kostenlos) als Festgeld-Verrechnungskonto; Einzug von einem EU-Girokonto auf eigenen Namen",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "online",
+   "legitimation": "Video-Identifikation oder 1-Cent-Überweisung",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://anadibank.com/online-festgeld",
+   "quelle2": "https://anadibank.com/media/550/download",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Mindest- und Maximaleinlage gelten pro Kunde und Festgeld-Aktion. Webseite nennt kein Datum zu den Zinsen.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "austrian-anadi-bank",
+   "bank_slug": "austrian-anadi-bank"
+  },
+  {
+   "id": "avida-bank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Avida Bank",
+   "institut": "Avida Bank AB",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/avida-finans-ab/",
+   "sitz": "SE",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Riksgälden (schwedische Einlagensicherung)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": null,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Schweden).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/avida-finans-ab/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/AVI502/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Gesetzliche Einlagensicherung in schwedischen Kronen (1.150.000 SEK, ca. 100.000 €).",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "avida-bank",
+   "bank_slug": "avida-bank"
+  },
+  {
+   "id": "banca-investis-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Banca Investis",
+   "institut": "BANCA INVESTIS S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banca-investis/",
+   "sitz": "IT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.86,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.86,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 50000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Italien).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banca-investis/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/BIN501/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "banca-investis",
+   "bank_slug": "banca-investis"
+  },
+  {
+   "id": "banca-profilo-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Banca Profilo",
+   "institut": "Banca Profilo S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banca-profilo/",
+   "sitz": "IT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1.9,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 20000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Italien).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banca-profilo/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/PFL501/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "banca-profilo",
+   "bank_slug": "banca-profilo"
+  },
+  {
+   "id": "banca-profilo-flexgeld-at-raisin",
+   "markt": "at",
+   "bank": "Banca Profilo",
+   "institut": "Banca Profilo S.p.A.",
+   "produkt": "Flexgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banca-profilo/",
+   "sitz": "IT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.95,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 20000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Italien).",
+   "steuer_auto": false,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Flexgeld: jederzeit vorzeitig kündbar; dann gilt für die gesamte Anlagedauer ein reduzierter Basiszins (im Raisin-Onlinebanking ausgewiesen), Auszahlung nach 31 Tagen ohne Verzinsung.",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banca-profilo/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/PFL507/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "banca-profilo",
+   "bank_slug": "banca-profilo"
+  },
+  {
+   "id": "banca-sistema-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Banca Sistema",
+   "institut": "Banca Sistema S.p.A",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banca-sistema/",
+   "sitz": "IT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 120,
+     "zins": 3,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Italien).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banca-sistema/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/SIS217/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "banca-sistema",
+   "bank_slug": "banca-sistema"
+  },
+  {
+   "id": "banco-bai-europa-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Banco BAI Europa",
+   "institut": "Banco BAI Europa S.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banco-bai-europa/",
+   "sitz": "PT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der portugiesische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.46,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 0.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 0.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 0.5,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. In Portugal werden 28 % Quellensteuer einbehalten; mit Ansässigkeitsbescheinigung und Formular 21-RFI (spätestens 4 Wochen vor Zinszahlung) Reduktion auf 10 %. Die Plattform bezeichnet die reduzierte Quellensteuer als anrechenbar.",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banco-bai-europa/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/BAI506/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "banco-bai-europa",
+   "bank_slug": "banco-bai-europa"
+  },
+  {
+   "id": "banco-bni-europa-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Banco BNI Europa",
+   "institut": "BNI – Banco de Negócios Internacional Europa, S.A",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/banco-bni-europa/",
+   "sitz": "PT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der portugiesische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.58,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1.48,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 1.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1.77,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 1.92,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 1.92,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 1.92,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 1.92,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. In Portugal werden 28 % Quellensteuer einbehalten; mit Ansässigkeitsbescheinigung und Formular 21-RFI (spätestens 4 Wochen vor Zinszahlung) Reduktion auf 10 %. Die Plattform bezeichnet die reduzierte Quellensteuer als anrechenbar.",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/banco-bni-europa/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/BNI511/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "banco-bni-europa",
+   "bank_slug": "banco-bni-europa"
+  },
+  {
+   "id": "bank-austria-sparkonto-fix-at",
+   "markt": "at",
+   "bank": "Bank Austria",
+   "institut": "UniCredit Bank Austria AG",
+   "produkt": "Sparkonto fix",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.bankaustria.at/sparen-sparkonto.jsp",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.2,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 500,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Gutschrift der Zinsen am Ende der Laufzeit",
+   "zinseszins": null,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Behebung vor Laufzeitende möglich; der behobene Betrag wird nach der gestaffelten Verzinsung für die eingehaltene Laufzeit verzinst.",
+   "verlaengerung": "keine",
+   "konto_noetig": "Bank Austria Internetbanking-Zugang (Kundenbeziehung, z. B. Girokonto)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "online",
+   "legitimation": null,
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.bankaustria.at/sparen-sparkonto.jsp",
+   "quelle2": null,
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Gestaffelter Fixzins, angegeben ist der Durchschnittszins bei voller Laufzeit: 6 M (1,75 %/2,25 %), 12 M (2,55 %/2,7 %/3 %), 24 M (2 %/2,3 %/2,5 %). Nach Laufzeitende 0,01 % p.a.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "bank-austria",
+   "bank_slug": "bank-austria"
+  },
+  {
+   "id": "bank-dimare-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Bank DiMare",
+   "institut": "Bank DiMare Limited",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/bank-dimare-limited/",
+   "sitz": "MT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der maltesische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.95,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.11,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": null,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Malta).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/bank-dimare-limited/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/NMB502/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Anlage über eine Treuhandvereinbarung mit der Raisin Bank AG.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "bank-dimare",
+   "bank_slug": "bank-dimare"
+  },
+  {
+   "id": "bank-direkt-fixzinskonto-at",
+   "markt": "at",
+   "bank": "Bank Direkt",
+   "institut": "Raiffeisenlandesbank Oberösterreich AG",
+   "produkt": "Fixzinskonto",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto.html",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Österreichische Raiffeisen-Sicherungseinrichtung eGen (ÖRS)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.5,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 500000,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Zinsen werden zum Ende jedes Kalenderjahres (abzgl. KESt) dem Kapital zugeschrieben und mitverzinst; Rest am Laufzeitende",
+   "zinseszins": true,
+   "steuer": "KESt wird bei der Zinsverrechnung automatisch abgezogen (Endbesteuerung).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Rückzahlung des gesamten Betrags auf Kundenwunsch möglich; Vorschusszinsen 1 ‰ pro Monat bis Bindungsende (max. Höhe der Zinsen); keine Teilauszahlungen.",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": null,
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": null,
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto.html",
+   "quelle2": "https://www.bankdirekt.at/de/produkte/online-sparen/fixzinskonto/_jcr_content/root/responsivegrid/tabaccordioncontaine/tabAccordionElements/tabaccordionelement/items/downloadlist.download.html/0/Bedingungen%20Fixzinskonto.pdf",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Bank Direkt ist die Direktbank der RLB OÖ. Nach Ablauf wird das Guthaben auf das Extrakonto gebucht bzw. das Fixzinskonto als Extrakonto zum Basiszins weitergeführt; die Bank kann ein Wiederveranlagungsangebot machen. Maximalsaldo ab 05.10.2026 500.000 €.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "bank-direkt",
+   "bank_slug": "bank-direkt"
+  },
+  {
+   "id": "bank99-fixsparen99-at",
+   "markt": "at",
+   "bank": "bank99",
+   "institut": "bank99 AG",
+   "produkt": "fixsparen99",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://bank99.at/sparen/fixsparen99",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.05,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Zinsgutschrift am Ende der Laufzeit, Auszahlung (abzgl. KESt) auf das Verrechnungs-/Referenzkonto",
+   "zinseszins": null,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Vorzeitige Auflösung schriftlich oder im Online-Banking möglich; dann nur 0,01 % p.a. für die tatsächlich eingehaltene Laufzeit.",
+   "verlaengerung": "keine",
+   "konto_noetig": "bank99 Giro- oder Sparkonto als Referenzkonto, z. B. kostenloses Tagesgeldkonto flexsparen99",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "beides",
+   "legitimation": null,
+   "kosten": "kostenlos",
+   "aktion": "Weltspartag-Aktion nur bis 02.11.2026: Aktionszinsen bis 3,10 % p.a.",
+   "quelle": "https://assets.bank99.at/documents/W204_Konditionen_fixsparen99.pdf",
+   "quelle2": "https://bank99.at/sparen/fixsparen99",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Nur Einzelkonto ab 18 Jahren; Konditionenblatt 'Stand Oktober 2026' zeigt die Aktionszinsen, nach dem 02.11.2026 sind niedrigere Zinsen zu erwarten. flexsparen99 setzt Hauptwohnsitz in Österreich voraus.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "bank99",
+   "bank_slug": "bank99"
+  },
+  {
+   "id": "banque-wormser-freres-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Banque Wormser Frères",
+   "institut": "Banque Wormser Frères",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/wormser/",
+   "sitz": "FR",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "der französische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.65,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 25000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Frankreich).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "keine",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/wormser/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/WMR507/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "banque-wormser-fr-res",
+   "bank_slug": "banque-wormser-fr-res"
+  },
+  {
+   "id": "bawag-sparbox-fix-at",
+   "markt": "at",
+   "bank": "BAWAG",
+   "institut": "BAWAG P.S.K. Bank für Arbeit und Wirtschaft und Österreichische Postsparkasse AG",
+   "produkt": "SparBox Fix",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.bawag.at/bawag/privatkunden/sparen/sparbox-fix",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 1.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 13,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 1.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.05,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 84,
+     "zins": 2.15,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 100,
+   "max_anlage": 1000000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Nach Ablauf werden Einlage und abgereifte Zinsen abgerechnet und der SparBox Flex gutgeschrieben",
+   "zinseszins": null,
+   "steuer": "KESt (bzw. EU-Quellensteuer) wird laut Bank einbehalten und an das Finanzamt abgeführt (Endbesteuerung).",
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "kuendigung_text": "Einlagen während der Laufzeit nicht kündbar, keine vorzeitige Behebung.",
+   "verlaengerung": "keine",
+   "konto_noetig": "SparBox Flex (täglich fälliges BAWAG-Sparkonto) bzw. BAWAG Giro-/Anlagekonto als Referenzkonto; BAWAG eBanking verpflichtend",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "beides",
+   "legitimation": null,
+   "kosten": "kostenlos",
+   "aktion": "13 Monate mit 3,00 % p.a. (Konditionen gültig ab 14.10.2026).",
+   "quelle": "https://www.bawag.at/resource/blob/20504/54b6ae29551cfccdfaa096ef15d2f8fa/konditionen-sparbox-fix-data.pdf",
+   "quelle2": "https://www.bawag.at/resource/blob/22464/fd2520f675d99fce399f5e41b611302e/bedingungen-und-erinnerungsservice-anlagekonto-sparbox-fix-data.pdf",
+   "stand": "2026-10-14",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Pro Person nur ein Anlagekonto SparBox Fix (darin beliebig viele Fixzins-Einlagen); Maximaleinlage 1 Mio. € je SparBox Fix. Ein- und Auszahlungen nur über das BAWAG-Referenzkonto.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "bawag",
+   "bank_slug": "bawag"
+  },
+  {
+   "id": "bks-bank-mein-geld-konto-fix-at",
+   "markt": "at",
+   "bank": "BKS Bank",
+   "institut": "BKS Bank AG",
+   "produkt": "Mein Geld-Konto fix",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.bks.at/privatkunden/sparen/mein-geld-konto-fix",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 2.75,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 5000000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Am Laufzeitende werden Guthaben inkl. Zinsen (abzgl. KESt und Entgelt) auf das BKS-Konto überwiesen",
+   "zinseszins": null,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Vorzeitige Behebung jederzeit online möglich; behobene Beträge erhalten nur einen reduzierten Zins (Angaben auf der Seite widersprüchlich: 0,125 % bzw. 0,375 % im 1. Jahr), Rest bleibt fix verzinst.",
+   "verlaengerung": "keine",
+   "konto_noetig": "BKS Bank Konto mit Internetbanking (BKS Verrechnungskonto oder Mein Geld-Onlinekonto)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "online",
+   "legitimation": null,
+   "kosten": "EUR 7,00 p.a. (max. in Höhe der Zinsen) bei Kontoschließung; bei erstmaligem Online-Abschluss durch Neukunden kostenlos",
+   "aktion": null,
+   "quelle": "https://www.bks.at/privatkunden/sparen/mein-geld-konto-fix",
+   "quelle2": null,
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Zinsangebot laut Bank für Neu- und Bestandskunden bis auf Widerruf; Abschluss im MyNet-eShop.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "bks-bank",
+   "bank_slug": "bks-bank"
+  },
+  {
+   "id": "bluor-bank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "BluOr Bank",
+   "institut": "AS BlueOrange Bank",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/blu-or-bank-as/",
+   "sitz": "LV",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der lettische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": null,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. In Lettland werden 25,5 % Quellensteuer einbehalten; mit Ansässigkeitsbescheinigung (spätestens 8 Wochen vor Fälligkeit) Reduktion auf 10 %. Die Plattform bezeichnet die reduzierte Quellensteuer als anrechenbar.",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/blu-or-bank-as/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/BLU501/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Weitere auf der Plattform gelistete Laufzeit(en) 3 Monate mit nur 0,00–0,01 % p. a. (faktisch geschlossen) nicht aufgenommen.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "bluor-bank",
+   "bank_slug": "bluor-bank"
+  },
+  {
+   "id": "btg-pactual-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "BTG Pactual",
+   "institut": "BTG Pactual Europe S.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/btg-pactual/",
+   "sitz": "LU",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherungsfonds Luxemburg",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 1.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1.86,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.82,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.18,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.21,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.31,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Luxemburg).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/btg-pactual/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/BTG501/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Anlage über eine Treuhandvereinbarung mit der Raisin Bank AG.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "btg-pactual",
+   "bank_slug": "btg-pactual"
+  },
+  {
+   "id": "ca-auto-bank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "CA Auto Bank",
+   "institut": "CA Auto Bank S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/ca-auto-bank/",
+   "sitz": "IT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.95,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.45,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 30000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Italien).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/ca-auto-bank/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/CAB501/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "ca-auto-bank",
+   "bank_slug": "ca-auto-bank"
+  },
+  {
+   "id": "coop-pank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Coop Pank",
+   "institut": "Coop Pank AS",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/coop-pank/",
+   "sitz": "EE",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der estnische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 3.06,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 3.06,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.26,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Estland).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/coop-pank/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/COP504/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Für 2 Jahre, 3 Jahre ist laut Plattformdaten keine Prolongation vorgesehen.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "coop-pank",
+   "bank_slug": "coop-pank"
+  },
+  {
+   "id": "creditplus-bank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Creditplus Bank",
+   "institut": "Creditplus Bank AG",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/creditplus-bank/",
+   "sitz": "DE",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Entschädigungseinrichtung deutscher Banken GmbH",
+    "betrag": 100000,
+    "freiwillig": "zusätzlich freiwilliger Einlagensicherungsfonds des Bundesverbandes deutscher Banken (Sicherungsgrenze unter einlagensicherung.de)"
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.75,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 72,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 84,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 120,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 1000000,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Laufzeiten bis 12 Monate: am Laufzeitende; längere Laufzeiten: jährliche Zinsauszahlung auf das Raisin-Konto (kein Zinseszins)",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Deutschland).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/creditplus-bank/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/CPL501/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Anlage über eine Treuhandvereinbarung mit der Raisin Bank AG. Höchstanlage pro Produkt 1.000.000 €, gesetzlich gesichert sind 100.000 €.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "creditplus-bank",
+   "bank_slug": "creditplus-bank"
+  },
+  {
+   "id": "dadat-festgeld-at",
+   "markt": "at",
+   "bank": "DADAT Bank",
+   "institut": "Schelhammer Capital Bank AG",
+   "produkt": "Online Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.dad.at/sparen-anlegen/sparen/festgeld",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.75,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 500000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Gutschrift von Betrag und Zinsen zum Fälligkeitstag auf das DADAT-Referenzkonto",
+   "zinseszins": null,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Vorzeitige Auflösung möglich, dann Zinssatz für die gesamte Laufzeit nur 0,01 % p.a.",
+   "verlaengerung": "keine",
+   "konto_noetig": "DADAT-Konto als Referenzkonto (Spar-, Giro- oder Wertpapier-Verrechnungskonto)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "online",
+   "legitimation": null,
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.dad.at/sparen-anlegen/sparen/festgeld",
+   "quelle2": "https://www.dad.at/medien/dateien/pdf/dadat82-antragsbedinungen-festgeldkonto-2023-04.pdf",
+   "stand": "2026-09-11",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Angebot laut Bank für bestehende inländische Privatkunden (DADAT-Konto nötig). Vereinbarter Zins gilt nur, wenn der Betrag binnen 4 Kalendertagen auf dem Referenzkonto verfügbar ist.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "dadat-bank",
+   "bank_slug": "dadat-bank"
+  },
+  {
+   "id": "denizbank-festgeld-at",
+   "markt": "at",
+   "bank": "DenizBank",
+   "institut": "DenizBank AG",
+   "produkt": "Festgeld (Online Sparen)",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.denizbank.at/at/privatkunden/festgeld",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 72,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 84,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 96,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 108,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 120,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Zinsen werden bei Fälligkeit gutgeschrieben",
+   "zinseszins": null,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Vorzeitige Auflösung möglich; Vorschusszinsen 1 ‰ pro vollem Monat der nicht eingehaltenen Bindung (max. bis zur Höhe der Zinsen).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "kostenloses DenizBank Stammkonto",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "online",
+   "legitimation": "Ident-Brief (Legitimation über die Post) bei Eröffnung des Stammkontos",
+   "kosten": "kostenlos",
+   "aktion": "6 Monate Sonderzins 3,15 % p.a. gültig 30.09.–31.10.2026, danach Standardzins laut Preisaushang.",
+   "quelle": "https://www.denizbank.at/at/privatkunden/festgeld",
+   "quelle2": "https://www.denizbank.at/at/privatkunden/stammkonto",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Österreichische Bank (Sitz Wien, Mutter Emirates NBD). Beliebig viele Festgeldkonten; am Laufzeitende Auszahlung, Wiederveranlagung von Kapital oder Kapital+Zinsen wählbar.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "denizbank",
+   "bank_slug": "denizbank"
+  },
+  {
+   "id": "denzel-bank-onlinesparen-festgeld-at",
+   "markt": "at",
+   "bank": "Denzel Bank",
+   "institut": "Bankhaus Denzel AG",
+   "produkt": "Onlinesparen Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.denzelbank.at/denzel-bank-festgeld",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 500,
+   "max_anlage": 500000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Keine Zinsgutschrift während der Laufzeit; Anlagebetrag inkl. Zinsen (abzgl. KESt) am Laufzeitende",
+   "zinseszins": false,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Ordentliche Kündigung nicht möglich; bei vorzeitiger Auflösung Abzug von 0,1 % Vorschusszinsen pro vollem Monat der nicht eingehaltenen Bindung.",
+   "verlaengerung": "keine",
+   "konto_noetig": "Onlinesparen Täglich Fällig-Konto",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "online",
+   "legitimation": "Online-Antrag ausdrucken, unterschreiben und mit Ausweiskopie per Post senden",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://cms.denzelbank.at/sites/default/files/users/user4/Konditionenblatt_Festgeld_2026-10-22_PDF-UA.pdf",
+   "quelle2": "https://www.denzelbank.at/denzel-bank-festgeld-offene-fragen",
+   "stand": "2026-10-22",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Max. 500.000 € pro Kunde über Täglich Fällig und Festgeld zusammen. Festgeld wird im Online-Banking aus dem Täglich-Fällig-Konto eröffnet.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "denzel-bank",
+   "bank_slug": "denzel-bank"
+  },
+  {
+   "id": "easybank-easy-geldmarkt-at",
+   "markt": "at",
+   "bank": "easybank",
+   "institut": "BAWAG P.S.K. Bank für Arbeit und Wirtschaft und Österreichische Postsparkasse AG",
+   "produkt": "easy geldmarkt",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.easybank.at/easybank/sparen/easy-geldmarkt",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 1.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 13,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.25,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 100,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Am Laufzeitende werden Kapital und Zinsen auf das Referenzkonto überwiesen; Zeitpunkt der Zinsgutschrift bei 24/60 Monaten in den Bedingungen nicht geregelt",
+   "zinseszins": null,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig). (easybank ist eine Marke der BAWAG).",
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "kuendigung_text": "Während der Laufzeit nicht kündbar, keine vorzeitigen Auszahlungen oder Teilbehebungen.",
+   "verlaengerung": "keine",
+   "konto_noetig": null,
+   "referenzkonto": true,
+   "neukunden_only": false,
+   "gemeinschaftskonto": true,
+   "eroeffnung": "online",
+   "legitimation": null,
+   "kosten": "kostenlos",
+   "aktion": "Neue Laufzeit 13 Monate mit 3,00 % p.a. seit 15.10.2026.",
+   "quelle": "https://www.easybank.at/resource/blob/55244/bad97997c68716572a843e4a306af89d/preisblatt-easy-geldmarkt-data.pdf",
+   "quelle2": "https://www.easybank.at/resource/blob/49226/0e1ec248193f30c5cb4122c292402ee1/bb-easy-geldmarkt-data.pdf",
+   "stand": "2026-10-15",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Einmalerlag je Konto (für jede neue Anlage ein neues easy geldmarkt); Referenzkonto muss ein Girokonto bei einer inländischen Bank sein. Nach Laufzeitende nur 0,01 % p.a. bis zur Auszahlung.",
+   "sek": [
+    "zinszahlung"
+   ],
+   "gruppe": "AT_A",
+   "bank_key": "easybank",
+   "bank_slug": "easybank"
+  },
+  {
+   "id": "guber-banca-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Guber Banca",
+   "institut": "Guber Banca S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/guber-banca/",
+   "sitz": "IT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 3.27,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.36,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.36,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 20000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Italien).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/guber-banca/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/GBR501/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Weitere auf der Plattform gelistete Laufzeit(en) 9 Monate, 18 Monate mit nur 0,00–0,01 % p. a. (faktisch geschlossen) nicht aufgenommen.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "guber-banca",
+   "bank_slug": "guber-banca"
+  },
+  {
+   "id": "haitong-bank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Haitong Bank",
+   "institut": "Haitong Bank, S.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/haitong-bank-s-a-zweigniederlassung-in-spanien/",
+   "sitz": "PT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der portugiesische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 1.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 1.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.4,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Die Bank zahlt über ihre spanische Zweigniederlassung: in Spanien 19 % Quellensteuer, laut Produktinformationsblatt mit rechtzeitig eingereichtem Steueransässigkeitsformular Reduktion auf 5 %.",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/haitong-bank-s-a-zweigniederlassung-in-spanien/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/HTS506/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Vertragspartner ist die spanische Zweigniederlassung der portugiesischen Haitong Bank, S.A.; Einlagensicherung Portugal.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "haitong-bank",
+   "bank_slug": "haitong-bank"
+  },
+  {
+   "id": "hamburg-commercial-bank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Hamburg Commercial Bank",
+   "institut": "Hamburg Commercial Bank AG",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/hamburg-commercial-bank/",
+   "sitz": "DE",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Entschädigungseinrichtung deutscher Banken GmbH",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 24,
+     "zins": 3.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.37,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.4,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Laufzeiten bis 12 Monate: am Laufzeitende; längere Laufzeiten: jährliche Zinsauszahlung auf das Raisin-Konto (kein Zinseszins)",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Deutschland).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "keine",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/hamburg-commercial-bank/",
+   "quelle2": null,
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Anlage über eine Treuhandvereinbarung mit der Raisin Bank AG.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "hamburg-commercial-bank",
+   "bank_slug": "hamburg-commercial-bank"
+  },
+  {
+   "id": "hoist-finance-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "HoistSpar",
+   "institut": "Hoist Finance AB.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/hoist-spar/",
+   "sitz": "SE",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Riksgälden (schwedische Einlagensicherung)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 1.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 90000,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Laufzeiten bis 12 Monate: am Laufzeitende; längere Laufzeiten: jährliche Zinsgutschrift, die mitverzinst wird (Zinseszins)",
+   "zinseszins": true,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Schweden).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/hoist-spar/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/HST503/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Gesetzliche Einlagensicherung in schwedischen Kronen (1.150.000 SEK, ca. 100.000 €).",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "hoistspar",
+   "bank_slug": "hoistspar"
+  },
+  {
+   "id": "holm-bank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Holm Bank",
+   "institut": "Holm Bank AS",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/holm-bank-as/",
+   "sitz": "EE",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der estnische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.33,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.36,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.41,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Estland).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "automatisch",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/holm-bank-as/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/HLM501/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "holm-bank",
+   "bank_slug": "holm-bank"
+  },
+  {
+   "id": "hypo-noe-online-festgeld-at",
+   "markt": "at",
+   "bank": "HYPO NOE",
+   "institut": "HYPO NOE Landesbank für Niederösterreich und Wien AG",
+   "produkt": "HYPO NOE Online Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.hyponoe.at/private/sparen-und-veranlagen",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 2.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": 300000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Gutschrift am Laufzeitende; bei Laufzeiten über 12 Monate jährliche Kapitalisierung (Zinseszins)",
+   "zinseszins": true,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Vorzeitige Kündigung möglich; dann Verzinsung mit nur 0,01 % p.a.; keine Teilauszahlung.",
+   "verlaengerung": "keine",
+   "konto_noetig": "HYPO NOE Online Festgeld-Verrechnungskonto (kostenlos) oder HYPO NOE Girokonto",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "ID Austria (Vollfunktion) oder FotoIdent-Chip-Verfahren",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.hyponoe.at/fileadmin/OE/Vertriebsstrategie/Sparen_Veranlagen/Konditionenblatt_Online_Festgeld.pdf",
+   "quelle2": "https://www.hyponoe.at/fileadmin/OE/Vertriebsstrategie/Sparen_Veranlagen/Allgemeine-Voraussetzungen-zur-Eroeffnung-Online-Festgeld.pdf",
+   "stand": "2026-09-23",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "24 Monate als 'Festgeld Grün'. Voraussetzungen: Hauptwohnsitz und alleinige Steuerpflicht in Österreich, legitimiertes EU/EWR-Girokonto, nur Einzelkonto; max. 300.000 € pro Veranlagung.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "hypo-noe",
+   "bank_slug": "hypo-noe"
+  },
+  {
+   "id": "hypo-tirol-online-festgeld-at",
+   "markt": "at",
+   "bank": "Hypo Tirol",
+   "institut": "Hypo Tirol Bank AG",
+   "produkt": "Online Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.hypotirol.com/product/privatkunden/sparen-mit-festgeld/",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1.75,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.125,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": null,
+   "max_anlage": null,
+   "zinszahlung": null,
+   "zinszahlung_text": "nicht angegeben",
+   "zinseszins": null,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": null,
+   "kuendigung_text": "nicht angegeben",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Hypo Tirol Girokonto mit Internetbanking (Kontoführung ab 5,20 €/Monat)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "online",
+   "legitimation": null,
+   "kosten": "Festgeld selbst ohne Angabe; Girokonto kostenpflichtig (ab 5,20 €/Monat)",
+   "aktion": null,
+   "quelle": "https://www.hypotirol.com/product/privatkunden/sparen-mit-festgeld/",
+   "quelle2": null,
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Nur mit Hypo-Tirol-Konto; Neukunden müssen zuerst ein Girokonto eröffnen. Keine Konditionenblatt-Details (Mindestbetrag, Zinszahlung, Kündigung) öffentlich gefunden.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "hypo-tirol",
+   "bank_slug": "hypo-tirol"
+  },
+  {
+   "id": "hypo-vorarlberg-festgeld-online-at",
+   "markt": "at",
+   "bank": "Hypo Vorarlberg",
+   "institut": "Hypo Vorarlberg Bank AG",
+   "produkt": "Festgeld Online (Aktion)",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.hypovbg.at/festgeld-aktion",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Bei 12 Monaten Zinsgutschrift am Laufzeitende (über 12 Monate jährlich mit Zinseszins)",
+   "zinseszins": null,
+   "steuer": "KESt (25 %) wird für Kunden mit österreichischem Steuerdomizil von der Bank abgeführt (Endbesteuerung).",
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "kuendigung_text": "Kein Zugriff und keine vorzeitige Auflösung während der Laufzeit.",
+   "verlaengerung": "keine",
+   "konto_noetig": "Sparkonto als Referenzkonto (wird bei Neukunden automatisch und kostenlos eröffnet)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "ID Austria (Vollfunktion) für Neukunden",
+   "kosten": "kostenlos",
+   "aktion": "Online-Aktion nur vom 27.10.2026 bis 06.11.2026: 3,10 % p.a. für 12 Monate.",
+   "quelle": "https://www.hypovbg.at/download/10784/Einlagen%20Konditionen%20Privatkunden_ONLINE.pdf?cHash=a4ddbd8ccad4d23b3cd1a52c7d199f89",
+   "quelle2": "https://www.hypovbg.at/festgeld-aktion",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Höhe nach oben unbegrenzt; Einzug per SEPA-Lastschrift vom Referenzkonto. Laufzeit nur 12 Monate im Aktionszeitraum.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "hypo-vorarlberg",
+   "bank_slug": "hypo-vorarlberg"
+  },
+  {
+   "id": "hypo-vorarlberg-kapitalkonto-at",
+   "markt": "at",
+   "bank": "Hypo Vorarlberg",
+   "institut": "Hypo Vorarlberg Bank AG",
+   "produkt": "Kapitalkonto",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.hypovbg.at/anlage-vorsorge/kapitalkonto",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 1.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.45,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 25,
+     "zins": 2.7,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 2500,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Zinsgutschrift am Ende der vereinbarten Laufzeit auf das Kapitalkonto",
+   "zinseszins": null,
+   "steuer": "KESt (25 %) wird von der Bank abgeführt (Endbesteuerung).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Vorzeitige Auszahlung auf Antrag als Vorschuss; Vorschusszinsen 1 ‰ pro vollem Monat der nicht eingehaltenen Bindung (max. Höhe der Zinsen).",
+   "verlaengerung": "keine",
+   "konto_noetig": null,
+   "referenzkonto": true,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "beides",
+   "legitimation": null,
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.hypovbg.at/download/10784/Einlagen%20Konditionen%20Privatkunden_ONLINE.pdf?cHash=a4ddbd8ccad4d23b3cd1a52c7d199f89",
+   "quelle2": "https://www.hypovbg.at/download/252/Kapitalkonto_Ergaenzende-Bedingungen_Hypo-Vorarlberg.pdf?cHash=c1a3743d5d35c0eda314d86b9ebed10a",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Online-Abschluss (Unterlagen per Post) für Volljährige mit Wohnsitz in AT, DE, LI oder CH; nach Ablauf gelten Tagesgeld-Konditionen. Aufstockung/Verlängerung während der Laufzeit nicht möglich.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "hypo-vorarlberg",
+   "bank_slug": "hypo-vorarlberg"
+  },
+  {
+   "id": "ibl-banca-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "IBL Banca",
+   "institut": "IBL Banca S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/ibl-banca/",
+   "sitz": "IT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.76,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.96,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.01,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.81,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.86,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.91,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Italien).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/ibl-banca/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/IBL501/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "ibl-banca",
+   "bank_slug": "ibl-banca"
+  },
+  {
+   "id": "inbank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Inbank",
+   "institut": "Inbank AS",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/inbank/",
+   "sitz": "EE",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der estnische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.46,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.47,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.16,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.19,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.33,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 2000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Laufzeiten bis 12 Monate: am Laufzeitende; längere Laufzeiten: jährliche Zinsgutschrift, die mitverzinst wird (Zinseszins)",
+   "zinseszins": true,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Estland).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/inbank/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/INN506/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "inbank",
+   "bank_slug": "inbank"
+  },
+  {
+   "id": "investitionsbank-trentino-suedtirol-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Investitionsbank Trentino-Südtirol",
+   "institut": "Investitionsbank Trentino-Südtirol AG / Mediocredito Trentino-Alto Adige S.p.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/investitionsbank-trentino-sudtirol/",
+   "sitz": "IT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Fondo Interbancario di Tutela dei Depositi (FITD), Italien",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.5,
+     "min": 50000,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 1.5,
+     "min": 50000,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 1.5,
+     "min": 50000,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.1,
+     "min": 25000,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.2,
+     "min": 25000,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.3,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.4,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.5,
+     "min": 10000,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Italien).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "keine",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/investitionsbank-trentino-sudtirol/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/ITS511/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "investitionsbank-trentino-suedtirol",
+   "bank_slug": "investitionsbank-trentino-suedtirol"
+  },
+  {
+   "id": "klarna-festgeld-plus-at",
+   "markt": "at",
+   "bank": "Klarna",
+   "institut": "Klarna Bank AB (publ)",
+   "produkt": "Festgeld+",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.klarna.com/at/festgeldkonto/",
+   "sitz": "SE",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Riksgälden (schwedische Einlagensicherung, bis 1.150.000 SEK)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.84,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.46,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.95,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3.11,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.19,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.24,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": null,
+   "max_anlage": null,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Laufzeiten bis 12 Monate: am Laufzeitende; längere Laufzeiten: jährlich und bei Fälligkeit auf das Klarna Bankkonto ausgezahlt",
+   "zinseszins": false,
+   "steuer": "Klarna führt keine österreichische KESt ab; laut Bedingungen ist der Kunde selbst für die Versteuerung verantwortlich. Zinsen in der Steuererklärung (Beilage E1kv, Sondersteuersatz 25 %) angeben. Keine schwedische Quellensteuer bekannt.",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Während der Laufzeit keine Abhebung; Klarna kann Anträge nur in außergewöhnlichen Umständen nach eigenem Ermessen prüfen. 14 Tage Rücktrittsrecht nach Eröffnung.",
+   "verlaengerung": "keine",
+   "konto_noetig": "Klarna Bankkonto (Klarna Guthaben) in der Klarna App",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "online",
+   "legitimation": "Identitätsprüfung in der Klarna App",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.klarna.com/at/festgeldkonto/",
+   "quelle2": "https://cdn.klarna.com/1.0/shared/content/legal/terms/de-AT/klarna-balance",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Laut Klarna keine Mindesteinlage; Höchstbetrag für Festgeld nicht angegeben (Klarna Bankkonto max. 500.000 €). Abschluss nur in der Klarna App; am Laufzeitende wird das Festgeld+ automatisch geschlossen.",
+   "sek": [
+    "steuer_auto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "klarna",
+   "bank_slug": "klarna"
+  },
+  {
+   "id": "kommunalkredit-invest-festgeld-at",
+   "markt": "at",
+   "bank": "KOMMUNALKREDIT INVEST",
+   "institut": "Kommunalkredit Austria AG",
+   "produkt": "Festgeldanlage",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.kommunalkreditinvest.at/sparkonten/festgeld",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 1.7,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 6,
+     "zins": 2.3,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.4,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 12,
+     "zins": 3.0,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.4,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 18,
+     "zins": 3.0,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.7,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 24,
+     "zins": 3.3,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.7,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 36,
+     "zins": 3.3,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.8,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 60,
+     "zins": 3.4,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 96,
+     "zins": 2.8,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 96,
+     "zins": 3.4,
+     "min": 10000,
+     "max": null
+    },
+    {
+     "monate": 120,
+     "zins": 2.8,
+     "min": null,
+     "max": 9999.99
+    },
+    {
+     "monate": 120,
+     "zins": 3.4,
+     "min": 10000,
+     "max": null
+    }
+   ],
+   "min_anlage": null,
+   "max_anlage": 500000,
+   "zinszahlung": "wahlweise",
+   "zinszahlung_text": "Bis 12 Monate bei Fälligkeit; über 12 Monate wahlweise jährliche Zinsauszahlung aufs Transferkonto oder Endfälligkeit mit Zinseszins",
+   "zinseszins": null,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Auflösung nach Ablauf des 14-tägigen Rücktrittsrechts vertraglich nicht vorgesehen.",
+   "verlaengerung": "keine",
+   "konto_noetig": "KOMMUNALKREDIT INVEST Transferkonto (kostenlos); Referenzkonto = Girokonto bei einer österreichischen Bank",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": true,
+   "eroeffnung": "online",
+   "legitimation": "Upload Ausweiskopie + 1-Euro-Referenzüberweisung oder VideoIdent (nur Einzelkonten)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.kommunalkreditinvest.at/media/bedingungen__konditionen/konditionenblatt_festgeldanlagen_kommunalkredit_invest_at.pdf",
+   "quelle2": "https://www.kommunalkreditinvest.at/sparkonten/festgeld",
+   "stand": "2026-10-08",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Zins hängt vom Betrag ab (ab 10.000 € höherer Satz). Keine Mindestanlage; max. 500.000 € pro Kunde über alle Einlagekonten. Keine automatische Prolongation, Erinnerung 30 Tage vor Ablauf.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "kommunalkredit-invest",
+   "bank_slug": "kommunalkredit-invest"
+  },
+  {
+   "id": "lhv-pank-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "LHV Pank",
+   "institut": "LHV Pank AS",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/lhv-pank/",
+   "sitz": "EE",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der estnische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.1,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 500,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Estland).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/lhv-pank/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/LHV005/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Weitere auf der Plattform gelistete Laufzeit(en) 2 Jahre mit nur 0,00–0,01 % p. a. (faktisch geschlossen) nicht aufgenommen.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "lhv-pank",
+   "bank_slug": "lhv-pank"
+  },
+  {
+   "id": "lidion-bank-festgeld-at-pickthebank",
+   "markt": "at",
+   "bank": "Lidion Bank",
+   "institut": "Lidion Bank",
+   "produkt": "Festgeld",
+   "vertrieb": "andere: PickTheBank",
+   "vertrieb_url": "https://pickthebank.eu/de/lidion/",
+   "sitz": "MT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherungssystem Malta (Depositor Compensation Scheme)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.42,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.92,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.89,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.94,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 3.02,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.11,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.08,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.08,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.08,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 20000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Laufzeiten bis 12 Monate: bei Fälligkeit; ab 18 Monaten jährlich",
+   "zinseszins": null,
+   "steuer": "Ausländische Bank ohne österreichischen KESt-Abzug: Zinsen in der Steuererklärung (Beilage E1kv, Sondersteuersatz 25 %) angeben. Angaben zu maltesischer Quellensteuer macht die Plattform nicht.",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Beendigung laut Plattform nicht möglich.",
+   "verlaengerung": null,
+   "konto_noetig": "PickTheBank-Konto (Registrierung auf der Plattform); Festgeldkonto wird direkt bei der Bank eröffnet, Einzahlung direkt an die Bank",
+   "referenzkonto": null,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "online",
+   "legitimation": "Online-Identifizierung über PickTheBank",
+   "kosten": "kostenlos",
+   "aktion": "PickTheBank zahlt Erstanlegern einmalig 50 € Bonus bei einer ersten Einlage ab 20.000 €.",
+   "quelle": "https://pickthebank.eu/de/lidion/",
+   "quelle2": "https://pickthebank.eu/de/banken/malta/lidion-bank-agrkmtmt/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Auch USD- und GBP-Festgelder verfügbar (nicht erfasst). Die Bankseite nennt für 3 Monate abweichend 2,50 % statt 2,42 %.",
+   "sek": [],
+   "gruppe": "AT_B",
+   "bank_key": "lidion-bank",
+   "bank_slug": "lidion-bank"
+  },
+  {
+   "id": "porsche-bank-sparen-fix-at",
+   "markt": "at",
+   "bank": "Porsche Bank",
+   "institut": "Porsche Bank AG",
+   "produkt": "SPAREN Fix",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.porschebank.at/produkte/sparen/fix/",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.3,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 500,
+   "max_anlage": 1000000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Verzinsung am Ende der Laufzeit (abzgl. KESt)",
+   "zinseszins": null,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Nur aus wichtigem Grund mit 31 Tagen Frist; dann rückwirkend nur 0,01 % p.a.",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "SPAREN Flex Konto (kostenlos) als Verrechnungskonto",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "Unterschriebener Kontoeröffnungsantrag mit Kopie des Lichtbildausweises per Post",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.porschebank.at/files/at/downloads/Direktsparen-Formulare/Konditionenblatt.pdf",
+   "quelle2": "https://www.porschebank.at/produkte/sparen/fix/",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Nur volljährige Privatpersonen mit Hauptwohnsitz in Österreich, nur Einzelkonto. Höchsteinlage 1 Mio. € pro Kunde (Flex und Fix zusammen).",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "porsche-bank",
+   "bank_slug": "porsche-bank"
+  },
+  {
+   "id": "renault-bank-direkt-festgeld-at",
+   "markt": "at",
+   "bank": "Renault Bank direkt",
+   "institut": "RCI Banque S.A. Niederlassung Österreich",
+   "produkt": "Festgeld",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.renault-bank-direkt.at/geldanlage/festgeld",
+   "sitz": "FR",
+   "zweigniederlassung": true,
+   "einlagensicherung": {
+    "system": "Fonds de Garantie des Dépôts et de Résolution (FGDR), Frankreich",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 2.95,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.05,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.1,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 3.15,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 3.2,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 2500,
+   "max_anlage": 1000000,
+   "zinszahlung": "wahlweise",
+   "zinszahlung_text": "ausschüttend jährlich per 31.12. aufs Tagesgeldkonto oder thesaurierend (Zinsen jährlich zum Kapital, Auszahlung bei Laufzeitende)",
+   "zinseszins": null,
+   "steuer": "KESt (25 %) wird von der österreichischen Niederlassung bei jeder Zinsgutschrift automatisch abgezogen und abgeführt (Endbesteuerung). Keine ausländische Quellensteuer.",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Grundsätzlich fest gebunden; vorzeitige Auflösung nur in Ausnahmefällen nach Ermessen der Bank, dann Verzinsung 0,00 % und 60 € Bearbeitungsgebühr pro Kontrakt.",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "kostenloses Renault Bank direkt Tagesgeldkonto als Verrechnungskonto",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": true,
+   "eroeffnung": "online",
+   "legitimation": "Online-Antrag, unterschrieben per Post mit Ausweiskopie und Bankomatkarte (oder qualifizierte E-Signatur), plus 1-€-Erstüberweisung vom Referenzkonto",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.renault-bank-direkt.at/pdf/20261021_Konditionenblatt.pdf",
+   "quelle2": "https://www.renault-bank-direkt.at/geldanlage/festgeld",
+   "stand": "2026-10-21",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Festgeld wird aus dem Tagesgeldkonto angelegt; Verlängerung kann ab 30 Tagen vor Ablauf im E-Banking eingestellt werden. Zinsberechnung 30/360.",
+   "sek": [],
+   "gruppe": "AT_B",
+   "bank_key": "renault-bank-direkt",
+   "bank_slug": "renault-bank-direkt"
+  },
+  {
+   "id": "rietumu-banka-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Rietumu Banka",
+   "institut": "JSC “Rietumu Banka”",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/rietumu-bank/",
+   "sitz": "LV",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der lettische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 6,
+     "zins": 2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.3,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 5000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. In Lettland werden 25,5 % Quellensteuer einbehalten; mit Ansässigkeitsbescheinigung (spätestens 8 Wochen vor Fälligkeit) Reduktion auf 10 %. Die Plattform bezeichnet die reduzierte Quellensteuer als anrechenbar.",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/rietumu-bank/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/RIE501/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "rietumu-bank",
+   "bank_slug": "rietumu-banka"
+  },
+  {
+   "id": "santander-bestfix-at",
+   "markt": "at",
+   "bank": "Santander Consumer Bank",
+   "institut": "Santander Consumer Bank GmbH",
+   "produkt": "Festgeldkonto BestFix",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.santanderconsumer.at/festgeld",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 2.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 9,
+     "zins": 2.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.9,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 3.0,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": null,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "Kapitalisierung der Zinsen jeweils am 31.12.; Auszahlung samt Zinseszinsen abzgl. KESt am Laufzeitende auf das BestFlex-Konto",
+   "zinseszins": true,
+   "steuer": "Österreichische KESt (25 %) wird automatisch abgezogen (Endbesteuerung).",
+   "steuer_auto": true,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Jederzeit kostenlos im Online-Banking auflösbar; vereinbarter Zins bis zur Auflösung, aber Abzug von 0,10 % vom Auszahlungsbetrag pro vollem nicht eingehaltenem Monat.",
+   "verlaengerung": "keine",
+   "konto_noetig": "Tagesgeldkonto BestFlex (kostenlos)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": null,
+   "eroeffnung": "online",
+   "legitimation": null,
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.santanderconsumer.at/storage/590/bestsparenkonditionenblatt.pdf",
+   "quelle2": "https://www.santanderconsumer.at/festgeld",
+   "stand": "2026-10-22",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Keine Eröffnung in Filialen; Abschluss im Online-Banking mit Freigabe über die OK Santander Secure App.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "santander-consumer-bank",
+   "bank_slug": "santander-consumer-bank"
+  },
+  {
+   "id": "urbo-bankas-flexgeld-at-raisin",
+   "markt": "at",
+   "bank": "Urbo Bankas",
+   "institut": "Urbo Bankas UAB",
+   "produkt": "Flexgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/urbo-bankas/",
+   "sitz": "LT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Der litauische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 3.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 3.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 10000,
+   "max_anlage": 100000,
+   "zinszahlung": "endfaellig",
+   "zinszahlung_text": "am Laufzeitende (auf das Raisin-Konto); keine Zinsausschüttung während der Laufzeit",
+   "zinseszins": false,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. In Litauen werden 15 % Quellensteuer einbehalten; mit Ansässigkeitsbescheinigung und Steuerformular (spätestens 4 Wochen vor Zinszahlung) Reduktion auf 10 %. Die Plattform bezeichnet die reduzierte Quellensteuer als anrechenbar.",
+   "steuer_auto": false,
+   "kuendigung": "ja_mit_abschlag",
+   "kuendigung_text": "Flexgeld: jederzeit vorzeitig kündbar; dann wird für die gesamte Anlagedauer kein Zins gezahlt (Basiszins laut Plattform 0 %), Auszahlung nach 31 Tagen ohne Verzinsung.",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/urbo-bankas/",
+   "quelle2": "https://api2.weltsparen.de/dcms/v1/public/products/MDB502/document/product_information_sheet?distributor_id=Raisin&distribution_channel_id=raisin_direct_retail_aut",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": null,
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "urbo-bankas",
+   "bank_slug": "urbo-bankas"
+  },
+  {
+   "id": "wuestenrot-fix-festgeldkonto-at",
+   "markt": "at",
+   "bank": "Wüstenrot",
+   "institut": "Wüstenrot Bank AG",
+   "produkt": "Wüstenrot FIX Festgeldkonto",
+   "vertrieb": "direkt",
+   "vertrieb_url": "https://www.wuestenrot.at/de/kredite-und-sparen/sparen/festgeldkonto.html",
+   "sitz": "AT",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 3,
+     "zins": 1.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 6,
+     "zins": 2.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 12,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.55,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.6,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.75,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.8,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.85,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 1000,
+   "max_anlage": null,
+   "zinszahlung": "wahlweise",
+   "zinszahlung_text": "'Ausschüttend': Zinsen jeweils zum Kalenderjahresende und bei Ablauf auf das FLEX Sparkonto; 'Thesaurierend': zum Kalenderjahresende dem FIX Festgeldkonto gutgeschrieben",
+   "zinseszins": null,
+   "steuer": "KESt 25 % wird von der Bank automatisch einbehalten und abgeführt (Endbesteuerung, keine Angabe in der Steuererklärung nötig).",
+   "steuer_auto": true,
+   "kuendigung": "nein",
+   "kuendigung_text": "Keine ordentliche Kündigung vor Ablauf der Bindungsfrist, nur aus wichtigem Grund.",
+   "verlaengerung": "keine",
+   "konto_noetig": "Wüstenrot FLEX Sparkonto (kostenlos) als Verrechnungskonto",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": true,
+   "eroeffnung": "online",
+   "legitimation": null,
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.wuestenrot.at/de/kredite-und-sparen/sparen/festgeldkonto.html",
+   "quelle2": "https://www.wuestenrot.at/content/dam/wuestenrot-at/dokumente/bank/bedingungen-sparen.pdf.coredownload.inline.pdf",
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Einmalerlag ab 1.000 €, ab 18 Jahren; Sparbetrag muss binnen 30 Bankwerktagen auf dem FLEX Sparkonto eingehen. Zinsen auf der Webseite ohne Datumsangabe.",
+   "sek": [],
+   "gruppe": "AT_A",
+   "bank_key": "wuestenrot",
+   "bank_slug": "wuestenrot"
+  },
+  {
+   "id": "younited-festgeld-at-raisin",
+   "markt": "at",
+   "bank": "Younited",
+   "institut": "Younited Credit S.A.",
+   "produkt": "Festgeld",
+   "vertrieb": "Raisin",
+   "vertrieb_url": "https://www.raisin.com/de-at/bank/younited-credit/",
+   "sitz": "FR",
+   "zweigniederlassung": false,
+   "einlagensicherung": {
+    "system": "der französische Einlagensicherungsfonds",
+    "betrag": 100000,
+    "freiwillig": null
+   },
+   "zinsen": [
+    {
+     "monate": 12,
+     "zins": 2.2,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 18,
+     "zins": 2.25,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 24,
+     "zins": 2.3,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 36,
+     "zins": 2.35,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 48,
+     "zins": 2.4,
+     "min": null,
+     "max": null
+    },
+    {
+     "monate": 60,
+     "zins": 2.5,
+     "min": null,
+     "max": null
+    }
+   ],
+   "min_anlage": 2000,
+   "max_anlage": 100000,
+   "zinszahlung": "jaehrlich",
+   "zinszahlung_text": "Laufzeiten bis 12 Monate: am Laufzeitende; längere Laufzeiten: jährliche Zinsgutschrift, die mitverzinst wird (Zinseszins)",
+   "zinseszins": true,
+   "steuer": "Keine automatische KESt-Abfuhr: Die Zinsen werden brutto bzw. nach ausländischer Quellensteuer auf das Raisin-Konto gezahlt und müssen in der österreichischen Steuererklärung (Beilage E1kv, Sondersteuersatz 25 % für Zinsen aus Geldeinlagen) angegeben werden; Raisin stellt die Unterlagen bereit. Keine ausländische Quellensteuer (Frankreich).",
+   "steuer_auto": false,
+   "kuendigung": "nein",
+   "kuendigung_text": "Vorzeitige Kündigung nicht möglich (nur 14-tägiges Widerrufsrecht nach Abschluss).",
+   "verlaengerung": "wahlweise",
+   "konto_noetig": "Raisin-Konto (kostenloses Verrechnungskonto bei der Raisin Bank AG)",
+   "referenzkonto": false,
+   "neukunden_only": false,
+   "gemeinschaftskonto": false,
+   "eroeffnung": "online",
+   "legitimation": "VideoIdent (einmalig bei Raisin)",
+   "kosten": "kostenlos",
+   "aktion": null,
+   "quelle": "https://www.raisin.com/de-at/bank/younited-credit/",
+   "quelle2": null,
+   "stand": "2026-10-27",
+   "geprueft": "2026-10-27",
+   "status": "ok",
+   "hinweis": "Prolongation laut Plattformdaten möglich; Produktinformationsblatt war nicht abrufbar, Voreinstellung nicht geprüft.",
+   "sek": [
+    "gemeinschaftskonto"
+   ],
+   "gruppe": "AT_B",
+   "bank_key": "younited",
+   "bank_slug": "younited"
+  }
+ ],
+ "nicht_aufgenommen": [
+  {
+   "name": "Erste Bank und Sparkassen – s Kapital Sparen (George)",
+   "grund": "Online-Eröffnung nur für Bestandskund:innen; Zinssätze werden auf der Webseite nicht veröffentlicht (nur in George/Filiale), regional je Sparkasse unterschiedlich.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "HYPO Oberösterreich – Online Sparen fix",
+   "grund": "Keine öffentlich abrufbaren Zinssätze; nur als Ergänzung zum HYPO OÖ Girokonto (Mein ELBA).",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "Hypo Salzburg – Online Sparen",
+   "grund": "Nur Online-Sparkonto ohne feste Bindung gefunden, kein Festgeld.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "Volksbanken Österreich",
+   "grund": "Kein bundesweites Online-Festgeld der Volksbanken gefunden; regionale Institute.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "SPARDA-BANK (Marke der Volksbank Wien AG) – webfix Festgeld Sparkonto",
+   "grund": "Online-Abschluss nur über bestehendes Internetbanking (Bestandskunden) einer regionalen Volksbank; bundesweite Neukundenöffnung nicht belegt. Konditionen ab 01.10.2026: 6 M 2,00 %, 12 M 2,30 %, 24 M 2,45 %.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "Oberbank – Sparkonto Festzins",
+   "grund": "Zinssätze nicht öffentlich; Abschluss nur im eShop für Bestandskunden.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "BTV – Anlagekonto fix",
+   "grund": "Zinssätze nicht öffentlich; Abschluss nur für Kunden über meineBTV-eShop bzw. Betreuer.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "DolomitenBank Osttirol-Westkärnten eG",
+   "grund": "Regionale Genossenschaftsbank; kein Online-Festgeld auf der Webseite gefunden (nur Sparbücher).",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "Marchfelder Bank eG – Jubiläumskombi Festgeld/Kapitalsparbuch",
+   "grund": "Regionale Genossenschaftsbank; Festgeld 3,125 % nur in Kombination mit Fondskauf (mind. 50 %) und Beratungsgespräch, kein reines Festgeld-Angebot.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "VakifBank International AG – Termingeld",
+   "grund": "Zinstabelle auf der Bankseite nicht abrufbar (eingebettetes Widget meldet Fehler), nur 'bis zu 3,00 %' sichtbar; keine verlässliche Primärquelle für die einzelnen Laufzeiten.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "AutoBank AG",
+   "grund": "Website bei der Prüfung nicht erreichbar, keine aktuellen Konditionen aus erster Hand.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "Generali Bank AG",
+   "grund": "Bietet laut Preisblatt (Stand 01.10.2026) nur Tagesgeldkonten, kein Festgeld.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "DenizBank – Sparbuch mit Fixzinsgarantie",
+   "grund": "Nur in der Filiale eröffnungsfähig (gleiche Zinsen wie Online-Festgeld, das erfasst ist).",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "Ziraat Bank",
+   "grund": "Keine österreichische Einlagenbank (Ziraat Bank International AG sitzt in Frankfurt).",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "TeamBank Österreich",
+   "grund": "Nur Ratenkredite, keine Einlagenprodukte.",
+   "gruppe": "AT_A"
+  },
+  {
+   "name": "Zinspilot Österreich",
+   "grund": "zinspilot.at leitet per Frame auf zinspilot.de weiter, das auf raisin.com/de-de umleitet – Zinspilot ist in Raisin aufgegangen, kein eigenes AT-Angebot.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "Zinsfuchs",
+   "grund": "zinsfuchs.at nicht erreichbar; keine aktive Festgeld-Plattform für Österreich gefunden.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "durchblicker.at (Sparzinsen)",
+   "grund": "Keine prüfbaren Konditionen.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "TF Bank Österreich",
+   "grund": "tfbank.at bietet in Österreich nur Kreditkarte/Kredit an, kein Festgeld.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "Ikano Bank Österreich",
+   "grund": "ikanobank.at bietet in Österreich nur IKEA-Finanzierung, kein Einlagengeschäft.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "Lea Bank (direkt)",
+   "grund": "Kein Direkt-Festgeld für Österreich gefunden (leabank.at nicht erreichbar); über Raisin AT nur Tagesgeld/Kündigungsgeld.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "Collector Bank",
+   "grund": "Kein Einlagenangebot für Österreich gefunden (collector.at gehört nicht der Bank).",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "NOBA / Nordax Bank",
+   "grund": "Kein Festgeld für Österreich gefunden (noba.at ist ein Küchenhersteller).",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "Banca Progetto",
+   "grund": "Kein Festgeld für Österreich gefunden (bancaprogetto.at nicht erreichbar, nicht bei Raisin AT gelistet).",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "Holvi",
+   "grund": "Geschäftskonto für Selbstständige, kein Festgeld für Privatkunden.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "DKB Festgeld",
+   "grund": "Die DKB nennt auf ihrer Website keine Annahme von Kundinnen und Kunden mit Wohnsitz in Österreich.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "Hello bank! (BNP Paribas S.A. Niederlassung Österreich)",
+   "grund": "Kein Festgeld-Angebot gefunden.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "Bigbank Tagesgeld-Aktion / Klarna Flexkonto / Renault Tagesgeld",
+   "grund": "Tagesgeld, kein Festgeld.",
+   "gruppe": "AT_B"
+  },
+  {
+   "name": "Bigbank Festgeld",
+   "grund": "Die Bank-Website war bei der Prüfung nicht abrufbar; ohne Konditionen aus erster Hand nehmen wir das Angebot nicht auf.",
+   "gruppe": "AT_B"
+  }
+ ]
+}

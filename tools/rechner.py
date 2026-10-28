@@ -197,6 +197,10 @@ def page(land,rel,title,desc,body,ld_extra,alt):
     os.makedirs(R+rel,exist_ok=True); open(R+rel+'index.html','w').write(h)
 def build(land):
     CALCS.clear(); define(land); N=LN[land][0]; PRE=prerender(CALCS)
+    # Verweis auf den Festgeld-Vergleich bei den Spar- und Steuerrechnern, sobald es ihn gibt
+    if os.path.exists(R+f'{land}/festgeld/index.html'):
+        for s in ('zinseszins','kapitalertragsteuer','inflationsrechner','renditerechner','entnahmeplan'):
+            if s in CALCS: CALCS[s].setdefault('links',[]).insert(0,('../../festgeld/','Aktuelle Festgeldzinsen vergleichen'))
     for slug,c in CALCS.items():
         o={k:v['text'] for k,v in PRE.get(slug,{}).items()}
         try: exs=f'<p class="note calc-ex"><b>Beispiel:</b> {E(EX[slug](o,land))}</p>' if o else ''

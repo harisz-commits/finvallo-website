@@ -1,13 +1,13 @@
 # Finvallo
 
-> Unabhängiger Finanzvergleich für Österreich und Deutschland. 77 Karten in Österreich und 162 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Stand: 21.10.2026. Betrieben von Haris (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/
+> Unabhängiger Finanzvergleich für Österreich und Deutschland. 79 Karten in Österreich und 162 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Stand: 28.10.2026. Betrieben von Haris (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/
 
 Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/at/ und /de/). Konditionen aus Deutschland gelten nicht für Österreich.
 
 ## Zitieren
 Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 
-## Schnellantworten (Stand 21.10.2026)
+## Schnellantworten (Stand 28.10.2026)
 - Beste Kreditkarte Deutschland (Gesamtwertung): Bank Norwegian Visa Kreditkarte (4,7/5) - https://finvallo.com/de/kreditkarten/bank-norwegian-visa-kreditkarte/
 - Beste Kreditkarte Österreich (Gesamtwertung): TF Bank Mastercard Gold (4,6/5) - https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/
 - Beste kostenlose Kreditkarte Deutschland: Bank Norwegian Visa Kreditkarte - https://finvallo.com/de/kreditkarten/bank-norwegian-visa-kreditkarte/
@@ -24,7 +24,10 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - Beste Kreditkarte mit Lounge-Zugang Österreich: American Express Platinum Card - https://finvallo.com/at/kreditkarten/american-express-platinum-card/
 - Beste Debitkarte/App-Bank Deutschland: BBVA Debitkarte - https://finvallo.com/de/kreditkarten/bbva-debitkarte/
 - Beste Debitkarte/App-Bank Österreich: Revolut Premium - https://finvallo.com/at/kreditkarten/revolut-premium/
-
+- Bestes Girokonto Deutschland (Gesamtwertung): Consorsbank! Girokonto (Consorsbank, 4,6/5) - https://finvallo.com/de/girokonto/consorsbank-girokonto/
+- Höchster Festgeldzins Deutschland (1 Jahr, 10.000 €): Bigbank Festgeld 3,6 % - https://finvallo.com/de/festgeld/bigbank-festgeld-de/
+- Bestes Girokonto Österreich (Gesamtwertung): Online Gehalts-/Pensionskonto (Austrian Anadi Bank, 4,7/5) - https://finvallo.com/at/girokonto/anadi-online-gehalts-pensionskonto/
+- Höchster Festgeldzins Österreich (1 Jahr, 10.000 €): Banca Sistema Festgeld 3,45 % - https://finvallo.com/at/festgeld/banca-sistema-festgeld-at-raisin/
 
 ## Österreich: Übersicht
 - [Finanzvergleich Österreich](https://finvallo.com/at/): Übersicht
@@ -49,26 +52,37 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Kostenloses Girokonto in Österreich: Worauf du achten musst (Österreich)](https://finvallo.com/at/ratgeber/kostenloses-girokonto/): Kostenloses Girokonto in Österreich: 4 Konten ohne Bedingung, 8 gratis mit Gehaltseingang. Welche Kosten trotzdem anfallen und wie du sie vermeidest.
 - [Girokonto wechseln in Österreich: So geht der Kontowechsel (Österreich)](https://finvallo.com/at/ratgeber/girokonto-wechseln/): Girokonto wechseln in Österreich: Die neue Bank übernimmt laut Gesetz die Arbeit. Ablauf in 3 Schritten, Fristen, Kosten und was bei Online-Banken anders ist.
 - [Basiskonto in Österreich: Das Recht auf ein Konto für alle (Österreich)](https://finvallo.com/at/ratgeber/basiskonto/): Basiskonto in Österreich: Wer Anspruch hat, was es höchstens kosten darf (83,45 €, ermäßigt 41,73 € im Jahr), was dabei ist und wann die Bank ablehnen darf.
+- [Kontoüberziehung in Österreich: Überziehungsrahmen, Zinsen und deine Rechte (Österreich)](https://finvallo.com/at/ratgeber/kontoueberziehung/): Kontoüberziehung in Österreich: Rahmen oder Überschreitung, Zinsen von 6,8 % bis 17 % im Vergleich, was die Bank darf und was ab 20.11.2026 neu ist.
+- [Gemeinschaftskonto in Österreich: Oder-Konto, Und-Konto und die Haftung (Österreich)](https://finvallo.com/at/ratgeber/gemeinschaftskonto/): Gemeinschaftskonto in Österreich: Oder- oder Und-Konto, Haftung, Trennung, Einlagensicherung doppelt und 19 Konten im Vergleich, die es als Gemeinschaftskonto gibt.
+- [Pfändungsschutz am Konto in Österreich: So bleibt dir das Existenzminimum (Österreich)](https://finvallo.com/at/ratgeber/pfaendungsschutzkonto/): Kontopfändung in Österreich: Kein P-Konto, aber ein Antrag nach § 292i EO beim Exekutionsgericht. Existenzminimum 2026 (1.308,39 €), 14-Tage-Frist und Ablauf.
+- [Kinderkonto und Jugendkonto in Österreich: Ab wann, mit welcher Karte, zu welchen Regeln (Österreich)](https://finvallo.com/at/ratgeber/kinderkonto-jugendkonto/): Kinderkonto und Jugendkonto in Österreich: ab welchem Alter, wer eröffnet, Karten und Limits, was mit 18 passiert. 4 Kinder- und 6 Jugendkonten im Vergleich.
+- [Konto für Selbstständige in Österreich: Privatkonto oder Geschäftskonto? (Österreich)](https://finvallo.com/at/ratgeber/konto-selbststaendige/): Konto für Selbstständige in Österreich: Wann du ein Geschäftskonto brauchst, was Banken bei Privatkonten erlauben, Buchhaltung, Umsatzsteuer und passende Konten.
+- [Festgeld oder Tagesgeld: Was passt wann in Österreich? (Österreich)](https://finvallo.com/at/ratgeber/festgeld-oder-tagesgeld/): Festgeld oder Tagesgeld in Österreich: Wo die Unterschiede liegen, wann Zinsbindung besser ist als Flexibilität und wie du beides kombinierst. Mit Zinsen aus 51 Festgeld-Angeboten.
+- [Einlagensicherung in Österreich und der EU: Was wirklich geschützt ist (Österreich)](https://finvallo.com/at/ratgeber/einlagensicherung/): Einlagensicherung in Österreich: 100.000 € pro Person und Bank, Auszahlung in 7 Arbeitstagen, ESA, Sparkassen und Raiffeisen. Was bei Banken aus 12 anderen EU-Ländern gilt.
+- [Zinstreppe: Festgeld auf mehrere Laufzeiten verteilen (Österreich)](https://finvallo.com/at/ratgeber/zinstreppe/): Zinstreppe in Österreich erklärt: 30.000 € auf drei Laufzeiten verteilt, durchgerechnet mit aktuellen Zinsen bis 3,48 %. Vorteile, Nachteile und wann sich die Festgeld-Leiter lohnt.
+- [Festgeld kündigen: Geht das vorzeitig, und was kostet es? (Österreich)](https://finvallo.com/at/ratgeber/festgeld-kuendigen/): Festgeld vorzeitig kündigen in Österreich: Bei 36 von 51 Angeboten nicht möglich, sonst mit Vorschusszinsen oder 0,01 % Zins. Flexgeld, Todesfall, automatische Verlängerung und Fristen.
+- [Festgeld-Plattformen: Raisin, PickTheBank und der Direktabschluss (Österreich)](https://finvallo.com/at/ratgeber/festgeld-plattformen/): Festgeld-Plattformen in Österreich: Wie Raisin und PickTheBank funktionieren, wo dein Geld liegt, was es kostet und wer die KESt abführt. 29 von 51 Angeboten im Vergleich laufen über Raisin.
+- [Festgeld und Steuern in Österreich: KESt, E1kv und Quellensteuer (Österreich)](https://finvallo.com/at/ratgeber/festgeld-steuern/): Festgeld-Zinsen versteuern in Österreich: 25 % KESt, bei inländischen Banken automatisch, bei ausländischen über die Beilage E1kv. Quellensteuer in Portugal, Lettland und Litauen anrechnen. Mit Rechenbeispiel.
 - [Kostenlose Kreditkarte in Österreich: Was „ohne Jahresgebühr“ wirklich heißt (Österreich)](https://finvallo.com/at/ratgeber/kostenlose-kreditkarte/): Kostenlose Kreditkarte in Österreich: 3 echte Karten ohne Jahresgebühr, wo sie bei Bargeld, Ausland und Teilzahlung trotzdem Geld kosten, mit Rechenbeispielen.
 - [Kreditkarte als Student in Österreich: Was du ohne Einkommen bekommst und was nach dem Studium passiert (Österreich)](https://finvallo.com/at/ratgeber/kreditkarte-studenten/): Kreditkarte als Student in Österreich: Karten ohne Einkommen, Studentenkarten der Banken, was nach dem Studium gilt und was im Auslandssemester zählt.
-- [Kreditkarte beantragen in Österreich: so geht es Schritt für Schritt (Österreich)](https://finvallo.com/at/ratgeber/kreditkarte-beantragen/): Kreditkarte beantragen in Österreich: welche Unterlagen du brauchst, wie die KSV-Prüfung abläuft, wie lange es dauert und warum Anträge abgelehnt werden.
+- [Kreditkarte beantragen in Österreich: so geht es Schritt für Schritt (Österreich)](https://finvallo.com/at/ratgeber/kreditkarte-beantragen/): Kreditkarte in Österreich beantragen: Unterlagen, Video-Ident, KSV1870-Abfrage, Dauer und die häufigsten Gründe für eine Ablehnung. Mit Karten aus unserem Vergleich.
 - [Gebühren im Ausland verstehen (Österreich)](https://finvallo.com/at/ratgeber/fremdwaehrung/): Bearbeitungsentgelt, Kursaufschlag und die Falle „in Euro zahlen“: So vermeidest du unnötige Gebühren mit der Kreditkarte, wenn du aus Österreich verreist.
 - [Bargeld beheben mit der Kreditkarte: Was es in Österreich und im Ausland wirklich kostet (Österreich)](https://finvallo.com/at/ratgeber/bargeld-beheben/): Bargeld beheben mit der Kreditkarte: Gebühren aller Karten in Österreich, die Zinsfalle bei TF Bank und Advanzia und Rechenbeispiele für drei Urlaube.
 - [Reiseversicherung über die Kreditkarte: Welche Karte dich in Österreich wirklich absichert (Österreich)](https://finvallo.com/at/ratgeber/reiseversicherung/): Welche Kreditkarten in Österreich eine Reiseversicherung mit Storno enthalten: Stornosummen, Selbstbehalt, Arztkosten und Altersgrenzen im Vergleich.
 - [Flugverspätung, Koffer verspätet oder verloren: Was deine Kreditkarte zahlt (Österreich)](https://finvallo.com/at/ratgeber/flugverspaetung-gepaeck/): Was Kreditkarten in Österreich bei Flugverspätung und verspätetem oder verlorenem Gepäck zahlen: Schwellen in Stunden, Höchstsummen, Wertsachen-Grenzen.
 - [Lohnt sich Punktesammeln mit Kreditkarte in Österreich? (Österreich)](https://finvallo.com/at/ratgeber/punkte-sammeln-at/): Punkte und Meilen mit Kreditkarte in Österreich: Programme, Punktewerte, Amex-Transferpartner und ab welchem Umsatz sich eine Karte rechnet.
 - [Lounge-Zugang mit der Kreditkarte (Österreich)](https://finvallo.com/at/ratgeber/lounges/): Welche Kreditkarten in Österreich gratis Zugang zu Flughafen-Lounges geben: Priority Pass, Wiener Lounges, Besuche pro Jahr und Begleitpersonen.
-- [Visa, Mastercard oder American Express? (Österreich)](https://finvallo.com/at/ratgeber/visa-mastercard-amex/): Visa, Mastercard oder American Express: Akzeptanz, Wechselkurse und Gebühren im Vergleich, mit Zahlen aus 61 Karten in Österreich.
+- [Visa, Mastercard oder American Express? (Österreich)](https://finvallo.com/at/ratgeber/visa-mastercard-amex/): Visa, Mastercard, American Express oder Diners Club: Akzeptanz in Österreich, Wechselkurse, Bearbeitungsentgelt und wer welche Karte ausgibt, mit Zahlen aus 63 Karten.
 - [Apple Pay und Google Pay in Österreich: Welche Banken und Kreditkarten funktionieren (Österreich)](https://finvallo.com/at/ratgeber/apple-pay-google-pay/): Apple Pay und Google Pay in Österreich: welche Banken und Karten mitmachen, welche nicht (Amex, card complete), Einrichtung, Limits und Haftung.
-- [Kreditkarte für Mietwagen: Kaution und Versicherung (Österreich)](https://finvallo.com/at/ratgeber/mietwagen-kaution/): Welche Karte passt zur Mietwagenbuchung? Kasko, Selbstbeteiligungsschutz, Haftpflicht und Zahlungsbedingungen für Karten in Österreich.
-- [Kreditkarte ohne KSV-Abfrage: was wirklich geht (Österreich)](https://finvallo.com/at/ratgeber/ohne-bonitaetspruefung/): Kreditkarte ohne KSV-Prüfung? Was seriös geht, welche Debit- und Prepaid-Karten es in Österreich ohne Kreditprüfung gibt und wovor du dich hüten solltest.
+- [Kreditkarte für Mietwagen: Kaution und Versicherung (Österreich)](https://finvallo.com/at/ratgeber/mietwagen-kaution/): Mietwagen mit Kreditkarte aus Österreich: wie die Kaution reserviert wird, warum die Bankomatkarte oft nicht reicht und welche der 63 Karten im Vergleich Kasko oder Selbstbehalt abdecken.
+- [Kreditkarte ohne KSV-Abfrage: was wirklich geht (Österreich)](https://finvallo.com/at/ratgeber/ohne-bonitaetspruefung/): Kreditkarte ohne KSV1870-Prüfung in Österreich? Warum es keine echte gibt, welche Debit- und Prepaid-Karten ohne Bonitätsprüfung funktionieren und was dir immer zusteht.
 - [Kredit-, Charge-, Debit- oder Prepaid-Karte? (Österreich)](https://finvallo.com/at/ratgeber/kartentypen/): Kreditkarte, Charge-Karte, Debitkarte oder Prepaid-Karte: die vier Kartentypen in Österreich einfach erklärt, mit Vor- und Nachteilen.
 - [Teilzahlung bei Kreditkarten in Österreich: Was sie kostet und wie du sie abschaltest (Österreich)](https://finvallo.com/at/ratgeber/teilzahlung/): Teilzahlung bei Kreditkarten in Österreich: Effektivzinsen aller Karten mit Kreditrahmen, was 1.000 € mit Mindestrate kosten und wie du sie abschaltest.
 - [Firmenkreditkarte in Österreich: Haftung, Mitarbeiterkarten, Buchhaltung und Kosten (Österreich)](https://finvallo.com/at/ratgeber/business/): Firmenkreditkarte in Österreich: Haftung, Mitarbeiterkarten, Zahlungsziel, Buchhaltungsexport und Jahreskosten aller Business-Karten laut Anbieter.
 
 ## Österreich: Girokonten
 - [Girokonto-Vergleich Österreich](https://finvallo.com/at/girokonto/): 62 Konten von Banken mit Angebot in ganz Österreich, Jahreskosten selbst rechnen, Stand 27.10.2026
-- [Bestenlisten Girokonten Österreich](https://finvallo.com/at/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder
+- [Bestenlisten Girokonten Österreich](https://finvallo.com/at/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder, Basiskonto, Premium, Mit Kreditkarte, Mit Guthabenzinsen, Mit Prämie
 - [So bewerten wir Girokonten](https://finvallo.com/at/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/at/daten/girokonten.json)
 - [Online Gehalts-/Pensionskonto (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/anadi-online-gehalts-pensionskonto/): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
@@ -101,6 +115,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Die besten Karten mit Lounge-Zugang in Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/lounge/): Platz 1 American Express Platinum Card
 - [Die besten Premiumkarten in Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/premium/): Platz 1 easybank Kreditkarte Platinum
 - [Die besten Karten für Studierende und junge Leute in Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/studium/): Platz 1 Consorsbank Visa Card Gold
+- [Die besten Miles & More Kreditkarten in Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/miles-and-more/): Platz 1 Miles & More MyFlex Credit Card
 - [Die besten Debitkarten und App-Banken in Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/debit/): Platz 1 BBVA Debitkarte
 - [Bank Norwegian Visa Kreditkarte](https://finvallo.com/de/kreditkarten/bank-norwegian-visa-kreditkarte/): Typ: Kreditkarte; Netz: Visa; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 0 €; Reiseversicherung: Umfassender Reiseschutz; Zins: 21,99 % Soll / 24,40 % effektiv; Bewertung: 4,7/5 (Sehr gut); geprüft am 12.10.2026
 - [WEB.Cent Mastercard Gold (GMX / WEB.DE)](https://finvallo.com/de/kreditkarten/web-cent-mastercard-gold-gmx-web-de/): Typ: Kreditkarte; Netz: Mastercard; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 0 € Gebühr im In- und Ausland, aber ab Abhebungstag 1,86 % Zins pro Monat (24,69 % eff. p. a.); Reiseversicherung: inkl. Storno; Zins: 22,32 % Soll / 24,69 % effektiv; Sammelrate: 0,5 % Cashback (WEB.Cent) auf jeden Einkauf, ohne Jahreslimit; Auszahlung ab 5 € aufs Bankkonto. Ausgenommen Geldtransfers, PayPal, Google-Play-Family. Plus Shop-Cashback über WEB.Cent-Partner.; Bewertung: 4,7/5 (Sehr gut); geprüft am 12.10.2026
@@ -120,7 +135,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 
 ## Deutschland: Girokonten
 - [Girokonto-Vergleich Deutschland](https://finvallo.com/de/girokonto/): 87 Konten von Banken mit Angebot in ganz Deutschland, Jahreskosten selbst rechnen, Stand 27.10.2026
-- [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder
+- [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder, Basiskonto, Premium, Mit Kreditkarte, Mit Guthabenzinsen, Mit Prämie
 - [So bewerten wir Girokonten](https://finvallo.com/de/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/de/daten/girokonten.json)
 - [Consorsbank! Girokonto (Consorsbank)](https://finvallo.com/de/girokonto/consorsbank-girokonto/): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
@@ -141,18 +156,29 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Kostenloses Girokonto in Deutschland: Worauf du achten musst (Deutschland)](https://finvallo.com/de/ratgeber/kostenloses-girokonto/): Kostenloses Girokonto in Deutschland: 7 Konten ohne Bedingung, 14 gratis mit Geldeingang oder unter einem bestimmten Alter. Welche Kosten trotzdem anfallen.
 - [Girokonto wechseln in Deutschland: So hilft dir die neue Bank (Deutschland)](https://finvallo.com/de/ratgeber/girokonto-wechseln/): Girokonto wechseln in Deutschland: Die neue Bank muss dir laut Zahlungskontengesetz helfen. Ablauf, Fristen, was kostenlos ist und was bei Banken im EU-Ausland gilt.
 - [Basiskonto in Deutschland: Das Recht auf ein Girokonto (Deutschland)](https://finvallo.com/de/ratgeber/basiskonto/): Basiskonto in Deutschland: Wer Anspruch hat, was dabei ist, wann die Bank ablehnen darf und was es kostet. 18 Basiskonten im Vergleich.
+- [Dispo in Deutschland: Dispokredit, geduldete Überziehung und deine Rechte (Deutschland)](https://finvallo.com/de/ratgeber/dispo/): Dispokredit in Deutschland: eingeräumte und geduldete Überziehung, Dispozinsen von 2,635 % bis 18,01 % im Vergleich, Warnpflicht der Bank, Kündigung und Alternativen.
+- [Gemeinschaftskonto in Deutschland: Oder-Konto, Haftung und die Schenkungsteuer-Falle (Deutschland)](https://finvallo.com/de/ratgeber/gemeinschaftskonto/): Gemeinschaftskonto in Deutschland: Oder- oder Und-Konto, wer haftet, Einlagensicherung doppelt, Schenkungsteuer bei hohen Einzahlungen und 32 Konten im Vergleich.
+- [P-Konto in Deutschland: Pfändungsschutzkonto, Freibetrag 2026 und Umwandlung (Deutschland)](https://finvallo.com/de/ratgeber/p-konto/): P-Konto in Deutschland: Grundfreibetrag 1.590 € seit 1. Juli 2026, Umwandlung in 4 Geschäftstagen, Bescheinigung für höhere Freibeträge, nur ein P-Konto pro Person.
+- [Kinderkonto und Jugendkonto in Deutschland: Alter, Karten und was mit 18 passiert (Deutschland)](https://finvallo.com/de/ratgeber/kinderkonto-jugendkonto/): Kinderkonto und Jugendkonto in Deutschland: ab welchem Alter, wer eröffnet, girocard oder Debitkarte, Limits, Umstellung mit 18. 9 Konten für Minderjährige im Vergleich.
+- [Konto für Selbstständige in Deutschland: Reicht das Privatkonto? (Deutschland)](https://finvallo.com/de/ratgeber/konto-selbststaendige/): Konto für Selbstständige in Deutschland: Wann ein Geschäftskonto Pflicht ist, was die AGB der Banken erlauben, Buchhaltung, Umsatzsteuer und welche Konten im Vergleich passen.
+- [Festgeld oder Tagesgeld: Was passt wann in Deutschland? (Deutschland)](https://finvallo.com/de/ratgeber/festgeld-oder-tagesgeld/): Festgeld oder Tagesgeld in Deutschland: Unterschiede, wann sich die Zinsbindung lohnt und wie du beides kombinierst. Mit aktuellen Zinsen aus 271 Festgeld-Angeboten bis 4 %.
+- [Einlagensicherung in Deutschland und der EU: Was wirklich geschützt ist (Deutschland)](https://finvallo.com/de/ratgeber/einlagensicherung/): Einlagensicherung in Deutschland: 100.000 € pro Person und Bank, Auszahlung in 7 Arbeitstagen, EdB, Sparkassen, Genossenschaftsbanken und freiwilliger Fonds. Was bei Banken aus 22 EU-Ländern gilt.
+- [Zinstreppe: Festgeld auf mehrere Laufzeiten verteilen (Deutschland)](https://finvallo.com/de/ratgeber/zinstreppe/): Zinstreppe in Deutschland erklärt: 30.000 € auf drei Laufzeiten verteilt, durchgerechnet mit aktuellen Zinsen bis 3,75 %. Vorteile, Nachteile und wann sich die Festgeld-Leiter lohnt.
+- [Festgeld kündigen: Geht das vorzeitig, und was kostet es? (Deutschland)](https://finvallo.com/de/ratgeber/festgeld-kuendigen/): Festgeld vorzeitig kündigen in Deutschland: Bei 254 von 271 Angeboten ausgeschlossen, sonst mit Zinsverlust oder Gebühr. Flexgeld, Todesfall, Widerruf, automatische Verlängerung und Fristen.
+- [Festgeld-Plattformen: Raisin, CHECK24, ZinsMarkt oder direkt? (Deutschland)](https://finvallo.com/de/ratgeber/festgeld-plattformen/): Festgeld-Plattformen in Deutschland: Wie Raisin, CHECK24 und der ZinsMarkt der Deutschen Bank funktionieren, wo dein Geld liegt, was es kostet und wer die Steuer abführt. 216 von 271 Angeboten laufen über Plattformen.
+- [Festgeld und Steuern in Deutschland: Abgeltungsteuer, Pauschbetrag, Anlage KAP (Deutschland)](https://finvallo.com/de/ratgeber/festgeld-steuern/): Festgeld-Zinsen versteuern in Deutschland: 25 % Abgeltungsteuer plus Soli, 1.000 € Sparer-Pauschbetrag, Freistellungsauftrag, NV-Bescheinigung, Anlage KAP bei ausländischen Banken und Quellensteuer. Mit Rechenbeispiel.
 - [Kostenlose Kreditkarte in Deutschland: Was „ohne Jahresgebühr“ wirklich heißt (Deutschland)](https://finvallo.com/de/ratgeber/kostenlose-kreditkarte/): Kostenlose Kreditkarte in Deutschland: 23 echte Karten ohne Jahresgebühr, wo sie bei Bargeld, Ausland und Teilzahlung trotzdem Geld kosten, mit Rechenbeispielen.
 - [Kreditkarte als Student in Deutschland: Was du ohne Einkommen bekommst und was nach dem Studium passiert (Deutschland)](https://finvallo.com/de/ratgeber/kreditkarte-studenten/): Kreditkarte als Student in Deutschland: Karten ohne Einkommen, SCHUFA-Prüfung, wann die Jung-Konditionen enden und was im Auslandssemester zählt.
-- [Kreditkarte beantragen in Deutschland: so geht es Schritt für Schritt (Deutschland)](https://finvallo.com/de/ratgeber/kreditkarte-beantragen/): Kreditkarte beantragen in Deutschland: welche Unterlagen du brauchst, wie die Schufa-Prüfung abläuft, wie lange es dauert und warum Anträge abgelehnt werden.
+- [Kreditkarte beantragen in Deutschland: so geht es Schritt für Schritt (Deutschland)](https://finvallo.com/de/ratgeber/kreditkarte-beantragen/): Kreditkarte in Deutschland beantragen: Voraussetzungen, VideoIdent oder PostIdent, Schufa-Prüfung, Dauer und was bei einer Ablehnung hilft. Mit Karten aus unserem Vergleich.
 - [Gebühren im Ausland verstehen (Deutschland)](https://finvallo.com/de/ratgeber/fremdwaehrung/): Auslandseinsatzentgelt, Wechselkurs und die Falle „in Euro zahlen“: So vermeidest du unnötige Gebühren mit der Kreditkarte, wenn du aus Deutschland verreist.
 - [Geld abheben mit der Kreditkarte: Was es in Deutschland und im Ausland wirklich kostet (Deutschland)](https://finvallo.com/de/ratgeber/bargeld-abheben/): Geld abheben mit der Kreditkarte: Entgelte aller Karten in Deutschland, Inland gegen Ausland, Zinsfalle bei Gratiskarten und Rechenbeispiele.
 - [Reiseversicherung über die Kreditkarte: Welche Karte dich in Deutschland wirklich absichert (Deutschland)](https://finvallo.com/de/ratgeber/reiseversicherung/): Kreditkarten mit Reiseversicherung in Deutschland: Stornosummen, Selbstbehalt, Auslandskranken, Gepäck und Flugverspätung aller Karten im Vergleich.
 - [Lohnt sich Punktesammeln mit Kreditkarte in Deutschland? (Deutschland)](https://finvallo.com/de/ratgeber/punkte-sammeln-de/): Punkte und Meilen mit Kreditkarte in Deutschland: Programme, Punktewerte, Amex-Boni und Transferpartner, Miles & More, Payback und was sich wirklich lohnt.
 - [Lounge-Zugang mit der Kreditkarte (Deutschland)](https://finvallo.com/de/ratgeber/lounges/): Welche Kreditkarten in Deutschland kostenlosen Zugang zu Flughafen-Lounges geben: Priority Pass, Besuche pro Jahr und Begleitpersonen.
-- [Visa, Mastercard oder American Express? (Deutschland)](https://finvallo.com/de/ratgeber/visa-mastercard-amex/): Visa, Mastercard oder American Express: Akzeptanz, Wechselkurse und Gebühren im Vergleich, mit Zahlen aus 133 Karten in Deutschland.
+- [Visa, Mastercard oder American Express? (Deutschland)](https://finvallo.com/de/ratgeber/visa-mastercard-amex/): Visa, Mastercard oder American Express in Deutschland: Akzeptanz neben der girocard, Wechselkurse, Auslandseinsatzentgelt und wer welche Karte ausgibt, mit 133 Karten im Vergleich.
 - [Apple Pay und Google Pay in Deutschland: Welche Banken und Kreditkarten funktionieren (Deutschland)](https://finvallo.com/de/ratgeber/apple-pay-google-pay/): Apple Pay und Google Pay in Deutschland: welche Banken mitmachen, welche nicht (Sparkasse, Amazon Visa, Postbank Visa), Einrichtung und Haftung.
-- [Kreditkarte für Mietwagen: Kaution und Versicherung (Deutschland)](https://finvallo.com/de/ratgeber/mietwagen-kaution/): Welche Karte passt zur Mietwagenbuchung? Kasko, Selbstbeteiligungsschutz, Haftpflicht und Zahlungsbedingungen für Karten in Deutschland.
-- [Kreditkarte ohne Schufa: was wirklich geht (Deutschland)](https://finvallo.com/de/ratgeber/ohne-bonitaetspruefung/): Kreditkarte ohne Schufa? Was seriös geht, welche Debit- und Prepaid-Karten es in Deutschland ohne Kreditprüfung gibt und wovor du dich hüten solltest.
+- [Kreditkarte für Mietwagen: Kaution und Versicherung (Deutschland)](https://finvallo.com/de/ratgeber/mietwagen-kaution/): Mietwagen mit Kreditkarte aus Deutschland: wie Sixt, Europcar und Co. die Kaution reservieren, was girocard und Debit-Visa taugen und welche der 133 Karten im Vergleich Kasko oder Selbstbeteiligung abdecken.
+- [Kreditkarte ohne Schufa: was wirklich geht (Deutschland)](https://finvallo.com/de/ratgeber/ohne-bonitaetspruefung/): Kreditkarte ohne Schufa in Deutschland? Warum es keine echte gibt, welche Debit- und Prepaid-Karten ohne Bonitätsprüfung funktionieren und woran du unseriöse Angebote erkennst.
 - [Kredit-, Charge-, Debit- oder Prepaid-Karte? (Deutschland)](https://finvallo.com/de/ratgeber/kartentypen/): Kreditkarte, Charge-Karte, Debitkarte oder Prepaid-Karte: die vier Kartentypen in Deutschland einfach erklärt, mit Vor- und Nachteilen.
 - [Teilzahlung bei Kreditkarten in Deutschland: Was sie kostet und wie du sie abschaltest (Deutschland)](https://finvallo.com/de/ratgeber/teilzahlung/): Teilzahlung bei Kreditkarten in Deutschland: Effektivzinsen aller Karten mit Kreditrahmen, was 1.000 € mit Mindestrate kosten und wie du sie abschaltest.
 - [Firmenkreditkarte in Deutschland: Haftung, Mitarbeiterkarten, Buchhaltung und Kosten (Deutschland)](https://finvallo.com/de/ratgeber/business/): Firmenkreditkarte in Deutschland: Haftung, Mitarbeiterkarten, Zahlungsziel, Buchhaltungsexport und Jahreskosten aller Business-Karten laut Anbieter.
@@ -164,14 +190,58 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Revolut Premium](https://finvallo.com/at/kreditkarten/revolut-premium/): Typ: Debit; Netz: Visa/Mastercard; Jahresgebühr: 99 €; Fremdwährung: 0 %; Bargeld: Bis 400 € pro Monat kostenlos, danach 2 %, mind. 1 €; Reiseversicherung: inkl. Storno; Sammelrate: 1 RevPoint pro 4 €; Bewertung: 4,1/5 (Gut); geprüft am 21.10.2026
 - [Erste Bank und Sparkassen Premiumcard](https://finvallo.com/at/kreditkarten/erste-bank-und-sparkassen-premiumcard/): Typ: Charge; Netz: Visa/Mastercard; Jahresgebühr: 99 € (1. Jahr 0 €); Fremdwährung: 1,5 % (Umrechnung zum Mastercard- bzw. Visa-Kurs); Bargeld: 3 %, mind. 3,63 €; Reiseversicherung: Umfassender Reiseschutz; Sammelrate: 0,6 % online, max. 30 €/Jahr; Bewertung: 4,0/5 (Gut); geprüft am 11.10.2026
 - [N26 Go](https://finvallo.com/at/kreditkarten/n26-go/): Typ: Debit; Netz: Mastercard; Jahresgebühr: 118,80 €; Fremdwährung: 0 %; Bargeld: Unbegrenzt kostenlos, auch in Fremdwährung; Reiseversicherung: Umfassender Reiseschutz; Bewertung: 4,0/5 (Gut); geprüft am 14.10.2026
-- [Bitpanda Karte](https://finvallo.com/at/kreditkarten/bitpanda-karte/): Typ: Debit; Netz: keine Angabe; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 2 %, mind. 2 € pro Abhebung; Reiseversicherung: keine Angabe; Bewertung: 3,9/5 (Befriedigend); geprüft am 14.10.2026
+- [Bitpanda Karte](https://finvallo.com/at/kreditkarten/bitpanda-karte/): Typ: Debit; Netz: Visa; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 2 %, mind. 2 € pro Abhebung; Reiseversicherung: keine Angabe; Bewertung: 3,9/5 (Befriedigend); geprüft am 14.10.2026
+- [Santander Card](https://finvallo.com/at/kreditkarten/santander-card/): Typ: Kreditkarte; Netz: Mastercard; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: Kostenlos; Reiseversicherung: Keine Reiseversicherung; Zins: 18 % Soll / 19,56 % effektiv; Sammelrate: 1 % Cashback, max. 50 €/Jahr; Bewertung: 3,9/5 (Befriedigend); geprüft am 11.10.2026
 - [easybank Kreditkarte](https://finvallo.com/at/kreditkarten/easybank-kreditkarte/): Typ: Charge; Netz: Mastercard; Jahresgebühr: 12 €; Fremdwährung: 1,5 % plus Kursaufschlag (Höhe: keine Angabe); Bargeld: 3,63 € je Behebung; Reiseversicherung: Basis-Reiseschutz; Bewertung: 3,9/5 (Befriedigend); geprüft am 11.10.2026
-- [Revolut Metal](https://finvallo.com/at/kreditkarten/revolut-metal/): Typ: Debit; Netz: Visa/Mastercard; Jahresgebühr: 175 €; Fremdwährung: 0 %; Bargeld: Bis 800 € pro Monat kostenlos, danach 2 %, mind. 1 €; Reiseversicherung: Umfassender Reiseschutz; Sammelrate: 1 RevPoint pro 2 €; Bewertung: 3,9/5 (Befriedigend); geprüft am 21.10.2026
-- [N26 Metal](https://finvallo.com/at/kreditkarten/n26-metal/): Typ: Debit; Netz: Mastercard; Jahresgebühr: 202,80 €; Fremdwährung: 0 %; Bargeld: Unbegrenzt kostenlos, auch in Fremdwährung; Reiseversicherung: Umfassender Reiseschutz; Lounge: DragonPass: 1 kostenloser Besuch pro Jahr, weltweit; Bewertung: 3,9/5 (Befriedigend); geprüft am 14.10.2026
+- [easybank Kreditkarte Gold](https://finvallo.com/at/kreditkarten/easybank-kreditkarte-gold/): Typ: Charge; Netz: Visa/Mastercard; Jahresgebühr: 59,88 € (1. Jahr 35,88 €); Fremdwährung: 1,5 % plus Kursaufschlag (Höhe: keine Angabe); Bargeld: 3,63 € je Behebung; Reiseversicherung: inkl. Storno; Bewertung: 3,9/5 (Befriedigend); geprüft am 11.10.2026
 
-## Optional
-- [Vollständige Kartendaten als Text](https://finvallo.com/llms-full.txt)
-- [Kartendaten als JSON](https://finvallo.com/at/daten/kreditkarten.json)
+## Deutschland: Festgeld
+- [Festgeld-Vergleich Deutschland](https://finvallo.com/de/festgeld/): 271 Angebote von 217 Banken, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand 27.10.2026
+- [Festgeld 1 Monat Deutschland](https://finvallo.com/de/festgeld/1-monat/)
+- [Festgeld 3 Monate Deutschland](https://finvallo.com/de/festgeld/3-monate/)
+- [Festgeld 6 Monate Deutschland](https://finvallo.com/de/festgeld/6-monate/)
+- [Festgeld 9 Monate Deutschland](https://finvallo.com/de/festgeld/9-monate/)
+- [Festgeld 1 Jahr Deutschland](https://finvallo.com/de/festgeld/1-jahr/)
+- [Festgeld 18 Monate Deutschland](https://finvallo.com/de/festgeld/18-monate/)
+- [Festgeld 2 Jahre Deutschland](https://finvallo.com/de/festgeld/2-jahre/)
+- [Festgeld 3 Jahre Deutschland](https://finvallo.com/de/festgeld/3-jahre/)
+- [Festgeld 4 Jahre Deutschland](https://finvallo.com/de/festgeld/4-jahre/)
+- [Festgeld 5 Jahre Deutschland](https://finvallo.com/de/festgeld/5-jahre/)
+- [Festgeld 6 Jahre Deutschland](https://finvallo.com/de/festgeld/6-jahre/)
+- [Festgeld 7 Jahre Deutschland](https://finvallo.com/de/festgeld/7-jahre/)
+- [Festgeld 8 Jahre Deutschland](https://finvallo.com/de/festgeld/8-jahre/)
+- [Festgeld 10 Jahre Deutschland](https://finvallo.com/de/festgeld/10-jahre/)
+- [Bestenlisten Festgeld Deutschland](https://finvallo.com/de/festgeld/bestenlisten/): Deutsche Einlagensicherung, Vorzeitig kündbar, Ab 1.000 €, Steuer automatisch, Direkt bei der Bank, Über Raisin, Über CHECK24, Aktionen
+- [Festgeld nach Bank](https://finvallo.com/de/festgeld/bank/)
+- [So vergleichen wir Festgeld](https://finvallo.com/de/festgeld/methodik/)
+- [Daten als JSON](https://finvallo.com/de/daten/festgeld.json)
+- [Bigbank Festgeld](https://finvallo.com/de/festgeld/bigbank-festgeld-de/): 3,60 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Estland
+- [MAX Festgeld](https://finvallo.com/de/festgeld/max-festgeld-festgeld-de-check24/): 3,53 % für 1 Jahr, über CHECK24, Einlagensicherung Slowakei
+- [Ecobank International Festgeld](https://finvallo.com/de/festgeld/ecobank-international-festgeld-de-raisin/): 3,52 % für 1 Jahr, über Raisin, Einlagensicherung Frankreich
+- [HypoVereinsbank Festgeld](https://finvallo.com/de/festgeld/hypovereinsbank-festgeld-de/): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [İşbank İŞWEB Festgeld](https://finvallo.com/de/festgeld/isbank-isweb-festgeld-de/): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+
+## Österreich: Festgeld
+- [Festgeld-Vergleich Österreich](https://finvallo.com/at/festgeld/): 51 Angebote von 49 Banken, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand 27.10.2026
+- [Festgeld 3 Monate Österreich](https://finvallo.com/at/festgeld/3-monate/)
+- [Festgeld 6 Monate Österreich](https://finvallo.com/at/festgeld/6-monate/)
+- [Festgeld 9 Monate Österreich](https://finvallo.com/at/festgeld/9-monate/)
+- [Festgeld 1 Jahr Österreich](https://finvallo.com/at/festgeld/1-jahr/)
+- [Festgeld 18 Monate Österreich](https://finvallo.com/at/festgeld/18-monate/)
+- [Festgeld 2 Jahre Österreich](https://finvallo.com/at/festgeld/2-jahre/)
+- [Festgeld 3 Jahre Österreich](https://finvallo.com/at/festgeld/3-jahre/)
+- [Festgeld 4 Jahre Österreich](https://finvallo.com/at/festgeld/4-jahre/)
+- [Festgeld 5 Jahre Österreich](https://finvallo.com/at/festgeld/5-jahre/)
+- [Festgeld 10 Jahre Österreich](https://finvallo.com/at/festgeld/10-jahre/)
+- [Bestenlisten Festgeld Österreich](https://finvallo.com/at/festgeld/bestenlisten/): Österreichische Einlagensicherung, Vorzeitig kündbar, Ab 1.000 €, Steuer automatisch, Direkt bei der Bank, Über Raisin, Aktionen
+- [Festgeld nach Bank](https://finvallo.com/at/festgeld/bank/)
+- [So vergleichen wir Festgeld](https://finvallo.com/at/festgeld/methodik/)
+- [Daten als JSON](https://finvallo.com/at/daten/festgeld.json)
+- [Banca Sistema Festgeld](https://finvallo.com/at/festgeld/banca-sistema-festgeld-at-raisin/): 3,45 % für 1 Jahr, über Raisin, Einlagensicherung Italien
+- [Urbo Bankas Flexgeld](https://finvallo.com/at/festgeld/urbo-bankas-flexgeld-at-raisin/): 3,40 % für 1 Jahr, über Raisin, Einlagensicherung Litauen
+- [Coop Pank Festgeld](https://finvallo.com/at/festgeld/coop-pank-festgeld-at-raisin/): 3,26 % für 1 Jahr, über Raisin, Einlagensicherung Estland
+- [BluOr Bank Festgeld](https://finvallo.com/at/festgeld/bluor-bank-festgeld-at-raisin/): 3,20 % für 1 Jahr, über Raisin, Einlagensicherung Lettland
+- [Creditplus Bank Festgeld](https://finvallo.com/at/festgeld/creditplus-bank-festgeld-at-raisin/): 3,10 % für 1 Jahr, über Raisin, Einlagensicherung Deutschland
 
 ## Österreich: Ab wann lohnt sich eine Premiumkarte?
 - [Ab wann lohnt sich die American Express Platinum Card?](https://finvallo.com/at/kreditkarten/bestenlisten/lohnt-sich/american-express-platinum-card/): Die Guthaben sind zusammen 540 € im Jahr wert, die Jahresgebühr beträgt 690 €. Mit allen Guthaben und 1.000 € Kartenumsatz im Monat lohnt sie sich ab etwa 3 Lounge-Besuchen im Jahr (bei 1.000 € Kartenumsatz im Monat). Ohne die Guthaben lohnt sie sich ab etwa 21 Lounge-Besuchen im Jahr (bei 1.000 € Kartenumsatz im Monat). Brauchst du sonst eine eigene Jahres-Reiseversicherung (etwa 300 €), holst du die Jahresgebühr damit schon herein.
@@ -215,3 +285,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Renditerechner (Österreich)](https://finvallo.com/at/rechner/renditerechner/)
 - [KESt-Rechner (Kapitalertragsteuer) (Österreich)](https://finvallo.com/at/rechner/kapitalertragsteuer/)
 - [Umsatzsteuer-Rechner (MwSt) (Österreich)](https://finvallo.com/at/rechner/mehrwertsteuer/)
+
+## Optional
+- [Vollständige Kartendaten als Text](https://finvallo.com/llms-full.txt)
+- [Kartendaten als JSON](https://finvallo.com/at/daten/kreditkarten.json)

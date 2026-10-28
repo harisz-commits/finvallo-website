@@ -1,0 +1,57 @@
+[
+ {
+  "name": "Zinspilot (alle Partnerbank-Angebote)",
+  "markt": "de",
+  "grund": "Marke nicht mehr aktiv: zinspilot.de leitet am 27.10.2026 auf raisin.com/de-de/ weiter; die Angebote laufen nur noch über Raisin (dort erfasst)."
+ },
+ {
+  "name": "Verivox Festgeld (alle Angebote im Vergleich)",
+  "markt": "de",
+  "grund": "Kein Abschluss über Verivox: Der Vergleich leitet per Affiliate-Link direkt zur Bank (z. B. HoistSpar, Volkswagen Bank, Grenke) oder zu WeltSparen/Raisin weiter; keine eigene Plattform/kein eigenes Anlagekonto."
+ },
+ {
+  "name": "A&G Banco (Raisin): einzelne Laufzeit(en) mit 0,00 %",
+  "markt": "de",
+  "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst)."
+ },
+ {
+  "name": "Banco Finantia, S.A., Sucursal en España (Raisin): einzelne Laufzeit(en) mit 0,00 %",
+  "markt": "de",
+  "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst)."
+ },
+ {
+  "name": "Byblos Bank Europe (Raisin): einzelne Laufzeit(en) mit 0,00 %",
+  "markt": "de",
+  "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst)."
+ },
+ {
+  "name": "Caisse d'Epargne Grand Est Europe (Raisin): einzelne Laufzeit(en) mit 0,00 %",
+  "markt": "de",
+  "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst)."
+ },
+ {
+  "name": "CiviBank (Raisin): einzelne Laufzeit(en) mit 0,00 %",
+  "markt": "de",
+  "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst)."
+ },
+ {
+  "name": "Deutsche Pfandbriefbank AG (Raisin): einzelne Laufzeit(en) mit 0,00 %",
+  "markt": "de",
+  "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst)."
+ },
+ {
+  "name": "LHV Pank (Raisin): einzelne Laufzeit(en) mit 0,00 %",
+  "markt": "de",
+  "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst)."
+ },
+ {
+  "name": "Raiffeisenbank Straubing eG (Raisin): einzelne Laufzeit(en) mit 0,00 %",
+  "markt": "de",
+  "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst)."
+ },
+ {
+  "name": "SIGMA Bank AG (Raisin): einzelne Laufzeit(en) mit 0,00 %",
+  "markt": "de",
+  "grund": "Laufzeit wird auf der Plattform mit 0,00 % p. a. geführt; nicht in zinsen übernommen (Angebot der Bank sonst erfasst)."
+ }
+]

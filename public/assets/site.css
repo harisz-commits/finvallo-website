@@ -668,3 +668,4 @@ body{overflow-x:clip}
 .item.dim{opacity:.55}
 .gsec{margin-top:26px}
 .gsec h2 small{font-weight:600;font-size:16px}
+.item.over{display:none}

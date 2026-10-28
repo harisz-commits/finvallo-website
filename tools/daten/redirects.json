@@ -2,6 +2,8 @@
  "/at/kreditkarten/anbieter/": "/at/kreditkarten/alle/",
  "/at/kreditkarten/anbieter/bitpanda/": "/at/kreditkarten/bitpanda-karte/",
  "/at/kreditkarten/anbieter/bunq/": "/at/kreditkarten/bunq-karte/",
+ "/at/kreditkarten/anbieter/crypto-com/": "/at/kreditkarten/crypto-com-visa-card/",
+ "/at/kreditkarten/anbieter/curve/": "/at/kreditkarten/curve-pay/",
  "/at/kreditkarten/anbieter/santander/": "/at/kreditkarten/santander-card/",
  "/at/kreditkarten/anbieter/tf-bank/": "/at/kreditkarten/tf-bank-mastercard-gold/",
  "/at/kreditkarten/anbieter/trade-republic/": "/at/kreditkarten/trade-republic-karte/",

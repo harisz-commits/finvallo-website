@@ -1,0 +1,157 @@
+[
+ {
+  "name": "Kuveyt Türk / KT Bank BeteiligungsKonto, SparKonto, Hadsch SparKonto",
+  "markt": "de",
+  "grund": "Beteiligungsmodelle mit variabler Gewinnbeteiligung (Rendite nach zuletzt verteiltem Gewinn) – kein fester Ertrag. Das KT FestgeldKonto mit festem Profitsatz ist aufgenommen."
+ },
+ {
+  "name": "KT Bank FestgeldKonto in USD",
+  "markt": "de",
+  "grund": "Nur für im Ausland ansässige Kunden und nicht in Euro."
+ },
+ {
+  "name": "Fibabanka",
+  "markt": "de",
+  "grund": "Kein deutsches Direktangebot gefunden (keine deutsche Website/Niederlassung für Privatkunden)."
+ },
+ {
+  "name": "Banque PSA / PSA Direktbank",
+  "markt": "de",
+  "grund": "Marke aufgegangen in Stellantis Bank SA Niederlassung Deutschland – unter diesem Namen erfasst."
+ },
+ {
+  "name": "FCA Bank",
+  "markt": "de",
+  "grund": "Heute CA Auto Bank S.p.A. – unter diesem Namen erfasst."
+ },
+ {
+  "name": "Cosmos Direkt",
+  "markt": "de",
+  "grund": "Keine Bank (Versicherer), laut Auftrag weggelassen."
+ },
+ {
+  "name": "ICICI Bank Germany",
+  "markt": "de",
+  "grund": "Deutsche Präsenz (ICICI Bank UK Plc, Frankfurt) bietet nur Sperrkonto, NRI-Dienste und Firmenkundengeschäft, kein Privatkunden-Festgeld."
+ },
+ {
+  "name": "State Bank of India Frankfurt",
+  "markt": "de",
+  "grund": "Kein Festgeld-Direktangebot für Privatkunden mit Wohnsitz in Deutschland gefunden."
+ },
+ {
+  "name": "pbb direkt",
+  "markt": "de",
+  "grund": "Laut Auftrag Gruppe DE_A."
+ },
+ {
+  "name": "Bigbank",
+  "markt": "de",
+  "grund": "Laut Auftrag Gruppe DE_A."
+ },
+ {
+  "name": "Revolut",
+  "markt": "de",
+  "grund": "Laut Auftrag Gruppe DE_B."
+ },
+ {
+  "name": "Wüstenrot",
+  "markt": "de",
+  "grund": "Laut Auftrag Gruppe DE_A."
+ },
+ {
+  "name": "Lea Bank",
+  "markt": "de",
+  "grund": "Kein deutsches Direktangebot gefunden (leabank.de nicht erreichbar); in Deutschland nur über Plattformen (Raisin, Check24) – erfasst eine andere Gruppe."
+ },
+ {
+  "name": "Nordax Bank / NOBA Bank Group",
+  "markt": "de",
+  "grund": "Nordax bietet Sparkonten in Deutschland laut eigener Website nur über Raisin/WeltSparen an."
+ },
+ {
+  "name": "Bank Norwegian (NOBA)",
+  "markt": "de",
+  "grund": "Direkt nur variable Sparkonten (Sparkonto, Sparkonto Plus, Sparkonto 31), kein Festgeld."
+ },
+ {
+  "name": "Inbank",
+  "markt": "de",
+  "grund": "Kein deutsches Direktangebot gefunden (inbank.de nicht erreichbar); Festgeld nur über Plattformen."
+ },
+ {
+  "name": "Younited",
+  "markt": "de",
+  "grund": "Kein Direktangebot (younited.de gehört einem anderen Unternehmen); Festgeld nur über Raisin."
+ },
+ {
+  "name": "Banca Sistema",
+  "markt": "de",
+  "grund": "Kein deutsches Direktangebot gefunden; nur über Plattformen."
+ },
+ {
+  "name": "Banque Chaabi du Maroc",
+  "markt": "de",
+  "grund": "Kein Festgeld-Direktangebot für Privatkunden in Deutschland gefunden."
+ },
+ {
+  "name": "Collector Bank",
+  "markt": "de",
+  "grund": "Kein deutsches Direktangebot gefunden (collector.de/collectorbank.de nicht erreichbar)."
+ },
+ {
+  "name": "Resurs Bank",
+  "markt": "de",
+  "grund": "Festgeld in Deutschland nur über Raisin (resursbank.de leitet auf schwedische Seite um)."
+ },
+ {
+  "name": "Instabank",
+  "markt": "de",
+  "grund": "Kein deutsches Direkt-Festgeld gefunden; in Deutschland über Raisin."
+ },
+ {
+  "name": "Medicinbank",
+  "markt": "de",
+  "grund": "Kein deutsches Direktangebot gefunden; nur über Plattformen."
+ },
+ {
+  "name": "Lunar",
+  "markt": "de",
+  "grund": "Kein Festgeld in Deutschland."
+ },
+ {
+  "name": "Fidor Bank",
+  "markt": "de",
+  "grund": "Eingestellt: Banklizenz zurückgegeben, seit 01.02.2025 kein Kreditinstitut mehr (Nachfolger FG Management GmbH)."
+ },
+ {
+  "name": "Ikano Bank",
+  "markt": "de",
+  "grund": "Wird von Gruppe DE_A erfasst (nicht doppelt aufgenommen)."
+ },
+ {
+  "name": "Renault Bank direkt (RCI Banque S.A. Niederlassung Deutschland)",
+  "markt": "de",
+  "grund": "Ausländische Bank mit Direkt-Festgeld, wird aber bereits von Gruppe DE_A erfasst – zur Vermeidung von Dubletten nicht aufgenommen."
+ },
+ {
+  "name": "TF Bank (Avarda Bank AB)",
+  "markt": "de",
+  "grund": "Ausländische Bank mit Direkt-Festgeld, wird bereits von Gruppe DE_A erfasst – nicht doppelt aufgenommen."
+ },
+ {
+  "name": "Klarna Festgeld+",
+  "markt": "de",
+  "grund": "Ausländische Bank mit Direkt-Festgeld, wird bereits von Gruppe DE_A erfasst – nicht doppelt aufgenommen."
+ },
+ {
+  "name": "Openbank (Openbank Deutschland AG, Santander)",
+  "markt": "de",
+  "grund": "Wird bereits von Gruppe DE_A erfasst – nicht doppelt aufgenommen."
+ },
+ {
+  "name": "Toyota Bank, Ford Bank, Ayvens Bank, Hyundai",
+  "markt": "de",
+  "grund": "Banken mit ausländischem Mutterhaus, werden bereits von Gruppe DE_A erfasst."
+ }
+]
