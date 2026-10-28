@@ -16,7 +16,6 @@ Stand: 28.10.2026
 | Girokonto-Daten | Felder Gemeinschaftskonto, Sollzins und Überschreitung fehlen bei vielen Konten („keine Angabe“, zählt neutral). Bankdokumente teils älter als 60 Tage (Stand im Datensatz). | Claude |
 | Kreditkarten DE: alte Quelldokumente | Advanzia (PLV 07/2024), PAYBACK Visa (03/2024), HVB (02/2025) u. a. gegen das aktuelle Dokument prüfen; Prüfdatum ist frisch, Quelle alt. | Claude |
 | Prüfdaten laufen gleichzeitig ab | Fast alle Karten wurden am 11./12.10. geprüft und sind um den 10.12. gleichzeitig fällig; Girokonto und Festgeld am 27.10. Prüfung staffeln. | Claude |
-| Ratgeber „Kartentypen“ AT/DE | Die beiden Fassungen sind noch zu 91 % textgleich und dünn (ca. 310 Wörter); die anderen vier Paare wurden am 28.10. getrennt. | Claude |
 | Offene Ratgeber-Entwürfe | `entwuerfe/revolut-vs-n26.md` und `card-complete-kursaufschlag.md` (Entscheidung Haris, siehe oben). `kreditkarte-studenten.md` ist längst live, `ohne-ksv/-schufa` würden mit `ohne-bonitaetspruefung` konkurrieren – Entwürfe löschen. | Haris |
 | Affiliate-Kennzeichnung | Es gibt noch keine Partnerlinks. Sobald es welche gibt: Button „Zum Anbieter*“ mit `rel="sponsored"`, Regel im Generator an einer Stelle. | Claude, wenn Partner da |
 | sameAs im Schema | Profile (LinkedIn, X usw.) fehlen noch, siehe „Profile anlegen“. | Haris, dann Claude |
