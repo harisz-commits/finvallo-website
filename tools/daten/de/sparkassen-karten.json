@@ -1,0 +1,949 @@
+[
+  {
+    "sparkasse": "Berliner Sparkasse",
+    "ort": "Berlin",
+    "quelle": "https://www.berliner-sparkasse.de/content/dam/myif/berliner-sk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
+    "stand": "2026-07-15",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Kreditkarte Classic (Mastercard / Visa Card)",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 39.0,
+        "jahresgebuehr_text": "39 € im Jahr (Hauptkarte), Zusatz-/Zweitkarte 29 € im Jahr",
+        "partnerkarte": 29.0,
+        "fremdwaehrung_prozent": 1.9,
+        "bargeld_text": "2 % des Umsatzes, mind. 7,50 € an Geldautomaten im Inland (eigene und fremde); an fremden Geldautomaten im Ausland laut PLV kostenlos",
+        "reiseversicherung": "nein",
+        "hinweis": "nur mit Girokonto der Berliner Sparkasse"
+      },
+      {
+        "name": "Kreditkarte Gold (Mastercard / Visa Card Gold)",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 78.0,
+        "jahresgebuehr_text": "78 € im Jahr (Hauptkarte), Zusatz-/Zweitkarte 59 € im Jahr",
+        "partnerkarte": 59.0,
+        "fremdwaehrung_prozent": 1.9,
+        "bargeld_text": "2 % des Umsatzes, mind. 7,50 € an Geldautomaten im Inland; an fremden Geldautomaten im Ausland laut PLV kostenlos",
+        "reiseversicherung": "ja: Auslandsreise-Krankenversicherung (bis 365 Tage), Reiserücktritts-/Reiseabbruchkostenversicherung, weitere Reiseversicherungen für die Familie (laut Produktseite Visa Card Gold)",
+        "hinweis": "nur mit Girokonto der Berliner Sparkasse"
+      },
+      {
+        "name": "Visa Card Basis",
+        "typ": "Prepaid",
+        "netz": "Visa",
+        "jahresgebuehr": 42.0,
+        "jahresgebuehr_text": "bis zur Vollendung des 21. Lebensjahres unentgeltlich, ab dem 22. Lebensjahr 42 € im Jahr",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.9,
+        "bargeld_text": "2 % des Umsatzes, mind. 7,50 € an Geldautomaten im Inland; an fremden Geldautomaten im Ausland laut PLV kostenlos",
+        "reiseversicherung": "nein",
+        "hinweis": "im PLV als Debitkarte (Guthabenbasis) geführt; nur mit Girokonto"
+      },
+      {
+        "name": "Sparkassen-Card (girocard)",
+        "typ": "Debit",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 12.0,
+        "jahresgebuehr_text": "12 € im Jahr je Karte bei Giro Digital und Giro Individual; bei Giro Pauschal 1 Karte inklusive, jede weitere 12 €",
+        "partnerkarte": 12.0,
+        "fremdwaehrung_prozent": 1.9,
+        "bargeld_text": "an eigenen Geldautomaten je nach Kontomodell 0 € (Giro Digital/Pauschal) bzw. 0,30 € (Giro Individual)",
+        "reiseversicherung": "nein",
+        "hinweis": "Co-Badge im PLV nicht näher benannt (girocard mit Maestro/Debit-Funktion)"
+      }
+    ],
+    "sek": [],
+    "hinweis": "Kontomodelle: Giro Digital 4,95 €/Monat, Giro Individual 2,95 €/Monat, Giro Pauschal 8,95 €/Monat. In keinem Modell ist eine Kreditkarte inklusive. Startkonto für Schüler/Azubis/Studenten bis 18 unentgeltlich."
+  },
+  {
+    "sparkasse": "Hamburger Sparkasse (Haspa)",
+    "ort": "Hamburg",
+    "quelle": "https://www.haspa.de/content/dam/myif/haspa/work/dokumente/pdf/haspa/pulv-data.pdf",
+    "stand": "2026-08-01",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Haspa Mastercard SILBER / Haspa VISA CARD SILBER",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "36 € im Jahr, Zusatzkarte 36 € im Jahr",
+        "partnerkarte": 36.0,
+        "fremdwaehrung_prozent": 1.25,
+        "bargeld_text": "Geldautomat Inland 2 %, mind. 5 €; Geldautomat im EWR in Euro kostenlos; in Fremdwährung nur 1,25 % Währungsumrechnungsentgelt; am Schalter 3 %, mind. 5 €",
+        "reiseversicherung": "nein",
+        "hinweis": "nur für Haspa-Kunden"
+      },
+      {
+        "name": "Haspa Mastercard GOLD / Haspa VISA CARD GOLD",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 84.0,
+        "jahresgebuehr_text": "84 € im Jahr, Zusatzkarte 84 € im Jahr; Mastercard GOLD kostenlos in Verbindung mit dem HaspaJoker Vorteilskonto premium",
+        "partnerkarte": 84.0,
+        "fremdwaehrung_prozent": 1.25,
+        "bargeld_text": "Geldautomat Inland 2 %, mind. 5 €; Geldautomat im EWR in Euro kostenlos; in Fremdwährung nur 1,25 % Währungsumrechnungsentgelt",
+        "reiseversicherung": "ja: Reiserücktritts-/Reiseabbruch-Versicherung, Auslandsreise-Krankenversicherung inkl. Krankenrücktransport, Versicherungsschutz beim Kauf im Internet (laut Produktseite)",
+        "hinweis": "Miles & More optional 24 € im Jahr"
+      },
+      {
+        "name": "Haspa Mastercard X-TENSION",
+        "typ": "Kreditkarte",
+        "netz": "Mastercard",
+        "jahresgebuehr": 12.5,
+        "jahresgebuehr_text": "12,50 € im Jahr mit HaspaJoker Vorteilskonto intro, kostenlos mit HaspaJoker Vorteilskonto unicus",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.25,
+        "bargeld_text": "Geldautomat Inland 2 %, mind. 5 €; Geldautomat im EWR in Euro kostenlos",
+        "reiseversicherung": null,
+        "hinweis": "Karte für junge Kunden, nur in Verbindung mit HaspaJoker intro/unicus"
+      },
+      {
+        "name": "Haspa Mastercard Basis / VISA Basis",
+        "typ": "Prepaid",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "36 € im Jahr (sofern nicht im Pauschalpreis enthalten); mit HaspaJoker intro 12,50 €, mit HaspaJoker unicus kostenlos",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.25,
+        "bargeld_text": "Geldautomat Inland 2 %, mind. 5 €; Geldautomat im EWR in Euro kostenlos",
+        "reiseversicherung": "nein",
+        "hinweis": "im PLV als Debitkarte geführt"
+      }
+    ],
+    "sek": [],
+    "hinweis": "Kontomodelle HaspaJoker: start 4,95 €/Monat, HaspaJoker 9,95 €/Monat, premium 17,95 €/Monat (inkl. Mastercard GOLD mit Versicherungspaket, Bonität vorausgesetzt); weitere Varianten smart 7,90 €, comfort 10,90 €, premium 16,90 €, intro 2,50 €, unicus 3,50 €. Jahresgebühr wird bei unterjähriger Kündigung anteilig erstattet. PLV-Fassung August 2026 (Tag im Dokument nicht angegeben)."
+  },
+  {
+    "sparkasse": "Stadtsparkasse München",
+    "ort": "München",
+    "quelle": "https://www.sskm.de/content/dam/myif/sskm/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
+    "stand": "2026-05-01",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Mastercard Standard",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "36 € im Jahr (Picture Card 41 €); Preisvorteil 12 € im Jahr bei München-Giro Extra und München-Giro Premium (also 24 €)",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": "nein",
+        "hinweis": "Zusatzkarte (36 €) nur noch für Abschlüsse bis 31.12.2024"
+      },
+      {
+        "name": "Visa Standard",
+        "typ": "Charge",
+        "netz": "Visa",
+        "jahresgebuehr": 46.0,
+        "jahresgebuehr_text": "46 € im Jahr (Picture Card 51 €); Preisvorteil 12 € im Jahr bei München-Giro Extra/Premium",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": "nein",
+        "hinweis": "Zusatzkarte nur noch für Abschlüsse bis 31.12.2024"
+      },
+      {
+        "name": "Mastercard Gold",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 96.0,
+        "jahresgebuehr_text": "96 € im Jahr (Picture Card 101 €); Preisvorteil 12 € bei München-Giro Extra/Premium (also 84 €); Rückerstattung 10 € ab 8.000 € Umsatz in 12 Monaten",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": "ja: Auslandsreise-Krankenversicherung, Reiserücktrittskostenversicherung inkl. Reiseabbruch u. a. (laut Produktseite)",
+        "hinweis": "Zusatzkarte nur noch für Abschlüsse bis 31.12.2024"
+      },
+      {
+        "name": "Mastercard Platinum",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 250.0,
+        "jahresgebuehr_text": "250 € im Jahr inkl. Bonusprogramm Miles & More",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": null,
+        "hinweis": "Zusatzkarte (100 €) nur noch für Abschlüsse bis 31.12.2024"
+      },
+      {
+        "name": "Mastercard X-TENSION",
+        "typ": "Kreditkarte",
+        "netz": "Mastercard",
+        "jahresgebuehr": 15.0,
+        "jahresgebuehr_text": "15 € im Jahr (Picture Card 17 €); kostenlos für Studenten im Modell Student plus und Auszubildende mit 0,99-€-Girokonto",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": null,
+        "hinweis": "Abschluss nur bis zur Vollendung des 29. Lebensjahres"
+      },
+      {
+        "name": "Mastercard Basis / Visa Basis",
+        "typ": "Prepaid",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 34.0,
+        "jahresgebuehr_text": "34 € im Jahr als Picture Card (Abschluss ab 01.01.2019); Altverträge bis 31.12.2018 29 € bzw. 36 €",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": "nein",
+        "hinweis": "im PLV als Debitkarte geführt"
+      },
+      {
+        "name": "Sparkassen-Card Debit Mastercard",
+        "typ": "Debit",
+        "netz": "Mastercard",
+        "jahresgebuehr": 15.0,
+        "jahresgebuehr_text": "15 € im Jahr (Standardmotiv), 20 € mit Sondermotiv; bei München-Giro Extra und Premium 2 Karten kostenfrei",
+        "partnerkarte": 15.0,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "an eigenen Geldautomaten kostenlos; an fremden Geldautomaten im Debit-Mastercard-System 1 % des Umsatzes",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      }
+    ],
+    "sek": [],
+    "hinweis": "Preise gelten für Karten, die ab 24.07.2023 erworben wurden. Kontomodelle: München-Giro, München-Giro Kompakt, München-Giro Extra (Berufseinsteiger bis 29 J. 4,95 €/Monat) und München-Giro Premium; Extra/Premium geben 12 € Preisvorteil auf Standard/Gold. PLV Fassung 1. Mai 2026."
+  },
+  {
+    "sparkasse": "Sparkasse KölnBonn",
+    "ort": "Köln/Bonn",
+    "quelle": "https://www.sparkasse-koelnbonn.de/content/dam/myif/spk-koelnbonn/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
+    "stand": "2026-10-15",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Mastercard Classic",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 30.0,
+        "jahresgebuehr_text": "30 € im Jahr",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.5,
+        "bargeld_text": "2,5 % des Umsatzes, mind. 6 € am Geldautomaten (eigene und fremde, In- und Ausland); am Schalter 3 %, mind. 5 €",
+        "reiseversicherung": "nein",
+        "hinweis": "Picture Card einmalig 7,50 € zusätzlich"
+      },
+      {
+        "name": "Mastercard Gold",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 84.0,
+        "jahresgebuehr_text": "84 € im Jahr; Junge Erwachsene (18–26 Jahre) 42 € im Jahr",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.5,
+        "bargeld_text": "an eigenen Geldautomaten 2,5 %, mind. 6 €; an fremden Geldautomaten im Inland 2,5 %, mind. 6 €; an fremden Geldautomaten im Ausland 0 € (Euro und Fremdwährung, ohne Währungsumrechnungsentgelt)",
+        "reiseversicherung": "ja: Auslandsreise-Krankenversicherung, Reiserücktrittversicherung, Notfallservices auf Auslandsreisen (laut Produktseite)",
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Platinum",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 200.0,
+        "jahresgebuehr_text": "200 € im Jahr; optional Miles & More 150 € im Jahr; im KomfortDepot ist eine Karte ohne Miles & More enthalten",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.5,
+        "bargeld_text": "wie Gold: an fremden Geldautomaten im Ausland 0 €, Inland 2,5 %, mind. 6 €",
+        "reiseversicherung": null,
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Basis",
+        "typ": "Prepaid",
+        "netz": "Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "36 € im Jahr",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.5,
+        "bargeld_text": "an eigenen Geldautomaten 2,50 € je Auszahlung",
+        "reiseversicherung": "nein",
+        "hinweis": "nur noch Bestandsverträge (kein Neugeschäftsangebot laut PLV-Anhang); im PLV als Debitkarte geführt"
+      },
+      {
+        "name": "Visa Card Gold",
+        "typ": "Charge",
+        "netz": "Visa",
+        "jahresgebuehr": 84.0,
+        "jahresgebuehr_text": "84 € im Jahr",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.5,
+        "bargeld_text": "wie Mastercard Gold",
+        "reiseversicherung": null,
+        "hinweis": "nur noch Bestandsverträge (Girokonten/Kreditkarten vor 01.05.2021); Neukunden erhalten Mastercard"
+      },
+      {
+        "name": "Sparkassen-Card (girocard)",
+        "typ": "Debit",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 0.0,
+        "jahresgebuehr_text": "1 Karte inklusive bei Giro Start, Giro Privat und Giro Privat Komfort; ab der zweiten Karte 9 € im Jahr",
+        "partnerkarte": 9.0,
+        "fremdwaehrung_prozent": 2.5,
+        "bargeld_text": "an Geldautomaten der Sparkasse kostenlos",
+        "reiseversicherung": "nein",
+        "hinweis": "Co-Badge Maestro/Visa Debit laut PLV"
+      }
+    ],
+    "sek": [],
+    "hinweis": "Neugeschäft nur noch Mastercard. Giro Privat Komfort 9 €/Monat (ab 27 Jahren; 18–26 Jahre 4,50 €, unter 18 0 €). Keine Kreditkarte in den Kontomodellen inklusive; Mastercard Platinum ist im KomfortDepot enthalten."
+  },
+  {
+    "sparkasse": "Frankfurter Sparkasse",
+    "ort": "Frankfurt am Main",
+    "quelle": "https://www.frankfurter-sparkasse.de/content/dam/myif/sk-frankfurt/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
+    "stand": "2026-07-01",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Mastercard Standard / Visa Standard (Classic)",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "36 € im Jahr, Zusatzkarte 36 €; im PrivatKonto Aktiv im 1. Jahr für Neu-Karteninhaber 0 €, danach 36 €; im PrivatKonto Premium 18 € im Jahr",
+        "partnerkarte": 36.0,
+        "fremdwaehrung_prozent": 1.95,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": "nein",
+        "hinweis": "Picture Card 5 € im Jahr zusätzlich"
+      },
+      {
+        "name": "Mastercard Gold / Visa Gold",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 84.0,
+        "jahresgebuehr_text": "84 € im Jahr, Zusatzkarte 84 €; im PrivatKonto Premium 60 € (1. Jahr 0 € für Neu-Karteninhaber), Zusatzkarte 60 €; im S-Giro 069NXT (bis 30 Jahre) ab 18 im 1. Jahr 0 €, danach 84 €",
+        "partnerkarte": 84.0,
+        "fremdwaehrung_prozent": 1.95,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": "ja: Auslandsreise-Krankenversicherung, Reiserücktrittskostenversicherung inkl. Reiseabbruch u. a. (laut Produktseite)",
+        "hinweis": "Picture Card für Goldkarte unentgeltlich"
+      },
+      {
+        "name": "Mastercard Platinum / Visa Platinum",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 200.0,
+        "jahresgebuehr_text": "200 € im Jahr; Miles & More optional 50 € im Jahr",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.95,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": null,
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Basis / Visa Basis",
+        "typ": "Prepaid",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 30.0,
+        "jahresgebuehr_text": "10 € bis 30 € im Jahr (Spanne laut PLV, je nach Kontomodell/Alter)",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.95,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": "nein",
+        "hinweis": "im PLV als Debitkarte geführt"
+      },
+      {
+        "name": "Sparkassen-Card (girocard)",
+        "typ": "Debit",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 0.0,
+        "jahresgebuehr_text": "unentgeltlich; Ausnahmen: PrivatKonto Aktiv 5 € je Karte im Jahr, PrivatKonto Online 10 € je Karte im Jahr",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.95,
+        "bargeld_text": "an fremden Geldautomaten im Maestro-/Debit-Mastercard-/V-PAY-System 1 % des Umsatzes, mind. 5 €",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      }
+    ],
+    "sek": [],
+    "hinweis": "Kontomodelle: PrivatKonto Komfort Plus 9,90 €/Monat, Aktiv 2,90 €/Monat, Premium 0 € bei mind. 5.000 € Geldeingang/Monat (sonst 12,90 €), Online 4,50 €/Monat, S-Giro 069NXT 0 € bis 30 Jahre. Kreditkartenpreise sind teils kontomodellabhängig (Premium: Classic 18 €, Gold 60 €)."
+  },
+  {
+    "sparkasse": "Kreissparkasse Köln",
+    "ort": "Köln",
+    "quelle": "https://www.ksk-koeln.de/content/dam/myif/kskkoeln/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
+    "stand": "2026-10-01",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Sparkassen-Mastercard Standard",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 30.0,
+        "jahresgebuehr_text": "30 € im Jahr in allen regulären Girokontomodellen; 24 € im Jahr im 100pro-Girokonto und S-GiroCampus Plus (junge Kunden)",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.5,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten (eigene und fremde); am Schalter fremder Banken 3 %, mind. 6 €",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      },
+      {
+        "name": "Sparkassen-Mastercard Gold",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 84.0,
+        "jahresgebuehr_text": "84 € im Jahr; im S-GiroPlus XXL (15 €/Monat) 0 € für bis zu zwei Karten, ab dritter Karte 84 €; 30 € im Jahr im 100pro-Girokonto/S-GiroCampus Plus",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.5,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": "ja: Auslandsreise-Krankenversicherung, Reiserücktrittskostenversicherung inkl. Reiseabbruch u. a. (laut Produktseite)",
+        "hinweis": null
+      },
+      {
+        "name": "Sparkassen-Mastercard Platinum",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 200.0,
+        "jahresgebuehr_text": "200 € im Jahr; mit Miles & More 250 € im Jahr",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.5,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": null,
+        "hinweis": null
+      },
+      {
+        "name": "Sparkassen-Mastercard X-TENSION",
+        "typ": "Kreditkarte",
+        "netz": "Mastercard",
+        "jahresgebuehr": 12.0,
+        "jahresgebuehr_text": "12 € im Jahr (0 € im S-GiroCampus Plus)",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.5,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": null,
+        "hinweis": "keine Neuvereinbarung mehr möglich"
+      },
+      {
+        "name": "Sparkassen-Mastercard Basis",
+        "typ": "Prepaid",
+        "netz": "Mastercard",
+        "jahresgebuehr": 30.0,
+        "jahresgebuehr_text": "30 € im Jahr für Erwachsene; 15 € für Junge Erwachsene bis 23 Jahre (kein Neuabschluss der Jugendvariante)",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.5,
+        "bargeld_text": "2 % des Umsatzes, mind. 6 € am Geldautomaten",
+        "reiseversicherung": "nein",
+        "hinweis": "im PLV als Debitkarte geführt; Sparkassen-Visa Basis und Sparkassen-Visa Card Debit nur noch Bestand"
+      },
+      {
+        "name": "Sparkassen-Card (girocard, Co-Badge Debit Mastercard)",
+        "typ": "Debit",
+        "netz": "Mastercard",
+        "jahresgebuehr": 12.0,
+        "jahresgebuehr_text": "0 € bei S-GiroPlus XXL und XL; 12 € im Jahr bei S-GiroClassic und s direkt GiroClassic (auch jede weitere Karte)",
+        "partnerkarte": 12.0,
+        "fremdwaehrung_prozent": null,
+        "bargeld_text": "an eigenen Geldautomaten kostenlos; an fremden Geldautomaten im Maestro-/Debit-Mastercard-System 3,50 €",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      }
+    ],
+    "sek": [],
+    "hinweis": "Kontomodelle: S-GiroPlus XXL 15 €/Monat (inkl. bis zu 2 Mastercard Gold), S-GiroPlus XL 10 €/Monat, S-GiroClassic 5 €/Monat, s direkt GiroClassic 5 €/Monat; 100pro-Girokonto, S-GiroCampus Plus und S-GiroFlex 0 €/Monat (junge Kunden) mit reduzierten Kartenpreisen. Neugeschäft nur Mastercard."
+  },
+  {
+    "sparkasse": "Sparkasse Hannover",
+    "ort": "Hannover",
+    "quelle": "https://www.sparkasse-hannover.de/content/dam/myif/spk-hannover/work/dokumente/pdf/preise-leistungen/entgeltinformation-giro-best.pdf",
+    "stand": "2025-11-01",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Kreditkarte Silber (Mastercard Silber / Visa Card Silber, Komfortpaket Silber)",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 42.0,
+        "jahresgebuehr_text": "3,50 € im Monat = 42 € im Jahr (jährlich im Voraus); jede weitere Karte vom gleichen Konto 1,75 €/Monat; 18 bis unter 29 Jahre: 1. Jahr 0 €, danach 1,75 €/Monat (50 % Abschlag)",
+        "partnerkarte": 21.0,
+        "fremdwaehrung_prozent": 1.5,
+        "bargeld_text": "2 % des Umsatzes, mind. 5 € am Geldautomaten; bei Fremdwährung zusätzlich 1,5 %",
+        "reiseversicherung": "nein",
+        "hinweis": "Voraussetzung Privatgirokonto bei der Sparkasse Hannover; Komfortpaket enthält Wunsch-PIN, Reiseservice-Hotline, Online-Käuferschutz"
+      },
+      {
+        "name": "Kreditkarte Gold (Mastercard Gold / Visa Card Gold, Reise- und Komfortpaket Gold)",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 84.0,
+        "jahresgebuehr_text": "7 € im Monat = 84 € im Jahr; jede weitere Karte vom gleichen Konto 3,50 €/Monat; 18 bis unter 29 Jahre: 1. Jahr 0 €, danach 3,50 €/Monat; im Giro Premium inklusive",
+        "partnerkarte": 42.0,
+        "fremdwaehrung_prozent": 1.5,
+        "bargeld_text": "Inland 2 % des Umsatzes, mind. 5 €; am Geldautomaten im Ausland kostenlos (bei Fremdwährung zusätzlich 1,5 %)",
+        "reiseversicherung": "ja: Reiserücktritts-/Reiseabbruchkostenversicherung, Auslandsreise-Krankenversicherung, Auslands-Autoschutzbrief, Reise-Notfallservice (Entgeltinformation und Produktseite)",
+        "hinweis": "nur mit Privatgirokonto der Sparkasse Hannover"
+      },
+      {
+        "name": "Basis Karte (Mastercard Basis / Visa Card Basis)",
+        "typ": "Prepaid",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 42.0,
+        "jahresgebuehr_text": "3,50 € im Monat = 42 € im Jahr; 12 bis unter 29 Jahre: 1. Jahr 0 €, danach 1,75 €/Monat (50 % Abschlag)",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.5,
+        "bargeld_text": "2 % des Umsatzes, mind. 5 € am Geldautomaten; bei Fremdwährung zusätzlich 1,5 %",
+        "reiseversicherung": "nein",
+        "hinweis": "Guthabenkarte auf Aufladebasis; Minderjährige max. 500 € Aufladung/Verfügung pro Monat"
+      },
+      {
+        "name": "Sparkassen-Card Visa Debit",
+        "typ": "Debit",
+        "netz": "Visa",
+        "jahresgebuehr": 12.0,
+        "jahresgebuehr_text": "12 € im Jahr bei Giro Best, Giro Smart und Giro Pure; bei Giro Premium 1. und 2. Karte inklusive",
+        "partnerkarte": 12.0,
+        "fremdwaehrung_prozent": null,
+        "bargeld_text": "an eigenen Geldautomaten kostenlos",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      }
+    ],
+    "sek": [],
+    "hinweis": "Das aktuelle PLV (PULV_Anpassung_zum_01.10.2026, https://www.sparkasse-hannover.de/content/dam/myif/spk-hannover/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf) ist nicht textextrahierbar (Schrift ohne Unicode-Zuordnung); Werte stammen aus den Entgeltinformationen der Kontomodelle (Datum 01.11.2025) und den Kreditkarten-Produktseiten der Sparkasse Hannover (geprüft 28.10.2026, Preise identisch: Silber 42 €, Gold 84 €). Kontomodelle: Giro Pure, Giro Smart, Giro Best, Giro Premium (inkl. Kreditkarte Gold), Giro You."
+  },
+  {
+    "sparkasse": "Stadtsparkasse Düsseldorf",
+    "ort": "Düsseldorf",
+    "quelle": "https://www.sskduesseldorf.de/content/dam/myif/ssk-duesseldorf/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
+    "stand": "2026-10-01",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Mastercard Standard",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 34.8,
+        "jahresgebuehr_text": "2,90 € im Monat (= 34,80 € im Jahr, jährlich belastet) bei Vorteilskonto Plus und Pur; im Vorteilskonto Premium eine Karte unentgeltlich; nicht für Basiskonto/Guthabenkonto",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.0,
+        "bargeld_text": "Inland 3 % des Umsatzes, mind. 7,50 €; Ausland 3 %, mind. 5 €; bei Fremdwährung zzgl. 2 % Währungsumrechnungsentgelt",
+        "reiseversicherung": "nein",
+        "hinweis": "vorbehaltlich Bonitätsprüfung; Preise als Monatspreis ausgewiesen"
+      },
+      {
+        "name": "Mastercard Gold",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 82.8,
+        "jahresgebuehr_text": "6,90 € im Monat (= 82,80 € im Jahr) bei Vorteilskonto Plus und Pur; im Vorteilskonto Premium vergünstigt 1,90 € im Monat (= 22,80 € im Jahr) für eine Karte",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.0,
+        "bargeld_text": "Inland 3 % des Umsatzes, mind. 7,50 €; Bargeldauszahlung im Ausland mit Gold unentgeltlich, auch kein Währungsumrechnungsentgelt",
+        "reiseversicherung": "ja: Auslandsreisekrankenversicherung (bis 30 Tage, ohne Altersbeschränkung), Reiserücktritts- und Reiseabbruchkostenversicherung; Reisegepäckversicherung gegen Aufpreis (laut Produktseite)",
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Platinum",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 358.8,
+        "jahresgebuehr_text": "29,90 € im Monat (= 358,80 € im Jahr) bei Plus/Pur; 14,90 € im Monat (= 178,80 €) im Vorteilskonto Premium; mit Miles & More 35,70 € bzw. 20,70 € im Monat",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.0,
+        "bargeld_text": "Inland 3 % des Umsatzes, mind. 7,50 €; im Ausland mit Platinum unentgeltlich",
+        "reiseversicherung": null,
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Basis",
+        "typ": "Prepaid",
+        "netz": "Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "3 € im Monat (= 36 € im Jahr) in allen Kontomodellen",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.0,
+        "bargeld_text": "Inland 3 % des Umsatzes, mind. 7,50 €; Ausland 3 %, mind. 5 €",
+        "reiseversicherung": "nein",
+        "hinweis": "kein Neugeschäft, nur Bestandsgeschäft; im PLV als Debitkarte geführt"
+      },
+      {
+        "name": "Sparkassen-Card 2.0 (girocard mit Debit Mastercard)",
+        "typ": "Debit",
+        "netz": "Mastercard",
+        "jahresgebuehr": 10.8,
+        "jahresgebuehr_text": "0,90 € im Monat (= 10,80 € im Jahr) bei Vorteilskonto Plus und Basiskonto, 1,90 € im Monat bei Vorteilskonto Pur, im Vorteilskonto Premium unentgeltlich; Girocard only in allen Modellen unentgeltlich",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.0,
+        "bargeld_text": "an ca. 20.000 Geldautomaten der Sparkassen-Finanzgruppe im Inland kostenlos",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      }
+    ],
+    "sek": [],
+    "hinweis": "Kontomodelle (Preis pro Monat mit ZukunftsBonus): Vorteilskonto Premium 14,90 € (inkl. 1 Mastercard Standard kostenlos oder Gold vergünstigt), Vorteilskonto Plus 9,90 €, Vorteilskonto Pur (Onlinekonto) 4,90 €, Basiskonto 9,90 €; ohne ZukunftsBonus jeweils 2 € mehr. S-Start (junge Kunden): Mastercard Standard 2,90 €/Monat, Gold 6,90 €/Monat. Kartenpreise werden im PLV monatlich ausgewiesen und jährlich belastet."
+  },
+  {
+    "sparkasse": "Sparkasse Nürnberg",
+    "ort": "Nürnberg",
+    "quelle": "https://www.sparkasse-nuernberg.de/content/dam/myif/spk-nuernberg/work/dokumente/pdf/preise-leistungen/preis_leistungsverzeichnis.pdf",
+    "stand": "2026-07-01",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Mastercard Standard / Visa Standard",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "36 € im Jahr (Hauptkarte), Zusatzkarte 36 €; im Konto Komplett (9,90 €/Monat) ist 1 Kreditkarte (Mastercard oder Visa) inklusive",
+        "partnerkarte": 36.0,
+        "fremdwaehrung_prozent": 2.5,
+        "bargeld_text": "6,50 € je Auszahlung am Geldautomaten (eigene und fremde, In- und Ausland), bei Fremdwährung zzgl. 2,5 % Währungsumrechnungsentgelt",
+        "reiseversicherung": "nein",
+        "hinweis": "inkl. Einkaufspaket im Konto Komplett"
+      },
+      {
+        "name": "Mastercard Gold",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 84.0,
+        "jahresgebuehr_text": "84 € im Jahr (Hauptkarte), Zusatzkarte 84 €; im Konto Premium (15,90 €/Monat) inklusive",
+        "partnerkarte": 84.0,
+        "fremdwaehrung_prozent": 0.0,
+        "bargeld_text": "6,50 € je Auszahlung am Geldautomaten; kein Währungsumrechnungsentgelt bei Gold",
+        "reiseversicherung": "ja: Reisepaket inkl. Auslandsreise-Krankenversicherung, Reiserücktrittskostenversicherung inkl. Reiseabbruch u. a. (PLV: 'inkl. Reisepaket'; Produktseite)",
+        "hinweis": "Miles & More optional 36 € je Karte"
+      },
+      {
+        "name": "Mastercard Platinum",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 192.0,
+        "jahresgebuehr_text": "192 € im Jahr (Hauptkarte), Zusatzkarte 102 €; im Konto Platinum (19,90 €/Monat) inklusive (mit Concierge-Service, Miles & More, Priority Pass)",
+        "partnerkarte": 102.0,
+        "fremdwaehrung_prozent": 0.0,
+        "bargeld_text": "6,50 € je Auszahlung am Geldautomaten; kein Währungsumrechnungsentgelt bei Platinum",
+        "reiseversicherung": "ja: Reisepaket (laut PLV)",
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Starter Karte",
+        "typ": "Kreditkarte",
+        "netz": "Mastercard",
+        "jahresgebuehr": 24.0,
+        "jahresgebuehr_text": "24 € im Jahr (Haupt- und Zusatzkarte), nur im Girokontomodell mein Giro+ verfügbar",
+        "partnerkarte": 24.0,
+        "fremdwaehrung_prozent": 0.0,
+        "bargeld_text": "6,50 € je Auszahlung am Geldautomaten",
+        "reiseversicherung": null,
+        "hinweis": "Karte für junge Kunden"
+      },
+      {
+        "name": "Mastercard Basis",
+        "typ": "Prepaid",
+        "netz": "Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "36 € im Jahr (Haupt- und Zusatzkarte); im Konto Komplett alternativ zur Kreditkarte inklusive",
+        "partnerkarte": 36.0,
+        "fremdwaehrung_prozent": 2.5,
+        "bargeld_text": "6,50 € je Auszahlung am Geldautomaten, bei Fremdwährung zzgl. 2,5 %",
+        "reiseversicherung": "nein",
+        "hinweis": "im PLV als Debitkarte geführt"
+      },
+      {
+        "name": "Sparkassen-Card Debit Mastercard",
+        "typ": "Debit",
+        "netz": "Mastercard",
+        "jahresgebuehr": 24.0,
+        "jahresgebuehr_text": "24 € im Jahr; in Konto Komplett/Premium/Platinum max. zwei Sparkassen-Cards inklusive",
+        "partnerkarte": 24.0,
+        "fremdwaehrung_prozent": 2.5,
+        "bargeld_text": "an eigenen Geldautomaten kostenlos; an fremden Geldautomaten im Mastercard-/Maestro-System 6,50 €",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      }
+    ],
+    "sek": [],
+    "hinweis": "Paketkonten: Konto Kompakt 4,90 €/Monat (keine Karte inklusive), Konto Komplett 9,90 €/Monat (1 Kreditkarte Standard oder Mastercard Basis inklusive), Konto Premium 15,90 €/Monat (Mastercard Gold inklusive), Konto Platinum 19,90 €/Monat (Mastercard Platinum inklusive). PLV-Fassung Juli 2026 (Tag im Dokument nicht angegeben). Bargeld am Geldautomaten mit Kreditkarte wird als Festbetrag (6,50 €) statt prozentual berechnet."
+  },
+  {
+    "sparkasse": "Sparkasse Leipzig",
+    "ort": "Leipzig",
+    "quelle": "https://www.sparkasse-leipzig.de/content/dam/myif/sksk-leipzig/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
+    "stand": "2026-04-01",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Kreditkarte Standard (Mastercard oder Visa Card)",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "3 € im Monat (= 36 € im Jahr) bei GiroKomfort, GiroDirekt und GiroKlassik; im GiroPremium (15,95 €/Monat) inklusive; im GiroFlex 1 € im Monat",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "2 % des Umsatzes, mind. 5,95 € am Geldautomaten (eigene und fremde, In- und Ausland); am Schalter fremder Banken 3 %, mind. 5,95 €; bei Fremdwährung zzgl. 1,75 %",
+        "reiseversicherung": "nein",
+        "hinweis": "umsatzabhängige jährliche Rückvergütung laut PLV möglich"
+      },
+      {
+        "name": "Kreditkarte Gold (Mastercard oder Visa Card)",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 90.0,
+        "jahresgebuehr_text": "7,50 € im Monat (= 90 € im Jahr) bei GiroKomfort, GiroDirekt und GiroKlassik; im GiroPremium inklusive (alternativ zur Standard); im GiroFlex 2 € im Monat",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "2 % des Umsatzes, mind. 5,95 € am Geldautomaten",
+        "reiseversicherung": "ja: Auslandsreise-Krankenversicherung (60 Tage, ohne Altersbeschränkung), Reiserücktritts- und Reiseabbruchkostenversicherung u. a. (laut Produktseite Visa Card Gold)",
+        "hinweis": null
+      },
+      {
+        "name": "Kreditkarte Platinum (Mastercard oder Visa Card)",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 300.0,
+        "jahresgebuehr_text": "25 € im Monat (= 300 € im Jahr); im GiroPremium 18 € im Monat (= 216 € im Jahr); nicht im GiroFlex",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "2 % des Umsatzes, mind. 5,95 € am Geldautomaten",
+        "reiseversicherung": null,
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Basis / Visa Card Basis",
+        "typ": "Prepaid",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 48.0,
+        "jahresgebuehr_text": "4 € im Monat (= 48 € im Jahr); im GiroFlex 1 € im Monat",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.75,
+        "bargeld_text": "2 % des Umsatzes, mind. 5,95 €; 4 preisfreie Geldautomaten-Auszahlungen pro Kalenderjahr",
+        "reiseversicherung": "nein",
+        "hinweis": "im PLV als Debitkarte geführt"
+      },
+      {
+        "name": "Sparkassen-Card / Sparkassen-Card Plus (girocard)",
+        "typ": "Debit",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 0.0,
+        "jahresgebuehr_text": "erste Karte 0 € bei GiroPremium, GiroKomfort und GiroFlex; 1 € im Monat bei GiroDirekt und GiroKlassik; zweite Karte 1 €/Monat außer bei GiroPremium/GiroFlex",
+        "partnerkarte": 12.0,
+        "fremdwaehrung_prozent": null,
+        "bargeld_text": "an Geldautomaten der Sparkasse Leipzig kostenlos",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      }
+    ],
+    "sek": [],
+    "hinweis": "Kontomodelle (pro Monat): GiroPremium 15,95 € (inkl. Standard- oder Gold-Kreditkarte, Platinum vergünstigt), GiroKomfort 9,95 €, GiroDirekt 5,95 €, GiroKlassik 1,95 €, GiroFlex 0 € (junge Kunden, Kreditkarte Standard 1 €/Monat, Gold 2 €/Monat). Kartenpreise werden im PLV monatlich ausgewiesen."
+  },
+  {
+    "sparkasse": "Nassauische Sparkasse (Naspa)",
+    "ort": "Wiesbaden",
+    "quelle": "https://www.naspa.de/content/dam/myif/nassauische-spk/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
+    "stand": "2026-07-10",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Mastercard Standard / Visa Standard",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 20.0,
+        "jahresgebuehr_text": "20 € im Jahr (Hauptkarte), Zusatzkarte 20 € im Jahr",
+        "partnerkarte": 20.0,
+        "fremdwaehrung_prozent": 1.65,
+        "bargeld_text": "3 % des Umsatzes, mind. 7,50 € am Geldautomaten; 4 %, mind. 7,50 € am Schalter",
+        "reiseversicherung": "nein",
+        "hinweis": "für Privatkonten"
+      },
+      {
+        "name": "Mastercard Gold",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 60.0,
+        "jahresgebuehr_text": "60 € im Jahr (Hauptkarte), Zusatzkarte 60 € im Jahr",
+        "partnerkarte": 60.0,
+        "fremdwaehrung_prozent": 0.0,
+        "bargeld_text": "3 % des Umsatzes, mind. 7,50 € am Geldautomaten; Währungsumrechnungsentgelt bei Gold kostenfrei",
+        "reiseversicherung": "ja: Reiserücktritts- und Reiseabbruchkosten-Versicherung, Auslandsreise-Krankenversicherung, Auslands-Auto-Schutzbrief (laut Produktseite)",
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Platinum",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 225.0,
+        "jahresgebuehr_text": "225 € im Jahr (Hauptkarte), Zusatzkarte 125 € im Jahr",
+        "partnerkarte": 125.0,
+        "fremdwaehrung_prozent": 0.0,
+        "bargeld_text": "3 % des Umsatzes, mind. 7,50 € am Geldautomaten; Währungsumrechnungsentgelt bei Platinum kostenfrei",
+        "reiseversicherung": null,
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Basis",
+        "typ": "Prepaid",
+        "netz": "Mastercard",
+        "jahresgebuehr": 12.0,
+        "jahresgebuehr_text": "12 € im Jahr",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 1.65,
+        "bargeld_text": "3 % des Umsatzes, mind. 7,50 € am Geldautomaten",
+        "reiseversicherung": "nein",
+        "hinweis": "im PLV als Debitkarte geführt"
+      },
+      {
+        "name": "Sparkassen-Card (girocard)",
+        "typ": "Debit",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 0.0,
+        "jahresgebuehr_text": "zwei Sparkassen-Cards inklusive bei Naspa Giro Service, Komfort, 18 Plus und Jugendkonto; bei Naspa Giro Online je 6 € im Jahr",
+        "partnerkarte": 0.0,
+        "fremdwaehrung_prozent": null,
+        "bargeld_text": "an Geldautomaten der Sparkasse und S-Finanzgruppe inklusive",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      }
+    ],
+    "sek": [],
+    "hinweis": "Kontomodelle (pro Monat): Naspa Giro Service 7 €, Naspa Giro Komfort 9 €, Naspa Giro Online 2,50 € (unter 4.500 € Geldeingang im Quartal 5 €), Naspa Giro 18 Plus 3,50 €, Naspa Jugendkonto 0 €. Keine Kreditkarte in den Kontomodellen inklusive. Picture Card bei Naspa kostenlos. PLV-Fassung 10.07.2026."
+  },
+  {
+    "sparkasse": "Die Sparkasse Bremen",
+    "ort": "Bremen",
+    "quelle": "https://www.sparkasse-bremen.de/content/dam/myif/sk-bremen/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
+    "stand": "2026-07-01",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Mastercard Standard / Visa Standard",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "36 € im Jahr je Haupt- und Zusatzkarte; Hauptkarte unentgeltlich im Bremer Konto für junge Erwachsene (18–25 Jahre mit Rabatt auf den Grundpreis) und im Altbestand Bremer Konto Start",
+        "partnerkarte": 36.0,
+        "fremdwaehrung_prozent": 1.0,
+        "bargeld_text": "2 % des Umsatzes, mind. 5 € am Geldautomaten (eigene und fremde); 5 Auslandsabhebungen am Geldautomaten pro Jahr gebührenfrei (nur 1 % Währungsumrechnung bei Fremdwährung); am Schalter 3 %, mind. 5 €",
+        "reiseversicherung": "nein",
+        "hinweis": "keine Kreditkarte für Basiskonten"
+      },
+      {
+        "name": "Mastercard Gold / Visa Gold",
+        "typ": "Charge",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 84.0,
+        "jahresgebuehr_text": "84 € im Jahr je Haupt- und Zusatzkarte",
+        "partnerkarte": 84.0,
+        "fremdwaehrung_prozent": 1.0,
+        "bargeld_text": "Inland 2 % des Umsatzes, mind. 5 €; alle Bargeldauszahlungen an Geldautomaten im Ausland (Euro und Fremdwährung) unentgeltlich, bei Fremdwährung nur 1 % Währungsumrechnungsentgelt",
+        "reiseversicherung": "ja: Versicherungspaket u. a. mit Auslandsreise-Krankenversicherung und Reiserücktrittskostenversicherung inkl. Reiseabbruch (laut Produktseite)",
+        "hinweis": null
+      },
+      {
+        "name": "Visa Platinum",
+        "typ": "Charge",
+        "netz": "Visa",
+        "jahresgebuehr": 200.0,
+        "jahresgebuehr_text": "200 € im Jahr je Haupt- und Zusatzkarte; ab 12.000 € Jahresumsatz werden 100 € erstattet",
+        "partnerkarte": 200.0,
+        "fremdwaehrung_prozent": 1.0,
+        "bargeld_text": "Inland 2 %, mind. 5 €; alle Geldautomaten-Abhebungen im Ausland unentgeltlich (zzgl. 1 % bei Fremdwährung)",
+        "reiseversicherung": null,
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Basis / Visa Basis",
+        "typ": "Prepaid",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 36.0,
+        "jahresgebuehr_text": "36 € im Jahr je Haupt- und Zusatzkarte; Hauptkarte unentgeltlich im Bremer Konto mit Rabatt für junge Erwachsene und im Altbestand Bremer Konto Start",
+        "partnerkarte": 36.0,
+        "fremdwaehrung_prozent": 1.0,
+        "bargeld_text": "2 % des Umsatzes, mind. 5 € am Geldautomaten; 5 Auslandsabhebungen pro Jahr gebührenfrei",
+        "reiseversicherung": "nein",
+        "hinweis": "im PLV als Debitkarte geführt"
+      },
+      {
+        "name": "Sparkassen-Card / Werder Bremen-Sparkassen-Card (girocard)",
+        "typ": "Debit",
+        "netz": "Visa/Mastercard",
+        "jahresgebuehr": 0.0,
+        "jahresgebuehr_text": "im Grundpreis des Bremer Kontos enthalten",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": null,
+        "bargeld_text": "an allen Geldautomaten der Sparkassen-Finanzgruppe unentgeltlich",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      }
+    ],
+    "sek": [],
+    "hinweis": "Kontomodelle: Das Bremer Konto 10 €/Monat (18–23 Jahre 0 €, 24–25 Jahre 5 € – mit diesem Rabatt ist eine Mastercard/Visa Standard oder Basis Hauptkarte unentgeltlich), Das Bremer Konto Einzelpreis 5 €/Monat. Sehr niedriges Währungsumrechnungsentgelt (1 %)."
+  },
+  {
+    "sparkasse": "Kreissparkasse München Starnberg Ebersberg",
+    "ort": "München",
+    "quelle": "https://www.kskmse.de/content/dam/myif/ksk-muenchen-starnberg-ebersberg/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf",
+    "stand": "2026-09-22",
+    "geprueft": "2026-10-28",
+    "karten": [
+      {
+        "name": "Mastercard Standard",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 30.0,
+        "jahresgebuehr_text": "30 € im Jahr (Hauptkarte); Zusatzkarte 30 € (Neugeschäft nur für Minderjährige)",
+        "partnerkarte": 30.0,
+        "fremdwaehrung_prozent": 2.0,
+        "bargeld_text": "2 % des Umsatzes, mind. 5,50 € am Geldautomaten; vier Geldautomaten-Abhebungen im Ausland pro Jahr preisfrei (zzgl. 2 % bei Fremdwährung)",
+        "reiseversicherung": "nein",
+        "hinweis": "Belastung jährlich im Voraus; Neupreise gelten für Neugeschäft ab 01.04.2026 und Bestand ab 01.07.2026"
+      },
+      {
+        "name": "Mastercard Gold",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 84.0,
+        "jahresgebuehr_text": "84 € im Jahr (Neu; Bestand 72 €), Zusatzkarte 84 €; für Schüler/Azubis/Studenten ab 18 in den Modellen Preisvorteil Junge Leute 42 € im Jahr; Aktion: bei Abschluss 01.10.–30.11.2026 erstes Jahr kostenfrei",
+        "partnerkarte": 84.0,
+        "fremdwaehrung_prozent": 2.0,
+        "bargeld_text": "2 % des Umsatzes, mind. 5,50 € an eigenen Geldautomaten; Bargeldverfügung am Geldautomaten im Ausland preisfrei, zzgl. 2 % Währungsumrechnungsentgelt bei Fremdwährung",
+        "reiseversicherung": "ja: Reiseversicherungspaket mit Auslandsreise-Krankenversicherung, Reiserücktrittskostenversicherung inkl. Reiseabbruch u. a. (laut Produktseite)",
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Platinum",
+        "typ": "Charge",
+        "netz": "Mastercard",
+        "jahresgebuehr": 228.0,
+        "jahresgebuehr_text": "228 € im Jahr (Neu; Bestand 192 €), Zusatzkarte 228 €",
+        "partnerkarte": 228.0,
+        "fremdwaehrung_prozent": 2.0,
+        "bargeld_text": "2 % des Umsatzes, mind. 5,50 € an eigenen Geldautomaten; im Ausland preisfrei, zzgl. 2 % bei Fremdwährung",
+        "reiseversicherung": null,
+        "hinweis": null
+      },
+      {
+        "name": "Mastercard Basis",
+        "typ": "Prepaid",
+        "netz": "Mastercard",
+        "jahresgebuehr": 30.0,
+        "jahresgebuehr_text": "30 € im Jahr ohne Versicherung, 36 € mit Versicherung (im GiroFlex bis 18 Jahre enthalten: 6 € für die Versicherung)",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.0,
+        "bargeld_text": "2 % des Umsatzes, mind. 5,50 € an eigenen Geldautomaten; im Ausland preisfrei",
+        "reiseversicherung": null,
+        "hinweis": "nur Bestand, kein Neugeschäft; im PLV als Debitkarte geführt"
+      },
+      {
+        "name": "Sparkassen-Card Debit Mastercard (inkl. virtueller Karte)",
+        "typ": "Debit",
+        "netz": "Mastercard",
+        "jahresgebuehr": 0.0,
+        "jahresgebuehr_text": "pro Konto eine Sparkassen-Card und eine virtuelle Karte inklusive, bei GiroPrivatPlus je zwei Karten inklusive",
+        "partnerkarte": null,
+        "fremdwaehrung_prozent": 2.0,
+        "bargeld_text": "an eigenen Geldautomaten laut Kontomodell",
+        "reiseversicherung": "nein",
+        "hinweis": null
+      }
+    ],
+    "sek": [],
+    "hinweis": "Kontomodelle (pro Monat): GiroPrivatPlus 18,90 €, GiroPrivat 10,90 €, GiroDirekt 4,90 €; Preisvorteil Junge Leute (50 % bzw. 100 % Rabatt bis 27/30 Jahre), GiroFlex für Minderjährige. Keine Kreditkarte in den Kontomodellen inklusive. Neugeschäft nur Mastercard."
+  }
+]
