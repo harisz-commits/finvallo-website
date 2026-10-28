@@ -6,6 +6,7 @@
 import hashlib,json,math,os,re,sys,datetime
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import karten as K
+import affiliate
 from score import eur,pct
 
 E=K.E; dmy=K.dmy; R=K.R; SP=K.SP
@@ -163,7 +164,14 @@ def tags(a):
     if plattform(a): t+=f'<span class="tag typ">über {E(plattN(a))}</span>'
     return t
 def btn(a,P=''):
-    return f'<a class="btn primary block" href="{E(a.get("vertrieb_url") or a["quelle"])}" target="_blank" rel="noopener">Zum Anbieter ↗</a>'
+    """Partnerlink nur bei Direktangeboten der Bank; über Raisin oder CHECK24 bleibt der Plattformlink"""
+    key=a['bank_slug'] if not plattform(a) else None
+    return affiliate.btn(LAND,'festgeld',key,a.get('vertrieb_url') or a['quelle'])
+def bank_btn(ys):
+    """Button auf der Bankseite: direkt zur Bank (Partnerlink, wenn vorhanden); nur wenn es ein Direktangebot gibt"""
+    d=[y for y in ys if not plattform(y)]; a=(d or ys)[0]
+    if not d and not affiliate.link(LAND,'festgeld',a['bank_slug']): return ''
+    return '<p style="margin-top:14px">'+affiliate.btn(LAND,'festgeld',a['bank_slug'],a.get('vertrieb_url') or a['quelle'],text=f'Festgeld direkt bei {a["bank"]} eröffnen',cls='btn primary')+'</p>'
 def item(a,P,base,m,rank,hide=False):
     r=ertrag(a,DEF_B,m)
     zt=f'{pct(r["zins"])}' if r.get('zins') is not None else '–'
@@ -444,6 +452,7 @@ def bank_pages(xs):
 <div class="tbl wide"><table><thead><tr><th>Laufzeit</th>{th}</tr></thead><tbody>{tb}</tbody></table></div>
 <p class="note">Höchster Zins je Laufzeit, Stand {st}. Mindestanlage, Zinszahlung und Kündigung unterscheiden sich je Weg und stehen auf der Angebotsseite.</p>
 <h2>Die Angebote</h2><div class="catgrid">{cards}</div>
+{bank_btn(ys)}
 {mehr}
 <h2>Fragen und Antworten</h2>{faqhtml(fq)}
 <p class="note" style="margin-top:18px"><a class="lnk" href="../../">Zum Festgeld-Vergleich →</a> · <a class="lnk" href="../../methodik/">So vergleichen wir →</a></p>

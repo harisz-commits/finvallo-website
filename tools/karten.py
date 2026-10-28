@@ -4,6 +4,7 @@
 import copy,json,glob,os,re,html,sys,datetime,shutil
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from score import score,note,eur,pct,cash200,TIER
+import affiliate
 SP=os.path.dirname(os.path.abspath(__file__)); R=os.path.join(SP,'..','public')+'/'
 E=lambda s: html.escape(str(s)) if s is not None else ''
 TODAY=datetime.date.today().isoformat()
@@ -611,7 +612,7 @@ def card_page(c,cards,nrated,prov):
   <div class="feat">{feats(c)}</div>{f'<p class="note"><b>Hinweis:</b> {E(c["nurfuer"])}.</p>' if c.get('nurfuer') else ''}
   {offer(c,True)}
   <div class="box feebox"><small>Jahresgebühr</small><span class="big{" good" if c.get("fee")==0 else ""}">{"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €") if c.get("fee") is not None else "keine Angabe"}</span>{f1}{f'<small class="mut">Nur mit Konto beim Anbieter: {E(c["konto"])}</small>' if c.get("giro") and c.get("konto") else ('<small class="mut">Nur mit Konto beim Anbieter</small>' if c.get("giro") else "")}
-    <a class="btn primary block" href="{E(c.get("quelle"))}" target="_blank" rel="noopener">Zum Anbieter ↗</a>
+    {affiliate.btn(code,'kreditkarten',c['slug'],c.get('quelle'))}
     <div class="actrow"><a class="plink" href="{E(c.get("preis") or c.get("quelle"))}" target="_blank" rel="noopener">{"Preise &amp; Gebühren (PDF) ↗" if (c.get("preis") or "").lower().endswith(".pdf") else "Konditionen beim Anbieter ↗"}</a></div></div>
   <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
   <nav class="secnav" aria-label="Abschnitte"><a href="#s-ueb" data-sec="s-ueb" class="on">Überblick</a><a href="#s-kond" data-sec="s-kond">Konditionen</a><a href="#s-vers" data-sec="s-vers">Versicherung</a><a href="#s-bew" data-sec="s-bew">Bewertung</a><a href="#s-faq" data-sec="s-faq">Fragen</a></nav>
@@ -657,7 +658,7 @@ def list_item(c,P,base=''):
     {offer(c)}
     {f'<div class="earn"><span>Sammeln</span><b>{E(earn)}</b></div>' if earn else ""}
     <ul class="checks">{"".join(f"<li>{E(x)}</li>" for x in c["pros"][:4])}</ul>
-    <div class="acts"><a class="btn primary block" href="{E(c.get("quelle"))}" target="_blank" rel="noopener">Zum Anbieter ↗</a><a class="btn ghost block" href="{base}{c["slug"]}/">Details ansehen</a></div>
+    <div class="acts">{affiliate.btn(L['code'],'kreditkarten',c['slug'],c.get('quelle'))}<a class="btn ghost block" href="{base}{c["slug"]}/">Details ansehen</a></div>
   </article>'''
 TXT={'de':dict(list_t='Kreditkarten-Vergleich Deutschland 2026 – unabhängig | Finvallo',biz_t='Business-Kreditkarten Deutschland 2026 im Vergleich | Finvallo',
                biz_lede=lambda n:f'{n} Karten für Selbstständige und Firmen, bewertet nach denselben sieben Kriterien wie Privatkarten.',biz_h='Business-Kreditkarten in Deutschland'),
@@ -796,7 +797,7 @@ def anbieter_pages(cards,prov):
   <div class="dh" style="grid-template-columns:64px 1fr"><span class="plogo" style="width:64px;height:64px;font-size:20px">{initials(nm)}</span><div>{f'<span class="tag">{E(pv["typ"])}</span>' if pv.get('typ') else ''}<h1 style="margin-top:8px">{E(nm)}: Kreditkarten</h1></div></div>
   <div class="facts prose" style="margin-top:12px"><p><b>Kurz gesagt:</b> {E(nm)} hat {len(v)} {"Karte" if len(v)==1 else "Karten"} im Finvallo-Vergleich für {N}.{f' Am besten bewertet ist die {E(b["titel"])} mit {de1(b["stars"])} Sternen.' if b and len(v)>1 else (f' Sie hat {de1(b["stars"])} Sterne.' if b else '')}{(' ' + E(fq[1][1])) if len(fq)>1 and len(v)>1 else ''}</p></div>
   <div class="feat">{feat}</div>
-  {f'<a class="btn primary block" style="margin-top:16px" href="{E(pv["web"])}" target="_blank" rel="noopener">Zum Anbieter ↗</a>' if pv.get('web') else ''}
+  {affiliate.btn(code,'anbieter',p,pv.get('web'),style='margin-top:16px') if pv.get('web') or affiliate.link(code,'anbieter',p) else ''}
     <div class="cond" style="margin-top:18px"><div class="gh">Auf einen Blick</div>{facts}</div>
     {f'<h2>Über {E(nm)}</h2><div class="prose">' + (f'<p>{E(pv["text"])}</p>' if pv.get('text') else '') + about + '</div>' if pv.get('text') or about else ''}
     <h2>Karten von {E(nm)}</h2><div class="plist">{"".join(prow_card(c,"../../") for c in v)}</div>

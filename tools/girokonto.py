@@ -5,6 +5,7 @@
 import json,os,re,sys
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import karten as K
+import affiliate
 from score import eur,pct
 
 E=K.E; dmy=K.dmy; de1=K.de1; R=K.R; SP=K.SP
@@ -207,7 +208,7 @@ def item(k,P,base):
     <p class="note" data-why style="margin:0">{E(why(k,ko,pr))}</p>
     {akt}
     <ul class="checks">{"".join(f"<li>{E(x)}</li>" for x in k["pros"][:4])}</ul>
-    <div class="acts"><a class="btn primary block" href="{E(k.get("quelle2") or k["quelle"])}" target="_blank" rel="noopener">Zum Anbieter ↗</a><a class="btn ghost block" href="{base}{k["slug"]}/">Details ansehen</a></div>
+    <div class="acts">{affiliate.btn(LAND,'girokonto',k['slug'],k.get('quelle2') or k['quelle'])}<a class="btn ghost block" href="{base}{k["slug"]}/">Details ansehen</a></div>
   </article>'''
 def why(k,ko,pr):
     t=f'Gerechnet mit {eur(pr["ein"])} € Geldeingang pro Monat, {pr["alter"]} Jahren und {pr["abh"]} Abhebungen pro Monat'
@@ -302,7 +303,7 @@ def konto_page(k,ks,n,BL):
   <div class="dh">{face(k)}<div style="min-width:0"><div class="tags">{besttag(k,BL)}<span class="tag typ">{E(ART[k["art"]])}</span><span class="by">von {E(k["bank"])}</span></div>
     <h1>{E(k["name"])}{"" if k["bank"].lower() in k["name"].lower() else f' <small class="mut">von {E(k["bank"])}</small>'}</h1>{starrow(k)}</div></div>
   <div class="box feebox"><small>Kontoführung</small><span class="big{" good" if k["kf_jahr"]==0 else ""}">{E(kfT(k))}</span>{f'<small class="mut">{E(k["gratis"]["text"])}</small>' if k.get("gratis") else ""}
-    <a class="btn primary block" href="{E(k.get("quelle2") or k["quelle"])}" target="_blank" rel="noopener">Zum Anbieter ↗</a>
+    {affiliate.btn(LAND,'girokonto',k['slug'],k.get('quelle2') or k['quelle'])}
     <div class="actrow"><a class="plink" href="{E(k["quelle"])}" target="_blank" rel="noopener">{"Entgeltinformation (PDF) ↗" if k["quelle"].lower().split("?")[0].endswith(".pdf") else "Preise beim Anbieter ↗"}</a></div></div>
   <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
   <h2>Vorteile und Nachteile</h2>

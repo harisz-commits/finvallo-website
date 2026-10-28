@@ -170,6 +170,19 @@ for _l in FG.CFG:
           for a in FG.load(_l)[1] for b in (500, 5000, 10000, 50000, 250000) for m in FG.laufzeiten(a) + [7]]
     fr = subprocess.run(['node', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'festgeld-kontrolle.js')], input=json.dumps(_t), capture_output=True, text=True)
     if fr.returncode: err += [x for x in fr.stdout.splitlines() if x] or ['Festgeld-Kontrolle: Fehler ' + fr.stderr[:200]]
+# Partnerlinks: jeder Schlüssel in daten/affiliate.json hat eine Seite, jeder sponsored-Link trägt den Stern, kein Partnerlink ohne sponsored
+import affiliate as AF
+_AP = {'kreditkarten': '{l}/kreditkarten/{k}/', 'girokonto': '{l}/girokonto/{k}/', 'festgeld': '{l}/festgeld/bank/{k}/', 'anbieter': '{l}/kreditkarten/anbieter/{k}/'}
+for _l, _b, _k in AF.keys():
+    _p = _AP[_b].format(l=_l, k=_k)
+    if not os.path.exists(R + _p + 'index.html'): err.append(f'affiliate.json {_l}/{_b}/{_k}: keine Seite {_p}')
+_AU = {u for _l, _b, _k in AF.keys() for u in [AF.link(_l, _b, _k)]}
+for f in pages:
+    s = open(f, encoding='utf-8').read(); rel = f[len(R):]
+    for m in re.finditer(r'<a [^>]*>', s):
+        a = m.group(0); href = re.search(r'href="([^"]*)"', a)
+        if 'sponsored' in a and not re.match(r'[^<]*\*', s[m.end():m.end() + 80]): err.append(f'{rel}: sponsored-Link ohne Stern')
+        if href and href.group(1) in _AU and 'sponsored' not in a: err.append(f'{rel}: Partnerlink ohne rel=sponsored')
 print(f'{len(pages)} Seiten, {len(sm)} Sitemap-Einträge geprüft')
 if err:
     print('FEHLER:'); print('\n'.join(err[:100])); sys.exit(1)
