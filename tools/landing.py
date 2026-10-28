@@ -122,7 +122,8 @@ AT_GUIDES=[('at/ratgeber/kostenlose-kreditkarte/','Vergleich','Kostenlose Kredit
 ('at/ratgeber/ohne-bonitaetspruefung/','Bonität','Kreditkarte ohne KSV-Abfrage','Was seriös möglich ist und welche Alternativen es gibt.'),
 ('at/ratgeber/mietwagen-kaution/','Reisen','Kreditkarte für Mietwagen und Kaution','Warum Vermieter eine echte Kreditkarte wollen.'),
 ('at/ratgeber/punkte-sammeln-at/','Punkte','Lohnt sich Punktesammeln in Österreich?','Amex, Miles & More und Hilton: was Punkte wirklich wert sind.')]
-DE_GUIDES=[('de/ratgeber/kostenlose-kreditkarte/','Vergleich','Kostenlose Kreditkarte in Deutschland','Welche Karten wirklich nichts kosten und wo die Haken liegen.'),
+DE_GUIDES=[('de/ratgeber/sparkasse-kreditkarte-kosten/','Sparkasse','Was kostet die Sparkassen-Kreditkarte?','Standard, Gold, Platinum und Basis: Preise von 13 Sparkassen.'),
+('de/ratgeber/kostenlose-kreditkarte/','Vergleich','Kostenlose Kreditkarte in Deutschland','Welche Karten wirklich nichts kosten und wo die Haken liegen.'),
 ('de/ratgeber/ohne-bonitaetspruefung/','Schufa','Kreditkarte ohne Schufa','Was seriös möglich ist und welche Alternativen es gibt.'),
 ('de/ratgeber/fremdwaehrung/','Ausland','Gebühren im Ausland verstehen','Auslandseinsatzentgelt und die Falle „in Euro zahlen“.'),
 ('de/ratgeber/mietwagen-kaution/','Reisen','Kreditkarte für Mietwagen und Kaution','Warum Vermieter eine echte Kreditkarte wollen.'),

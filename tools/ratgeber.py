@@ -420,6 +420,7 @@ def build(land):
         import ratgeber_girokonto_de; ratgeber_girokonto_de.register(art,P,eur)
         import ratgeber_konto_de; ratgeber_konto_de.register(art,P,eur)
         import ratgeber_festgeld_de; ratgeber_festgeld_de.register(art,P,eur)
+        import ratgeber_sparkasse; ratgeber_sparkasse.register(art,P,eur,pct)
         lou=[c for c in RC if c['lg']]
         art('de','lounges',h1='Lounge-Zugang mit der Kreditkarte',mt='Lounge-Zugang mit Kreditkarte in Deutschland: Bedingungen und Gäste | Finvallo',
           desc='Welche Kreditkarten in Deutschland kostenlosen Zugang zu Flughafen-Lounges geben: Priority Pass, Besuche pro Jahr und Begleitpersonen.',
@@ -516,7 +517,7 @@ def meta(land,slug):
     h1=html.unescape(re.sub(r'<[^>]+>','',re.search(r'<h1>(.*?)</h1>',s,re.S).group(1)))
     d=html.unescape(re.search(r'<meta name="description" content="([^"]*)"',s).group(1))
     return h1,d
-ORDER=['kostenloses-girokonto','girokonto-wechseln','basiskonto','dispo','kontoueberziehung','gemeinschaftskonto','p-konto','pfaendungsschutzkonto','kinderkonto-jugendkonto','konto-selbststaendige','festgeld-oder-tagesgeld','einlagensicherung','zinstreppe','festgeld-kuendigen','festgeld-plattformen','festgeld-steuern','kostenlose-kreditkarte','kreditkarte-studenten','kreditkarte-beantragen','fremdwaehrung','bargeld-beheben','bargeld-abheben','reiseversicherung','flugverspaetung-gepaeck','punkte-sammeln-at','punkte-sammeln-de','lounges','visa-mastercard-amex','apple-pay-google-pay','mietwagen-kaution','ohne-bonitaetspruefung','kartentypen','teilzahlung','business']
+ORDER=['sparkasse-kreditkarte-kosten','kostenloses-girokonto','girokonto-wechseln','basiskonto','dispo','kontoueberziehung','gemeinschaftskonto','p-konto','pfaendungsschutzkonto','kinderkonto-jugendkonto','konto-selbststaendige','festgeld-oder-tagesgeld','einlagensicherung','zinstreppe','festgeld-kuendigen','festgeld-plattformen','festgeld-steuern','kostenlose-kreditkarte','kreditkarte-studenten','kreditkarte-beantragen','fremdwaehrung','bargeld-beheben','bargeld-abheben','reiseversicherung','flugverspaetung-gepaeck','punkte-sammeln-at','punkte-sammeln-de','lounges','visa-mastercard-amex','apple-pay-google-pay','mietwagen-kaution','ohne-bonitaetspruefung','kartentypen','teilzahlung','business']
 GRUPPEN=[('Girokonto',['kostenloses-girokonto','girokonto-wechseln','basiskonto','dispo','kontoueberziehung','gemeinschaftskonto','p-konto','pfaendungsschutzkonto','kinderkonto-jugendkonto','konto-selbststaendige']),
          ('Festgeld und Sparen',['festgeld-oder-tagesgeld','einlagensicherung','zinstreppe','festgeld-kuendigen','festgeld-plattformen','festgeld-steuern'])]
 def index_pages():

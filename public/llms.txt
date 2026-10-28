@@ -4,7 +4,6 @@
 
 Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/at/ und /de/). Konditionen aus Deutschland gelten nicht für Österreich.
 
-
 ## Zitieren
 Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 
@@ -154,6 +153,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Zahlungskonto mit grundlegenden Funktionen (Revolut)](https://finvallo.com/de/girokonto/revolut-basiskonto/): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
 
 ## Deutschland: Ratgeber
+- [Was kostet die Kreditkarte bei der Sparkasse? Preise von 13 Sparkassen (Deutschland)](https://finvallo.com/de/ratgeber/sparkasse-kreditkarte-kosten/): Sparkassen-Kreditkarte Standard, Gold, Platinum und Basis: Jahresgebühr, Fremdwährung und Bargeld bei 13 Sparkassen von Berlin bis München, aus den Preisverzeichnissen.
 - [Kostenloses Girokonto in Deutschland: Worauf du achten musst (Deutschland)](https://finvallo.com/de/ratgeber/kostenloses-girokonto/): Kostenloses Girokonto in Deutschland: 7 Konten ohne Bedingung, 14 gratis mit Geldeingang oder unter einem bestimmten Alter. Welche Kosten trotzdem anfallen.
 - [Girokonto wechseln in Deutschland: So hilft dir die neue Bank (Deutschland)](https://finvallo.com/de/ratgeber/girokonto-wechseln/): Girokonto wechseln in Deutschland: Die neue Bank muss dir laut Zahlungskontengesetz helfen. Ablauf, Fristen, was kostenlos ist und was bei Banken im EU-Ausland gilt.
 - [Basiskonto in Deutschland: Das Recht auf ein Girokonto (Deutschland)](https://finvallo.com/de/ratgeber/basiskonto/): Basiskonto in Deutschland: Wer Anspruch hat, was dabei ist, wann die Bank ablehnen darf und was es kostet. 18 Basiskonten im Vergleich.
@@ -286,7 +286,6 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Renditerechner (Österreich)](https://finvallo.com/at/rechner/renditerechner/)
 - [KESt-Rechner (Kapitalertragsteuer) (Österreich)](https://finvallo.com/at/rechner/kapitalertragsteuer/)
 - [Umsatzsteuer-Rechner (MwSt) (Österreich)](https://finvallo.com/at/rechner/mehrwertsteuer/)
-
 
 ## Optional
 - [Vollständige Kartendaten als Text](https://finvallo.com/llms-full.txt)
