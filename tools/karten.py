@@ -1290,6 +1290,8 @@ def prepare():
         priv=[c for c in cards if c['art']!='Business']
         COUNTS[land]=dict(unrated=sum(1 for c in cards if c.get('stars') is None),all=len(cards),private=len(priv),special=sum(1 for c in priv if c.get('nurfuer')),
                           business=len(cards)-len(priv),rated=sum(1 for c in priv if c.get('stars') is not None and not c.get('nurfuer')))
+        # bewertete Privatkarten je Kartentyp (Ratgeber „Kartentypen“)
+        for t in ('Kreditkarte','Charge','Debit','Prepaid'): COUNTS[land]['typ_'+t]=sum(1 for c in priv if c.get('stars') is not None and not c.get('nurfuer') and c['typ']==t)
     at={c['titel']:c['slug'] for c in DATA['at'][0] if c['art']=='Privat'}
     for c in DATA['de'][0]:
         if c['art']=='Privat' and c['titel'] in at:
@@ -1334,7 +1336,7 @@ def main():
         print(L['name'],'Karten',len(cards),'bewertet',len(priv),'business',len(biz),'Stand',L['stand'])
     patch_tabs(); sitemap(DATA); llms(DATA); write_redirects()
     # Für scripts/seo-check.mjs (A6): erlaubte Kartenanzahlen je Land aus card_count() und den Bestenlisten
-    Z={land:sorted({card_count(land,x) for x in ('all','private','business','rated','special','unrated')}|{len(v) for v in LISTS[land][0].values()}) for land in ('at','de')}
+    Z={land:sorted({card_count(land,x) for x in ('all','private','business','rated','special','unrated','typ_Kreditkarte','typ_Charge','typ_Debit','typ_Prepaid')}|{len(v) for v in LISTS[land][0].values()}) for land in ('at','de')}
     for land in ('at','de'):
         by={}
         for c in DATA[land][0]: by[c['p']]=by.get(c['p'],0)+1

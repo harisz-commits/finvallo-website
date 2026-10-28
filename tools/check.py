@@ -17,7 +17,7 @@ COUNT_OK = r'\d+ Kreditkarten in unserem \S+-Vergleich enthalten|\d+ Karten · a
 for _l in ('at', 'de'):
     K.use(_l)
     _lists, _ = K.cat_lists(_D[_l][0], _l)
-    ALLOWED[_l] = {K.card_count(_l, x) for x in ('all', 'private', 'business', 'rated', 'special', 'unrated')} | {len(v) for v in _lists.values()}
+    ALLOWED[_l] = {K.card_count(_l, x) for x in ('all', 'private', 'business', 'rated', 'special', 'unrated', 'typ_Kreditkarte', 'typ_Charge', 'typ_Debit', 'typ_Prepaid')} | {len(v) for v in _lists.values()}
     PROV[_l] = {}
     for _c in _D[_l][0]: PROV[_l][_c['p']] = PROV[_l].get(_c['p'], 0) + 1
 err = []

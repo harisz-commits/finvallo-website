@@ -50,7 +50,7 @@ COL=dict(karte=('Karte',lambda c,P:link(c,P)),
 DATES={
     ('at','business'): dict(published='2026-10-11', updated='2026-10-19'),
     ('at','fremdwaehrung'): dict(published='2026-10-11', updated='2026-10-15'),
-    ('at','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('at','kartentypen'): dict(published='2026-10-11', updated='2026-10-28'),
     ('at','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-19'),
     ('at','kreditkarte-beantragen'): dict(published='2026-10-12', updated='2026-10-12'),
     ('at','lounges'): dict(published='2026-10-11', updated='2026-10-11'),
@@ -69,7 +69,7 @@ DATES={
     ('de','apple-pay-google-pay'): dict(published='2026-10-18', updated='2026-10-18'),
     ('de','business'): dict(published='2026-10-11', updated='2026-10-19'),
     ('de','fremdwaehrung'): dict(published='2026-10-12', updated='2026-10-12'),
-    ('de','kartentypen'): dict(published='2026-10-11', updated='2026-10-11'),
+    ('de','kartentypen'): dict(published='2026-10-11', updated='2026-10-28'),
     ('de','kostenlose-kreditkarte'): dict(published='2026-10-12', updated='2026-10-19'),
     ('de','kreditkarte-beantragen'): dict(published='2026-10-12', updated='2026-10-12'),
     ('de','lounges'): dict(published='2026-10-12', updated='2026-10-12'),
@@ -175,6 +175,7 @@ def build(land):
     import karten, ratgeber_kostenlos
     ratgeber_kostenlos.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
     import ratgeber_teilzahlung; ratgeber_teilzahlung.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
+    import ratgeber_kartentypen; ratgeber_kartentypen.register(land,art,P,best,RC,eur,de1,pct)
     import ratgeber_business; ratgeber_business.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
     # B) Kreditkarte beantragen
     # AT und DE bekommen eigene Fassungen (Begriffe, Anbieter, Rechtslage), damit die Texte nicht als Duplikate gelten.
@@ -448,8 +449,6 @@ def build(land):
 
 # ---------- statische Artikel korrigieren, Übersichten, hreflang, Sitemap, llms ----------
 DE_FIX={
- 'kartentypen':[('Hohe Zinsen bei Teilzahlung (in Österreich rund 22–25 % effektiv)','Hohe Zinsen bei Teilzahlung (in Deutschland rund 15–25 % effektiv)'),
-                ('In Österreich der Standard bei Bankkarten.','In Deutschland der Standard bei Karten von Sparkassen, Volksbanken und vielen Filialbanken.')],
  'teilzahlung':[('In Österreich liegen diese Zinsen bei den gebührenfreien Karten bei rund 25 % effektiv im Jahr.','In Deutschland liegen diese Zinsen bei den gebührenfreien Karten meist zwischen 18 und 25 % effektiv im Jahr.')],
  'business':[('../../../at/kreditkarten/business/','../../kreditkarten/business/')],
  'reiseversicherung':[('../../../at/kreditkarten/bestenlisten/reisen/','../../kreditkarten/bestenlisten/reisen/')],
