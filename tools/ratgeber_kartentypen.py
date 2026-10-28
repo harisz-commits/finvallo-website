@@ -34,7 +34,7 @@ def register(land,art,P,best,RC,eur,de1,pct):
         xs=top(t,k)
         if not xs: return ''
         head=['Karte','Jahresgebühr','Fremdwährung','Bewertung']+([extra[0]] if extra else [])
-        rs=[[_lnk(c,P,land),_fee(c,eur),E(c.get('fxText') or ('0 %' if c.get('fx')==0 else '–')),f'{de1(c["stars"])} ★']+([extra[1](c)] if extra else []) for c in xs]
+        rs=[[_lnk(c,P,land),_fee(c,eur),E(c.get('fxText') or ('0 %' if c.get('fx')==0 else '-')),f'{de1(c["stars"])} ★']+([extra[1](c)] if extra else []) for c in xs]
         return _tbl(head,rs)
     zins_col=('Zins bei Teilzahlung',lambda c:(pct(c['effz'])+' effektiv') if c.get('effz') else 'keine Angabe')
     tage_col=('Zinsfrei bis',lambda c:(f'{c["zinsfrei"]} Tage') if c.get('zinsfrei') else 'bis zur Abbuchung')

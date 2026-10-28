@@ -37,11 +37,11 @@ def table(rows,cols,P):
     b=''.join('<tr>'+''.join(f'<td>{f(c,P)}</td>' for _,f in cols)+'</tr>' for c in rows)
     return f'<div class="tbl wide"><table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table></div>'
 COL=dict(karte=('Karte',lambda c,P:link(c,P)),
-         fee=('Jahresgebühr',lambda c,P:'kostenlos' if c['fee']==0 else (f'{eur(c["fee"])} €' if c['fee'] is not None else '–')),
-         fx=('Zahlung Ausland',lambda c,P:E(c['fxText'] if c['fx'] not in (0,None) else ('0 %' if c['fx']==0 else '–'))),
-         cash=('Bargeld',lambda c,P:E(c['cashText'] or '–')),
-         ins=('Reiseversicherung',lambda c,P:TIERN.get(c['tier'],'–') if c['tier'] is not None else '–'),
-         stars=('Bewertung',lambda c,P:f'{de1(c["stars"])} ★' if c.get('stars') is not None else '–'),
+         fee=('Jahresgebühr',lambda c,P:'kostenlos' if c['fee']==0 else (f'{eur(c["fee"])} €' if c['fee'] is not None else '-')),
+         fx=('Zahlung Ausland',lambda c,P:E(c['fxText'] if c['fx'] not in (0,None) else ('0 %' if c['fx']==0 else '-'))),
+         cash=('Bargeld',lambda c,P:E(c['cashText'] or '-')),
+         ins=('Reiseversicherung',lambda c,P:TIERN.get(c['tier'],'-') if c['tier'] is not None else '-'),
+         stars=('Bewertung',lambda c,P:f'{de1(c["stars"])} ★' if c.get('stars') is not None else '-'),
          netz=('Netz',lambda c,P:E(c['netz'])),typ=('Typ',lambda c,P:E(c['typ'])),
          lg=('Lounge',lambda c,P:E((c['lg'] or '')[:90])),cb=('Sammeln',lambda c,P:E((c['cb'] or '')[:90])))
 # ---------- Seite ----------
@@ -554,9 +554,103 @@ def sitemap_llms():
             blk=hd+'\n'+''.join(f'- [{meta(land,x)[0]} ({LAND[land]["name"]})](https://finvallo.com/{land}/ratgeber/{x}/): {meta(land,x)[1]}\n' for x in ss)
             s=re.sub(re.escape(hd)+r'\n(?:- .*\n?)*',blk,s,count=1)
         open(p,'w').write(s)
+# ---------- Titel, H1 und FAQ nach echten Suchanfragen (Search Console, Oktober 2026) ----------
+# Die Leute suchen nach konkreten Fragen und Produktnamen, nicht nach generischen Titeln. Hier passen wir die Ratgeber daran an.
+def seo_faq(land):
+    RC=rated(cards(land)); N=LAND[land]['name']; P='../../../'; bl=f'{P}{land}/kreditkarten/bestenlisten/'
+    lou=[c for c in RC if c.get('lg')]; lnames=fmtlist([c['titel'] for c in lou[:4]])
+    tz=sorted([c for c in RC if c['typ']=='Kreditkarte' and c.get('effz')],key=lambda c:c['effz'])
+    free_ins=[c for c in RC if c.get('fee')==0 and (c.get('tier') or 0)>=2]
+    gratis=[c for c in RC if c.get('fee')==0 and c['typ'] in ('Kreditkarte','Charge') and not c.get('giro')]
+    deb=[c for c in RC if c['typ'] in ('Debit','Prepaid') and c.get('fee')==0]
+    L=lambda c:f'<a class="lnk" href="{P}{land}/kreditkarten/{c["slug"]}/">{E(c["titel"])}</a>'
+    at=land=='at'
+    S={}
+    S['visa-mastercard-amex']=dict(
+        mt=f'Visa, Mastercard oder Amex: Akzeptanz ({land.upper()}) | Finvallo',
+        h1='Visa, Mastercard oder American Express: Wo welche Karte angenommen wird',
+        faq=[('Ist American Express Visa oder Mastercard?','Weder noch. American Express ist ein eigenes Kartennetz mit eigenen Karten, so wie Visa und Mastercard. Deshalb gibt es keine „Amex Visa“. Ob eine Karte angenommen wird, hängt davon ab, welches Netz der Händler freigeschaltet hat; Visa und Mastercard sind fast überall dabei, Amex deutlich seltener.'),
+             ('Wo werden Visa und Mastercard akzeptiert?','Praktisch an jeder Stelle, die Kartenzahlung anbietet. Beide Netze haben weltweit über 100 Millionen Akzeptanzstellen, in Europa nimmt kaum ein Händler nur eines von beiden. Unterschiede gibt es eher bei Debitkarten: Manche Automaten und Hotels nehmen keine Debit-Varianten, egal von welchem Netz.'),
+             ('Visa, Mastercard oder Amex: Was ist im Alltag besser?',f'Für die meisten ist es egal, ob Visa oder Mastercard auf der Karte steht; die Konditionen macht die Bank, nicht das Netz. American Express lohnt sich nur, wenn du Punkte sammeln willst und eine zweite Karte für die Läden hast, die Amex nicht nehmen. Welche Karte zu dir passt, zeigt der <a class="lnk" href="{P}{land}/kreditkarten/">Kreditkarten-Vergleich</a>.')])
+    S['business']=dict(
+        mt=f'Firmenkreditkarte ({land.upper()}): Haftung, private Nutzung | Finvallo',
+        h1=f'Firmenkreditkarte in {N}: Wer haftet, was sie kostet und ob du sie privat nutzen darfst',
+        faq=[('Darf ich die Firmenkreditkarte privat nutzen?','Bei den meisten Anbietern ist das vertraglich ausgeschlossen, und steuerlich ist es ein Problem: Private Ausgaben über die Firmenkarte gelten als Entnahme oder geldwerter Vorteil und müssen verbucht werden. Wer beides vermischt, macht sich die Buchhaltung unnötig schwer. Besser eine private Karte für Privates, die Firmenkarte nur fürs Geschäft.'),
+             ('Kann ich meine private Kreditkarte für die Firma nutzen?',f'Als Einzelunternehmer ja, viele machen das am Anfang. Du musst die Belege dann sauber trennen und jeden geschäftlichen Umsatz einzeln erfassen. Sobald Mitarbeiter mitzahlen sollen oder du Umsätze automatisch in die Buchhaltung übernehmen willst, ist eine echte Firmenkarte einfacher; eine Übersicht steht unter <a class="lnk" href="{P}{land}/kreditkarten/business/">Business-Kreditkarten</a>.'),
+             ('Bekomme ich eine Business-Kreditkarte mit Nebengewerbe?','Ja, die meisten Anbieter verlangen nur eine Gewerbeanmeldung oder den Nachweis der selbstständigen Tätigkeit, kein Mindestumsatz. Geprüft wird deine persönliche Bonität, weil du als Inhaber haftest. Bei Karten, die an ein Geschäftskonto gebunden sind, brauchst du zuerst das Konto.')])
+    S['teilzahlung']=dict(
+        mt=f'Kreditkarte mit Ratenzahlung ({land.upper()}): Zinsen, Kosten | Finvallo',
+        h1=f'Kreditkarte mit Ratenzahlung in {N}: Was die Teilzahlung kostet und wie du sie abschaltest',
+        faq=[(f'Welche Kreditkarte in {N} hat Ratenzahlung?',f'Nur echte Kreditkarten mit Kreditrahmen, nicht die Charge-Karten der Hausbanken. Im Vergleich sind das zum Beispiel {fmtlist([L(c) for c in tz[:3]])}. Alle rechnen bei Teilzahlung mit Zinsen zwischen {pct(tz[0]["effz"])} und {pct(tz[-1]["effz"])} effektiv im Jahr.' if tz else 'Nur echte Kreditkarten mit Kreditrahmen, nicht die Charge-Karten der Hausbanken.'),
+             ('Gibt es eine Kreditkarte mit niedrigen Zinsen für die Teilzahlung?',f'Niedrig ist relativ: Die günstigste Teilzahlung im Vergleich liegt bei {pct(tz[0]["effz"])} ({tz[0]["titel"]}), die meisten Karten bei 20 bis 25 %. Ein Ratenkredit kostet meist weniger als die Hälfte. Teilzahlung lohnt sich nur für ein, zwei Monate, nicht als Dauerkredit.' if tz else 'Die meisten Karten verlangen 20 bis 25 % effektiv. Ein Ratenkredit ist fast immer billiger.'),
+             ('Kann ich eine Reparatur oder einen größeren Kauf mit der Kreditkarte in Raten zahlen?','Ja, wenn die Karte Teilzahlung erlaubt: Du zahlst den Kauf ganz normal, überweist dann nur einen Teil der Monatsrechnung, der Rest läuft als Kredit weiter. Rechne vorher aus, was das kostet; bei 1.000 € und 25 % Zinsen sind es über ein Jahr rund 140 € Zinsen, wenn du in gleichen Raten tilgst.')])
+    S['lounges']=dict(
+        mt=f'Kreditkarte mit Lounge-Zugang ({land.upper()}): Priority Pass | Finvallo',
+        h1=f'Kreditkarte mit Lounge-Zugang in {N}: Priority Pass, Besuche und Begleitpersonen',
+        faq=[(f'Welche Kreditkarte in {N} hat Lounge-Zugang?',f'Im Vergleich enthalten {len(lou)} Karten kostenlose Lounge-Besuche, darunter {lnames}. Wie viele Besuche gratis sind und ob eine Begleitperson mitdarf, steht in der <a class="lnk" href="{bl}lounge/">Bestenliste Lounge-Zugang</a>.' if lou else 'Nur wenige Premiumkarten. Die Liste steht in der Bestenliste Lounge-Zugang.'),
+             ('Welche Kreditkarte hat Priority Pass?','Priority Pass ist das größte Lounge-Programm und bei den meisten Premiumkarten dabei, etwa bei American Express Platinum. Wichtig ist der Unterschied zwischen Mitgliedschaft und Besuchen: Manche Karten geben dir nur den Ausweis, jeder Besuch kostet dann rund 30 €; andere enthalten eine feste Zahl Besuche oder unbegrenzten Zugang. Das steht bei jeder Karte unter „Lounge“.')]
+            +([('Komme ich mit der Kreditkarte in die Lounges am Flughafen Wien?','Die Lounges in Wien-Schwechat sind an Priority Pass und an einzelne Kartenprogramme angeschlossen. Ob deine Karte dort gilt, hängt vom Programm ab, nicht von der Bank; prüfe die Lounge-Liste deines Programms vor dem Flug, weil sich die teilnehmenden Lounges ändern.')] if at else []))
+    S['kostenlose-kreditkarte']=dict(
+        mt='Gratis Kreditkarte Österreich: was sie kostet | Finvallo' if at else 'Kostenlose Kreditkarte Deutschland: die Haken | Finvallo',
+        h1=f'Gratis Kreditkarte in {N}: Welche wirklich nichts kostet' if at else 'Kostenlose Kreditkarte in Deutschland: Welche wirklich nichts kostet',
+        faq=[(f'Welche Kreditkarte ist in {N} gratis?',f'Dauerhaft ohne Jahresgebühr und ohne Pflicht zu einem Konto beim Anbieter sind im Vergleich {fmtlist([L(c) for c in gratis[:4]])}. Dazu kommen kostenlose Debitkarten wie {fmtlist([c["titel"] for c in deb[:3]])}. Gratis heißt aber nur: keine Jahresgebühr. Bargeld, Fremdwährung und Teilzahlung können trotzdem kosten.' if gratis else 'Die Liste steht in der Bestenliste ohne Jahresgebühr.'),
+             ('Welche gratis Kreditkarte hat eine Reiseversicherung?',f'{fmtlist([L(c) for c in free_ins[:3]])}: alle ohne Jahresgebühr und mit Reiserücktritt und Auslandskranken. Bedingungen und Selbstbehalt stehen auf der Kartenseite.' if free_ins else 'Im Vergleich derzeit keine. Reiseversicherung gibt es meist erst ab der Gold-Stufe gegen Gebühr.')])
+    S['fremdwaehrung']=dict(
+        mt=f'Kreditkarte im Ausland: Gebühren und Kurs ({land.upper()}) | Finvallo',
+        h1=f'Kreditkarte im Ausland: {"Bearbeitungsentgelt" if at else "Auslandseinsatzentgelt"}, Kursaufschlag und die Euro-Falle',
+        faq=[('Was ist das Auslandseinsatzentgelt?' if not at else 'Was ist das Bearbeitungsentgelt für Fremdwährung?','Die Gebühr, die deine Bank auf jede Zahlung in einer anderen Währung als Euro aufschlägt, meist 1,5 bis 2 % des Betrags. Sie steht im Preisblatt der Karte. Dazu kann ein Kursaufschlag kommen, den du nicht als Gebühr siehst, sondern nur am schlechteren Wechselkurs.'),
+             ('Welche Mastercard oder Visa hat keine Fremdwährungsgebühr?',f'Im Vergleich gibt es {sum(1 for c in RC if c.get("fx")==0)} Angebote mit 0 %, darunter ohne Jahresgebühr {fmtlist([L(c) for c in RC if c.get("fee")==0 and c.get("fx")==0][:3])}. Alle stehen in der <a class="lnk" href="{bl}ausland/">Bestenliste ohne Auslandsgebühr</a>.'),
+             ('Kostet die Kreditkarte in der Schweiz oder in Großbritannien Gebühren?','Ja, dort zahlst du in Franken oder Pfund, also in Fremdwährung. Das Entgelt fällt genauso an wie in den USA oder in Thailand. Innerhalb des Euroraums kostet das Zahlen dagegen nichts extra, egal in welchem Land.')])
+    S['mietwagen-kaution']=dict(
+        mt=f'Mietwagen-Kaution: Kreditkarte oder Debit? ({land.upper()}) | Finvallo',
+        h1='Mietwagen und Kaution: Warum der Vermieter eine echte Kreditkarte will',
+        faq=[('Geht die Mietwagen-Kaution mit einer Debitkarte?','Bei den großen Vermietern meist nicht. Sie blocken die Kaution auf einem Kreditrahmen, den eine Debitkarte nicht hat. Manche Stationen nehmen Debitkarten gegen eine höhere Kaution und mit Vollkasko ohne Selbstbeteiligung, die du dann dort kaufen musst. Prüfe das vor der Buchung in den Mietbedingungen, nicht erst am Schalter.'),
+             ('Ersetzt die Kreditkarte die Vollkasko beim Mietwagen?','Nur bei Karten mit Mietwagen-Versicherung, und auch dann meist nur den Selbstbehalt oder die Kasko bis zu einer Höchstsumme. Die Haftpflicht ist immer die des Vermieters. Ob deine Karte einen Mietwagen-Schutz hat, steht auf der Kartenseite unter „Mietwagen“.')])
+    S['ohne-bonitaetspruefung']=dict(
+        mt=f'Kreditkarte ohne {"KSV" if at else "Schufa"}: was wirklich geht ({land.upper()}) | Finvallo',
+        h1=f'Kreditkarte ohne {"KSV-Abfrage" if at else "Schufa"}: Was wirklich geht und was nur Werbung ist',
+        faq=[(f'Gibt es eine Kreditkarte ohne {"KSV" if at else "Schufa"} mit Verfügungsrahmen?','Nein. Ein Verfügungsrahmen ist ein Kredit, und den gibt keine Bank ohne Bonitätsprüfung. Angebote, die das versprechen, sind entweder Prepaid-Karten mit aufgeladenem Guthaben oder teure Kreditvermittler. Was ohne Prüfung geht, sind Debit- und Prepaid-Karten; die bezahlen nur, was auf dem Konto ist.'),
+             ('Was ist eine Kreditkarte auf Guthabenbasis?','Eine Prepaid-Karte: Du lädst Geld auf und zahlst davon. Sie läuft über Visa oder Mastercard und funktioniert online und im Ausland, aber nicht für Kautionen bei Mietwagen oder Hotels. Oft kostet sie Jahres- oder Ladegebühren; eine kostenlose Debitkarte einer App-Bank ist meist die bessere Wahl.')])
+    S['kreditkarte-studenten']=dict(
+        mt=f'Kreditkarte für Studenten ({land.upper()}): ohne Einkommen | Finvallo')
+    S['apple-pay-google-pay']=dict(mt=f'Apple Pay und Google Pay: Banken in {N} | Finvallo')
+    S['reiseversicherung']=dict(
+        mt=f'Kreditkarte mit Reiseversicherung: Vergleich ({land.upper()}) | Finvallo',
+        faq=[('Brauche ich eine eigene Auslandskrankenversicherung, wenn meine Kreditkarte eine Reiseversicherung hat?','Kommt auf die Karte an. Viele Gold-Karten enthalten eine Auslandskrankenversicherung, aber oft nur für Reisen bis zu einer bestimmten Dauer, nur wenn du die Reise mit der Karte bezahlt hast, und mit Altersgrenzen. Lies auf der Kartenseite nach, ob „Auslandskranken“ dabei ist und welche Bedingung gilt. Fehlt sie oder passt die Bedingung nicht, kostet eine eigene Jahrespolizze nur 10 bis 20 € und gilt ohne Wenn und Aber.'),
+             ('Welche Kreditkarte hat eine Reiseversicherung mit Storno?',f'Ohne Jahresgebühr: {fmtlist([L(c) for c in free_ins[:3]])}. Mit Gebühr fast alle Gold- und Platinum-Karten. Stornosummen und Selbstbehalt stehen in der <a class="lnk" href="{bl}reisen/">Bestenliste Reisen</a>.' if free_ins else 'Fast alle Gold- und Platinum-Karten. Stornosummen und Selbstbehalt stehen in der Bestenliste Reisen.')])
+    S['flugverspaetung-gepaeck']=dict(mt='Flugverspätung: Was die Kreditkarte zahlt (AT) | Finvallo')
+    S['bargeld-beheben' if at else 'bargeld-abheben']=dict(mt=f'{"Bargeld beheben" if at else "Geld abheben"} mit Kreditkarte: Gebühren ({land.upper()}) | Finvallo')
+    S['kartentypen']=dict(mt=f'Kartentypen ({land.upper()}): Kredit, Charge, Debit, Prepaid | Finvallo' if at else 'Kartentypen (DE): Kreditkarte, Debit, Prepaid | Finvallo')
+    S['girokonto-wechseln']=dict(mt=f'Girokonto wechseln ({land.upper()}): Ablauf, Fristen, Kosten | Finvallo')
+    S['kostenloses-girokonto']=dict(mt='Kostenloses Girokonto Österreich: die Bedingungen | Finvallo' if at else 'Kostenloses Girokonto (DE): Bedingungen, Fallen | Finvallo')
+    return S
+# statische Artikel (ohne art()): nur Titel anpassen
+STATIC_TITLES={('at','lounges'):'Kreditkarte mit Lounge-Zugang (AT): Priority Pass | Finvallo',
+               ('at','punkte-sammeln-at'):'Meilen und Punkte sammeln mit Kreditkarte (AT) | Finvallo',
+               ('de','punkte-sammeln-de'):'Meilen und Punkte sammeln mit Kreditkarte (DE) | Finvallo'}
+def static_titles():
+    for (land,slug),t in STATIC_TITLES.items():
+        f=R+f'{land}/ratgeber/{slug}/index.html'
+        if not os.path.exists(f) or (land,slug) in ARTS: continue
+        s=open(f).read()
+        s=re.sub(r'<title>.*?</title>',f'<title>{E(t)}</title>',s,count=1)
+        s=re.sub(r'<meta property="og:title" content="[^"]*">',f'<meta property="og:title" content="{E(t)}">',s,count=1)
+        open(f,'w').write(s)
+def apply_seo(land):
+    for slug,o in seo_faq(land).items():
+        a=ARTS.get((land,slug))
+        if not a: continue
+        if o.get('mt'): a['mt']=o['mt']
+        if o.get('h1'): a['h1']=o['h1']
+        if o.get('faq'):
+            have={q.lower() for q,_ in a.get('faq',[])}
+            a['faq']=[x for x in o['faq'] if x[0].lower() not in have]+a.get('faq',[])
+            a['faq']=a['faq'][:7]
 def run():
-    for land in ('at','de'): build(land)
+    for land in ('at','de'): build(land); apply_seo(land)
     for (land,slug) in ARTS: render(land,slug)
-    fix_static(); hreflang_all(); index_pages(); sitemap_llms()
+    fix_static(); static_titles(); hreflang_all(); index_pages(); sitemap_llms()
+    for (land,slug),a in ARTS.items():
+        if len(a['mt'])>62: print(f'Titel zu lang ({len(a["mt"])}): {land}/{slug}: {a["mt"]}')
     print('Artikel neu/überarbeitet:',len(ARTS))
 if __name__=='__main__': run()
