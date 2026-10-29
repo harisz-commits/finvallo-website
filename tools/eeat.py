@@ -4,7 +4,7 @@
 - Autorenbox auf Kartenseiten, Bestenlisten und Ratgebern
 - Prüfdatum: „Quelle: Preisblatt … · geprüft am …“ auf Kartenseiten, „Konditionen geprüft bis …“ auf Listen,
   „Aktualisiert am …“ auf Ratgebern; kein „Stand“ mehr in Kopfzeile und Fußzeile
-- meta author, Organization + Person in jedem JSON-LD-Graph (ein @graph je Seite), Article, Product mit Review,
+- meta author, Organization + Person in jedem JSON-LD-Graph (ein @graph je Seite), Article, CreditCard ohne Review-Schema (die Sterne sind berechnet, kein Testbericht),
   FAQPage und BreadcrumbList, wo sie fehlen
 Datumsquellen: Feld `geprueft` je Karte (karten.json / DE-Recherche), `updated`/`published` je Ratgeber (ratgeber.py).
 """
@@ -351,10 +351,6 @@ def main():
             s = s.replace('<h2>Konditionen im Überblick</h2>', '<h2>Konditionen im Überblick</h2>' + line, 1); n['quelle'] += 1
             s = put_author(s, author_box(land, title), ['<h2>Ähnliche Karten</h2>']); n['author'] += 1
             LASTMOD[rel] = c['geprueft']
-            url = f'https://finvallo.com/{rel}'
-            prod = {"@type": "Product", "@id": url + "#product", "name": c['titel'], "brand": {"@type": "Brand", "name": c['anbieter']}, "url": url}
-            if c.get('stars'): prod["review"] = {"@id": url + "#review"}   # derselbe Review-Knoten wie bei der CreditCard
-            extra.append(prod)
         # Listen und Bestenlisten
         elif land and len(parts) >= 3 and parts[1] == 'kreditkarten' and (parts[2] in ('', 'alle', 'business', 'bestenlisten')):
             linked = set(re.findall(rf'href="(?:\.\./)*(?:{land}/kreditkarten/)?([a-z0-9-]+)/"', s)) & set(cards[land])

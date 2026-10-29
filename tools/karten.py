@@ -563,10 +563,7 @@ def card_page(c,cards,nrated,prov):
     ld_card['image']='https://finvallo.com/assets/og-kreditkarten.png'
     if c.get('effz'): ld_card['annualPercentageRate']={"@type":"QuantitativeValue","value":c['effz'],"unitText":"% effektiver Jahreszins"}
     if c.get('fee') is not None: ld_card['offers']={"@type":"Offer","price":c['fee'],"priceCurrency":"EUR","description":"Jahresgebühr","availability":"https://schema.org/InStock"}
-    if c.get('stars') is not None:
-        ld_card['review']={"@type":"Review","@id":f"https://finvallo.com/{rel}#review","author":{"@id":"https://finvallo.com/ueber-uns/#haris"},"publisher":{"@id":"https://finvallo.com/#org"},"datePublished":gp,"name":f"{c['titel']} im Finvallo-Vergleich","reviewRating":{"@type":"Rating","ratingValue":c['stars'],"bestRating":5,"worstRating":1},
-          "positiveNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":x} for i,x in enumerate(pc[:5])]},
-          "negativeNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":x} for i,x in enumerate(kc[:5])]}}
+    # kein Review-Schema: die Sterne sind eine berechnete Note, kein persönlicher Testbericht (sichtbar bleiben sie auf der Seite)
     fq=faq(c)
     ld=graph(rel,t,d,[(L['name'],f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Alle Karten',f'{code}/kreditkarten/alle/')]+([(c['anbieter'],f'{code}/kreditkarten/anbieter/{c["p"]}/')] if c['p'] in PROVPAGE.get(code,()) else [])+[(c['titel'],rel)],
              [ld_card]+([{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}] if fq else []),date=gp)
