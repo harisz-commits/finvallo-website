@@ -65,6 +65,9 @@ def _gtxt(k): return (k.get('gratis') or {}).get('text') or ''
 def _all(k): return ' '.join([_alt(k),_gtxt(k),(k.get('gratis') or {}).get('sonst') or '',_dk(k),k.get('kreditkarte') or ''])
 def _links(c,X,n=None): return _fmtl([c['link'](k) for k in (X[:n] if n else X)])
 def _bed(k): return _gtxt(k) or _alt(k) or 'keine Angabe'
+def _jung(c):
+    return sorted([k for k in c['alle'] if k['art'] in ('standard','premium') and (k.get('gratis') or {}).get('alter_unter') and k['gratis'].get('kf_bedingt')==0],
+                  key=lambda k:(-k['gratis']['alter_unter'],-k['stars']))
 def _n(n,s,p): return f'{n} {s if n==1 else p}'
 def _w(n,one,many): return one if n==1 else f'{n} {many}'
 
@@ -106,7 +109,7 @@ def _gem_de(c):
               '<b>Steuer-ID</b> beider Inhaber. Banken müssen sie für jeden Kontoinhaber erfassen (§ 154 Abs. 2a AO).',
               '<b>Schufa-Abfrage</b> bei beiden, wenn ihr einen Dispo oder eine Kreditkarte wollt. Für ein reines Guthabenkonto fragen manche Banken nur eine Identitätsprüfung an.',
               '<b>Unterschrift beider</b> unter dem Kontovertrag, online meist per Klick oder qualifizierter elektronischer Signatur.']),
-         (f'Von den {n} Konten in der Liste kannst du {_w(len(onl),"eines","davon")} nur online eröffnen, {len(fil)} auch oder nur in der Filiale. ' if X else '')+
+         (f'Von den {n} Konten in der Liste kannst du {len(onl)} nur online eröffnen, {len(fil)} auch oder nur in der Filiale. ' if X else '')+
          'Bei manchen App-Banken ist das Gemeinschaftskonto kein eigener Vertrag, sondern ein Zusatz: Beide brauchen zuerst ein eigenes Konto bei der Bank, dann lädt einer den anderen ein. Rechne dafür ein paar Tage ein.',
          'Wer schon ein Einzelkonto hat, fragt am besten zuerst, ob die Bank einen zweiten Inhaber hinzufügen kann. Das spart die neue IBAN und damit die Mitteilung an Arbeitgeber, Vermieter und Versicherungen. Geht das nicht, hilft die gesetzliche Kontowechselhilfe beim Umzug der Daueraufträge.')),
      ('Was ein Gemeinschaftskonto kostet',
@@ -179,7 +182,6 @@ def _gem_at(c):
     frei0=[k for k in X if k['kf_jahr']==0]
     bed=[k for k in X if k['kf_jahr']>0 and (k.get('gratis') or {}).get('kf_bedingt')==0]
     billig=sorted(X,key=lambda k:(k['score']['kosten']['total'],-k['stars']))
-    ohne_r=[k for k in X if k.get('sollzins') is None]
     mit_r=sorted([k for k in X if k.get('sollzins') is not None],key=lambda k:k['sollzins'])
     uk=[k for k in X if (k.get('unterkonten') or 0)>=1]
     mitinh=[k for k in X if re.search(r'Mitinhaber|Zeichnungsberecht|zusätzliche Debitkarte|weitere',_dk(k))]
@@ -202,7 +204,7 @@ def _gem_at(c):
               '<b>Wohnadresse</b>, bei manchen Banken mit Hauptwohnsitz in Österreich. Wer erst zugezogen ist, sollte das vorher klären.',
               '<b>Abfrage beim KSV1870</b>, wenn ihr einen Überziehungsrahmen oder eine Kreditkarte beantragt. Für ein reines Guthabenkonto entfällt sie oft.',
               '<b>Unterschrift beider</b> auf dem Kontovertrag, bei Online-Banken digital in der App.']),
-         (f'Von den {n} Konten in der Liste kannst du {_w(len(fil),"eines","davon")} auch oder nur in einer Filiale eröffnen, die übrigen gehen nur online. ' if X else '')+
+         (f'Von den {n} Konten in der Liste kannst du {len(fil)} auch oder nur in einer Filiale eröffnen, die übrigen gehen nur online. ' if X else '')+
          'Bei App-Banken ist das gemeinsame Konto oft ein Zusatz zum eigenen Konto: Zuerst eröffnet jeder sein Einzelkonto, dann lädt einer den anderen in der App ein. Deshalb kann es ein paar Tage dauern, bis ihr loslegen könnt.',
          'Hast du schon ein Konto, frag nach, ob die Bank eine Mitinhaberin oder einen Mitinhaber hinzufügen kann. Dann bleibt die IBAN gleich, und du musst Arbeitgeber, Vermieter und Versicherungen nicht informieren.')),
      ('Kosten für zwei: Kontoführung und zweite Karte',
@@ -213,12 +215,12 @@ def _gem_at(c):
          'Das Kontoführungsentgelt zahlt ihr nur einmal. Teurer wird es durch die zweite Bankomat- oder Debitkarte: Manche Banken verrechnen für die Karte des Mitinhabers ein Jahresentgelt, das beim Einzelkonto nicht anfällt.'
          +(f' Ein eigenes Entgelt für weitere Karten nennen zum Beispiel {_links(c,mitinh,3)}.' if mitinh else ''))+
       (_tbl(['Konto','Kosten pro Jahr im Standardfall','Gratis, wenn','Karten laut Bank'],rows) if rows else '')+
-      _P('Achte bei Gratis-Bedingungen auf die Formulierung. Verlangt die Bank einen Gehalts- oder Pensionseingang, zählt beim Gemeinschaftskonto meist jeder Eingang dieser Art, egal von welchem Inhaber. Reine Umbuchungen vom eigenen Sparkonto zählen dagegen oft nicht. Einen Überblick über alle Konten mit ihren Entgelten bietet auch der '+_ext(AT_BANKENRECHNER,'Bankenrechner der Arbeiterkammer')+'.')),
+      _P('Ein einfaches Rechenbeispiel: Zahlt ihr heute für zwei Einzelkonten je 5 € im Monat, sind das zusammen 120 € im Jahr. Läuft alles über ein gemeinsames Konto, zahlt ihr das Entgelt nur einmal und spart 60 €. Ganz auf eigene Konten verzichten solltet ihr als Paar aber nicht: Jeder sollte ein Konto haben, auf das nur er selbst Zugriff hat, etwa als Notreserve für den Fall einer Trennung. Am besten eines ohne Kontoführungsentgelt.',
+         'Achte bei Gratis-Bedingungen auf die Formulierung. Verlangt die Bank einen Gehalts- oder Pensionseingang, zählt beim Gemeinschaftskonto meist jeder Eingang dieser Art, egal von welchem Inhaber. Reine Umbuchungen vom eigenen Sparkonto zählen dagegen oft nicht. Einen Überblick über alle Konten mit ihren Entgelten bietet auch der '+_ext(AT_BANKENRECHNER,'Bankenrechner der Arbeiterkammer')+'.')),
      ('Solidarhaftung: Wenn einer überzieht, zahlen beide',
       _P('Alle Inhaber eines Gemeinschaftskontos haften der Bank zur ungeteilten Hand (§ 891 ABGB). Rutscht euer Konto um 1.800 € ins Minus, darf die Bank die ganzen 1.800 € von dir fordern, auch wenn dein Partner das Geld ausgegeben hat. Wer im Innenverhältnis wie viel schuldet, müsst ihr untereinander klären.',
          ('Den Überziehungsrahmen setzt ihr am besten niedrig an oder verzichtet ganz darauf. '
-          +(f'{_w(len(ohne_r),"Ein Konto","Konten")} in dieser Liste {"läuft" if len(ohne_r)==1 else "laufen"} laut Bank ohne eingeräumten Rahmen, etwa {_links(c,ohne_r,3)}. ' if ohne_r else '')
-          +(f'Bei den anderen kostet der Rahmen zwischen {pct(mit_r[0]["sollzins"])} und {pct(mit_r[-1]["sollzins"])} Sollzinsen im Jahr. ' if len(mit_r)>1 else ''))
+          +(f'Einige Konten haben gar keinen eingeräumten Rahmen. Wo es einen gibt, kostet er in dieser Liste zwischen {pct(mit_r[0]["sollzins"])} und {pct(mit_r[-1]["sollzins"])} Sollzinsen im Jahr. ' if len(mit_r)>1 else ''))
          +'Was Rahmen und Überschreitung kosten und welche neuen Informationspflichten ab 20. November 2026 gelten, steht im Ratgeber '+rg('kontoueberziehung','Kontoüberziehung')+'.',
          'Die Haftung gilt so lange, wie ihr beide Inhaber seid. Auch ein Minus, das erst nach einer Trennung entsteht, trifft beide. Das ist der wichtigste Grund, bei einer Trennung sofort zu handeln.')),
      ('Schenkungsmeldung: keine Steuer, aber eine Pflicht',
@@ -283,6 +285,7 @@ def _stu_de(c):
     fx=[k for k in X if k.get('fremdwaehrung_prozent') is not None]
     fx0=[k for k in fx if k['fremdwaehrung_prozent']==0]
     fxmax=max(fx,key=lambda k:k['fremdwaehrung_prozent']) if fx else None
+    jung=_jung(c)
     rows=[(L(k),E(c['altT'](k)),_kost(c,k),_txt(_bed(k),170)) for k in X]
 
     if disp:
@@ -309,6 +312,11 @@ def _stu_de(c):
           +(f'Am kürzesten ist die Grenze bei {L(kurz[0])} ({E(c["altT"](kurz[0]))}). ' if len(kurz)>1 and kurz[0] is not lang[0] else '')
           +(f'{_w(len(teuer),"Ein Konto kostet","Konten kosten")} auch für junge Leute etwas, etwa {_links(c,teuer,2)}. ' if teuer else '')),
          'Lies die Altersangabe genau. „Bis 27 Jahre“ heißt bei den meisten Banken: bis zum Tag vor dem 28. Geburtstag. Manche Banken stellen am Geburtstag selbst um, andere zum Monats- oder Quartalsende. Das steht im Preis- und Leistungsverzeichnis.')),
+     ('Studentenkonto oder normales Konto mit Altersrabatt',
+      _P('Viele Direktbanken schenken jungen Leuten die Kontoführung auch ohne Studium. Bei diesen Konten zählt nur das Alter: Du brauchst keine Immatrikulationsbescheinigung, und bis zur Altersgrenze verlangt die Bank auch keinen Geldeingang. '
+         +(f'Am längsten gilt der Altersrabatt bei {L(jung[0])}, nämlich bis zum {jung[0]["gratis"]["alter_unter"]}. Geburtstag.' if jung else ''))+
+      (_tbl(['Konto','Gratis bis','Bedingung laut Bank'],[(L(k),f'zum {k["gratis"]["alter_unter"]}. Geburtstag',E(c['kurzbed'](k))) for k in jung[:8]]) if jung else '')+
+      _P('Der Vorteil: Nach dem Studium musst du nicht wechseln. Mit dem ersten Gehalt erfüllst du die Bedingung für das Gratis-Konto meist ohnehin, und die IBAN bleibt dieselbe. Der Nachteil: Diese Konten sind fast immer reine Online-Konten. Bargeld bekommst du an fremden Automaten oder an der Supermarktkasse, Bargeld einzahlen ist umständlich, und eine girocard kostet teils extra. Wer gern in eine Filiale geht, ist mit einem Studentenkonto einer Filialbank besser bedient.')),
      ('Diese Unterlagen brauchst du',
       _P(_ul(['<b>Personalausweis oder Reisepass.</b> Mit Reisepass zusätzlich eine Meldebescheinigung, weil dort keine Adresse steht.',
               '<b>Nachweis über Studium oder Ausbildung.</b> Meist die Immatrikulationsbescheinigung, bei Azubis der Ausbildungsvertrag. '+(f'Ausdrücklich verlangt wird er zum Beispiel bei {_links(c,nachweis,3)}.' if nachweis else ''),
@@ -379,22 +387,33 @@ def _stu_at(c):
     lehre=[k for k in X if re.search(r'Lehrling|Lehre|Berufsanw',_all(k))]
     erwerb=[k for k in X if re.search(r'[Ee]rwerbstätig',_all(k))]
     eingang=[k for k in X if (k.get('gratis') or {}).get('eingang_min')]
-    kk=[k for k in X if re.search(r'[Ss]tudent',k.get('kreditkarte') or '')]
+    kk=[k for k in X if re.search(r'Student|Studierend',k.get('kreditkarte') or '')]
     fil=[k for k in X if k.get('eroeffnung')=='filiale']
     disp=sorted([k for k in X if k.get('sollzins') is not None],key=lambda k:k['sollzins'])
     fx=[k for k in X if k.get('fremdwaehrung_prozent') is not None]
     rows=[(L(k),E(c['altT'](k)),_kost(c,k),_txt(_bed(k),170)) for k in X]
+    rows_b=[(L(k),_txt(_dk(k),110),_txt((k.get('bargeld') or {}).get('text'),150)) for k in X]
+    jung=_jung(c)
+    grenz=sorted({k['alter']['max']+1 for k in maxs})
+    p_grenz=(f'Die Grenzen liegen je nach Bank zwischen dem {grenz[0]}. und dem {grenz[-1]}. Geburtstag. ' if len(grenz)>1 else '')
 
     secs=[
      ('Was ein gutes Studentenkonto in Österreich ausmacht',
       _P(('Fast alle großen Banken in Österreich haben ein eigenes Konto für Studierende. '+(f'In dieser Liste sind es {n}, {len(frei0)} davon ohne Kontoführungsentgelt' if X else '')+(f', bei {len(bedingt)} weiteren entfällt das Entgelt, solange du jung genug bist oder eine Bedingung erfüllst. ' if bedingt else ('. ' if X else ''))),
          'Gratis sind sie also fast alle. Unterschiede gibt es bei den Dingen, die erst im Alltag auffallen:',
-         _ul(['<b>Wie lange gratis?</b> Die Grenzen liegen je nach Bank zwischen dem 27. und dem 30. Geburtstag. Mit Bachelor, Master und einem Jahr Pause kommst du schnell darüber.',
+         _ul(['<b>Wie lange gratis?</b> '+p_grenz+'Mit Bachelor, Master und einem Jahr Pause kommst du schnell darüber.',
               '<b>Welcher Nachweis?</b> Inskriptionsbestätigung bei der Eröffnung oder jedes Jahr neu?',
               '<b>Bankomatkarte.</b> Ist die Debitkarte inklusive, und kannst du damit online und mit dem Handy zahlen?',
               '<b>Bargeld.</b> Kostet die Behebung an fremden Bankomaten in Österreich etwas? Gerade in kleineren Uni-Städten ist das ein Thema.',
               '<b>Umstellung.</b> Auf welches Konto wechselt die Bank danach, und was kostet es?']),
-         'Wenn du ohnehin bald ein regelmäßiges Gehalt hast, kann auch ein normales Konto mit Gratis-Bedingung passen. Die stehen in der Liste '+li('kostenlos','kostenlose Girokonten')+'.')),
+         'Bei Karte und Bargeld unterscheiden sich die Studentenkonten mehr als beim Preis. Die Tabelle zeigt, was laut Bank inkludiert ist:')+
+      (_tbl(['Konto','Karte laut Bank','Bargeld laut Bank'],rows_b) if rows_b else '')+
+      _P('Wer viel mit Bargeld zahlt, etwa am Würstelstand oder in der WG-Kasse, sollte auf Behebungen an fremden Bankomaten achten. In Österreich verrechnen manche private Automatenbetreiber ein eigenes Entgelt, das die Bank weitergibt. Wer fast nur mit Karte oder Handy zahlt, kann diesen Punkt vernachlässigen.')),
+     ('Studentenkonto oder Gratis-Konto für junge Erwachsene',
+      _P('Ein Studentenkonto ist nicht die einzige Möglichkeit, als junger Mensch nichts für das Konto zu zahlen. Einige Banken verzichten bei ihrem normalen Konto bis zu einer Altersgrenze auf das Kontoführungsentgelt, ganz ohne Inskriptionsbestätigung und ohne Gehaltseingang. '
+         +(f'In unserem Vergleich sind das {_links(c,jung,4)}. ' if jung else ''))+
+      (_tbl(['Konto','Gratis bis','Bedingung laut Bank'],[(L(k),f'zum {k["gratis"]["alter_unter"]}. Geburtstag',E(c['kurzbed'](k))) for k in jung[:6]]) if jung else '')+
+      _P('Das lohnt sich vor allem, wenn du neben dem Studium arbeitest oder bald fertig bist. Mit dem ersten Gehalt bleibt das Konto oft einfach gratis, und du musst nach dem Abschluss nicht wechseln. Wer dagegen eine Filiale in der Nähe will, Bargeld einzahlt oder Wert auf persönliche Beratung legt, fährt mit dem Studentenkonto einer Filialbank besser. Wenn du ohnehin bald ein regelmäßiges Gehalt hast, schau auch in die Liste '+li('kostenlos','kostenlose Girokonten')+'.')),
      ('Altersgrenzen und Nachweise im Vergleich',
       (_tbl(['Konto','Alter','Kosten pro Jahr','Bedingung laut Bank'],rows) if rows else '')+
       _P(((f'Am längsten gratis bleibst du laut Bank bei {L(lang[0])} ({E(c["altT"](lang[0]))}). ' if lang else '')
@@ -490,7 +509,7 @@ def _kj_de(c):
               'Geburtsurkunde oder Kinderreisepass, ab 16 den eigenen Personalausweis des Kindes',
               'Steuer-ID des Kindes, die es seit der Geburt hat (§ 154 Abs. 2a AO)',
               'Identifizierung per Video, in der Postfiliale oder in der Filiale, je nach Bank auch für das Kind']),
-         ((f'Bei {_links(c,kunde)} muss ein Elternteil schon selbst Kunde der Bank sein. ' if kunde else '')
+         ((f'Bei {_links(c,kunde)} setzt die Bank voraus, dass ein Elternteil oder das Kind schon Kunde ist. ' if kunde else '')
           +(f'Online oder per Post eröffnen kannst du {len(onl)} der {n} Konten, ' if X else '')
           +(f'nur in der Filiale geht es bei {_links(c,fil)}. ' if fil else ('' if not X else 'eine Filiale brauchst du dafür nicht. '))
           +(f'Gerade gibt es für {_w(len(akt),"ein Konto","Konten")} eine Startprämie oder ein Startguthaben, die aktuellen Aktionen stehen in der Liste '+li('praemie','Girokonten mit Prämie')+'.' if akt else '')),
@@ -498,10 +517,10 @@ def _kj_de(c):
      ('Der Taschengeldparagraf in der Praxis',
       _P('Paragraf 110 BGB sagt: Kauft ein Kind ab 7 etwas mit Geld, das ihm die Eltern zur freien Verfügung gegeben haben, ist der Kauf wirksam. Das gilt auch für Kartenzahlungen vom eigenen Konto. Ein paar Beispiele:',
          _ul(['<b>Kinokarte, Comic, Döner mit 12:</b> wirksam, wenn das Geld aus dem Taschengeld stammt.',
-              '<b>Gebrauchtes Fahrrad für 150 € mit 14, bezahlt aus angespartem Taschengeld:</b> in der Regel wirksam, wenn es zum Rahmen passt, den die Eltern gesetzt haben.',
+              '<b>Gebrauchtes Fahrrad für 150 € mit 14, bezahlt aus angespartem Taschengeld:</b> kann wirksam sein, wenn der Kauf zu dem passt, wofür die Eltern das Taschengeld gegeben haben. Im Zweifel lieber vorher fragen.',
               '<b>Handyvertrag oder Streaming-Abo mit 15:</b> nicht ohne Zustimmung der Eltern. Laufende Verträge mit monatlichen Zahlungen deckt der Taschengeldparagraf nicht, sie sind bis zur Genehmigung schwebend unwirksam (§ 108 BGB).',
               '<b>In-App-Käufe:</b> Hier kommt es darauf an, ob das Kind sie aus seinem Guthaben bezahlt. Über die Karte der Eltern im App-Store greift der Taschengeldparagraf nicht.']),
-         'Einen Dispo oder Kredit darf ein Minderjähriger grundsätzlich nicht aufnehmen, dafür bräuchte es zusätzlich die Genehmigung des Familiengerichts (§ 1643 BGB). Deshalb laufen alle Konten in dieser Liste auf Guthabenbasis. Ein Minus ist im Normalfall nicht möglich. Eine Ausnahme sind Kartenzahlungen, die erst später gebucht werden. Banken gleichen das in der Regel aus, ohne Zinsen zu verlangen.')),
+         'Einen Dispo oder Kredit darf ein Minderjähriger grundsätzlich nicht aufnehmen, dafür bräuchte es zusätzlich die Genehmigung des Familiengerichts (§ 1643 BGB). Deshalb laufen alle Konten in dieser Liste auf Guthabenbasis. Ein Minus ist im Normalfall nicht möglich. Rutscht das Konto doch einmal ins Minus, etwa durch eine spät gebuchte Kartenzahlung, sollten die Eltern es schnell ausgleichen.')),
      ('Karten, Limits und Bargeld',
       _P('Für Minderjährige gibt es zwei Kartentypen. Die girocard ist die klassische Karte für Läden und Automaten in Deutschland, online geht damit wenig. Die Debitkarte von Visa oder Mastercard zahlt ebenfalls direkt vom Guthaben, funktioniert aber auch online, im Ausland und mit dem Handy. '
          +(f'Eine girocard gibt es bei {len(giro)} der {n} Konten, eine Visa- oder Mastercard-Debitkarte bei {len(deb)}. ' if X else '')
@@ -509,7 +528,8 @@ def _kj_de(c):
          +(f'Eine Prepaid-Kreditkarte für Jugendliche gibt es bei {_links(c,prep)}.' if prep else ''))+
       (_tbl(['Konto','Alter','Karte laut Bank'],rows_k) if rows_k else '')+
       _P('Limits stellt ihr in der App oder in der Filiale ein, meist pro Tag oder pro Woche. Für den Anfang reicht ein Limit in Höhe des Wochentaschengelds. Viele Banken sperren Glücksspiel und Erwachsenenangebote für Minderjährige automatisch. Prüft trotzdem, ob ihr Online-Zahlungen getrennt sperren könnt, bis euer Kind damit umgehen kann.',
-         'Beim Bargeld unterscheiden sich die Konten stärker. Manche erlauben kostenlose Abhebungen nur an den eigenen Automaten oder im Verbund, andere nur ab einem Mindestbetrag. Wohnt ihr nicht in der Nähe einer Filiale, ist eine Debitkarte, mit der man auch im Supermarkt an der Kasse Geld bekommt, praktisch.')),
+         'Beim Bargeld unterscheiden sich die Konten stärker. Manche erlauben kostenlose Abhebungen nur an den eigenen Automaten oder im Verbund, andere nur ab einem Mindestbetrag. Wohnt ihr nicht in der Nähe einer Filiale, ist eine Debitkarte, mit der man auch im Supermarkt an der Kasse Geld bekommt, praktisch.',
+         'Für den Start hat sich bewährt: Das Taschengeld kommt per Dauerauftrag immer am selben Tag. Die PIN lernt das Kind auswendig, aufgeschrieben wird sie nirgends. In den ersten Monaten schaut ihr euch die Umsätze einmal pro Woche gemeinsam in der App an. So sieht das Kind, wohin das Geld geht, und ihr merkt früh, wenn ein Abo oder ein In-App-Kauf durchgerutscht ist. Geht die Karte verloren, wird sie sofort gesperrt, auch das sollte das Kind wissen.')),
      ('Zinsen und Sparen fürs Kind',
       _P('Auf einem Girokonto bringt Geld kaum Zinsen. '
          +(f'In dieser Liste zahlt den höchsten Guthabenzins {L(zins[0])} mit {pct(zins[0]["habenzins"])}. ' if zins else 'Die Konten in dieser Liste zahlen keine oder kaum Guthabenzinsen. ')
@@ -593,6 +613,7 @@ def _kj_at(c):
               '<b>Mit 12 eine Spielkonsole um 400 € vom Ersparten:</b> nicht ohne Zustimmung der Eltern. Das ist kein geringfügiges Geschäft mehr.',
               '<b>Mit 16 als Lehrling ein Moped aus der Lehrlingsentschädigung:</b> grundsätzlich möglich, solange Essen, Wohnen und Ausbildung nicht darunter leiden.',
               '<b>Handyvertrag oder Streaming-Abo:</b> Verträge mit laufenden Zahlungen brauchen bis 18 in der Regel die Zustimmung der Eltern. Wertkartenhandys sind die einfache Lösung.']),
+         'Besonders heikel sind Käufe im Internet und in Spielen. Mit einer Debitkarte kann ein Jugendlicher online genauso bezahlen wie ein Erwachsener, die Bank prüft das Alter dabei nicht. Viele Banken schicken aber bei jeder Zahlung eine Mitteilung in die App. Redet mit eurem Kind darüber, wofür das Geld gedacht ist, bevor ihr Online-Zahlungen freischaltet. Kauft ein Kind ohne Zustimmung etwas, das über seine Altersstufe hinausgeht, ist der Vertrag nicht wirksam, und ihr könnt das Geld zurückfordern. In der Praxis ist das bei Online-Händlern im Ausland aber mühsam.',
          'Einen Kredit, auch einen Überziehungsrahmen, darf ein Minderjähriger nicht ohne gerichtliche Genehmigung aufnehmen. Deshalb laufen Kinder- und Jugendkonten auf Guthabenbasis. Eine Überschreitung ist im Normalfall nicht vorgesehen. Wie Überziehung bei Erwachsenen funktioniert und was sie kostet, steht im Ratgeber '+rg('kontoueberziehung','Kontoüberziehung')+'.')),
      ('Bankomatkarte und Limits',
       _P('Zu fast jedem Kinder- und Jugendkonto gehört eine Debitkarte. Bei Kindern ist sie bewusst eingeschränkt. '
@@ -607,6 +628,7 @@ def _kj_at(c):
       _P(('Einige Kinderkonten verzinsen das Guthaben deutlich besser als ein normales Girokonto. '
           +(f'Den höchsten Habenzins in dieser Liste zahlen {_links(c,zins[:3])}, bis zu {pct(zins[0]["habenzins"])} im Jahr. Oft gilt das nur bis zu einem Höchstbetrag, der in den Konditionen steht. ' if zins else 'In dieser Liste sind die Habenzinsen aber gering. '))
          +'Für größere Beträge lohnt trotzdem ein Vergleich mit Sparkonten.',
+         'Ein Sparbuch oder Sparkonto ist etwas anderes als ein Kinderkonto: Es hat keine Karte, keine Überweisungen nach außen und dient nur dem Ansparen. Für Geldgeschenke von Oma und Opa, die bis zum Führerschein liegen bleiben sollen, ist es oft die bessere Wahl. Für Taschengeld, das ausgegeben werden soll, ist das Kinderkonto mit Karte praktischer. Viele Familien kombinieren beides.',
          'Auf Zinsen von Bankguthaben fallen 25 % Kapitalertragsteuer an, auch bei Kindern. Die Bank zieht sie automatisch ab, damit ist die Steuer erledigt. Einen Freibetrag wie den Sparer-Pauschbetrag in Deutschland gibt es nicht. Hat das Kind kein oder nur ein geringes Einkommen, kann es sich die KESt über die Regelbesteuerungsoption in der Steuererklärung zurückholen. Bei ein paar Euro Zinsen lohnt der Aufwand selten, bei einer größeren Summe schon.',
          'Geldgeschenke an das Kind sind steuerfrei. Eine Schenkungssteuer gibt es in Österreich nicht. Schenken Eltern oder Großeltern innerhalb eines Jahres mehr als 50.000 €, muss das aber dem Finanzamt gemeldet werden.'
          +(f' Viele Banken zahlen zur Eröffnung außerdem ein Startguthaben, gerade bei {_w(len(akt),"einem Konto","Konten")} dieser Liste. Die Aktionen stehen in der Liste '+li('praemie','Girokonten mit Prämie')+'.' if akt else ''))),
@@ -622,6 +644,7 @@ def _kj_at(c):
               'Wie hoch ist der Habenzins, und bis zu welchem Betrag gilt er?',
               'Wann und auf welches Konto wird umgestellt, und was kostet es danach?',
               'Gibt es eine Filiale oder Beratung in der Nähe, falls die Karte gesperrt werden muss?'],'checks'),
+         'Nach der Eröffnung hilft ein fester Rhythmus. Überweist das Taschengeld per Dauerauftrag, zum Beispiel jeden Montag oder am Monatsersten. Setzt euch anfangs regelmäßig zusammen und schaut, was gekauft wurde. Wer früh lernt, ein Wochenbudget einzuteilen, hat es mit der ersten Lehrlingsentschädigung oder dem ersten Ferialjob leichter. Und erklärt eurem Kind, dass es den PIN-Code niemandem verrät, auch nicht Freunden.',
          'Einen Vergleich speziell für Jugendliche und Lehrlinge veröffentlicht die '+_ext(AT_AK_JUGEND,'Arbeiterkammer Oberösterreich')+'. Bei Problemen mit der Bank hilft die Konsumentenberatung der Arbeiterkammer in deinem Bundesland.')),
      ('Quellen',
       _P(_ul(['Alter, Karten, Limits, Habenzinsen, Eröffnung und Umstellung: Preisblätter, Entgeltinformationen und Produktseiten der Banken, verlinkt bei jedem Konto im Vergleich, Stand '+E(c['stand'])+'.',

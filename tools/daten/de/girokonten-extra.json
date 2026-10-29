@@ -397,6 +397,150 @@
       "bonitaet": null,
       "bonitaet_text": null,
       "bonitaet_quelle": null
+    },
+    "consorsbank-girokonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "1822direkt-girodirekt": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "openbank-bestgiro": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "targobank-online-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "targobank-plus-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "targobank-komfort-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "targobank-premium-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "targobank-plus-konto-junge-leute": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bbbank-bettersmart-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bbbank-girokonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bbbank-junges-girokonto-18-29": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "hvb-pluskonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "hvb-aktivkonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "hvb-exklusivkonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "hvb-startkonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "skatbank-trumpfkonto": {
+      "unterkonten": null,
+      "unterkonten_iban": true,
+      "unterkonten_text": "Weitere Girokonten möglich, ab dem zweiten Konto 5 Euro im Monat",
+      "unterkonten_quelle": "https://www.skatbank.de/privatkunden/girokonto-und-bezahlen/produkte/girokonto.html",
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
     }
   },
   "banken": {
@@ -410,7 +554,7 @@
       "nachhaltig": false,
       "kurz": "Fintech-Bank ohne Nachhaltigkeitsgeschäftsmodell",
       "text": "Revolut ist eine international tätige Fintech-Bank mit litauischer Banklizenz. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zum Geschäftsmodell.",
-      "quelle": "https://www.revolut.com/de-DE/about-revolut/"
+      "quelle": "https://www.revolut.com/de-DE/"
     },
     "bunq": {
       "nachhaltig": false,
@@ -452,7 +596,7 @@
       "nachhaltig": false,
       "kurz": "Großbank ohne Nachhaltigkeitsgeschäftsmodell",
       "text": "Die Commerzbank ist eine Universalbank mit Nachhaltigkeitszielen und Ausschlussrichtlinien für einzelne Branchen, aber ohne verbindliche sozial-ökologische Kriterien für alle Kredite und Anlagen.",
-      "quelle": "https://www.commerzbank.de/konzern/nachhaltigkeit/"
+      "quelle": "https://www.commerzbank.de/"
     },
     "Deutsche Bank": {
       "nachhaltig": false,
@@ -464,7 +608,7 @@
       "nachhaltig": false,
       "kurz": "Filialbank der Deutschen Bank ohne Nachhaltigkeitsmodell",
       "text": "Die Postbank ist eine Marke der Deutschen Bank. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
-      "quelle": "https://www.postbank.de/unternehmen/nachhaltigkeit.html"
+      "quelle": "https://www.postbank.de/"
     },
     "norisbank": {
       "nachhaltig": false,
@@ -483,6 +627,48 @@
       "kurz": "Neobroker mit Banklizenz ohne Nachhaltigkeitsmodell",
       "text": "Trade Republic ist ein Online-Broker mit Vollbanklizenz. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zum Geschäftsmodell.",
       "quelle": "https://traderepublic.com/de-de"
+    },
+    "Consorsbank": {
+      "nachhaltig": false,
+      "kurz": "Direktbank von BNP Paribas ohne Nachhaltigkeitsmodell",
+      "text": "Die Consorsbank ist die deutsche Direktbankmarke von BNP Paribas. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+      "quelle": "https://www.consorsbank.de/"
+    },
+    "1822direkt": {
+      "nachhaltig": false,
+      "kurz": "Sparkassen-Direktbank ohne Nachhaltigkeitsmodell",
+      "text": "Die 1822direkt ist die Direktbanktochter der Frankfurter Sparkasse. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+      "quelle": "https://www.1822direkt.de/"
+    },
+    "Openbank": {
+      "nachhaltig": false,
+      "kurz": "Direktbank von Santander ohne Nachhaltigkeitsmodell",
+      "text": "Openbank ist die Digitalbank der spanischen Santander-Gruppe. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+      "quelle": "https://www.openbank.de/"
+    },
+    "TARGOBANK": {
+      "nachhaltig": false,
+      "kurz": "Filialbank ohne Nachhaltigkeitsgeschäftsmodell",
+      "text": "Die TARGOBANK gehört zur französischen Crédit-Mutuel-Gruppe und ist vor allem im Konsumentenkredit tätig. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen hat sie nicht.",
+      "quelle": "https://www.targobank.de/"
+    },
+    "BBBank": {
+      "nachhaltig": false,
+      "kurz": "Genossenschaftsbank ohne Nachhaltigkeitsgeschäftsmodell",
+      "text": "Die BBBank ist eine große genossenschaftliche Direkt- und Filialbank mit Wurzeln im öffentlichen Dienst. Verbindliche sozial-ökologische Kriterien für alle Kredite und Anlagen hat sie nicht.",
+      "quelle": "https://www.bbbank.de/"
+    },
+    "Deutsche Skatbank": {
+      "nachhaltig": false,
+      "kurz": "Genossenschaftsbank ohne Nachhaltigkeitsgeschäftsmodell",
+      "text": "Die Deutsche Skatbank ist eine Direktbank-Zweigniederlassung der VR-Bank Altenburger Land. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+      "quelle": "https://www.skatbank.de/"
+    },
+    "HypoVereinsbank": {
+      "nachhaltig": false,
+      "kurz": "Großbank der UniCredit ohne Nachhaltigkeitsmodell",
+      "text": "Die HypoVereinsbank gehört zur italienischen UniCredit und ist eine Universalbank. Verbindliche sozial-ökologische Kriterien für alle Kredite und Anlagen hat sie nicht.",
+      "quelle": "https://www.hypovereinsbank.de/"
     }
   }
 }

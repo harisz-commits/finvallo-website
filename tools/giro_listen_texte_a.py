@@ -271,6 +271,16 @@ def kostenlos_at(c):
             '<b>Bankomatkarte und App.</b> Gibt es eine physische Karte? Funktionieren Apple Pay und Google Pay? Mehr im Ratgeber '+RG('apple-pay-google-pay','Apple Pay und Google Pay')+'.',
             '<b>Einlagensicherung.</b> Pro Person und Bank sind 100.000 € gesetzlich gesichert, bei österreichischen Banken über die Einlagensicherung AUSTRIA. Details im Ratgeber '+RG('einlagensicherung','Einlagensicherung')+'.',
             '<b>Kündigung beim alten Konto.</b> Erst wechseln, dann kündigen. Sonst stehen Lastschriften ohne Deckung im Raum.']))))
+    pens=[k for k in bed if 'Pension' in (k['gratis'].get('eingang_art') or '')+k['name']]
+    jung=[k for k in bed if k['gratis'].get('alter_unter')]
+    unbegr=[k for k in X if re.search(r'unbegrenzt',bar(k).get('text') or '')]
+    S.append(('Welches Gratiskonto zu welcher Lebenslage passt',prose(
+        p('Das beste Gratiskonto ist das, dessen Bedingung du ohne Nachdenken jeden Monat erfüllst. Ein paar typische Fälle:'),
+        ul([(f'<b>Pension.</b> Bei {und([L(k) for k in pens])} zählt die Pension ausdrücklich als Eingang. Wichtig ist, dass die Pensionsversicherung direkt auf dieses Konto überweist. ' if pens else '<b>Pension.</b> Achte darauf, dass die Pension als Eingang zählt. ')+'Wer gerne am Schalter Rat holt, zahlt bei einer Filialbank mehr, bekommt dafür aber persönliche Betreuung.',
+            (f'<b>Erstes kleines Gehalt.</b> Den niedrigsten Mindesteingang verlangt das {L(bed[0])} mit {eur(bed[0]["gratis"]["eingang_min"])} € im Monat. ' if bed and bed[0]['gratis'].get('eingang_min') is not None else '<b>Erstes kleines Gehalt.</b> ')+'Für Lehrlinge und Teilzeitkräfte ist das oft der entscheidende Punkt.',
+            (f'<b>Unter 30.</b> {und([L(k) for k in jung])} {"ist" if len(jung)==1 else "sind"} für junge Leute auch ohne Eingang gratis. Die genaue Altersgrenze steht in der Tabelle oben. ' if jung else '<b>Unter 30.</b> ')+'Wer noch studiert, schaut zusätzlich in die Liste '+LI('studenten','Girokonten für Studierende')+'.',
+            (f'<b>Viel Bargeld.</b> Unbegrenzt gratis beheben kannst du laut Preisliste bei {und([L(k) for k in unbegr])}. ' if unbegr else '<b>Viel Bargeld.</b> ')+'Achte darauf, ob das nur im Euroraum oder nur an bestimmten Bankomaten gilt.',
+            '<b>Paare.</b> Nicht jedes Gratiskonto gibt es als gemeinsames Konto. Mehr in der Liste '+LI('gemeinschaftskonto','Gemeinschaftskonten')+'.']))))
     S.append(('Quellen',prose(ul([ext(Q_AT['ak_bank']),ext(Q_AT['ak_wechsel']),ext(Q_AT['ris']),ext(Q_AT['es']),ext(Q_AT['sepa'])]
         +quellen_banken(X)+['Preise, Bedingungen und Bargeld-Regeln: Entgeltinformationen und Preisblätter der Banken, verlinkt bei jedem Konto im Vergleich. Stand: '+E(c['stand'])+'.']))))
     F=[('Zählt Kinderbetreuungsgeld oder Arbeitslosengeld als Gehaltseingang?',
@@ -323,7 +333,7 @@ def ohne_de(c):
             '<b>Bezahlte Pakete.</b> Das Gratis-Konto ist der Einstieg. Mehr Abhebungen, Versicherungen oder eine Metallkarte gibt es im Abo.',
             '<b>Extras.</b> Ersatzkarte, Bargeld einzahlen, Abheben über dem Kontingent, Rücklastschriften.',
             '<b>Weitere Produkte.</b> Depot, Tagesgeld, Kredit. Die Bank hofft, dass du mehr nutzt als das Konto.']),
-        p('Für dich heißt das: Ein Gratis-Konto ohne Bedingung ist dann wirklich gratis, wenn du die Extras nicht brauchst. Brauchst du sie oft, kann ein Konto mit Grundgebühr am Ende günstiger sein.'))))
+        p('Für dich heißt das: Ein Gratis-Konto ohne Bedingung ist dann wirklich gratis, wenn du die Extras nicht brauchst. Brauchst du sie oft, kann ein Konto mit Grundgebühr am Ende günstiger sein. Lies deshalb im Preisverzeichnis nicht nur die erste Zeile, sondern auch die Abschnitte zu Karten, Bargeld und Sonderleistungen.'))))
     S.append(('Darauf achtest du bei diesen Konten',prose(
         ul([(f'<b>Plastikkarte.</b> Bei {konten(len(phys))} kostet die physische Karte einmalig Geld oder Versand: {und([L(k) for k in phys])}. ' if phys else '<b>Plastikkarte.</b> Prüfe, ob die physische Karte gratis ist. ')+(f'{und([L(k) for k in digi])} {"gibt" if len(digi)==1 else "geben"} dir nur eine digitale Karte. Ohne Smartphone-Zahlung kommst du dann nicht weit.' if digi else ''),
             (f'<b>Bargeld.</b> {konten(len(lim),True)} begrenzen die Gratis-Abhebungen pro Monat. ' if lim else '<b>Bargeld.</b> ')+(f'Bei {und([L(k) for k in jede])} kostet jede einzelne Abhebung. ' if jede else '')+'Hebst du selten und dafür größere Beträge ab, spielt das kaum eine Rolle.',
@@ -344,6 +354,18 @@ def ohne_de(c):
         ul(['<b>P-Konto.</b> Ein Pfändungsschutzkonto darfst du nur einmal haben. Mehr im Ratgeber '+RG('p-konto','P-Konto')+'.',
             '<b>Basiskonto.</b> Einen Anspruch darauf hast du nur, wenn du noch kein nutzbares Zahlungskonto in Deutschland hast. Mehr im Ratgeber '+RG('basiskonto','Basiskonto')+'.']),
         p(f'Jedes neue Konto kann bei der {E(c["bon"])} gemeldet werden. Ein Girokonto ohne Dispo ist dort kein Kredit. Trotzdem gilt: Ein paar Konten mit klarem Zweck sind besser als zehn, die du nicht mehr überblickst. Ein gratis Zweitkonto ohne Bedingung ist dafür ideal, weil es dich nichts kostet, auch wenn du es monatelang kaum nutzt.'))))
+    rows=[(L(k),E(k.get('einlagensicherung') or 'keine Angabe'),E(k.get('iban') or '')) for k in X]
+    S.append(('Wo dein Guthaben gesichert ist',
+        prose(p('Bei Konten ohne Gebühr landen oft Banken, die du noch nicht kennst. Deshalb lohnt der Blick auf die Einlagensicherung. In der EU sind Guthaben pro Person und Bank bis 100.000 € gesetzlich geschützt, in Deutschland nach § 8 Einlagensicherungsgesetz. Hat die Bank ihren Sitz in einem anderen EU-Land, springt die Sicherung dieses Landes ein, mit derselben Grenze. Eine deutsche IBAN sagt darüber nichts aus.'))
+        +tbl(['Konto','Einlagensicherung laut Bank','IBAN'],rows)
+        +prose(p('Liegt mehr als 100.000 € auf deinen Konten, verteil das Geld auf mehrere Banken. Mehr im Ratgeber '+RG('einlagensicherung','Einlagensicherung')+'.'))))
+    hand=[k for k in X if re.search(r'viacash|CASH26|Handel|Barzahlen',bar(k).get('text') or '')]
+    S.append(('Bargeld ohne Filiale besorgen',prose(
+        p('Ohne eigene Automaten kommst du trotzdem gut an Bargeld. Diese Wege gibt es:'),
+        ul(['<b>Am Automaten mit der Debitkarte.</b> Das geht an fast jedem Automaten mit Visa- oder Mastercard-Zeichen. Die Bank zählt die Abhebung auf dein Gratis-Kontingent an, der Automatenbetreiber kann zusätzlich ein Entgelt nehmen. Es wird vor der Auszahlung angezeigt, dann kannst du noch abbrechen.',
+            (f'<b>An der Supermarktkasse.</b> Bei {und([L(k) for k in hand])} kannst du laut Preisverzeichnis auch im Handel Bargeld abheben, etwa über viacash oder CASH26. ' if hand else '<b>An der Supermarktkasse.</b> ')+'Viele Supermärkte zahlen dir beim Einkauf zusätzlich Bargeld aus, oft ab einem Mindesteinkauf. Ob deine Karte dafür funktioniert, hängt vom Händler ab.',
+            '<b>Größere Beträge.</b> Brauchst du einmal mehr, etwa für einen Gebrauchtwagen, überweise lieber. Tageslimits der Karte liegen oft bei einigen hundert Euro und lassen sich in der App nur begrenzt erhöhen.']),
+        p('Und falls du viel Bargeld einzahlen musst: Dafür sind Konten ohne Filiale schlicht nicht gebaut. Ein zweites Konto bei einer Filialbank kann dann sinnvoll sein.'))))
     S.append(('Quellen',prose(ul([ext(Q_DE['zkg']),ext(Q_DE['zkg20']),ext(Q_DE['bgb675h']),ext(Q_DE['bafin']),ext(Q_DE['einsig'])]
         +quellen_banken(X)+['Karten, Bargeld und Dispo: Entgeltinformationen und Preisverzeichnisse der Banken, verlinkt bei jedem Konto im Vergleich. Stand: '+E(c['stand'])+'.']))))
     F=[('Kann ich ein Girokonto ohne Einkommen eröffnen?',
@@ -375,7 +397,8 @@ def ohne_at(c):
             '<b>Zweitkonto.</b> Zum Sparen, für Reisen oder als Haushaltskonto mit dem Partner.',
             '<b>Studium vorbei.</b> Das Studentenkonto endet mit 26 oder 27, der erste Job beginnt erst später.',
             '<b>Kleine Pension.</b> Liegt die Pension unter der Mindestgrenze, hilft auch der regelmäßige Eingang nicht.']),
-        p(f'In dieser Liste stehen {konten(len(X))}, die keine Bedingung haben. Konten, die nur mit Gehalt gratis sind, findest du in der Liste {LI("kostenlos","Kostenlose Girokonten")}.'))))
+        p(f'In dieser Liste stehen {konten(len(X))}, die keine Bedingung haben. Konten, die nur mit Gehalt gratis sind, findest du in der Liste {LI("kostenlos","Kostenlose Girokonten")}.'),
+        p('Ein Vorteil, der oft übersehen wird: Du musst dein Gehaltskonto nicht aufgeben, um ein solches Konto zu nutzen. Viele behalten ihr bestehendes Konto bei der Hausbank und eröffnen ein bedingungsloses Gratiskonto dazu, etwa für Online-Einkäufe, Abos oder das Urlaubsbudget. Wird die Karte dort einmal missbraucht, bleibt das Hauptkonto unberührt. Und wer später doch wechseln will, hat schon ein laufendes Konto, mit dem er Erfahrungen gesammelt hat.'))))
     rows=[(L(k),E(dk(k).get('text') or 'keine Angabe'),E(bar(k).get('text') or 'keine Angabe'),E(k.get('iban') or ''),(pct(k['sollzins']) if k.get('sollzins') else 'keiner')) for k in X]
     S.append(('Die Konten im Vergleich',
         prose(p('Kontoführung 0 €, aber Bankomatkarte, Behebungen, IBAN und Überziehungsrahmen sind verschieden geregelt.'))
@@ -388,21 +411,40 @@ def ohne_at(c):
             '<b>Einlagensicherung.</b> Dein Guthaben ist bis 100.000 € geschützt, aber über die Einlagensicherung des Heimatlands der Bank, nicht über die Einlagensicherung AUSTRIA. Die Höhe ist in der EU einheitlich, im Ernstfall läuft die Auszahlung aber über eine ausländische Stelle.',
             '<b>KESt auf Zinsen.</b> Österreichische Banken ziehen die Kapitalertragsteuer automatisch ab. Banken ohne steuerliche Vertretung in Österreich tun das oft nicht. Dann musst du Zinsen selbst in der Steuererklärung angeben. Prüfe, was deine Bank dazu schreibt.',
             '<b>Kontowechsel-Service.</b> Der gesetzliche Service nach dem VZKG verpflichtet Banken in Österreich. Ausländische Anbieter machen ihn nicht immer mit, dann informierst du Arbeitgeber und Lastschrift-Partner selbst.',
-            '<b>Beschwerden.</b> Zuständig ist meist die Aufsicht im Sitzland. Die Arbeiterkammer hilft dir trotzdem mit Beratung.']))))
+            '<b>Beschwerden.</b> Zuständig ist meist die Aufsicht im Sitzland. Die Arbeiterkammer hilft dir trotzdem mit Beratung.']),
+        p('Nichts davon ist ein Grund, die Finger von diesen Konten zu lassen. Die Banken stehen unter EU-Aufsicht und haben dieselben Regeln für Einlagensicherung und Zahlungsverkehr wie österreichische Banken. Du solltest die Unterschiede aber kennen, bevor du dein Gehalt dorthin umleitest. Steuerliche Fragen klärst du am einfachsten einmal mit dem Finanzamt oder in der Steuerberatung, bevor nennenswerte Zinsen anfallen.'))))
     S.append(('Bankomatkarte, Bargeld und Überziehen',prose(
         ul([(f'<b>Karte.</b> Bei {und([L(k) for k in phys])} ist nur die digitale Karte gratis, die Plastikkarte kostet einmalig. ' if phys else '<b>Karte.</b> ')+(f'{und([L(k) for k in digi])} {"bietet" if len(digi)==1 else "bieten"} gar keine Plastikkarte an. ' if digi else '')+'Mit einer digitalen Karte zahlst du per Smartphone, an manchen Bankomaten kannst du damit auch kontaktlos beheben.',
             '<b>Bargeld.</b> '+(f'Bei {und([L(k) for k in jede])} kostet jede Behebung. ' if jede else '')+'Prüfe in der Tabelle, ob es eine Grenze pro Monat, einen Mindestbetrag oder ein Entgelt pro Behebung gibt. Wer oft kleine Beträge behebt, zahlt sonst mehr als bei einem Gehaltskonto mit Kontoführungsentgelt.',
-            '<b>Bargeld einzahlen.</b> Ohne Filiale ist das umständlich. Manche Anbieter arbeiten mit Partnern im Handel zusammen, oft gegen einen Prozentsatz.',
-            (f'<b>Überziehen.</b> {konten(len(nodispo),True)} bieten keinen Überziehungsrahmen. ' if nodispo else '<b>Überziehen.</b> ')+(f'Bei {und([L(k) for k in dispo])} ist ein Rahmen möglich, mit {und([pct(k["sollzins"]) for k in dispo])} Sollzinsen. ' if dispo else '')+'Ohne Rahmen wird eine Lastschrift ohne Deckung abgelehnt, das kann beim Empfänger Mahnkosten auslösen.']))))
+            '<b>Bargeld einzahlen.</b> Ohne Filiale ist das umständlich. Manche Anbieter arbeiten mit Partnern im Handel zusammen, oft gegen einen Prozentsatz. Wer regelmäßig Trinkgeld, Flohmarkt-Erlöse oder Bargeld von Kunden einzahlt, behält dafür besser ein Konto bei einer Bank mit Filiale oder Einzahlungsautomat.',
+            (f'<b>Überziehen.</b> {konten(len(nodispo),True)} bieten keinen Überziehungsrahmen. ' if nodispo else '<b>Überziehen.</b> ')+(f'Bei {und([L(k) for k in dispo])} ist ein Rahmen möglich, mit {und([pct(k["sollzins"]) for k in dispo])} Sollzinsen. ' if dispo else '')+'Ohne Rahmen wird eine Lastschrift ohne Deckung abgelehnt, das kann beim Empfänger Mahnkosten auslösen.',
+            '<b>Kartenlimits.</b> Für Zahlungen und Behebungen gibt es Tages- und Monatslimits. Bei Neobanken stellst du sie meist selbst in der App ein. Für größere Beträge, etwa eine Kaution, ist eine Überweisung oft der bessere Weg.',
+            '<b>Zahlen in fremder Währung.</b> Die meisten Neobanken verrechnen beim Bezahlen in fremder Währung keinen eigenen Aufschlag. Am Wochenende oder bei exotischen Währungen gelten aber bei manchen Anbietern Zuschläge. Mehr im Ratgeber '+RG('fremdwaehrung','Fremdwährung')+'.']),
+        p('Rechne für dich durch, wie oft du im Monat Bargeld brauchst und wo. Wer in einer Kleinstadt lebt und gern bar zahlt, ist mit einem Konto ohne Behebungsgrenze besser bedient als mit dem günstigsten Konto auf dem Papier.'))))
     S.append(('Eröffnung in fünf Schritten',prose(
         ol(['<b>App laden und Daten eingeben.</b> Name, Adresse, Geburtsdatum, Beruf und deine Steuer-Ansässigkeit. Wer in den USA steuerpflichtig ist, muss das angeben.',
             '<b>Identifizieren.</b> Banken müssen nach dem Finanzmarkt-Geldwäschegesetz prüfen, wer du bist. Bei Online-Banken geht das per Video-Ident mit Reisepass oder Personalausweis. Ein Führerschein reicht dafür meist nicht.',
             '<b>Prüfung abwarten.</b> Manche Banken holen eine Auskunft beim KSV1870 ein, vor allem wenn ein Überziehungsrahmen dazukommt. Mehr in der Liste '+LI('ohne-ksv','Girokonten ohne KSV-Abfrage')+'.',
             '<b>Karte aktivieren.</b> Die digitale Karte legst du in Apple Pay oder Google Pay ab. Die Plastikkarte, falls bestellt, kommt per Post.',
-            '<b>Geld überweisen.</b> Eine erste Überweisung vom alten Konto zeigt, ob alles klappt. Soll das Konto dein Hauptkonto werden, gib die neue IBAN beim Arbeitgeber und bei Lastschrift-Partnern an.']))))
+            '<b>Geld überweisen.</b> Eine erste Überweisung vom alten Konto zeigt, ob alles klappt. Soll das Konto dein Hauptkonto werden, gib die neue IBAN beim Arbeitgeber und bei Lastschrift-Partnern an.']),
+        p('Halte vor dem Start einen gültigen Reisepass oder Personalausweis, dein Smartphone mit aktueller App-Version und eine gute Internetverbindung bereit. Die Video-Identifizierung scheitert am häufigsten an spiegelnden Ausweisen und schlechtem Licht. Plane zehn bis zwanzig Minuten ein. Bei manchen Anbietern bist du am selben Tag fertig, bei anderen dauert die Freigabe ein bis zwei Werktage.'))))
     S.append(('Mehrere Konten nebeneinander',prose(
         p('In Österreich darfst du so viele Girokonten haben, wie du möchtest. Ein Gratiskonto ohne Bedingung eignet sich deshalb gut als zweites Konto neben dem Gehaltskonto. Zwei Grenzen gibt es: Ein Pfändungsschutzkonto darfst du nur einmal führen ('+RG('pfaendungsschutzkonto','Ratgeber Pfändungsschutzkonto')+'), und das gesetzliche Basiskonto steht dir nur zu, wenn du noch kein Zahlungskonto in Österreich hast ('+RG('basiskonto','Ratgeber Basiskonto')+').'),
-        p('Wer zwei Konten nutzt, sollte festlegen, welches wofür da ist. Ein bewährtes Muster: Gehalt und Fixkosten aufs Hauptkonto, ein fester Betrag per Dauerauftrag aufs Gratiskonto für Alltag und Reisen. So siehst du sofort, was im Monat noch übrig ist.'))))
+        p('Wer zwei Konten nutzt, sollte festlegen, welches wofür da ist. Ein bewährtes Muster: Gehalt und Fixkosten aufs Hauptkonto, ein fester Betrag per Dauerauftrag aufs Gratiskonto für Alltag und Reisen. So siehst du sofort, was im Monat noch übrig ist.'),
+        p('Für Paare gibt es zwei Wege. Entweder jeder hat ein eigenes Gratiskonto und ihr überweist einen festen Anteil auf ein gemeinsames Konto für Miete und Einkauf. Oder ihr eröffnet ein echtes Gemeinschaftskonto. Nicht jede Neobank bietet das an, die Auswahl steht in der Liste '+LI('gemeinschaftskonto','Gemeinschaftskonten')+'. Manche Anbieter erlauben stattdessen geteilte Unterkonten, auf die beide zugreifen können. Mehr dazu in der Liste '+LI('unterkonten','Girokonten mit Unterkonten')+'.'))))
+    rows=[(L(k),E(k.get('einlagensicherung') or 'keine Angabe'),E(iban_namen.get(k.get('iban'),k.get('iban') or ''))) for k in X]
+    S.append(('Einlagensicherung der einzelnen Konten',
+        tbl(['Konto','Einlagensicherung laut Bank','IBAN aus'],rows)
+        +prose(p('Die gesetzliche Grenze von 100.000 € pro Person und Bank gilt in der ganzen EU. Bei österreichischen Banken zahlt im Ernstfall die Einlagensicherung AUSTRIA, bei ausländischen Banken die Stelle im Sitzland. Mehr im Ratgeber '+RG('einlagensicherung','Einlagensicherung')+'.'))))
+    S.append(('Eine Neobank als Hauptkonto: geht das?',prose(
+        p('Ja, viele nutzen eines dieser Konten als einziges Konto. Ein paar Dinge solltest du dann vorher klären:'),
+        ul(['<b>Gehalt, Pension, Familienbeihilfe.</b> Alle Zahlungen kannst du auf eine ausländische IBAN überweisen lassen. Gib die neue IBAN rechtzeitig vor dem nächsten Zahltag bekannt.',
+            '<b>Lastschriften.</b> Miete, Strom, Handy und Versicherungen buchen per SEPA-Lastschrift ab. Ohne Kontowechsel-Service musst du jedem Vertragspartner die neue IBAN selbst mitteilen.',
+            '<b>Erreichbarkeit.</b> Support gibt es meist im Chat. Für dringende Fälle wie eine gesperrte Karte im Urlaub ist ein zweites Konto mit eigener Karte eine gute Rückversicherung.',
+            '<b>Kontosperre.</b> Neobanken prüfen ungewöhnliche Zahlungen automatisch. Wird das Konto vorübergehend gesperrt, bis Fragen geklärt sind, kommst du in der Zeit nicht an dein Geld. Auch dagegen hilft ein zweites Konto.',
+            '<b>Bargeldbedarf.</b> Wer oft bar zahlt, rechnet vorher nach, was die Behebungen im Monat kosten.']),
+        p('Wer lieber eine österreichische Bank mit Filiale als Hauptkonto behält, nutzt das Gratiskonto als Zweitkonto. Das kostet nichts und bringt die Vorteile beider Welten.'),
+        p('Ein Punkt, an den viele erst spät denken: Für den Antrag auf Familienbeihilfe, die Arbeitnehmerveranlagung oder Förderungen gibst du ebenfalls eine IBAN an. Das funktioniert mit ausländischen IBANs genauso. Prüfe nach dem Wechsel trotzdem bei FinanzOnline und bei der Sozialversicherung, ob dort noch die alte Kontonummer hinterlegt ist, damit Rückzahlungen nicht ins Leere laufen.'))))
     S.append(('Quellen',prose(ul([ext(Q_AT['sepa']),ext(Q_AT['fma']),ext(Q_AT['es']),ext(Q_AT['ak_basis']),ext(Q_AT['ak_wechsel']),ext(Q_AT['bmf'])]
         +quellen_banken(X)+['Karten, Bargeld, IBAN und Überziehung: Preislisten und Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich. Stand: '+E(c['stand'])+'.']))))
     F=[('Muss mein Arbeitgeber eine ausländische IBAN akzeptieren?',
@@ -466,13 +508,21 @@ def kk_de(c):
           +(f'Bei {konten(len(bon))} in dieser Liste steht die Bonitätsprüfung ausdrücklich in den Bedingungen. ' if bon else '')
           +'Fällt die Prüfung negativ aus, bekommst du meist trotzdem das Konto, aber nur mit Debitkarte.'),
         p('Den Kreditrahmen legt die Bank fest, oft orientiert am Geldeingang. Am Anfang ist er häufig niedrig und steigt mit der Zeit. Weil eine Charge-Karte einmal im Monat vom Girokonto abgebucht wird, muss dort zu diesem Zeitpunkt genug Geld sein. Sonst rutschst du in den Dispo oder die Lastschrift platzt.'),
-        p('Bietet die Bank dir an, die Kreditkartenrechnung in Raten zu zahlen, sei vorsichtig. Die Zinsen dafür sind meist deutlich höher als beim Dispo. Mehr im Ratgeber '+RG('teilzahlung','Teilzahlung')+'.'))))
+        p('Bietet die Bank dir an, die Kreditkartenrechnung in Raten zu zahlen, sei vorsichtig. Die Zinsen dafür sind meist deutlich höher als beim Dispo. Mehr im Ratgeber '+RG('teilzahlung','Teilzahlung')+'.'),
+        p('Bist du gerade dabei, einen Kredit oder eine Baufinanzierung aufzunehmen, beantrage die Kreditkarte lieber danach. Jeder Kreditrahmen wird bei der Auskunftei gemeldet und kann deine Kreditwürdigkeit kurzzeitig anders aussehen lassen.'))))
     S.append(('Kosten bei der Nutzung im Blick behalten',prose(
         ul([(f'<b>Auslandseinsatz.</b> {konten(len(fw0),True)} in dieser Liste verlangen für Kartenzahlungen in fremder Währung kein Entgelt. ' if fw0 else '<b>Auslandseinsatz.</b> ')+'Bei den anderen kostet jede Zahlung außerhalb des Euroraums einen Prozentsatz. Achte am Terminal darauf, in der Landeswährung zu zahlen, nicht in Euro: Die Umrechnung des Händlers ist fast immer teurer.',
             '<b>Bargeld mit Kreditkarte.</b> Ob es etwas kostet, steht bei jedem Konto unter „Bargeld“ und im Preisverzeichnis. Bei manchen Karten ist es weltweit gratis, bei anderen kostet jede Abhebung ein festes Entgelt.',
             '<b>Partnerkarte.</b> Die Karte für den zweiten Kontoinhaber kostet bei manchen Banken extra, auch wenn die erste inklusive ist.',
             '<b>Ersatzkarte.</b> Bei Verlust fällt oft ein Entgelt an.']),
         p('Die girocard brauchst du trotzdem vielleicht: An manchen Kassen, Parkautomaten und Ladesäulen geht nur sie. Wenn das für dich wichtig ist, prüfe in der Tabelle, ob eine girocard beim Konto dabei ist.'))))
+    S.append(('So kommst du zur Kreditkarte zum Konto',prose(
+        ol(['<b>Konto mit Karte beantragen.</b> Bei den meisten Konten in dieser Liste wählst du die Kreditkarte direkt im Antrag aus. Bei manchen musst du sie gesondert anklicken, sonst bekommst du nur die Debitkarte.',
+            f'<b>Bonitätsprüfung abwarten.</b> Die Bank holt eine Auskunft bei der {E(c["bon"])} ein. Das dauert meist nur Minuten, manchmal fragt sie nach Gehaltsnachweisen.',
+            '<b>Kreditrahmen ansehen.</b> In der App siehst du, wie viel du pro Monat ausgeben kannst. Reicht er für deinen Urlaub nicht, frag nach einer Erhöhung, bevor du losfährst.',
+            '<b>Abrechnung einstellen.</b> Prüfe, ob die Rechnung voll vom Girokonto abgebucht wird. Steht dort eine Teilzahlung, stell auf volle Rückzahlung um.',
+            '<b>Karte ins Smartphone legen.</b> Mit Apple Pay oder Google Pay zahlst du kontaktlos, auch wenn die Plastikkarte noch unterwegs ist. Mehr im Ratgeber '+RG('apple-pay-google-pay','Apple Pay und Google Pay')+'.']),
+        p('Willst du nur die Kreditkarte wechseln, nicht das Konto, schau in den '+f'<a class="lnk" href="{c["P"]}de/kreditkarten/">Kreditkarten-Vergleich</a>'+'. Viele Karten gibt es auch ohne neues Girokonto.'))))
     S.append(('Quellen',prose(ul([ext(Q_DE['schufa']),ext(Q_DE['zkg'])]+quellen_banken(X)+quellen_banken(sep,12)
         +['Kreditkarten, Bonitätsbedingungen und Preise: Entgeltinformationen und Preisverzeichnisse der Banken, verlinkt bei jedem Konto im Vergleich. Stand: '+E(c['stand'])+'.']))))
     F=[('Ist eine Visa Debit eine Kreditkarte?',
@@ -501,14 +551,16 @@ def kk_at(c):
           +(f' und {und([L(k) for k in pl])} mit PayLife-Karten' if pl else '')+('.' if cc or pl else '')),
         p(f'Ohne Aufpreis dabei ist eine echte Kreditkarte im Vergleich derzeit nur bei {konten(len(inkl))}'+(f': {und([L(k) for k in inkl])}' if inkl else '')+'. '
           +(f'Das sind {"ein Premiumkonto" if len(inkl)==1 else "Premiumkonten"} mit höherem Kontoführungsentgelt. ' if inkl and all(k['art']=='premium' for k in inkl) else '')
-          +'Ob sich das rechnet, hängt davon ab, ob du die Karte samt Versicherungen sowieso kaufen würdest.'))))
+          +'Ob sich das rechnet, hängt davon ab, ob du die Karte samt Versicherungen sowieso kaufen würdest.'),
+        p('Für dich hat die Trennung Vor- und Nachteile. Der Vorteil: Du kannst Konto und Karte unabhängig voneinander wählen und wechseln. Hast du ein günstiges Gratiskonto, aber keine Kreditkarte dabei, nimmst du einfach eine Karte eines anderen Anbieters dazu. Der Nachteil: Zwei Verträge heißt zwei Preislisten, zwei Kündigungsfristen und zwei Ansprechpartner, wenn etwas schiefgeht.'))))
     S.append(('Bankomatkarte oder Kreditkarte: was ist was',
         tbl(['Karte','Abbuchung','Rahmen','Wofür gut'],[
             ('Debitkarte (Bankomatkarte, Debit Mastercard, Visa Debit)','sofort vom Konto','nur Guthaben und Überziehungsrahmen','Alltag, Bankomat, Online-Shopping'),
             ('Kreditkarte mit Monatsabrechnung','einmal im Monat gesammelt','von der Bank festgelegt','Reisen, Mietwagen, Hotels, Kaution'),
             ('Kreditkarte mit Teilzahlung','in Raten, Rest verzinst','ja','nur, wenn du die Zinsen bewusst in Kauf nimmst'),
             ('Prepaid-Karte','vorher aufgeladen','nein','ohne Bonitätsprüfung, für Jugendliche')])
-        +prose(p('Seit die alte Maestro-Bankomatkarte durch Debitkarten von Mastercard und Visa ersetzt wurde, kannst du mit der normalen Kontokarte auch online und weltweit zahlen. Viele brauchen deshalb keine eigene Kreditkarte mehr. Wo sie trotzdem fehlt, merkst du meist erst am Mietwagenschalter. Mehr im Ratgeber '+RG('kartentypen','Kartentypen')+'.'))))
+        +prose(p('Seit die alte Maestro-Bankomatkarte durch Debitkarten von Mastercard und Visa ersetzt wurde, kannst du mit der normalen Kontokarte auch online und weltweit zahlen. Viele brauchen deshalb keine eigene Kreditkarte mehr. Wo sie trotzdem fehlt, merkst du meist erst am Mietwagenschalter. Mehr im Ratgeber '+RG('kartentypen','Kartentypen')+'.'),
+            p('Der Unterschied zeigt sich bei Reservierungen. Ein Hotel oder eine Tankstelle blockiert vorab einen Betrag. Bei der Kreditkarte schrumpft dadurch nur dein Kartenrahmen. Bei der Debitkarte ist das Geld auf dem Girokonto für einige Tage nicht verfügbar, auch wenn am Ende weniger abgebucht wird. Wer knapp kalkuliert, kann dadurch ins Minus rutschen. Für Visa und Mastercard ist es übrigens egal, ob deine Karte Debit oder Kredit ist, beide Netze funktionieren weltweit.'))))
     rows=[(L(k),E(k['kreditkarte']),'ja' if k.get('kreditkarte_inkl') else 'nein') for k in inkl+sep]
     S.append(('Welche Kreditkarten es zu den Konten gibt',
         prose(p('Diese Angaben stammen aus den Preisblättern der Banken. Die Preise gelten für die Kreditkarte zusätzlich zum Kontoführungsentgelt, außer die Karte ist inklusive.'))
@@ -520,16 +572,38 @@ def kk_at(c):
             '<b>Du reist außerhalb Europas.</b> Hotels und Tankstellen reservieren Beträge vorab, mit Debitkarte ist dein Geld dann gebunden.',
             '<b>Du willst Versicherungen über die Karte.</b> Goldkarten haben oft Reiseversicherungen dabei. Vergleiche aber mit einer eigenen Jahresreiseversicherung. Mehr im Ratgeber '+RG('reiseversicherung','Reiseversicherung')+'.',
             '<b>Du willst einen kurzen Zahlungsaufschub.</b> Die Monatsabrechnung bringt dir ein paar Wochen, zinsfrei.']),
-        p('Zahlst du dagegen fast nur im Inland und im Euroraum, reicht die Debitkarte. Dann sparst du dir die Kartengebühr.'))))
+        p('Zahlst du dagegen fast nur im Inland und im Euroraum, reicht die Debitkarte. Dann sparst du dir die Kartengebühr.'),
+        p('Eine einfache Faustregel: Kostet die Kreditkarte im Jahr mehr, als du damit an Fremdwährungsentgelten, Versicherungen oder Mietwagen-Extras sparst, brauchst du sie nicht. Bei einer Goldkarte mit Reiseversicherung kann sich die Rechnung umdrehen, wenn du mehrmals im Jahr verreist und die Versicherung sonst separat kaufen würdest. Lies dann aber die Bedingungen: Oft gilt der Schutz nur, wenn du die Reise mit der Karte bezahlt hast.'))))
     S.append(('KSV1870-Prüfung und Kartenrahmen',prose(
         p('Für eine Kreditkarte mit Monatsabrechnung prüft der Kartenanbieter deine Bonität, oft mit einer Anfrage beim KSV1870. Manche Banken verlangen außerdem einen Mindesteingang oder einige Monate Kontobeziehung, bevor du die Karte beantragen kannst. Wird sie abgelehnt, bleibt dir die Debitkarte oder eine Prepaid-Kreditkarte. Mehr im Ratgeber '+RG('ohne-bonitaetspruefung','Kreditkarte ohne Bonitätsprüfung')+'.'),
-        p('Der Rahmen gilt pro Monat. Ist er ausgeschöpft, wird die Karte abgelehnt, bis die Abrechnung durch ist. Für einen großen Urlaub kannst du beim Anbieter oft vorübergehend eine Erhöhung beantragen.'))))
+        p('Der Rahmen gilt pro Monat. Ist er ausgeschöpft, wird die Karte abgelehnt, bis die Abrechnung durch ist. Für einen großen Urlaub kannst du beim Anbieter oft vorübergehend eine Erhöhung beantragen.'),
+        p('Der KSV1870 speichert Kreditkarten als Rahmen. Solange du die Abrechnung pünktlich zahlst, schadet das nicht. Ein offener Rahmen kann aber zählen, wenn du später einen Wohnkredit beantragst. Karten, die du nicht nutzt, kündigst du deshalb besser. Welche Daten der KSV1870 über dich speichert, kannst du nach der DSGVO kostenlos erfragen.'))))
     S.append(('Kosten neben der Jahresgebühr',prose(
         ul(['<b>Fremdwährung.</b> Zahlungen außerhalb des Euroraums kosten bei den meisten Karten einen Prozentsatz. Mehr im Ratgeber '+RG('fremdwaehrung','Fremdwährung')+'.',
             '<b>Bargeld mit der Kreditkarte.</b> Fast immer teuer: festes Entgelt plus Prozentsatz. Für Bargeld nimmst du besser die Debitkarte.',
             '<b>Teilzahlung.</b> Wer statt der vollen Abrechnung nur einen Teil zahlt, zahlt hohe Zinsen. Mehr im Ratgeber '+RG('teilzahlung','Teilzahlung')+'.',
             '<b>Zusatzkarte.</b> Für Partnerin oder Partner kostet sie meist extra.',
-            '<b>Mindestumsatz.</b> Manche Karten sind nur ab einem bestimmten Jahresumsatz gratis. Erreichst du ihn nicht, wird die Gebühr fällig.']))))
+            '<b>Mindestumsatz.</b> Manche Karten sind nur ab einem bestimmten Jahresumsatz gratis. Erreichst du ihn nicht, wird die Gebühr fällig.',
+            '<b>Euro statt Landeswährung.</b> Bietet dir ein Terminal oder Bankomat im Ausland an, in Euro abzurechnen, lehne ab. Die Umrechnung des Händlers ist fast immer teurer als die deiner Bank.']),
+        p('Die Preise für Kreditkarten stehen nicht immer im Preisblatt des Kontos, sondern beim Kartenanbieter. Lies beide Dokumente, bevor du unterschreibst. Was dich ein Jahr mit Karte wirklich kostet, siehst du erst, wenn du Jahresgebühr, Fremdwährung und Bargeld zusammenzählst.'))))
+    std=[k for k in A if k['art']=='standard']
+    fw0=[k for k in std if k.get('fremdwaehrung_prozent')==0]
+    fwv=[k['fremdwaehrung_prozent'] for k in std if k.get('fremdwaehrung_prozent')]
+    haeufig=max(set(fwv),key=fwv.count) if fwv else None
+    rows=[(L(k),'0 %' if k.get('fremdwaehrung_prozent')==0 else (pct(k['fremdwaehrung_prozent']) if k.get('fremdwaehrung_prozent') else 'keine Angabe'),'inklusive' if k.get('kreditkarte_inkl') else ('gegen Aufpreis' if k.get('kreditkarte') else 'keine Angabe')) for k in sorted(std,key=lambda k:(k.get('fremdwaehrung_prozent') if k.get('fremdwaehrung_prozent') is not None else 99,k['bank']))]
+    S.append(('Ohne Kreditkarte reisen: was die Debitkarte im Ausland kostet',
+        prose(p('Wer keine Kreditkarte will, zahlt im Urlaub mit der Debitkarte. Im Euroraum kostet das bei allen Konten nichts extra. Außerhalb des Euroraums verlangen die meisten Banken ein Fremdwährungsentgelt'
+            +(f', am häufigsten {pct(haeufig)} vom Betrag' if haeufig else '')+'. '
+            +(f'{konten(len(fw0),True)} verzichten darauf ganz, darunter {und([L(k) for k in fw0[:4]])}. ' if fw0 else '')
+            +'Für eine Reise in die USA oder nach Großbritannien kann sich ein solches Konto als Reisekonto lohnen, auch neben deinem Hauptkonto.'))
+        +tbl(['Konto','Fremdwährung mit Debitkarte','Kreditkarte'],rows)))
+    S.append(('Kreditkarte beantragen: so läuft es ab',prose(
+        ol(['<b>Antrag stellen.</b> Bei deiner Bank im Online-Banking oder direkt beim Kartenanbieter. Du gibst Einkommen, Beruf und Wohnsituation an.',
+            '<b>Bonität wird geprüft.</b> Der Anbieter fragt beim KSV1870 nach und schaut sich deine Kontoeingänge an. Manche verlangen einen Gehaltszettel.',
+            '<b>Karte und PIN kommen per Post.</b> Meist getrennt, aus Sicherheitsgründen. Die Karte aktivierst du in der App oder mit der ersten Zahlung mit PIN.',
+            '<b>Abrechnung festlegen.</b> Die Monatsabrechnung wird per Lastschrift vom Girokonto eingezogen. Prüfe, dass dort am Einzugstag genug Geld liegt.',
+            '<b>Kündigungstermin notieren.</b> Bei Aktionen mit Gratisjahr: Trag dir den Termin ein, an dem die Gebühr fällig wird.']),
+        p('Mehr Details zu Unterlagen und Dauer stehen im Ratgeber '+RG('kreditkarte-beantragen','Kreditkarte beantragen')+'. Kostenlose Kreditkarten ohne Girokonto zeigt der Ratgeber '+RG('kostenlose-kreditkarte','Kostenlose Kreditkarte')+'.'))))
     S.append(('Quellen',prose(ul([ext(Q_AT['ksv']),ext(Q_AT['ak_bank']),ext(Q_AT['fma'])]+quellen_banken(inkl+sep,15)
         +['Kreditkarten und Preise: Preisblätter und Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich. Stand: '+E(c['stand'])+'.']))))
     F=[('Ist die Debit Mastercard eine Kreditkarte?',
@@ -599,10 +673,18 @@ def praemie_de(c):
             '<b>Kosten für Extras.</b> Eine mitbestellte Kreditkarte oder ein Depot kann nach der Aktion Geld kosten.',
             '<b>Rückforderung.</b> Kündigst du vor Ende der Haltefrist, kann die Bank die Prämie laut Bedingungen zurückfordern.',
             '<b>Gutscheine statt Geld.</b> Ein Reisegutschein mit Mindestbuchungswert ist nur etwas wert, wenn du ohnehin bei diesem Anbieter buchen würdest.',
-            '<b>Steuern.</b> Ob und wie eine Prämie zu versteuern ist, hängt von deiner Situation ab. Bei großen Beträgen frag in der Steuerberatung nach.']))))
+            '<b>Steuern.</b> Ob und wie eine Prämie zu versteuern ist, hängt von deiner Situation ab. Bei großen Beträgen frag in der Steuerberatung nach.',
+            '<b>Aktion endet früher.</b> Banken können eine Aktion vorzeitig beenden, wenn das Kontingent ausgeschöpft ist. Maßgeblich ist, was am Tag deines Antrags galt. Deshalb lohnt sich das PDF der Bedingungen.']))))
     S.append(('Mehrere Konten für mehrere Prämien?',prose(
         p('Gesetzlich darfst du in Deutschland so viele Girokonten haben, wie du willst. Prämienjäger nutzen das, eröffnen ein Konto, kassieren die Prämie und kündigen nach der Haltefrist. Das ist erlaubt, solange du alle Bedingungen ehrlich erfüllst.'),
         p('Die Banken wissen das. Deshalb schließen viele Aktionen Menschen aus, die in den letzten zwölf oder mehr Monaten schon Kunde waren, und manche zählen dabei alle Marken eines Konzerns zusammen. Wer bei einer Bank schon ein Tagesgeld oder ein Depot hat, gilt oft nicht mehr als Neukunde. Und wer sein altes Konto auflöst, sollte daran denken, dass Daueraufträge und Lastschriften umgezogen werden müssen. Dabei hilft die Kontowechselhilfe, mehr im Ratgeber '+RG('girokonto-wechseln','Konto wechseln')+'.'))))
+    S.append(('Prämie sicher mitnehmen: Schritt für Schritt',prose(
+        ol(['<b>Bedingungen komplett lesen.</b> Nicht nur das Werbebanner, sondern die Teilnahmebedingungen. Achte auf Neukunden-Definition, Mindesteingang, Zahl der Kartenzahlungen und Haltefrist.',
+            '<b>Prüfen, ob du die Bedingungen ohne Tricks erfüllst.</b> Kommt dein Gehalt rechtzeitig? Schaffst du die Kartenzahlungen im Alltag?',
+            '<b>Antrag stellen und sofort legitimieren.</b> Warte nicht bis zum letzten Tag mit dem Video-Ident. Wenn die Verbindung abbricht, fehlt dir die Zeit.',
+            '<b>Bedingungen abhaken.</b> Gehalt umleiten oder Dauerauftrag einrichten, Kartenzahlungen machen, Werbeeinwilligung erteilen. Notier dir, wann du was erledigt hast.',
+            '<b>Auszahlung kontrollieren.</b> Kommt die Prämie zum genannten Termin nicht, schreib dem Kundenservice mit deinen Nachweisen.',
+            '<b>Danach entscheiden.</b> Passt das Konto, behältst du es. Wenn nicht, kündigst du nach Ablauf der Haltefrist und ziehst mit der Kontowechselhilfe zurück oder weiter.']))))
     S.append(('Quellen',prose(ul([ext(Q_DE['zkg20']),ext(Q_DE['bgb675h']),ext(Q_DE['schufa'])]+quellen_banken(X)
         +['Aktionen, Prämienhöhe und Teilnahmebedingungen: Aktionsseiten und Teilnahmebedingungen der Banken, verlinkt bei jedem Konto im Vergleich. Aktionen ändern sich oft, maßgeblich sind die Bedingungen der Bank am Tag deines Antrags. Stand: '+E(c['stand'])+'.']))))
     F=[('Bekomme ich die Prämie, wenn ich früher schon Kunde der Bank war?',
