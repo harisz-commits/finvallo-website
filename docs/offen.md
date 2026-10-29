@@ -27,4 +27,3 @@ Stand: 28.10.2026
 - Review-Schema entfernt (29.10.): die Sterne bleiben sichtbar, aber ohne unsichtbare Auszeichnung „bewertet von“.
 - Offen: Rechner AT/DE zusammenlegen (vorerst nicht), Tempo neuer Seiten.
 - Girokonto-Bestenlisten nach Thema (29.10.): Texte in `tools/giro_listen_texte_a/b/c.py`, Zusatzdaten in `tools/daten/<land>/girokonten-extra.json`. Lücken: bei 37 DE- und 30 AT-Konten ist die Zahl der Unterkonten nicht belegt, bei 29 DE- und 32 AT-Konten die Bonitätsabfrage. AT hat noch keine Listen „mit Kreditkarte“, „ohne KSV“ und „nachhaltige Banken“ (zu wenige Konten oder Banken).
-- Basiskonto AT: 5 von 6 Basiskonten stehen in den Daten mit 80 € im Jahr, die AK nennt derzeit 83,45 €. Gegen die Preisblätter der Banken prüfen.
