@@ -433,7 +433,8 @@ def best_lists(ks):
     out={}
     for c in gcats():
         xs=sorted([k for k in ks if c['f'](k)],key=c.get('sort') or _std)
-        out[c['k']]=xs if len(xs)>=3 else []
+        # mindestens 3 Konten; eine Liste „nachhaltige Banken“ braucht außerdem mindestens 2 verschiedene Banken
+        out[c['k']]=xs if len(xs)>=3 and (c['k']!='nachhaltige-banken' or len({k['bank'] for k in xs})>=2) else []
     return out
 def best_tag(k,BL):
     """Beste Platzierung eines Kontos in einer Bestenliste (nur Platz 1 bis 3)."""
