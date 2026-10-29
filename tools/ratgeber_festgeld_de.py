@@ -47,7 +47,7 @@ def _sich(L,cc):
 def register(art,P,eur):
     d,xs,L=_load()
     stand=_dmy(d['stand'])
-    F=f'{P}de/festgeld/'; F1=f'{F}1-jahr/'; FH=f'{F}bestenlisten/deutsche-banken/'; FM=f'{F}methodik/'
+    F=f'{P}de/festgeld/'; F1=F; FH=f'{F}?f=heim'; FM=f'{F}methodik/'
     RK=f'{P}de/rechner/kapitalertragsteuer/'; RZ=f'{P}de/rechner/zinseszins/'
     def L_(a): return f'<a class="lnk" href="{F}#fg-{a["id"]}">{E(a["bank"])}</a> <small class="mut">({E(_vt(a))})</small>'
     n=len(xs)
@@ -91,7 +91,7 @@ def register(art,P,eur):
             ('Planbarkeit','Ertrag steht am ersten Tag fest','nur der Zins von heute ist bekannt'),
             ('Einlagensicherung','100.000 € pro Person und Bank','100.000 € pro Person und Bank'),
             ('Steuer','Abgeltungsteuer, bei deutschen Banken automatisch, Freistellungsauftrag möglich','Abgeltungsteuer, bei deutschen Banken automatisch, Freistellungsauftrag möglich')])+
-        f'<div class="prose"><p>Die Zinsen stammen aus dem <a href="{F}">Festgeld-Vergleich</a> mit Stand {stand}. Für jede Laufzeit gibt es eine eigene Seite, etwa <a href="{F1}">Festgeld für 1 Jahr</a>.</p></div>'),
+        f'<div class="prose"><p>Die Zinsen stammen aus dem <a href="{F}">Festgeld-Vergleich</a> mit Stand {stand}. Die Laufzeit wählst du dort im Rechner, etwa <a href="{F}?laufzeit=12">Festgeld für 1 Jahr</a>.</p></div>'),
        ('Wann Festgeld die bessere Wahl ist',f'''<div class="prose"><p>Festgeld passt, wenn du das Geld in der Laufzeit sicher nicht brauchst und dir den Zins von heute sichern willst:</p><ul>
 <li><b>Du rechnest mit sinkenden Zinsen.</b> Tagesgeld-Zinsen folgen den Leitzinsen der EZB nach unten, meist innerhalb weniger Wochen. Beim Festgeld bleibt dein Satz stehen. Umgekehrt verpasst du steigende Zinsen.</li>
 <li><b>Du sparst auf ein Datum.</b> Autokauf in zwei Jahren, Eigenkapital fürs Haus in vier Jahren: Dann weißt du, wie lange das Geld weg sein darf, und wählst genau diese Laufzeit.</li>
@@ -215,7 +215,7 @@ def register(art,P,eur):
 <li><b>Weniger Zins in der Anlaufphase.</b> Solange kurze Laufzeiten niedriger verzinst sind, bringt die Treppe in den ersten Jahren weniger als die lange Anlage, siehe Rechenbeispiel.</li></ul></div>'''),
        ('Wann sich die Zinstreppe lohnt',f'''<div class="prose"><p>Die Treppe lohnt sich, wenn du ab etwa 15.000 € für mehrere Jahre anlegen willst, aber nicht sicher bist, ob du zwischendurch etwas brauchst, und wenn du keine Meinung dazu hast, wohin die Zinsen gehen. Sie ist das Gegenteil von Markt-Timing.</p>
 <p>Sie lohnt sich nicht, wenn du das Geld zu einem festen Termin brauchst, etwa als Eigenkapital in drei Jahren. Dann nimmst du genau diese Laufzeit. Und sie lohnt sich nicht für den Notgroschen, der gehört aufs Tagesgeld, siehe <a href="../festgeld-oder-tagesgeld/">Festgeld oder Tagesgeld</a>.</p>
-<p>Varianten: Wer länger planen kann, baut die Treppe mit 1 bis 5 Jahren in fünf Stufen. Für 5 Jahre gibt es im Vergleich {_n(xs,60)} Angebote, bis {_pct(z60)} bei {L_(a60)}. Wer es einfacher will, nimmt zwei Stufen mit 1 und 2 Jahren. Die Seiten <a href="{F1}">1 Jahr</a>, <a href="{F}2-jahre/">2 Jahre</a> und <a href="{F}3-jahre/">3 Jahre</a> zeigen die Angebote je Stufe.</p></div>'''),
+<p>Varianten: Wer länger planen kann, baut die Treppe mit 1 bis 5 Jahren in fünf Stufen. Für 5 Jahre gibt es im Vergleich {_n(xs,60)} Angebote, bis {_pct(z60)} bei {L_(a60)}. Wer es einfacher will, nimmt zwei Stufen mit 1 und 2 Jahren. Die Angebote je Stufe zeigt der Vergleich, wenn du dort <a href="{F}?laufzeit=12">1 Jahr</a>, <a href="{F}?laufzeit=24">2 Jahre</a> oder <a href="{F}?laufzeit=36">3 Jahre</a> wählst.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
 <li>Zinsen und Mindestanlage: Konditionsseiten der Banken und Plattformen, verlinkt bei jedem Angebot im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}. Die Beispielrechnung übernimmt beim Bauen dieser Seite den jeweils besten Zins je Laufzeit.</li>
 <li>Einlagensicherung: {_ext(BAFIN_ES,"BaFin, Einlagensicherung")}; Sparer-Pauschbetrag: {_ext(ESTG("20"),"§ 20 Abs. 9 EStG")}, abgerufen am {ABGERUFEN}.</li></ul></div>'''),

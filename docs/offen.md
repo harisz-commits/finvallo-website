@@ -20,3 +20,8 @@ Stand: 28.10.2026
 | Affiliate-Links pflegen | Partnerlinks liegen in `tools/daten/affiliate.json` (Schlüssel = Slug der Produktseite, Bank-Slug beim Festgeld, Anbieterkürzel). Neue Produkte oder Links dort eintragen, `check.py` meldet Schlüssel ohne Seite. Noch ohne Partnerlink, obwohl im Programm: Bigbank AT (nicht im Vergleich), Suresse, PSD Bank, Tide, Vivid Business, Wallester (keine Produkte auf der Seite). | Haris, dann Claude |
 | sameAs im Schema | Profile (LinkedIn, X usw.) fehlen noch, siehe „Profile anlegen“. | Haris, dann Claude |
 | CSP-Header | Content-Security-Policy fehlt in `server/security-headers.conf`; erst auf dem Server testen, da Inline-Skripte (Rechner, JSON-LD) betroffen sind. | Claude (braucht Freigabe) |
+
+## Regeln aus dem Qualitäts-Check (29.10.)
+- FAQ nur mit Fragen, die zur Seite gehören. Dieselbe Frage auf mehr als 4 Seiten bricht `check.py` ab. Kreditkartenseiten haben nur dann einen FAQ-Block, wenn es eine kartenspezifische Frage gibt (Lieferzeit, Ausschlüsse der Reiseversicherung).
+- Festgeld hat keine Laufzeit- und Bestenlisten-Seiten mehr, alles läuft über den Filter im Vergleich. Alte Adressen leiten per 301 auf den Vergleich mit gesetztem Filter.
+- Offen: Review-Schema auf den Kartenseiten (Entscheidung Haris), Rechner AT/DE zusammenlegen (vorerst nicht), Tempo neuer Seiten.

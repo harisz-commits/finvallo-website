@@ -92,6 +92,12 @@ def plattN(a):
     return {'Check24':'CHECK24'}.get(v,v)
 def vtT(a): return 'direkt bei der Bank' if not plattform(a) else f'über {plattN(a)}'
 def vtK(a): return 'direkt' if not plattform(a) else plattN(a)
+def vtkey(a):
+    """Abschlussweg für den Filter: direkt, raisin, check24, zinsmarkt, andere"""
+    if not plattform(a): return 'direkt'
+    v=a['vertrieb'].lower()
+    return v if v in ('raisin','check24','zinsmarkt') else 'andere'
+VTN={'direkt':'Direkt bei der Bank','raisin':'Über Raisin','check24':'Über CHECK24','zinsmarkt':'Über den ZinsMarkt','andere':'Andere Plattformen'}
 def vtS(a): return vtK(a).replace('ZinsMarkt der Deutschen Bank','ZinsMarkt Deutsche Bank')
 def zzT(a): return ZZT.get(a.get('zinszahlung'),'keine Angabe')
 def kdT(a): return {'nein':'nicht möglich','ja':'möglich','ja_mit_abschlag':'möglich, mit Abschlag'}.get(a.get('kuendigung'),'keine Angabe')
@@ -210,7 +216,7 @@ def item(a,P,base,m,rank,hide=False,voll=True):
     if len(ak)>140: ak=ak[:140].rsplit(' ',1)[0].rstrip(' .,;:!')+' …'
     akt=f'<div class="earn"><span>Aktion</span><b>{E(ak)}</b></div>' if ak else ''
     rk=f'<span class="rank{" r"+str(rank) if rank<=3 else ""}">{rank}</span>' if rank else ''
-    return f'''<article class="item" id="fg-{a["slug"]}" data-k='{E(json.dumps(jsdata(a),separators=(",",":")))}' data-f="{flags(a)}" data-sitz="{a["sitz"]}" data-rat="{ratnum(a)}" data-zz="{a.get("zinszahlung") or ""}" data-q="{E((a["bank"]+" "+a["produkt"]+" "+vtK(a)).lower())}"{" hidden" if hide else ""}>
+    return f'''<article class="item" id="fg-{a["slug"]}" data-k='{E(json.dumps(jsdata(a),separators=(",",":")))}' data-f="{flags(a)}" data-sitz="{a["sitz"]}" data-rat="{ratnum(a)}" data-zz="{a.get("zinszahlung") or ""}" data-vt="{vtkey(a)}" data-q="{E((a["bank"]+" "+a["produkt"]+" "+vtK(a)).lower())}"{" hidden" if hide else ""}>
     <div class="ihead"><div style="display:flex;gap:10px;align-items:center">{rk}</div></div>
     <div class="irow">{face(a)}<div style="min-width:0"><h3 class="iname">{E(titel(a))}</h3><div class="iprov">{E(landN(a))} · {E(vtT(a))}</div></div></div>
     <div class="tags">{tags(a)}</div>
@@ -231,7 +237,7 @@ def calcbox(m,nav=None):
     <p class="note" style="margin:8px 0 0">Zinsen vor Steuern. Bei mehr als 12 Monaten rechnen wir mit Zinseszins nur, wenn die Bank die Zinsen mitverzinst.</p>
   </div>'''
 def filterbox(xs,n):
-    chips=[('heim',CC['heimF']),('steuer',f'{CC["steuer_kurz"]} automatisch'),('direkt','Direkt bei der Bank'),('kuend','Vorzeitig kündbar'),('alle','Auch für Bestandskunden')]
+    chips=[('heim',CC['heimF']),('steuer',f'{CC["steuer_kurz"]} automatisch'),('kuend','Vorzeitig kündbar'),('alle','Auch für Bestandskunden')]
     opt=lambda v:''.join(f'<option value="{a}">{b}</option>' for a,b in v)
     ls=sorted({a['sitz'] for a in xs},key=lambda c:(c!=CC['code'],(LAENDER.get(c) or {}).get('name') or c))
     return f'''<div class="box filt" id="filt" hidden>
@@ -240,6 +246,7 @@ def filterbox(xs,n):
     <div class="frow"><select data-sitz aria-label="Land der Einlagensicherung">{opt([("","Alle Länder")]+[(c,(LAENDER.get(c) or {}).get("name") or c) for c in ls])}</select>
     <select data-rat aria-label="Länderrating mindestens">{opt([("","Jedes Länderrating"),(RAT["AAA"],"Rating AAA"),(RAT["AA-"],"Rating mindestens AA-"),(RAT["A-"],"Rating mindestens A-"),(RAT["BBB-"],"Rating mindestens BBB-")])}</select>
     <select data-zz aria-label="Zinszahlung">{opt([("","Jede Zinszahlung"),("jaehrlich","Zinsen jährlich"),("endfaellig","Zinsen am Ende"),("monatlich","Zinsen monatlich"),("quartalsweise","Zinsen vierteljährlich")])}</select>
+    <select data-vt aria-label="Abschlussweg">{opt([("","Jeder Abschlussweg")]+[(k,VTN[k]) for k in VTN if any(vtkey(a)==k for a in xs)])}</select>
     <select data-sort aria-label="Sortierung">{opt([("zins","Höchster Zins zuerst"),("rat","Bestes Länderrating zuerst"),("name","Nach Name")])}</select></div>
     <div class="fbot"><b data-count>{n} Angebote</b><button type="button" class="lnk" data-reset hidden>Filter zurücksetzen</button></div>
   </div>'''
@@ -316,8 +323,7 @@ def gen_fq(xs,m,art,name=''):
     fq+=[('Wie sicher ist Festgeld?',CC['sich']),
          ('Wie werden Festgeld-Zinsen versteuert?',CC['steuer']),
          ('Kann ich Festgeld vorzeitig kündigen?','Meist nicht: Das Geld ist bis zum Ende der Laufzeit fest angelegt. Manche Banken erlauben eine vorzeitige Auflösung, dann meist mit Zinsabschlag. Ob das geht, steht bei jedem Angebot. Geld, das du kurzfristig brauchen könntest, liegt besser auf einem Tagesgeldkonto.'),
-         ('Was ist der Unterschied zwischen Festgeld und Tagesgeld?','Beim Festgeld legst du Geld für eine feste Zeit zu einem festen Zins an. Beim Tagesgeld kommst du jeden Tag an dein Geld, dafür kann die Bank den Zins jederzeit ändern.'),
-         ('Spielen Provisionen eine Rolle?','Nein. Wir sortieren nach Zins für deinen Betrag und deine Laufzeit. Provisionen haben keinen Einfluss auf die Reihenfolge, und es gibt keine bezahlten Platzierungen.')]
+         ('Was ist der Unterschied zwischen Festgeld und Tagesgeld?','Beim Festgeld legst du Geld für eine feste Zeit zu einem festen Zins an. Beim Tagesgeld kommst du jeden Tag an dein Geld, dafür kann die Bank den Zins jederzeit ändern.')]
     return fq
 def zinskurve(xs,P,cur=None):
     """Tabelle: bester Zins und Median je Laufzeit, mit Links auf die Laufzeit-Seiten"""
@@ -326,9 +332,9 @@ def zinskurve(xs,P,cur=None):
         if m not in LZ_SEITEN: continue
         kz=kennzahlen([a for a in xs if m in laufzeiten(a)],m)
         if not kz: continue
-        lnk=f'<b>{t}</b>' if m==cur else f'<a class="lnk" href="{P}{LAND}/festgeld/{s}/">{t}</a>'
+        lnk=f'<button type="button" class="lnk" data-setlz="{m}">{t}</button>'
         rows+=f'<tr><td>{lnk}</td><td><b>{pct(kz["bz"])}</b><br><small class="mut">{E(titel(kz["best"]))}</small></td><td>{pct(kz["med"])}</td><td>{kz["n"]}</td></tr>'
-    return f'<div class="tbl wide"><table><thead><tr><th>Laufzeit</th><th>Höchster Zins</th><th>Hälfte zahlt mindestens</th><th>Angebote</th></tr></thead><tbody>{rows}</tbody></table></div><p class="note">Für {eur(DEF_B)} € Anlage, Stand {S(xs)}. Mit deinem Betrag rechnest du in der Liste.</p>'
+    return f'<div class="tbl wide"><table><thead><tr><th>Laufzeit</th><th>Höchster Zins</th><th>Hälfte zahlt mindestens</th><th>Angebote</th></tr></thead><tbody>{rows}</tbody></table></div><p class="note">Für {eur(DEF_B)} € Anlage, Stand {S(xs)}. Klick auf eine Laufzeit, dann zeigt die Liste genau diese Angebote.</p>'
 def liste_html(X,P,base,m,voll=True):
     """Angebote als <article>; die ersten IM_HTML sichtbar im DOM, der Rest in <template>, das festgeld.js beim Start einhängt"""
     rank=0; vis_html=''; rest=''; n=0
@@ -397,7 +403,7 @@ def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
 <h1>{E(h1)}</h1>
   <p class="lede">{E(lede)}</p>
   {f'<div class="facts prose"><p>{kurz}</p></div>' if kurz else ''}
-  <p class="note" style="margin:6px 0 14px">Laufzeiten: {lzlinks}<br>Bestenlisten: {bllinks}<br><a class="lnk" href="{up}methodik/">So vergleichen wir</a>{" · Ratgeber: "+rg if rg else ""}</p>
+  <p class="note" style="margin:6px 0 14px"><a class="lnk" href="{up}methodik/">So vergleichen wir</a>{" · Ratgeber: "+rg if rg else ""}</p>
   {calcbox(m,nav)}
   {filterbox(X,len(shown))}
   <div class="list" data-fg data-limit="30">{liste_html(X,P,base,m,voll=not (lzslug or sub))}</div>
@@ -414,27 +420,6 @@ def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
     body=body.replace('</body>',script(P),1)
     K.write(rel,head(t,ds,rel,P,ld)+body)
 
-def bestenlisten_hub(xs):
-    N=CC['N']; base=f'{LAND}/festgeld/bestenlisten/'; P='../../../'; st=S(xs)
-    cats=[c for c in fcats() if BL.get(c['k'])]
-    tiles=''
-    for c in cats:
-        X=BL[c['k']]; kz=kennzahlen(X,DEF_M)
-        top=kz['best'] if kz else X[0]
-        tiles+=f'<a class="catcard" href="{c["k"]}/"><span class="ct">{E(c["t"])}</span><b>{E(titel(top))}</b><span>{pct(kz["bz"]) if kz else pct(topzins(top))} für {lzt(DEF_M) if kz else lzspan(top)}</span><small>{len(X)} Angebote · Liste ansehen →</small></a>'
-    t=f'Beste Festgeld-Angebote {N} 2026 nach Kategorie | Finvallo'
-    d=f'Die besten Festgeld-Angebote in {N} nach Kategorie: {", ".join(c["t"].lower() for c in cats[:5])} und mehr. Stand {st}.'
-    ld=K.graph(base,t,d,[(N,f'{LAND}/'),('Festgeld',f'{LAND}/festgeld/'),('Bestenlisten',base)],[{"@type":"ItemList","name":f"Bestenlisten Festgeld {N}","itemListElement":[{"@type":"ListItem","position":i+1,"name":c['h'],"url":f"https://finvallo.com/{base}{c['k']}/"} for i,c in enumerate(cats)]}])
-    K.write(base,head(t,d,base,P,ld)+f'''{hdr(P,base)}
-<div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../">Festgeld</a> › Bestenlisten</span><span>Stand {st}</span></div>
-<h1>Beste Festgeld-Angebote in {N} nach Kategorie</h1><p class="lede">Nicht jedes Angebot passt zu jedem. Hier findest du die besten Angebote für deinen Fall, sortiert nach Zins für {eur(DEF_B)} € und {lzt(DEF_M)}. Mit deinem Betrag und deiner Laufzeit rechnest du in jeder Liste.</p>
-<div class="catgrid">{tiles}</div>
-<h2>Wie entstehen die Listen?</h2><div class="prose"><p>Jede Liste zeigt nur Angebote, die eine klare Bedingung erfüllen, etwa „vorzeitig kündbar“ oder „{E(CC["heimF"]).lower()}“. Innerhalb der Liste gilt dieselbe Reihenfolge wie im <a href="../">Festgeld-Vergleich</a>: höchster Zins zuerst, bei gleichem Zins das bessere Länderrating. Wie wir rechnen, steht in der <a href="../methodik/">Methodik</a>.</p></div>
-</main>
-{K.footer(P)}''')
-
-# ---------- Methodik ----------
 def methodik_page(xs):
     rel=f'{LAND}/festgeld/methodik/'; P='../../../'; N=CC['N']
     t=f'So vergleichen wir Festgeld in {N} | Finvallo'
@@ -480,8 +465,7 @@ def llms(xs,d):
         t=open(p,encoding='utf-8').read()
         t=re.sub(r'\n## '+N+r': Festgeld\n(?:- [^\n]*\n?)*','\n',t)
         b=f'\n## {N}: Festgeld\n- [Festgeld-Vergleich {N}](https://finvallo.com/{LAND}/festgeld/): {len(xs)} Angebote von {nbanken(xs)} Banken, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand {st}\n'
-        b+=''.join(f'- [Festgeld {t_} {N}](https://finvallo.com/{LAND}/festgeld/{s}/)\n' for m,s,t_ in LZ if m in LZ_SEITEN)
-        b+=f'- [Bestenlisten Festgeld {N}](https://finvallo.com/{LAND}/festgeld/bestenlisten/): {", ".join(c["t"] for c in fcats() if BL.get(c["k"]))}\n- [So vergleichen wir Festgeld](https://finvallo.com/{LAND}/festgeld/methodik/)\n- [Daten als JSON](https://finvallo.com/{LAND}/daten/festgeld.json)\n'
+        b+=f'- [So vergleichen wir Festgeld](https://finvallo.com/{LAND}/festgeld/methodik/)\n- [Daten als JSON](https://finvallo.com/{LAND}/daten/festgeld.json)\n'
         top=[a for a in ordnen(xs,DEF_M) if ertrag(a,DEF_B,DEF_M)['fit']][:5 if fn=='llms.txt' else 30]
         b+=''.join(f'- [{titel(a)}](https://finvallo.com/{url(a)}): {pct(ertrag(a,DEF_B,DEF_M)["zins"])} für {lzt(DEF_M)}, {vtT(a)}, Einlagensicherung {landN(a)}\n' for a in top)
         # vor „## Optional“ einfügen, damit der Abschnitt nicht als überspringbar gilt
@@ -523,19 +507,15 @@ def build_land():
     BL={k:v for k,v in BL.items() if len(v)>=3}
     ALL[:]=xs
     list_page(xs,d)
-    for m,s,_ in LZ:
-        if m in LZ_SEITEN: list_page(xs,d,m,lzslug=s)
-    for c in fcats():
-        if BL.get(c['k']): list_page(xs,d,sub=c)
-    bestenlisten_hub(xs); anbieter_festgeld(xs)
+    anbieter_festgeld(xs)
     methodik_page(xs); export(xs,d); llms(xs,d)
-    print(f'Festgeld {LAND}:',len(xs),'Angebote,',nbanken(xs),'Banken,',len(LZ_SEITEN),'Laufzeit-Seiten,',len(BL),'Bestenlisten')
+    print(f'Festgeld {LAND}:',len(xs),'Angebote,',nbanken(xs),'Banken,',len(LZ_SEITEN),'Laufzeiten in der Zinstabelle')
 
 def slugs(l):
     d,xs=load(l); cnt={}
     for a in xs:
         for m in laufzeiten(a): cnt[m]=cnt.get(m,0)+1
-    return {s for m,s,_ in LZ if cnt.get(m,0)>=MIN_LZ_SEITE}|{'methodik','bestenlisten'}
+    return {'methodik'}
 def pairs():
     """Keine eigenen Angebots- oder Bankseiten mehr: Laufzeit-Seiten, Bestenlisten und Methodik haben im anderen Land dieselbe Adresse (eeat.partner)"""
     json.dump({'paare':[]},open(HP,'w',encoding='utf-8'),ensure_ascii=False,indent=0)

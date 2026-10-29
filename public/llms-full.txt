@@ -427,21 +427,6 @@ i Kurzantwort: In Deutschland lohnt sich Punktesammeln deutlich mehr als in Öst
 
 ## Deutschland: Festgeld
 - [Festgeld-Vergleich Deutschland](https://finvallo.com/de/festgeld/): 271 Angebote von 217 Banken, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand 27.10.2026
-- [Festgeld 1 Monat Deutschland](https://finvallo.com/de/festgeld/1-monat/)
-- [Festgeld 3 Monate Deutschland](https://finvallo.com/de/festgeld/3-monate/)
-- [Festgeld 6 Monate Deutschland](https://finvallo.com/de/festgeld/6-monate/)
-- [Festgeld 9 Monate Deutschland](https://finvallo.com/de/festgeld/9-monate/)
-- [Festgeld 1 Jahr Deutschland](https://finvallo.com/de/festgeld/1-jahr/)
-- [Festgeld 18 Monate Deutschland](https://finvallo.com/de/festgeld/18-monate/)
-- [Festgeld 2 Jahre Deutschland](https://finvallo.com/de/festgeld/2-jahre/)
-- [Festgeld 3 Jahre Deutschland](https://finvallo.com/de/festgeld/3-jahre/)
-- [Festgeld 4 Jahre Deutschland](https://finvallo.com/de/festgeld/4-jahre/)
-- [Festgeld 5 Jahre Deutschland](https://finvallo.com/de/festgeld/5-jahre/)
-- [Festgeld 6 Jahre Deutschland](https://finvallo.com/de/festgeld/6-jahre/)
-- [Festgeld 7 Jahre Deutschland](https://finvallo.com/de/festgeld/7-jahre/)
-- [Festgeld 8 Jahre Deutschland](https://finvallo.com/de/festgeld/8-jahre/)
-- [Festgeld 10 Jahre Deutschland](https://finvallo.com/de/festgeld/10-jahre/)
-- [Bestenlisten Festgeld Deutschland](https://finvallo.com/de/festgeld/bestenlisten/): Deutsche Einlagensicherung, Vorzeitig kündbar, Ab 1.000 €, Steuer automatisch, Direkt bei der Bank, Über Raisin, Über CHECK24, Aktionen
 - [So vergleichen wir Festgeld](https://finvallo.com/de/festgeld/methodik/)
 - [Daten als JSON](https://finvallo.com/de/daten/festgeld.json)
 - [Bigbank Festgeld](https://finvallo.com/de/festgeld/#fg-bigbank-festgeld-de): 3,60 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Estland
@@ -477,17 +462,6 @@ i Kurzantwort: In Deutschland lohnt sich Punktesammeln deutlich mehr als in Öst
 
 ## Österreich: Festgeld
 - [Festgeld-Vergleich Österreich](https://finvallo.com/at/festgeld/): 51 Angebote von 49 Banken, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand 27.10.2026
-- [Festgeld 3 Monate Österreich](https://finvallo.com/at/festgeld/3-monate/)
-- [Festgeld 6 Monate Österreich](https://finvallo.com/at/festgeld/6-monate/)
-- [Festgeld 9 Monate Österreich](https://finvallo.com/at/festgeld/9-monate/)
-- [Festgeld 1 Jahr Österreich](https://finvallo.com/at/festgeld/1-jahr/)
-- [Festgeld 18 Monate Österreich](https://finvallo.com/at/festgeld/18-monate/)
-- [Festgeld 2 Jahre Österreich](https://finvallo.com/at/festgeld/2-jahre/)
-- [Festgeld 3 Jahre Österreich](https://finvallo.com/at/festgeld/3-jahre/)
-- [Festgeld 4 Jahre Österreich](https://finvallo.com/at/festgeld/4-jahre/)
-- [Festgeld 5 Jahre Österreich](https://finvallo.com/at/festgeld/5-jahre/)
-- [Festgeld 10 Jahre Österreich](https://finvallo.com/at/festgeld/10-jahre/)
-- [Bestenlisten Festgeld Österreich](https://finvallo.com/at/festgeld/bestenlisten/): Österreichische Einlagensicherung, Vorzeitig kündbar, Ab 1.000 €, Steuer automatisch, Direkt bei der Bank, Über Raisin, Aktionen
 - [So vergleichen wir Festgeld](https://finvallo.com/at/festgeld/methodik/)
 - [Daten als JSON](https://finvallo.com/at/daten/festgeld.json)
 - [Banca Sistema Festgeld](https://finvallo.com/at/festgeld/#fg-banca-sistema-festgeld-at-raisin): 3,45 % für 1 Jahr, über Raisin, Einlagensicherung Italien

@@ -268,8 +268,7 @@ def card_page(land, c, x, A, P, prov):
              (f'Partner-Abos mit dem günstigsten regulären Tarif des Anbieters, wenn du sie sonst selbst bezahlen würdest: entweder einige bekannte Alltags-Abos oder {int(NUTZUNG * 100)} % aller Abos; Abos, die nur 12 Monate inklusive sind, nur im ersten Jahr', x.get('subs_names'))) if h]
     how_ = f'Bei der {T} zählen wir nur Vorteile, die du wirklich nutzt: ' + '; '.join(parts) + f'. Davon ziehen wir die Jahresgebühr von {eur(fee)} € ab.' if parts else f'Bei der {T} ziehen wir die Jahresgebühr von {eur(fee)} € von den Vorteilen ab, die du wirklich nutzt.'
     fq = [(f'Ab wann lohnt sich die {T}?', vt if T in vt else f'Die {T} kostet {eur(fee)} € im Jahr. ' + vt),
-          (f'Wie rechnet Finvallo bei der {T}?', how_),
-          ('Zählt der Willkommensbonus mit?', 'Nur im ersten Jahr. Für die Frage, ob sich die Karte dauerhaft lohnt, rechnen wir ohne Bonus.')]
+          (f'Wie rechnet Finvallo bei der {T}?', how_)]
     ld = K.graph(rel, t, d, [(N, f'{land}/'), ('Kreditkarten', f'{land}/kreditkarten/'), ('Bestenlisten', f'{land}/kreditkarten/bestenlisten/'), ('Top-Karten', f'{land}/kreditkarten/bestenlisten/lohnt-sich/'), (c['titel'], rel)],
                  [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in fq]}], date=x.get('geprueft') or c['geprueft'])
     src = ' · '.join(K.ext(u) for u in dict.fromkeys((x.get('quellen') or []) + [(A['abos'][g['name']]['quelle']) for g in priced(x, A) if A['abos'][g['name']].get('quelle')]))

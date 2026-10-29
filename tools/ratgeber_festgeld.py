@@ -43,7 +43,7 @@ def _sich(L,cc):
 def register(art,P,eur):
     d,xs,L=_load()
     stand=_dmy(d['stand'])
-    F=f'{P}at/festgeld/'; F1=f'{F}1-jahr/'; FH=f'{F}bestenlisten/oesterreichische-banken/'; FM=f'{F}methodik/'
+    F=f'{P}at/festgeld/'; F1=F; FH=f'{F}?f=heim'; FM=f'{F}methodik/'
     RK=f'{P}at/rechner/kapitalertragsteuer/'; RZ=f'{P}at/rechner/zinseszins/'
     def L_(a): return f'<a class="lnk" href="{F}#fg-{a["id"]}">{E(a["bank"])}</a> <small class="mut">({E(_vt(a))})</small>'
     n=len(xs)
@@ -206,7 +206,7 @@ def register(art,P,eur):
 <li><b>Weniger Zins in der Anlaufphase.</b> Solange kurze Laufzeiten schlechter verzinst sind, bringt die Treppe in den ersten Jahren weniger als die lange Anlage, siehe Rechenbeispiel.</li></ul></div>'''),
        ('Wann sich die Zinstreppe lohnt',f'''<div class="prose"><p>Die Treppe lohnt sich, wenn du einen Betrag ab etwa 15.000 € für mehrere Jahre anlegen willst, aber nicht sicher bist, ob du zwischendurch etwas brauchst, und wenn du keine Meinung dazu hast, wohin die Zinsen gehen. Sie ist das Gegenteil von Markt-Timing.</p>
 <p>Sie lohnt sich nicht, wenn du das Geld zu einem festen Termin brauchst, etwa für einen Wohnungskauf in drei Jahren. Dann nimmst du genau diese Laufzeit. Sie lohnt sich auch nicht für den Notgroschen, der gehört aufs Tagesgeld, siehe <a href="../festgeld-oder-tagesgeld/">Festgeld oder Tagesgeld</a>.</p>
-<p>Varianten: Wer länger planen kann, baut die Treppe mit 1 bis 5 Jahren in fünf Stufen. Im Vergleich gibt es für 5 Jahre {_n(xs,60)} Angebote, bis {_pct(z60)} bei {L_(a60)}. Wer es einfacher will, nimmt zwei Stufen mit 1 und 2 Jahren. Die Seiten <a href="{F1}">1 Jahr</a>, <a href="{F}2-jahre/">2 Jahre</a> und <a href="{F}3-jahre/">3 Jahre</a> zeigen die Angebote je Stufe.</p></div>'''),
+<p>Varianten: Wer länger planen kann, baut die Treppe mit 1 bis 5 Jahren in fünf Stufen. Im Vergleich gibt es für 5 Jahre {_n(xs,60)} Angebote, bis {_pct(z60)} bei {L_(a60)}. Wer es einfacher will, nimmt zwei Stufen mit 1 und 2 Jahren. Die Angebote je Stufe zeigt der Vergleich, wenn du dort <a href="{F}?laufzeit=12">1 Jahr</a>, <a href="{F}?laufzeit=24">2 Jahre</a> oder <a href="{F}?laufzeit=36">3 Jahre</a> wählst.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
 <li>Zinsen und Mindestanlage: Konditionsseiten der Banken und Plattformen, verlinkt bei jedem Angebot im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}. Die Beispielrechnung übernimmt beim Bauen dieser Seite den jeweils besten Zins je Laufzeit.</li>
 <li>Einlagensicherung: {_ext(AK_ES,"Arbeiterkammer Wien, Einlagensicherung")}, abgerufen am {ABGERUFEN}.</li></ul></div>'''),

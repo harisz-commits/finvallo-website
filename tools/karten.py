@@ -457,35 +457,15 @@ def ins_limits(c):
         if h not in out: out.append(h)
     return out[:3]
 def faq(c):
-    """Fragen nur, wenn die Antwort mehr sagt als ein Einzelwert der Konditionstabelle (3 bis 6 Fragen, Kartenname in jeder Antwort)."""
+    """Nur Fragen, deren Antwort es sonst nirgends auf der Kartenseite gibt (Lieferzeit, Ausschlüsse der Reiseversicherung).
+    Standardfragen, die auf jeder Karte gleich lauten, gibt es bewusst nicht; ohne passende Frage hat die Seite keinen FAQ-Block."""
     T=c['titel']; q=[]
-    # Wer bekommt die Karte?
-    w=[]
-    if c.get('nurfuer'): w.append(f'Die {T} gibt es nur für bestimmte Kundengruppen: {c["nurfuer"]}.')
-    if c['typ'] in ('Kreditkarte','Charge'): w.append(f'Für die {T} prüft {c["anbieter"]} deine Bonität{" beim KSV1870" if c["land"]=="at" else " bei der Schufa"}.')
-    if c.get('giro'): w.append(f'Für die {T} brauchst du ein Konto bei {c["anbieter"]}'+(f' ({c["konto"]})' if c.get('konto') else '')+'.')
-    elif c.get('giro') is False: w.append(f'Ein Girokonto bei {c["anbieter"]} brauchst du für die {T} nicht, dein bestehendes Konto reicht.')
-    w.append(f'Beantragen kannst du sie mit Wohnsitz in {L["name"]}.')
-    q.append((f'Wer bekommt die {T}?',' '.join(w)))
     lz=lieferzeit(c)
     if lz: q.append((f'Wie lange dauert es, bis die {T} da ist?',f'Laut {c["anbieter"]} kommt die {T} nach {lz}.'))
-    z=zinsT(c)
-    if c['typ']=='Kreditkarte' and z:
-        q.append(('Was passiert, wenn ich die Rechnung nicht ganz bezahle?',f'Bei der {T} wird der offene Betrag in Raten zurückgezahlt und verzinst: {z}. Stell die Rückzahlung auf 100 %, dann fallen auf Einkäufe keine Zinsen an.'+(' Bargeld wird bei dieser Karte trotzdem ab dem Abhebungstag verzinst.' if (c.get('cash') or [''])[0]=='free_interest' or c.get('cashInterest') else '')+(' Die Rechnung wird abgebucht.' if c.get('auto') else ' Du überweist den Betrag selbst, also achte auf den Termin.' if c.get('auto') is False else '')))
-    if c['typ'] in ('Kreditkarte','Charge'):
-        q.append((f'Kann ich mit der {T} ein Auto mieten oder ein Hotel reservieren?',f'Die {T} ist eine {TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung","")} mit Kreditrahmen und kann für die Kaution geeignet sein. Entscheidend sind die Bedingungen der Mietstation oder des Hotels, die akzeptierte Kartenmarke'+(' (American Express wird seltener genommen)' if 'American Express' in (c.get('netz') or '') else '')+', ein ausreichender freier Rahmen und oft eine physische Karte auf den Namen des Hauptfahrers. Eine allgemeine Annahmegarantie gibt es nicht.'))
-    else:
-        q.append((f'Kann ich mit der {T} ein Auto mieten oder ein Hotel reservieren?',f'Das hängt vom Vermieter ab. Die {T} ist eine {TYPLAB.get(c["typ"],c["typ"])}, und viele Mietstationen und Hotels verlangen für die Kaution eine Kreditkarte. Ob eine Debitkarte angenommen wird, hängt von Station, Land und Fahrzeugklasse ab. Prüfe die Zahlungsbedingungen deiner Buchung.'))
     lim=ins_limits(c)
     if (c.get('tier') or 0)>0 and lim:
         q.append((f'Was deckt die Reiseversicherung bei der {T} nicht ab?',f'Laut Versicherungsbedingungen der {T}: '+' '.join(lim)))
-    kc=[x for x in (c.get('cons') or []) if not x.startswith('Bei Kautionen')][:3]
-    if kc:
-        q.append((f'Für wen lohnt sich die {T} nicht?',f'Die {T} passt weniger zu dir, wenn dich einer dieser Punkte stört: '+' '.join(x.rstrip('.')+'.' for x in kc)))
-    if len(q)<3 and c.get('stars') is not None:
-        q.append((f'Wie kommt die Bewertung der {T} zustande?',f'Die {T} bekommt {de1(c["stars"])} von 5 Sternen. Das ist der gewichtete Durchschnitt aus 7 Kriterien, die Aufschlüsselung steht im Abschnitt Bewertung.'))
-    if len(q)<3 and c.get('lgText'): q.append((f'Gibt es mit der {T} Lounge-Zugang?',f'Zur {T}: {c["lgText"].rstrip(".")}.'))
-    return q[:6]
+    return q
 def who(c):
     a=[]; b=[]
     if c.get('fee')==0 and c.get('fx')==0: a.append('Sie passt zu allen, die ohne Jahresgebühr und ohne Auslandsgebühren zahlen wollen, etwa auf Reisen.')
@@ -589,7 +569,7 @@ def card_page(c,cards,nrated,prov):
           "negativeNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":x} for i,x in enumerate(kc[:5])]}}
     fq=faq(c)
     ld=graph(rel,t,d,[(L['name'],f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Alle Karten',f'{code}/kreditkarten/alle/')]+([(c['anbieter'],f'{code}/kreditkarten/anbieter/{c["p"]}/')] if c['p'] in PROVPAGE.get(code,()) else [])+[(c['titel'],rel)],
-             [ld_card,{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}],date=gp)
+             [ld_card]+([{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}] if fq else []),date=gp)
     rk=f', Platz {c["rank"]} von {nrated} bewerteten Privatkarten in {L["name"]}' if c.get('rank') else ''
     glance=summary(c)+(f'Finvallo bewertet sie mit {de1(c["stars"])} von 5 Sternen{rk}. ' if c.get('stars') else '')+(monat_hint(c)+' ' if c.get('feeMonat') else '')+f'Stand: {dmy(gp)}.'
     a,b=who(c)
@@ -615,7 +595,7 @@ def card_page(c,cards,nrated,prov):
     {affiliate.btn(code,'kreditkarten',c['slug'],c.get('quelle'))}
     <div class="actrow"><a class="plink" href="{E(c.get("preis") or c.get("quelle"))}" target="_blank" rel="noopener">{"Preise &amp; Gebühren (PDF) ↗" if (c.get("preis") or "").lower().endswith(".pdf") else "Konditionen beim Anbieter ↗"}</a></div></div>
   <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
-  <nav class="secnav" aria-label="Abschnitte"><a href="#s-ueb" data-sec="s-ueb" class="on">Überblick</a><a href="#s-kond" data-sec="s-kond">Konditionen</a><a href="#s-vers" data-sec="s-vers">Versicherung</a><a href="#s-bew" data-sec="s-bew">Bewertung</a><a href="#s-faq" data-sec="s-faq">Fragen</a></nav>
+  <nav class="secnav" aria-label="Abschnitte"><a href="#s-ueb" data-sec="s-ueb" class="on">Überblick</a><a href="#s-kond" data-sec="s-kond">Konditionen</a><a href="#s-vers" data-sec="s-vers">Versicherung</a><a href="#s-bew" data-sec="s-bew">Bewertung</a>{'<a href="#s-faq" data-sec="s-faq">Fragen</a>' if fq else ''}</nav>
   <section id="s-ueb">
   <h2>Vorteile und Nachteile</h2>
   <div class="pc"><div class="box pro"><h3>Das spricht dafür</h3>{'<ul class="checks">'+"".join(f"<li>{E(x)}</li>" for x in pc)+'</ul>' if pc else '<p class="note">Noch keine bestätigten Vorteile.</p>'}</div>
@@ -632,7 +612,7 @@ def card_page(c,cards,nrated,prov):
   <h2>So beantragst du die Karte</h2><p class="note" style="margin-top:-6px">Das ist der übliche Ablauf. Die Details legt der Anbieter fest.</p>
   <div class="steps">{steps(c)}</div>
   </section>
-  <section id="s-faq"><h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div></section>
+  {f'<section id="s-faq"><h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div></section>' if fq else ''}
   {f"<h2>Hinweis der Redaktion</h2><p class='note'>{E(c['notiz'])}</p>" if c.get('notiz_public') else ""}
   {f"<h2>Ähnliche Karten</h2><div class='grid2'>{mini}</div>" if mini else ""}
   {weiter(c,P)}
@@ -681,8 +661,7 @@ def list_page(cards,priv,biz):
           f'{len(free)} der {len(priv)} bewerteten Karten kosten keine Jahresgebühr, {len(fx0)} verlangen 0 % beim Zahlen in Fremdwährung. Stand: {st}.')
     fq=[(f'Welche Kreditkarte ist in {N} die beste?',f'Laut Finvallo-Bewertung liegt die {top[0]["titel"]} mit {de1(top[0]["stars"])} von 5 Sternen vorn. Die Note entsteht aus 7 Kriterien mit festen Regeln; je nachdem, was dir wichtig ist (Reisen, Ausland, Punkte), kann in den Bestenlisten eine andere Karte vorn liegen. Stand: {st}.'),
         ('Welche Kreditkarten sind kostenlos?',f'{len(free)} der {len(priv)} bewerteten Karten haben dauerhaft keine Jahresgebühr'+(f', zum Beispiel {fmtl([c["titel"] for c in free[:3]])}' if free else '')+'. Kostenlos heißt aber nicht gebührenfrei: Fremdwährung, Bargeld und Teilzahlung können extra kosten; das steht bei jeder Karte.'),
-        ('Was ist der Unterschied zwischen Kreditkarte, Charge-Karte und Debitkarte?','Bei einer echten Kreditkarte kannst du den Betrag in Raten zahlen (gegen Zinsen). Eine Charge-Karte sammelt die Umsätze und bucht sie einmal im Monat komplett ab. Eine Debitkarte bucht sofort vom Konto ab. Welcher Typ eine Karte ist, steht bei jeder Karte; mehr dazu im Ratgeber „Kartentypen“.'),
-        ('Spielen Provisionen eine Rolle?','Nein. Sterne und Reihenfolge entstehen nach festen Regeln aus den Konditionen des Anbieters. Es gibt keine bezahlten Platzierungen.')]
+        ('Was ist der Unterschied zwischen Kreditkarte, Charge-Karte und Debitkarte?','Bei einer echten Kreditkarte kannst du den Betrag in Raten zahlen (gegen Zinsen). Eine Charge-Karte sammelt die Umsätze und bucht sie einmal im Monat komplett ab. Eine Debitkarte bucht sofort vom Konto ab. Welcher Typ eine Karte ist, steht bei jeder Karte; mehr dazu im Ratgeber „Kartentypen“.')]
     ld['@graph'].append({"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]})
     rgl=' · '.join(f'<a class="lnk" href="{P}{code}/ratgeber/{u}/">{t}</a>' for u,t in [('kostenlose-kreditkarte','Kostenlose Kreditkarte'),('kreditkarte-beantragen','Kreditkarte beantragen'),('fremdwaehrung','Gebühren im Ausland'),('reiseversicherung','Reiseversicherung'),('kartentypen','Kartentypen')] if os.path.exists(R+f'{code}/ratgeber/{u}/index.html'))
     body=f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/")}
@@ -1122,9 +1101,7 @@ def bestenlisten(cards,lists,other_lists):
         thead='<tr><th>#</th><th>Karte</th>'+''.join(f'<th>{E(h)}</th>' for h,_ in cols)+('<th>Kategorie</th>' if cat['w'] else '')+'<th>Gesamt</th></tr>'
         cnote=f'<p class="note" style="margin-top:8px">{E(COLNOTE[cat["k"]]+" " if cat["k"] in COLNOTE else "")}Bei gleicher Note steht die Karte mit der niedrigeren Jahresgebühr vorn.</p>'
         kurz=f'<b>Kurz gesagt:</b> {cat["h"]} in {N}: Platz 1 ist laut Finvallo die {top["titel"]} mit {de1(cat_stars(top,cat["w"]))} Sternen in dieser Kategorie'+(f', vor der {X[1]["titel"]}' if len(X)>1 else '')+(f' und der {X[2]["titel"]}' if len(X)>2 else '')+f'. Die Liste zeigt {"die Top 25 von "+str(len(X))+" bewerteten Karten" if len(X)>25 else "alle "+str(len(X))+" bewerteten Karten"}. Stand: {S}.'
-        fq=[(f'Welche Karte ist in {N} am besten in der Kategorie „{cat["t"]}“?',f'In der Kategorie „{cat["t"]}“ liegt laut Finvallo-Bewertung die {top["titel"]} vorn, mit {de1(cat_stars(top,cat["w"]))} von 5 Sternen (Gesamtnote {de1(top["stars"])}). Stand: {S}.'),
-            ('Wie entsteht diese Rangliste?',cat['d']+(' Grundlage ist die Gesamtnote der Karte.' if (cat['w'] or {}).get('_bonus') and cat['k'] not in ('punkte','cashback') else '')),
-            ('Spielen Provisionen eine Rolle?','Nein. Provisionen haben keinen Einfluss auf Sterne oder Reihenfolge, und es gibt keine bezahlten Platzierungen.')]
+        fq=[(f'Welche Karte ist in {N} am besten in der Kategorie „{cat["t"]}“?',f'In der Kategorie „{cat["t"]}“ liegt laut Finvallo-Bewertung die {top["titel"]} vorn, mit {de1(cat_stars(top,cat["w"]))} von 5 Sternen (Gesamtnote {de1(top["stars"])}). Stand: {S}.')]
         ld=graph(rel,t,d,[(N,f'{code}/'),('Kreditkarten',f'{code}/kreditkarten/'),('Bestenlisten',base),(cat['t'],rel)],
                  [{"@type":"ItemList","name":cat['h']+' in '+N,"numberOfItems":len(X),"itemListElement":[{"@type":"ListItem","position":i+1,"name":c['titel'],"url":f"https://finvallo.com/{code}/kreditkarten/{c['slug']}/"} for i,c in enumerate(X[:25])]},
                   {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}])
