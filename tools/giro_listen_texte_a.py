@@ -12,7 +12,7 @@ Q_DE=dict(
     bgb504a=('https://www.gesetze-im-internet.de/bgb/__504a.html','§ 504a BGB: Beratungspflicht bei dauerhafter Überziehung'),
     zkg=('https://www.gesetze-im-internet.de/zkg/','Zahlungskontengesetz (ZKG)'),
     zkg20=('https://www.gesetze-im-internet.de/zkg/__20.html','§ 20 ZKG: Kontowechselhilfe'),
-    bgh=('https://www.bundesgerichtshof.de/SharedDocs/Pressemitteilungen/DE/2021/2021088.html','BGH, Urteil vom 27.04.2021, XI ZR 26/20: Zustimmung zu Entgeltänderungen'),
+    bgh=('https://www.bundesgerichtshof.de/SharedDocs/Pressemitteilungen/DE/2021/2021088.html','BGH, Urteil vom 27.04.2021, XI ZR 26/20: Zustimmungsfiktion bei AGB-Änderungen unwirksam'),
     einsig=('https://www.gesetze-im-internet.de/einsig/__8.html','§ 8 Einlagensicherungsgesetz: 100.000 € je Person und Bank'),
     sepa=('https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32012R0260','SEPA-Verordnung (EU) Nr. 260/2012, Art. 9'),
     bafin=('https://www.bafin.de/DE/verbraucherinnen-verbraucher/themen-finanzprodukte/konten-zahlungen/konten/basiskonto/basiskonto_node.html','BaFin: Basiskonto'),
@@ -259,17 +259,17 @@ def kostenlos_at(c):
         prose(p(f'Gerechnet {standardfall(c)}. Erfüllst du die Gratis-Bedingung nicht, kostet das Konto so viel wie in der Spalte „Kontoführung ohne Bedingung“.'))
         +tbl(['Konto','Kontoführung ohne Bedingung','IBAN','Fremdwährung','Kosten im Jahr'],rows)
         +prose(p((f'Trotz kostenloser Kontoführung kosten {konten(len(teuer))} in dieser Rechnung Geld, am meisten das {L(teuer[0])} mit {eur(tot(teuer[0]))} € im Jahr. Der Grund sind fast immer Behebungen über dem Gratis-Kontingent. ' if teuer else '')
-          +(f'{konten(len(fremd),True)} haben keine österreichische IBAN. Das ist erlaubt: Laut SEPA-Verordnung darf kein Arbeitgeber und keine Firma eine IBAN aus einem anderen SEPA-Land ablehnen. ' if fremd else '')
+          +(f'{konten(len(fremd),True)} haben keine österreichische IBAN. Das ist erlaubt: Laut SEPA-Verordnung darf kein Arbeitgeber und keine Firma eine IBAN aus einem anderen EU-Land ablehnen. ' if fremd else '')
           +f'Mit deinen eigenen Zahlen rechnest du im <a class="lnk" href="{c["G"]}">Girokonto-Vergleich</a>.'))))
     S.append(('Wenn die Bank die Entgelte ändert',prose(
-        p('Ein Konto, das heute gratis ist, kann morgen etwas kosten. Die Bank muss dir eine Änderung aber mindestens zwei Monate vorher mitteilen, so verlangt es das Zahlungsdienstegesetz (ZaDiG 2018). Bis zum Inkrafttreten kannst du den Vertrag kostenlos kündigen. Manche Banken haben außerdem Klauseln, mit denen sie Entgelte an einen Index wie den Verbraucherpreisindex anpassen. Ob das bei deinem Konto so ist, steht im Kontovertrag.'),
+        p('Ein Konto, das heute gratis ist, kann morgen etwas kosten. Die Bank muss dir eine Änderung aber mindestens zwei Monate vorher mitteilen, so verlangt es § 50 Zahlungsdienstegesetz (ZaDiG 2018). Bis zum Inkrafttreten kannst du den Vertrag kostenlos kündigen. Manche Banken haben außerdem Klauseln, mit denen sie Entgelte an einen Index wie den Verbraucherpreisindex anpassen. Ob das bei deinem Konto so ist, steht im Kontovertrag.'),
         p('Gefällt dir eine Änderung nicht, musst du nicht alles selbst umstellen. Banken in Österreich müssen einen Kontowechsel-Service anbieten. Die neue Bank informiert dann Arbeitgeber und Lastschrift-Partner. Für Banken ohne österreichischen Sitz gilt dieser gesetzliche Service nicht immer. Mehr dazu im Ratgeber '+RG('girokonto-wechseln','Konto wechseln')+' und bei der '+ext(Q_AT['ak_wechsel'])+'.'))))
     S.append(('Checkliste vor der Eröffnung',prose(
         ol(['<b>Bedingung realistisch prüfen.</b> Geht jeden Monat sicher genug ein? Auch in der Karenz?',
             '<b>Bargeld-Gewohnheiten zählen.</b> Wie oft hebst du ab, und wo? In kleinen Orten gibt es oft nur Bankomaten der regionalen Banken.',
             '<b>IBAN prüfen.</b> Brauchst du eine österreichische IBAN, etwa weil ein Formular es (unrechtmäßig) verlangt, schränkt das die Auswahl ein.',
             '<b>Bankomatkarte und App.</b> Gibt es eine physische Karte? Funktionieren Apple Pay und Google Pay? Mehr im Ratgeber '+RG('apple-pay-google-pay','Apple Pay und Google Pay')+'.',
-            '<b>Einlagensicherung.</b> Pro Person und Bank sind 100.000 € gesetzlich gesichert, bei österreichischen Banken über die Einlagensicherung AUSTRIA. Details im Ratgeber '+RG('einlagensicherung','Einlagensicherung')+'.',
+            '<b>Einlagensicherung.</b> Pro Person und Bank sind 100.000 € gesetzlich gesichert, bei den meisten österreichischen Banken über die Einlagensicherung AUSTRIA, bei Sparkassen und Raiffeisenbanken über deren eigene Sicherungseinrichtung. Details im Ratgeber '+RG('einlagensicherung','Einlagensicherung')+'.',
             '<b>Kündigung beim alten Konto.</b> Erst wechseln, dann kündigen. Sonst stehen Lastschriften ohne Deckung im Raum.']))))
     pens=[k for k in bed if 'Pension' in (k['gratis'].get('eingang_art') or '')+k['name']]
     jung=[k for k in bed if k['gratis'].get('alter_unter')]
@@ -288,7 +288,7 @@ def kostenlos_at(c):
        ('Was passiert, wenn mein Gehalt einmal zu spät kommt?',
         'Die Bank prüft meist am Monatsende. Fehlt der Eingang in diesem Monat, verrechnet sie für diesen Zeitraum das normale Entgelt.'+(f' Großzügiger sind {und([L(k) for k in nachfrist])}: dort gelten die normalen Preise erst, wenn mehrere Monate nichts kommt.' if nachfrist else '')),
        ('Ist ein Gratiskonto mit deutscher oder litauischer IBAN ein Problem?',
-        'Rechtlich nicht. Die SEPA-Verordnung der EU verbietet es Arbeitgebern, Vermietern und Firmen, eine IBAN aus einem anderen SEPA-Land abzulehnen. In der Praxis kann es bei einzelnen Formularen trotzdem hängen. Dann hilft ein Hinweis auf Artikel 9 der SEPA-Verordnung.'),
+        'Rechtlich nicht. Die SEPA-Verordnung der EU verbietet es Arbeitgebern, Vermietern und Firmen, eine IBAN aus einem anderen EU-Land abzulehnen. In der Praxis kann es bei einzelnen Formularen trotzdem hängen. Dann hilft ein Hinweis auf Artikel 9 der SEPA-Verordnung.'),
        ('Darf die Bank mein Gratiskonto kostenpflichtig machen?',
         'Ja, mit mindestens zwei Monaten Vorlauf. In dieser Zeit kannst du kostenlos kündigen. Bei Unklarheiten helfen die Arbeiterkammer und die Konsumentenschutz-Beratung.'),
        ('Gibt es Gratiskonten mit Filiale?',
@@ -352,7 +352,7 @@ def ohne_de(c):
     S.append(('Wie viele Konten du haben darfst',prose(
         p('So viele du willst. In Deutschland gibt es keine Obergrenze für Girokonten. Zwei Ausnahmen gibt es:'),
         ul(['<b>P-Konto.</b> Ein Pfändungsschutzkonto darfst du nur einmal haben. Mehr im Ratgeber '+RG('p-konto','P-Konto')+'.',
-            '<b>Basiskonto.</b> Einen Anspruch darauf hast du nur, wenn du noch kein nutzbares Zahlungskonto in Deutschland hast. Mehr im Ratgeber '+RG('basiskonto','Basiskonto')+'.']),
+            '<b>Basiskonto.</b> Die Bank darf es ablehnen, wenn du schon ein nutzbares Zahlungskonto bei einer Bank in Deutschland hast (§ 35 ZKG). Mehr im Ratgeber '+RG('basiskonto','Basiskonto')+'.']),
         p(f'Jedes neue Konto kann bei der {E(c["bon"])} gemeldet werden. Ein Girokonto ohne Dispo ist dort kein Kredit. Trotzdem gilt: Ein paar Konten mit klarem Zweck sind besser als zehn, die du nicht mehr überblickst. Ein gratis Zweitkonto ohne Bedingung ist dafür ideal, weil es dich nichts kostet, auch wenn du es monatelang kaum nutzt.'))))
     rows=[(L(k),E(k.get('einlagensicherung') or 'keine Angabe'),E(k.get('iban') or '')) for k in X]
     S.append(('Wo dein Guthaben gesichert ist',
@@ -407,9 +407,9 @@ def ohne_at(c):
         p((f'{konten(len(fremd),True)} in dieser Liste {"vergibt" if len(fremd)==1 else "vergeben"} keine österreichische IBAN, sondern eine aus '+und(sorted({iban_namen.get(k["iban"],k["iban"]) for k in fremd}))+'. ' if fremd else '')
           +(f'Eine österreichische IBAN bekommst du bei {und([L(k) for k in heim])}. ' if heim else '')
           +'Fast alle bedingungslos gratis Konten in Österreich kommen von Banken, die ihren Sitz in einem anderen EU-Land haben und hier ohne eigene Filialen arbeiten. Das hat ein paar Folgen:'),
-        ul(['<b>IBAN.</b> Arbeitgeber, Vermieter, Versicherungen und Behörden müssen eine IBAN aus einem anderen SEPA-Land akzeptieren (Artikel 9 der SEPA-Verordnung). Weigert sich jemand, kannst du dich bei der Finanzmarktaufsicht beschweren.',
-            '<b>Einlagensicherung.</b> Dein Guthaben ist bis 100.000 € geschützt, aber über die Einlagensicherung des Heimatlands der Bank, nicht über die Einlagensicherung AUSTRIA. Die Höhe ist in der EU einheitlich, im Ernstfall läuft die Auszahlung aber über eine ausländische Stelle.',
-            '<b>KESt auf Zinsen.</b> Österreichische Banken ziehen die Kapitalertragsteuer automatisch ab. Banken ohne steuerliche Vertretung in Österreich tun das oft nicht. Dann musst du Zinsen selbst in der Steuererklärung angeben. Prüfe, was deine Bank dazu schreibt.',
+        ul(['<b>IBAN.</b> Arbeitgeber, Vermieter, Versicherungen und Behörden müssen eine IBAN aus einem anderen EU-Land akzeptieren (Artikel 9 der SEPA-Verordnung). Weigert sich eine Bank, ist die Finanzmarktaufsicht die richtige Stelle. Macht dein Arbeitgeber Probleme, hilft dir die Arbeiterkammer.',
+            '<b>Einlagensicherung.</b> Dein Guthaben ist bis 100.000 € geschützt, aber über die Einlagensicherung des Heimatlands der Bank, nicht über eine österreichische Sicherungseinrichtung. Die Höhe ist in der EU einheitlich, im Ernstfall läuft die Auszahlung aber über eine ausländische Stelle.',
+            '<b>KESt auf Zinsen.</b> Österreichische Banken ziehen die Kapitalertragsteuer automatisch ab. Banken ohne Sitz oder Zweigstelle in Österreich müssen das nicht und tun es oft auch nicht. Dann musst du Zinsen selbst in der Steuererklärung angeben. Prüfe, was deine Bank dazu schreibt.',
             '<b>Kontowechsel-Service.</b> Der gesetzliche Service nach dem VZKG verpflichtet Banken in Österreich. Ausländische Anbieter machen ihn nicht immer mit, dann informierst du Arbeitgeber und Lastschrift-Partner selbst.',
             '<b>Beschwerden.</b> Zuständig ist meist die Aufsicht im Sitzland. Die Arbeiterkammer hilft dir trotzdem mit Beratung.']),
         p('Nichts davon ist ein Grund, die Finger von diesen Konten zu lassen. Die Banken stehen unter EU-Aufsicht und haben dieselben Regeln für Einlagensicherung und Zahlungsverkehr wie österreichische Banken. Du solltest die Unterschiede aber kennen, bevor du dein Gehalt dorthin umleitest. Steuerliche Fragen klärst du am einfachsten einmal mit dem Finanzamt oder in der Steuerberatung, bevor nennenswerte Zinsen anfallen.'))))
@@ -429,13 +429,13 @@ def ohne_at(c):
             '<b>Geld überweisen.</b> Eine erste Überweisung vom alten Konto zeigt, ob alles klappt. Soll das Konto dein Hauptkonto werden, gib die neue IBAN beim Arbeitgeber und bei Lastschrift-Partnern an.']),
         p('Halte vor dem Start einen gültigen Reisepass oder Personalausweis, dein Smartphone mit aktueller App-Version und eine gute Internetverbindung bereit. Die Video-Identifizierung scheitert am häufigsten an spiegelnden Ausweisen und schlechtem Licht. Plane zehn bis zwanzig Minuten ein. Bei manchen Anbietern bist du am selben Tag fertig, bei anderen dauert die Freigabe ein bis zwei Werktage.'))))
     S.append(('Mehrere Konten nebeneinander',prose(
-        p('In Österreich darfst du so viele Girokonten haben, wie du möchtest. Ein Gratiskonto ohne Bedingung eignet sich deshalb gut als zweites Konto neben dem Gehaltskonto. Zwei Grenzen gibt es: Ein Pfändungsschutzkonto darfst du nur einmal führen ('+RG('pfaendungsschutzkonto','Ratgeber Pfändungsschutzkonto')+'), und das gesetzliche Basiskonto steht dir nur zu, wenn du noch kein Zahlungskonto in Österreich hast ('+RG('basiskonto','Ratgeber Basiskonto')+').'),
+        p('In Österreich darfst du so viele Girokonten haben, wie du möchtest. Ein Gratiskonto ohne Bedingung eignet sich deshalb gut als zweites Konto neben dem Gehaltskonto. Eine Grenze gibt es beim gesetzlichen Basiskonto: Hast du schon ein nutzbares Konto bei einer Bank mit Sitz in Österreich, darf eine Bank es dir verweigern ('+RG('basiskonto','Ratgeber Basiskonto')+'). Ein Pfändungsschutzkonto wie in Deutschland gibt es in Österreich nicht. Den Schutz bei einer Kontopfändung beantragst du beim Exekutionsgericht ('+RG('pfaendungsschutzkonto','Ratgeber Pfändungsschutzkonto')+').'),
         p('Wer zwei Konten nutzt, sollte festlegen, welches wofür da ist. Ein bewährtes Muster: Gehalt und Fixkosten aufs Hauptkonto, ein fester Betrag per Dauerauftrag aufs Gratiskonto für Alltag und Reisen. So siehst du sofort, was im Monat noch übrig ist.'),
         p('Für Paare gibt es zwei Wege. Entweder jeder hat ein eigenes Gratiskonto und ihr überweist einen festen Anteil auf ein gemeinsames Konto für Miete und Einkauf. Oder ihr eröffnet ein echtes Gemeinschaftskonto. Nicht jede Neobank bietet das an, die Auswahl steht in der Liste '+LI('gemeinschaftskonto','Gemeinschaftskonten')+'. Manche Anbieter erlauben stattdessen geteilte Unterkonten, auf die beide zugreifen können. Mehr dazu in der Liste '+LI('unterkonten','Girokonten mit Unterkonten')+'.'))))
     rows=[(L(k),E(k.get('einlagensicherung') or 'keine Angabe'),E(iban_namen.get(k.get('iban'),k.get('iban') or ''))) for k in X]
     S.append(('Einlagensicherung der einzelnen Konten',
         tbl(['Konto','Einlagensicherung laut Bank','IBAN aus'],rows)
-        +prose(p('Die gesetzliche Grenze von 100.000 € pro Person und Bank gilt in der ganzen EU. Bei österreichischen Banken zahlt im Ernstfall die Einlagensicherung AUSTRIA, bei ausländischen Banken die Stelle im Sitzland. Mehr im Ratgeber '+RG('einlagensicherung','Einlagensicherung')+'.'))))
+        +prose(p('Die gesetzliche Grenze von 100.000 € pro Person und Bank gilt in der ganzen EU. Bei österreichischen Banken zahlt im Ernstfall die Einlagensicherung AUSTRIA oder, bei Sparkassen und Raiffeisenbanken, deren eigene Sicherungseinrichtung. Bei ausländischen Banken zahlt die Stelle im Sitzland. Mehr im Ratgeber '+RG('einlagensicherung','Einlagensicherung')+'.'))))
     S.append(('Eine Neobank als Hauptkonto: geht das?',prose(
         p('Ja, viele nutzen eines dieser Konten als einziges Konto. Ein paar Dinge solltest du dann vorher klären:'),
         ul(['<b>Gehalt, Pension, Familienbeihilfe.</b> Alle Zahlungen kannst du auf eine ausländische IBAN überweisen lassen. Gib die neue IBAN rechtzeitig vor dem nächsten Zahltag bekannt.',
@@ -448,9 +448,9 @@ def ohne_at(c):
     S.append(('Quellen',prose(ul([ext(Q_AT['sepa']),ext(Q_AT['fma']),ext(Q_AT['es']),ext(Q_AT['ak_basis']),ext(Q_AT['ak_wechsel']),ext(Q_AT['bmf'])]
         +quellen_banken(X)+['Karten, Bargeld, IBAN und Überziehung: Preislisten und Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich. Stand: '+E(c['stand'])+'.']))))
     F=[('Muss mein Arbeitgeber eine ausländische IBAN akzeptieren?',
-        'Ja. Artikel 9 der SEPA-Verordnung verbietet es, eine IBAN aus einem anderen SEPA-Land abzulehnen. Das gilt für Arbeitgeber, Vermieter, Versicherungen und Behörden. Weigert sich jemand, kannst du das der Finanzmarktaufsicht melden.'),
+        'Ja. Artikel 9 der SEPA-Verordnung verbietet es, eine IBAN aus einem anderen EU-Land abzulehnen. Das gilt für Arbeitgeber, Vermieter, Versicherungen und Behörden. Weigert sich eine Bank, kannst du das der Finanzmarktaufsicht melden. Macht dein Arbeitgeber Probleme, hilft dir die Arbeiterkammer.'),
        ('Muss ich Zinsen bei einer ausländischen Bank selbst versteuern?',
-        'Oft ja. Eine Bank ohne Abzug der österreichischen KESt zahlt die Zinsen brutto aus. Dann gibst du sie in der Einkommensteuererklärung an. Manche ausländische Anbieter haben eine steuerliche Vertretung in Österreich und ziehen die KESt doch ab, das steht in deren Unterlagen.'),
+        'Oft ja. Eine Bank ohne Abzug der österreichischen KESt zahlt die Zinsen brutto aus. Dann gibst du sie in der Einkommensteuererklärung an. Manche ausländische Anbieter haben eine Zweigstelle in Österreich oder ziehen die KESt trotzdem ab, das steht in deren Unterlagen.'),
        ('Kann ich bei diesen Konten Bargeld einzahlen?',
         'Nur eingeschränkt. Ohne Filialen geht es höchstens über Partner im Handel oder spezielle Automaten, und das kostet meist einen Prozentsatz. Wer regelmäßig Bargeld einzahlt, ist mit einem Konto bei einer Filialbank besser bedient.'),
        ('Bekomme ich ohne Gehaltseingang einen Überziehungsrahmen?',

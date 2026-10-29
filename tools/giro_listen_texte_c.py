@@ -146,20 +146,20 @@ def _gem_de(c):
               '<b>Minus ausgleichen.</b> Ein Konto im Minus schließt keine Bank. Bis der Saldo auf null steht, haftet ihr beide weiter.',
               '<b>Daueraufträge umziehen.</b> Miete, Strom, Handy, Versicherungen: Alles muss auf die neuen Einzelkonten. Die Kontowechselhilfe nach § 20 ZKG erledigt das für dich, Details im Ratgeber '+rg('girokonto-wechseln','Girokonto wechseln')+'.',
               '<b>Gemeinsam kündigen.</b> Schließen können das Konto nur alle Inhaber zusammen. Weigert sich einer, bleibt nur der Widerruf der Einzelverfügung, damit niemand mehr allein handeln kann.']),
-         'Eine Pfändung gegen einen Inhaber trifft auch das gemeinsame Konto. Ein Gemeinschaftskonto kann kein P-Konto sein. Das Gesetz gibt deshalb einen Monat Schutz: In dieser Zeit zahlt die Bank nichts an den Gläubiger aus, und jeder Inhaber kann verlangen, dass sein Anteil auf ein eigenes Konto übertragen wird, das er als P-Konto führt (§ 850l ZPO). Mehr dazu im Ratgeber '+rg('p-konto','P-Konto')+'.')),
+         'Eine Pfändung gegen einen Inhaber trifft auch das gemeinsame Konto. Ein Gemeinschaftskonto kann kein P-Konto sein. Das Gesetz gibt deshalb einen Monat Schutz: In dieser Zeit zahlt die Bank nichts an den Gläubiger aus, und jeder Inhaber kann verlangen, dass sein Anteil auf ein eigenes Konto bei derselben Bank übertragen wird, das er als P-Konto führt (§ 850l ZPO). Mehr dazu im Ratgeber '+rg('p-konto','P-Konto')+'.')),
      ('Gemeinschaftskonto oder geteilte Unterkonten',
       _P('Viele Paare brauchen gar kein vollständiges Gemeinschaftskonto. Ein beliebtes Modell sind drei Töpfe: Jeder behält sein eigenes Konto, und beide überweisen jeden Monat einen festen Betrag auf ein gemeinsames Haushaltskonto. Von dort gehen Miete, Strom und Einkauf ab. Was übrig bleibt, gehört jedem selbst. Das hält die Haftung und die Schenkungsfrage klein.',
          'Einige Banken bieten Unterkonten an, die du mit einer anderen Person teilen kannst. Das sieht aus wie ein Gemeinschaftskonto, ist rechtlich aber meist keins: Inhaber bleibt der, dem das Hauptkonto gehört. Der andere darf nur einzahlen oder auch ausgeben, je nach Freigabe. Für kleine gemeinsame Kassen, etwa Urlaub oder WG-Einkauf, reicht das völlig. '
          +(f'In dieser Liste gibt es {_n(len(uk),"Konto","Konten")}, bei {"dem" if len(uk)==1 else "denen"} du zusätzlich Unterkonten anlegen kannst: {_links(c,uk,4)}. ' if uk else '')
          +'Alle Konten mit Unterkonten stehen in der Liste '+li('unterkonten','Girokonten mit Unterkonten')+'.',
-         'Ein Vorteil des echten Gemeinschaftskontos bleibt: die Einlagensicherung. Sie schützt 100.000 € je Einleger und Bank (§ 8 EinSiG), und das Guthaben auf einem Gemeinschaftskonto wird jedem Inhaber zur Hälfte zugerechnet. Zwei Inhaber sind also mit bis zu 200.000 € abgesichert, solange keiner bei derselben Bank noch weiteres Geld liegen hat. Mehr im Ratgeber '+rg('einlagensicherung','Einlagensicherung')+'.')),
+         'Ein Vorteil des echten Gemeinschaftskontos bleibt: die Einlagensicherung. Sie schützt 100.000 € je Einleger und Bank (§ 8 EinSiG), und das Guthaben auf einem Gemeinschaftskonto wird jedem Inhaber zur Hälfte zugerechnet (§ 7 EinSiG). Zwei Inhaber sind also mit bis zu 200.000 € abgesichert, solange keiner bei derselben Bank noch weiteres Geld liegen hat. Mehr im Ratgeber '+rg('einlagensicherung','Einlagensicherung')+'.')),
      ('Quellen',
       _P(_ul(['Gemeinschaftskonto möglich, Preise, Karten und Eröffnungsweg: Preis- und Leistungsverzeichnisse der Banken, verlinkt bei jedem Konto im Vergleich, Stand '+E(c['stand'])+'.',
               'Gesamtgläubiger und Ausgleich: '+_ext(DE_BGB(428),'§ 428 BGB')+', '+_ext(DE_BGB(430),'§ 430 BGB')+'; Haftung: '+_ext(DE_BGB(421),'§ 421 BGB')+'.',
               'Schenkung und Erbschaft: '+_ext(DE_ERBST(16),'§ 16 ErbStG (Freibeträge)')+', '+_ext(DE_ERBST(19),'§ 19 ErbStG (Steuersätze)')+', '+_ext(DE_ERBST(30),'§ 30 ErbStG (Anzeigepflicht)')+', '+_ext(DE_ERBST(33),'§ 33 ErbStG (Meldung der Banken)')+'; BFH, Urteil vom 23.11.2011, II R 33/10.',
               'Identifizierung und Steuer-ID: '+_ext(DE_GWG_12,'§ 12 GwG')+', '+_ext(DE_AO_154,'§ 154 AO')+'.',
               'Pfändung: '+_ext(DE_ZPO_850L,'§ 850l ZPO')+'; Kontowechsel: '+_ext(DE_ZKG(20),'§ 20 ZKG')+'.',
-              'Einlagensicherung: '+_ext(DE_EINSIG,'§ 8 EinSiG')+', '+_ext(DE_BAFIN_ES,'BaFin, Einlagensicherung und Anlegerentschädigung')+', '+ABG+'.']))),
+              'Einlagensicherung: '+_ext('https://www.gesetze-im-internet.de/einsig/__7.html','§ 7 EinSiG')+', '+_ext(DE_EINSIG,'§ 8 EinSiG')+', '+_ext(DE_BAFIN_ES,'BaFin, Einlagensicherung und Anlegerentschädigung')+', '+ABG+'.']))),
     ]
     faq=[
      ('Muss man verheiratet sein, um ein Gemeinschaftskonto zu eröffnen?','Nein. Jede volljährige Person kann mit einer anderen ein Gemeinschaftskonto eröffnen, auch unverheiratete Paare, Geschwister oder eine WG. Steuerlich gibt es aber einen Unterschied: Unverheiratete haben bei Schenkungen nur 20.000 € Freibetrag in zehn Jahren, Ehepartner 500.000 €.'),
@@ -218,7 +218,7 @@ def _gem_at(c):
       _P('Ein einfaches Rechenbeispiel: Zahlt ihr heute für zwei Einzelkonten je 5 € im Monat, sind das zusammen 120 € im Jahr. Läuft alles über ein gemeinsames Konto, zahlt ihr das Entgelt nur einmal und spart 60 €. Ganz auf eigene Konten verzichten solltet ihr als Paar aber nicht: Jeder sollte ein Konto haben, auf das nur er selbst Zugriff hat, etwa als Notreserve für den Fall einer Trennung. Am besten eines ohne Kontoführungsentgelt.',
          'Achte bei Gratis-Bedingungen auf die Formulierung. Verlangt die Bank einen Gehalts- oder Pensionseingang, zählt beim Gemeinschaftskonto meist jeder Eingang dieser Art, egal von welchem Inhaber. Reine Umbuchungen vom eigenen Sparkonto zählen dagegen oft nicht. Einen Überblick über alle Konten mit ihren Entgelten bietet auch der '+_ext(AT_BANKENRECHNER,'Bankenrechner der Arbeiterkammer')+'.')),
      ('Solidarhaftung: Wenn einer überzieht, zahlen beide',
-      _P('Alle Inhaber eines Gemeinschaftskontos haften der Bank zur ungeteilten Hand (§ 891 ABGB). Rutscht euer Konto um 1.800 € ins Minus, darf die Bank die ganzen 1.800 € von dir fordern, auch wenn dein Partner das Geld ausgegeben hat. Wer im Innenverhältnis wie viel schuldet, müsst ihr untereinander klären.',
+      _P('Alle Inhaber eines Gemeinschaftskontos haften der Bank nach den üblichen Geschäftsbedingungen zur ungeteilten Hand (§ 891 ABGB). Rutscht euer Konto um 1.800 € ins Minus, darf die Bank die ganzen 1.800 € von dir fordern, auch wenn dein Partner das Geld ausgegeben hat. Wer im Innenverhältnis wie viel schuldet, müsst ihr untereinander klären.',
          ('Den Überziehungsrahmen setzt ihr am besten niedrig an oder verzichtet ganz darauf. '
           +(f'Einige Konten haben gar keinen eingeräumten Rahmen. Wo es einen gibt, kostet er in dieser Liste zwischen {pct(mit_r[0]["sollzins"])} und {pct(mit_r[-1]["sollzins"])} Sollzinsen im Jahr. ' if len(mit_r)>1 else ''))
          +'Was Rahmen und Überschreitung kosten und welche neuen Informationspflichten ab 20. November 2026 gelten, steht im Ratgeber '+rg('kontoueberziehung','Kontoüberziehung')+'.',
@@ -228,7 +228,7 @@ def _gem_at(c):
       _tbl(['Wer schenkt wem','Meldepflicht ab','Frist'],[
         ('Angehörige, dazu zählen Ehepartner und Lebensgefährten','mehr als 50.000 € innerhalb eines Jahres','drei Monate ab der Schenkung'),
         ('Andere Personen, etwa Freunde oder WG-Mitbewohner','mehr als 15.000 € innerhalb von fünf Jahren','drei Monate ab der Schenkung')])+
-      _P('Die Meldung machst du mit dem Formular Schenk 1, am einfachsten über FinanzOnline. Sie kostet nichts. Wer sie vergisst, riskiert aber eine Geldstrafe von bis zu 10 % des geschenkten Betrags. Übliche Gelegenheitsgeschenke und Hausrat sind ausgenommen.',
+      _P('Die Meldung machst du am einfachsten über FinanzOnline. Sie kostet nichts. Wer sie absichtlich unterlässt, riskiert aber eine Geldstrafe von bis zu 10 % des geschenkten Betrags. Übliche Gelegenheitsgeschenke bis 1.000 € und Hausrat sind ausgenommen.',
          'Ein Beispiel: Du erbst 120.000 € und überweist alles auf das Konto, das du mit deinem Lebensgefährten teilst. Die Hälfte, also 60.000 €, kann als Schenkung an ihn gelten. Das liegt über 50.000 €, also ist eine Meldung fällig. Willst du das vermeiden, bleibt die Erbschaft auf deinem Einzelkonto, und ihr nutzt das gemeinsame Konto nur für den Haushalt.')),
      ('Wenn ein Inhaber stirbt',
       _P('Beim Oder-Konto bleibt der überlebende Inhaber nach den üblichen Geschäftsbedingungen der Banken verfügungsberechtigt. Miete und laufende Rechnungen können also weiter bezahlt werden. Das heißt aber nicht, dass das ganze Guthaben jetzt dem Überlebenden gehört. Der Anteil des Verstorbenen, im Zweifel die Hälfte, fällt in die Verlassenschaft.',
@@ -240,7 +240,7 @@ def _gem_at(c):
               '<b>Saldo ausgleichen.</b> Solange das Konto im Minus ist, schließt die Bank es nicht, und beide haften weiter.',
               '<b>Zahlungen umziehen.</b> Gehalt, Miete, Strom und Daueraufträge gehören auf die neuen Einzelkonten. Der gesetzliche Kontowechsel-Service nimmt dir viel davon ab, siehe '+rg('girokonto-wechseln','Girokonto wechseln')+' und die '+_ext(AT_AK_WECHSEL,'Infos der Arbeiterkammer zum Kontowechsel')+'.',
               '<b>Gemeinsam kündigen.</b> Schließen können das Konto nur alle Inhaber zusammen.']),
-         'Wird gegen einen Inhaber Exekution geführt, kann auch das gemeinsame Guthaben betroffen sein. Was am Konto geschützt ist und wie das Pfändungsschutzkonto funktioniert, steht im Ratgeber '+rg('pfaendungsschutzkonto','Pfändungsschutzkonto')+'.')),
+         'Wird gegen einen Inhaber Exekution geführt, kann auch das gemeinsame Guthaben betroffen sein. Ein Pfändungsschutzkonto wie in Deutschland gibt es in Österreich nicht. Was am Konto geschützt ist und wie du den Kontenschutz beim Exekutionsgericht beantragst (§ 292i EO), steht im Ratgeber '+rg('pfaendungsschutzkonto','Pfändungsschutzkonto')+'.')),
      ('Gemeinsames Konto oder geteilte Unterkonten',
       _P('Ein gemeinsames Konto ist nicht die einzige Lösung. Viele Paare fahren gut mit dem Drei-Konten-Modell: Jeder behält sein eigenes Gehaltskonto, und beide zahlen einen festen Betrag auf ein gemeinsames Haushaltskonto ein. Das hält die Haftung überschaubar und die Frage, wem was gehört, einfach.',
          'Manche Banken erlauben, ein Unterkonto mit einer anderen Person zu teilen. Rechtlich bleibt das ein Teil deines Kontos, der andere bekommt nur Zugriff. Für eine Urlaubskasse oder die WG-Einkäufe passt das gut. Für das ganze Familienbudget fehlt dann aber die zweite Inhaberin, die auch allein Verträge mit der Bank regeln kann. '
@@ -349,7 +349,7 @@ def _stu_de(c):
          +(f'Auch Auszubildende nennen die Bedingungen bei {_links(c,azubi,4)}. ' if azubi else '')
          +(f'Freiwilligendienst oder Bundesfreiwilligendienst zählen bei {_links(c,frw,3)}. ' if frw else '')
          +'Volljährige Schülerinnen und Schüler, Praktikanten und Volontäre sind bei vielen Banken ebenfalls dabei, solange sie einen Nachweis bringen.',
-         'Für Azubis ist das Konto doppelt wichtig, weil hier die Ausbildungsvergütung eingeht. Gib deinem Ausbildungsbetrieb die IBAN rechtzeitig vor dem ersten Monat. Das Konto muss keine deutsche IBAN haben: Nach der SEPA-Verordnung darf ein Arbeitgeber keine Kontoverbindung aus einem anderen SEPA-Land ablehnen.',
+         'Für Azubis ist das Konto doppelt wichtig, weil hier die Ausbildungsvergütung eingeht. Gib deinem Ausbildungsbetrieb die IBAN rechtzeitig vor dem ersten Monat. Das Konto muss keine deutsche IBAN haben: Nach der SEPA-Verordnung darf ein Arbeitgeber keine Kontoverbindung aus einem anderen EU-Land ablehnen.',
          'Bist du noch keine 18, eröffnen deine Eltern das Konto mit dir zusammen. Konten für Minderjährige laufen ohne Dispo und stehen in der Liste '+li('kinder-jugendkonto','Kinder- und Jugendkonten')+'.')),
      ('Quellen',
       _P(_ul(['Altersgrenzen, Nachweise, Preise, Dispozinsen und Fremdwährungsentgelte: Preis- und Leistungsverzeichnisse und Produktseiten der Banken, verlinkt bei jedem Konto im Vergleich, Stand '+E(c['stand'])+'.',
@@ -359,7 +359,7 @@ def _stu_de(c):
               'IBAN-Diskriminierung: '+_ext(EU_SEPA,'Verordnung (EU) Nr. 260/2012, Art. 9')+'; BAföG: '+_ext(DE_BAFOEG,'BAföG Digital')+', '+ABG+'.']))),
     ]
     faq=[
-     ('Muss mein Konto eine deutsche IBAN haben, damit BAföG und Gehalt ankommen?','Nein. Behörden und Arbeitgeber dürfen eine IBAN aus einem anderen SEPA-Land nicht ablehnen, das regelt die SEPA-Verordnung. Wichtig ist nur, dass das Konto auf deinen Namen läuft.'),
+     ('Muss mein Konto eine deutsche IBAN haben, damit BAföG und Gehalt ankommen?','Nein. Behörden und Arbeitgeber dürfen eine IBAN aus einem anderen EU-Land nicht ablehnen, das regelt die SEPA-Verordnung. Wichtig ist nur, dass das Konto auf deinen Namen läuft.'),
      ('Wie oft muss ich die Immatrikulationsbescheinigung nachreichen?','Das legt jede Bank selbst fest. Manche wollen den Nachweis nur bei der Eröffnung, andere fragen jedes Jahr oder jedes Semester nach. Reichst du ihn nicht ein, stellt die Bank auf das normale Kontomodell um.'),
      ('Was passiert mit dem Studentenkonto, wenn ich das Studium abbreche?','Die Bank stellt auf ein normales Konto um, sobald sie davon erfährt oder der nächste Nachweis fehlt. Du bist meist verpflichtet, ihr das mitzuteilen. Kündigen musst du nicht, aber vergleichen lohnt sich.'),
      ('Bekomme ich als Student ohne Einkommen eine Kreditkarte?','Eine Debitkarte bekommst du bei fast jedem Konto ohne Prüfung. Eine echte Kreditkarte setzt eine Bonitätsprüfung voraus, viele Banken geben sie Studierenden ab 18 trotzdem, mit kleinem Limit. Für Reisen reicht oft eine Debitkarte von Visa oder Mastercard.'),
@@ -434,7 +434,7 @@ def _stu_at(c):
           +(f'Bei 600 € Minus über vier Monate sind das mit {pct(disp[-1]["sollzins"])} rund {eur(round(600*disp[-1]["sollzins"]/100*4/12,2))} € Zinsen. ' if disp else '')
           +'Teurer wird eine Überschreitung ohne vereinbarten Rahmen.'),
          (f'Wichtig: Bei {_links(c,plus)} ist das Konto laut Bank nur gratis, solange es im Plus ist. Rutschst du ins Minus, kann dafür das reguläre Kontoführungsentgelt fällig werden, zusätzlich zu den Zinsen. ' if plus else '')
-         +'Ab 20. November 2026 muss dich die Bank bei einer längeren, deutlichen Überschreitung schriftlich informieren und bei regelmäßigem Minus eine Beratung anbieten. Alles zu Rahmen, Überschreitung und den neuen Regeln steht im Ratgeber '+rg('kontoueberziehung','Kontoüberziehung')+'.')),
+         +'Ab 20. November 2026 muss dich die Bank bei einer längeren, deutlichen Überschreitung schriftlich informieren und bei regelmäßigem Minus eine Beratung anbieten, sofern sie eine hat, und dich auf die Schuldnerberatung hinweisen. Alles zu Rahmen, Überschreitung und den neuen Regeln steht im Ratgeber '+rg('kontoueberziehung','Kontoüberziehung')+'.')),
      ('Auslandssemester mit dem österreichischen Konto',
       _P('Mit Erasmus+ oder einem Joint-Study-Platz bist du schnell ein halbes Jahr im Ausland. Im Euroraum brauchst du dafür kein neues Konto: Kartenzahlungen und Überweisungen in Euro kosten in der EU nicht mehr als in Österreich, und dein Stipendium kommt per SEPA-Überweisung an. Infos zu den Programmen hat der '+_ext(AT_OEAD,'OeAD')+'.',
          'Außerhalb des Euroraums verrechnen fast alle Banken ein Entgelt für Kartenzahlungen in Fremdwährung, oft eine Kombination aus Prozentsatz und Fixbetrag je Zahlung. '
@@ -467,7 +467,7 @@ def _stu_at(c):
      ('Brauche ich als Studentin aus dem Ausland einen Hauptwohnsitz in Österreich?','Bei vielen Banken ja, oft zusammen mit einem Meldezettel. Hast du die Wohnung schon, melde dich zuerst an und eröffne dann das Konto. Klappt es trotzdem nicht, hast du ein Recht auf ein Basiskonto.'),
      ('Kann ich mit 28 noch ein Studentenkonto eröffnen?', ('Bei einigen Banken ja. '+(f'Die höchste Altersgrenze in dieser Liste hat {E(lang[0]["bank"])} mit {E(c["altT"](lang[0]))}. ' if lang else '')+'Bei den meisten anderen endet das Angebot mit dem 27. Geburtstag.')),
      ('Muss ich der Bank sagen, wenn ich mit dem Studium fertig bin?','Meist ja, die Bedingungen verpflichten dich, Änderungen bei den Voraussetzungen zu melden. Viele Banken fragen außerdem selbst nach einem neuen Nachweis. Danach gilt das reguläre Kontomodell.'),
-     ('Wird die Studienbeihilfe auf jedes Konto überwiesen?','Ja, auf jedes Girokonto, das auf deinen Namen läuft. Es muss kein Studentenkonto und auch keine österreichische IBAN sein, solange das Konto im SEPA-Raum geführt wird.'),
+     ('Wird die Studienbeihilfe auf jedes Konto überwiesen?','Ja, auf jedes Girokonto, das auf deinen Namen läuft. Es muss kein Studentenkonto und auch keine österreichische IBAN sein, solange das Konto in der EU geführt wird.'),
     ]
     lede='Hier stehen die Girokonten, die Banken in Österreich für Studierende und junge Erwachsene in Ausbildung anbieten, sortiert nach unserer Bewertung. Darunter erfährst du, wie lange sie gratis bleiben, welche Nachweise du brauchst und was nach dem Studium kommt.'
     return dict(lede=lede,secs=secs,faq=faq)
@@ -590,7 +590,7 @@ def _kj_at(c):
     secs=[
      ('Ab welchem Alter: Kinderkonto und Jugendkonto',
       _P('Das ABGB teilt Minderjährige in Altersstufen, und genau daran orientieren sich die Banken:',
-         _ul(['<b>Unter 7 Jahren</b> kann ein Kind keine Geschäfte selbst abschließen. Ein Konto auf seinen Namen ist trotzdem möglich, die Eltern führen es. '+(f'Ab der Geburt geht das bei {_links(c,geburt)}.' if geburt else ''),
+         _ul(['<b>Unter 7 Jahren</b> darf ein Kind nur ganz kleine Alltagskäufe selbst machen, etwa Süßigkeiten vom Taschengeld. Ein Konto auf seinen Namen ist trotzdem möglich, die Eltern führen es. '+(f'Ab der Geburt geht das bei {_links(c,geburt)}.' if geburt else ''),
               '<b>Von 7 bis 13 Jahren</b> ist es unmündig minderjährig. Es darf geringfügige Geschäfte des täglichen Lebens selbst abschließen, also mit dem Taschengeld eine Jause oder ein Heft kaufen (§ 170 Abs. 3 ABGB). Hier setzen die Kinderkonten mit Karte an.',
               '<b>Ab 14 Jahren</b> ist es mündig minderjährig und darf über eigenes Einkommen, etwa die Lehrlingsentschädigung, selbst verfügen, soweit sein Lebensunterhalt nicht gefährdet ist (§ 170 Abs. 2 ABGB). Ab hier gibt es Jugendkonten.']),
          ((f'In dieser Liste stehen {len(kinder)} Kinderkonten und {len(jugend)} Jugendkonten. ' if X else '')
@@ -657,7 +657,7 @@ def _kj_at(c):
      ('Kann mein Kind mit der Karte online einkaufen?','Bei Jugendkonten meist ja, bei Kinderkonten oft nicht oder erst nach Freischaltung durch die Eltern. Manche Kinderkarten haben auch keine Kontaktlos-Funktion. Das steht in der Kartentabelle auf dieser Seite.'),
      ('Muss die Lehrlingsentschädigung auf ein Jugendkonto gehen?','Nein, sie kann auf jedes Konto, das auf den Namen des Lehrlings läuft. Ein Jugendkonto ist dafür aber meist die günstigste Wahl, weil es bis 19 oder 20 gratis bleibt.'),
      ('Was passiert mit dem Geld auf dem Kinderkonto, wenn sich die Eltern scheiden lassen?','Nichts, es gehört dem Kind und fällt nicht in die Aufteilung zwischen den Eltern. Wer das Konto weiter verwaltet, hängt von der Obsorge ab.'),
-     ('Was tun, wenn die Karte meines Kindes verloren geht?','Sofort sperren, über die Banking-App, die Hotline der Bank oder die Sperrhotline für Bankomatkarten unter +43 1 204 8800. Die Ersatzkarte ist bei Kinder- und Jugendkonten oft gratis, das steht in den Konditionen.'),
+     ('Was tun, wenn die Karte meines Kindes verloren geht?','Sofort sperren, über die Banking-App, die Hotline der Bank oder die Kartensperrhotline unter 0800 204 8800, aus dem Ausland +43 1 204 8800. Die gilt für Debitkarten der meisten österreichischen Banken, bei Neobanken sperrst du in der App. Die Ersatzkarte ist bei Kinder- und Jugendkonten oft gratis, das steht in den Konditionen.'),
     ]
     lede='Diese Liste zeigt Kinderkonten und Jugendkonten in Österreich, sortiert nach unserer Bewertung. Darunter erfährst du, ab welchem Alter dein Kind ein Konto haben kann, wer unterschreiben muss, welche Limits die Karte hat und wann die Bank umstellt.'
     return dict(lede=lede,secs=secs,faq=faq)
