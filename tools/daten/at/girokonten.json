@@ -313,7 +313,7 @@
    "status": "unsicher",
    "abweichung": "Bestätigt: 20 € pro Quartal; schutzbedürftige Personen 10 € pro Quartal. EI ist von 2022, der Aushang (Stand 01.07.2026) nennt dieselben Preise. Die EI nennt einen Überschreitungs-Sollzins von 11,5 % fix, der Aushang sagt 'Überschreitung nicht verfügbar'. Eröffnungsweg nicht geprüft (vermutlich Filiale).",
    "slug": "bank-austria-basiskonto",
-   "geprueft": "2026-10-27"
+   "geprueft": "2026-10-29"
   },
   {
    "bank": "BAWAG",
@@ -635,7 +635,7 @@
    "status": "unsicher",
    "abweichung": "Bestätigt: 20 € pro Quartal; schutzbedürftige Personen 10 € pro Quartal. Preisblatt nennt einen Sollzins von 13,25 %, die EI sagt 'Überschreitung nicht verfügbar'. Manuelle Buchungen laut Preisblatt 2,90 €, laut EI inkludiert. Eröffnungsweg nicht geprüft.",
    "slug": "bawag-vzkg-konto",
-   "geprueft": "2026-10-27"
+   "geprueft": "2026-10-29"
   },
   {
    "bank": "easybank",
@@ -1115,7 +1115,7 @@
    "status": "ok",
    "abweichung": "Bestätigt 20 € pro Quartal, schutzbedürftig 10 € pro Quartal (40 € pro Jahr). EI vom 23.11.2024 (älter). Konditionenblatt (Fassung 04/2022): Soll 12,00 %, Haben 0,01 % - nicht taufrisch. gemeinschaftskonto=false ist Annahme (Basiskonto gesetzlich Einzelkonto) - nicht explizit auf Bankseite.",
    "slug": "bank99-zahlungskonto",
-   "geprueft": "2026-10-27"
+   "geprueft": "2026-10-29"
   },
   {
    "bank": "Bank Direkt",
@@ -1365,7 +1365,7 @@
    "status": "unsicher",
    "abweichung": "Bestätigt 20 € pro Quartal, besonders Schutzbedürftige 10 € pro Quartal. Eröffnung: kein Online-Antrag - 'kontaktieren Sie uns bitte telefonisch oder per E-Mail' (Anadi hat praktisch kein Filialnetz); 'online' daher nur näherungsweise (Fernabsatz). Sollzins 11,70 % nur für nicht gedeckte Kontoentgelte.",
    "slug": "anadi-zahlungskonto",
-   "geprueft": "2026-10-27"
+   "geprueft": "2026-10-29"
   },
   {
    "bank": "Erste Bank",
@@ -1584,7 +1584,7 @@
    "status": "ok",
    "abweichung": "Bestätigt 20 € pro Quartal bzw. 10 € pro Quartal schutzbedürftig (Preisbasis 18.09.2016, Aushang-Ausgabe 01.07.2026). Keine Überziehung, keine Kreditkarte, kein Gemeinschaftskonto. Eröffnung per Termin in Filiale.",
    "slug": "erste-bank-zahlungskonto-grundlegende-funktionen",
-   "geprueft": "2026-10-27",
+   "geprueft": "2026-10-29",
    "hinweis": "Für besonders schutzbedürftige Verbraucher 10 € pro Quartal statt 20 €."
   },
   {
@@ -2073,7 +2073,7 @@
    "status": "ok",
    "abweichung": "Bestätigt 4,90 € / 3,30 € (EI 01.09.2026). Mitinhaber laut Produktseite möglich. Eröffnung per Beratungstermin.",
    "slug": "wuestenrot-bank-vzkg-konto",
-   "geprueft": "2026-10-27",
+   "geprueft": "2026-10-29",
    "hinweis": "Für besonders schutzbedürftige Personen 3,30 € statt 4,90 € pro Monat."
   },
   {
