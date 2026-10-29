@@ -187,7 +187,7 @@ i Kurzantwort: In Deutschland lohnt sich Punktesammeln deutlich mehr als in Öst
 
 ## Österreich: Girokonten
 - [Girokonto-Vergleich Österreich](https://finvallo.com/at/girokonto/): 62 Konten von Banken mit Angebot in ganz Österreich, Jahreskosten selbst rechnen, Stand 27.10.2026
-- [Bestenlisten Girokonten Österreich](https://finvallo.com/at/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder, Basiskonto, Premium, Mit Kreditkarte, Mit Guthabenzinsen, Mit Prämie
+- [Bestenlisten Girokonten Österreich](https://finvallo.com/at/girokonto/bestenlisten/): Kostenlos, Gratis ohne Geldeingang, Mit Unterkonten, Mit Kreditkarte, Mit Prämie, Ohne KSV1870-Abfrage, Direktbanken, Neobanken, Nachhaltige Banken, Gemeinschaftskonto, Studierende, Kinder und Jugendliche
 - [So bewerten wir Girokonten](https://finvallo.com/at/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/at/daten/girokonten.json)
 - [Online Gehalts-/Pensionskonto (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/#gk-anadi-online-gehalts-pensionskonto): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
@@ -334,7 +334,7 @@ i Kurzantwort: In Deutschland lohnt sich Punktesammeln deutlich mehr als in Öst
 
 ## Deutschland: Girokonten
 - [Girokonto-Vergleich Deutschland](https://finvallo.com/de/girokonto/): 87 Konten von Banken mit Angebot in ganz Deutschland, Jahreskosten selbst rechnen, Stand 27.10.2026
-- [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder, Basiskonto, Premium, Mit Kreditkarte, Mit Guthabenzinsen, Mit Prämie
+- [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis ohne Geldeingang, Mit Unterkonten, Mit Kreditkarte, Mit Prämie, Ohne Schufa-Abfrage, Direktbanken, Neobanken, Nachhaltige Banken, Gemeinschaftskonto, Studierende, Kinder und Jugendliche
 - [So bewerten wir Girokonten](https://finvallo.com/de/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/de/daten/girokonten.json)
 - [Consorsbank! Girokonto (Consorsbank)](https://finvallo.com/de/girokonto/#gk-consorsbank-girokonto): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel

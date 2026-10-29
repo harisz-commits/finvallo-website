@@ -159,6 +159,14 @@ Redirect 301 /at/girokonto/bawag-kontobox-small/ https://finvallo.com/at/girokon
 Redirect 301 /at/girokonto/bawag-online-kontobox/ https://finvallo.com/at/girokonto/#gk-bawag-online-kontobox
 Redirect 301 /at/girokonto/bawag-studenten-kontobox/ https://finvallo.com/at/girokonto/#gk-bawag-studenten-kontobox
 Redirect 301 /at/girokonto/bawag-vzkg-konto/ https://finvallo.com/at/girokonto/#gk-bawag-vzkg-konto
+Redirect 301 /at/girokonto/bestenlisten/ausland/ https://finvallo.com/at/girokonto/
+Redirect 301 /at/girokonto/bestenlisten/basiskonto/ https://finvallo.com/at/ratgeber/basiskonto/
+Redirect 301 /at/girokonto/bestenlisten/filiale/ https://finvallo.com/at/girokonto/?f=filiale
+Redirect 301 /at/girokonto/bestenlisten/gehaltskonto/ https://finvallo.com/at/girokonto/bestenlisten/kostenlos/
+Redirect 301 /at/girokonto/bestenlisten/jugend/ https://finvallo.com/at/girokonto/bestenlisten/kinder-jugendkonto/
+Redirect 301 /at/girokonto/bestenlisten/kinder/ https://finvallo.com/at/girokonto/bestenlisten/kinder-jugendkonto/
+Redirect 301 /at/girokonto/bestenlisten/premium/ https://finvallo.com/at/girokonto/?art=premium
+Redirect 301 /at/girokonto/bestenlisten/zinsen/ https://finvallo.com/at/girokonto/
 Redirect 301 /at/girokonto/bunq-core/ https://finvallo.com/at/girokonto/#gk-bunq-core
 Redirect 301 /at/girokonto/bunq-elite/ https://finvallo.com/at/girokonto/#gk-bunq-elite
 Redirect 301 /at/girokonto/bunq-free/ https://finvallo.com/at/girokonto/#gk-bunq-free
@@ -205,6 +213,9 @@ Redirect 301 /at/kreditkarten/anbieter/santander/ https://finvallo.com/at/kredit
 Redirect 301 /at/kreditkarten/anbieter/tf-bank/ https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/
 Redirect 301 /at/kreditkarten/anbieter/trade-republic/ https://finvallo.com/at/kreditkarten/trade-republic-karte/
 Redirect 301 /at/kreditkarten/anbieter/wise/ https://finvallo.com/at/kreditkarten/wise-karte/
+Redirect 301 /at/ratgeber/gemeinschaftskonto/ https://finvallo.com/at/girokonto/bestenlisten/gemeinschaftskonto/
+Redirect 301 /at/ratgeber/kinderkonto-jugendkonto/ https://finvallo.com/at/girokonto/bestenlisten/kinder-jugendkonto/
+Redirect 301 /at/ratgeber/kostenloses-girokonto/ https://finvallo.com/at/girokonto/bestenlisten/kostenlos/
 Redirect 301 /at/ratgeber/punkte/ https://finvallo.com/at/ratgeber/punkte-sammeln-at/
 Redirect 301 /de/festgeld/0to9-festgeld-de-raisin/ https://finvallo.com/de/festgeld/#fg-0to9-festgeld-de-raisin
 Redirect 301 /de/festgeld/1-jahr/ https://finvallo.com/de/festgeld/?laufzeit=12
@@ -724,6 +735,14 @@ Redirect 301 /de/girokonto/bbbank-bettersmart-konto/ https://finvallo.com/de/gir
 Redirect 301 /de/girokonto/bbbank-girokonto/ https://finvallo.com/de/girokonto/#gk-bbbank-girokonto
 Redirect 301 /de/girokonto/bbbank-junges-girokonto-18-29/ https://finvallo.com/de/girokonto/#gk-bbbank-junges-girokonto-18-29
 Redirect 301 /de/girokonto/bbbank-junges-girokonto/ https://finvallo.com/de/girokonto/#gk-bbbank-junges-girokonto
+Redirect 301 /de/girokonto/bestenlisten/ausland/ https://finvallo.com/de/girokonto/
+Redirect 301 /de/girokonto/bestenlisten/basiskonto/ https://finvallo.com/de/ratgeber/basiskonto/
+Redirect 301 /de/girokonto/bestenlisten/filiale/ https://finvallo.com/de/girokonto/?f=filiale
+Redirect 301 /de/girokonto/bestenlisten/gehaltskonto/ https://finvallo.com/de/girokonto/bestenlisten/kostenlos/
+Redirect 301 /de/girokonto/bestenlisten/jugend/ https://finvallo.com/de/girokonto/bestenlisten/kinder-jugendkonto/
+Redirect 301 /de/girokonto/bestenlisten/kinder/ https://finvallo.com/de/girokonto/bestenlisten/kinder-jugendkonto/
+Redirect 301 /de/girokonto/bestenlisten/premium/ https://finvallo.com/de/girokonto/?art=premium
+Redirect 301 /de/girokonto/bestenlisten/zinsen/ https://finvallo.com/de/girokonto/
 Redirect 301 /de/girokonto/bunq-core/ https://finvallo.com/de/girokonto/#gk-bunq-core
 Redirect 301 /de/girokonto/bunq-elite/ https://finvallo.com/de/girokonto/#gk-bunq-elite
 Redirect 301 /de/girokonto/bunq-free/ https://finvallo.com/de/girokonto/#gk-bunq-free
@@ -831,5 +850,8 @@ Redirect 301 /de/kreditkarten/anbieter/wise/ https://finvallo.com/de/kreditkarte
 Redirect 301 /de/kreditkarten/tui-card-classic/ https://finvallo.com/de/kreditkarten/
 Redirect 301 /de/kreditkarten/tui-card-gold/ https://finvallo.com/de/kreditkarten/
 Redirect 301 /de/kreditkarten/tui-card-titan/ https://finvallo.com/de/kreditkarten/
+Redirect 301 /de/ratgeber/gemeinschaftskonto/ https://finvallo.com/de/girokonto/bestenlisten/gemeinschaftskonto/
+Redirect 301 /de/ratgeber/kinderkonto-jugendkonto/ https://finvallo.com/de/girokonto/bestenlisten/kinder-jugendkonto/
+Redirect 301 /de/ratgeber/kostenloses-girokonto/ https://finvallo.com/de/girokonto/bestenlisten/kostenlos/
 Redirect 301 /de/ratgeber/punkte/ https://finvallo.com/de/ratgeber/punkte-sammeln-de/
 ErrorDocument 404 /404.html

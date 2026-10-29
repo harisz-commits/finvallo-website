@@ -1,0 +1,674 @@
+{
+ "hinweis": "Zusatzdaten für die Girokonto-Bestenlisten (Unterkonten, Bonitätsabfrage, Nachhaltigkeit). Nur Angaben aus Quellen der Bank, null = nicht belegt.",
+ "stand": "2026-10-29",
+ "konten": {
+  "n26-standard": {
+   "unterkonten": 0,
+   "unterkonten_iban": false,
+   "unterkonten_text": "Spaces gibt es erst ab N26 Smart, neue Standard-Konten haben keine Unterkonten",
+   "unterkonten_quelle": "https://support.n26.com/en-de/app-and-features/spaces/how-does-spaces-work",
+   "bonitaet": "schufa",
+   "bonitaet_text": "N26 prüft bei der Eröffnung die Schufa-Bonität, bei schwacher Bonität gibt es nur Flex",
+   "bonitaet_quelle": "https://support.n26.com/de-de/mitgliedschaften-und-kontotypen/standardkonten/was-ist-ein-n26-flex-konto"
+  },
+  "n26-smart": {
+   "unterkonten": 10,
+   "unterkonten_iban": true,
+   "unterkonten_text": "Bis zu 10 Spaces ohne Aufpreis, jeder auf Wunsch mit eigener IBAN",
+   "unterkonten_quelle": "https://n26.com/de-de/spaces",
+   "bonitaet": "schufa",
+   "bonitaet_text": "N26 prüft bei der Eröffnung die Schufa-Bonität",
+   "bonitaet_quelle": "https://support.n26.com/de-de/mitgliedschaften-und-kontotypen/standardkonten/was-ist-ein-n26-flex-konto"
+  },
+  "n26-go": {
+   "unterkonten": 10,
+   "unterkonten_iban": true,
+   "unterkonten_text": "Bis zu 10 Spaces ohne Aufpreis, jeder auf Wunsch mit eigener IBAN",
+   "unterkonten_quelle": "https://n26.com/de-de/spaces",
+   "bonitaet": "schufa",
+   "bonitaet_text": "N26 prüft bei der Eröffnung die Schufa-Bonität",
+   "bonitaet_quelle": "https://support.n26.com/de-de/mitgliedschaften-und-kontotypen/standardkonten/was-ist-ein-n26-flex-konto"
+  },
+  "n26-metal": {
+   "unterkonten": 10,
+   "unterkonten_iban": true,
+   "unterkonten_text": "Bis zu 10 Spaces ohne Aufpreis, jeder auf Wunsch mit eigener IBAN",
+   "unterkonten_quelle": "https://n26.com/de-de/spaces",
+   "bonitaet": "schufa",
+   "bonitaet_text": "N26 prüft bei der Eröffnung die Schufa-Bonität",
+   "bonitaet_quelle": "https://support.n26.com/de-de/mitgliedschaften-und-kontotypen/standardkonten/was-ist-ein-n26-flex-konto"
+  },
+  "n26-flex": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": "schufa",
+   "bonitaet_text": "Flex bekommt, wer bei der Schufa-Prüfung von N26 durchfällt",
+   "bonitaet_quelle": "https://support.n26.com/de-de/mitgliedschaften-und-kontotypen/standardkonten/was-ist-ein-n26-flex-konto"
+  },
+  "revolut-standard": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": "Pockets als Unterkonten in der App, eine Höchstzahl nennt Revolut nicht",
+   "unterkonten_quelle": "https://help.revolut.com/help/app-features/vaults/what-are-revolut-vaults/",
+   "bonitaet": "keine",
+   "bonitaet_text": "Laut Revolut keine Bonitätsprüfung bei der Kontoeröffnung, erst bei Kreditanträgen",
+   "bonitaet_quelle": "https://www.revolut.com/de-DE/ways-to-bank/online-banking/"
+  },
+  "revolut-plus": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": "Pockets als Unterkonten in der App, eine Höchstzahl nennt Revolut nicht",
+   "unterkonten_quelle": "https://help.revolut.com/help/app-features/vaults/what-are-revolut-vaults/",
+   "bonitaet": "keine",
+   "bonitaet_text": "Laut Revolut keine Bonitätsprüfung bei der Kontoeröffnung, erst bei Kreditanträgen",
+   "bonitaet_quelle": "https://www.revolut.com/de-DE/ways-to-bank/online-banking/"
+  },
+  "revolut-premium": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": "Pockets als Unterkonten in der App, eine Höchstzahl nennt Revolut nicht",
+   "unterkonten_quelle": "https://help.revolut.com/help/app-features/vaults/what-are-revolut-vaults/",
+   "bonitaet": "keine",
+   "bonitaet_text": "Laut Revolut keine Bonitätsprüfung bei der Kontoeröffnung, erst bei Kreditanträgen",
+   "bonitaet_quelle": "https://www.revolut.com/de-DE/ways-to-bank/online-banking/"
+  },
+  "revolut-metal": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": "Pockets als Unterkonten in der App, eine Höchstzahl nennt Revolut nicht",
+   "unterkonten_quelle": "https://help.revolut.com/help/app-features/vaults/what-are-revolut-vaults/",
+   "bonitaet": "keine",
+   "bonitaet_text": "Laut Revolut keine Bonitätsprüfung bei der Kontoeröffnung, erst bei Kreditanträgen",
+   "bonitaet_quelle": "https://www.revolut.com/de-DE/ways-to-bank/online-banking/"
+  },
+  "revolut-ultra": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": "Pockets als Unterkonten in der App, eine Höchstzahl nennt Revolut nicht",
+   "unterkonten_quelle": "https://help.revolut.com/help/app-features/vaults/what-are-revolut-vaults/",
+   "bonitaet": "keine",
+   "bonitaet_text": "Laut Revolut keine Bonitätsprüfung bei der Kontoeröffnung, erst bei Kreditanträgen",
+   "bonitaet_quelle": "https://www.revolut.com/de-DE/ways-to-bank/online-banking/"
+  },
+  "bunq-free": {
+   "unterkonten": 2,
+   "unterkonten_iban": true,
+   "unterkonten_text": "Bis zu 3 Konten insgesamt, jedes mit eigener IBAN, ohne Aufpreis",
+   "unterkonten_quelle": "https://help.bunq.com/articles/how-to-create-and-manage-my-bank-accounts",
+   "bonitaet": "keine",
+   "bonitaet_text": "bunq arbeitet laut eigener Hilfe nicht mit der Schufa zusammen",
+   "bonitaet_quelle": "https://help.bunq.com/de-de/articles/do-we-work-with-schufa"
+  },
+  "bunq-core": {
+   "unterkonten": 4,
+   "unterkonten_iban": true,
+   "unterkonten_text": "Bis zu 5 Konten insgesamt, jedes mit eigener IBAN, ohne Aufpreis",
+   "unterkonten_quelle": "https://help.bunq.com/articles/how-to-create-and-manage-my-bank-accounts",
+   "bonitaet": "keine",
+   "bonitaet_text": "bunq arbeitet laut eigener Hilfe nicht mit der Schufa zusammen",
+   "bonitaet_quelle": "https://help.bunq.com/de-de/articles/do-we-work-with-schufa"
+  },
+  "bunq-pro": {
+   "unterkonten": 24,
+   "unterkonten_iban": true,
+   "unterkonten_text": "25 Konten mit eigener IBAN inklusive, weitere gegen Gebühr",
+   "unterkonten_quelle": "https://help.bunq.com/articles/how-to-create-and-manage-my-bank-accounts",
+   "bonitaet": "keine",
+   "bonitaet_text": "bunq arbeitet laut eigener Hilfe nicht mit der Schufa zusammen",
+   "bonitaet_quelle": "https://help.bunq.com/de-de/articles/do-we-work-with-schufa"
+  },
+  "bunq-elite": {
+   "unterkonten": 24,
+   "unterkonten_iban": true,
+   "unterkonten_text": "25 Konten mit eigener IBAN inklusive, weitere gegen Gebühr",
+   "unterkonten_quelle": "https://help.bunq.com/articles/how-to-create-and-manage-my-bank-accounts",
+   "bonitaet": "keine",
+   "bonitaet_text": "bunq arbeitet laut eigener Hilfe nicht mit der Schufa zusammen",
+   "bonitaet_quelle": "https://help.bunq.com/de-de/articles/do-we-work-with-schufa"
+  },
+  "tomorrow-now": {
+   "unterkonten": 2,
+   "unterkonten_iban": false,
+   "unterkonten_text": "2 Pockets ohne Aufpreis, ohne eigene IBAN",
+   "unterkonten_quelle": "https://assets.tomorrow.one/de-DE/legal/preisliste/preisliste.pdf",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Tomorrow fragt bei Registrierung und Kontoeröffnung die Schufa ab",
+   "bonitaet_quelle": "https://support.tomorrow.one/de/support/solutions/articles/15000061192-kooperiert-ihr-mit-der-schufa-"
+  },
+  "tomorrow-change": {
+   "unterkonten": 6,
+   "unterkonten_iban": false,
+   "unterkonten_text": "6 Pockets ohne Aufpreis, ohne eigene IBAN",
+   "unterkonten_quelle": "https://assets.tomorrow.one/de-DE/legal/preisliste/preisliste.pdf",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Tomorrow fragt bei Registrierung und Kontoeröffnung die Schufa ab",
+   "bonitaet_quelle": "https://support.tomorrow.one/de/support/solutions/articles/15000061192-kooperiert-ihr-mit-der-schufa-"
+  },
+  "tomorrow-plus": {
+   "unterkonten": 99,
+   "unterkonten_iban": false,
+   "unterkonten_text": "Unbegrenzt viele Pockets, ohne eigene IBAN",
+   "unterkonten_quelle": "https://assets.tomorrow.one/de-DE/legal/preisliste/preisliste.pdf",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Tomorrow fragt bei Registrierung und Kontoeröffnung die Schufa ab",
+   "bonitaet_quelle": "https://support.tomorrow.one/de/support/solutions/articles/15000061192-kooperiert-ihr-mit-der-schufa-"
+  },
+  "gls-konto": {
+   "unterkonten": 0,
+   "unterkonten_iban": null,
+   "unterkonten_text": "keine Unterkonten, aber weitere Girokonten zum normalen Preis",
+   "unterkonten_quelle": "https://www.gls.de/gls-bank/service/fragen-antworten/angebote/kann-ich-ein-unterkonto-nebenkonto-anlegen/",
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "gls-konto-18-27": {
+   "unterkonten": 0,
+   "unterkonten_iban": null,
+   "unterkonten_text": "keine Unterkonten, aber weitere Girokonten zum normalen Preis",
+   "unterkonten_quelle": "https://www.gls.de/gls-bank/service/fragen-antworten/angebote/kann-ich-ein-unterkonto-nebenkonto-anlegen/",
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "gls-konto-mitglied": {
+   "unterkonten": 0,
+   "unterkonten_iban": null,
+   "unterkonten_text": "keine Unterkonten, aber weitere Girokonten zum normalen Preis",
+   "unterkonten_quelle": "https://www.gls.de/gls-bank/service/fragen-antworten/angebote/kann-ich-ein-unterkonto-nebenkonto-anlegen/",
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "gls-konto-mitglied-18-27": {
+   "unterkonten": 0,
+   "unterkonten_iban": null,
+   "unterkonten_text": "keine Unterkonten, aber weitere Girokonten zum normalen Preis",
+   "unterkonten_quelle": "https://www.gls.de/gls-bank/service/fragen-antworten/angebote/kann-ich-ein-unterkonto-nebenkonto-anlegen/",
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "dkb-girokonto": {
+   "unterkonten": null,
+   "unterkonten_iban": true,
+   "unterkonten_text": "Weitere Girokonten mit eigener IBAN möglich, je Zusatzkonto 2,50 Euro im Monat",
+   "unterkonten_quelle": "https://www.dkb.de/fragen-antworten/was-muss-ich-zum-girokonto-wissen",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Bonitätsprüfung bei jeder Eröffnung, negativer Schufa-Eintrag kann zur Ablehnung führen",
+   "bonitaet_quelle": "https://www.dkb.de/finanzwissen/gemeinschaftskonto-das-gemeinsame-konto-sinnvolle-sache-fuer-paare-und-wgs"
+  },
+  "ing-girokonto": {
+   "unterkonten": 0,
+   "unterkonten_iban": false,
+   "unterkonten_text": "Keine Unterkonten, neben dem Einzelkonto nur ein zusätzliches Gemeinschaftskonto",
+   "unterkonten_quelle": "https://www.ing.de/girokonto/kundenservice/",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Die ING prüft bei der Eröffnung die Bonität und arbeitet dafür mit der Schufa",
+   "bonitaet_quelle": "https://www.ing.de/girokonto/kundenservice/"
+  },
+  "ing-girokonto-future": {
+   "unterkonten": 0,
+   "unterkonten_iban": false,
+   "unterkonten_text": "Keine Unterkonten, neben dem Einzelkonto nur ein zusätzliches Gemeinschaftskonto",
+   "unterkonten_quelle": "https://www.ing.de/girokonto/kundenservice/",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Die ING prüft bei der Eröffnung die Bonität und arbeitet dafür mit der Schufa",
+   "bonitaet_quelle": "https://www.ing.de/girokonto/kundenservice/"
+  },
+  "comdirect-girokonto-aktiv": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": "schufa",
+   "bonitaet_text": "Für die Eröffnung prüft comdirect die Bonität mithilfe der Schufa",
+   "bonitaet_quelle": "https://www.comdirect.de/cms/docs/cori6977.pdf"
+  },
+  "comdirect-girokonto-extra": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": "schufa",
+   "bonitaet_text": "Für die Eröffnung prüft comdirect die Bonität mithilfe der Schufa",
+   "bonitaet_quelle": "https://www.comdirect.de/cms/docs/cori6977.pdf"
+  },
+  "comdirect-girokonto-plus": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": "schufa",
+   "bonitaet_text": "Für die Eröffnung prüft comdirect die Bonität mithilfe der Schufa",
+   "bonitaet_quelle": "https://www.comdirect.de/cms/docs/cori6977.pdf"
+  },
+  "commerzbank-girokonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": "Unterkonten im Online Banking möglich, Preis je nach gewähltem Kontomodell",
+   "unterkonten_quelle": "https://www.commerzbank.de/service/wie-eroeffne-ich-ein-unterkonto/",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Bei negativer Schufa wird die Online-Eröffnung automatisch abgelehnt",
+   "bonitaet_quelle": "https://www.commerzbank.de/service/ist-eine-kontoeroeffnung-trotz-negativer-schufa-moeglich/"
+  },
+  "commerzbank-klassikkonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": "Unterkonten im Online Banking möglich, Preis je nach gewähltem Kontomodell",
+   "unterkonten_quelle": "https://www.commerzbank.de/service/wie-eroeffne-ich-ein-unterkonto/",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Bei negativer Schufa wird die Online-Eröffnung automatisch abgelehnt",
+   "bonitaet_quelle": "https://www.commerzbank.de/service/ist-eine-kontoeroeffnung-trotz-negativer-schufa-moeglich/"
+  },
+  "commerzbank-premiumkonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": "Unterkonten im Online Banking möglich, Preis je nach gewähltem Kontomodell",
+   "unterkonten_quelle": "https://www.commerzbank.de/service/wie-eroeffne-ich-ein-unterkonto/",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Bei negativer Schufa wird die Online-Eröffnung automatisch abgelehnt",
+   "bonitaet_quelle": "https://www.commerzbank.de/service/ist-eine-kontoeroeffnung-trotz-negativer-schufa-moeglich/"
+  },
+  "commerzbank-startkonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": "Unterkonten im Online Banking möglich, Preis je nach gewähltem Kontomodell",
+   "unterkonten_quelle": "https://www.commerzbank.de/service/wie-eroeffne-ich-ein-unterkonto/",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Bei negativer Schufa wird die Online-Eröffnung automatisch abgelehnt",
+   "bonitaet_quelle": "https://www.commerzbank.de/service/ist-eine-kontoeroeffnung-trotz-negativer-schufa-moeglich/"
+  },
+  "deutsche-bank-aktivkonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "deutsche-bank-bestkonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "deutsche-bank-junges-konto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "postbank-giro-pur": {
+   "unterkonten": 3,
+   "unterkonten_iban": true,
+   "unterkonten_text": "Drei kostenlose Pockets, jedes mit eigener IBAN",
+   "unterkonten_quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/girokonten/giro-pur.html",
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "postbank-giro-plus": {
+   "unterkonten": 3,
+   "unterkonten_iban": true,
+   "unterkonten_text": "Drei kostenlose Pockets, jedes mit eigener IBAN",
+   "unterkonten_quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/girokonten/giro-plus.html",
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "postbank-giro-extra-plus": {
+   "unterkonten": 3,
+   "unterkonten_iban": true,
+   "unterkonten_text": "Drei kostenlose Pockets, jedes mit eigener IBAN",
+   "unterkonten_quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/girokonten/giro-extra-plus.html",
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "postbank-giro-start-direkt": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "norisbank-top-girokonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": "schufa",
+   "bonitaet_text": "Vor der Eröffnung prüft die norisbank die Bonität, unter anderem per Schufa-Auskunft",
+   "bonitaet_quelle": "https://www.norisbank.de/service/kontakt-und-wissen/haeufige-fragen/faq-konto.html"
+  },
+  "norisbank-girokonto-plus": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": "Auch mit negativem Schufa-Eintrag möglich, wenn die übrigen Kriterien erfüllt sind",
+   "bonitaet_quelle": "https://www.norisbank.de/service/kontakt-und-wissen/haeufige-fragen/faq-konto.html"
+  },
+  "c24-smart": {
+   "unterkonten": 4,
+   "unterkonten_iban": true,
+   "unterkonten_text": "4 kostenlose Pockets, jedes mit eigener IBAN",
+   "unterkonten_quelle": "https://www.c24.de/preise",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Bei der Eröffnung prüft die C24 Bank die Bonität anhand der Schufa-Daten",
+   "bonitaet_quelle": "https://api.c24.de/api/documents/privacy_policy/download/"
+  },
+  "c24-plus": {
+   "unterkonten": 20,
+   "unterkonten_iban": true,
+   "unterkonten_text": "20 kostenlose Pockets, jedes mit eigener IBAN",
+   "unterkonten_quelle": "https://www.c24.de/preise",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Bei der Eröffnung prüft die C24 Bank die Bonität anhand der Schufa-Daten",
+   "bonitaet_quelle": "https://api.c24.de/api/documents/privacy_policy/download/"
+  },
+  "c24-max": {
+   "unterkonten": 20,
+   "unterkonten_iban": true,
+   "unterkonten_text": "20 kostenlose Pockets, jedes mit eigener IBAN",
+   "unterkonten_quelle": "https://www.c24.de/preise",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Bei der Eröffnung prüft die C24 Bank die Bonität anhand der Schufa-Daten",
+   "bonitaet_quelle": "https://api.c24.de/api/documents/privacy_policy/download/"
+  },
+  "trade-republic-girokonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "consorsbank-girokonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "1822direkt-girodirekt": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "openbank-bestgiro": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "targobank-online-konto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "targobank-plus-konto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "targobank-komfort-konto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "targobank-premium-konto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "targobank-plus-konto-junge-leute": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "bbbank-bettersmart-konto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "bbbank-girokonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "bbbank-junges-girokonto-18-29": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "hvb-pluskonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "hvb-aktivkonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "hvb-exklusivkonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "hvb-startkonto": {
+   "unterkonten": null,
+   "unterkonten_iban": null,
+   "unterkonten_text": null,
+   "unterkonten_quelle": null,
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  },
+  "skatbank-trumpfkonto": {
+   "unterkonten": null,
+   "unterkonten_iban": true,
+   "unterkonten_text": "Weitere Girokonten möglich, ab dem zweiten Konto 5 Euro im Monat",
+   "unterkonten_quelle": "https://www.skatbank.de/privatkunden/girokonto-und-bezahlen/produkte/girokonto.html",
+   "bonitaet": null,
+   "bonitaet_text": null,
+   "bonitaet_quelle": null
+  }
+ },
+ "banken": {
+  "N26": {
+   "nachhaltig": false,
+   "kurz": "Smartphone-Bank ohne Nachhaltigkeitsgeschäftsmodell",
+   "text": "N26 ist eine Direktbank mit Fokus auf das Smartphone. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen sind nicht Teil des Geschäftsmodells.",
+   "quelle": "https://n26.com/de-de/ueber-n26"
+  },
+  "Revolut": {
+   "nachhaltig": false,
+   "kurz": "Fintech-Bank ohne Nachhaltigkeitsgeschäftsmodell",
+   "text": "Revolut ist eine international tätige Fintech-Bank mit litauischer Banklizenz. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zum Geschäftsmodell.",
+   "quelle": "https://www.revolut.com/de-DE/"
+  },
+  "bunq": {
+   "nachhaltig": false,
+   "kurz": "Smartphone-Bank ohne Nachhaltigkeitsgeschäftsmodell",
+   "text": "bunq ist eine niederländische App-Bank. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+   "quelle": "https://www.bunq.com/de-de/"
+  },
+  "Tomorrow": {
+   "nachhaltig": true,
+   "kurz": "Einlagen nur nach festen Nachhaltigkeitskriterien angelegt",
+   "text": "Tomorrow legt die Kundeneinlagen nach veröffentlichten Anlagekriterien mit Ausschlüssen etwa für fossile Energie und Waffen an, vor allem in Social und Sustainability Bonds. Das Konto selbst führt die Partnerbank Solaris.",
+   "quelle": "https://www.tomorrow.one/de-DE/ueber-uns/anlagekriterien/"
+  },
+  "GLS Bank": {
+   "nachhaltig": true,
+   "kurz": "Kredite nur an sozial-ökologische Projekte",
+   "text": "Die GLS Bank vergibt Kredite und legt Geld nur nach festen Positiv- und Ausschlusskriterien an, etwa für erneuerbare Energien, Wohnen, Bildung und ökologische Landwirtschaft. Welche Kredite sie vergibt, veröffentlicht sie.",
+   "quelle": "https://www.gls.de/gls-bank/nachhaltigkeit/gls-anlage-und-finanzierungskriterien/"
+  },
+  "DKB": {
+   "nachhaltig": false,
+   "kurz": "Universalbank ohne verbindliche Nachhaltigkeitskriterien",
+   "text": "Die DKB finanziert unter anderem erneuerbare Energien und Kommunen, ist aber eine Universalbank ohne durchgehend verbindliche sozial-ökologische Kriterien für alle Kredite und Anlagen.",
+   "quelle": "https://www.dkb.de/nachhaltigkeit"
+  },
+  "ING": {
+   "nachhaltig": false,
+   "kurz": "Große Direktbank ohne Nachhaltigkeitsgeschäftsmodell",
+   "text": "Die ING ist eine große Direktbank mit Universalbankgeschäft. Das Girokonto Future bietet eine Nachhaltigkeitserweiterung, verbindliche sozial-ökologische Kriterien für alle Kredite und Anlagen hat die Bank aber nicht.",
+   "quelle": "https://www.ing.de/girokonto/future/"
+  },
+  "comdirect": {
+   "nachhaltig": false,
+   "kurz": "Direktbank der Commerzbank ohne Nachhaltigkeitsmodell",
+   "text": "comdirect ist die Direktbankmarke der Commerzbank. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zum Geschäftsmodell.",
+   "quelle": "https://www.comdirect.de/"
+  },
+  "Commerzbank": {
+   "nachhaltig": false,
+   "kurz": "Großbank ohne Nachhaltigkeitsgeschäftsmodell",
+   "text": "Die Commerzbank ist eine Universalbank mit Nachhaltigkeitszielen und Ausschlussrichtlinien für einzelne Branchen, aber ohne verbindliche sozial-ökologische Kriterien für alle Kredite und Anlagen.",
+   "quelle": "https://www.commerzbank.de/"
+  },
+  "Deutsche Bank": {
+   "nachhaltig": false,
+   "kurz": "Großbank ohne Nachhaltigkeitsgeschäftsmodell",
+   "text": "Die Deutsche Bank ist eine international tätige Universalbank. Sie hat Nachhaltigkeitsziele und Branchenrichtlinien, aber keine verbindlichen sozial-ökologischen Kriterien für alle Kredite und Anlagen.",
+   "quelle": "https://www.db.com/what-we-do/responsibility/sustainability"
+  },
+  "Postbank": {
+   "nachhaltig": false,
+   "kurz": "Filialbank der Deutschen Bank ohne Nachhaltigkeitsmodell",
+   "text": "Die Postbank ist eine Marke der Deutschen Bank. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+   "quelle": "https://www.postbank.de/"
+  },
+  "norisbank": {
+   "nachhaltig": false,
+   "kurz": "Direktbank der Deutschen Bank ohne Nachhaltigkeitsmodell",
+   "text": "Die norisbank ist eine Direktbank aus dem Konzern der Deutschen Bank. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+   "quelle": "https://www.norisbank.de/ueber-uns/norisbank.html"
+  },
+  "C24": {
+   "nachhaltig": false,
+   "kurz": "Smartphone-Bank ohne Nachhaltigkeitsgeschäftsmodell",
+   "text": "Die C24 Bank gehört zur CHECK24-Gruppe und ist eine reine Smartphone-Bank. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+   "quelle": "https://www.c24.de/"
+  },
+  "Trade Republic": {
+   "nachhaltig": false,
+   "kurz": "Neobroker mit Banklizenz ohne Nachhaltigkeitsmodell",
+   "text": "Trade Republic ist ein Online-Broker mit Vollbanklizenz. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zum Geschäftsmodell.",
+   "quelle": "https://traderepublic.com/de-de"
+  },
+  "Consorsbank": {
+   "nachhaltig": false,
+   "kurz": "Direktbank von BNP Paribas ohne Nachhaltigkeitsmodell",
+   "text": "Die Consorsbank ist die deutsche Direktbankmarke von BNP Paribas. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+   "quelle": "https://www.consorsbank.de/"
+  },
+  "1822direkt": {
+   "nachhaltig": false,
+   "kurz": "Sparkassen-Direktbank ohne Nachhaltigkeitsmodell",
+   "text": "Die 1822direkt ist die Direktbanktochter der Frankfurter Sparkasse. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+   "quelle": "https://www.1822direkt.de/"
+  },
+  "Openbank": {
+   "nachhaltig": false,
+   "kurz": "Direktbank von Santander ohne Nachhaltigkeitsmodell",
+   "text": "Openbank ist die Digitalbank der spanischen Santander-Gruppe. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+   "quelle": "https://www.openbank.de/"
+  },
+  "TARGOBANK": {
+   "nachhaltig": false,
+   "kurz": "Filialbank ohne Nachhaltigkeitsgeschäftsmodell",
+   "text": "Die TARGOBANK gehört zur französischen Crédit-Mutuel-Gruppe und ist vor allem im Konsumentenkredit tätig. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen hat sie nicht.",
+   "quelle": "https://www.targobank.de/"
+  },
+  "BBBank": {
+   "nachhaltig": false,
+   "kurz": "Genossenschaftsbank ohne Nachhaltigkeitsgeschäftsmodell",
+   "text": "Die BBBank ist eine große genossenschaftliche Direkt- und Filialbank mit Wurzeln im öffentlichen Dienst. Verbindliche sozial-ökologische Kriterien für alle Kredite und Anlagen hat sie nicht.",
+   "quelle": "https://www.bbbank.de/"
+  },
+  "Deutsche Skatbank": {
+   "nachhaltig": false,
+   "kurz": "Genossenschaftsbank ohne Nachhaltigkeitsgeschäftsmodell",
+   "text": "Die Deutsche Skatbank ist eine Direktbank-Zweigniederlassung der VR-Bank Altenburger Land. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gehören nicht zu ihrem Geschäftsmodell.",
+   "quelle": "https://www.skatbank.de/"
+  },
+  "HypoVereinsbank": {
+   "nachhaltig": false,
+   "kurz": "Großbank der UniCredit ohne Nachhaltigkeitsmodell",
+   "text": "Die HypoVereinsbank gehört zur italienischen UniCredit und ist eine Universalbank. Verbindliche sozial-ökologische Kriterien für alle Kredite und Anlagen hat sie nicht.",
+   "quelle": "https://www.hypovereinsbank.de/"
+  }
+ }
+}

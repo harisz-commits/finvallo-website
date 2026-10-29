@@ -86,6 +86,13 @@
     it.scrollIntoView({ block: 'start' });
   }
   window.addEventListener('hashchange', zeige);
+  // Startwerte aus der Adresse: ?f=gratis,filiale  ?art=premium  ?q=dkb
+  try {
+    var u = new URLSearchParams(location.search);
+    (u.get('f') || '').split(',').forEach(function (x) { chips.forEach(function (c) { if (c.dataset.flag === x) c.setAttribute('aria-pressed', 'true'); }); });
+    if (u.get('art') && art.querySelector('option[value="' + u.get('art') + '"]')) art.value = u.get('art');
+    if (u.get('q')) q.value = u.get('q');
+  } catch (e) {}
   box.hidden = false; if (calcBox) calcBox.hidden = false;
   apply(); zeige();
 })();

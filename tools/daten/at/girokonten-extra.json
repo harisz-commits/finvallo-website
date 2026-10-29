@@ -1,0 +1,512 @@
+{
+  "hinweis": "Zusatzdaten für die Girokonto-Bestenlisten (Unterkonten, Bonitätsabfrage, Nachhaltigkeit). Nur Angaben aus Quellen der Bank, null = nicht belegt.",
+  "stand": "2026-10-29",
+  "konten": {
+    "n26-standard": {
+      "unterkonten": 0,
+      "unterkonten_iban": null,
+      "unterkonten_text": "Spaces gibt es bei Standard nur für Konten, die vor dem 18. März 2021 eröffnet wurden.",
+      "unterkonten_quelle": "https://n26.com/de-at/spaces",
+      "bonitaet": "ksv",
+      "bonitaet_text": "N26 holt bei der CRIF eine Auskunft zu Zahlungserfahrungen und Adressdaten ein.",
+      "bonitaet_quelle": "https://docs.n26.com/legal/02+AT/03+Privacy%20Policy/de/01privacy-policy-de.pdf"
+    },
+    "n26-smart": {
+      "unterkonten": 10,
+      "unterkonten_iban": true,
+      "unterkonten_text": "Bis zu 10 Spaces, die auf Wunsch eine eigene IBAN bekommen.",
+      "unterkonten_quelle": "https://n26.com/de-at/spaces",
+      "bonitaet": "ksv",
+      "bonitaet_text": "N26 holt bei der CRIF eine Auskunft zu Zahlungserfahrungen und Adressdaten ein.",
+      "bonitaet_quelle": "https://docs.n26.com/legal/02+AT/03+Privacy%20Policy/de/01privacy-policy-de.pdf"
+    },
+    "n26-go": {
+      "unterkonten": 10,
+      "unterkonten_iban": true,
+      "unterkonten_text": "Bis zu 10 Spaces, die auf Wunsch eine eigene IBAN bekommen.",
+      "unterkonten_quelle": "https://n26.com/de-at/spaces",
+      "bonitaet": "ksv",
+      "bonitaet_text": "N26 holt bei der CRIF eine Auskunft zu Zahlungserfahrungen und Adressdaten ein.",
+      "bonitaet_quelle": "https://docs.n26.com/legal/02+AT/03+Privacy%20Policy/de/01privacy-policy-de.pdf"
+    },
+    "n26-metal": {
+      "unterkonten": 10,
+      "unterkonten_iban": true,
+      "unterkonten_text": "Bis zu 10 Spaces, die auf Wunsch eine eigene IBAN bekommen.",
+      "unterkonten_quelle": "https://n26.com/de-at/spaces",
+      "bonitaet": "ksv",
+      "bonitaet_text": "N26 holt bei der CRIF eine Auskunft zu Zahlungserfahrungen und Adressdaten ein.",
+      "bonitaet_quelle": "https://docs.n26.com/legal/02+AT/03+Privacy%20Policy/de/01privacy-policy-de.pdf"
+    },
+    "revolut-standard": {
+      "unterkonten": 99,
+      "unterkonten_iban": null,
+      "unterkonten_text": "Beliebig viele Pockets, um das Geld nach Zwecken aufzuteilen.",
+      "unterkonten_quelle": "https://www.revolut.com/de-AT/open-bank-account/",
+      "bonitaet": null,
+      "bonitaet_text": "Auskunfteien laut Datenschutzhinweis bei Kreditprodukten, zur Eröffnung keine Angabe.",
+      "bonitaet_quelle": "https://cdn.revolut.com/terms_and_conditions/pdf/datenschutzhinweise_79fc9923_1.1.1_1786527047_de.pdf"
+    },
+    "revolut-plus": {
+      "unterkonten": 99,
+      "unterkonten_iban": null,
+      "unterkonten_text": "Beliebig viele Pockets, um das Geld nach Zwecken aufzuteilen.",
+      "unterkonten_quelle": "https://www.revolut.com/de-AT/open-bank-account/",
+      "bonitaet": null,
+      "bonitaet_text": "Auskunfteien laut Datenschutzhinweis bei Kreditprodukten, zur Eröffnung keine Angabe.",
+      "bonitaet_quelle": "https://cdn.revolut.com/terms_and_conditions/pdf/datenschutzhinweise_79fc9923_1.1.1_1786527047_de.pdf"
+    },
+    "revolut-premium": {
+      "unterkonten": 99,
+      "unterkonten_iban": null,
+      "unterkonten_text": "Beliebig viele Pockets, um das Geld nach Zwecken aufzuteilen.",
+      "unterkonten_quelle": "https://www.revolut.com/de-AT/open-bank-account/",
+      "bonitaet": null,
+      "bonitaet_text": "Auskunfteien laut Datenschutzhinweis bei Kreditprodukten, zur Eröffnung keine Angabe.",
+      "bonitaet_quelle": "https://cdn.revolut.com/terms_and_conditions/pdf/datenschutzhinweise_79fc9923_1.1.1_1786527047_de.pdf"
+    },
+    "revolut-metal": {
+      "unterkonten": 99,
+      "unterkonten_iban": null,
+      "unterkonten_text": "Beliebig viele Pockets, um das Geld nach Zwecken aufzuteilen.",
+      "unterkonten_quelle": "https://www.revolut.com/de-AT/open-bank-account/",
+      "bonitaet": null,
+      "bonitaet_text": "Auskunfteien laut Datenschutzhinweis bei Kreditprodukten, zur Eröffnung keine Angabe.",
+      "bonitaet_quelle": "https://cdn.revolut.com/terms_and_conditions/pdf/datenschutzhinweise_79fc9923_1.1.1_1786527047_de.pdf"
+    },
+    "revolut-ultra": {
+      "unterkonten": 99,
+      "unterkonten_iban": null,
+      "unterkonten_text": "Beliebig viele Pockets, um das Geld nach Zwecken aufzuteilen.",
+      "unterkonten_quelle": "https://www.revolut.com/de-AT/open-bank-account/",
+      "bonitaet": null,
+      "bonitaet_text": "Auskunfteien laut Datenschutzhinweis bei Kreditprodukten, zur Eröffnung keine Angabe.",
+      "bonitaet_quelle": "https://cdn.revolut.com/terms_and_conditions/pdf/datenschutzhinweise_79fc9923_1.1.1_1786527047_de.pdf"
+    },
+    "bunq-free": {
+      "unterkonten": 2,
+      "unterkonten_iban": true,
+      "unterkonten_text": "3 Konten mit jeweils eigener IBAN, also 2 zusätzliche Unterkonten.",
+      "unterkonten_quelle": "https://www.bunq.com/de/personal/plans",
+      "bonitaet": null,
+      "bonitaet_text": "Laut Datenschutzinfo Bonitätsprüfung bei Charge- und Kreditkarten, zur Eröffnung offen.",
+      "bonitaet_quelle": "https://www.bunq.com/de/privacy"
+    },
+    "bunq-core": {
+      "unterkonten": 4,
+      "unterkonten_iban": true,
+      "unterkonten_text": "5 Konten mit jeweils eigener IBAN, also 4 zusätzliche Unterkonten.",
+      "unterkonten_quelle": "https://www.bunq.com/de/personal/plans",
+      "bonitaet": null,
+      "bonitaet_text": "Laut Datenschutzinfo Bonitätsprüfung bei Charge- und Kreditkarten, zur Eröffnung offen.",
+      "bonitaet_quelle": "https://www.bunq.com/de/privacy"
+    },
+    "bunq-pro": {
+      "unterkonten": 24,
+      "unterkonten_iban": true,
+      "unterkonten_text": "25 Konten mit jeweils eigener IBAN, also 24 zusätzliche Unterkonten.",
+      "unterkonten_quelle": "https://www.bunq.com/de/personal/plans",
+      "bonitaet": null,
+      "bonitaet_text": "Laut Datenschutzinfo Bonitätsprüfung bei Charge- und Kreditkarten, zur Eröffnung offen.",
+      "bonitaet_quelle": "https://www.bunq.com/de/privacy"
+    },
+    "bunq-elite": {
+      "unterkonten": 24,
+      "unterkonten_iban": true,
+      "unterkonten_text": "25 Konten mit jeweils eigener IBAN, also 24 zusätzliche Unterkonten.",
+      "unterkonten_quelle": "https://www.bunq.com/de/personal/plans",
+      "bonitaet": null,
+      "bonitaet_text": "Laut Datenschutzinfo Bonitätsprüfung bei Charge- und Kreditkarten, zur Eröffnung offen.",
+      "bonitaet_quelle": "https://www.bunq.com/de/privacy"
+    },
+    "trade-republic-girokonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "tomorrow-now": {
+      "unterkonten": 2,
+      "unterkonten_iban": null,
+      "unterkonten_text": "Bis zu 2 Pockets zum Sparen und Aufteilen des Geldes.",
+      "unterkonten_quelle": "https://support.tomorrow.one/de/support/solutions/articles/15000031845",
+      "bonitaet": "ksv",
+      "bonitaet_text": "Tomorrow fragt bei der Kontoeröffnung die Kreditwürdigkeit bei der deutschen Schufa ab.",
+      "bonitaet_quelle": "https://assets.tomorrow.one/de-DE/legal/app-datenschutzerklaerung/tomorrow-app-datenschutzerklaerung.html"
+    },
+    "tomorrow-change": {
+      "unterkonten": 6,
+      "unterkonten_iban": null,
+      "unterkonten_text": "Bis zu 6 Pockets zum Sparen und Aufteilen des Geldes.",
+      "unterkonten_quelle": "https://support.tomorrow.one/de/support/solutions/articles/15000031845",
+      "bonitaet": "ksv",
+      "bonitaet_text": "Tomorrow fragt bei der Kontoeröffnung die Kreditwürdigkeit bei der deutschen Schufa ab.",
+      "bonitaet_quelle": "https://assets.tomorrow.one/de-DE/legal/app-datenschutzerklaerung/tomorrow-app-datenschutzerklaerung.html"
+    },
+    "tomorrow-plus": {
+      "unterkonten": 99,
+      "unterkonten_iban": null,
+      "unterkonten_text": "Unbegrenzt viele Pockets zum Sparen und Aufteilen des Geldes.",
+      "unterkonten_quelle": "https://support.tomorrow.one/de/support/solutions/articles/15000031845",
+      "bonitaet": "ksv",
+      "bonitaet_text": "Tomorrow fragt bei der Kontoeröffnung die Kreditwürdigkeit bei der deutschen Schufa ab.",
+      "bonitaet_quelle": "https://assets.tomorrow.one/de-DE/legal/app-datenschutzerklaerung/tomorrow-app-datenschutzerklaerung.html"
+    },
+    "dkb-girokonto": {
+      "unterkonten": null,
+      "unterkonten_iban": true,
+      "unterkonten_text": "Weitere Girokonten mit eigener IBAN sind möglich, ein Maximum nennt die DKB nicht.",
+      "unterkonten_quelle": "https://www.dkb.de/fragen-antworten/was-muss-ich-zum-girokonto-wissen",
+      "bonitaet": "ksv",
+      "bonitaet_text": "Die DKB prüft die Bonität bei Auskunfteien wie Schufa, infoscore oder Creditreform.",
+      "bonitaet_quelle": "https://dkb.de/externe_inhalte/datenschutz_extern_legitimationspruefung/schufa_auskunft.html"
+    },
+    "bank-austria-online-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bank-austria-gogreen-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bank-austria-relax-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bank-austria-studentenkonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bawag-kontobox-small": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bawag-kontobox-large": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bawag-online-kontobox": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bawag-studenten-kontobox": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "easybank-easy-gratis": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "easybank-easy-plus": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "bank99-smartkonto99": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": "ksv",
+      "bonitaet_text": "Bei Konten mit Überschreitung prüft bank99 automatisiert mit Daten von KSV1870 und CRIF.",
+      "bonitaet_quelle": "https://bank99.at/datenschutz"
+    },
+    "bank99-balancekonto99": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": "ksv",
+      "bonitaet_text": "Bei Konten mit Überschreitung prüft bank99 automatisiert mit Daten von KSV1870 und CRIF.",
+      "bonitaet_quelle": "https://bank99.at/datenschutz"
+    },
+    "bank99-topkonto99": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": "ksv",
+      "bonitaet_text": "Bei Konten mit Überschreitung prüft bank99 automatisiert mit Daten von KSV1870 und CRIF.",
+      "bonitaet_quelle": "https://bank99.at/datenschutz"
+    },
+    "bank99-aktivkonto99-bildung": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": "ksv",
+      "bonitaet_text": "Bei Konten mit Überschreitung prüft bank99 automatisiert mit Daten von KSV1870 und CRIF.",
+      "bonitaet_quelle": "https://bank99.at/datenschutz"
+    },
+    "bank-direkt-girokonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": "ksv",
+      "bonitaet_text": "Laut Selbstauskunft fragt Bank Direkt bei Kontoeröffnung u. a. KSV1870 und CRIF ab.",
+      "bonitaet_quelle": "https://www.bankdirekt.at/resources/boerse-live/bankdirekt/downloads/Selbstauskunft.pdf"
+    },
+    "bank-direkt-studentenkonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": "ksv",
+      "bonitaet_text": "Laut Selbstauskunft fragt Bank Direkt bei Kontoeröffnung u. a. KSV1870 und CRIF ab.",
+      "bonitaet_quelle": "https://www.bankdirekt.at/resources/boerse-live/bankdirekt/downloads/Selbstauskunft.pdf"
+    },
+    "anadi-online-girokonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "anadi-online-gehalts-pensionskonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "erste-bank-s-kompakt-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "erste-bank-s-plus-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "erste-bank-studentenkonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "dadat-bank-girokonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": "Eröffnung nur mit ausreichender Bonität, die Auskunftei nennt die DADAT dabei nicht.",
+      "bonitaet_quelle": "https://www.dad.at/konto-karte/girokonto/girokonto"
+    },
+    "dadat-bank-gehaltskonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": "Eröffnung nur mit ausreichender Bonität, die Auskunftei nennt die DADAT dabei nicht.",
+      "bonitaet_quelle": "https://www.dad.at/konto-karte/girokonto/gehaltskonto"
+    },
+    "dadat-bank-pensionskonto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": "Eröffnung nur mit ausreichender Bonität, die Auskunftei nennt die DADAT dabei nicht.",
+      "bonitaet_quelle": "https://www.dad.at/konto-karte/girokonto/pensionskonto"
+    },
+    "dadat-bank-u28-konto": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": "Eröffnung nur mit ausreichender Bonität, die Auskunftei nennt die DADAT dabei nicht.",
+      "bonitaet_quelle": "https://www.dad.at/konto-karte/girokonto/u28-konto"
+    },
+    "wuestenrot-bank-zero": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "wuestenrot-bank-life": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    },
+    "wuestenrot-bank-student-life": {
+      "unterkonten": null,
+      "unterkonten_iban": null,
+      "unterkonten_text": null,
+      "unterkonten_quelle": null,
+      "bonitaet": null,
+      "bonitaet_text": null,
+      "bonitaet_quelle": null
+    }
+  },
+  "banken": {
+    "N26": {
+      "nachhaltig": false,
+      "kurz": "Klassische Direktbank ohne Nachhaltigkeitsfokus",
+      "text": "N26 ist eine digitale Vollbank ohne verbindliche sozial-ökologische Kriterien für Kredite und Anlagen. Nachhaltigkeit ist nicht Teil des Geschäftsmodells.",
+      "quelle": "https://n26.com/de-at"
+    },
+    "Revolut": {
+      "nachhaltig": false,
+      "kurz": "Fintech-Bank ohne Nachhaltigkeitsfokus",
+      "text": "Revolut ist eine digitale Bank mit breitem Angebot von Krypto bis Trading. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen gibt es nicht.",
+      "quelle": "https://www.revolut.com/de-AT/"
+    },
+    "bunq": {
+      "nachhaltig": false,
+      "kurz": "Digitale Bank ohne Ökobank-Modell",
+      "text": "bunq ist eine digitale Bank ohne verbindliche sozial-ökologische Kriterien für Kredite und Anlagen. Nachhaltigkeit ist nicht Kern des Geschäftsmodells.",
+      "quelle": "https://www.bunq.com/de/personal/plans"
+    },
+    "Trade Republic": {
+      "nachhaltig": false,
+      "kurz": "Neobroker und Bank ohne Nachhaltigkeitsfokus",
+      "text": "Trade Republic ist ein Neobroker mit Vollbanklizenz. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen sind nicht Teil des Geschäftsmodells.",
+      "quelle": "https://traderepublic.com/de-at"
+    },
+    "Tomorrow": {
+      "nachhaltig": true,
+      "kurz": "Nachhaltige Bank mit Klimaschutz als Geschäftsmodell",
+      "text": "Tomorrow legt Kundeneinlagen nach sozial-ökologischen Kriterien an und schließt klimaschädliche Branchen aus. Nachhaltigkeit ist der Kern des Geschäftsmodells.",
+      "quelle": "https://www.tomorrow.one/de-DE/"
+    },
+    "DKB": {
+      "nachhaltig": false,
+      "kurz": "Direktbank mit Nachhaltigkeitsfokus, keine reine Ökobank",
+      "text": "Die DKB setzt bei Krediten stark auf erneuerbare Energien und Kommunen, ist aber eine klassische Universal-Direktbank. Ein durchgängiges sozial-ökologisches Geschäftsmodell wie bei Ökobanken hat sie nicht.",
+      "quelle": "https://www.dkb.de/nachhaltigkeit"
+    },
+    "Bank Austria": {
+      "nachhaltig": false,
+      "kurz": "Großbank mit Nachhaltigkeitsangeboten, keine Ökobank",
+      "text": "Die Bank Austria gehört zur UniCredit und bietet einzelne grüne Produkte wie das GoGreen-Konto. Verbindliche sozial-ökologische Kriterien für das gesamte Kredit- und Anlagegeschäft gibt es nicht.",
+      "quelle": "https://www.bankaustria.at/giro-konto-vergleich.jsp"
+    },
+    "BAWAG": {
+      "nachhaltig": false,
+      "kurz": "Klassische Großbank ohne Ökobank-Modell",
+      "text": "Die BAWAG ist eine österreichische Universalbank. Verbindliche sozial-ökologische Kriterien für das gesamte Kredit- und Anlagegeschäft sind nicht Teil ihres Geschäftsmodells.",
+      "quelle": "https://www.bawag.at/bawag/privatkunden/konto-karte"
+    },
+    "easybank": {
+      "nachhaltig": false,
+      "kurz": "Direktbank der BAWAG ohne Nachhaltigkeitsfokus",
+      "text": "Die easybank ist die Direktbank-Marke der BAWAG. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen sind nicht Teil ihres Geschäftsmodells.",
+      "quelle": "https://www.easybank.at/easybank/konto"
+    },
+    "bank99": {
+      "nachhaltig": false,
+      "kurz": "Postbank mit grünem Kontomodell, keine Ökobank",
+      "text": "Die bank99 bietet mit dem balancekonto99 ein Konto mit Umweltzeichen, dessen Einlagen in nachhaltige Immobilien fließen. Für das gesamte Kredit- und Anlagegeschäft gelten aber keine verbindlichen sozial-ökologischen Kriterien.",
+      "quelle": "https://bank99.at/konto/balancekonto99"
+    },
+    "Bank Direkt": {
+      "nachhaltig": false,
+      "kurz": "Direktbank der Raiffeisenlandesbank OÖ, keine Ökobank",
+      "text": "Bank Direkt ist die Online-Marke der Raiffeisenlandesbank Oberösterreich. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen sind nicht Teil ihres Geschäftsmodells.",
+      "quelle": "https://www.bankdirekt.at/de/home/datenschutz.html"
+    },
+    "Austrian Anadi Bank": {
+      "nachhaltig": false,
+      "kurz": "Regionale Universalbank ohne Ökobank-Modell",
+      "text": "Die Austrian Anadi Bank ist eine Kärntner Universalbank. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen sind nicht Teil ihres Geschäftsmodells.",
+      "quelle": "https://anadibank.com/konto-karte"
+    },
+    "Erste Bank": {
+      "nachhaltig": false,
+      "kurz": "Großbank mit Nachhaltigkeitsprodukten, keine Ökobank",
+      "text": "Die Erste Bank ist eine österreichische Universalbank mit einzelnen nachhaltigen Produkten. Verbindliche sozial-ökologische Kriterien für das gesamte Kredit- und Anlagegeschäft gibt es nicht.",
+      "quelle": "https://www.sparkasse.at/erstebank/privatkunden/konto-karten/onlinekonto"
+    },
+    "DADAT Bank": {
+      "nachhaltig": false,
+      "kurz": "Direktbank der Schelhammer Capital Bank, keine Ökobank",
+      "text": "Die DADAT ist die Direktbank-Marke der Schelhammer Capital Bank mit Fokus auf Wertpapiere und Konten. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen sind nicht ihr Geschäftsmodell.",
+      "quelle": "https://www.dad.at/"
+    },
+    "Wüstenrot Bank": {
+      "nachhaltig": false,
+      "kurz": "Bausparkasse mit Girokonten, keine Ökobank",
+      "text": "Die Wüstenrot Bank gehört zur Wüstenrot-Gruppe mit Schwerpunkt Bausparen und Wohnfinanzierung. Verbindliche sozial-ökologische Kriterien für Kredite und Anlagen sind nicht ihr Geschäftsmodell.",
+      "quelle": "https://www.wuestenrot.at/de/konten-und-banking/wuestenrot-konten/girokonto.html"
+    }
+  }
+}

@@ -7,7 +7,7 @@ import glob, html as H, json, os, re, sys
 from urllib.parse import urljoin, urlparse
 R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'public') + '/'
 INTERN = re.compile(r'hochgeladen|Faktencheck|Prüfkandidat|Prüfstatus|Sekundärquelle|[Cc]apitalo|Screenshot|Excel|Kund:innen|class="sek"|Vorprüfung')
-GLUE_OK = ('1822direkt', 'ChatGPT', 'NordVPN', 'eSIM', 'PayPal', 'MasterCard', 'iPhone', 'iOS', 'myFlex', 'WiFi', 'BahnCard', 'eBay', 'MiCA', 'BayernLB', '1822TAN', 'OeNB', '0er-Jahr', 'eID', 'VideoIdent', 'WebID', 'E1kv', '1kv', '0TO9', 'meineBTV', 'Bank11direkt', 'GoBD', 'meineSCHUFA', '069NXT', '100pro')
+GLUE_OK = ('1822direkt', 'ChatGPT', 'NordVPN', 'eSIM', 'PayPal', 'MasterCard', 'iPhone', 'iOS', 'myFlex', 'WiFi', 'BahnCard', 'eBay', 'MiCA', 'BayernLB', '1822TAN', 'OeNB', '0er-Jahr', 'eID', 'OeAD', 'VideoIdent', 'WebID', 'E1kv', '1kv', '0TO9', 'meineBTV', 'Bank11direkt', 'GoBD', 'meineSCHUFA', '069NXT', '100pro')
 LATER = set()
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import karten as K
