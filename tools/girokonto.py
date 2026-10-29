@@ -16,12 +16,12 @@ CFG={'at':dict(N='Österreich',code='AT',iban_pro='Österreichische IBAN',iban_c
         basis='Das gesetzliche Zahlungskonto mit grundlegenden Funktionen. Jede Bank muss es jedem Menschen mit rechtmäßigem Aufenthalt in der EU anbieten, auch ohne Einkommen und trotz Schulden. Es kostet laut Arbeiterkammer höchstens 83,45 € im Jahr, für besonders schutzbedürftige Menschen höchstens 41,73 €.',
         regional='Regionale Banken wie Sparkassen, Raiffeisenbanken, Volksbanken und Landes-Hypos haben je nach Bundesland eigene Preise. Sie fehlen deshalb, genauso wie E-Geld-Konten ohne Einlagensicherung.',
         extern='<p>Alle Konten in Österreich findest du im <a href="https://bankenrechner.arbeiterkammer.at/" target="_blank" rel="noopener">Bankenrechner der Arbeiterkammer ↗</a>.</p>',
-        rg=[('kostenloses-girokonto','Kostenloses Girokonto'),('girokonto-wechseln','Konto wechseln'),('basiskonto','Basiskonto')],
+        rg=[('girokonto-wechseln','Konto wechseln'),('basiskonto','Basiskonto')],
         anb={'Erste Bank':'erste'},llms_vor='\n## Deutschland: Kreditkarten'),
      'de':dict(N='Deutschland',code='DE',iban_pro='Deutsche IBAN',iban_con='Keine deutsche IBAN',iban_a='eine deutsche IBAN',
         basis='Das Basiskonto nach dem Zahlungskontengesetz. Banken, die Girokonten für Verbraucher anbieten, müssen es jedem Menschen mit rechtmäßigem Aufenthalt in der EU anbieten, auch ohne Einkommen und trotz Schulden. Das Entgelt muss angemessen sein.',
         regional='Sparkassen, Volks- und Raiffeisenbanken und regionale Sparda- und PSD-Banken haben je nach Region eigene Preise und nehmen meist nur Kundinnen und Kunden aus ihrer Region. Sie fehlen deshalb, genauso wie E-Geld-Konten ohne Einlagensicherung.',
-        extern='',rg=[('kostenloses-girokonto','Kostenloses Girokonto'),('girokonto-wechseln','Konto wechseln'),('basiskonto','Basiskonto')],anb={'HVB':'hypovereinsbank','HypoVereinsbank':'hypovereinsbank'},llms_vor='\n## Deutschland: Ratgeber')}
+        extern='',rg=[('girokonto-wechseln','Konto wechseln'),('basiskonto','Basiskonto')],anb={'HVB':'hypovereinsbank','HypoVereinsbank':'hypovereinsbank'},llms_vor='\n## Deutschland: Ratgeber')}
 CC=CFG['at']; OTHER={}
 ART={'standard':'Gehalts- und Privatkonto','premium':'Premiumkonto','student':'Studenten- und U28-Konto','jugend':'Jugendkonto','kinder':'Kinderkonto','basis':'Basiskonto'}
 SEK=[('standard','Konten für alle',None),('student','Für Studierende und junge Erwachsene','Für Studierende, Menschen in Ausbildung oder bis zu einem bestimmten Alter. Danach stellt die Bank auf ein normales Konto um, das meist etwas kostet.'),

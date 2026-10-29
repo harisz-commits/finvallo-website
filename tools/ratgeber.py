@@ -82,7 +82,11 @@ DATES={
 }
 def dates(): return DATES
 ARTS={}   # (land,slug) -> dict
-def art(land,slug,**kw): ARTS[(land,slug)]=kw
+# Ratgeber, die in den Girokonto-Bestenlisten aufgegangen sind (301 über tools/daten/entfernt.json)
+ENTFALLEN={'kostenloses-girokonto','gemeinschaftskonto','kinderkonto-jugendkonto'}
+def art(land,slug,**kw):
+    if slug in ENTFALLEN: return
+    ARTS[(land,slug)]=kw
 def head(land,slug,a,P,ld,alt):
     css=open(R+'index.html').read(); v=re.search(r'site\.css\?v=([a-z0-9]+)',css).group(1); fv=re.search(r'favicon\.svg\?v=([a-z0-9]+)',css).group(1)
     url=f'https://finvallo.com/{land}/ratgeber/{slug}/'
