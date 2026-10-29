@@ -659,7 +659,7 @@ def praemie_de(c):
             '<b>Erfüllungszeitraum.</b> In welchem Zeitraum der Geldeingang oder die Kartenzahlungen passieren müssen.',
             '<b>Auszahlungstermin.</b> Wann die Bank zahlt. Das kann Wochen oder Monate nach der Erfüllung sein.',
             '<b>Haltefrist.</b> Wie lange das Konto danach mindestens bestehen muss.']),
-        p('Unser Tipp: Speichere die Teilnahmebedingungen als PDF, sobald du den Antrag abschickst. Trag jeden Stichtag in deinen Kalender ein. Und mach Screenshots, wenn du die Werbeeinwilligung erteilst. Falls die Prämie nicht kommt, hast du damit alles in der Hand, was du für eine Nachfrage brauchst.'))))
+        p('Unser Tipp: Speichere die Teilnahmebedingungen als PDF, sobald du den Antrag abschickst. Trag jeden Stichtag in deinen Kalender ein. Und mach ein Bildschirmfoto, wenn du die Werbeeinwilligung erteilst. Falls die Prämie nicht kommt, hast du damit alles in der Hand, was du für eine Nachfrage brauchst.'))))
     ex=next((k for k in geld if k['kf_jahr']>0),None)
     exf=next((k for k in geld if tot(k)==0),None)
     S.append(('Rechnung: Lohnt sich die Prämie?',prose(

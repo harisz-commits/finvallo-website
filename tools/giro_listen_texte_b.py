@@ -292,7 +292,7 @@ def _unterkonten_at(c):
         'Zahlt die Bank Zinsen auf ein Unterkonto, fällt Kapitalertragsteuer an. Bei Zinsen aus Bankguthaben sind das 25 %. Eine österreichische Bank zieht die KESt automatisch ab, du musst nichts tun.',
         'Ein Beispiel: 6.000 € Notreserve in einem Topf mit 2 % Zinsen bringen 120 € im Jahr. Davon gehen 30 € KESt ab, 90 € bleiben dir.',
         'Bei einer Bank ohne Sitz oder Zweigstelle in Österreich ist das oft anders. Zieht sie keine österreichische KESt ab, musst du die Zinsen selbst in der Einkommensteuererklärung angeben, in der Beilage E 1kv. Frag im Zweifel beim Kundenservice nach, ob die KESt für Österreich einbehalten wird.',
-        f'Für die Einlagensicherung zählen alle Konten einer Person bei derselben Bank zusammen, Unterkonten eingeschlossen. Bis 100.000 € sind sie gesetzlich gesichert, bei österreichischen Banken über die Einlagensicherung AUSTRIA oder ein anerkanntes Sicherungssystem der jeweiligen Bankengruppe. Details im Ratgeber {c["rg"]("einlagensicherung", "Einlagensicherung")}.')))
+        f'Für die Einlagensicherung zählen alle Konten einer Person bei derselben Bank zusammen, Unterkonten eingeschlossen. Bis 100.000 € sind sie gesetzlich gesichert. Bei Privatbanken, Volksbanken und Hypos zahlt die Einlagensicherung AUSTRIA, Sparkassen und Raiffeisenbanken haben eigene Sicherungseinrichtungen. Details im Ratgeber {c["rg"]("einlagensicherung", "Einlagensicherung")}.')))
     secs.append(('Stolperfallen im ersten Jahr', _p(
         'Ein Topfsystem braucht ein paar Monate, bis es rund läuft. Diese Fehler passieren am Anfang besonders oft:',
         _ul('<b>Zu knapp gerechnet:</b> Teilbeträge für Strom und Gas werden angepasst, viele Versicherungen sind indexiert. Plane beim Fixkostenkonto einen Puffer ein, sonst wird eine Lastschrift nicht eingelöst und der Zahlungsempfänger verrechnet Spesen.',
@@ -310,7 +310,7 @@ def _unterkonten_at(c):
             'Bekommst du für jedes Konto einen eigenen Kontoauszug? Das hilft bei der Abrechnung mit Mitbewohnern.'),
         f'Wechseln geht in Österreich mit dem Kontowechselservice nach dem Verbraucherzahlungskontogesetz (VZKG): Die neue Bank holt sich Daueraufträge und Lastschriften von der alten. Wie das abläuft, steht im Ratgeber {c["rg"]("girokonto-wechseln", "Girokonto wechseln")}.')))
     secs.append(('Quellen', _quellen(c, [
-        ('https://www.ris.bka.gv.at/', 'Rechtsinformationssystem des Bundes (RIS): Verbraucherzahlungskontogesetz'),
+        ('https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009550', 'Rechtsinformationssystem des Bundes (RIS): Verbraucherzahlungskontogesetz'),
         ('https://www.einlagensicherung.at/', 'Einlagensicherung AUSTRIA'),
         ('https://www.bmf.gv.at/', 'Bundesministerium für Finanzen: Kapitalertragsteuer'),
         ('https://www.fma.gv.at/', 'Finanzmarktaufsicht (FMA)'),
@@ -319,7 +319,7 @@ def _unterkonten_at(c):
     faq = [
         ('Kann mein Arbeitgeber das Gehalt auf zwei Konten aufteilen?', 'Manche Lohnverrechnungen machen das, verpflichtet sind sie nicht. Einfacher ist ein Dauerauftrag: Das Gehalt kommt aufs Hauptkonto, und am selben oder nächsten Tag geht ein fixer Betrag automatisch in den Topf.'),
         ('Bekommt jedes Unterkonto eine eigene Bankomatkarte?', 'Das hängt von der Bank ab. Zu einem Zusatzkonto mit eigener IBAN kannst du oft eine eigene Karte bestellen, die meist extra kostet. Virtuelle Töpfe haben in der Regel keine eigene Karte. Manche Apps erlauben, eine Karte mit einem bestimmten Topf zu verknüpfen.'),
-        ('Ist Guthaben auf einem Unterkonto vor Exekution geschützt?', f'Nein. Den Schutz gibt es nur auf einem Pfändungsschutzkonto, und das darfst du nur einmal haben. Guthaben auf anderen Konten und Töpfen ist nicht geschützt. Mehr im Ratgeber {c["rg"]("pfaendungsschutzkonto", "Pfändungsschutzkonto")}.'),
+        ('Ist Guthaben auf einem Unterkonto vor Exekution geschützt?', f'Nicht automatisch. Ein Pfändungsschutzkonto wie in Deutschland gibt es in Österreich nicht. Wird dein Konto gepfändet, kannst du beim Exekutionsgericht beantragen, dass der unpfändbare Teil von Gehalt oder Pension freigegeben wird (§ 292i EO). Das gilt für jedes Konto, auch für Töpfe. Mehr im Ratgeber {c["rg"]("pfaendungsschutzkonto", "Pfändungsschutz am Konto")}.'),
         ('Kann ein Unterkonto mein Sparbuch ersetzen?', 'Für eine Notreserve ja, solange du jederzeit an das Geld kommen willst. Ein Sparkonto mit Bindung bringt meist mehr Zinsen, dafür kommst du nicht sofort ran. Viele kombinieren beides: ein Topf am Girokonto für kurzfristige Ausgaben, ein Sparkonto für den Rest.'),
         ('Was passiert mit Daueraufträgen, wenn ich einen Topf lösche?', 'Daueraufträge auf oder von diesem Topf laufen ins Leere oder werden von der Bank gestoppt. Lösch zuerst die Aufträge, buch das Guthaben um und schließ dann den Topf. Bei Konten mit eigener IBAN gibst du die neue Verbindung vorher allen Zahlungspartnern bekannt.'),
     ]
@@ -382,8 +382,8 @@ def _ohne_schufa(c):
         bt = f'In unserem Vergleich stehen {b["n"]} Basiskonten. Am günstigsten ist im Standardfall {c["link"](b["lo"])} mit {_kt(c, b["lo"])} im Jahr, am teuersten {c["link"](b["hi"])} mit {_kt(c, b["hi"])}.'
     secs.append(('Das Basiskonto: dein Recht auf ein Girokonto', _p(
         'Wenn keine Bank dich nimmt, hilft das Zahlungskontengesetz (ZKG). Jeder, der sich rechtmäßig in der EU aufhält, hat Anspruch auf ein Basiskonto. Das gilt auch für Wohnungslose, Geflüchtete und Menschen mit negativer Schufa. Alle Banken, die Girokonten für Privatkunden anbieten, müssen es einrichten. Selbst wenn die Bank deine Schufa-Einträge kennt, darf sie dich deshalb nicht ablehnen.',
-        'Ablehnen darf die Bank nur aus Gründen, die im Gesetz stehen, etwa wenn du in Deutschland schon ein nutzbares Zahlungskonto hast oder wegen einer Straftat gegen genau diese Bank verurteilt wurdest. Sie muss innerhalb von zehn Geschäftstagen nach deinem vollständigen Antrag entscheiden. Eine Ablehnung muss schriftlich kommen, mit Begründung und Hinweis, wo du dich beschweren kannst. Die BaFin hat dafür ein eigenes Verwaltungsverfahren, daneben gibt es die Schlichtungsstellen der Banken.',
-        'Ein Basiskonto kann alles, was du im Alltag brauchst: Gehalt empfangen, überweisen, Lastschriften, Daueraufträge, Debitkarte, Bargeld abheben. Einen Dispo gibt es nicht. Die Gebühren müssen angemessen sein. Der Bundesgerichtshof hat 2020 entschieden, dass eine Bank für ein Basiskonto keine überhöhten Preise verlangen darf.',
+        'Ablehnen darf die Bank nur aus Gründen, die im Gesetz stehen, etwa wenn du in Deutschland schon ein nutzbares Zahlungskonto hast oder in den letzten drei Jahren wegen einer Straftat gegen genau diese Bank verurteilt wurdest. Sie muss innerhalb von zehn Geschäftstagen nach deinem vollständigen Antrag entscheiden. Eine Ablehnung muss schriftlich kommen, mit Begründung und Hinweis, wo du dich beschweren kannst. Die BaFin hat dafür ein eigenes Verwaltungsverfahren, daneben gibt es die Schlichtungsstellen der Banken.',
+        'Ein Basiskonto kann alles, was du im Alltag brauchst: Gehalt empfangen, überweisen, Lastschriften, Daueraufträge, Debitkarte, Bargeld abheben. Einen Dispo gibt es nicht. Die Gebühren müssen angemessen sein (§ 41 ZKG). Der Bundesgerichtshof hat am 30. Juni 2020 entschieden (XI ZR 119/19), dass eine Bank den Mehraufwand für Basiskonten nicht allein auf deren Inhaber abwälzen darf. Ein zu hoher Preis ist dann unwirksam.',
         'Für den Antrag brauchst du einen Ausweis. Wer keinen deutschen Pass oder Personalausweis hat, kann sich auch mit anderen anerkannten Papieren ausweisen, etwa mit einer Duldung oder einem Ankunftsnachweis. Zusatzprodukte wie Versicherungen oder eine Kreditkarte musst du für ein Basiskonto nicht abschließen.',
         bt,
         f'Wie du ein Basiskonto beantragst und was du tun kannst, wenn die Bank sich querstellt, erklärt der Ratgeber {c["rg"]("basiskonto", "Basiskonto")}.')))
@@ -391,7 +391,7 @@ def _ohne_schufa(c):
         _ol('<b>Erst nachsehen, was wirklich drinsteht.</b> Viele vermuten einen negativen Eintrag, der längst gelöscht ist oder nie existiert hat. Wie du an deine Daten kommst, steht weiter unten.',
             '<b>Ein Konto ohne Schufa-Abfrage wählen,</b> wenn du ein ganz normales Girokonto willst und kein Basiskonto. Die Konten oben in der Liste sind dafür der Startpunkt.',
             '<b>Ein Basiskonto beantragen,</b> wenn dich keine Bank nimmt. Nutz dafür das Antragsformular, das die Bank bereithalten muss, und heb eine Kopie auf.',
-            f'<b>Bei einer Pfändung ein P-Konto einrichten.</b> Jedes Girokonto kann auf Antrag in ein Pfändungsschutzkonto umgewandelt werden, die Bank muss das spätestens zum Beginn des vierten Geschäftstags danach umsetzen. Dann bleibt ein Grundfreibetrag geschützt. Mehr im Ratgeber {c["rg"]("p-konto", "P-Konto")}.',
+            f'<b>Bei einer Pfändung ein P-Konto einrichten.</b> Jedes Girokonto kann auf Antrag in ein Pfändungsschutzkonto umgewandelt werden. Ist schon gepfändet, muss die Bank das spätestens zum Beginn des vierten Geschäftstags nach deinem Antrag umsetzen (§ 850k ZPO). Dann bleibt ein Grundfreibetrag geschützt. Mehr im Ratgeber {c["rg"]("p-konto", "P-Konto")}.',
             '<b>Hilfe holen.</b> Schuldnerberatungen der Verbraucherzentralen, der Wohlfahrtsverbände und der Kommunen helfen kostenlos oder sehr günstig, auch beim Gespräch mit Gläubigern.'),
         'Vorsicht bei Anbietern, die gegen Vorkasse ein „Konto ohne Schufa“ oder eine „Schufa-Löschung“ versprechen. Seriöse Banken verlangen für die Eröffnung keine Gebühr vorab, und niemand kann korrekte Einträge einfach löschen lassen. Wer dafür Geld nimmt, verdient an deiner Notlage.')))
     secs.append(('Konto ohne Schufa, Basiskonto, P-Konto: was wann passt', _p(
@@ -408,20 +408,20 @@ def _ohne_schufa(c):
         _ul('Girokonten und Kreditkarten',
             'Kredite und Ratenkäufe, mit Betrag und Laufzeit',
             'Handy- und Leasingverträge',
-            'Zahlungsausfälle, aber nur unter Bedingungen: Die Forderung ist fällig, du wurdest nach Fälligkeit mindestens zweimal schriftlich gemahnt, zwischen erster Mahnung und Meldung lagen mindestens vier Wochen, und du hast die Forderung nicht bestritten. Alternativ hat ein Gericht sie festgestellt.',
+            'Zahlungsausfälle, aber nur unter Bedingungen: Die Forderung ist fällig, du wurdest nach Fälligkeit mindestens zweimal schriftlich gemahnt, zwischen erster Mahnung und Meldung lagen mindestens vier Wochen, du wurdest vorher auf die mögliche Meldung hingewiesen, und du hast die Forderung nicht bestritten. Alternativ hat ein Gericht sie festgestellt.',
             'Insolvenzverfahren und Einträge aus den öffentlichen Schuldnerverzeichnissen'),
         'Nicht gespeichert werden Einkommen, Vermögen, Beruf, Nationalität oder Familienstand. Fragst du bei einer Bank nur nach den Konditionen für einen Kredit, fließt das ebenfalls nicht in deinen Score ein.',
         'Negative Einträge bleiben nicht für immer. Erledigte Zahlungsausfälle löscht die Schufa nach festen Fristen, die in den Verhaltensregeln der Auskunfteien stehen. Bezahle offene Forderungen deshalb so schnell wie möglich, damit sie als erledigt gemeldet werden und die Frist zu laufen beginnt.')))
     secs.append(('Selbstauskunft: kostenlos und schnell', _p(
         'Nach Artikel 15 der Datenschutz-Grundverordnung darfst du kostenlos erfahren, was die Schufa über dich speichert. Den Antrag stellst du online auf der Seite der Schufa oder per Post. Die kostenpflichtigen Produkte, die dir dabei angeboten werden, brauchst du dafür nicht.',
-        'Prüf die Auskunft Zeile für Zeile. Stimmt die Adresse? Gibt es Verträge, die du nicht kennst? Ist eine Forderung als offen eingetragen, die du längst bezahlt hast? Falsche Einträge muss die Schufa berichtigen oder löschen. Schreib dazu mit Nachweisen an die Schufa. Hilft das nicht, kannst du dich an den Ombudsmann der Schufa oder an die hessische Datenschutzaufsicht wenden, die für die Schufa zuständig ist.',
+        'Prüf die Auskunft Zeile für Zeile. Stimmt die Adresse? Gibt es Verträge, die du nicht kennst? Ist eine Forderung als offen eingetragen, die du längst bezahlt hast? Falsche Einträge muss die Schufa berichtigen oder löschen. Schreib dazu mit Nachweisen an die Schufa. Hilft das nicht, kannst du dich an die Ombudsstelle der Schufa oder an die hessische Datenschutzaufsicht wenden, die für die Schufa zuständig ist.',
         'Neben der Schufa gibt es weitere Auskunfteien wie Creditreform Boniversum, CRIF oder Infoscore. Auch dort kannst du kostenlos Auskunft verlangen. Wenn eine Bank ein Konto ablehnt, darfst du fragen, auf welche Auskunftei sie sich gestützt hat.',
         'Plane etwas Zeit ein. Die Schufa muss dir die Auskunft spätestens innerhalb eines Monats schicken. Wer sie für eine Wohnungsbewerbung braucht, fordert sie besser früh an.')))
     secs.append(('Quellen', _quellen(c, [
         ('https://www.gesetze-im-internet.de/zkg/', 'Zahlungskontengesetz (ZKG): Basiskonto'),
         ('https://www.gesetze-im-internet.de/zpo/__850k.html', 'Zivilprozessordnung § 850k: Pfändungsschutzkonto'),
         ('https://www.gesetze-im-internet.de/bdsg_2018/__31.html', 'Bundesdatenschutzgesetz § 31: Meldung von Forderungen an Auskunfteien'),
-        ('https://www.meineschufa.de/', 'Schufa: Datenkopie nach Art. 15 DSGVO'),
+        ('https://www.meineschufa.de/service/datenkopie', 'Schufa: Datenkopie nach Art. 15 DSGVO'),
         ('https://www.bafin.de/', 'BaFin: Beschwerde und Verwaltungsverfahren zum Basiskonto'),
         ('https://www.verbraucherzentrale.de/', 'Verbraucherzentralen: Schuldnerberatung und Basiskonto'),
     ], d['X'] if d else [])))
@@ -468,8 +468,8 @@ def _ohne_ksv(c):
         bt += f'; {len(voll)} davon verlangen im Standardfall 80 € im Jahr.' if voll else '.'
     secs.append(('Basiskonto nach VZKG: Anspruch für alle', _p(
         'Seit 2016 hat in Österreich jeder, der sich rechtmäßig in der EU aufhält, Anspruch auf ein Basiskonto. Das regelt das Verbraucherzahlungskontogesetz (VZKG). Es gilt auch für Menschen ohne festen Wohnsitz, für Asylwerbende und für Menschen mit Einträgen beim KSV1870.',
-        'Die Bank muss den Antrag innerhalb von zehn Geschäftstagen bearbeiten. Ablehnen darf sie nur aus Gründen, die im Gesetz stehen, etwa wenn du in Österreich schon ein Zahlungskonto hast, das du nutzen kannst, oder bei Verstößen gegen das Geldwäscherecht. Eine Ablehnung muss schriftlich und begründet kommen, mit Hinweis auf deine Beschwerdemöglichkeiten.',
-        'Das Entgelt ist gesetzlich gedeckelt: höchstens 80 € im Jahr. Für besonders schutzbedürftige Menschen, etwa wenn du Sozialhilfe, Mindestsicherung oder Ausgleichszulage beziehst, ist es auf die Hälfte begrenzt.',
+        'Die Bank muss das Konto spätestens zehn Geschäftstage nach deinem vollständigen Antrag eröffnen oder den Antrag ablehnen. Ablehnen darf sie nur aus Gründen, die im Gesetz stehen: wenn du in Österreich schon ein Zahlungskonto hast, das du nutzen kannst, oder wenn du wegen einer Straftat gegen die Bank angeklagt oder verurteilt bist. Eine Ablehnung muss schriftlich und begründet kommen, mit Hinweis auf die Beschwerde bei der FMA und die Schlichtungsstelle.',
+        'Das Entgelt ist gesetzlich gedeckelt. Im Gesetz stehen 80 € im Jahr, der Betrag wird an die Inflation angepasst. Laut Arbeiterkammer liegt die Grenze derzeit bei 83,45 € im Jahr. Für besonders schutzbedürftige Menschen, etwa mit Mindestsicherung, Ausgleichszulage oder Studienbeihilfe, gilt auf Antrag die Hälfte, derzeit 41,73 €.',
         'Für den Antrag brauchst du einen amtlichen Lichtbildausweis. Einen festen Wohnsitz darf die Bank nicht zur Bedingung machen. Und das Basiskonto ist kein Konto zweiter Klasse: Die IBAN ist eine ganz normale österreichische IBAN, Arbeitgeber und AMS überweisen darauf wie auf jedes andere Konto.',
         'Lehnt eine Bank dein Basiskonto ab, verlang die Begründung schriftlich. Damit kannst du dich beschweren und gleichzeitig bei einer anderen Bank einen neuen Antrag stellen.',
         bt,
@@ -478,20 +478,20 @@ def _ohne_ksv(c):
         _ol('<b>Eigene Daten anfordern.</b> Bevor du dich auf eine Absage einstellst, schau nach, was über dich gespeichert ist. Wie das geht, steht weiter unten.',
             '<b>Ein Konto ohne Abfrage wählen,</b> wenn du ein normales Girokonto möchtest. Die Konten in der Liste oben sind ein guter Startpunkt.',
             '<b>Ein Basiskonto verlangen,</b> wenn eine Bank ablehnt. Lehnt sie auch das ab, wende dich an die Gemeinsame Schlichtungsstelle der österreichischen Kreditwirtschaft, an die FMA oder an die Arbeiterkammer.',
-            f'<b>Bei einer Exekution ein Pfändungsschutzkonto einrichten.</b> Dann bleibt ein Grundbetrag deines Guthabens geschützt, auch wenn ein Gläubiger dein Konto pfändet. Mehr im Ratgeber {c["rg"]("pfaendungsschutzkonto", "Pfändungsschutzkonto")}.',
+            f'<b>Bei einer Kontopfändung schnell den Kontenschutz beantragen.</b> Ein Pfändungsschutzkonto wie in Deutschland gibt es in Österreich nicht. Du beantragst beim Exekutionsgericht, dass der unpfändbare Teil von Gehalt oder Pension freigegeben wird (§ 292i EO). Mehr im Ratgeber {c["rg"]("pfaendungsschutzkonto", "Pfändungsschutz am Konto")}.',
             '<b>Zur Schuldenberatung gehen.</b> Die staatlich anerkannten Schuldenberatungen in allen Bundesländern helfen kostenlos und vertraulich: mit einem Überblick über alle Forderungen, beim Verhandeln mit Gläubigern und auf dem Weg in ein Schuldenregulierungsverfahren, den sogenannten Privatkonkurs.'),
         'Finger weg von Angeboten, die dir gegen Vorauszahlung ein „Konto ohne KSV“ oder einen „Kredit ohne KSV“ versprechen. Eine seriöse Bank verlangt für die Kontoeröffnung nichts vorab. Wer Geld vorher will und dann nicht liefert, ist ein Betrüger.',
         'Viele Menschen mit Einträgen schieben das Thema auf, aus Scham oder weil es unangenehm ist. Das kostet meist Geld, weil Zinsen und Inkassokosten weiterlaufen. Wer früh handelt, zahlt fast immer weniger. Und Vorsicht bei Werbung für schnelle Kredite: Neue Schulden zu hohen Zinsen machen die Lage selten besser.',
         'Ein Basiskonto oder ein Konto ohne Abfrage ist auch ein Neustart. Wer ein paar Monate zuverlässig wirtschaftet, hat später bessere Karten, wenn es um einen Überziehungsrahmen oder ein Konto bei einer anderen Bank geht.')))
-    secs.append(('Konto ohne Abfrage, Basiskonto, Pfändungsschutzkonto im Vergleich', _p(
+    secs.append(('Konto ohne Abfrage, Basiskonto, Kontenschutz im Vergleich', _p(
         'Die drei Lösungen helfen in unterschiedlichen Lagen. Diese Übersicht zeigt, was wann passt:')
         + _tbl(['Lösung', 'Passt, wenn', 'Was du bekommst', 'Zu beachten'], [
             ['Konto ohne KSV-Abfrage', 'du ein reguläres Konto ohne Bonitätsprüfung möchtest', 'Girokonto, meist ohne Überziehungsrahmen', 'Entgelte und Bedingungen der Bank'],
-            ['Basiskonto nach VZKG', 'dich Banken ablehnen', 'gesetzlicher Mindestumfang, höchstens 80 € im Jahr', 'Nachweis, wenn dir das ermäßigte Entgelt zusteht'],
-            ['Pfändungsschutzkonto', 'eine Exekution läuft oder droht', 'ein geschützter Grundbetrag pro Monat', 'nur eines pro Person'],
+            ['Basiskonto nach VZKG', 'dich Banken ablehnen', 'gesetzlicher Mindestumfang, laut Arbeiterkammer derzeit höchstens 83,45 € im Jahr', 'Nachweis, wenn dir das ermäßigte Entgelt zusteht'],
+            ['Kontenschutz nach § 292i EO', 'dein Konto gepfändet wurde', 'Freigabe des unpfändbaren Teils von Gehalt oder Pension', 'nur auf Antrag beim Exekutionsgericht, kein eigenes Kontomodell'],
             ['Prepaid-Karte', 'du nur online oder im Urlaub zahlen willst', 'Karte ohne Kreditrahmen', 'kein Konto, keine Lastschriften'],
         ])
-        + _p('Die Wege lassen sich verbinden. Auch ein Basiskonto kann als Pfändungsschutzkonto geführt werden. Wichtig ist zuerst, dass Lohn, Pension, Arbeitslosengeld oder Sozialleistungen überhaupt auf ein Konto fließen können. Ohne Konto werden schon Miete und Handyrechnung zum Problem.',
+        + _p('Die Wege lassen sich verbinden. Auch bei einem Basiskonto kannst du nach einer Pfändung den Kontenschutz beantragen. Wichtig ist zuerst, dass Lohn, Pension, Arbeitslosengeld oder Sozialleistungen überhaupt auf ein Konto fließen können. Ohne Konto werden schon Miete und Handyrechnung zum Problem.',
         'Unsicher, was zu dir passt? Schuldenberatung und Arbeiterkammer beraten kostenlos und kennen die Praxis der Banken in deinem Bundesland.')))
     secs.append(('Welche Daten deine Bonität in Österreich prägen', _p(
         'Einen einzigen Score, der für alle gilt, gibt es nicht. Jede Auskunftei rechnet mit eigenen Daten, und Banken gewichten sie unterschiedlich. Grob fließt das hier ein:',
@@ -511,19 +511,20 @@ def _ohne_ksv(c):
         'Die Auskunftei muss dir innerhalb eines Monats antworten. Plane das ein, wenn du die Auskunft für eine Wohnung oder einen Kredit brauchst.',
         'Bewahr die Auskunft gut auf. Wurde ein Fehler korrigiert, kannst du nach ein paar Wochen eine neue anfordern und prüfen, ob die Änderung angekommen ist.')))
     secs.append(('Quellen', _quellen(c, [
-        ('https://www.ris.bka.gv.at/', 'Rechtsinformationssystem des Bundes (RIS): Verbraucherzahlungskontogesetz und Exekutionsordnung'),
+        ('https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009550', 'Rechtsinformationssystem des Bundes (RIS): Verbraucherzahlungskontogesetz'),
+        ('https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001700', 'RIS: Exekutionsordnung, § 292i Kontenschutz'),
         ('https://www.ksv.at/', 'KSV1870: Datenauskunft'),
         ('https://www.crif.at/', 'CRIF Österreich: Selbstauskunft'),
         ('https://www.dsb.gv.at/', 'Österreichische Datenschutzbehörde'),
         ('https://www.schuldenberatung.at/', 'Staatlich anerkannte Schuldenberatungen'),
         ('https://www.fma.gv.at/', 'Finanzmarktaufsicht (FMA)'),
-        ('https://www.arbeiterkammer.at/', 'Arbeiterkammer: Basiskonto'),
+        ('https://www.arbeiterkammer.at/beratung/konsument/Geld/Konto/Recht_auf_ein_Girokonto.html', 'Arbeiterkammer: Basiskonto'),
     ], d['X'] if d else [])))
     faq = [
         ('Bekomme ich mit einem KSV-Eintrag eine Bankomatkarte?', 'Beim Basiskonto ja, eine Zahlungskarte gehört zum gesetzlichen Mindestumfang. Bei anderen Konten entscheidet die Bank. Oft gibt es eine Debitkarte, die nur mit Guthaben funktioniert.'),
         ('Kann ich mit einem Konto ohne KSV-Abfrage meine Bonität verbessern?', 'Nicht direkt. Ein Konto ohne Kreditrahmen ist kein Kredit und taucht deshalb nicht positiv in der Kreditevidenz auf. Was wirklich hilft: offene Forderungen bezahlen, Ratenvereinbarungen einhalten und falsche Einträge korrigieren lassen.'),
         ('Gilt das Recht auf ein Basiskonto auch im Privatkonkurs?', 'Ja. Das VZKG knüpft den Anspruch nicht an deine Bonität. Ein laufendes Schuldenregulierungsverfahren ist kein Grund, dir das Basiskonto zu verweigern. Einen Überziehungsrahmen gibt es beim Basiskonto ohnehin nicht.'),
-        ('Was kostet ein Basiskonto, wenn ich Mindestsicherung beziehe?', 'Für besonders schutzbedürftige Menschen ist das Entgelt auf die Hälfte des normalen Höchstbetrags gedeckelt, also auf höchstens 40 € im Jahr. Leg der Bank dazu einen aktuellen Nachweis vor, etwa den Bescheid.'),
+        ('Was kostet ein Basiskonto, wenn ich Mindestsicherung beziehe?', 'Für besonders schutzbedürftige Menschen ist das Entgelt auf die Hälfte des normalen Höchstbetrags gedeckelt, laut Arbeiterkammer derzeit auf höchstens 41,73 € im Jahr. Leg der Bank dazu einen aktuellen Nachweis vor, etwa den Bescheid.'),
         ('Fragen ausländische Banken auch beim KSV1870 nach?', f'Das ist unterschiedlich. Manche fragen bei Auskunfteien in ihrem Sitzland nach, manche bei österreichischen, manche gar nicht. Ob und wo, steht in den Bedingungen oder der Datenschutzerklärung der Bank. Was du bei Banken mit Sitz im Ausland sonst beachten solltest, steht in der Liste {c["liste"]("neobanken", "Neobanken")}.'),
     ]
     lede = 'Hier stehen Girokonten in Österreich, bei denen die Bank laut eigenen Angaben bei der Eröffnung nicht beim KSV1870 nachfragt. Dazu erfährst du, welche Rechte du mit einem negativen Bonitätseintrag hast.'
@@ -631,7 +632,7 @@ def _direktbanken_de(c):
     if d and d['zus']:
         zt = f'Bei {len(d["zus"])} der {len(d["ban"])} Direktbanken in dieser Liste kommt laut Bank eine zusätzliche freiwillige Sicherung hinzu.'
     secs.append(('Wechsel zur Direktbank in fünf Schritten', _p(
-        'Ein Kontowechsel klingt nach Papierkram, ist aber in Deutschland gut geregelt. Das Zahlungskontengesetz verpflichtet Banken zur Kontowechselhilfe, und die ist für dich kostenlos.',
+        'Ein Kontowechsel klingt nach Papierkram, ist aber in Deutschland gut geregelt. Das Zahlungskontengesetz verpflichtet Banken zur Kontowechselhilfe. Ein Entgelt dafür darf die Bank nur verlangen, wenn es vereinbart und angemessen ist (§ 26 ZKG).',
         _ol('Konto online beantragen und die Identität per Video oder Online-Ausweis bestätigen.',
             'Die Kontowechselhilfe im Onlinebanking starten. Die neue Bank holt sich bei der alten Bank die Liste deiner Daueraufträge, Lastschriften und regelmäßigen Eingänge.',
             'Auswählen, welche Zahlungspartner die neue Bank über die neue IBAN informieren soll, etwa Arbeitgeber, Vermieter, Versicherungen.',
@@ -657,7 +658,7 @@ def _direktbanken_de(c):
         ('https://www.gesetze-im-internet.de/bgb/__675v.html', 'BGB § 675v: Haftung bei nicht autorisierten Zahlungen'),
         ('https://www.gesetze-im-internet.de/zkg/', 'Zahlungskontengesetz (ZKG): Kontowechselhilfe'),
         ('https://www.edb-banken.de/', 'Entschädigungseinrichtung deutscher Banken'),
-        ('https://einlagensicherung.de/', 'Einlagensicherungsfonds des Bankenverbands'),
+        ('https://einlagensicherungsfonds.de/', 'Einlagensicherungsfonds des Bankenverbands'),
         ('https://www.bsi.bund.de/', 'Bundesamt für Sicherheit in der Informationstechnik: Onlinebanking'),
         ('https://www.bafin.de/', 'BaFin: Verbraucherschutz'),
     ], d['X'] if d else [])))
@@ -721,7 +722,7 @@ def _direktbanken_at(c):
             '<b>Kontoführungsentgelt pro Quartal:</b> Rechne aufs Jahr hoch und addiere Kartenentgelt, Buchungszeilen und Kontoauszüge per Post.',
             f'<b>Überziehungsrahmen:</b> Sollzinsen und Überschreitungszinsen vergleichen. Mehr dazu im Ratgeber {c["rg"]("kontoueberziehung", "Kontoüberziehung")}.',
             '<b>Karte:</b> Debit Mastercard oder Visa Debit? Funktionieren Apple Pay oder Google Pay?',
-            '<b>IBAN:</b> Eine österreichische IBAN macht dir das Leben mit Lohnverrechnung und Behörden am leichtesten, auch wenn eine ausländische rechtlich gleichwertig ist.',
+            '<b>IBAN:</b> Eine österreichische IBAN macht dir das Leben mit Lohnverrechnung und Behörden am leichtesten, auch wenn eine IBAN aus einem anderen EU-Land rechtlich gleichwertig ist.',
             '<b>Erreichbarkeit:</b> Hotline-Zeiten, Chat, Rückruf, Kartensperre in der App.',
         '<b>Wertpapiere:</b> Wenn du ein Depot willst, vergleich Ordergebühren und Depotentgelt gleich mit.',
         '<b>Kontoauszüge:</b> Elektronisch im Postfach ist meist gratis, per Post kostet es bei vielen Banken extra.',
@@ -744,13 +745,14 @@ def _direktbanken_at(c):
         'Wer unsicher ist, testet eine Direktbank erst als Zweitkonto, etwa für ein Sparkonto oder ein Depot, und zieht mit dem Gehaltskonto später nach.',
         f'Weniger passt sie für Selbstständige mit Bargeld-Einnahmen, für Menschen, die Beratung zu Wohnbau oder Vorsorge vor Ort wollen, und für alle, die sich mit Apps schwertun. Dann ist eine Filialbank oder eine Kombination aus beiden die bessere Wahl. Günstige Konten aller Banken findest du unter {c["liste"]("kostenlos", "kostenlose Girokonten")}.')))
     secs.append(('Sicherheit, Einlagensicherung und Haftung', _p(
-        'Eine Direktbank unterliegt derselben Aufsicht wie jede andere Bank, in Österreich der FMA und bei großen Instituten zusätzlich der Europäischen Zentralbank. Guthaben ist bis 100.000 € pro Person und Bank gesetzlich gesichert. Bei österreichischen Banken zahlt im Ernstfall die Einlagensicherung AUSTRIA oder das anerkannte Sicherungssystem der jeweiligen Bankengruppe. Hat eine Bank ihren Sitz in einem anderen EU-Land, gilt die Einlagensicherung dort.',
+        'Eine Direktbank unterliegt derselben Aufsicht wie jede andere Bank, in Österreich der FMA und bei großen Instituten zusätzlich der Europäischen Zentralbank. Guthaben ist bis 100.000 € pro Person und Bank gesetzlich gesichert. Bei Privatbanken, Volksbanken und Hypos zahlt im Ernstfall die Einlagensicherung AUSTRIA, Sparkassen und Raiffeisenbanken haben eigene Sicherungseinrichtungen. Hat eine Bank ihren Sitz in einem anderen EU-Land, gilt die Einlagensicherung dort.',
         f'Wie das genau funktioniert, steht im Ratgeber {c["rg"]("einlagensicherung", "Einlagensicherung")}.',
         'Phishing-SMS mit Links zu gefälschten Bank-Websites sind ein Dauerthema. Für Freigaben brauchst du seit der Zahlungsdiensterichtlinie PSD2 zwei Faktoren, meist die App der Bank. Gib nichts frei, das du nicht selbst ausgelöst hast, und klick nie auf Links in Nachrichten, die angeblich von deiner Bank kommen. Eine verlorene Karte sperrst du sofort in der App oder über die Sperrhotline deiner Bank.',
-        'Für nicht autorisierte Zahlungen haftest du nach dem Zahlungsdienstegesetz 2018 höchstens mit 50 €, sofern du nicht grob fahrlässig warst. Ab der Sperrmeldung zahlst du nichts mehr.',
+        'Für nicht autorisierte Zahlungen haftest du nach dem Zahlungsdienstegesetz 2018 höchstens mit 50 €, sofern du nicht grob fahrlässig warst (§ 68 ZaDiG 2018). Ab der Sperrmeldung zahlst du nichts mehr.',
         'Halte Smartphone und Banking-App aktuell, nutze eine Displaysperre und lade Apps nur aus den offiziellen Stores. Und Vorsicht bei Anrufen: Echte Bankmitarbeiter verlangen nie, dass du am Telefon einen Code nennst oder eine Zahlung freigibst.')))
     secs.append(('Quellen', _quellen(c, [
-        ('https://www.ris.bka.gv.at/', 'Rechtsinformationssystem des Bundes (RIS): VZKG und Zahlungsdienstegesetz 2018'),
+        ('https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009550', 'Rechtsinformationssystem des Bundes (RIS): Verbraucherzahlungskontogesetz'),
+        ('https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20010182', 'RIS: Zahlungsdienstegesetz 2018'),
         ('https://www.fma.gv.at/', 'Finanzmarktaufsicht (FMA)'),
         ('https://www.einlagensicherung.at/', 'Einlagensicherung AUSTRIA'),
         ('https://www.oenb.at/', 'Oesterreichische Nationalbank'),
@@ -920,10 +922,10 @@ def _neobanken_at(c):
                      + _tbl(['Bank', 'IBAN', 'Einlagensicherung laut Bank', 'Konten in der Liste', 'Kontoführungsentgelt ab'], d['rows'])
                      + _p('Die Angaben stammen aus den Bedingungen der Banken. Anbieter ändern das gelegentlich, etwa wenn sie eine Zweigniederlassung in Österreich eröffnen. Prüf es vor der Eröffnung noch einmal.')))
     secs.append(('Ausländische IBAN: was das im Alltag bedeutet', _p(
-        'Seit der SEPA-Umstellung 2014 sind alle IBANs im SEPA-Raum gleichwertig. Die SEPA-Verordnung der EU verbietet Arbeitgebern, Versicherungen, Behörden und Händlern, eine Zahlung abzulehnen, nur weil die IBAN aus einem anderen EU-Land stammt. Das nennt man IBAN-Diskriminierung.',
+        'Seit der SEPA-Umstellung 2014 funktionieren Überweisungen und Lastschriften im ganzen SEPA-Raum gleich. Die SEPA-Verordnung der EU verbietet Arbeitgebern, Versicherungen, Behörden und Händlern, eine Zahlung abzulehnen, nur weil die IBAN aus einem anderen EU-Land stammt. Das nennt man IBAN-Diskriminierung.',
         'In der Praxis klappt das meist, aber nicht immer. Manche Lohnverrechnungen, kleinere Vereine oder Online-Formulare akzeptieren noch immer nur AT-IBANs. Dann hilft ein freundlicher Hinweis auf die Verordnung. Bleibt der Zahlungspartner stur, unterstützt dich die Arbeiterkammer.',
-        'Für Familienbeihilfe, Arbeitslosengeld oder Pension gibst du einfach deine IBAN an. Auch öffentliche Stellen müssen Konten aus dem SEPA-Raum akzeptieren.',
-        'Das gilt auch für das Finanzamt: Für die Gutschrift aus der Arbeitnehmerveranlagung kannst du ein Konto aus dem SEPA-Raum angeben.',
+        'Für Familienbeihilfe, Arbeitslosengeld oder Pension gibst du einfach deine IBAN an. Auch öffentliche Stellen müssen Konten aus anderen EU-Ländern akzeptieren.',
+        'Das gilt auch für das Finanzamt: Für die Gutschrift aus der Arbeitnehmerveranlagung kannst du ein Konto in einem anderen EU-Land angeben.',
         'Wer auf Nummer sicher gehen will, nutzt für Gehalt und Lastschriften ein Konto mit AT-IBAN und die Neobank als Zweitkonto für Alltag und Reisen. Das ist in Österreich ein häufiges Modell.',
         'Bei Zinsen zählt der Sitz der Bank. Ohne österreichische Zweigstelle zieht die Bank in der Regel keine KESt ab. Du gibst die Zinsen dann selbst in der Einkommensteuererklärung mit der Beilage E 1kv an. Der Steuersatz für Zinsen aus Bankguthaben bleibt bei 25 %.')))
     tt = ''
@@ -931,7 +933,7 @@ def _neobanken_at(c):
         tt = f'Bei {_und([E(b) for b in d["treu"]])} liegen die Kundengelder laut Bank teils auf Treuhandkonten bei Partnerbanken. Dann greift die Einlagensicherung der jeweiligen Partnerbank, mit 100.000 € je Partnerbank.'
     secs.append(('Einlagensicherung: worauf es ankommt', _p(
         'Für die Einlagensicherung zählt das Land, in dem die Bank ihren Sitz und ihre Lizenz hat. Ein Konto bei einer deutschen Neobank sichert die Entschädigungseinrichtung deutscher Banken, eines bei einer litauischen Bank die litauische Einlagensicherung. Die Einlagensicherung AUSTRIA ist für diese Banken nicht zuständig.',
-        'Der gesetzliche Schutz ist in der EU gleich hoch: 100.000 € pro Person und Bank, Auszahlung innerhalb von sieben Arbeitstagen. Für bestimmte Lebensereignisse, etwa nach einem Wohnungsverkauf, sieht das österreichische Gesetz eine Zeit lang einen höheren Schutz vor. Bei ausländischen Banken gelten die Regeln ihres Sitzlands.',
+        'Der gesetzliche Schutz ist in der EU gleich hoch: 100.000 € pro Person und Bank, Auszahlung innerhalb von sieben Arbeitstagen. Für bestimmte Lebensereignisse, etwa nach dem Verkauf einer privat genutzten Wohnung, nach Heirat, Scheidung oder Pensionsantritt, sieht das österreichische Gesetz zwölf Monate lang einen Schutz bis 500.000 € vor (§ 12 ESAEG). Bei ausländischen Banken gelten die Regeln ihres Sitzlands.',
         'Ein Rechenbeispiel: 50.000 € bei einer Neobank aus den Niederlanden und 80.000 € bei einer österreichischen Bank sind beide voll geschützt, weil jede Bank für sich zählt. Lägen die 130.000 € bei einer Bank, wären 30.000 € über der Grenze.',
         'Prüfen kannst du jede Bank in der Unternehmensdatenbank der FMA. Dort steht, ob ein Institut in Österreich eine Konzession hat, eine Zweigstelle betreibt oder nur über den EU-Pass Dienstleistungen anbietet.',
         'Für die meisten ist das Thema übrigens beruhigend: Wer weniger als 100.000 € bei einer Bank hat, ist überall in der EU gleich geschützt.',
@@ -965,7 +967,7 @@ def _neobanken_at(c):
     secs.append(('Kontosperre, Beschwerde, Schlichtung', _p(
         'Neobanken prüfen Zahlungen stark automatisiert. Deshalb kommt es vor, dass ein Konto vorübergehend gesperrt wird, etwa nach einer ungewöhnlich hohen Überweisung. Bei Verdacht auf Geldwäsche muss die Bank Fragen stellen und darf dir den Grund nicht immer nennen.',
         _ul('Antworte schnell und vollständig auf Rückfragen, etwa mit Lohnzettel oder Kaufvertrag.',
-            'Halte die Kommunikation fest, am besten mit Screenshots aus dem Chat.',
+            'Halte die Kommunikation fest, am besten mit Bildschirmfotos aus dem Chat.',
             'Führe ein zweites Konto bei einer anderen Bank, damit du in so einer Phase zahlen kannst.',
         'Kündige größere Überweisungen, etwa für ein Auto oder eine Kaution, vorher im Chat an, wenn die Bank das anbietet, und halte Belege bereit.',
             'Hilft der Kundenservice nicht weiter, wende dich an die Aufsicht oder Schlichtungsstelle im Sitzland der Bank. Bei Banken mit Sitz in Österreich sind das die FMA und die Gemeinsame Schlichtungsstelle der österreichischen Kreditwirtschaft.'),
@@ -1059,14 +1061,14 @@ def _nachhaltig_de(c):
         'Du kannst das selbst nachprüfen. Viele nachhaltige Banken schlüsseln ihre Kredite nach Branchen auf, manche nennen sogar die Kreditnehmer. Schau dir die Liste an und frag dich, ob du das mitfinanzieren willst.')))
     secs.append(('Fair Finance Guide und andere Prüfsteine', _p(
         'Einen staatlichen Nachweis für nachhaltige Banken gibt es in Deutschland nicht. Wer sich ein eigenes Urteil bilden will, findet aber unabhängige Hilfen.',
-        _ul('<b>Fair Finance Guide Deutschland:</b> Organisationen der Zivilgesellschaft bewerten die Richtlinien von Banken in Deutschland, etwa zu Klima, Menschenrechten, Waffen, Arbeitsrechten und Steuern. Du siehst dort, welche Regeln eine Bank sich selbst gibt und wie streng sie im Vergleich sind.',
+        _ul('<b>Fair Finance Guide Deutschland:</b> Ein unabhängiges Projekt bewertet die Richtlinien von Banken in Deutschland, etwa zu Klima, Menschenrechten, Waffen, Arbeitsrechten und Steuern. Du siehst dort, welche Regeln eine Bank sich selbst gibt und wie streng sie im Vergleich sind.',
             '<b>Global Alliance for Banking on Values:</b> ein weltweites Netzwerk von Banken, die sich auf werteorientiertes Wirtschaften verpflichten. Mitglieder müssen gemeinsame Grundsätze erfüllen.',
             '<b>Berichte der Bank:</b> Nachhaltigkeitsbericht, Kreditliste, Ausschlusskriterien. Je konkreter, desto besser.',
             '<b>Verbraucherzentralen:</b> Sie informieren über nachhaltige Banken und Geldanlage und ordnen Siegel und Werbeversprechen ein.'),
         'Ein Hinweis zu EU-Regeln: Die Offenlegungsverordnung und die EU-Taxonomie betreffen vor allem Fonds und andere Anlageprodukte. Für ein Girokonto gibt es keine verbindliche Einstufung als nachhaltig. Das Wort darf also jede Bank verwenden, umso wichtiger sind die Prüfsteine oben.',
         'Siegel für Banken als Ganzes gibt es kaum. Bekannte Siegel wie das FNG-Siegel beziehen sich auf Fonds. Wenn eine Bank mit einem Siegel wirbt, prüfe, wofür genau es vergeben wurde.',
         'Achte auch darauf, was eine Bank unter nachhaltig versteht. Manche Kirchenbanken legen den Schwerpunkt auf soziale und ethische Kriterien, andere Banken stärker auf Klima und Umwelt. Keines davon ist falsch, aber es sollte zu deinen eigenen Prioritäten passen.',
-        'Der Fair Finance Guide bewertet vor allem große Banken. Kleine Spezialbanken tauchen dort nicht immer auf. Dann helfen ihre eigenen Berichte und die Mitgliedschaft in Netzwerken weiter.')))
+        'Der Fair Finance Guide bewertet nur eine Auswahl von Banken, darunter viele große. Nicht jede kleine Spezialbank taucht dort auf. Dann helfen ihre eigenen Berichte und die Mitgliedschaft in Netzwerken weiter.')))
     vt = ''
     if d and d['mn'] is not None and d['ma'] is not None:
         vt = f'In unseren Daten kosten die Standardkonten in dieser Liste im Standardfall im Mittel (Median) {c["eur"](d["mn"])} € im Jahr, über alle Standardkonten in unserem Vergleich sind es {c["eur"](d["ma"])} €.'
@@ -1197,7 +1199,7 @@ def _nachhaltig_at(c):
         ('https://www.fma.gv.at/', 'Finanzmarktaufsicht (FMA): Nachhaltige Finanzen'),
         ('https://eur-lex.europa.eu/eli/reg/2019/2088/oj', 'EU-Offenlegungsverordnung 2019/2088'),
         ('https://www.gabv.org/', 'Global Alliance for Banking on Values'),
-        ('https://www.ecogood.org/', 'Gemeinwohl-Ökonomie'),
+        ('https://www.econgood.org/', 'Gemeinwohl-Ökonomie'),
         ('https://www.arbeiterkammer.at/', 'Arbeiterkammer'),
         ('https://www.konsument.at/', 'Verein für Konsumenteninformation (VKI)'),
     ], d['X'] if d else [])))
