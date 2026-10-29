@@ -39,7 +39,7 @@ AT_OEAD='https://oead.at/de/'
 
 # ---------- Helfer ----------
 def _ext(u,t): return f'<a href="{E(u)}" target="_blank" rel="noopener">{E(t)}</a>'
-def _P(*ps): return '<div class="prose">'+''.join(p if p.lstrip().startswith('<') else f'<p>{p}</p>' for p in ps)+'</div>'
+def _P(*ps): return '<div class="prose">'+''.join(p if re.match(r'\s*<(ul|ol|div|table)',p) else f'<p>{p.strip()}</p>' for p in ps if p and p.strip())+'</div>'
 def _ul(items,cls=''): return f'<ul{" class="+chr(34)+cls+chr(34) if cls else ""}>'+''.join(f'<li>{x}</li>' for x in items)+'</ul>'
 def _tbl(head,rows):
     h=''.join(f'<th>{x}</th>' for x in head)
@@ -313,7 +313,7 @@ def _stu_de(c):
           +(f'{_w(len(teuer),"Ein Konto kostet","Konten kosten")} auch für junge Leute etwas, etwa {_links(c,teuer,2)}. ' if teuer else '')),
          'Lies die Altersangabe genau. „Bis 27 Jahre“ heißt bei den meisten Banken: bis zum Tag vor dem 28. Geburtstag. Manche Banken stellen am Geburtstag selbst um, andere zum Monats- oder Quartalsende. Das steht im Preis- und Leistungsverzeichnis.')),
      ('Studentenkonto oder normales Konto mit Altersrabatt',
-      _P('Viele Direktbanken schenken jungen Leuten die Kontoführung auch ohne Studium. Bei diesen Konten zählt nur das Alter: Du brauchst keine Immatrikulationsbescheinigung, und bis zur Altersgrenze verlangt die Bank auch keinen Geldeingang. '
+      _P('Viele Online-Banken schenken jungen Leuten die Kontoführung auch ohne Studium. Bei diesen Konten zählt nur das Alter: Du brauchst keine Immatrikulationsbescheinigung, und bis zur Altersgrenze verlangt die Bank auch keinen Geldeingang. '
          +(f'Am längsten gilt der Altersrabatt bei {L(jung[0])}, nämlich bis zum {jung[0]["gratis"]["alter_unter"]}. Geburtstag.' if jung else ''))+
       (_tbl(['Konto','Gratis bis','Bedingung laut Bank'],[(L(k),f'zum {k["gratis"]["alter_unter"]}. Geburtstag',E(c['kurzbed'](k))) for k in jung[:8]]) if jung else '')+
       _P('Der Vorteil: Nach dem Studium musst du nicht wechseln. Mit dem ersten Gehalt erfüllst du die Bedingung für das Gratis-Konto meist ohnehin, und die IBAN bleibt dieselbe. Der Nachteil: Diese Konten sind fast immer reine Online-Konten. Bargeld bekommst du an fremden Automaten oder an der Supermarktkasse, Bargeld einzahlen ist umständlich, und eine girocard kostet teils extra. Wer gern in eine Filiale geht, ist mit einem Studentenkonto einer Filialbank besser bedient.')),
