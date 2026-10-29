@@ -24,4 +24,5 @@ Stand: 28.10.2026
 ## Regeln aus dem Qualitäts-Check (29.10.)
 - FAQ nur mit Fragen, die zur Seite gehören. Dieselbe Frage auf mehr als 4 Seiten bricht `check.py` ab. Kreditkartenseiten haben nur dann einen FAQ-Block, wenn es eine kartenspezifische Frage gibt (Lieferzeit, Ausschlüsse der Reiseversicherung).
 - Festgeld hat keine Laufzeit- und Bestenlisten-Seiten mehr, alles läuft über den Filter im Vergleich. Alte Adressen leiten per 301 auf den Vergleich mit gesetztem Filter.
-- Offen: Review-Schema auf den Kartenseiten (Entscheidung Haris), Rechner AT/DE zusammenlegen (vorerst nicht), Tempo neuer Seiten.
+- Review-Schema entfernt (29.10.): die Sterne bleiben sichtbar, aber ohne unsichtbare Auszeichnung „bewertet von“.
+- Offen: Rechner AT/DE zusammenlegen (vorerst nicht), Tempo neuer Seiten.
