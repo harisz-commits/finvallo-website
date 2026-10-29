@@ -41,7 +41,7 @@ def _load():
 
 def register(art,P,eur):
     d,ks=_load()
-    def L(k,label=None): return f'<a class="lnk" href="{P}at/girokonto/{k["slug"]}/">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
+    def L(k,label=None): return f'<a class="lnk" href="{P}at/girokonto/#gk-{k["slug"]}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
     G1=f'{P}at/girokonto/'; B=f'{G1}bestenlisten/'; RG=f'{P}at/ratgeber/'
     alle=[k for k in ks if k['art'] in ('standard','premium')]
     kfT=lambda k:'kostenlos' if k['kf_jahr']==0 else f'{eur(k["kf_jahr"])} € im Jahr'
@@ -84,12 +84,12 @@ def register(art,P,eur):
 <li><b>Ratenkredit.</b> Bist du seit Monaten im Minus, ist ein Ratenkredit meist deutlich günstiger und hat ein festes Ende. Mit dem <a href="{P}at/rechner/kreditrechner/">Kreditrechner</a> siehst du, welche Rate bei welcher Laufzeit nötig ist. Vergleiche den Effektivzins, nicht nur den Sollzins.</li>
 <li><b>Rückzahlungsvereinbarung.</b> Will die Bank den Rahmen kürzen, empfiehlt die Arbeiterkammer, einen schrittweisen Abbau in Raten zu vereinbaren, statt alles auf einmal zurückzuzahlen.</li>
 <li><b>Kreditkarte mit Teilzahlung.</b> Nur in Ausnahmefällen sinnvoll, weil die Zinsen oft höher sind als beim Überziehungsrahmen. Was dabei zu beachten ist, steht im Ratgeber <a href="{RG}teilzahlung/">Teilzahlung bei Kreditkarten</a>.</li>
-<li><b>Günstigeres Konto.</b> Wenn du den Rahmen nur ein paar Tage im Monat brauchst, zählt der Zinssatz im Rahmen. Im <a href="{G1}">Girokonto-Vergleich</a> steht er auf jeder Kontoseite.</li>
+<li><b>Günstigeres Konto.</b> Wenn du den Rahmen nur ein paar Tage im Monat brauchst, zählt der Zinssatz im Rahmen. Im <a href="{G1}">Girokonto-Vergleich</a> steht er bei jedem Konto.</li>
 <li><b>Schuldnerberatung.</b> Die staatlich anerkannten Schuldenberatungen beraten kostenlos, auch bevor es ernst wird.</li></ul></div>'''),
        ('Rahmen kündigen oder reduzieren','''<div class="prose"><p>Du kannst den Überziehungsrahmen jederzeit reduzieren oder ganz kündigen. Dafür reicht eine Nachricht an die Bank, am besten schriftlich oder im Online-Banking. Vorher musst du das Konto ausgleichen oder mit der Bank vereinbaren, wie du den offenen Betrag abbaust. Ein kleinerer Rahmen ist eine gute Bremse, wenn du merkst, dass das Minus jeden Monat wächst. Wer gar keinen Rahmen will, kann bei vielen Banken auch ein Konto auf Guthabenbasis führen.</p>
 <p>Wichtig bei einem Kontowechsel: Das alte Konto muss ausgeglichen sein, sonst kann es nicht geschlossen werden. Wie der Wechsel abläuft, steht im Ratgeber <a href="../girokonto-wechseln/">Girokonto wechseln</a>.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Zinsen im Rahmen und bei Überschreitung: Entgeltinformationen der Banken, verlinkt auf jeder Kontoseite. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
+<li>Zinsen im Rahmen und bei Überschreitung: Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
 <li>Verbraucherkreditgesetz 2026, §§ 32 bis 38 und § 45: {_ext(VKRG_2026,"BGBl. I Nr. 36/2026 (RIS)")}, {ABGERUFEN}.</li>
 <li>Zinsspannen 2023, Verhandeln, Rahmenkürzung, Informationspflichten: Arbeiterkammer Wien, {_ext(AK_FAQ,"Fragen und Antworten zum Thema Girokonten (2023)")}; Arbeiterkammer, {_ext(AK_TIPPS,"Tipps bei Zahlungsproblemen beim Kredit (2021)")}.</li></ul></div>'''),
       ],
@@ -131,7 +131,7 @@ def register(art,P,eur):
         f'''<div class="prose"><p>Das sind {len(gem)} Konten von {_fmtl(gbank)}. Nicht als Gemeinschaftskonto gibt es laut Bankangaben die Konten von {_fmtl(nogem)}. Bei den übrigen Banken fehlt eine bestätigte Angabe, frag dort vor der Eröffnung nach. Die Rangfolge nach Bewertung steht in der Bestenliste <a href="{B}gemeinschaftskonto/">Gemeinschaftskonten</a>. Die Kontoführung kostet beim Gemeinschaftskonto meist dasselbe wie beim Einzelkonto, nur die zweite Karte kann extra kosten.</p>
 <p>Bei Online-Banken aus dem Ausland, etwa N26, Revolut oder bunq, läuft das Gemeinschaftskonto oft als Zusatz zum eigenen Konto jedes Partners. Beide brauchen dann ein eigenes Konto bei dieser Bank.</p></div>'''),
        ('Einlagensicherung: 100.000 € pro Person','''<div class="prose"><p>Die gesetzliche Einlagensicherung schützt 100.000 € pro Einleger und Bank, nicht pro Konto. Bei einem Gemeinschaftskonto mit zwei Inhabern sind also bis zu 200.000 € geschützt. Ohne andere schriftliche Vereinbarung wird das Guthaben im Sicherungsfall zu gleichen Teilen auf die Inhaber aufgeteilt. Hat ein Inhaber bei derselben Bank noch ein eigenes Konto, zählt sein Anteil am Gemeinschaftskonto zu seinen 100.000 € dazu.</p>
-<p>Das gilt für Banken mit Sitz in Österreich über die Einlagensicherung AUSTRIA. Konten bei N26, Revolut oder bunq sind über die Einlagensicherung in Deutschland, Litauen oder den Niederlanden geschützt, ebenfalls mit 100.000 € pro Person. Welche Sicherung gilt, steht auf jeder Kontoseite.</p></div>'''),
+<p>Das gilt für Banken mit Sitz in Österreich über die Einlagensicherung AUSTRIA. Konten bei N26, Revolut oder bunq sind über die Einlagensicherung in Deutschland, Litauen oder den Niederlanden geschützt, ebenfalls mit 100.000 € pro Person. Welche Sicherung gilt, steht bei jedem Konto im Vergleich.</p></div>'''),
        ('Trennung: So löst du ein Gemeinschaftskonto auf','''<div class="prose"><ol>
 <li><b>Einzelverfügung widerrufen.</b> Nach den Geschäftsbedingungen der Banken kann jeder Inhaber eines Oder-Kontos der Bank mitteilen, dass er die Einzelverfügung des anderen widerruft. Danach geht nur noch gemeinsam. Das stoppt, dass einer das Konto leerräumt.</li>
 <li><b>Guthaben aufteilen.</b> Im Zweifel gehört das Guthaben beiden zur Hälfte, unabhängig davon, wer eingezahlt hat. Könnt ihr euch nicht einigen, entscheidet das Gericht. Belege über eigene Einzahlungen helfen.</li>
@@ -141,7 +141,7 @@ def register(art,P,eur):
        ('Schenkungsmeldung statt Schenkungssteuer',f'''<div class="prose"><p>Eine Schenkungs- und Erbschaftssteuer gibt es in Österreich seit 2008 nicht mehr. Dafür gilt eine Meldepflicht (§ 121a BAO): Schenkungen zwischen Angehörigen, also auch zwischen Ehepartnern und Lebensgefährten, musst du dem Finanzamt melden, wenn sie innerhalb eines Jahres 50.000 € übersteigen. Zwischen anderen Personen liegt die Grenze bei 15.000 € in fünf Jahren. Zahlt ein Partner eine Erbschaft oder einen Hausverkauf auf das gemeinsame Oder-Konto ein, kann die Hälfte als Schenkung an den anderen gelten. Für die Meldung ist das Formular Schenk 1 bei FinanzOnline da; sie ist kostenlos, nur das Versäumnis kostet.</p>
 <p>Bei einer Pfändung gegen einen Inhaber kann das gemeinsame Guthaben betroffen sein. Was dann geschützt ist, steht im Ratgeber <a href="../pfaendungsschutzkonto/">Pfändungsschutz am Konto</a>.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Gemeinschaftskonto möglich oder nicht, Kartenpreise, Eröffnung: Angaben der Banken, verlinkt auf jeder Kontoseite. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
+<li>Gemeinschaftskonto möglich oder nicht, Kartenpreise, Eröffnung: Angaben der Banken, verlinkt bei jedem Konto im Vergleich. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
 <li>Einlagensicherung bei Gemeinschaftskonten (ESAEG): {_ext(BAWAG_ES,"BAWAG, Information zur Einlagensicherung und Anlegerentschädigung")}, {ABGERUFEN}.</li>
 <li>Schenkungsmeldung: {_ext(BMF_SCHENK,"Bundesministerium für Finanzen, Schenkungsmeldung")}, {ABGERUFEN}.</li>
 <li>Solidarhaftung: § 891 ABGB; Überziehung und Haftung: Arbeiterkammer Wien, {_ext(AK_FAQ,"Fragen und Antworten zum Thema Girokonten (2023)")}.</li></ul></div>'''),
@@ -195,7 +195,7 @@ def register(art,P,eur):
 <li>Kontenschutz: {_ext(EO_292I,"§ 292i Exekutionsordnung (Fassung seit 1.7.2021)")}, {ABGERUFEN}.</li>
 <li>Existenzminimum und Ausgleichszulagenrichtsatz 2026: {_ext(GV_EXMIN,"oesterreich.gv.at, Existenzminimum")} und {_ext(GV_PENSION,"oesterreich.gv.at, Pensionsanpassung 2026")}, {ABGERUFEN}. Grundlage: § 291a EO.</li>
 <li>Schuldenberatung: {_ext(SCHULDEN,"ASB Schuldnerberatungen GmbH")}.</li>
-<li>Preise der Basiskonten: Entgeltinformationen der Banken, verlinkt auf jeder Kontoseite.</li></ul></div>'''),
+<li>Preise der Basiskonten: Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich.</li></ul></div>'''),
       ],
       faq=[
        ('Gibt es in Österreich ein Pfändungsschutzkonto?','Nein. Es gibt kein P-Konto wie in Deutschland. Nach einer Kontopfändung beantragst du beim Exekutionsgericht, dass die Pfändung für das Existenzminimum aufgehoben wird (§ 292i EO).'),
@@ -250,11 +250,11 @@ def register(art,P,eur):
 <li>Limit der Karte: Lässt es sich in der App anpassen, und sind Online-Zahlungen sperrbar?</li>
 <li>Bargeld: Gibt es Gratis-Abhebungen auch an fremden Bankomaten?</li>
 <li>Bedingung: Muss ein Elternteil Kunde der Bank sein? Bei easybank ja, bei anderen nicht.</li>
-<li>Zinsen auf Guthaben: Manche Kinderkonten verzinsen das Guthaben, das steht auf der Kontoseite.</li>
+<li>Zinsen auf Guthaben: Manche Kinderkonten verzinsen das Guthaben, das steht in den Konditionen des Kontos.</li>
 <li>Umstellung: Wann und auf welches Konto stellt die Bank um, und was kostet es dann?</li>
 <li>Wohnsitz: Manche Banken verlangen, dass der Hauptwohnsitz seit mindestens einem Jahr in Österreich ist.</li></ul></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Alter, Karten, Limits, Umstellung, Kontoführung: Produktseiten und Entgeltinformationen der Banken, verlinkt auf jeder Kontoseite. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
+<li>Alter, Karten, Limits, Umstellung, Kontoführung: Produktseiten und Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
 <li>Geschäftsfähigkeit von Kindern und Jugendlichen: {_ext(GV_GESCH,"oesterreich.gv.at, Übersicht der Geschäftsfähigkeit")} und {_ext(ABGB_170,"§ 170 ABGB (RIS)")}, {ABGERUFEN}.</li>
 <li>Jugend- und Lehrlingskonten: Arbeiterkammer Oberösterreich, {_ext(AK_JUGEND,"Jugend- und Lehrlingskonten im Vergleich")}.</li></ul></div>'''),
       ],
@@ -299,7 +299,7 @@ def register(art,P,eur):
        ('Umsatzsteuer und Kleinunternehmer',f'''<div class="prose"><p>Bis 55.000 € Umsatz brutto im Jahr bist du Kleinunternehmer und verrechnest keine Umsatzsteuer, darfst dann aber auch keine Vorsteuer abziehen. Überschreitest du die Grenze um höchstens 10 %, also bis 60.500 €, bleibst du im laufenden Jahr noch befreit. Darüber hinaus wirst du ab dem Umsatz, mit dem du die Grenze reißt, steuerpflichtig. Die Grenze gilt seit 2025 und war davor 35.000 € netto.</p>
 <p>Verrechnest du Umsatzsteuer, musst du sie in der Umsatzsteuervoranmeldung an das Finanzamt abführen, je nach Umsatz monatlich oder vierteljährlich. Das Geld auf dem Konto gehört also zum Teil nicht dir. Ein eigenes Unterkonto oder Sparziel für die Umsatzsteuer verhindert, dass es ausgegeben wird. Zum Umrechnen zwischen netto und brutto hilft der <a href="{P}at/rechner/mehrwertsteuer/">Mehrwertsteuerrechner</a>.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Kontoführung, Gratis-Bedingungen und IBAN: Entgeltinformationen der Banken, verlinkt auf jeder Kontoseite. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
+<li>Kontoführung, Gratis-Bedingungen und IBAN: Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
 <li>Kleinunternehmerregelung: WKO, {_ext(WKO_KU,"Pauschalierung für Kleinunternehmer")} und {_ext(WKO_KU2,"Was ändert sich 2025 bei der Kleinunternehmerregelung")}; Gewinnermittlung: {_ext(WKO_GEWINN,"WKO, Gewinnermittlung: Methoden im Vergleich")}, {ABGERUFEN}.</li>
 <li>Aufbewahrungspflicht: {_ext(USP_AUFBEW,"Unternehmensserviceportal, Aufbewahrungspflicht (§ 132 BAO)")}, {ABGERUFEN}.</li></ul></div>'''),
       ],

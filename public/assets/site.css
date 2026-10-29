@@ -669,3 +669,20 @@ body{overflow-x:clip}
 .gsec{margin-top:26px}
 .gsec h2 small{font-weight:600;font-size:16px}
 .item.over{display:none}
+/* aufklappbare Produktinfos im Listeneintrag (Girokonto, Festgeld) */
+.more>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:13px 16px;font-weight:600;font-size:16px;color:var(--ink);user-select:none}
+.more>summary::-webkit-details-marker{display:none}
+.more>summary::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-2px) rotate(45deg);transition:transform .15s}
+.more[open]>summary::after{transform:translateY(2px) rotate(-135deg)}
+.more>summary:hover{background:var(--card2)}
+.more>summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.more-b{display:grid;gap:12px;margin-top:14px;min-width:0}
+.more-b h4{margin:6px 0 0;font-size:16px}
+.more-b .note,.more-b .src{margin:0}
+.more-b .cond .r{padding:10px 14px;font-size:14.5px}
+.more-b .pc .box{padding:14px}
+.more-b .pc h4{margin:0 0 10px}
+.more-b ul.plain{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:15px}
+@media (min-width:720px){.more-b .pc{grid-template-columns:1fr 1fr}}
+.item:target{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue-soft)}
+.list .item{scroll-margin-top:84px}

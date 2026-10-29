@@ -24,7 +24,7 @@ def register(art,P,eur):
     for k in ks: k.setdefault('geprueft',d['stand'])
     G.rate(ks)
     G.K.use('at'); G.LAND,G.CC='at',G.CFG['at']
-    def L(k,label=None): return f'<a class="lnk" href="{P}de/girokonto/{k["slug"]}/">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
+    def L(k,label=None): return f'<a class="lnk" href="{P}de/girokonto/#gk-{k["slug"]}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
     alle=[k for k in ks if k['art'] in ('standard','premium')]
     pr=G.PROFIL['standard']
     cost=lambda k:G.kosten(k,pr['ein'],pr['alter'],pr['abh'])['total']
@@ -78,7 +78,7 @@ def register(art,P,eur):
        ('Quellen',f'''<div class="prose"><ul>
 <li>Zahlungskontengesetz: {_ext(ZKG(20),"§ 20")}, {_ext(ZKG(22),"§ 22")}, {_ext(ZKG(23),"§ 23")}, {_ext(ZKG(24),"§ 24")}, {_ext(ZKG(26),"§ 26")}, {_ext(ZKG(27),"§ 27")} bis {_ext(ZKG(29),"§ 29")}; Kündigung: {_ext("https://www.gesetze-im-internet.de/bgb/__675h.html","§ 675h BGB")}. Abgerufen am 27.10.2026.</li>
 <li>IBAN-Diskriminierung: {_ext(BAFIN_IBAN,"BaFin, Überweisungen und Lastschriften")}.</li>
-<li>Kontopreise: Entgeltinformationen der Banken, verlinkt auf jeder Kontoseite.</li></ul></div>'''),
+<li>Kontopreise: Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich.</li></ul></div>'''),
       ],
       faq=[
        ('Wie lange dauert ein Kontowechsel?','Rechnet man die gesetzlichen Fristen zusammen, etwa 12 Geschäftstage: 2 Tage für die Aufforderung der neuen Bank, 5 Tage für die Listen der alten Bank und 5 Tage zum Einrichten.'),
@@ -111,7 +111,7 @@ def register(art,P,eur):
 <p>Die Bank muss diese Leistungen so anbieten wie bei ihren anderen Girokonten, und sie darf die Zahl der Buchungen nicht begrenzen (§ 38 ZKG). Einen Dispo gibt es nicht, das Basiskonto läuft auf Guthabenbasis. Du kannst schon beim Antrag verlangen, dass es als Pfändungsschutzkonto (P-Konto) geführt wird.</p></div>'''),
        ('Was es kosten darf',f'''<div class="prose"><p>Eine feste Obergrenze in Euro gibt es in Deutschland nicht. Das Entgelt muss laut § 41 ZKG angemessen sein, gemessen an marktüblichen Preisen und am Nutzerverhalten. Der Bundesgerichtshof hat 2020 entschieden, dass eine Bank die Mehrkosten für Basiskonten nicht allein auf die Inhaber von Basiskonten umlegen darf (Urteil XI ZR 119/19). Im Streit standen 8,99 € im Monat und 1,50 € für jede beleghafte Überweisung. Diese Entgeltklauseln waren unwirksam.</p></div>'''),
        ('Basiskonten im Vergleich',_tbl(['Konto','Kontoführung','Im Jahr','Eröffnung'],brow)+
-        f'<div class="prose"><p>Die Preise stammen aus den Entgeltinformationen der Banken. Dazu können Kosten für Karten oder Abhebungen kommen, das steht auf jeder Kontoseite und im <a href="{G1}">Girokonto-Vergleich</a>.</p></div>'),
+        f'<div class="prose"><p>Die Preise stammen aus den Entgeltinformationen der Banken. Dazu können Kosten für Karten oder Abhebungen kommen, das steht bei jedem Konto im <a href="{G1}">Girokonto-Vergleich</a>.</p></div>'),
        ('Wann die Bank ablehnen darf','''<div class="prose"><p>Nur aus Gründen, die im Gesetz stehen (§§ 35 bis 37 ZKG), etwa:</p><ul>
 <li>Du hast in Deutschland schon ein Girokonto, das du nutzen kannst. Ausnahme: Es wurde gekündigt oder du wurdest über die Schließung informiert.</li>
 <li>Du wurdest in den letzten drei Jahren wegen einer vorsätzlichen Straftat gegen die Bank, ihre Mitarbeitenden oder Kunden verurteilt.</li>
@@ -124,7 +124,7 @@ def register(art,P,eur):
 <li>Zahlungskontengesetz: {_ext(ZKG(31),"§ 31")}, {_ext(ZKG(35),"§ 35")} bis {_ext(ZKG(37),"§ 37")}, {_ext(ZKG(38),"§ 38")}, {_ext(ZKG(41),"§ 41")}, {_ext(ZKG(42),"§ 42")}, {_ext(ZKG(48),"§ 48")}. Abgerufen am 27.10.2026.</li>
 <li>Urteil: {_ext(BGH_BASIS,"BGH, Pressemitteilung 084/2020 zu XI ZR 119/19")}.</li>
 <li>Verfahren: {_ext(BAFIN_BASIS,"BaFin, Basiskonto")}.</li>
-<li>Preise der Basiskonten: Entgeltinformationen der Banken, verlinkt auf jeder Kontoseite.</li></ul></div>'''),
+<li>Preise der Basiskonten: Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich.</li></ul></div>'''),
       ],
       faq=[
        ('Wer hat Anspruch auf ein Basiskonto?','Jeder Verbraucher mit rechtmäßigem Aufenthalt in der EU, auch Menschen ohne festen Wohnsitz, Asylsuchende und Geduldete. Schulden oder eine negative Schufa sind kein Ablehnungsgrund.'),
@@ -163,13 +163,13 @@ def register(art,P,eur):
 <li><b>Prämien.</b> Eine Prämie für die Eröffnung ist kein Dauerzustand. Entscheidend ist, was das Konto danach kostet.</li></ul></div>'''),
        ('So findest du das günstigste Konto für dich',f'''<div class="prose"><p>Im <a href="{G1}">Girokonto-Vergleich</a> gibst du deinen Geldeingang, dein Alter und deine Abhebungen pro Monat ein. Wir prüfen bei jedem Konto die Gratis-Bedingung und rechnen die Kosten für ein Jahr. Brauchst du eine Filiale, findest du die besten Konten in der Liste <a href="{B}filiale/">Konten mit Filiale</a>. Für junge Leute gibt es eigene Listen: <a href="{B}studenten/">Studierende und Azubis</a>, <a href="{B}jugend/">Jugendliche</a> und <a href="{B}kinder/">Kinder</a>.</p></div>'''),
        ('Quellen','''<div class="prose"><ul>
-<li>Preise, Bedingungen, Bargeld und Fremdwährung: Entgeltinformationen und Preisverzeichnisse der Banken, verlinkt auf jeder Kontoseite. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
+<li>Preise, Bedingungen, Bargeld und Fremdwährung: Entgeltinformationen und Preisverzeichnisse der Banken, verlinkt bei jedem Konto im Vergleich. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
 <li>Beratung bei dauerhafter Überziehung: <a href="https://www.gesetze-im-internet.de/bgb/__504a.html" target="_blank" rel="noopener">§ 504a BGB ↗</a>.</li></ul></div>'''),
       ],
       faq=[
        ('Welche Girokonten sind in Deutschland wirklich kostenlos?',f'Ohne jede Bedingung kostenlos sind im Vergleich: {", ".join(k["name"]+" ("+k["bank"]+")" for k in gratis)}. Weitere {len(bedingt)} Konten sind mit Geldeingang oder bis zu einem bestimmten Alter gratis.'),
        ('Gibt es ein kostenloses Girokonto mit Filiale?','Bei Filialbanken ist die Kontoführung meist nur mit Bedingung gratis, etwa ab einem bestimmten Geldeingang oder für junge Leute. Die besten Konten mit Filiale stehen in der Bestenliste „Mit Filiale“.'),
-       ('Was zählt als Geldeingang?','Das legt jede Bank selbst fest. Manche zählen jeden Eingang, andere nur Gehalt oder nur Überweisungen von Konten bei anderen Banken. Die genaue Bedingung steht auf jeder Kontoseite.'),
+       ('Was zählt als Geldeingang?','Das legt jede Bank selbst fest. Manche zählen jeden Eingang, andere nur Gehalt oder nur Überweisungen von Konten bei anderen Banken. Die genaue Bedingung steht bei jedem Konto im Vergleich.'),
        ('Gibt es eine Obergrenze für Dispozinsen?','Nein, eine gesetzliche Obergrenze gibt es in Deutschland nicht. Bei dauerhafter hoher Überziehung muss dir die Bank aber eine Beratung anbieten.'),
       ],
       related=['girokonto-wechseln','basiskonto'])

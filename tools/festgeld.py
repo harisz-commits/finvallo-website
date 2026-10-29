@@ -1,4 +1,5 @@
-# Festgeld-Vergleich Deutschland und Österreich: Liste mit Rechner und Filtern, Laufzeit-Seiten, Bestenlisten, Bankseiten, Angebotsseiten, Methodik.
+# Festgeld-Vergleich Deutschland und Österreich: Liste mit Rechner, Filtern und aufklappbaren Konditionen je Angebot, Laufzeit-Seiten, Bestenlisten, Methodik.
+# Eigene Angebots- und Bankseiten gibt es nicht mehr; die alten Adressen leiten per 301 auf den Vergleich (tools/daten/entfernt.json).
 # Daten: daten/<land>/festgeld.json (aus festgeld_daten.py, jede Zahl aus der Konditionsseite der Bank oder Plattform, mit Quelle und Prüfdatum),
 # daten/festgeld-laender.json (Einlagensicherung und S&P-Länderrating je Sitzland).
 # Rechnung gibt es zweimal: ertrag() hier und calc() in public/assets/festgeld.js. check.py vergleicht beide (tools/festgeld-kontrolle.js).
@@ -167,12 +168,41 @@ def btn(a,P=''):
     """Partnerlink nur bei Direktangeboten der Bank; über Raisin oder CHECK24 bleibt der Plattformlink"""
     key=a['bank_slug'] if not plattform(a) else None
     return affiliate.btn(LAND,'festgeld',key,a.get('vertrieb_url') or a['quelle'])
-def bank_btn(ys):
-    """Button auf der Bankseite: direkt zur Bank (Partnerlink, wenn vorhanden); nur wenn es ein Direktangebot gibt"""
-    d=[y for y in ys if not plattform(y)]; a=(d or ys)[0]
-    if not d and not affiliate.link(LAND,'festgeld',a['bank_slug']): return ''
-    return '<p style="margin-top:14px">'+affiliate.btn(LAND,'festgeld',a['bank_slug'],a.get('vertrieb_url') or a['quelle'],text=f'Festgeld direkt bei {a["bank"]} eröffnen',cls='btn primary')+'</p>'
-def item(a,P,base,m,rank,hide=False):
+ALL=[]   # alle Angebote des Landes (für „andere Wege zur selben Bank“)
+def url(a,land=None): return f'{land or LAND}/festgeld/#fg-{a["slug"]}'
+def mehr(a,P):
+    """Aufklappbare Produktinfos: Zinsen je Laufzeit, Vor- und Nachteile, Konditionen, andere Abschlusswege, Quelle"""
+    gp=a['geprueft']; lzs=laufzeiten(a); anl=anlT(a)
+    rows=''
+    for m in lzs:
+        r=ertrag(a,DEF_B,m); zs=[z for z in a['zinsen'] if z['monate']==m]
+        ztxt='<br>'.join(f'{pct(z["zins"])}'+(f' <small class="mut">({("ab "+eur(z["min"])+" €") if z["min"] is not None else ""}{" " if z["min"] is not None and z["max"] is not None else ""}{("bis "+eur(z["max"])+" €") if z["max"] is not None else ""})</small>' if (z['min'] is not None or z['max'] is not None) and len(zs)>1 else '') for z in zs)
+        rows+=f'<tr><td>{lzt(m)}</td><td><b>{ztxt}</b></td><td>{eur(r["ertrag"])+" €" if r["fit"] else "–"}</td></tr>'
+    r_=lambda k,v: f'<div class="r"><span>{k}</span><span>{v}</span></div>'
+    na='<span class="mut na">keine Angabe</span>'; v=lambda x: E(x) if x not in (None,'') else na
+    es=a.get('einlagensicherung') or {}
+    cond=('<div class="cond"><div class="gh">Anlage</div>'+r_('Anlagebetrag',v(anl))+r_('Zinszahlung',v(a.get('zinszahlung_text') or zzT(a)))
+          +r_('Zinseszins',{True:'ja',False:'nein'}.get(a.get('zinseszins'),na))+r_('Vorzeitig kündbar',v(a.get('kuendigung_text') or kdT(a)))+r_('Am Laufzeitende',E(vlT(a)))
+          +'</div><div class="cond"><div class="gh">Sicherheit</div>'+r_('Bank',E(a.get('institut') or a['bank']))+r_('Gesetzliche Einlagensicherung',E(sichT(a)))
+          +(r_('Zusätzliche Sicherung',E(es['freiwillig'])) if es.get('freiwillig') else '')+r_('Länderrating (S&amp;P)',v(rating(a)))
+          +'</div><div class="cond"><div class="gh">Steuer und Abschluss</div>'+r_('Steuer',v(a.get('steuer') or steuerT(a)))+r_('Abschluss',E(vtT(a)))
+          +r_('Zusätzliches Konto',v(a.get('konto_noetig')) if a.get('konto_noetig') else 'nicht nötig' if a.get('konto_noetig') is None and not plattform(a) else na)
+          +r_('Kosten',v(a.get('kosten')))+r_('Legitimation',v(a.get('legitimation')))+r_('Nur für Neukunden',{True:'ja',False:'nein'}.get(a.get('neukunden_only'),na))
+          +(r_('Aktion',E(a['aktion'])) if a.get('aktion') else '')+(r_('Hinweis',E(a['hinweis'])) if a.get('hinweis') else '')+'</div>')
+    pc,kc=pros(a),cons(a)
+    gs=sorted(geschwister(a,ALL),key=lambda g:-topzins(g))
+    gst=('<h4>Dieselbe Bank auf anderen Wegen</h4><ul class="plain">'+''.join(f'<li><a class="lnk" href="#fg-{g["slug"]}">{E(titel(g))} {E(vtT(g))}</a>: bis {pct(topzins(g))}, {E(lzspan(g))}</li>' for g in gs)+'</ul>') if gs else ''
+    sek='<p class="note"><b>Hinweis zur Quelle:</b> Einzelne Angaben stammen aus Vergleichsportalen, weil die Bank sie nicht frei veröffentlicht. Bitte vor dem Abschluss beim Anbieter prüfen.</p>' if a.get('sek') else ''
+    return f'''<details class="more"><summary>Alle Konditionen</summary><div class="more-b">
+    <h4>Zinsen nach Laufzeit</h4><div class="tbl"><table><thead><tr><th>Laufzeit</th><th>Zins p. a.</th><th>Zinsen für {eur(DEF_B)} €</th></tr></thead><tbody>{rows}</tbody></table></div>
+    <p class="note">Zinsen vor Steuern{", mit Zinseszins bei mehr als 12 Monaten" if a.get("zinseszins") is True else ""}.</p>{sek}
+    <div class="pc"><div class="box pro"><h4>Das spricht dafür</h4>{'<ul class="checks">'+"".join(f"<li>{E(x)}</li>" for x in pc)+'</ul>' if pc else '<p class="note">Keine besonderen Vorteile.</p>'}</div>
+    <div class="box con"><h4>Das spricht dagegen</h4>{'<ul class="checks neg">'+"".join(f"<li>{E(x)}</li>" for x in kc)+'</ul>' if kc else '<p class="note">Keine bekannten Nachteile.</p>'}</div></div>
+    {cond}{gst}
+    {('<p class="note">Girokonto bei derselben Bank: '+', '.join(f'<a class="lnk" href="{P}{LAND}/girokonto/#gk-{sl}">{E(n)}</a>' for sl,n in giro_links(a))+'</p>') if giro_links(a) else ''}
+    <p class="src">Quelle: {K.ext(a["quelle"])}{" · "+K.ext(a["quelle2"]) if a.get("quelle2") else ""}, Stand {dmy(a.get("stand") or gp)}, geprüft am {dmy(gp)}. Fehler gefunden? <a href="mailto:hallo@finvallo.com?subject=Korrektur%20{E(a['slug'])}">Schreib uns</a>.</p>
+  </div></details>'''
+def item(a,P,base,m,rank,hide=False,voll=True):
     r=ertrag(a,DEF_B,m)
     zt=f'{pct(r["zins"])}' if r.get('zins') is not None else '–'
     et=f'{eur(r["ertrag"])} €' if r['fit'] else 'passt nicht'
@@ -182,13 +212,14 @@ def item(a,P,base,m,rank,hide=False):
     rk=f'<span class="rank{" r"+str(rank) if rank<=3 else ""}">{rank}</span>' if rank else ''
     return f'''<article class="item" id="fg-{a["slug"]}" data-k='{E(json.dumps(jsdata(a),separators=(",",":")))}' data-f="{flags(a)}" data-sitz="{a["sitz"]}" data-rat="{ratnum(a)}" data-zz="{a.get("zinszahlung") or ""}" data-q="{E((a["bank"]+" "+a["produkt"]+" "+vtK(a)).lower())}"{" hidden" if hide else ""}>
     <div class="ihead"><div style="display:flex;gap:10px;align-items:center">{rk}</div></div>
-    <div class="irow">{face(a)}<div style="min-width:0"><h3 class="iname"><a href="{base}{a["slug"]}/">{E(titel(a))}</a></h3><div class="iprov">{E(landN(a))} · {E(vtT(a))}</div></div></div>
+    <div class="irow">{face(a)}<div style="min-width:0"><h3 class="iname">{E(titel(a))}</h3><div class="iprov">{E(landN(a))} · {E(vtT(a))}</div></div></div>
     <div class="tags">{tags(a)}</div>
     <div class="stats"><div><small>Zins p. a.</small><b class="good" data-zins>{zt}</b></div><div><small data-lbl>Zinsen für {eur(DEF_B)} €</small><b data-ertrag>{et}</b></div><div><small>Mindestanlage</small><b>{eur(a["min_anlage"])+" €" if a.get("min_anlage") is not None else "keine"}</b></div></div>
     <p class="note" data-why style="margin:0"></p>
     {akt}
     <ul class="checks">{"".join(f"<li>{E(x)}</li>" for x in pros(a)[:3])}</ul>
-    <div class="acts">{btn(a)}<a class="btn ghost block" href="{base}{a["slug"]}/">Details ansehen</a></div>
+    <div class="acts">{btn(a)}{"" if voll else f'<a class="btn ghost block" href="{P}{url(a)}">Alle Konditionen</a>'}</div>
+    {mehr(a,P) if voll else ""}
   </article>'''
 
 def calcbox(m,nav=None):
@@ -298,13 +329,13 @@ def zinskurve(xs,P,cur=None):
         lnk=f'<b>{t}</b>' if m==cur else f'<a class="lnk" href="{P}{LAND}/festgeld/{s}/">{t}</a>'
         rows+=f'<tr><td>{lnk}</td><td><b>{pct(kz["bz"])}</b><br><small class="mut">{E(titel(kz["best"]))}</small></td><td>{pct(kz["med"])}</td><td>{kz["n"]}</td></tr>'
     return f'<div class="tbl wide"><table><thead><tr><th>Laufzeit</th><th>Höchster Zins</th><th>Hälfte zahlt mindestens</th><th>Angebote</th></tr></thead><tbody>{rows}</tbody></table></div><p class="note">Für {eur(DEF_B)} € Anlage, Stand {S(xs)}. Mit deinem Betrag rechnest du in der Liste.</p>'
-def liste_html(X,P,base,m):
+def liste_html(X,P,base,m,voll=True):
     """Angebote als <article>; die ersten IM_HTML sichtbar im DOM, der Rest in <template>, das festgeld.js beim Start einhängt"""
     rank=0; vis_html=''; rest=''; n=0
     for a in X:
         vis=m in laufzeiten(a); fit=vis and ertrag(a,DEF_B,m)['fit']
         if fit: rank+=1
-        h=item(a,P,base,m,rank if fit else 0,hide=not vis)
+        h=item(a,P,base,m,rank if fit else 0,hide=not vis,voll=voll)
         n+=1
         if n<=IM_HTML: vis_html+=h
         else: rest+=h
@@ -338,7 +369,7 @@ def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
     fq=gen_fq(X,m,'lz' if lzslug else 'sub' if sub else 'alle',sub['t'] if sub else '')
     crumbs=[(N,f'{LAND}/'),('Festgeld',f'{LAND}/festgeld/')]+([(lzt(m),rel)] if lzslug else [('Bestenlisten',f'{LAND}/festgeld/bestenlisten/'),(sub['t'],rel)] if sub else [])
     top=[a for a in X if ertrag(a,DEF_B,m)['fit']][:10]
-    ld=K.graph(rel,t,ds,crumbs,[{"@type":"ItemList","name":h1,"numberOfItems":len(top),"itemListElement":[{"@type":"ListItem","position":i+1,"name":titel(a),"url":f"https://finvallo.com/{LAND}/festgeld/{a['slug']}/"} for i,a in enumerate(top)]},faqld(fq)],date=max(a['geprueft'] for a in xs))
+    ld=K.graph(rel,t,ds,crumbs,[{"@type":"ItemList","name":h1,"numberOfItems":len(top),"itemListElement":[{"@type":"ListItem","position":i+1,"name":titel(a),"url":f"https://finvallo.com/{url(a)}"} for i,a in enumerate(top)]},faqld(fq)],date=max(a['geprueft'] for a in xs))
     kurz=''
     if kz:
         kurz=f'<b>Kurz gesagt:</b> Für {eur(DEF_B)} € und {lzt(m)} zahlt {E(titel(kz["best"]))} am meisten: {pct(kz["bz"])} pro Jahr, Einlagensicherung {E(landN(kz["best"]))}.'
@@ -366,10 +397,10 @@ def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
 <h1>{E(h1)}</h1>
   <p class="lede">{E(lede)}</p>
   {f'<div class="facts prose"><p>{kurz}</p></div>' if kurz else ''}
-  <p class="note" style="margin:6px 0 14px">Laufzeiten: {lzlinks}<br>Bestenlisten: {bllinks}<br><a class="lnk" href="{up}bank/">Alle Banken</a> · <a class="lnk" href="{up}methodik/">So vergleichen wir</a>{" · Ratgeber: "+rg if rg else ""}</p>
+  <p class="note" style="margin:6px 0 14px">Laufzeiten: {lzlinks}<br>Bestenlisten: {bllinks}<br><a class="lnk" href="{up}methodik/">So vergleichen wir</a>{" · Ratgeber: "+rg if rg else ""}</p>
   {calcbox(m,nav)}
   {filterbox(X,len(shown))}
-  <div class="list" data-fg data-limit="30">{liste_html(X,P,base,m)}</div>
+  <div class="list" data-fg data-limit="30">{liste_html(X,P,base,m,voll=not (lzslug or sub))}</div>
   <button type="button" class="btn ghost block" data-more hidden>Alle Angebote zeigen</button>
   {nb_lz}
   <h2>Festgeld: das Wichtigste in Kürze</h2><div class="prose"><p><b>Zins und Laufzeit:</b> Der Zins steht für die ganze Laufzeit fest. Längere Laufzeiten bringen nicht immer mehr Zinsen; vergleiche deshalb mehrere Laufzeiten{"" if lzslug else " (siehe Tabelle unten)"}.</p>
@@ -403,151 +434,6 @@ def bestenlisten_hub(xs):
 </main>
 {K.footer(P)}''')
 
-# ---------- Bankseiten ----------
-def bank_pages(xs):
-    N=CC['N']; base=f'{LAND}/festgeld/bank/'; P='../../../../'; st=S(xs)
-    by={}
-    for a in xs: by.setdefault(a['bank_key'],[]).append(a)
-    rows=''
-    for k,ys in sorted(by.items(),key=lambda kv:kv[1][0]['bank'].lower()):
-        a=ys[0]; tz=max(topzins(y) for y in ys)
-        rows+=f'<tr><td><a class="lnk" href="{a["bank_slug"]}/">{E(a["bank"])}</a><br><small class="mut">{E(landN(a))}</small></td><td>{len(ys)}</td><td>{E(", ".join(sorted({vtK(y) for y in ys})))}</td><td><b>{pct(tz)}</b></td></tr>'
-    t=f'Festgeld nach Bank: {len(by)} Banken in {N} | Finvallo'
-    d=f'Alle {len(by)} Banken im Festgeld-Vergleich {N} mit ihren Angeboten direkt, über Raisin, CHECK24 oder andere Plattformen. Höchster Zins je Bank, Stand {st}.'
-    ld=K.graph(base,t,d,[(N,f'{LAND}/'),('Festgeld',f'{LAND}/festgeld/'),('Banken',base)],[{"@type":"ItemList","name":f"Banken im Festgeld-Vergleich {N}","numberOfItems":len(by),"itemListElement":[{"@type":"ListItem","position":i+1,"name":ys[0]['bank'],"url":f"https://finvallo.com/{base}{ys[0]['bank_slug']}/"} for i,(k,ys) in enumerate(sorted(by.items(),key=lambda kv:kv[1][0]['bank'].lower()))]}])
-    K.write(base,head(t,d,base,'../../../',ld)+f'''{hdr('../../../',base)}
-<div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../">Festgeld</a> › Banken</span><span>Stand {st}</span></div>
-<h1>Festgeld nach Bank</h1><p class="lede">{len(by)} Banken mit Festgeld für Kundinnen und Kunden aus {N}. Viele gibt es auf mehreren Wegen: direkt, über Raisin oder über CHECK24, oft mit verschiedenen Zinsen. Auf der Bankseite stehen alle Wege nebeneinander.</p>
-<div class="tbl wide"><table><thead><tr><th>Bank</th><th>Angebote</th><th>Abschluss</th><th>Höchster Zins</th></tr></thead><tbody>{rows}</tbody></table></div>
-<p class="note"><a class="lnk" href="../">Zum Festgeld-Vergleich mit Rechner →</a> · <a class="lnk" href="../methodik/">So vergleichen wir →</a></p>
-</main>
-{K.footer('../../../')}''')
-    for k,ys in by.items():
-        a=ys[0]; rel=f'{base}{a["bank_slug"]}/'; ys=sorted(ys,key=lambda y:(plattform(y),-topzins(y)))
-        ms=sorted({m for y in ys for m in laufzeiten(y)})
-        th=''.join(f'<th>{E(vtK(y))}{" (Neugeld)" if neugeld(y) else ""}</th>' for y in ys)
-        tb=''
-        for m in ms:
-            tb+=f'<tr><td>{lzt(m)}</td>'+''.join(f'<td>{pct(topzins(y,m)) if topzins(y,m) is not None else "–"}</td>' for y in ys)+'</tr>'
-        cards=''.join(f'<a class="catcard" href="../../{y["slug"]}/"><span class="ct">{E(vtT(y))}</span><b>{E(titel(y))}</b><span>bis {pct(topzins(y))} · {E(lzspan(y))}</span><small>Anlage {E(anlT(y) or "keine Angabe")} · Details →</small></a>' for y in ys)
-        tz=max(topzins(y) for y in ys)
-        t=f'{a["bank"]} Festgeld {N}: Zinsen und Wege zum Abschluss | Finvallo'
-        if len(t)>62: t=f'{a["bank"]} Festgeld ({CC["code"]}): alle Angebote | Finvallo'
-        d=f'{a["bank"]} Festgeld für {N}: {len(ys)} {"Angebot" if len(ys)==1 else "Angebote"} ({", ".join(sorted({vtK(y) for y in ys}))}), bis {pct(tz)} Zinsen. Einlagensicherung {landN(a)}, Stand {st}.'
-        d=K.fit_desc(d) if hasattr(K,'fit_desc') else d[:155]
-        gl=giro_links(a); ar=anb_rel(a)
-        mehr=''
-        if gl: mehr+=f'<p class="note">Girokonten von {E(a["bank"])} im Vergleich: '+', '.join(f'<a class="lnk" href="{P}{LAND}/girokonto/{s}/">{E(n)}</a>' for s,n in gl)+'</p>'
-        if ar: mehr+=f'<p class="note"><a class="lnk" href="{P}{ar}">Kreditkarten von {E(a["bank"])} →</a></p>'
-        fq=[(f'Wo bekomme ich bei {a["bank"]} den höchsten Festgeldzins?',f'Für Kundinnen und Kunden in {N} zahlt {a["bank"]} den höchsten Zins aktuell {vtT(max(ys,key=topzins))}: bis {pct(tz)} pro Jahr. Die Tabelle oben zeigt alle Wege nebeneinander. Stand: {st}.'),
-            (f'Wie sicher ist Festgeld bei {a["bank"]}?',f'Einlagen bei {a["bank"]} ({a.get("institut") or a["bank"]}) sind über die {sichT(a)} geschützt'+(f', Länderrating {landN(a)} (S&P) {rating(a)}.' if rating(a) else '.')+' Das gilt unabhängig davon, über welchen Weg du abschließt, weil das Geld immer bei dieser Bank liegt.')]
-        ld=K.graph(rel,t,d,[(N,f'{LAND}/'),('Festgeld',f'{LAND}/festgeld/'),('Banken',base),(a['bank'],rel)],[{"@type":"BankOrCreditUnion","@id":f"https://finvallo.com/{rel}#bank","name":a.get('institut') or a['bank'],"url":f"https://finvallo.com/{rel}"},faqld(fq)],date=max(y['geprueft'] for y in ys))
-        K.write(rel,head(t,d,rel,P,ld)+f'''{hdr(P,rel)}
-<div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../../">Festgeld</a> › <a href="../">Banken</a> › {E(a["bank"])}</span><span>Stand {st}</span></div>
-<h1>{E(a["bank"])}: Festgeld in {N}</h1>
-<p class="lede">{E(a.get("institut") or a["bank"])}, Einlagensicherung {E(landN(a))}{" (Länderrating "+E(rating(a))+")" if rating(a) else ""}. {len(ys)} {"Angebot" if len(ys)==1 else "Angebote"} für Kundinnen und Kunden aus {N}: {E(", ".join(sorted({vtT(y) for y in ys})))}.</p>
-<h2>Zinsen je Laufzeit und Abschlussweg</h2>
-<div class="tbl wide"><table><thead><tr><th>Laufzeit</th>{th}</tr></thead><tbody>{tb}</tbody></table></div>
-<p class="note">Höchster Zins je Laufzeit, Stand {st}. Mindestanlage, Zinszahlung und Kündigung unterscheiden sich je Weg und stehen auf der Angebotsseite.</p>
-<h2>Die Angebote</h2><div class="catgrid">{cards}</div>
-{bank_btn(ys)}
-{mehr}
-<h2>Fragen und Antworten</h2>{faqhtml(fq)}
-<p class="note" style="margin-top:18px"><a class="lnk" href="../../">Zum Festgeld-Vergleich →</a> · <a class="lnk" href="../../methodik/">So vergleichen wir →</a></p>
-</main>
-{K.footer(P)}''')
-
-# ---------- Angebotsseite ----------
-def offer_page(a,xs):
-    rel=f'{LAND}/festgeld/{a["slug"]}/'; P='../../../'; N=CC['N']
-    tz=topzins(a); lzs=laufzeiten(a)
-    vs='' if not plattform(a) else ' über '+vtS(a)
-    t=f'{titel(a)}{vs}: Zinsen {N} | Finvallo'
-    if len(t)>62: t=f'{titel(a)}{vs} ({CC["code"]}) | Finvallo'
-    if len(t)>62: t=f'{a["bank"]} Festgeld{vs} ({CC["code"]}) | Finvallo'
-    if len(t)>66: t=f'{a["bank"]} Festgeld {vtS(a)} {CC["code"]} | Finvallo'
-    anl=anlT(a)
-    d=f'{titel(a)} {vtT(a)}: bis {pct(tz)} Zinsen, Laufzeit {lzspan(a)}'+(f', Anlage {anl}' if anl else '')+f'. Einlagensicherung {landN(a)}, Zinsen {zzT(a)}, Stand {dmy(a.get("stand") or a["geprueft"])}.'
-    d=K.fit_desc(d) if hasattr(K,'fit_desc') else d[:155]
-    gp=a['geprueft']
-    nm=f'{titel(a)} {vtT(a)}'; kurz=lambda x:x[:1].lower()+x[1:] if x and not x[:2].isupper() else x
-    fq=[(f'Wie viel Zinsen zahlt {titel(a)}?',f'{nm} zahlt Kundinnen und Kunden in {N} je nach Laufzeit bis {pct(tz)} pro Jahr ({lzspan(a)}), laut Angabe vom {dmy(a.get("stand") or gp)}.'),
-        ('Wie sicher ist das Geld?',f'Bei {nm} sind die Einlagen über die {sichT(a)} geschützt'+(f'. Länderrating {landN(a)} (S&P): {rating(a)}.' if rating(a) else '.')+(f' Zusätzlich: {a["einlagensicherung"]["freiwillig"]}.' if (a.get('einlagensicherung') or {}).get('freiwillig') else '')),
-        ('Wann werden die Zinsen gezahlt?',f'Bei {nm}: '+kurz((a.get('zinszahlung_text') or zzT(a)).rstrip('.'))+'.'),
-        ('Wird die Steuer automatisch abgezogen?',f'Bei {nm}: '+kurz((a.get('steuer') or steuerT(a)).rstrip('.'))+'.'),
-        ('Kann ich vorzeitig an mein Geld?',f'Bei {nm}: '+kurz((a.get('kuendigung_text') or kdT(a)).rstrip('.'))+'.')]
-    if plattform(a): fq.append((f'Wie schließe ich das Festgeld ab?',f'In {N} schließt du {titel(a)} {vtT(a)} ab. '+(f'Dafür brauchst du: {a["konto_noetig"]}.' if a.get('konto_noetig') else 'Das Konto dort ist kostenlos.' if (a.get('kosten') or '').startswith('kostenlos') else '')))
-    gs=geschwister(a,xs)
-    if gs: fq.append((f'Gibt es {a["bank"]} Festgeld auch auf anderen Wegen?',f'Ja, neben {titel(a)} ({vtT(a)}) gibt es '+'; '.join(f'{titel(g)} {vtT(g)} bis {pct(topzins(g))}' for g in gs)+f'. Das Geld liegt in jedem Fall bei {a.get("institut") or a["bank"]}, die Einlagensicherung ist dieselbe; Zinsen, Mindestanlage und Steuerabzug können sich unterscheiden.'))
-    amt={"@type":"MonetaryAmount","currency":"EUR"}
-    if a.get('min_anlage') is not None: amt["minValue"]=a['min_anlage']
-    if a.get('max_anlage') is not None: amt["maxValue"]=a['max_anlage']
-    dep={"@type":"DepositAccount","@id":f"https://finvallo.com/{rel}#angebot","name":titel(a),"url":f"https://finvallo.com/{rel}","provider":{"@type":"BankOrCreditUnion","name":a.get('institut') or a['bank']},
-         "areaServed":{"@type":"Country","name":N},"interestRate":{"@type":"QuantitativeValue","value":tz,"unitText":"% p. a.","minValue":min(z['zins'] for z in a['zinsen']),"maxValue":tz},"amount":amt,
-         "feesAndCommissionsSpecification":a.get('kosten') or 'kostenlos'}
-    ld=K.graph(rel,t,d,[(N,f'{LAND}/'),('Festgeld',f'{LAND}/festgeld/'),(titel(a),rel)],[dep,faqld(fq)],date=gp)
-    rows=''
-    for m in lzs:
-        r=ertrag(a,DEF_B,m); zs=[z for z in a['zinsen'] if z['monate']==m]
-        ztxt='<br>'.join(f'{pct(z["zins"])}'+(f' <small class="mut">({("ab "+eur(z["min"])+" €") if z["min"] is not None else ""}{" " if z["min"] is not None and z["max"] is not None else ""}{("bis "+eur(z["max"])+" €") if z["max"] is not None else ""})</small>' if (z['min'] is not None or z['max'] is not None) and len(zs)>1 else '') for z in zs)
-        lnk=f'<a class="lnk" href="../{lzslug_of(m)}">{lzt(m)}</a>' if m in LZ_SEITEN else lzt(m)
-        rows+=f'<tr><td>{lnk}</td><td><b>{ztxt}</b></td><td>{eur(r["ertrag"])+" €" if r["fit"] else "–"}</td></tr>'
-    r_=lambda k,v: f'<div class="r"><span>{k}</span><span>{v}</span></div>'
-    na='<span class="mut na">keine Angabe</span>'; v=lambda x: E(x) if x not in (None,'') else na
-    es=a.get('einlagensicherung') or {}
-    cond=('<div class="cond" style="margin-bottom:14px"><div class="gh">Anlage</div>'+r_('Anlagebetrag',v(anl))+r_('Laufzeiten',E(', '.join(lzt(m) for m in lzs)))+r_('Zinszahlung',v(a.get('zinszahlung_text') or zzT(a)))
-          +r_('Zinseszins',{True:'ja',False:'nein'}.get(a.get('zinseszins'),na))+r_('Vorzeitig kündbar',v(a.get('kuendigung_text') or kdT(a)))+r_('Am Laufzeitende',E(vlT(a)))
-          +'</div><div class="cond" style="margin-bottom:14px"><div class="gh">Sicherheit</div>'+r_('Bank',E(a.get('institut') or a['bank']))+r_('Sitz der Einlagensicherung',E(landN(a)))
-          +r_('Gesetzliche Einlagensicherung',E(sichT(a)))+(r_('Zusätzliche Sicherung',E(es['freiwillig'])) if es.get('freiwillig') else '')+r_('Länderrating (S&P)',v(rating(a)))
-          +'</div><div class="cond" style="margin-bottom:14px"><div class="gh">Steuer und Abschluss</div>'+r_('Steuer',v(a.get('steuer') or steuerT(a)))+r_('Abschluss',E(vtT(a)))
-          +r_('Zusätzliches Konto',v(a.get('konto_noetig')) if a.get('konto_noetig') else 'nicht nötig' if a.get('konto_noetig') is None and not plattform(a) else na)
-          +r_('Kosten',v(a.get('kosten')))+r_('Eröffnung',v({'online':'online','filiale':'in der Filiale','beides':'online oder in der Filiale'}.get(a.get('eroeffnung'))))+r_('Legitimation',v(a.get('legitimation')))
-          +r_('Nur für Neukunden',{True:'ja',False:'nein'}.get(a.get('neukunden_only'),na))+(r_('Gemeinschaftskonto',{True:'möglich',False:'nicht möglich'}[a['gemeinschaftskonto']]) if a.get('gemeinschaftskonto') is not None else '')
-          +(r_('Aktion',E(a['aktion'])) if a.get('aktion') else '')+(r_('Hinweis',E(a['hinweis'])) if a.get('hinweis') else '')+'</div>')
-    m0=DEF_M if DEF_M in lzs else lzs[0]
-    sim=[x for x in xs if x is not a and x['bank_key']!=a['bank_key'] and m0 in laufzeiten(x) and ertrag(x,DEF_B,m0)['fit']]
-    sim=ordnen(sim,m0)[:5]
-    simt=''.join(f'<tr><td><a class="lnk" href="../{x["slug"]}/">{E(titel(x))}</a><br><small class="mut">{E(vtT(x))}</small></td><td><b>{pct(ertrag(x,DEF_B,m0)["zins"])}</b></td><td>{E(landN(x))}{" ("+E(rating(x))+")" if rating(x) else ""}</td></tr>' for x in sim)
-    gst=''
-    if gs:
-        gst=f'<h2>{E(a["bank"])} Festgeld auf anderen Wegen</h2><div class="tbl wide"><table><thead><tr><th>Abschluss</th><th>Zins p. a. (höchster)</th><th>Laufzeiten</th><th>Steuer</th></tr></thead><tbody>'
-        gst+=''.join(f'<tr><td><a class="lnk" href="../{g["slug"]}/">{E(vtT(g))}</a></td><td><b>bis {pct(topzins(g))}</b></td><td>{E(lzspan(g))}</td><td>{E(steuerT(g))}</td></tr>' for g in gs)
-        gst+=f'</tbody></table></div><p class="note"><a class="lnk" href="../bank/{a["bank_slug"]}/">Alle Angebote von {E(a["bank"])} im Überblick →</a></p>'
-    glance=f'{titel(a)} ist ein Festgeld der {a.get("institut") or a["bank"]}, abgeschlossen {vtT(a)}. Es gibt {len(lzs)} Laufzeit{"en" if len(lzs)>1 else ""} ({lzspan(a)}) mit bis zu {pct(tz)} Zinsen pro Jahr.'+(f' Anlage {anl}, Zinsen {zzT(a)}.' if anl else f' Zinsen {zzT(a)}.')+f' Einlagensicherung: {landN(a)}. Zinsen laut Anbieter vom {dmy(a.get("stand") or gp)}.'
-    pc,kc=pros(a),cons(a)
-    gl=giro_links(a); ar=anb_rel(a)
-    mehr=''
-    if gl: mehr+=f'<p class="note">Girokonten von {E(a["bank"])} im Vergleich: '+', '.join(f'<a class="lnk" href="{P}{LAND}/girokonto/{s}/">{E(n)}</a>' for s,n in gl)+'</p>'
-    if ar: mehr+=f'<p class="note"><a class="lnk" href="{P}{ar}">Kreditkarten von {E(a["bank"])} →</a></p>'
-    body=f'''{hdr(P,rel)}
-<div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../">Festgeld</a> › <a href="../bank/{a["bank_slug"]}/">{E(a["bank"])}</a></span><span class="ok">✓ Geprüft am {dmy(gp)}</span></div>
-  <div class="dh">{face(a)}<div style="min-width:0"><div class="tags">{tags(a)}</div>
-    <h1>{E(titel(a))}{f' <small class="mut">über {E(plattN(a))}</small>' if plattform(a) else ''}</h1></div></div>
-  <div class="box feebox"><small>Zins pro Jahr</small><span class="big good">bis {pct(tz)}</span><small class="mut">Laufzeit {E(lzspan(a))}{" · Anlage "+E(anl) if anl else ""}</small>
-    {btn(a)}
-    <div class="actrow"><a class="plink" href="{E(a["quelle"])}" target="_blank" rel="noopener">Konditionen beim Anbieter ↗</a></div></div>
-  <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
-  <h2>Zinsen nach Laufzeit</h2>
-  <div class="tbl"><table><thead><tr><th>Laufzeit</th><th>Zins p. a.</th><th>Zinsen für {eur(DEF_B)} €</th></tr></thead><tbody>{rows}</tbody></table></div>
-  {'<p class="note"><b>Hinweis zur Quelle:</b> Einzelne Angaben zu diesem Angebot stammen aus Vergleichsportalen, weil die Bank sie nicht frei abrufbar veröffentlicht. Bitte vor dem Abschluss beim Anbieter prüfen.</p>' if a.get('sek') else ''}
-  <p class="note">Zinsen vor Steuern{", mit Zinseszins bei mehr als 12 Monaten" if a.get("zinseszins") is True else ""}. Quelle: {K.ext(a["quelle"])}, Stand {dmy(a.get("stand") or gp)}. Was nach Steuern bleibt: {steuerlink(P)}.</p>
-  <h2>Vorteile und Nachteile</h2>
-  <div class="pc"><div class="box pro"><h3>Das spricht dafür</h3>{'<ul class="checks">'+"".join(f"<li>{E(x)}</li>" for x in pc)+'</ul>' if pc else '<p class="note">Keine besonderen Vorteile.</p>'}</div>
-  <div class="box con"><h3>Das spricht dagegen</h3>{'<ul class="checks neg">'+"".join(f"<li>{E(x)}</li>" for x in kc)+'</ul>' if kc else '<p class="note">Keine bekannten Nachteile.</p>'}</div></div>
-  <h2>Konditionen im Überblick</h2>{cond}
-  {gst}
-  {f"<h2>Andere Angebote für {lzt(m0)}</h2><div class='tbl wide'><table><thead><tr><th>Angebot</th><th>Zins p. a.</th><th>Einlagensicherung</th></tr></thead><tbody>{simt}</tbody></table></div><p class='note'><a class='lnk' href='../{lzslug_of(m0)}'>Alle Angebote für {lzt(m0)} →</a> · <a class='lnk' href='../'>Zum Festgeld-Vergleich →</a></p>" if simt else ""}
-  <h2>Fragen und Antworten</h2>{faqhtml(fq)}
-  {mehr}
-  <p class="note"><a class="lnk" href="../methodik/">So vergleichen wir Festgeld</a> · <a class="lnk" href="../bestenlisten/{CC["bl_slug"]}/">Festgeld bei {E(CC["heimB"])}</a> · {zinslink(P)} · {steuerlink(P)}</p>
-  <p class="src" style="margin-top:18px">Quelle: {K.ext(a["quelle"])}{" · "+K.ext(a["quelle2"]) if a.get("quelle2") else ""}. Konditionen vor dem Abschluss beim Anbieter prüfen. Fehler gefunden? <a href="mailto:hallo@finvallo.com?subject=Korrektur%20{E(a['slug'])}">Schreib uns</a>.</p>
-</main>
-{K.footer(P)}'''
-    K.write(rel,head(t,d,rel,P,ld)+body)
-
 # ---------- Methodik ----------
 def methodik_page(xs):
     rel=f'{LAND}/festgeld/methodik/'; P='../../../'; N=CC['N']
@@ -557,7 +443,7 @@ def methodik_page(xs):
     ls=sorted({a['sitz'] for a in xs},key=lambda c:(-(RAT.get((LAENDER.get(c) or {}).get('rating_sp') or '',0)),c))
     lrows=''.join(f'<tr><td>{E((LAENDER.get(c) or {}).get("name") or c)}</td><td>{E((LAENDER.get(c) or {}).get("sicherung") or "")}</td><td>{E({"NR":"kein Rating","":"keine Angabe"}.get((LAENDER.get(c) or {}).get("rating_sp") or "",(LAENDER.get(c) or {}).get("rating_sp")))}</td><td>{sum(1 for a in xs if a["sitz"]==c)}</td></tr>' for c in ls)
     fq=[('Warum gibt es beim Festgeld keine Sterne?','Weil beim Festgeld fast nur der Zins zählt und alle Angebote dieselbe gesetzliche Einlagensicherung bis 100.000 € haben. Sterne würden Unterschiede vortäuschen, die es nicht gibt. Die Dinge, die neben dem Zins wichtig sind (Land, Rating, Steuer, Kündigung), zeigen wir offen und filterbar.'),
-        ('Zählt ein Angebot über Raisin und direkt bei der Bank doppelt?','Ja, beide stehen in der Liste, weil Zins, Mindestanlage und Steuerabzug sich unterscheiden können. Bei der Zahl der Banken zählen wir jede Bank aber nur einmal. Auf der Bankseite stehen alle Wege nebeneinander.'),
+        ('Zählt ein Angebot über Raisin und direkt bei der Bank doppelt?','Ja, beide stehen in der Liste, weil Zins, Mindestanlage und Steuerabzug sich unterscheiden können. Bei der Zahl der Banken zählen wir jede Bank aber nur einmal. Unter „Alle Konditionen“ steht bei jedem Angebot, auf welchen anderen Wegen es dieselbe Bank gibt.'),
         ('Wie oft werden die Zinsen geprüft?','Bei jedem Angebot steht das Prüfdatum. Zinsen ändern sich oft, vor allem bei Plattformen; deshalb prüfen wir die Listen regelmäßig und du solltest die Konditionen vor dem Abschluss beim Anbieter prüfen.')]
     body=f'''{hdr(P,rel)}
 <div class="wrap"><main id="app">
@@ -595,9 +481,9 @@ def llms(xs,d):
         t=re.sub(r'\n## '+N+r': Festgeld\n(?:- [^\n]*\n?)*','\n',t)
         b=f'\n## {N}: Festgeld\n- [Festgeld-Vergleich {N}](https://finvallo.com/{LAND}/festgeld/): {len(xs)} Angebote von {nbanken(xs)} Banken, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand {st}\n'
         b+=''.join(f'- [Festgeld {t_} {N}](https://finvallo.com/{LAND}/festgeld/{s}/)\n' for m,s,t_ in LZ if m in LZ_SEITEN)
-        b+=f'- [Bestenlisten Festgeld {N}](https://finvallo.com/{LAND}/festgeld/bestenlisten/): {", ".join(c["t"] for c in fcats() if BL.get(c["k"]))}\n- [Festgeld nach Bank](https://finvallo.com/{LAND}/festgeld/bank/)\n- [So vergleichen wir Festgeld](https://finvallo.com/{LAND}/festgeld/methodik/)\n- [Daten als JSON](https://finvallo.com/{LAND}/daten/festgeld.json)\n'
+        b+=f'- [Bestenlisten Festgeld {N}](https://finvallo.com/{LAND}/festgeld/bestenlisten/): {", ".join(c["t"] for c in fcats() if BL.get(c["k"]))}\n- [So vergleichen wir Festgeld](https://finvallo.com/{LAND}/festgeld/methodik/)\n- [Daten als JSON](https://finvallo.com/{LAND}/daten/festgeld.json)\n'
         top=[a for a in ordnen(xs,DEF_M) if ertrag(a,DEF_B,DEF_M)['fit']][:5 if fn=='llms.txt' else 30]
-        b+=''.join(f'- [{titel(a)}](https://finvallo.com/{LAND}/festgeld/{a["slug"]}/): {pct(ertrag(a,DEF_B,DEF_M)["zins"])} für {lzt(DEF_M)}, {vtT(a)}, Einlagensicherung {landN(a)}\n' for a in top)
+        b+=''.join(f'- [{titel(a)}](https://finvallo.com/{url(a)}): {pct(ertrag(a,DEF_B,DEF_M)["zins"])} für {lzt(DEF_M)}, {vtT(a)}, Einlagensicherung {landN(a)}\n' for a in top)
         # vor „## Optional“ einfügen, damit der Abschnitt nicht als überspringbar gilt
         i=t.find('\n## Optional'); t=(t[:i].rstrip()+'\n'+b+t[i:]) if i>=0 else t.rstrip()+'\n'+b
         open(p,'w',encoding='utf-8').write(re.sub(r'\n{3,}','\n\n',t))
@@ -612,7 +498,7 @@ def anbieter_festgeld(xs):
         f=R+rel+'index.html'; s=open(f,encoding='utf-8').read()
         s=re.sub(r'<!--festgeld-->.*?<!--/festgeld-->','',s,flags=re.S)
         ys=sorted(ys,key=lambda y:-topzins(y))
-        rows=''.join(f'<tr><td><a class="lnk" href="../../../festgeld/{y["slug"]}/">{E(titel(y))}</a><br><small class="mut">{E(vtT(y))}</small></td><td><b>bis {pct(topzins(y))}</b></td><td>{E(lzspan(y))}</td></tr>' for y in ys)
+        rows=''.join(f'<tr><td><a class="lnk" href="../../../festgeld/#fg-{y["slug"]}">{E(titel(y))}</a><br><small class="mut">{E(vtT(y))}</small></td><td><b>bis {pct(topzins(y))}</b></td><td>{E(lzspan(y))}</td></tr>' for y in ys)
         blk=(f'<!--festgeld--><h2>Festgeld von {E(ys[0]["bank"])}</h2><p class="note">{len(ys)} {"Angebot" if len(ys)==1 else "Angebote"} von {E(ys[0]["bank"])} in unserem <a class="lnk" href="../../../festgeld/">Festgeld-Vergleich</a>, sortiert nach Zins.</p>'
              f'<div class="tbl wide"><table><thead><tr><th>Angebot</th><th>Zins p. a.</th><th>Laufzeiten</th></tr></thead><tbody>{rows}</tbody></table></div><!--/festgeld-->')
         for mk in ('<h2>Für wen passt','<h2>Fragen und Antworten</h2>','</main>'):
@@ -635,13 +521,13 @@ def build_land():
     LZ_SEITEN={m for m,_,_ in LZ if cnt.get(m,0)>=MIN_LZ_SEITE}
     BL={c['k']:[a for a in xs if c['f'](a)] for c in fcats()}
     BL={k:v for k,v in BL.items() if len(v)>=3}
-    for a in xs: offer_page(a,xs)
+    ALL[:]=xs
     list_page(xs,d)
     for m,s,_ in LZ:
         if m in LZ_SEITEN: list_page(xs,d,m,lzslug=s)
     for c in fcats():
         if BL.get(c['k']): list_page(xs,d,sub=c)
-    bestenlisten_hub(xs); bank_pages(xs); anbieter_festgeld(xs)
+    bestenlisten_hub(xs); anbieter_festgeld(xs)
     methodik_page(xs); export(xs,d); llms(xs,d)
     print(f'Festgeld {LAND}:',len(xs),'Angebote,',nbanken(xs),'Banken,',len(LZ_SEITEN),'Laufzeit-Seiten,',len(BL),'Bestenlisten')
 
@@ -649,16 +535,10 @@ def slugs(l):
     d,xs=load(l); cnt={}
     for a in xs:
         for m in laufzeiten(a): cnt[m]=cnt.get(m,0)+1
-    return {a['slug'] for a in xs}|{s for m,s,_ in LZ if cnt.get(m,0)>=MIN_LZ_SEITE}|{'methodik','bestenlisten','bank'}|{'bank/'+a['bank_slug'] for a in xs}
+    return {s for m,s,_ in LZ if cnt.get(m,0)>=MIN_LZ_SEITE}|{'methodik','bestenlisten'}
 def pairs():
-    """AT/DE-Seiten derselben Bank und desselben Abschlusswegs als hreflang-Paare (für eeat.py)"""
-    if not all(os.path.exists(dpath(l)) for l in ('at','de')): return
-    A={(a['bank_key'],vtK(a)):a['slug'] for a in load('at')[1]}
-    D={(a['bank_key'],vtK(a)):a['slug'] for a in load('de')[1]}
-    out=[[f'at/festgeld/{A[k]}/',f'de/festgeld/{D[k]}/'] for k in A if k in D]
-    BA={a['bank_key']:a['bank_slug'] for a in load('at')[1]}; BD={a['bank_key']:a['bank_slug'] for a in load('de')[1]}
-    out+=[[f'at/festgeld/bank/{BA[k]}/',f'de/festgeld/bank/{BD[k]}/'] for k in sorted(set(BA)&set(BD))]
-    json.dump({'paare':out},open(HP,'w',encoding='utf-8'),ensure_ascii=False,indent=0)
+    """Keine eigenen Angebots- oder Bankseiten mehr: Laufzeit-Seiten, Bestenlisten und Methodik haben im anderen Land dieselbe Adresse (eeat.partner)"""
+    json.dump({'paare':[]},open(HP,'w',encoding='utf-8'),ensure_ascii=False,indent=0)
 def main():
     global LAND,CC
     if os.path.exists(LP): LAENDER.update(json.load(open(LP,encoding='utf-8')))

@@ -460,13 +460,13 @@ def main():
             gp, fp = R + f'{land}/daten/girokonten.json', R + f'{land}/daten/festgeld.json'
             if os.path.exists(gp):
                 ks = [k for k in json.load(open(gp, encoding='utf-8'))['konten'] if k.get('rank') == 1 and k.get('art') in ('standard', 'premium')]
-                if ks: qa += f'\n- Bestes Girokonto {name} (Gesamtwertung): {ks[0]["name"]} ({ks[0]["bank"]}, {str(ks[0]["stars"]).replace(".", ",")}/5) – https://finvallo.com/{land}/girokonto/{ks[0]["slug"]}/'
+                if ks: qa += f'\n- Bestes Girokonto {name} (Gesamtwertung): {ks[0]["name"]} ({ks[0]["bank"]}, {str(ks[0]["stars"]).replace(".", ",")}/5) – https://finvallo.com/{land}/girokonto/#gk-{ks[0]["slug"]}'
             if os.path.exists(fp):
                 best = None
                 for a in json.load(open(fp, encoding='utf-8'))['angebote']:
                     for z in a['zinsen']:
                         if z['monate'] == 12 and (z['min'] is None or z['min'] <= 10000) and (z['max'] is None or z['max'] >= 10000) and (a.get('min_anlage') is None or a['min_anlage'] <= 10000) and (best is None or z['zins'] > best[0]): best = (z['zins'], a)
-                if best: qa += f'\n- Höchster Festgeldzins {name} (1 Jahr, 10.000 €): {best[1]["bank"]} {best[1]["produkt"]} {str(best[0]).replace(".", ",")} % – https://finvallo.com/{land}/festgeld/{best[1]["slug"]}/'
+                if best: qa += f'\n- Höchster Festgeldzins {name} (1 Jahr, 10.000 €): {best[1]["bank"]} {best[1]["produkt"]} {str(best[0]).replace(".", ",")} % – https://finvallo.com/{land}/festgeld/#fg-{best[1]["slug"]}'
         i = t.find('\n## Schnellantworten')
         if i >= 0 and qa:
             j = t.find('\n## ', i + 1); j = j if j >= 0 else len(t)

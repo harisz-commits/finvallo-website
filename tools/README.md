@@ -13,7 +13,8 @@ Alles neu bauen: `bash tools/build.sh` (idempotent, danach committen).
 
 ## Skripte (Reihenfolge wie in build.sh)
 - `karten.py` – Karten-, Listen-, Anbieter-, Bestenlisten-Seiten, JSON-Daten, Sitemap, llms.txt und Kreditkarten-Rechner für AT und DE.
-- `festgeld.py` – Festgeld-Vergleich je Land: Liste mit Zinsrechner und Filtern (`assets/festgeld.js`), Laufzeit-Seiten, Angebotsseiten, Methodik, JSON/CSV-Export; Rechnung wird in `check.py` gegen `festgeld.js` geprüft.
+- `girokonto.py` - Girokonto-Vergleich je Land: Liste mit Kostenrechner, Filtern und aufklappbaren Konditionen je Konto (`assets/giro.js`), Bestenlisten, Methodik. Eigene Kontoseiten gibt es nicht mehr, alte Adressen leiten per 301 auf `#gk-<slug>` im Vergleich.
+- `festgeld.py` – Festgeld-Vergleich je Land: Liste mit Zinsrechner und Filtern (`assets/festgeld.js`), aufklappbare Konditionen je Angebot (keine eigenen Angebots- oder Bankseiten, alte Adressen leiten per 301 auf den Eintrag im Vergleich), Laufzeit-Seiten, Bestenlisten, Methodik, JSON/CSV-Export; Rechnung wird in `check.py` gegen `festgeld.js` geprüft.
 - `lohnt.py` – Seiten „Ab wann lohnt sich …?“ und der Block „Top-Karten, je nachdem wie du sie nutzt“ auf den Bestenlisten.
 - `score.py` – Bewertung nach der Finvallo-Methodik.
 - `ratgeber.py` (+ `ratgeber_*.py` je Thema und Land: Karten, Girokonto `ratgeber_girokonto*`/`ratgeber_konto*`, Festgeld `ratgeber_festgeld*`), `rechner.py`, `landing.py` – Ratgeber, Finanzrechner, Startseiten.

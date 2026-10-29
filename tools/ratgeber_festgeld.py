@@ -45,7 +45,7 @@ def register(art,P,eur):
     stand=_dmy(d['stand'])
     F=f'{P}at/festgeld/'; F1=f'{F}1-jahr/'; FH=f'{F}bestenlisten/oesterreichische-banken/'; FM=f'{F}methodik/'
     RK=f'{P}at/rechner/kapitalertragsteuer/'; RZ=f'{P}at/rechner/zinseszins/'
-    def L_(a): return f'<a class="lnk" href="{F}{a["id"]}/">{E(a["bank"])}</a> <small class="mut">({E(_vt(a))})</small>'
+    def L_(a): return f'<a class="lnk" href="{F}#fg-{a["id"]}">{E(a["bank"])}</a> <small class="mut">({E(_vt(a))})</small>'
     n=len(xs)
     raisin=[a for a in xs if a['vertrieb']=='Raisin']; direkt=[a for a in xs if a['vertrieb']=='direkt']; ptb=[a for a in xs if 'PickTheBank' in a['vertrieb']]
     heim=[a for a in xs if a['sitz']=='AT']; auslan=[a for a in xs if a['sitz']!='AT']
@@ -106,7 +106,7 @@ def register(art,P,eur):
 <li><b>Laufzeitende.</b> {len(verl["automatisch"])} Angebote verlängern sich automatisch, wenn du nichts tust. Trag dir das Ende der Laufzeit in den Kalender ein.</li></ul>
 <p>Wie wir die Angebote bewerten, steht in der <a href="{FM}">Methodik</a>.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Zinsen, Mindestanlage, Kündigung, Verlängerung und Steuerabwicklung: Konditionsseiten und Produktinformationsblätter der Banken und Plattformen, verlinkt auf jeder Angebotsseite im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}.</li>
+<li>Zinsen, Mindestanlage, Kündigung, Verlängerung und Steuerabwicklung: Konditionsseiten und Produktinformationsblätter der Banken und Plattformen, verlinkt bei jedem Angebot im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}.</li>
 <li>Einlagensicherung: {_ext(AK_ES,"Arbeiterkammer Wien, Einlagensicherung")}, abgerufen am {ABGERUFEN}.</li>
 <li>KESt auf Zinsen: {_ext(BMF_INL,"BMF, Besteuerung inländischer Kapitalerträge")}, abgerufen am {ABGERUFEN}.</li></ul></div>'''),
       ],
@@ -146,7 +146,7 @@ def register(art,P,eur):
 <li><b>Einlagensicherung AUSTRIA Ges.m.b.H. (ESA)</b> für die meisten Banken: Aktienbanken, Volksbanken, Hypo-Landesbanken und Bausparkassen. Nach eigenen Angaben hat sie 75 Mitgliedsinstitute.</li>
 <li><b>Sparkassen-Haftungs GmbH</b> für die Erste Bank und die Sparkassen. Das ist ein institutsbezogenes Sicherungssystem: Der Sparkassen-Haftungsverbund soll ein Mitglied schon vor der Pleite stützen, und er ist zugleich als gesetzliche Einlagensicherung anerkannt.</li>
 <li><b>Österreichische Raiffeisen-Sicherungseinrichtung eGen (ÖRS)</b> für den Raiffeisen-Sektor, seit November 2021 eigenständig.</li></ul>
-<p>Für dich als Sparerin oder Sparer macht es keinen Unterschied, welche der drei zuständig ist: Grenze, Frist und Ablauf sind gleich. Welche Einrichtung für ein Angebot gilt, steht im „Informationsbogen für Einleger“, den dir jede Bank vor dem Abschluss geben muss. Im <a href="{F}">Festgeld-Vergleich</a> steht sie auf jeder Angebotsseite. Die {len(heim)} Angebote von Banken mit Sitz in Österreich findest du gesammelt in der Liste <a href="{FH}">österreichische Banken</a>.</p></div>'''),
+<p>Für dich als Sparerin oder Sparer macht es keinen Unterschied, welche der drei zuständig ist: Grenze, Frist und Ablauf sind gleich. Welche Einrichtung für ein Angebot gilt, steht im „Informationsbogen für Einleger“, den dir jede Bank vor dem Abschluss geben muss. Im <a href="{F}">Festgeld-Vergleich</a> steht sie bei jedem Angebot unter „Alle Konditionen“. Die {len(heim)} Angebote von Banken mit Sitz in Österreich findest du gesammelt in der Liste <a href="{FH}">österreichische Banken</a>.</p></div>'''),
        ('Banken aus anderen EU-Ländern: Heimatlandprinzip',f'''<div class="prose"><p>Legst du Geld bei einer Bank mit Sitz in Italien, Estland oder Schweden an, gilt auch dort die Grenze von 100.000 €. Zuständig ist aber die Einlagensicherung des Landes, in dem die Bank ihre Konzession hat. Das nennt man Heimatlandprinzip. Es gilt auch, wenn die Bank in Österreich eine Zweigniederlassung betreibt: Im Vergleich betrifft das zum Beispiel {", ".join(L_(a) for a in zweig) if zweig else "derzeit kein Angebot"}. Eine österreichische Adresse heißt also nicht, dass die ESA zahlt.</p>
 <p>Im Sicherungsfall einer ausländischen Bank wickelt die Sicherung des Sitzlandes die Auszahlung ab, bei Zweigniederlassungen in Zusammenarbeit mit der österreichischen Einrichtung. Die Frist von 7 Arbeitstagen gilt EU-weit. Praktisch heißt das: Die Kommunikation läuft womöglich auf Englisch oder in der Landessprache, und die Fonds sind unterschiedlich groß.</p></div>'''),
        ('Was ein Länderrating aussagt, und was nicht',_tbl(['Sitzland','Angebote im Vergleich','Sicherungseinrichtung','Gesichert','S&amp;P-Rating'],lrow)+
@@ -155,7 +155,7 @@ def register(art,P,eur):
        ('Beispiel Fremdwährung: Sicherung in schwedischen Kronen',f'''<div class="prose"><p>Länder ohne Euro sichern den Gegenwert von 100.000 € in ihrer Währung, und sie rechnen den Betrag nur alle fünf Jahre neu um. In Schweden gilt seit 1. Jänner 2026 eine Grenze von {eur(sek)} SEK pro Person und Bank, festgelegt zum Wechselkurs vom 3. Juli 2025. Schwankt der Kurs danach, ist dein Euro-Guthaben etwas mehr oder etwas weniger als 100.000 € wert.</p>
 <p>Im Vergleich betrifft das {len(se)} Angebote von Banken mit Sitz in Schweden{": "+", ".join(L_(a) for a in se) if se else ""}. Plattformen wie Raisin begrenzen die Anlage bei solchen Banken auf 100.000 €. Wer sicher gehen will, bleibt etwas darunter, etwa bei 95.000 €, damit auch die Zinsen und ein Kursrückgang der Krone noch Platz haben.</p>
 <p>Umgekehrt gilt: Ein Festgeld in US-Dollar oder britischen Pfund bei einer EU-Bank ist ebenfalls gesichert, die Sicherung zahlt aber in Euro oder in der Landeswährung des Sitzlandes aus. Das Währungsrisiko trägst du selbst.</p></div>'''),
-       ('Freiwillige Sicherung und Anlegerentschädigung','''<div class="prose"><p>In Deutschland sichern private Banken über den freiwilligen Einlagensicherungsfonds des Bankenverbands zusätzlich Beträge über 100.000 €. Im Vergleich steht das bei den betroffenen deutschen Banken auf der Angebotsseite. Ein Rechtsanspruch besteht darauf nicht, die gesetzlichen 100.000 € sind die einzige verbindliche Grenze. In Österreich gibt es keine vergleichbare freiwillige Sicherung über die gesetzliche Grenze hinaus.</p>
+       ('Freiwillige Sicherung und Anlegerentschädigung','''<div class="prose"><p>In Deutschland sichern private Banken über den freiwilligen Einlagensicherungsfonds des Bankenverbands zusätzlich Beträge über 100.000 €. Im Vergleich steht das bei den betroffenen deutschen Banken in den Konditionen des Angebots. Ein Rechtsanspruch besteht darauf nicht, die gesetzlichen 100.000 € sind die einzige verbindliche Grenze. In Österreich gibt es keine vergleichbare freiwillige Sicherung über die gesetzliche Grenze hinaus.</p>
 <p>Nicht verwechseln: Die Anlegerentschädigung ersetzt bis 20.000 €, wenn eine Bank oder Wertpapierfirma Wertpapiere von Kundinnen und Kunden veruntreut hat. Mit Festgeld hat sie nichts zu tun.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
 <li>Grenze, Frist, Gemeinschaftskonten, 500.000 € für 12 Monate: {_ext(AK_ES,"Arbeiterkammer Wien, Einlagensicherung")}, abgerufen am {ABGERUFEN}.</li>
@@ -208,7 +208,7 @@ def register(art,P,eur):
 <p>Sie lohnt sich nicht, wenn du das Geld zu einem festen Termin brauchst, etwa für einen Wohnungskauf in drei Jahren. Dann nimmst du genau diese Laufzeit. Sie lohnt sich auch nicht für den Notgroschen, der gehört aufs Tagesgeld, siehe <a href="../festgeld-oder-tagesgeld/">Festgeld oder Tagesgeld</a>.</p>
 <p>Varianten: Wer länger planen kann, baut die Treppe mit 1 bis 5 Jahren in fünf Stufen. Im Vergleich gibt es für 5 Jahre {_n(xs,60)} Angebote, bis {_pct(z60)} bei {L_(a60)}. Wer es einfacher will, nimmt zwei Stufen mit 1 und 2 Jahren. Die Seiten <a href="{F1}">1 Jahr</a>, <a href="{F}2-jahre/">2 Jahre</a> und <a href="{F}3-jahre/">3 Jahre</a> zeigen die Angebote je Stufe.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Zinsen und Mindestanlage: Konditionsseiten der Banken und Plattformen, verlinkt auf jeder Angebotsseite im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}. Die Beispielrechnung übernimmt beim Bauen dieser Seite den jeweils besten Zins je Laufzeit.</li>
+<li>Zinsen und Mindestanlage: Konditionsseiten der Banken und Plattformen, verlinkt bei jedem Angebot im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}. Die Beispielrechnung übernimmt beim Bauen dieser Seite den jeweils besten Zins je Laufzeit.</li>
 <li>Einlagensicherung: {_ext(AK_ES,"Arbeiterkammer Wien, Einlagensicherung")}, abgerufen am {ABGERUFEN}.</li></ul></div>'''),
       ],
       faq=[
@@ -250,7 +250,7 @@ def register(art,P,eur):
 <p><b>Härtefall.</b> Arbeitslosigkeit, Krankheit oder Scheidung sind rechtlich kein Grund, aus dem Vertrag zu kommen. Manche Banken lösen in solchen Fällen trotzdem auf, aus Kulanz und gegen Abschlag. Ein Anspruch besteht nicht. Wer solche Risiken sieht, hält mehr auf dem Tagesgeld oder wählt kürzere Laufzeiten.</p>
 <p><b>Insolvenz der Bank.</b> Dann endet das Festgeld vorzeitig, und die Einlagensicherung zahlt bis 100.000 € pro Person und Bank innerhalb von 7 Arbeitstagen aus. Die Zinsen bis zum Sicherungsfall sind mitgesichert. Mehr im Beitrag zur <a href="../einlagensicherung/">Einlagensicherung</a>.</p></div>'''),
        ('Am Laufzeitende: automatische Verlängerung und Fristen',_tbl(['Regel','Angebote im Vergleich','Was das für dich heißt'],vrow)+
-        f'''<div class="prose"><p>Die automatische Verlängerung ist die häufigste Falle beim Festgeld. Das Geld wird dann für dieselbe Laufzeit zu dem Zins angelegt, der an diesem Tag gilt, und der ist oft niedriger als der Aktionszins beim Abschluss. Wer das verhindern will, muss vor dem Laufzeitende aktiv werden. Die Fristen stehen in den Bedingungen: Bei Raisin kannst du die Verlängerung bis 2 Tage vor Laufzeitende im Online-Banking abschalten, andere Banken verlangen eine Weisung einige Tage oder Wochen vorher. Die Frist für jedes Angebot steht auf der Angebotsseite im <a href="{F}">Festgeld-Vergleich</a>.</p>
+        f'''<div class="prose"><p>Die automatische Verlängerung ist die häufigste Falle beim Festgeld. Das Geld wird dann für dieselbe Laufzeit zu dem Zins angelegt, der an diesem Tag gilt, und der ist oft niedriger als der Aktionszins beim Abschluss. Wer das verhindern will, muss vor dem Laufzeitende aktiv werden. Die Fristen stehen in den Bedingungen: Bei Raisin kannst du die Verlängerung bis 2 Tage vor Laufzeitende im Online-Banking abschalten, andere Banken verlangen eine Weisung einige Tage oder Wochen vorher. Die Frist für jedes Angebot steht im <a href="{F}">Festgeld-Vergleich</a> bei jedem Angebot unter „Alle Konditionen“.</p>
 <p>Bei Angeboten ohne Verlängerung wird das Geld am Ende aufs Referenzkonto oder Verrechnungskonto überwiesen. Dort liegt es dann oft unverzinst, bis du es neu anlegst. Auch hier hilft ein Kalendereintrag.</p></div>'''),
        ('Vor dem Abschluss prüfen','''<div class="prose"><ul class="checks">
 <li>Brauche ich das Geld in der Laufzeit sicher nicht? Notgroschen gehört aufs Tagesgeld.</li>
@@ -260,7 +260,7 @@ def register(art,P,eur):
 <li>Wie komme ich an die Bank heran: Online-Banking, App, Brief? Bei Plattformen läuft alles über das Plattform-Konto.</li>
 <li>Habe ich das Laufzeitende im Kalender, mit einer Erinnerung zwei Wochen vorher?</li></ul></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Kündigungsregeln und Verlängerung je Angebot: Konditionsseiten, Bedingungen und Produktinformationsblätter der Banken und Plattformen, verlinkt auf jeder Angebotsseite im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}.</li>
+<li>Kündigungsregeln und Verlängerung je Angebot: Konditionsseiten, Bedingungen und Produktinformationsblätter der Banken und Plattformen, verlinkt bei jedem Angebot im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}.</li>
 <li>Vorschusszinsen und Rechenbeispiel: {_ext(AK_AUFL,"Arbeiterkammer Wien, Voreiliges Auflösen von Spareinlagen kommt teuer")}, abgerufen am {ABGERUFEN}.</li>
 <li>Einlagensicherung im Insolvenzfall: {_ext(AK_ES,"Arbeiterkammer Wien, Einlagensicherung")}, abgerufen am {ABGERUFEN}.</li></ul></div>'''),
       ],
@@ -270,7 +270,7 @@ def register(art,P,eur):
        ('Was ist Flexgeld?','Ein Festgeld über Raisin, das du jederzeit kündigen kannst. Dann gilt rückwirkend ein niedrigerer Basiszins, bei manchen Banken 0 %. Hältst du die Laufzeit durch, bekommst du den vollen Zins.'),
        ('Kann ich ein Festgeld nach dem Abschluss widerrufen?','Ja, bei Abschluss online oder per Post innerhalb von 14 Tagen ohne Angabe von Gründen. Danach gilt die Bindung.'),
        ('Was passiert mit dem Festgeld im Todesfall?','Es gehört zur Verlassenschaft. Nach der Einantwortung können die Erben darüber verfügen. Ob die Bank die Bindung vorzeitig und ohne Abschlag auflöst, hängt von ihren Bedingungen ab.'),
-       ('Was ist eine automatische Verlängerung?',f'Ohne deine Weisung legt die Bank das Geld am Laufzeitende für dieselbe Laufzeit zum dann gültigen Zins neu an. Im Vergleich gilt das bei {len(verl["automatisch"])} von {n} Angeboten. Die Frist, bis zu der du widersprechen musst, steht auf der Angebotsseite.'),
+       ('Was ist eine automatische Verlängerung?',f'Ohne deine Weisung legt die Bank das Geld am Laufzeitende für dieselbe Laufzeit zum dann gültigen Zins neu an. Im Vergleich gilt das bei {len(verl["automatisch"])} von {n} Angeboten. Die Frist, bis zu der du widersprechen musst, steht in den Konditionen des Angebots.'),
       ],
       related=['festgeld-oder-tagesgeld','zinstreppe','festgeld-plattformen'])
 
@@ -305,7 +305,7 @@ def register(art,P,eur):
 <p>Über Raisin und PickTheBank ist das anders: Die Partnerbanken sitzen im Ausland und führen keine österreichische KESt ab. Die Zinsen kommen brutto, oder nach Abzug einer ausländischen Quellensteuer, auf dein Verrechnungskonto. Du musst sie in der Einkommensteuererklärung in der Beilage E1kv angeben. Der Steuersatz bleibt 25 %, es ist also nicht mehr Steuer, nur mehr Arbeit. Raisin stellt dir dafür eine Jahresaufstellung bereit. Bei Banken in Portugal, Lettland oder Litauen kommt die Quellensteuer dazu, die du mit einer Ansässigkeitsbescheinigung senken und dann in Österreich anrechnen kannst. Das ganze Verfahren steht im Beitrag <a href="../festgeld-steuern/">Festgeld und Steuern</a>.</p>
 <p>Vergisst du die Angabe, ist das Steuerhinterziehung. Die Plattformen melden Zinsen im Rahmen des automatischen Informationsaustauschs der EU an die Finanzverwaltung, das Finanzamt erfährt also davon.</p></div>'''),
        ('Wo dein Geld wirklich liegt',f'''<div class="prose"><p>Dein Geld liegt bei der Partnerbank, nicht bei der Plattform. Für die Einlagensicherung zählt deshalb das Sitzland der Partnerbank: Italien, Estland, Portugal, Schweden oder ein anderes EU-Land, jeweils bis 100.000 € pro Person und Bank. Das Verrechnungskonto bei der Raisin Bank AG ist über die deutsche Einlagensicherung geschützt, dort liegt das Geld aber nur kurz. Geht die Plattform selbst pleite, bleibt dein Festgeld bei der Partnerbank bestehen.</p>
-<p>Über Raisin kommen im Vergleich Banken aus {len({a["sitz"] for a in raisin})} Ländern. Welches Land und welche Sicherungseinrichtung für ein Angebot gelten, steht auf jeder Angebotsseite, zusammen mit dem Länderrating. Mehr dazu im Beitrag zur <a href="../einlagensicherung/">Einlagensicherung</a>.</p></div>'''),
+<p>Über Raisin kommen im Vergleich Banken aus {len({a["sitz"] for a in raisin})} Ländern. Welches Land und welche Sicherungseinrichtung für ein Angebot gelten, steht bei jedem Angebot, zusammen mit dem Länderrating. Mehr dazu im Beitrag zur <a href="../einlagensicherung/">Einlagensicherung</a>.</p></div>'''),
        ('Plattform oder Direktabschluss?','''<div class="prose"><p><b>Für die Plattform spricht:</b></p><ul class="checks">
 <li>Eine Legitimation, ein Login, viele Banken. Praktisch für eine Zinstreppe über mehrere Banken.</li>
 <li>Zugang zu Banken, die in Österreich sonst nicht anbieten, oft mit höheren Zinsen.</li>
@@ -319,7 +319,7 @@ def register(art,P,eur):
        ('Quellen',f'''<div class="prose"><ul>
 <li>Ablauf und Kosten bei Raisin: {_ext(RAISIN_ANL,"Raisin Österreich, So funktioniert Raisin")}, abgerufen am {ABGERUFEN}.</li>
 <li>PickTheBank: {_ext(PTB,"PickTheBank, Festgeld in Österreich")}, abgerufen am {ABGERUFEN}.</li>
-<li>Steuerabwicklung, Quellensteuer, Kündigung und Einlagensicherung je Angebot: Produktinformationsblätter und Konditionsseiten, verlinkt auf jeder Angebotsseite im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}.</li>
+<li>Steuerabwicklung, Quellensteuer, Kündigung und Einlagensicherung je Angebot: Produktinformationsblätter und Konditionsseiten, verlinkt bei jedem Angebot im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}.</li>
 <li>KESt und Erklärungspflicht: {_ext(BMF_ALLG,"BMF, Allgemeine Informationen zu Einkünften aus Kapitalvermögen")}, abgerufen am {ABGERUFEN}.</li></ul></div>'''),
       ],
       faq=[
@@ -355,7 +355,7 @@ def register(art,P,eur):
 <p>Einen Freibetrag wie den deutschen Sparer-Pauschbetrag gibt es in Österreich nicht. Jeder Euro Zinsen wird besteuert. Nur wenn dein gesamtes Einkommen so niedrig ist, dass dein Tarif unter 25 % liegt, kannst du in der Steuererklärung die Regelbesteuerung beantragen. Dann werden die Zinsen mit deinem normalen Steuersatz besteuert und die KESt angerechnet. Das lohnt sich etwa für Studierende oder Pensionistinnen mit geringem Einkommen.</p>
 <p>Beispiel: {eur(B)} € ein Jahr lang zum besten Zins im Vergleich, {_pct(z12)} bei {L_(a12)}, bringen {eur(round(br,2))} € Zinsen. Davon gehen {eur(round(kest,2))} € KESt ab, {eur(round(br-kest,2))} € bleiben. Für andere Beträge rechnet der <a href="{RK}">KESt-Rechner</a>.</p></div>'''),
        ('Bank in Österreich: Endbesteuerung',f'''<div class="prose"><p>Hat die Bank ihren Sitz in Österreich, behält sie die 25 % direkt bei der Zinsgutschrift ein und führt sie ans Finanzamt ab. Auf dem Kontoauszug siehst du Bruttozins, KESt und Nettozins. Damit ist die Einkommensteuer auf diese Zinsen abgegolten, du musst sie in keiner Steuererklärung mehr angeben. Das BMF nennt das Endbesteuerung. Sie gilt auch für Zweigniederlassungen ausländischer Banken in Österreich, die als inländische auszahlende Stelle gelten.</p>
-<p>Im Vergleich führen {len(auto)} von {n} Angeboten die KESt automatisch ab. Das sind fast alle Direktabschlüsse bei Banken mit Sitz in Österreich, gesammelt in der Liste <a href="{FH}">österreichische Banken</a>. Auf jeder Angebotsseite steht unter „Steuer“, ob die KESt abgeführt wird.</p></div>'''),
+<p>Im Vergleich führen {len(auto)} von {n} Angeboten die KESt automatisch ab. Das sind fast alle Direktabschlüsse bei Banken mit Sitz in Österreich, gesammelt in der Liste <a href="{FH}">österreichische Banken</a>. Bei jedem Angebot steht unter „Alle Konditionen“ im Punkt „Steuer“, ob die KESt abgeführt wird.</p></div>'''),
        ('Bank im Ausland: selbst erklären mit E1kv',f'''<div class="prose"><p>Eine Bank in Italien, Estland oder Schweden führt keine österreichische KESt ab. Die Zinsen kommen brutto bei dir an. Du bist dann selbst verpflichtet, sie zu erklären, und zwar in der Beilage E1kv zur Einkommensteuererklärung (Formular E1). Der Steuersatz ist derselbe, 25 %. Das Finanzamt setzt die Steuer im Bescheid fest, und du zahlst sie nach. Im Vergleich betrifft das {len(manuell)} Angebote, darunter alle {len(raisin)} über Raisin. Die Plattformen nennen solche Angebote „nicht steuereinfach“.</p>
 <p>So gehst du vor:</p><ol>
 <li>Sammle die Jahresaufstellung der Bank oder Plattform. Raisin stellt sie im Online-Banking bereit.</li>
@@ -374,7 +374,7 @@ def register(art,P,eur):
 <li><b>Verluste.</b> Zinsen lassen sich nicht mit Verlusten aus Aktien oder Fonds verrechnen. Der Verlustausgleich gilt nur innerhalb der Einkünfte mit 27,5 %.</li></ul></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
 <li>KESt-Satz, Endbesteuerung, Erklärungspflicht bei ausländischen Zinsen, isolierte Besteuerung: {_ext(BMF_INL,"BMF, Besteuerung inländischer sowie im Inland bezogener Kapitalerträge")} und {_ext(BMF_ALLG,"BMF, Allgemeine Informationen zu Einkünften aus Kapitalvermögen")}, abgerufen am {ABGERUFEN}.</li>
-<li>Quellensteuersätze, Fristen und Formulare je Bank: Produktinformationsblätter der Angebote, verlinkt auf jeder Angebotsseite im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}; Länderübersicht und Formular ZS-A: {_ext(RAISIN_QST,"Raisin Österreich, Quellensteuer")}, abgerufen am {ABGERUFEN}.</li>
+<li>Quellensteuersätze, Fristen und Formulare je Bank: Produktinformationsblätter der Angebote, verlinkt bei jedem Angebot im <a href="{F}">Festgeld-Vergleich</a>, Stand {stand}; Länderübersicht und Formular ZS-A: {_ext(RAISIN_QST,"Raisin Österreich, Quellensteuer")}, abgerufen am {ABGERUFEN}.</li>
 <li>Steuerabwicklung je Angebot (automatisch oder selbst): Angaben der Banken und Plattformen, Stand {stand}.</li></ul>
 <p>Dieser Beitrag ersetzt keine Steuerberatung. Bei größeren Beträgen im Ausland lohnt sich die Frage an eine Steuerberaterin oder einen Steuerberater.</p></div>'''),
       ],

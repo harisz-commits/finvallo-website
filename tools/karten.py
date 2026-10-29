@@ -814,7 +814,7 @@ def write_redirects():
         elif a not in REDIRECTS: REDIRECTS[a]=b
     json.dump(dict(sorted(ENTF.items())),open(ENTF_P,'w'),ensure_ascii=False,indent=1)
     json.dump(dict(sorted(REDIRECTS.items())),open(os.path.join(SP,'daten','redirects.json'),'w'),ensure_ascii=False,indent=1)
-    open(os.path.join(R,'..','server','redirects.conf'),'w').write('# automatisch erzeugt von tools/karten.py – nicht von Hand ändern\n'+''.join(f'location = {a} {{ return 301 {b}; }}\n' for a,b in sorted(REDIRECTS.items())))
+    open(os.path.join(R,'..','server','redirects.conf'),'w').write('# automatisch erzeugt von tools/karten.py – nicht von Hand ändern\n'+''.join(f'location = {a} {{ return 301 "{b}"; }}\n' for a,b in sorted(REDIRECTS.items())))
     HT_CACHE=('<IfModule mod_headers.c>\n  <FilesMatch "\\.(html|htm|xml|txt|json)$">\n    Header set Cache-Control "public, max-age=600, must-revalidate"\n  </FilesMatch>\n'
               '  <FilesMatch "\\.(css|js)$">\n    Header set Cache-Control "public, max-age=31536000, immutable"\n  </FilesMatch>\n'
               '  <FilesMatch "\\.(woff2|png|jpg|jpeg|webp|svg|ico)$">\n    Header set Cache-Control "public, max-age=86400"\n  </FilesMatch>\n</IfModule>\n')

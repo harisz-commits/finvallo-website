@@ -24,10 +24,10 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - Beste Kreditkarte mit Lounge-Zugang Österreich: American Express Platinum Card - https://finvallo.com/at/kreditkarten/american-express-platinum-card/
 - Beste Debitkarte/App-Bank Deutschland: BBVA Debitkarte - https://finvallo.com/de/kreditkarten/bbva-debitkarte/
 - Beste Debitkarte/App-Bank Österreich: Revolut Premium - https://finvallo.com/at/kreditkarten/revolut-premium/
-- Bestes Girokonto Deutschland (Gesamtwertung): Consorsbank! Girokonto (Consorsbank, 4,6/5) - https://finvallo.com/de/girokonto/consorsbank-girokonto/
-- Höchster Festgeldzins Deutschland (1 Jahr, 10.000 €): Bigbank Festgeld 3,6 % - https://finvallo.com/de/festgeld/bigbank-festgeld-de/
-- Bestes Girokonto Österreich (Gesamtwertung): Online Gehalts-/Pensionskonto (Austrian Anadi Bank, 4,7/5) - https://finvallo.com/at/girokonto/anadi-online-gehalts-pensionskonto/
-- Höchster Festgeldzins Österreich (1 Jahr, 10.000 €): Banca Sistema Festgeld 3,45 % - https://finvallo.com/at/festgeld/banca-sistema-festgeld-at-raisin/
+- Bestes Girokonto Deutschland (Gesamtwertung): Consorsbank! Girokonto (Consorsbank, 4,6/5) - https://finvallo.com/de/girokonto/#gk-consorsbank-girokonto
+- Höchster Festgeldzins Deutschland (1 Jahr, 10.000 €): Bigbank Festgeld 3,6 % - https://finvallo.com/de/festgeld/#fg-bigbank-festgeld-de
+- Bestes Girokonto Österreich (Gesamtwertung): Online Gehalts-/Pensionskonto (Austrian Anadi Bank, 4,7/5) - https://finvallo.com/at/girokonto/#gk-anadi-online-gehalts-pensionskonto
+- Höchster Festgeldzins Österreich (1 Jahr, 10.000 €): Banca Sistema Festgeld 3,45 % - https://finvallo.com/at/festgeld/#fg-banca-sistema-festgeld-at-raisin
 
 ## Österreich: Übersicht
 - [Finanzvergleich Österreich](https://finvallo.com/at/): Übersicht
@@ -85,19 +85,19 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Bestenlisten Girokonten Österreich](https://finvallo.com/at/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder, Basiskonto, Premium, Mit Kreditkarte, Mit Guthabenzinsen, Mit Prämie
 - [So bewerten wir Girokonten](https://finvallo.com/at/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/at/daten/girokonten.json)
-- [Online Gehalts-/Pensionskonto (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/anadi-online-gehalts-pensionskonto/): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
-- [Gehaltskonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-gehaltskonto/): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
-- [Pensionskonto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-pensionskonto/): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
-- [N26 Standard (N26)](https://finvallo.com/at/girokonto/n26-standard/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
-- [Girokonto (Trade Republic)](https://finvallo.com/at/girokonto/trade-republic-girokonto/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
-- [Studentenkonto (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-studentenkonto/): Für Studierende und junge Erwachsene, 4,8/5, 0 € im Jahr im Beispiel
-- [U28-Konto (DADAT Bank)](https://finvallo.com/at/girokonto/dadat-bank-u28-konto/): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
-- [Jugendkonto (B4-19 KontoBox) (BAWAG)](https://finvallo.com/at/girokonto/bawag-jugendkonto/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
-- [spark7 Jugendkonto (Erste Bank)](https://finvallo.com/at/girokonto/erste-bank-spark7-jugendkonto/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
-- [MegaCard-Konto 7-13 (Bank Austria)](https://finvallo.com/at/girokonto/bank-austria-megacard-konto-7-13/): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
-- [Kinderkonto (BAWAG)](https://finvallo.com/at/girokonto/bawag-kinderkonto/): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
-- [Basiskonto (VZKG-Konto) (Wüstenrot Bank)](https://finvallo.com/at/girokonto/wuestenrot-bank-vzkg-konto/): Basiskonten, 3,8/5, 58,80 € im Jahr im Beispiel
-- [Zahlungskonto mit grundlegenden Funktionen (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/anadi-zahlungskonto/): Basiskonten, 3,8/5, 80 € im Jahr im Beispiel
+- [Online Gehalts-/Pensionskonto (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/#gk-anadi-online-gehalts-pensionskonto): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
+- [Gehaltskonto (DADAT Bank)](https://finvallo.com/at/girokonto/#gk-dadat-bank-gehaltskonto): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
+- [Pensionskonto (DADAT Bank)](https://finvallo.com/at/girokonto/#gk-dadat-bank-pensionskonto): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
+- [N26 Standard (N26)](https://finvallo.com/at/girokonto/#gk-n26-standard): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [Girokonto (Trade Republic)](https://finvallo.com/at/girokonto/#gk-trade-republic-girokonto): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [Studentenkonto (Erste Bank)](https://finvallo.com/at/girokonto/#gk-erste-bank-studentenkonto): Für Studierende und junge Erwachsene, 4,8/5, 0 € im Jahr im Beispiel
+- [U28-Konto (DADAT Bank)](https://finvallo.com/at/girokonto/#gk-dadat-bank-u28-konto): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [Jugendkonto (B4-19 KontoBox) (BAWAG)](https://finvallo.com/at/girokonto/#gk-bawag-jugendkonto): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [spark7 Jugendkonto (Erste Bank)](https://finvallo.com/at/girokonto/#gk-erste-bank-spark7-jugendkonto): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [MegaCard-Konto 7-13 (Bank Austria)](https://finvallo.com/at/girokonto/#gk-bank-austria-megacard-konto-7-13): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Kinderkonto (BAWAG)](https://finvallo.com/at/girokonto/#gk-bawag-kinderkonto): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Basiskonto (VZKG-Konto) (Wüstenrot Bank)](https://finvallo.com/at/girokonto/#gk-wuestenrot-bank-vzkg-konto): Basiskonten, 3,8/5, 58,80 € im Jahr im Beispiel
+- [Zahlungskonto mit grundlegenden Funktionen (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/#gk-anadi-zahlungskonto): Basiskonten, 3,8/5, 80 € im Jahr im Beispiel
 
 ## Deutschland: Kreditkarten
 - [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 162 Karten, Stand 21.10.2026
@@ -138,19 +138,19 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis mit Gehalt, Mit Filiale, Ohne Fremdwährungsgebühr, Gemeinschaftskonto, Studierende, Jugendliche, Kinder, Basiskonto, Premium, Mit Kreditkarte, Mit Guthabenzinsen, Mit Prämie
 - [So bewerten wir Girokonten](https://finvallo.com/de/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/de/daten/girokonten.json)
-- [Consorsbank! Girokonto (Consorsbank)](https://finvallo.com/de/girokonto/consorsbank-girokonto/): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
-- [Top-Girokonto (norisbank)](https://finvallo.com/de/girokonto/norisbank-top-girokonto/): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
-- [BestGiro (Openbank)](https://finvallo.com/de/girokonto/openbank-bestgiro/): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
-- [Skatbank-TrumpfKonto (Deutsche Skatbank)](https://finvallo.com/de/girokonto/skatbank-trumpfkonto/): Konten für alle, 4,6/5, 5 € im Jahr im Beispiel
-- [GiroDirekt (1822direkt)](https://finvallo.com/de/girokonto/1822direkt-girodirekt/): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
-- [StartKonto (Studierende und Azubis) (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-startkonto/): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
-- [HVB StartKonto (HypoVereinsbank)](https://finvallo.com/de/girokonto/hvb-startkonto/): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
-- [StartKonto (Kinder und Jugendliche) (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-startkonto-jugend/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
-- [GLS Konto U18 (GLS Bank)](https://finvallo.com/de/girokonto/gls-konto-u18/): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
-- [BambiniKonto (Kinderkonto) (Commerzbank)](https://finvallo.com/de/girokonto/commerzbank-bambinikonto/): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
-- [Girokonto u18 (DKB)](https://finvallo.com/de/girokonto/dkb-girokonto-u18/): Kinderkonten, 4,5/5, 0 € im Jahr im Beispiel
-- [Basiskonto (ING)](https://finvallo.com/de/girokonto/ing-basiskonto/): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
-- [Zahlungskonto mit grundlegenden Funktionen (Revolut)](https://finvallo.com/de/girokonto/revolut-basiskonto/): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Consorsbank! Girokonto (Consorsbank)](https://finvallo.com/de/girokonto/#gk-consorsbank-girokonto): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
+- [Top-Girokonto (norisbank)](https://finvallo.com/de/girokonto/#gk-norisbank-top-girokonto): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
+- [BestGiro (Openbank)](https://finvallo.com/de/girokonto/#gk-openbank-bestgiro): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
+- [Skatbank-TrumpfKonto (Deutsche Skatbank)](https://finvallo.com/de/girokonto/#gk-skatbank-trumpfkonto): Konten für alle, 4,6/5, 5 € im Jahr im Beispiel
+- [GiroDirekt (1822direkt)](https://finvallo.com/de/girokonto/#gk-1822direkt-girodirekt): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
+- [StartKonto (Studierende und Azubis) (Commerzbank)](https://finvallo.com/de/girokonto/#gk-commerzbank-startkonto): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [HVB StartKonto (HypoVereinsbank)](https://finvallo.com/de/girokonto/#gk-hvb-startkonto): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [StartKonto (Kinder und Jugendliche) (Commerzbank)](https://finvallo.com/de/girokonto/#gk-commerzbank-startkonto-jugend): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [GLS Konto U18 (GLS Bank)](https://finvallo.com/de/girokonto/#gk-gls-konto-u18): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [BambiniKonto (Kinderkonto) (Commerzbank)](https://finvallo.com/de/girokonto/#gk-commerzbank-bambinikonto): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Girokonto u18 (DKB)](https://finvallo.com/de/girokonto/#gk-dkb-girokonto-u18): Kinderkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Basiskonto (ING)](https://finvallo.com/de/girokonto/#gk-ing-basiskonto): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
+- [Zahlungskonto mit grundlegenden Funktionen (Revolut)](https://finvallo.com/de/girokonto/#gk-revolut-basiskonto): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
 
 ## Deutschland: Ratgeber
 - [Was kostet die Kreditkarte bei der Sparkasse? Preise von 13 Sparkassen (Deutschland)](https://finvallo.com/de/ratgeber/sparkasse-kreditkarte-kosten/): Sparkassen-Kreditkarte Standard, Gold, Platinum und Basis: Jahresgebühr, Fremdwährung und Bargeld bei 13 Sparkassen von Berlin bis München, aus den Preisverzeichnissen.
@@ -238,14 +238,13 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Festgeld 8 Jahre Deutschland](https://finvallo.com/de/festgeld/8-jahre/)
 - [Festgeld 10 Jahre Deutschland](https://finvallo.com/de/festgeld/10-jahre/)
 - [Bestenlisten Festgeld Deutschland](https://finvallo.com/de/festgeld/bestenlisten/): Deutsche Einlagensicherung, Vorzeitig kündbar, Ab 1.000 €, Steuer automatisch, Direkt bei der Bank, Über Raisin, Über CHECK24, Aktionen
-- [Festgeld nach Bank](https://finvallo.com/de/festgeld/bank/)
 - [So vergleichen wir Festgeld](https://finvallo.com/de/festgeld/methodik/)
 - [Daten als JSON](https://finvallo.com/de/daten/festgeld.json)
-- [Bigbank Festgeld](https://finvallo.com/de/festgeld/bigbank-festgeld-de/): 3,60 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Estland
-- [MAX Festgeld](https://finvallo.com/de/festgeld/max-festgeld-festgeld-de-check24/): 3,53 % für 1 Jahr, über CHECK24, Einlagensicherung Slowakei
-- [Ecobank International Festgeld](https://finvallo.com/de/festgeld/ecobank-international-festgeld-de-raisin/): 3,52 % für 1 Jahr, über Raisin, Einlagensicherung Frankreich
-- [HypoVereinsbank Festgeld](https://finvallo.com/de/festgeld/hypovereinsbank-festgeld-de/): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
-- [İşbank İŞWEB Festgeld](https://finvallo.com/de/festgeld/isbank-isweb-festgeld-de/): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [Bigbank Festgeld](https://finvallo.com/de/festgeld/#fg-bigbank-festgeld-de): 3,60 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Estland
+- [MAX Festgeld](https://finvallo.com/de/festgeld/#fg-max-festgeld-festgeld-de-check24): 3,53 % für 1 Jahr, über CHECK24, Einlagensicherung Slowakei
+- [Ecobank International Festgeld](https://finvallo.com/de/festgeld/#fg-ecobank-international-festgeld-de-raisin): 3,52 % für 1 Jahr, über Raisin, Einlagensicherung Frankreich
+- [HypoVereinsbank Festgeld](https://finvallo.com/de/festgeld/#fg-hypovereinsbank-festgeld-de): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
+- [İşbank İŞWEB Festgeld](https://finvallo.com/de/festgeld/#fg-isbank-isweb-festgeld-de): 3,50 % für 1 Jahr, direkt bei der Bank, Einlagensicherung Deutschland
 
 ## Österreich: Festgeld
 - [Festgeld-Vergleich Österreich](https://finvallo.com/at/festgeld/): 51 Angebote von 49 Banken, Zinsen nach Betrag und Laufzeit, Einlagensicherung und Länderrating, Stand 27.10.2026
@@ -260,14 +259,13 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Festgeld 5 Jahre Österreich](https://finvallo.com/at/festgeld/5-jahre/)
 - [Festgeld 10 Jahre Österreich](https://finvallo.com/at/festgeld/10-jahre/)
 - [Bestenlisten Festgeld Österreich](https://finvallo.com/at/festgeld/bestenlisten/): Österreichische Einlagensicherung, Vorzeitig kündbar, Ab 1.000 €, Steuer automatisch, Direkt bei der Bank, Über Raisin, Aktionen
-- [Festgeld nach Bank](https://finvallo.com/at/festgeld/bank/)
 - [So vergleichen wir Festgeld](https://finvallo.com/at/festgeld/methodik/)
 - [Daten als JSON](https://finvallo.com/at/daten/festgeld.json)
-- [Banca Sistema Festgeld](https://finvallo.com/at/festgeld/banca-sistema-festgeld-at-raisin/): 3,45 % für 1 Jahr, über Raisin, Einlagensicherung Italien
-- [Urbo Bankas Flexgeld](https://finvallo.com/at/festgeld/urbo-bankas-flexgeld-at-raisin/): 3,40 % für 1 Jahr, über Raisin, Einlagensicherung Litauen
-- [Coop Pank Festgeld](https://finvallo.com/at/festgeld/coop-pank-festgeld-at-raisin/): 3,26 % für 1 Jahr, über Raisin, Einlagensicherung Estland
-- [BluOr Bank Festgeld](https://finvallo.com/at/festgeld/bluor-bank-festgeld-at-raisin/): 3,20 % für 1 Jahr, über Raisin, Einlagensicherung Lettland
-- [Creditplus Bank Festgeld](https://finvallo.com/at/festgeld/creditplus-bank-festgeld-at-raisin/): 3,10 % für 1 Jahr, über Raisin, Einlagensicherung Deutschland
+- [Banca Sistema Festgeld](https://finvallo.com/at/festgeld/#fg-banca-sistema-festgeld-at-raisin): 3,45 % für 1 Jahr, über Raisin, Einlagensicherung Italien
+- [Urbo Bankas Flexgeld](https://finvallo.com/at/festgeld/#fg-urbo-bankas-flexgeld-at-raisin): 3,40 % für 1 Jahr, über Raisin, Einlagensicherung Litauen
+- [Coop Pank Festgeld](https://finvallo.com/at/festgeld/#fg-coop-pank-festgeld-at-raisin): 3,26 % für 1 Jahr, über Raisin, Einlagensicherung Estland
+- [BluOr Bank Festgeld](https://finvallo.com/at/festgeld/#fg-bluor-bank-festgeld-at-raisin): 3,20 % für 1 Jahr, über Raisin, Einlagensicherung Lettland
+- [Creditplus Bank Festgeld](https://finvallo.com/at/festgeld/#fg-creditplus-bank-festgeld-at-raisin): 3,10 % für 1 Jahr, über Raisin, Einlagensicherung Deutschland
 
 ## Finanzrechner
 - [Zinseszinsrechner & Sparrechner (Deutschland)](https://finvallo.com/de/rechner/zinseszins/)
