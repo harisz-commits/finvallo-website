@@ -39,9 +39,9 @@
    "bonitaet_quelle": "https://support.n26.com/de-de/mitgliedschaften-und-kontotypen/standardkonten/was-ist-ein-n26-flex-konto"
   },
   "n26-flex": {
-   "unterkonten": 2,
+   "unterkonten": 0,
    "unterkonten_iban": null,
-   "unterkonten_text": "Bis zu zwei Spaces, Zahlungen direkt aus einem Space sind nicht möglich",
+   "unterkonten_text": "keine Spaces, die gibt es bei N26 nur mit Premium-Mitgliedschaft",
    "unterkonten_quelle": "https://n26.com/de-de/blog/einfuehrung-n26-flex-konto",
    "bonitaet": "schufa",
    "bonitaet_text": "Flex bekommt, wer bei der Schufa-Prüfung von N26 durchfällt",
@@ -313,36 +313,36 @@
    "unterkonten_iban": true,
    "unterkonten_text": "Drei kostenlose Pockets, jedes mit eigener IBAN",
    "unterkonten_quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/girokonten/giro-pur.html",
-   "bonitaet": null,
-   "bonitaet_text": null,
-   "bonitaet_quelle": null
+   "bonitaet": "schufa",
+   "bonitaet_text": "Laut Kontobedingungen tauscht die Bank bei der Eröffnung Daten mit der Schufa aus",
+   "bonitaet_quelle": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Informationen-Bedingungen-Konto-Dispo-Kreditkarte-921-001-325-1026.pdf"
   },
   "postbank-giro-plus": {
    "unterkonten": 3,
    "unterkonten_iban": true,
    "unterkonten_text": "Drei kostenlose Pockets, jedes mit eigener IBAN",
    "unterkonten_quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/girokonten/giro-plus.html",
-   "bonitaet": null,
-   "bonitaet_text": null,
-   "bonitaet_quelle": null
+   "bonitaet": "schufa",
+   "bonitaet_text": "Laut Kontobedingungen tauscht die Bank bei der Eröffnung Daten mit der Schufa aus",
+   "bonitaet_quelle": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Informationen-Bedingungen-Konto-Dispo-Kreditkarte-921-001-325-1026.pdf"
   },
   "postbank-giro-extra-plus": {
    "unterkonten": 3,
    "unterkonten_iban": true,
    "unterkonten_text": "Drei kostenlose Pockets, jedes mit eigener IBAN",
    "unterkonten_quelle": "https://www.postbank.de/privatkunden/produkte/konten-karten/girokonten/giro-extra-plus.html",
-   "bonitaet": null,
-   "bonitaet_text": null,
-   "bonitaet_quelle": null
+   "bonitaet": "schufa",
+   "bonitaet_text": "Laut Kontobedingungen tauscht die Bank bei der Eröffnung Daten mit der Schufa aus",
+   "bonitaet_quelle": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Informationen-Bedingungen-Konto-Dispo-Kreditkarte-921-001-325-1026.pdf"
   },
   "postbank-giro-start-direkt": {
-   "unterkonten": null,
+   "unterkonten": 0,
    "unterkonten_iban": null,
-   "unterkonten_text": null,
-   "unterkonten_quelle": null,
-   "bonitaet": null,
-   "bonitaet_text": null,
-   "bonitaet_quelle": null
+   "unterkonten_text": "Pockets gibt es nur zu Giro pur, Giro plus und Giro extra plus",
+   "unterkonten_quelle": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Informationen-Bedingungen-Konto-Dispo-Kreditkarte-921-001-325-1026.pdf",
+   "bonitaet": "schufa",
+   "bonitaet_text": "Laut Kontobedingungen tauscht die Bank bei der Eröffnung Daten mit der Schufa aus",
+   "bonitaet_quelle": "https://www.postbank.de/dam/postbank/pdf/allgemein/Postbank-Informationen-Bedingungen-Konto-Dispo-Kreditkarte-921-001-325-1026.pdf"
   },
   "norisbank-top-girokonto": {
    "unterkonten": null,
