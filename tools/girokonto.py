@@ -1,4 +1,4 @@
-# Girokonto-Vergleich Österreich und Deutschland: Liste mit Filtern und persönlicher Rechnung, Kontoseiten, Methodik.
+# Girokonto-Vergleich Österreich und Deutschland: Liste mit Filtern, persönlicher Rechnung und aufklappbaren Konditionen je Konto, Bestenlisten, Methodik.
 # Daten: daten/<land>/girokonten.json (jede Zahl aus der Entgeltinformation oder Preisliste der Bank, mit Quelle und Prüfdatum).
 # Rechenlogik für die Jahreskosten gibt es zweimal: kosten() hier und calc() in public/assets/giro.js.
 # check.py vergleicht beide (tools/giro-kontrolle.js). Läuft nach karten.py, vor header.py.
@@ -202,14 +202,29 @@ def item(k,P,base):
     akt=f'<div class="earn"><span>Aktion</span><b>{E(k["aktion"])}</b></div>' if k.get('aktion') else ''
     return f'''<article class="item" id="gk-{k["slug"]}" data-k='{E(json.dumps(jsdata(k),separators=(",",":")))}' data-f="{flags(k)}" data-art="{k["art"]}" data-cost="{ko["total"]}" data-q="{E((k["bank"]+" "+k["name"]).lower())}">
     <div class="ihead"><div style="display:flex;gap:10px;align-items:center">{rank}</div></div>
-    <div class="irow">{face(k)}<div style="min-width:0"><h3 class="iname"><a href="{base}{k["slug"]}/">{E(k["name"])}</a></h3><div class="iprov">{E(k["bank"])}</div>{starrow(k)}</div></div>
+    <div class="irow">{face(k)}<div style="min-width:0"><h3 class="iname">{E(k["name"])}</h3><div class="iprov">{E(k["bank"])}</div>{starrow(k)}</div></div>
     <div class="tags">{tags}</div>
     <div class="stats"><div><small>Kontoführung regulär</small>{st(k["kf_jahr"]==0,kf)}</div><div><small>Günstiger, wenn</small>{st(bool(k.get("gratis")) or k["kf_jahr"]==0,kurzbed(k))}</div><div><small data-lbl>Deine Kosten im Jahr</small><b class="{"good" if ko["total"]==0 else ""}" data-out>{eur(ko["total"])} €</b></div></div>
     <p class="note" data-why style="margin:0">{E(why(k,ko,pr))}</p>
     {akt}
     <ul class="checks">{"".join(f"<li>{E(x)}</li>" for x in k["pros"][:4])}</ul>
-    <div class="acts">{affiliate.btn(LAND,'girokonto',k['slug'],k.get('quelle2') or k['quelle'])}<a class="btn ghost block" href="{base}{k["slug"]}/">Details ansehen</a></div>
+    <div class="acts">{affiliate.btn(LAND,'girokonto',k['slug'],k.get('quelle2') or k['quelle'])}</div>
+    {mehr(k,P)}
   </article>'''
+def url(k,land=None):
+    """Adresse eines Kontos: Eintrag im Vergleich (eigene Kontoseiten gibt es nicht mehr)"""
+    return f'{land or LAND}/girokonto/#gk-{k["slug"]}'
+def mehr(k,P):
+    """Aufklappbare Produktinfos im Listeneintrag: alle Konditionen, Kostenbeispiel, Vor- und Nachteile, Quelle"""
+    gp=k['geprueft']; pc,kc=k['pros'],k['cons']
+    pq=f'<a class="lnk" href="{E(k["quelle"])}" target="_blank" rel="noopener">{"Entgeltinformation" if "pdf" in k["quelle"].lower() else "Preise"} {E(k["bank"])} ↗</a>'
+    return f'''<details class="more"><summary>Alle Konditionen</summary><div class="more-b">
+    <div class="pc"><div class="box pro"><h4>Das spricht dafür</h4>{'<ul class="checks">'+"".join(f"<li>{E(x)}</li>" for x in pc)+'</ul>' if pc else '<p class="note">Keine bestätigten Vorteile.</p>'}</div>
+    <div class="box con"><h4>Das spricht dagegen</h4>{'<ul class="checks neg">'+"".join(f"<li>{E(x)}</li>" for x in kc)+'</ul>' if kc else '<p class="note">Keine bekannten Nachteile.</p>'}</div></div>
+    {cond_html(k)}
+    <h4>Was kostet das Konto im Jahr?</h4>{beispiele(k)}
+    <p class="src">Quelle: {pq}{f" (Stand {dmy(k['stand'])})" if k.get("stand") else ""} · geprüft am {dmy(gp)}. Bewertung {de1(k["stars"])} von 5, <a class="lnk" href="{P}{LAND}/girokonto/methodik/">so entstehen die Sterne</a>. Fehler gefunden? <a href="mailto:hallo@finvallo.com?subject=Korrektur%20{E(k['slug'])}">Schreib uns</a>.</p>
+  </div></details>'''
 def why(k,ko,pr):
     t=f'Gerechnet mit {eur(pr["ein"])} € Geldeingang pro Monat, {pr["alter"]} Jahren und {pr["abh"]} Abhebungen pro Monat'
     bits=[]
@@ -243,30 +258,12 @@ def cond_html(k):
     o+=r('Eröffnung',E(wegT(k)))+r('IBAN',E(ibanT(k)))+r('Gemeinschaftskonto',{True:'möglich',False:'nicht möglich'}.get(k.get('gemeinschaftskonto'),'keine Angabe'))
     o+=r('Einlagensicherung',v(k.get('einlagensicherung')))
     return o+'</div>'
-def scorebox(k,P):
-    s=k['score']
-    rows=''.join(f'<tr><td><b>{p["k"]}</b><br><small class="mut">{E(p["v"])}</small></td><td>{p["w"]} %</td><td style="white-space:nowrap">{K.stars(p["s"])} {de1(p["s"])}</td></tr>' for p in s['parts'])
-    gap=[p['k'] for p in s['parts'] if not p['ok']]
-    gt=f'<p class="note" style="margin:0 0 10px"><b>Datenlücke:</b> Daten fehlen bei {K.fmtl(gap)}. {"Dieses Kriterium zählt" if len(gap)==1 else "Diese Kriterien zählen"} mit 2,5 Sternen.</p>' if gap else ''
-    return f'''<div class="box"><div class="scorehead"><div class="big">{de1(k["stars"])}<small>/5</small></div><div>{K.stars(k["stars"])}<div style="margin-top:4px"><span class="badge ">{k["note"]}</span></div></div></div>
-  <div class="tbl" style="margin:14px 0"><table class="sct"><thead><tr><th>Kriterium</th><th>Gewicht</th><th>Sterne</th></tr></thead><tbody>{rows}
-  <tr><td><b>Gesamt</b><br><small class="mut">gewichteter Durchschnitt</small></td><td>100 %</td><td><b>{de1(k["stars"])}</b></td></tr></tbody></table></div>{gt}<a class="lnk" href="{P}{LAND}/girokonto/methodik/">ⓘ So funktioniert das Bewertungssystem</a></div>'''
 def beispiele(k):
     rows=[]
     for ein in (0,500,1000,1500,2500):
         alt=PROFIL[k['art']]['alter']; ko=kosten(k,ein,alt,4)
         rows.append(f'<tr><td>{eur(ein)} €</td><td>{eur(ko["kf"])} €</td><td>{eur(ko["card"]+ko["cash"])} €</td><td><b>{eur(ko["total"])} €</b></td></tr>')
     return f'<div class="tbl"><table><thead><tr><th>Geldeingang pro Monat</th><th>Kontoführung</th><th>Karte und Abhebungen</th><th>Im Jahr</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div><p class="note">Mit {PROFIL[k["art"]]["alter"]} Jahren und 4 Abhebungen am Automaten pro Monat. Nicht enthalten: Überziehungszinsen, Buchungen am Schalter und Leistungen, die du extra bestellst.</p>'
-def faq(k):
-    g=k.get('gratis'); q=[]
-    q.append((f'Was kostet das {k["name"]} von {k["bank"]}?',f'Die Kontoführung kostet regulär {kfT(k)}'+(f'. {g["text"].rstrip(".")}' if g else '')+'.'))
-    if g: q.append(('Wann ist das Konto günstiger?',g['text']+(f' Weitere Bedingungen: {g["sonst"]}' if g.get('sonst') else '')))
-    q.append(('Ist eine Debitkarte dabei?',(k.get('debitkarte') or {}).get('text') or 'Dazu haben wir keine bestätigte Angabe.'))
-    q.append(('Kann ich das Konto online eröffnen?',{'online':'Ja, nur online.','filiale':'Nein, nur in der Filiale.','beides':'Ja, online oder in der Filiale.'}.get(k.get('eroeffnung'),'Dazu haben wir keine bestätigte Angabe.')))
-    q.append(('Welche IBAN bekomme ich?',f'Eine {ibanT(k)}.' if k.get('iban') else 'Dazu haben wir keine bestätigte Angabe.'))
-    if k.get('einlagensicherung'): q.append(('Wie sicher ist mein Geld?',f'Guthaben auf dem {k["name"]} von {k["bank"]} ist über die gesetzliche Einlagensicherung geschützt: {k["einlagensicherung"]}.'))
-    return q
-
 def head(t,d,rel,P,ld): return K.head(t,d,rel,P,ld)
 def hdr(P,rel):
     o='de' if LAND=='at' else 'at'; rest=rel.split('/',1)[1]
@@ -277,63 +274,7 @@ def hdr(P,rel):
     else: other=f'{o}/{rest}'
     return K.HDR(P,rel,other)
 
-def konto_page(k,ks,n,BL):
-    rel=f'{LAND}/girokonto/{k["slug"]}/'; P='../../../'
-    t=f'{k["name"]} ({k["bank"]}) {CC["N"]}: Kosten und Bewertung | Finvallo'
-    if len(t)>65: t=f'{k["name"]} ({k["bank"]}) {CC["N"]}: Kosten | Finvallo'
-    if len(t)>65: t=f'{k["name"]} {k["bank"]} ({LAND.upper()}) | Finvallo'
-    d=f'{k["name"]} von {k["bank"]}: Kontoführung {kfT(k)}'+(f', {kurzbed(k)[0].lower()+kurzbed(k)[1:]}' if k.get('gratis') else '')+f'. Bewertung {de1(k["stars"])}/5, alle Kosten mit Quelle.'
-    d=K.fit_desc(d) if hasattr(K,'fit_desc') else d[:155]
-    gp=k['geprueft']
-    ld=K.graph(rel,t,d,[(CC['N'],f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),(k['name'],rel)],
-        [{"@type":"BankAccount","@id":f"https://finvallo.com/{rel}#konto","name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{rel}","provider":{"@type":"BankOrCreditUnion","name":k['bank']},
-          "areaServed":{"@type":"Country","name":CC['N']},"feesAndCommissionsSpecification":f'Kontoführung {kfT(k)}; {gratisT(k)}',
-          "review":{"@type":"Review","@id":f"https://finvallo.com/{rel}#review","author":{"@id":"https://finvallo.com/ueber-uns/#haris"},"publisher":{"@id":"https://finvallo.com/#org"},"datePublished":gp,
-                    "reviewRating":{"@type":"Rating","ratingValue":k['stars'],"bestRating":5,"worstRating":1}}},
-         {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq(k)]}],date=gp)
-    sek=next(s for s in SEK if s[0]==('standard' if k['art']=='premium' else k['art']))
-    glance=f'Das {k["name"]} ist ein {ART[k["art"]]} von {k["bank"]}. Die Kontoführung kostet regulär {kfT(k)}'+(f'. {k["gratis"]["text"].rstrip(".")}' if k.get('gratis') else '')+f'. Finvallo bewertet es mit {de1(k["stars"])} von 5 Sternen, Platz {k["rank"]} von {n[sek[0]]} in der Liste „{sek[1]}“. Stand: {dmy(gp)}.'
-    sim=[x for x in ks if x is not k and (x['art']==k['art'] or {x['art'],k['art']}<={'standard','premium'})]
-    sim.sort(key=lambda x:abs(x['score']['kosten']['total']-k['score']['kosten']['total'])); sim=sorted(sim[:4],key=lambda x:-x['stars'])
-    simt=''.join(f'<tr><td><a class="lnk" href="../{x["slug"]}/">{E(x["name"])}</a><br><small class="mut">{E(x["bank"])}</small></td><td>{E(kfT(x))}</td><td>{E(kurzbed(x))}</td><td style="white-space:nowrap">{de1(x["stars"])} ★</td></tr>' for x in sim)
-    pc,kc=k['pros'],k['cons']
-    body=f'''{hdr(P,rel)}
-<div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../">Girokonten</a> › {E(k["bank"])}</span><span class="ok">✓ Geprüft am {dmy(gp)}</span></div>
-  <div class="dh">{face(k)}<div style="min-width:0"><div class="tags">{besttag(k,BL)}<span class="tag typ">{E(ART[k["art"]])}</span><span class="by">von {E(k["bank"])}</span></div>
-    <h1>{E(k["name"])}{"" if k["bank"].lower() in k["name"].lower() else f' <small class="mut">von {E(k["bank"])}</small>'}</h1>{starrow(k)}</div></div>
-  <div class="box feebox"><small>Kontoführung</small><span class="big{" good" if k["kf_jahr"]==0 else ""}">{E(kfT(k))}</span>{f'<small class="mut">{E(k["gratis"]["text"])}</small>' if k.get("gratis") else ""}
-    {affiliate.btn(LAND,'girokonto',k['slug'],k.get('quelle2') or k['quelle'])}
-    <div class="actrow"><a class="plink" href="{E(k["quelle"])}" target="_blank" rel="noopener">{"Entgeltinformation (PDF) ↗" if k["quelle"].lower().split("?")[0].endswith(".pdf") else "Preise beim Anbieter ↗"}</a></div></div>
-  <section class="facts box glance" aria-label="Auf einen Blick"><h2 style="margin-top:0">Auf einen Blick</h2><div class="prose"><p>{E(glance)}</p></div></section>
-  <h2>Vorteile und Nachteile</h2>
-  <div class="pc"><div class="box pro"><h3>Das spricht dafür</h3>{'<ul class="checks">'+"".join(f"<li>{E(x)}</li>" for x in pc)+'</ul>' if pc else '<p class="note">Keine bestätigten Vorteile.</p>'}</div>
-  <div class="box con"><h3>Das spricht dagegen</h3>{'<ul class="checks neg">'+"".join(f"<li>{E(x)}</li>" for x in kc)+'</ul>' if kc else '<p class="note">Keine bekannten Nachteile.</p>'}</div></div>
-  <h2>Konditionen im Überblick</h2><p class="source-line">Quelle: <a class="lnk" href="{E(k["quelle"])}" target="_blank" rel="noopener">{"Entgeltinformation" if "pdf" in k["quelle"].lower() else "Preise"}</a> {E(k["bank"])}{f" (Stand {dmy(k['stand'])})" if k.get("stand") else ""} · geprüft am {dmy(gp)}</p>{cond_html(k)}
-  <h2>Was kostet das Konto im Jahr?</h2>{beispiele(k)}
-  <h2>So kommt die Bewertung zustande</h2>{scorebox(k,P)}
-  {f"<h2>Ähnliche Konten</h2><div class='tbl wide'><table><thead><tr><th>Konto</th><th>Kontoführung</th><th>Günstiger, wenn</th><th>Bewertung</th></tr></thead><tbody>{simt}</tbody></table></div>" if simt else ""}
-  <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in faq(k))}</div>
-  <p class="src" style="margin-top:18px">Quelle: {K.ext(k["quelle"])}{" · Produktseite: "+K.ext(k["quelle2"]) if k.get("quelle2") else ""}. Konditionen vor dem Abschluss bei der Bank prüfen.</p>
-  {f'<p class="note"><a class="lnk" href="{P}{anb_rel(k["bank"])}">Alles über {E(k["bank"])}: Kreditkarten und Girokonten →</a></p>' if anb_rel(k["bank"]) else ""}
-  {festgeld_note(k,P)}
-  <p class="note"><a class="lnk" href="../methodik/">So bewerten wir Girokonten</a> · <a class="lnk" href="../bestenlisten/">Bestenlisten</a> · <a class="lnk" href="{P}{LAND}/ratgeber/girokonto-wechseln/">Konto wechseln</a>{f' · <a class="lnk" href="{P}{LAND}/ratgeber/kontoueberziehung/">Kontoüberziehung</a>' if LAND=="at" and os.path.exists(R+"at/ratgeber/kontoueberziehung/index.html") else f' · <a class="lnk" href="{P}{LAND}/ratgeber/dispo/">Dispo</a>' if LAND=="de" and os.path.exists(R+"de/ratgeber/dispo/index.html") else ""}</p>
-  <p class="src">Fehler gefunden? <a href="mailto:hallo@finvallo.com?subject=Korrektur%20{E(k['slug'])}">Schreib uns</a>.</p>
-</main>
-{K.footer(P)}'''
-    K.write(rel,head(t,d,rel,P,ld)+body)
-
-FEST={}; BLG={}
-def festgeld_note(k,P):
-    """Festgeld-Angebote derselben Bank im Festgeld-Vergleich"""
-    b=k['bank'].lower(); xs=[a for a in FEST.get(LAND,[]) if a['bank'].lower()==b or a['bank'].lower().startswith(b+' ') or b.startswith(a['bank'].lower()+' ')]
-    if not xs: return ''
-    xs=sorted(xs,key=lambda a:-max(z['zins'] for z in a['zinsen']))
-    return f'<p class="note">Festgeld von {E(k["bank"])}: '+', '.join(f'<a class="lnk" href="{P}{LAND}/festgeld/{a["id"]}/">{E(a["produkt"])} bis {pct(max(z["zins"] for z in a["zinsen"]))}</a>' for a in xs[:3])+f' · <a class="lnk" href="{P}{LAND}/festgeld/">Festgeld-Vergleich</a></p>'
-def besttag(k,BL):
-    b=best_tag(k,BL)
-    return f'<a class="tag best" href="../bestenlisten/{b[1]["k"]}/">🏆 Platz {b[0]} für {E(b[1]["t"])}</a>' if b else ''
-
+BLG={}
 def calcbox():
     return '''<div class="box lcalc" id="gcalc" hidden>
     <h2 style="margin-top:0">Was kostet das Konto dich?</h2>
@@ -360,7 +301,7 @@ def list_page(ks,secs,d):
     t=f'Girokonto-Vergleich {N} 2026: Kosten und Bewertung | Finvallo'
     ds=f'{n} Girokonten von {nb} überregionalen Banken in {N} verglichen: Kontoführung, Gratis-Bedingungen, Karten, Bargeld und Zinsen. Mit Kostenrechner.'
     top=secs['standard'][:10]
-    ld=K.graph(rel,t,ds,[(CC['N'],f'{LAND}/'),('Girokonten',rel)],[{"@type":"ItemList","name":f"Beste Girokonten {N}","itemListElement":[{"@type":"ListItem","position":k['rank'],"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{rel}{k['slug']}/"} for k in top]}])
+    ld=K.graph(rel,t,ds,[(CC['N'],f'{LAND}/'),('Girokonten',rel)],[{"@type":"ItemList","name":f"Beste Girokonten {N}","itemListElement":[{"@type":"ListItem","position":k['rank'],"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{url(k)}"} for k in top]}])
     sections=''
     for a,h,txt in SEK:
         xs=secs[a]
@@ -437,14 +378,14 @@ GCATS=[
  dict(k='kostenlos',t='Kostenlos',h='Die besten kostenlosen Girokonten',d='Konten für alle, bei denen die Kontoführung ohne jede Bedingung nichts kostet. Ob Karte oder Abhebungen extra kosten, steht in der Tabelle.',f=lambda k:k['art'] in ALLE and k['kf_jahr']==0),
  dict(k='gehaltskonto',t='Gratis mit Gehalt',h='Die besten Gehaltskonten',d='Konten für alle, die mit einem regelmäßigen Geldeingang wie Gehalt oder Pension gratis werden. Wie viel Geld dafür jeden Monat eingehen muss, steht in der Tabelle.',f=lambda k:k['art'] in ALLE and bool(k.get('gratis')) and k['gratis'].get('eingang_min') is not None and k['gratis'].get('kf_bedingt')==0),
  dict(k='filiale',t='Mit Filiale',h='Die besten Girokonten mit Filiale',d='Konten für alle von Banken mit Filialen, für alle, die ihre Bankgeschäfte auch persönlich erledigen wollen.',f=lambda k:k['art'] in ALLE and k.get('eroeffnung') in ('filiale','beides')),
- dict(k='ausland',t='Ohne Fremdwährungsgebühr',h='Die besten Girokonten für Zahlungen im Ausland',d='Konten für alle, bei denen Kartenzahlungen in fremder Währung laut Bank 0 % Aufschlag kosten. Manche Banken haben Limits oder Aufschläge am Wochenende, das steht auf der Kontoseite.',f=lambda k:k['art'] in ALLE and k.get('fremdwaehrung_prozent')==0),
+ dict(k='ausland',t='Ohne Fremdwährungsgebühr',h='Die besten Girokonten für Zahlungen im Ausland',d='Konten für alle, bei denen Kartenzahlungen in fremder Währung laut Bank 0 % Aufschlag kosten. Manche Banken haben Limits oder Aufschläge am Wochenende, das steht in den Konditionen des Kontos.',f=lambda k:k['art'] in ALLE and k.get('fremdwaehrung_prozent')==0),
  dict(k='gemeinschaftskonto',t='Gemeinschaftskonto',h='Die besten Girokonten als Gemeinschaftskonto',d='Konten für alle, die die Bank auch als Gemeinschaftskonto für zwei Personen anbietet. Konten ohne bestätigte Angabe fehlen hier.',f=lambda k:k['art'] in ALLE and k.get('gemeinschaftskonto') is True),
  dict(k='studenten',t='Studierende',h='Die besten Studentenkonten',d='Konten für Studierende, Menschen in Ausbildung oder junge Erwachsene bis zu einem bestimmten Alter. Danach stellt die Bank meist auf ein normales Konto um.',f=lambda k:k['art']=='student'),
  dict(k='jugend',t='Jugendliche',h='Die besten Jugendkonten',d='Konten für Jugendliche, je nach Bank ab 10 oder 14 Jahren. Die Altersgrenzen stehen in der Tabelle.',f=lambda k:k['art']=='jugend'),
  dict(k='kinder',t='Kinder',h='Die besten Kinderkonten',d='Konten für Kinder unter 14 Jahren, die Eltern für ihr Kind eröffnen.',f=lambda k:k['art']=='kinder'),
  dict(k='basiskonto',t='Basiskonto',h='Die besten Basiskonten',d='Das gesetzliche Zahlungskonto mit grundlegenden Funktionen, das jede Bank jedem Menschen mit rechtmäßigem Aufenthalt in der EU anbieten muss. Sortiert nach Kosten und Leistung.',f=lambda k:k['art']=='basis'),
  dict(k='premium',t='Premium',h='Die besten Premiumkonten',d='Konten mit festem Preis und mehr Leistung, etwa Kreditkarte, Versicherungen oder Bargeld weltweit ohne Entgelt. Bewertet wie in der Gesamtwertung, die Kosten zählen also voll.',f=lambda k:k['art']=='premium'),
- dict(k='mit-kreditkarte',t='Mit Kreditkarte',h='Die besten Girokonten mit Kreditkarte ohne Aufpreis',d='Konten für alle, bei denen eine echte Kreditkarte ohne Jahresgebühr dabei ist. Welche Karte das ist, steht auf der Kontoseite.',f=lambda k:k['art'] in ALLE and bool(k.get('kreditkarte_inkl'))),
+ dict(k='mit-kreditkarte',t='Mit Kreditkarte',h='Die besten Girokonten mit Kreditkarte ohne Aufpreis',d='Konten für alle, bei denen eine echte Kreditkarte ohne Jahresgebühr dabei ist. Welche Karte das ist, steht in den Konditionen des Kontos.',f=lambda k:k['art'] in ALLE and bool(k.get('kreditkarte_inkl'))),
  dict(k='zinsen',t='Mit Guthabenzinsen',h='Die besten Girokonten mit Zinsen auf das Guthaben',d='Konten für alle, die mindestens 0,5 % Zinsen auf das Guthaben zahlen. Für größere Beträge, die länger liegen, bringt Festgeld meist mehr.',f=lambda k:k['art'] in ALLE and (k.get('habenzins') or 0)>=0.5),
  dict(k='praemie',t='Mit Prämie',h='Die besten Girokonten mit Neukundenprämie',d='Konten für alle, bei denen die Bank aktuell eine Prämie oder einen Bonus für neue Kundinnen und Kunden zahlt. Die Prämie zählt nicht in die Sterne; Bedingungen und Enddatum stehen beim Konto.',f=lambda k:k['art'] in ALLE and bool(k.get('aktion'))),
 ]
@@ -498,7 +439,7 @@ def bestenlisten(ks,BL):
         if len(d)>155: d=f'{c["h"]} in {N}: Platz 1 ist das {top["name"]} von {top["bank"]}. {len(X)} Konten, Stand {S}.'
         if len(d)>155: d=f'{c["h"]} in {N}: Platz 1 ist das {top["name"]}. Stand {S}.'
         cols=bcols(c)
-        rows=''.join(f'<tr><td><b>{i+1}</b></td><td><a class="lnk" href="../../{k["slug"]}/">{E(k["name"])}</a><br><small class="mut">{E(k["bank"])}</small></td>'+''.join(f'<td{" style=white-space:nowrap" if h=="Alter" else ""}>{E(fn(k))}</td>' for h,fn in cols)+f'<td style="white-space:nowrap"><b>{de1(k["stars"])} ★</b></td></tr>' for i,k in enumerate(X))
+        rows=''.join(f'<tr><td><b>{i+1}</b></td><td><a class="lnk" href="../../#gk-{k["slug"]}">{E(k["name"])}</a><br><small class="mut">{E(k["bank"])}</small></td>'+''.join(f'<td{" style=white-space:nowrap" if h=="Alter" else ""}>{E(fn(k))}</td>' for h,fn in cols)+f'<td style="white-space:nowrap"><b>{de1(k["stars"])} ★</b></td></tr>' for i,k in enumerate(X))
         thead='<tr><th>#</th><th>Konto</th>'+''.join(f'<th>{E(h)}</th>' for h,_ in cols)+'<th>Bewertung</th></tr>'
         pr=PROFIL[top['art']]
         bsp=f'„Im Beispiel“ = Kosten im Jahr bei {"einem Geldeingang von "+eur(pr["ein"])+" € pro Monat, " if pr["ein"] else ""}{pr["alter"]} Jahren und {pr["abh"]} {"Abhebung" if pr["abh"]==1 else "Abhebungen"} pro Monat. Mit deinen Zahlen rechnest du im <a class="lnk" href="../../">Girokonto-Vergleich</a>.'
@@ -507,7 +448,7 @@ def bestenlisten(ks,BL):
             ('Welche Konten kommen in diese Liste?',c['d']),
             ('Spielen Provisionen eine Rolle?','Nein. Provisionen haben keinen Einfluss auf Sterne oder Reihenfolge, und es gibt keine bezahlten Platzierungen.')]
         ld=K.graph(rel,t,d,[(CC['N'],f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),('Bestenlisten',base),(c['t'],rel)],
-            [{"@type":"ItemList","name":c['h']+' in {N}',"numberOfItems":len(X),"itemListElement":[{"@type":"ListItem","position":i+1,"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{LAND}/girokonto/{k['slug']}/"} for i,k in enumerate(X)]},
+            [{"@type":"ItemList","name":c['h']+' in {N}',"numberOfItems":len(X),"itemListElement":[{"@type":"ListItem","position":i+1,"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{url(k)}"} for i,k in enumerate(X)]},
              {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}])
         K.write(rel,head(t,d,rel,P2,ld)+f'''{hdr(P2,rel)}
 <div class="wrap"><main id="app">
@@ -535,7 +476,7 @@ def anbieter_giro(ks):
         f=R+rel+'index.html'; s=open(f,encoding='utf-8').read()
         s=re.sub(r'<!--giro-->.*?<!--/giro-->','',s,flags=re.S)
         xs=sorted(xs,key=lambda k:(-k['stars'],k['kf_jahr']))
-        rows=''.join(f'<tr><td><a class="lnk" href="../../../girokonto/{k["slug"]}/">{E(k["name"])}</a><br><small class="mut">{E(ART[k["art"]])}</small></td><td>{E(kfT(k))}</td><td>{E(kurzbed(k))}</td><td style="white-space:nowrap">{de1(k["stars"])} ★</td></tr>' for k in xs)
+        rows=''.join(f'<tr><td><a class="lnk" href="../../../girokonto/#gk-{k["slug"]}">{E(k["name"])}</a><br><small class="mut">{E(ART[k["art"]])}</small></td><td>{E(kfT(k))}</td><td>{E(kurzbed(k))}</td><td style="white-space:nowrap">{de1(k["stars"])} ★</td></tr>' for k in xs)
         blk=(f'<!--giro--><h2>Girokonten von {E(bank)}</h2><p class="note">{len(xs)} {"Konto" if len(xs)==1 else "Konten"} von {E(bank)} in unserem <a class="lnk" href="../../../girokonto/">Girokonto-Vergleich</a>, bewertet nach eigenen Regeln für Girokonten.</p>'
              f'<div class="tbl wide"><table><thead><tr><th>Konto</th><th>Kontoführung</th><th>Günstiger, wenn</th><th>Bewertung</th></tr></thead><tbody>{rows}</tbody></table></div><!--/giro-->')
         for mk in ('<h2>Für wen passt','<h2>Fragen und Antworten</h2>','</main>'):
@@ -556,7 +497,7 @@ def llms(secs,d):
         for a,h,_ in SEK:
             xs=secs.get(a) or []
             if fn=='llms.txt': xs=xs[:5 if a=='standard' else 2]
-            b+=''.join(f'- [{k["name"]} ({k["bank"]})](https://finvallo.com/{LAND}/girokonto/{k["slug"]}/): {h}, {de1(k["stars"])}/5, {eur(kosten(k,PROFIL[k["art"]]["ein"],PROFIL[k["art"]]["alter"],PROFIL[k["art"]]["abh"])["total"])} € im Jahr im Beispiel\n' for k in xs)
+            b+=''.join(f'- [{k["name"]} ({k["bank"]})](https://finvallo.com/{url(k)}): {h}, {de1(k["stars"])}/5, {eur(kosten(k,PROFIL[k["art"]]["ein"],PROFIL[k["art"]]["alter"],PROFIL[k["art"]]["abh"])["total"])} € im Jahr im Beispiel\n' for k in xs)
         i=t.find(CC['llms_vor']); t=t[:i]+b+t[i:] if i>=0 else t.rstrip()+'\n'+b
         open(p,'w',encoding='utf-8').write(re.sub(r'\n{3,}','\n\n',t))
 
@@ -567,8 +508,6 @@ def main():
     global LAND,CC
     for l in CFG:
         if os.path.exists(dpath(l)): OTHER[l]={k.get('slug') or K.slug(k['bank']+' '+k['name']) for k in json.load(open(dpath(l)))['konten']}
-        fp=os.path.join(SP,'daten',l,'festgeld.json')
-        if os.path.exists(fp): FEST[l]=json.load(open(fp,encoding='utf-8'))['angebote']
     for l in CFG:
         if l not in OTHER: continue
         LAND,CC=l,CFG[l]; build_land()
@@ -580,7 +519,9 @@ def build_land():
     for k in ks: k.setdefault('geprueft',d['stand'])
     secs=rate(ks); n={a:len(v) for a,v in secs.items()}
     BL=best_lists(ks); BLG.clear(); BLG.update(BL)
-    for k in ks: konto_page(k,ks,n,BL)
+    import shutil
+    for x in os.listdir(R+f'{LAND}/girokonto') if os.path.isdir(R+f'{LAND}/girokonto') else []:
+        if x not in ('bestenlisten','methodik') and os.path.isdir(R+f'{LAND}/girokonto/{x}'): shutil.rmtree(R+f'{LAND}/girokonto/{x}')
     bestenlisten(ks,BL); anbieter_giro(ks)
     list_page(ks,secs,d); methodik_page(ks); export(ks,d); llms(secs,d)
     print('Girokonten:',len(ks))

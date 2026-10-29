@@ -38,7 +38,7 @@ def _load():
 
 def register(art,P,eur):
     d,ks=_load()
-    def L(k,label=None): return f'<a class="lnk" href="{P}de/girokonto/{k["slug"]}/">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
+    def L(k,label=None): return f'<a class="lnk" href="{P}de/girokonto/#gk-{k["slug"]}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
     G1=f'{P}de/girokonto/'; B=f'{G1}bestenlisten/'; RG=f'{P}de/ratgeber/'
     alle=[k for k in ks if k['art'] in ('standard','premium')]
     kfT=lambda k:'kostenlos' if k['kf_jahr']==0 else f'{eur(k["kf_jahr"])} € im Jahr'
@@ -85,12 +85,12 @@ def register(art,P,eur):
 <li><b>Ratenkredit.</b> Bei einem Minus, das seit Monaten nicht verschwindet, ist ein Ratenkredit fast immer günstiger. Fester Zins, feste Rate, festes Ende. Mit dem <a href="{P}de/rechner/kreditrechner/">Kreditrechner</a> siehst du, was eine Laufzeit kostet. Vorsicht bei Restschuldversicherungen, die beim Umschulden angeboten werden, sie sind laut Verbraucherzentralen teuer und leisten wenig.</li>
 <li><b>Rahmenkredit.</b> Manche Banken bieten eine Kreditlinie mit niedrigerem Zins als der Dispo an, die du wie den Dispo flexibel nutzt.</li>
 <li><b>Kreditkarte mit Teilzahlung.</b> Meist teurer als der Dispo, und die Teilzahlung ist oft voreingestellt. Was dabei zu beachten ist, steht im Ratgeber <a href="{RG}teilzahlung/">Teilzahlung bei Kreditkarten</a>.</li>
-<li><b>Konto mit günstigem Dispo.</b> Wenn du den Dispo nur ein paar Tage im Monat brauchst, zählt der Dispozins. Er steht auf jeder Kontoseite im <a href="{G1}">Girokonto-Vergleich</a>.</li>
+<li><b>Konto mit günstigem Dispo.</b> Wenn du den Dispo nur ein paar Tage im Monat brauchst, zählt der Dispozins. Er steht bei jedem Konto im <a href="{G1}">Girokonto-Vergleich</a>.</li>
 <li><b>Schuldnerberatung.</b> Die Schuldnerberatungsstellen der Verbraucherzentralen, Wohlfahrtsverbände und Kommunen beraten kostenlos.</li></ul></div>'''),
        ('Dispo kündigen oder reduzieren',f'''<div class="prose"><p>Du kannst den Dispo jederzeit reduzieren oder kündigen, in vielen Apps mit zwei Klicks, sonst per Nachricht an die Bank. Vorher muss das Konto ausgeglichen sein oder du vereinbarst, wie du den Rest abbaust. Ein kleinerer Rahmen ist eine wirksame Bremse. Wer gar nicht ins Minus will, kann bei einigen Banken den Dispo auf 0 € setzen; Lastschriften, die nicht gedeckt sind, gehen dann zurück und können Gebühren beim Zahlungsempfänger auslösen.</p>
 <p>Beim Kontowechsel muss das alte Konto ausgeglichen sein, bevor es schließt. Der Ablauf steht im Ratgeber <a href="../girokonto-wechseln/">Girokonto wechseln</a>.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Dispozinsen und Zinsen bei geduldeter Überziehung: Preis- und Leistungsverzeichnisse der Banken, verlinkt auf jeder Kontoseite. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
+<li>Dispozinsen und Zinsen bei geduldeter Überziehung: Preis- und Leistungsverzeichnisse der Banken, verlinkt bei jedem Konto im Vergleich. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
 <li>BGB: {_ext(BGB(504),"§ 504")}, {_ext(BGB("504a"),"§ 504a")}, {_ext(BGB(505),"§ 505")}, {ABGERUFEN}. Neue Regeln ab 20.11.2026: {_ext(BGBL_2026_139,"Gesetz zur Umsetzung der Richtlinie (EU) 2023/2225, BGBl. 2026 I Nr. 139")}.</li>
 <li>Kündigung des Dispos: {_ext(BAFIN_DISPO,"BaFin, Darf die Bank den Dispositionskredit reduzieren oder streichen?")}.</li>
 <li>Angabe des Dispozinses: Art. 247a § 2 EGBGB; BGH, Urteil vom 29.06.2021, XI ZR 46/20.</li></ul></div>'''),
@@ -132,9 +132,9 @@ def register(art,P,eur):
 <p>Eine Kontovollmacht ist etwas anderes als ein Gemeinschaftskonto: Der Bevollmächtigte darf verfügen, ist aber nicht Inhaber, haftet nicht und hat keinen Anteil am Guthaben. Für Paare, bei denen nur einer das Geld verdient, ist das oft die einfachere Lösung, auch steuerlich.</p></div>'''),
        ('Diese Konten gibt es als Gemeinschaftskonto',_tbl(['Konto','Kontoführung','Karten','Eröffnung'],grow)+
         f'''<div class="prose"><p>Das sind {len(gem)} Konten von {_fmtl(gbank)}. {("Nicht als Gemeinschaftskonto gibt es laut Bankangaben die Konten von "+_fmtl(nogem)+". ") if nogem else ""}Bei den übrigen Banken fehlt eine bestätigte Angabe. Die Rangfolge nach Bewertung steht in der Bestenliste <a href="{B}gemeinschaftskonto/">Gemeinschaftskonten</a>. Achte auf die zweite Karte: Bei manchen Banken ist eine Partnerkarte inklusive, bei anderen kostet die zweite girocard 6 bis 10 € im Jahr.</p>
-<p>Gratis-Bedingungen wie ein Mindestgeldeingang gelten beim Gemeinschaftskonto meist für das Konto insgesamt, beide Gehälter zählen also zusammen. Das steht auf der jeweiligen Kontoseite.</p></div>'''),
+<p>Gratis-Bedingungen wie ein Mindestgeldeingang gelten beim Gemeinschaftskonto meist für das Konto insgesamt, beide Gehälter zählen also zusammen. Das steht bei jedem Konto im Vergleich.</p></div>'''),
        ('Einlagensicherung: 100.000 € pro Einleger',f'''<div class="prose"><p>Die gesetzliche Einlagensicherung schützt 100.000 € je Einleger und Bank (§ 8 EinSiG). Bei einem Gemeinschaftskonto gilt die Grenze für jeden Inhaber getrennt, zwei Inhaber sind also mit bis zu 200.000 € geschützt. Das Guthaben wird dafür zu gleichen Teilen zugerechnet, wenn nichts anderes vereinbart ist. Die BaFin rechnet ein Beispiel vor: Hat der Mann bei derselben Bank schon 100.000 € auf einem Tagesgeldkonto, ist sein Anspruch ausgeschöpft, und vom Gemeinschaftskonto mit 50.000 € bekommt nur die Frau ihre 25.000 €.</p>
-<p>Viele Banken im Vergleich sichern über den freiwilligen Einlagensicherungsfonds oder die Institutssicherung der Sparkassen und Genossenschaftsbanken deutlich mehr ab. Für Konten bei Revolut (Litauen) und bunq (Niederlande) gilt die dortige gesetzliche Sicherung, ebenfalls mit 100.000 € pro Person. Was für dein Konto gilt, steht auf der Kontoseite.</p></div>'''),
+<p>Viele Banken im Vergleich sichern über den freiwilligen Einlagensicherungsfonds oder die Institutssicherung der Sparkassen und Genossenschaftsbanken deutlich mehr ab. Für Konten bei Revolut (Litauen) und bunq (Niederlande) gilt die dortige gesetzliche Sicherung, ebenfalls mit 100.000 € pro Person. Was für dein Konto gilt, steht in den Konditionen des Kontos.</p></div>'''),
        ('Die Schenkungsteuer-Falle','''<div class="prose"><p>Zahlt ein Partner eine Erbschaft, eine Abfindung oder den Erlös aus einem Hausverkauf auf das gemeinsame Oder-Konto ein, geht das Finanzamt davon aus, dass die Hälfte dem anderen Partner geschenkt wurde. Der Bundesfinanzhof hat das 2011 bestätigt, dem Finanzamt aber die Beweislast auferlegt: Es muss zeigen, dass der andere Partner tatsächlich über die Hälfte verfügen konnte (Urteil vom 23.11.2011, II R 33/10). Wer nachweisen kann, dass das Geld nur dem Einzahler gehörte und der Partner es nicht für sich genutzt hat, kommt um die Steuer herum.</p>
 <p>Die Freibeträge nach § 16 ErbStG machen den Unterschied: Ehepartner und eingetragene Lebenspartner haben 500.000 € in zehn Jahren frei, unverheiratete Paare nur 20.000 €. Für sie wird ein Oder-Konto bei größeren Summen schnell teuer. Drei Wege helfen:</p><ul>
 <li>Große Einmalbeträge auf ein Einzelkonto des Einzahlers legen und dem Partner eine Vollmacht geben.</li>
@@ -143,7 +143,7 @@ def register(art,P,eur):
        ('Trennung und Pfändung','''<div class="prose"><p><b>Trennung.</b> Jeder Inhaber eines Oder-Kontos kann der Bank gegenüber die Einzelverfügung des anderen widerrufen. Danach geht nur noch gemeinsam. Das sollte der erste Schritt sein, wenn eine Trennung ansteht. Im Zweifel gehört das Guthaben beiden zur Hälfte. Wer nach der Trennung mehr als die Hälfte abhebt, muss den Rest ausgleichen. Kündigen können nur alle Inhaber zusammen, und erst, wenn das Konto nicht im Minus ist. Daueraufträge und Lastschriften ziehen mit der <a href="../girokonto-wechseln/">Kontowechselhilfe</a> auf das neue Einzelkonto um.</p>
 <p><b>Pfändung.</b> Ein Gemeinschaftskonto kann kein P-Konto sein. Wird gegen einen Inhaber gepfändet, darf die Bank einen Monat lang nichts an den Gläubiger auszahlen (§ 850l ZPO). In dieser Zeit kann jeder Inhaber verlangen, dass sein Anteil, im Zweifel die Hälfte, auf ein eigenes Konto übertragen wird, das er dann als P-Konto führen lässt. Mehr dazu im Ratgeber <a href="../p-konto/">P-Konto</a>.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Gemeinschaftskonto möglich oder nicht, Karten, Eröffnung: Preis- und Leistungsverzeichnisse der Banken, verlinkt auf jeder Kontoseite. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
+<li>Gemeinschaftskonto möglich oder nicht, Karten, Eröffnung: Preis- und Leistungsverzeichnisse der Banken, verlinkt bei jedem Konto im Vergleich. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
 <li>Einlagensicherung: {_ext(EINSIG_8,"§ 8 EinSiG")}, {_ext(KWG_ANH,"Informationsbogen für den Einleger, Anhang I KWG")}, {_ext(BAFIN_ES,"BaFin, Einlagensicherung und Anlegerentschädigung")}, {ABGERUFEN}.</li>
 <li>Schenkungsteuer: BFH, Urteil vom 23.11.2011, II R 33/10; Freibeträge: § 16 ErbStG.</li>
 <li>Pfändung: {_ext(ZPO("850l"),"§ 850l ZPO")}; Haftung: {_ext(BGB(421),"§ 421 BGB")}.</li></ul></div>'''),
@@ -200,7 +200,7 @@ def register(art,P,eur):
 <li>Pfändungsfreigrenze 2026: {_ext(PFGR_2026,"Pfändungsfreigrenzenbekanntmachung 2026 (BGBl. 2026 I Nr. 80)")} und {_ext(BMJ_PF,"Bundesministerium der Justiz, Pfändungsfreigrenzen")}, {ABGERUFEN}.</li>
 <li>P-Konto: {_ext(ZPO("850k"),"§ 850k ZPO")}, {_ext(ZPO("850l"),"§ 850l ZPO")}, {_ext(ZPO(899),"§ 899 ZPO")}, {_ext(ZPO(902),"§ 902 ZPO")}, {_ext(ZPO(903),"§ 903 ZPO")}, {ABGERUFEN}.</li>
 <li>Umwandlung, Bescheinigung, Gemeinschaftskonto, Kosten: {_ext(VZ_PKONTO,"Verbraucherzentrale, Fragen und Antworten zum P-Konto")}, {ABGERUFEN}.</li>
-<li>Preise der Basiskonten: Preis- und Leistungsverzeichnisse der Banken, verlinkt auf jeder Kontoseite.</li></ul></div>'''),
+<li>Preise der Basiskonten: Preis- und Leistungsverzeichnisse der Banken, verlinkt bei jedem Konto im Vergleich.</li></ul></div>'''),
       ],
       faq=[
        ('Wie hoch ist der Freibetrag auf dem P-Konto 2026?',f'Seit 1. Juli 2026 sind {eur(frei)} € pro Kalendermonat geschützt. Mit Bescheinigung erhöht sich der Betrag für Unterhaltspflichten, Kindergeld und bestimmte Sozialleistungen.'),
@@ -238,7 +238,7 @@ def register(art,P,eur):
 <li><b>girocard.</b> Die klassische Bankkarte für Geschäfte und Geldautomaten in Deutschland. Online geht damit wenig. Bei ING gibt es sie für Minderjährige nicht, bei comdirect auf Wunsch kostenlos, bei BBBank und GLS ist sie dabei.</li>
 <li><b>Visa oder Mastercard Debit.</b> Zahlt vom Guthaben, funktioniert im Laden, online, im Ausland und in Apple Pay oder Google Pay. ING, DKB, comdirect und TARGOBANK geben sie Minderjährigen kostenlos. Bei norisbank gibt es die Mastercard ab 12 Jahren für 12 € im Jahr, bei BBBank die Visa BasicCard ab 12 für 9,90 € im Jahr.</li>
 <li><b>Prepaid-Kreditkarte.</b> Wird vorher aufgeladen, etwa für Reisen. Nur bei wenigen Banken, oft gegen Gebühr.</li></ul>
-<p>Limits legen die Eltern in der App fest, etwa pro Tag oder pro Woche. Viele Banken sperren Glücksspiel- und Erwachsenenangebote für Minderjährige automatisch. Abheben ist bei den meisten Konten an eigenen Automaten kostenlos, an fremden kostet es teils 3 bis 4 €, das steht auf der Kontoseite.</p></div>'''),
+<p>Limits legen die Eltern in der App fest, etwa pro Tag oder pro Woche. Viele Banken sperren Glücksspiel- und Erwachsenenangebote für Minderjährige automatisch. Abheben ist bei den meisten Konten an eigenen Automaten kostenlos, an fremden kostet es teils 3 bis 4 €, das steht in den Konditionen des Kontos.</p></div>'''),
        ('Taschengeldkonto oder Jugendkonto',_tbl(['','Taschengeldkonto (Kinderkonto)','Jugendkonto'],[
             ('Alter','ab Geburt oder ab 7','ab 7 oder 12 bis 17'),
             ('Karte','oft keine oder girocard mit kleinem Limit','Debitkarte mit Online-Zahlung und Wallet'),
@@ -259,10 +259,10 @@ def register(art,P,eur):
 <li>Muss ein Elternteil Kunde der Bank sein?</li>
 <li>Welche Karte gibt es ab welchem Alter, und was kostet eine zweite oder eine Ersatzkarte?</li>
 <li>Lassen sich Limits und Online-Zahlungen in der App einstellen und sperren?</li>
-<li>Gibt es Zinsen auf das Guthaben? Bei einigen Kinderkonten ja, das steht auf der Kontoseite.</li>
+<li>Gibt es Zinsen auf das Guthaben? Bei einigen Kinderkonten ja, das steht in den Konditionen des Kontos.</li>
 <li>Was passiert mit 18, und was kostet das Konto dann?</li></ul></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Alter, Karten, Kontoführung, Umstellung: Preis- und Leistungsverzeichnisse und Produktseiten der Banken, verlinkt auf jeder Kontoseite. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
+<li>Alter, Karten, Kontoführung, Umstellung: Preis- und Leistungsverzeichnisse und Produktseiten der Banken, verlinkt bei jedem Konto im Vergleich. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
 <li>Geschäftsfähigkeit und Vertretung: {_ext(BGB(104),"§ 104 BGB")}, {_ext(BGB(106),"§ 106 BGB")}, {_ext(BGB(110),"§ 110 BGB")}, {_ext(BGB(1629),"§ 1629 BGB")}, {ABGERUFEN}.</li></ul></div>'''),
       ],
       faq=[
@@ -295,7 +295,7 @@ def register(art,P,eur):
 <li>{_fmtl(gesch) if gesch else "Mehrere Banken"} führen eigene Geschäftskonten, die nur für Geschäftskunden gedacht sind und deshalb nicht im Vergleich stehen. Bei diesen Banken ist das Privatkonto für Selbstständige meist tabu.</li>
 <li>N26 und bunq haben eigene Business-Tarife, die wie die Privatkonten funktionieren, aber auf die Person als Unternehmer laufen. Für Einzelunternehmer ohne Handelsregister sind sie oft die einfachste Lösung mit App, Unterkonten und Export der Umsätze.</li>
 <li>Filialbanken wie Commerzbank, Deutsche Bank, Postbank, HypoVereinsbank und die Genossenschaftsbanken bieten Geschäftskonten mit Preis pro Buchung, meist 0,10 € bis 0,50 € je Posten plus Grundpreis.</li>
-<li>Gratis-Bedingungen mit Geldeingang zählen bei vielen Banken jeden Eingang, auch Kundenzahlungen. Manche verlangen aber ausdrücklich Gehalt oder Rente. Das steht auf jeder Kontoseite.</li></ul>
+<li>Gratis-Bedingungen mit Geldeingang zählen bei vielen Banken jeden Eingang, auch Kundenzahlungen. Manche verlangen aber ausdrücklich Gehalt oder Rente. Das steht bei jedem Konto im Vergleich.</li></ul>
 <p>Frag vor der Eröffnung schriftlich nach, ob du das Konto für dein Unternehmen nutzen darfst, und bewahre die Antwort auf.</p></div>'''),
        ('Welche Privatkonten für ein kleines Unternehmen in Frage kommen',_tbl(['Konto','Kontoführung','Gratis-Bedingung','Eröffnung'],srow)+
         f'''<div class="prose"><p>Die Tabelle zeigt die zehn günstigsten Konten für alle ohne Gehaltsbedingung, sortiert nach regulärer Kontoführung. Für ein Nebengewerbe mit wenigen Buchungen reicht oft ein kostenloses Zweitkonto, wenn die Bank die Nutzung erlaubt. Wer viele Buchungen hat, achtet auf Pauschalpreise statt Einzelposten und auf Bargeldeinzahlung, die bei Online-Banken oft fehlt oder extra kostet. Alle Konten mit Jahreskosten für dein Profil stehen im <a href="{G1}">Girokonto-Vergleich</a>.</p>
@@ -306,7 +306,7 @@ def register(art,P,eur):
        ('Umsatzsteuer und Kleinunternehmer',f'''<div class="prose"><p>Seit 2025 gilt die Kleinunternehmerregelung (§ 19 UStG), wenn dein Umsatz im Vorjahr höchstens 25.000 € betrug und im laufenden Jahr 100.000 € nicht übersteigt. Dann weist du keine Umsatzsteuer aus und kannst keine Vorsteuer abziehen. Überschreitest du die 100.000 € im laufenden Jahr, bist du ab diesem Umsatz steuerpflichtig, nicht erst im nächsten Jahr. Alle gewerblichen und freiberuflichen Tätigkeiten einer Person werden zusammengezählt.</p>
 <p>Wer Umsatzsteuer ausweist, gibt die Umsatzsteuer-Voranmeldung monatlich oder vierteljährlich über ELSTER ab und zahlt die Differenz aus eingenommener Umsatzsteuer und Vorsteuer. Das Geld auf dem Konto gehört also zum Teil dem Finanzamt. Ein eigenes Unterkonto dafür verhindert böse Überraschungen. Zum Umrechnen zwischen netto und brutto hilft der <a href="{P}de/rechner/mehrwertsteuer/">Mehrwertsteuerrechner</a>.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
-<li>Kontoführung, Gratis-Bedingungen und Eröffnung: Preis- und Leistungsverzeichnisse der Banken, verlinkt auf jeder Kontoseite. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
+<li>Kontoführung, Gratis-Bedingungen und Eröffnung: Preis- und Leistungsverzeichnisse der Banken, verlinkt bei jedem Konto im Vergleich. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li>
 <li>Kleinunternehmerregelung: {_ext(USTG_19,"§ 19 UStG")}, {ABGERUFEN}.</li>
 <li>Aufbewahrungsfristen: {_ext(AO_147,"§ 147 AO")}, {ABGERUFEN}.</li></ul></div>'''),
       ],

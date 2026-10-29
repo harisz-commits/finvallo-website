@@ -77,6 +77,15 @@
     chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
     q.value = ''; art.value = ''; sort.value = 'rank'; apply();
   });
+  // Sprung auf ein Konto (#gk-…, auch von alten Kontoseiten): Filter lösen, Konditionen aufklappen, hinscrollen
+  function zeige() {
+    var h = decodeURIComponent(location.hash.slice(1)), it = h.indexOf('gk-') === 0 && document.getElementById(h);
+    if (!it) return;
+    if (it.hidden || (it.closest('section') || {}).hidden) reset.click();
+    var d = it.querySelector('details.more'); if (d) d.open = true;
+    it.scrollIntoView({ block: 'start' });
+  }
+  window.addEventListener('hashchange', zeige);
   box.hidden = false; if (calcBox) calcBox.hidden = false;
-  apply();
+  apply(); zeige();
 })();

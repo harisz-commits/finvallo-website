@@ -40,6 +40,7 @@
     var u = new URLSearchParams(location.search);
     if (u.get('betrag')) betrag.value = u.get('betrag');
     if (u.get('laufzeit') && lz.querySelector('option[value="' + u.get('laufzeit') + '"]')) lz.value = u.get('laufzeit');
+    if (u.get('q')) q.value = u.get('q');
   } catch (e) {}
 
   function num(el) { var v = parseFloat(String(el.value).replace(/\./g, '').replace(',', '.')); return isFinite(v) && v > 0 ? v : 0; }
@@ -83,6 +84,7 @@
       var p = new URLSearchParams(location.search);
       if (betrag.value !== def.b) p.set('betrag', String(b)); else p.delete('betrag');
       if (lz.value !== def.m) p.set('laufzeit', lz.value); else p.delete('laufzeit');
+      if (t) p.set('q', t); else p.delete('q');
       var qs = p.toString(); history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
     } catch (e) {}
   }
@@ -99,6 +101,23 @@
     chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
     q.value = ''; sitz.value = ''; rat.value = ''; zz.value = ''; sort.value = 'zins'; apply();
   });
+  // Sprung auf ein Angebot (#fg-…, auch von alten Angebotsseiten): passende Laufzeit wählen, Filter lösen, aufklappen, hinscrollen
+  function zeige() {
+    var h = decodeURIComponent(location.hash.slice(1));
+    if (h.indexOf('fg-') !== 0) return;
+    var it = items.filter(function (x) { return x.id === h; })[0];
+    if (!it) return;
+    var m = parseFloat(lz.value), ms = it._k.z.map(function (r) { return r[0]; });
+    if (ms.indexOf(m) < 0 && !lz.dataset.nav) {
+      var best = it._k.z.reduce(function (a, r) { return lz.querySelector('option[value="' + r[0] + '"]') && (!a || r[1] > a[1]) ? r : a; }, null);
+      if (best) lz.value = String(best[0]);
+    }
+    open = true; apply();
+    if (it.hidden) { chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); }); q.value = ''; sitz.value = ''; rat.value = ''; zz.value = ''; apply(); }
+    var d = it.querySelector('details.more'); if (d) d.open = true;
+    if (it.parentNode === list) it.scrollIntoView({ block: 'start' });
+  }
+  window.addEventListener('hashchange', zeige);
   box.hidden = false; calcBox.hidden = false;
-  apply();
+  apply(); zeige();
 })();

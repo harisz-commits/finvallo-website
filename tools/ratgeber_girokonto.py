@@ -23,7 +23,7 @@ def register(art,P,eur):
     d,ks=G.load('at')
     for k in ks: k.setdefault('geprueft',d['stand'])
     G.rate(ks)
-    def L(k,label=None): return f'<a class="lnk" href="{P}at/girokonto/{k["slug"]}/">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
+    def L(k,label=None): return f'<a class="lnk" href="{P}at/girokonto/#gk-{k["slug"]}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
     alle=[k for k in ks if k['art'] in ('standard','premium')]
     pr=G.PROFIL['standard']
     cost=lambda k:G.kosten(k,pr['ein'],pr['alter'],pr['abh'])['total']
@@ -58,7 +58,7 @@ def register(art,P,eur):
         '<div class="prose"><p>Zusammen sind das etwa 12 Geschäftstage, also gut zwei Wochen. Willst du deinen Arbeitgeber und andere Zahler lieber selbst informieren, muss dir die Bank dafür Musterbriefe geben.</p></div>'),
        ('Was der Wechsel kostet','''<div class="prose"><p>Für die Übermittlung deiner Daten darf keine Bank etwas verlangen. Für weitere Leistungen darf sie nur dann etwas verrechnen, wenn das im Kontovertrag ausdrücklich steht und der Betrag angemessen ist. Bis zur Schließung darf die alte Bank die Kontoführung nur anteilig verrechnen. Ist das alte Konto im Minus, musst du es zuerst ausgleichen, sonst kann es nicht geschlossen werden.</p></div>'''),
        ('Wechsel zu einer Online-Bank aus dem Ausland',f'''<div class="prose"><p>Der gesetzliche Service gilt nur, wenn <b>beide Banken ihren Sitz in Österreich</b> haben. Im Vergleich betrifft das {E(G.K.fmtl(aus) if hasattr(G.K,"fmtl") else ", ".join(aus))}. Wechselst du zu einer Bank in einem anderen EU-Land, muss dir deine österreichische Bank die nötigen Daten kostenlos geben. Die Daueraufträge richtest du dann gemeinsam mit der neuen Bank ein, meist selbst in der App.</p>
-<p>Manche dieser Banken geben dir keine österreichische IBAN, sondern eine aus Deutschland, Litauen oder den Niederlanden. Welche IBAN du bekommst, steht auf jeder Kontoseite. Laut SEPA-Verordnung der EU dürfen Arbeitgeber und Firmen eine IBAN aus einem anderen EU-Land nicht ablehnen.</p></div>'''),
+<p>Manche dieser Banken geben dir keine österreichische IBAN, sondern eine aus Deutschland, Litauen oder den Niederlanden. Welche IBAN du bekommst, steht bei jedem Konto im Vergleich. Laut SEPA-Verordnung der EU dürfen Arbeitgeber und Firmen eine IBAN aus einem anderen EU-Land nicht ablehnen.</p></div>'''),
        ('Checkliste für den Wechsel','''<div class="prose"><ul class="checks">
 <li>Gehalt oder Pension: Hat der Arbeitgeber oder die Pensionsversicherung die neue IBAN?</li>
 <li>Familienbeihilfe, Kinderbetreuungsgeld, Arbeitslosengeld: Ist das Finanzamt oder das AMS informiert?</li>
@@ -70,7 +70,7 @@ def register(art,P,eur):
 <p>Passende Listen: <a href="{B}kostenlos/">kostenlose Girokonten</a>, <a href="{B}gehaltskonto/">Gehaltskonten</a> und <a href="{B}filiale/">Konten mit Filiale</a>.</p></div>'''),
        ('Quellen',f'''<div class="prose"><ul>
 <li>Ablauf, Fristen, Kosten und Kündigung: Arbeiterkammer Wien, {_ext(AK_WECHSEL,"Girokonto wechseln: Das sollten Sie wissen")}, abgerufen am 27.10.2026. Gesetzliche Grundlage: §§ 14 bis 21 Verbraucherzahlungskontogesetz (VZKG).</li>
-<li>Kontopreise und IBAN: Entgeltinformationen der Banken, verlinkt auf jeder Kontoseite.</li></ul></div>'''),
+<li>Kontopreise und IBAN: Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich.</li></ul></div>'''),
       ],
       faq=[
        ('Wie lange dauert ein Kontowechsel in Österreich?','Mit dem gesetzlichen Kontowechsel-Service etwa 12 Geschäftstage: 2 Tage für die Anfrage der neuen Bank, 5 Tage für die Daten der alten Bank und 5 Tage zum Einrichten der Aufträge.'),
@@ -125,7 +125,7 @@ def register(art,P,eur):
        ('Quellen',f'''<div class="prose"><ul>
 <li>Anspruch, Höchstentgelt, Leistungen, Ablehnung, Frist: Arbeiterkammer, {_ext(AK_BASIS,"Bankkonto für Jedermann")}, abgerufen am 27.10.2026.</li>
 <li>Schutzbedürftige Personen (Verordnung BGBl II 255/2016) und Kündigungsgründe: {_ext(BAWAG_INFO,"BAWAG, Information zum Verbraucherzahlungskonto (VZKG-Konto)")}.</li>
-<li>Preise der Basiskonten: Entgeltinformationen der Banken, verlinkt auf jeder Kontoseite.</li></ul></div>'''),
+<li>Preise der Basiskonten: Entgeltinformationen der Banken, verlinkt bei jedem Konto im Vergleich.</li></ul></div>'''),
       ],
       faq=[
        ('Wer hat Anspruch auf ein Basiskonto in Österreich?','Jede Verbraucherin und jeder Verbraucher mit rechtmäßigem Aufenthalt in der EU, auch mit Schulden, schlechter Bonität oder im Privatkonkurs. Auch Menschen, die nicht abgeschoben werden können, haben Anspruch.'),
@@ -167,12 +167,12 @@ def register(art,P,eur):
        ('So findest du das günstigste Konto für dich',f'''<div class="prose"><p>Ein Konto ist nur dann günstig, wenn es zu deinem Alltag passt. Im <a href="{G1}">Girokonto-Vergleich</a> gibst du deinen Geldeingang, dein Alter und deine Abhebungen pro Monat ein. Wir prüfen dann bei jedem Konto die Gratis-Bedingung und rechnen die Kosten für ein Jahr aus. Brauchst du eine Filiale, findest du die besten Konten in der Liste <a href="{B}filiale/">Konten mit Filiale</a>.</p>
 <p>Für Studierende, Jugendliche und Kinder gibt es eigene Konten, die meist gratis sind: <a href="{B}studenten/">Studentenkonten</a>, <a href="{B}jugend/">Jugendkonten</a> und <a href="{B}kinder/">Kinderkonten</a>.</p></div>'''),
        ('Quellen','''<div class="prose"><ul>
-<li>Preise, Bedingungen, Bargeld, Fremdwährung und IBAN: Entgeltinformationen und Preislisten der Banken, verlinkt auf jeder Kontoseite. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li></ul></div>'''),
+<li>Preise, Bedingungen, Bargeld, Fremdwährung und IBAN: Entgeltinformationen und Preislisten der Banken, verlinkt bei jedem Konto im Vergleich. Die Werte werden beim Bauen dieser Seite aus den Kontodaten übernommen.</li></ul></div>'''),
       ],
       faq=[
        ('Welche Girokonten sind in Österreich wirklich kostenlos?',f'Ohne jede Bedingung kostenlos sind im Vergleich: {", ".join(k["name"]+" ("+k["bank"]+")" for k in gratis)}. Weitere {len(bedingt)} Konten sind mit regelmäßigem Geldeingang gratis.'),
        ('Gibt es ein kostenloses Girokonto mit Filiale?','Bei Banken mit Filiale ist die Kontoführung meist nur für Studierende, Jugendliche und Kinder gratis oder nur mit Bedingung. Die besten Konten mit Filiale stehen in der Bestenliste „Mit Filiale“.'),
-       ('Was zählt als Geldeingang für ein Gratis-Konto?','Das legt jede Bank selbst fest. Manche zählen nur Gehalt oder Pension, andere jeden Eingang. Die genaue Bedingung steht auf jeder Kontoseite.'),
+       ('Was zählt als Geldeingang für ein Gratis-Konto?','Das legt jede Bank selbst fest. Manche zählen nur Gehalt oder Pension, andere jeden Eingang. Die genaue Bedingung steht bei jedem Konto im Vergleich.'),
        ('Ist ein Konto mit deutscher IBAN ein Problem?','Laut SEPA-Verordnung der EU dürfen Arbeitgeber und Firmen eine IBAN aus einem anderen EU-Land nicht ablehnen. Bei manchen Behörden oder Formularen kann es trotzdem länger dauern.'),
       ],
       related=['girokonto-wechseln','basiskonto'])

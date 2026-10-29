@@ -1,5 +1,5 @@
 {
- "hinweis": "Partnerlinks (Affiliate). Schlüssel: Slug der Produktseite (kreditkarten, girokonto), bank_slug (festgeld, gilt nur für Direktangebote und die Bankseite, Angebote über Raisin oder CHECK24 behalten den Plattformlink) oder Anbieterkürzel p (anbieter). Nur Produkte eintragen, die es im Vergleich gibt; check.py meldet Schlüssel ohne Seite. Der Generator setzt rel=sponsored und den Stern am Button, Bewertung und Reihenfolge bleiben davon unberührt.",
+ "hinweis": "Partnerlinks (Affiliate). Schlüssel: Slug der Kartenseite (kreditkarten), Slug des Kontos im Vergleich (girokonto), bank_slug (festgeld, gilt nur für Direktangebote, Angebote über Raisin oder CHECK24 behalten den Plattformlink) oder Anbieterkürzel p (anbieter). Nur Produkte eintragen, die es im Vergleich gibt; check.py meldet Schlüssel, die es im Vergleich nicht gibt. Der Generator setzt rel=sponsored und den Stern am Button, Bewertung und Reihenfolge bleiben davon unberührt.",
  "at": {
   "kreditkarten": {
    "n26-standard": "https://c.neqty.net/trck/eclick/695a01d5a57bd43acfd92b8abd31d983",

@@ -172,10 +172,16 @@ for _l in FG.CFG:
     if fr.returncode: err += [x for x in fr.stdout.splitlines() if x] or ['Festgeld-Kontrolle: Fehler ' + fr.stderr[:200]]
 # Partnerlinks: jeder Schlüssel in daten/affiliate.json hat eine Seite, jeder sponsored-Link trägt den Stern, kein Partnerlink ohne sponsored
 import affiliate as AF
-_AP = {'kreditkarten': '{l}/kreditkarten/{k}/', 'girokonto': '{l}/girokonto/{k}/', 'festgeld': '{l}/festgeld/bank/{k}/', 'anbieter': '{l}/kreditkarten/anbieter/{k}/'}
+_AP = {'kreditkarten': '{l}/kreditkarten/{k}/', 'anbieter': '{l}/kreditkarten/anbieter/{k}/'}
+_FGB = {_l: {a['bank_slug'] for a in json.load(open(os.path.join(K.SP, 'daten', _l, 'festgeld.json'), encoding='utf-8'))['angebote']} for _l in ('at', 'de') if os.path.exists(os.path.join(K.SP, 'daten', _l, 'festgeld.json'))}
 for _l, _b, _k in AF.keys():
-    _p = _AP[_b].format(l=_l, k=_k)
-    if not os.path.exists(R + _p + 'index.html'): err.append(f'affiliate.json {_l}/{_b}/{_k}: keine Seite {_p}')
+    if _b in _AP:
+        _p = _AP[_b].format(l=_l, k=_k)
+        if not os.path.exists(R + _p + 'index.html'): err.append(f'affiliate.json {_l}/{_b}/{_k}: keine Seite {_p}')
+    elif _b == 'girokonto':
+        _gp = R + f'{_l}/girokonto/index.html'
+        if not os.path.exists(_gp) or f'id="gk-{_k}"' not in open(_gp, encoding='utf-8').read(): err.append(f'affiliate.json {_l}/girokonto/{_k}: Konto nicht im Vergleich')
+    elif _b == 'festgeld' and _k not in _FGB.get(_l, set()): err.append(f'affiliate.json {_l}/festgeld/{_k}: Bank nicht im Vergleich')
 _AU = {u for _l, _b, _k in AF.keys() for u in [AF.link(_l, _b, _k)]}
 for f in pages:
     s = open(f, encoding='utf-8').read(); rel = f[len(R):]
