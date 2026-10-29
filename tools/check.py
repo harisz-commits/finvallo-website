@@ -189,6 +189,12 @@ for f in pages:
         a = m.group(0); href = re.search(r'href="([^"]*)"', a)
         if 'sponsored' in a and not re.match(r'[^<]*\*', s[m.end():m.end() + 80]): err.append(f'{rel}: sponsored-Link ohne Stern')
         if href and href.group(1) in _AU and 'sponsored' not in a: err.append(f'{rel}: Partnerlink ohne rel=sponsored')
+# FAQ: dieselbe Frage auf vielen Seiten ist Vorlagen-Füllstoff (gleichlautende Standardfragen fliegen raus, siehe docs/offen.md)
+_FQ = {}
+for f in pages:
+    for _q in set(re.findall(r'"@type": ?"Question", ?"name": ?"([^"]+)"', open(f, encoding='utf-8').read())): _FQ.setdefault(_q, []).append(f[len(R):])
+for _q, _ps in _FQ.items():
+    if len(_ps) > 4: err.append(f'FAQ-Frage auf {len(_ps)} Seiten gleich: „{_q}“ (z. B. {_ps[0]})')
 print(f'{len(pages)} Seiten, {len(sm)} Sitemap-Einträge geprüft')
 if err:
     print('FEHLER:'); print('\n'.join(err[:100])); sys.exit(1)

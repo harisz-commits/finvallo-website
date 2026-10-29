@@ -313,8 +313,7 @@ def list_page(ks,secs,d):
           +(f', weitere {sum(1 for k in secs["standard"] if k["kf_jahr"]>0 and k.get("gratis") and k["gratis"].get("kf_bedingt")==0)} mit Gehaltseingang oder Altersgrenze' if any(k["kf_jahr"]>0 and k.get("gratis") and k["gratis"].get("kf_bedingt")==0 for k in secs["standard"]) else '')+f'. Stand: {st}.')
     fq=[(f'Welches Girokonto ist in {N} das beste?',f'Laut Finvallo-Bewertung liegt das {top1["name"]} von {top1["bank"]} mit {de1(top1["stars"])} von 5 Sternen vorn. Die Bewertung rechnet mit einem typischen Fall ({eur(PROFIL["standard"]["ein"])} € Geldeingang, {PROFIL["standard"]["abh"]} Abhebungen pro Monat); mit deinen Zahlen kann ein anderes Konto besser passen. Stand: {st}.'),
         ('Welche Girokonten sind wirklich kostenlos?',f'{len(gratis)} Konten für alle kosten ohne Bedingung nichts'+(f', zum Beispiel {K.fmtl([k["name"]+" ("+k["bank"]+")" for k in gratis[:3]])}' if gratis else '')+'. Bei vielen anderen entfällt die Kontoführung ab einem monatlichen Geldeingang oder bis zu einem bestimmten Alter. Karte und Abhebungen können trotzdem extra kosten; das steht bei jedem Konto.'),
-        ('Wie wechsle ich das Girokonto?','Mit dem gesetzlichen Kontowechsel-Service: Die neue Bank holt Daueraufträge, Lastschriften und Gehaltszahlungen von der alten Bank, du musst nur zustimmen. Wie das genau läuft, steht im Ratgeber „Konto wechseln“.'),
-        ('Spielen Provisionen eine Rolle?','Nein. Sterne und Reihenfolge entstehen nach festen Regeln aus den Konditionen der Bank. Es gibt keine bezahlten Platzierungen.')]
+        ('Wie wechsle ich das Girokonto?','Mit dem gesetzlichen Kontowechsel-Service: Die neue Bank holt Daueraufträge, Lastschriften und Gehaltszahlungen von der alten Bank, du musst nur zustimmen. Wie das genau läuft, steht im Ratgeber „Konto wechseln“.')]
     ld['@graph'].append({"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]})
     body=f'''{hdr(P,rel)}
 <div class="wrap"><main id="app">
@@ -444,9 +443,7 @@ def bestenlisten(ks,BL):
         pr=PROFIL[top['art']]
         bsp=f'„Im Beispiel“ = Kosten im Jahr bei {"einem Geldeingang von "+eur(pr["ein"])+" € pro Monat, " if pr["ein"] else ""}{pr["alter"]} Jahren und {pr["abh"]} {"Abhebung" if pr["abh"]==1 else "Abhebungen"} pro Monat. Mit deinen Zahlen rechnest du im <a class="lnk" href="../../">Girokonto-Vergleich</a>.'
         kurz=f'<b>Kurz gesagt:</b> Platz 1 ist laut Finvallo das {E(top["name"])} von {E(top["bank"])} mit {de1(top["stars"])} von 5 Sternen'+(f', vor dem {E(X[1]["name"])} von {E(X[1]["bank"])}' if len(X)>1 else '')+(f' und dem {E(X[2]["name"])} von {E(X[2]["bank"])}' if len(X)>2 else '')+f'. {len(X)} Konten in dieser Liste. Stand: {S}.'
-        fq=[(f'Welches Konto ist in {N} am besten in der Kategorie „{c["t"]}“?',f'Laut Finvallo-Bewertung liegt das {top["name"]} von {top["bank"]} vorn, mit {de1(top["stars"])} von 5 Sternen. Stand: {S}.'),
-            ('Welche Konten kommen in diese Liste?',c['d']),
-            ('Spielen Provisionen eine Rolle?','Nein. Provisionen haben keinen Einfluss auf Sterne oder Reihenfolge, und es gibt keine bezahlten Platzierungen.')]
+        fq=[(f'Welches Konto ist in {N} am besten in der Kategorie „{c["t"]}“?',f'Laut Finvallo-Bewertung liegt das {top["name"]} von {top["bank"]} vorn, mit {de1(top["stars"])} von 5 Sternen. Stand: {S}.')]
         ld=K.graph(rel,t,d,[(CC['N'],f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),('Bestenlisten',base),(c['t'],rel)],
             [{"@type":"ItemList","name":c['h']+' in {N}',"numberOfItems":len(X),"itemListElement":[{"@type":"ListItem","position":i+1,"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{url(k)}"} for i,k in enumerate(X)]},
              {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in fq]}])

@@ -30,7 +30,7 @@
   items.forEach(function (it, i) { it.dataset.ord = i; it._k = JSON.parse(it.dataset.k); });
   var $ = function (s, el) { return (el || box).querySelector(s); };
   var betrag = $('[data-in="betrag"]', calcBox), lz = $('[data-in="lz"]', calcBox);
-  var q = $('[data-q]'), sitz = $('[data-sitz]'), rat = $('[data-rat]'), zz = $('[data-zz]'), sort = $('[data-sort]'),
+  var q = $('[data-q]'), sitz = $('[data-sitz]'), rat = $('[data-rat]'), zz = $('[data-zz]'), vt = $('[data-vt]'), sort = $('[data-sort]'),
       count = $('[data-count]'), reset = $('[data-reset]'), more = document.querySelector('[data-more]');
   var chips = [].slice.call(box.querySelectorAll('[data-flag]'));
   var LIMIT = +list.dataset.limit || 0, open = false, def = { b: betrag.value, m: lz.value };
@@ -41,18 +41,20 @@
     if (u.get('betrag')) betrag.value = u.get('betrag');
     if (u.get('laufzeit') && lz.querySelector('option[value="' + u.get('laufzeit') + '"]')) lz.value = u.get('laufzeit');
     if (u.get('q')) q.value = u.get('q');
+    if (u.get('vt') && vt && vt.querySelector('option[value="' + u.get('vt') + '"]')) vt.value = u.get('vt');
+    (u.get('f') || '').split(',').forEach(function (x) { chips.forEach(function (c) { if (c.dataset.flag === x) c.setAttribute('aria-pressed', 'true'); }); });
   } catch (e) {}
 
   function num(el) { var v = parseFloat(String(el.value).replace(/\./g, '').replace(',', '.')); return isFinite(v) && v > 0 ? v : 0; }
   function apply() {
     var b = num(betrag), m = parseFloat(lz.value);
     var on = chips.filter(function (c) { return c.getAttribute('aria-pressed') === 'true'; }).map(function (c) { return c.dataset.flag; });
-    var t = (q.value || '').toLowerCase().trim(), s = sitz.value, r = +rat.value || 0, z = zz.value, n = 0;
+    var t = (q.value || '').toLowerCase().trim(), s = sitz.value, r = +rat.value || 0, z = zz.value, w = vt ? vt.value : '', n = 0;
     items.forEach(function (it) {
       var c = calc(it._k, b, m), f = ' ' + (it.dataset.f || '') + ' ';
       it._c = c;
       var ok = c.why !== 'lz' && on.every(function (x) { return f.indexOf(' ' + x + ' ') >= 0; }) && (!t || it.dataset.q.indexOf(t) >= 0) &&
-               (!s || it.dataset.sitz === s) && (+it.dataset.rat || 0) >= r && (!z || it.dataset.zz === z);
+               (!s || it.dataset.sitz === s) && (+it.dataset.rat || 0) >= r && (!z || it.dataset.zz === z) && (!w || it.dataset.vt === w);
       it.hidden = !ok;
       it.classList.toggle('dim', ok && !c.fit);
       if (!ok) return;
@@ -79,18 +81,20 @@
     });
     if (more) { more.hidden = !LIMIT || open || shown <= LIMIT; more.textContent = 'Alle ' + shown + ' Angebote zeigen'; }
     count.textContent = n === 1 ? '1 Angebot' : n + ' Angebote';
-    reset.hidden = !(on.length || t || s || r || z || sort.value !== 'zins');
+    reset.hidden = !(on.length || t || s || r || z || w || sort.value !== 'zins');
     try {
       var p = new URLSearchParams(location.search);
       if (betrag.value !== def.b) p.set('betrag', String(b)); else p.delete('betrag');
       if (lz.value !== def.m) p.set('laufzeit', lz.value); else p.delete('laufzeit');
       if (t) p.set('q', t); else p.delete('q');
+      if (on.length) p.set('f', on.join(',')); else p.delete('f');
+      if (w) p.set('vt', w); else p.delete('vt');
       var qs = p.toString(); history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
     } catch (e) {}
   }
   chips.forEach(function (c) { c.addEventListener('click', function () { c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); apply(); }); });
   [q, betrag].forEach(function (el) { el.addEventListener('input', apply); });
-  [sitz, rat, zz, sort].forEach(function (el) { el.addEventListener('change', apply); });
+  [sitz, rat, zz, vt, sort].forEach(function (el) { if (el) el.addEventListener('change', apply); });
   // Auf den Laufzeit-Seiten stehen nur Angebote mit dieser Laufzeit: andere Laufzeit = Sprung zum Gesamtvergleich
   lz.addEventListener('change', function () {
     if (lz.dataset.nav) location.href = lz.dataset.nav + '?laufzeit=' + lz.value + (betrag.value !== def.b ? '&betrag=' + num(betrag) : '');
@@ -99,7 +103,7 @@
   if (more) more.addEventListener('click', function () { open = true; apply(); });
   reset.addEventListener('click', function () {
     chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
-    q.value = ''; sitz.value = ''; rat.value = ''; zz.value = ''; sort.value = 'zins'; apply();
+    q.value = ''; sitz.value = ''; rat.value = ''; zz.value = ''; if (vt) vt.value = ''; sort.value = 'zins'; apply();
   });
   // Sprung auf ein Angebot (#fg-…, auch von alten Angebotsseiten): passende Laufzeit wählen, Filter lösen, aufklappen, hinscrollen
   function zeige() {
@@ -113,11 +117,18 @@
       if (best) lz.value = String(best[0]);
     }
     open = true; apply();
-    if (it.hidden) { chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); }); q.value = ''; sitz.value = ''; rat.value = ''; zz.value = ''; apply(); }
+    if (it.hidden) { chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); }); q.value = ''; sitz.value = ''; rat.value = ''; zz.value = ''; if (vt) vt.value = ''; apply(); }
     var d = it.querySelector('details.more'); if (d) d.open = true;
     if (it.parentNode === list) it.scrollIntoView({ block: 'start' });
   }
   window.addEventListener('hashchange', zeige);
+  // Klick auf eine Laufzeit in der Zinstabelle: Laufzeit im Rechner wählen und zur Liste springen
+  [].slice.call(document.querySelectorAll('[data-setlz]')).forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (!lz.querySelector('option[value="' + b.dataset.setlz + '"]')) return;
+      lz.value = b.dataset.setlz; apply(); calcBox.scrollIntoView({ block: 'start' });
+    });
+  });
   box.hidden = false; calcBox.hidden = false;
   apply(); zeige();
 })();
