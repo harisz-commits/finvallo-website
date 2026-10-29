@@ -41,8 +41,7 @@ def _k(k):
 
 
 def _kt(c, k):
-    v = _k(k)
-    return 'nichts' if not v else c['eur'](v) + ' €'
+    return c['eur'](_k(k)) + ' €'
 
 
 def _n(n, a, b):
@@ -140,6 +139,12 @@ def _eingang(X):
     return (min(xs), max(xs)) if xs else None
 
 
+def _vgl_satz(c, a, b, wer):
+    if a == 0:
+        return f'Mindestens die Hälfte der Standardkonten {wer} kostet im Standardfall nichts, bei den Standardkonten der Banken mit Filialen in unserem Vergleich liegt der Median bei {c["eur"](b)} € im Jahr.'
+    return f'Im Standardfall kosten die Standardkonten {wer} im Mittel (Median) {c["eur"](a)} € im Jahr, die Standardkonten der Banken mit Filialen in unserem Vergleich {c["eur"](b)} €.'
+
+
 def _filial_std(c, ausser):
     return [k for k in c['alle'] if k['art'] == 'standard' and k['bank'] not in ausser and k.get('eroeffnung') in ('filiale', 'beides')]
 
@@ -158,12 +163,12 @@ def _uk_daten(c):
     billig = min(X, key=_k)
     frei = [k for k in X if _k(k) == 0]
     s = f'In der Liste stehen {_n(n, "Konto", "Konten")} von {_n(b, "Bank", "Banken")}. '
-    if iban:
-        s += f'Bei {len(iban)} davon bekommt jedes Unterkonto laut Bank eine eigene IBAN. '
-    if mx and mx > 1:
+    if mx and 1 < mx < 50:
         s += f'Die meisten Unterkonten, bis zu {mx}, bietet {_und([c["link"](k) for k in top[:3]])}. '
+    elif mx and mx >= 50:
+        s += f'Die meisten Unterkonten bietet {_und([c["link"](k) for k in top[:3]])}. '
     s += f'Im Standardfall am günstigsten ist {c["link"](billig)} mit {_kt(c, billig)} im Jahr'
-    s += (f'; insgesamt {_n(len(frei), "Konto kostet", "Konten kosten")} dich im Standardfall nichts.' if len(frei) > 1 else '.')
+    s += (f'. {_n(len(frei), "Konto kostet", "Konten kosten")} dich im Standardfall gar nichts.' if len(frei) > 1 else '.')
     rows = [[c['link'](k), E(c['ukT'](k)), E(c['kfT'](k)), _kt(c, k)] for k in X]
     return dict(X=X, n=n, iban=iban, s=s, rows=rows)
 
@@ -569,7 +574,7 @@ def _direkt_tab(c, d, at):
 def _direkt_satz(c, d, at):
     s = f'In der Liste stehen {_n(len(d["X"]), "Konto", "Konten")} von {_n(len(d["ban"]), "Direktbank", "Direktbanken")}. '
     if d['frei']:
-        s += f'{_n(len(d["frei"]), "Konto kostet", "Konten kosten")} dich in unserem Standardfall nichts, weil die Bedingung für die Gratis-Kontoführung erfüllt ist. '
+        s += f'{_n(len(d["frei"]), "Konto kostet", "Konten kosten")} dich in unserem Standardfall nichts, entweder ohne Bedingung oder weil die Gratis-Bedingung im Standardfall erfüllt ist. '
     if d['ein']:
         lo, hi = d['ein']
         s += (f'Wo die Gratis-Kontoführung an einen Eingang geknüpft ist, liegt die Schwelle zwischen {c["eur"](lo)} € und {c["eur"](hi)} € im Monat. ' if lo != hi
@@ -584,7 +589,7 @@ def _direktbanken_de(c):
     secs = []
     vgl = ''
     if d and d['md'] is not None and d['mf'] is not None and d['fil']:
-        vgl = f'Das zeigt sich in unseren Daten: Im Standardfall kosten die Standardkonten der Direktbanken in dieser Liste im Mittel (Median) {c["eur"](d["md"])} € im Jahr, die Standardkonten der Banken mit Filialnetz in unserem Vergleich {c["eur"](d["mf"])} €.'
+        vgl = 'Das zeigt sich in unseren Daten. ' + _vgl_satz(c, d['md'], d['mf'], 'der Direktbanken in dieser Liste')
     secs.append(('Was eine Direktbank ausmacht', _p(
         'Eine Direktbank hat keine Filialen, in die du gehen kannst. Konto eröffnen, Überweisungen, Karte sperren, Dispo ändern: Alles läuft über Website, App oder Telefon. Viele Direktbanken gibt es schon seit Jahrzehnten, oft als Tochter einer großen Bank. Sie sind also keine Start-ups, sondern etablierte Institute, meist mit Banklizenz in Deutschland oder als deutsche Niederlassung einer europäischen Bank.',
         f'Der Unterschied zur Neobank: Direktbanken kommen aus der Zeit von Telefon- und Onlinebanking und bieten meist die ganze Palette, also Girokonto, Tagesgeld, Depot, Ratenkredit und Baufinanzierung. Neobanken sind jünger, ganz aufs Smartphone ausgelegt und starten oft mit einem schmaleren Angebot. Die findest du in der Liste {c["liste"]("neobanken", "Neobanken")}.',
@@ -688,7 +693,7 @@ def _direktbanken_at(c):
     if d:
         extra = ''
         if d['md'] is not None and d['mf'] is not None and d['fil']:
-            extra = f'Zum Vergleich: Die Standardkonten der Direktbanken in dieser Liste kosten im Standardfall im Mittel (Median) {c["eur"](d["md"])} € im Jahr, die Standardkonten der Banken mit Filialen in unserem Vergleich {c["eur"](d["mf"])} €.'
+            extra = 'Zum Vergleich: ' + _vgl_satz(c, d['md'], d['mf'], 'der Direktbanken in dieser Liste')
         if d['ausl']:
             extra += f' {_und([E(b) for b in d["ausl"]])} {"vergibt" if len(d["ausl"]) == 1 else "vergeben"} laut unseren Daten keine österreichische IBAN.'
         secs.append(('Die Direktbanken in der Liste', _p(_direkt_satz(c, d, True), extra) + _direkt_tab(c, d, True)
@@ -929,6 +934,7 @@ def _neobanken_at(c):
         'Der gesetzliche Schutz ist in der EU gleich hoch: 100.000 € pro Person und Bank, Auszahlung innerhalb von sieben Arbeitstagen. Für bestimmte Lebensereignisse, etwa nach einem Wohnungsverkauf, sieht das österreichische Gesetz eine Zeit lang einen höheren Schutz vor. Bei ausländischen Banken gelten die Regeln ihres Sitzlands.',
         'Ein Rechenbeispiel: 50.000 € bei einer Neobank aus den Niederlanden und 80.000 € bei einer österreichischen Bank sind beide voll geschützt, weil jede Bank für sich zählt. Lägen die 130.000 € bei einer Bank, wären 30.000 € über der Grenze.',
         'Prüfen kannst du jede Bank in der Unternehmensdatenbank der FMA. Dort steht, ob ein Institut in Österreich eine Konzession hat, eine Zweigstelle betreibt oder nur über den EU-Pass Dienstleistungen anbietet.',
+        'Für die meisten ist das Thema übrigens beruhigend: Wer weniger als 100.000 € bei einer Bank hat, ist überall in der EU gleich geschützt.',
         tt,
         f'Mehr dazu im Ratgeber {c["rg"]("einlagensicherung", "Einlagensicherung")}.')))
     ft = ''
@@ -954,7 +960,8 @@ def _neobanken_at(c):
         'Unser Standardfall berücksichtigt typische Nutzung inklusive Karte und Bargeld. So siehst du in der Rangliste, was ein Konto im Jahr tatsächlich kostet, nicht nur, was auf dem Preisschild steht.'
         + (f' Am günstigsten ist im Standardfall {c["link"](d["billig"])} mit {_kt(c, d["billig"])} im Jahr.' if d else ''),
         'Bei den Bezahltarifen gilt: Rechne die Extras einzeln. Brauchst du die Versicherungen wirklich, oder hast du sie über eine Kreditkarte oder die Haushaltsversicherung schon? Ist dir eine Metallkarte einen Aufpreis wert? Oft reicht der kleinste Tarif, und das Geld für den großen ist auf einem Sparkonto besser aufgehoben.',
-        'Ein Kostenpunkt kommt gar nicht von der Bank: Im Urlaub außerhalb der Eurozone fragen Kassen und Bankomaten oft, ob sie gleich in Euro abrechnen sollen. Wähle immer die Landeswährung. Bei der Umrechnung vor Ort ist der Kurs meist deutlich schlechter als der deiner Bank.')))
+        'Ein Kostenpunkt kommt gar nicht von der Bank: Im Urlaub außerhalb der Eurozone fragen Kassen und Bankomaten oft, ob sie gleich in Euro abrechnen sollen. Wähle immer die Landeswährung. Bei der Umrechnung vor Ort ist der Kurs meist deutlich schlechter als der deiner Bank.',
+        'Schau nach dem ersten Monat in die Umsätze, welche Entgelte angefallen sind. Dann weißt du, ob der Tarif zu deiner Nutzung passt.')))
     secs.append(('Kontosperre, Beschwerde, Schlichtung', _p(
         'Neobanken prüfen Zahlungen stark automatisiert. Deshalb kommt es vor, dass ein Konto vorübergehend gesperrt wird, etwa nach einer ungewöhnlich hohen Überweisung. Bei Verdacht auf Geldwäsche muss die Bank Fragen stellen und darf dir den Grund nicht immer nennen.',
         _ul('Antworte schnell und vollständig auf Rückfragen, etwa mit Lohnzettel oder Kaufvertrag.',
@@ -1149,6 +1156,7 @@ def _nachhaltig_at(c):
         'Ein Blick auf die Website lohnt. Seriöse Banken stellen ihre Kriterien, Berichte und Mitgliedschaften frei zugänglich online. Wer erst auf Nachfrage etwas zeigt, hat vielleicht nicht viel zu zeigen.',
         'In Deutschland bewertet der Fair Finance Guide die Richtlinien großer Banken. Für Bankengruppen, die in beiden Ländern tätig sind, kann ein Blick dorthin aufschlussreich sein.',
         'Für Versicherungen, Pensionskassen und Vorsorgekassen gibt es eigene Nachhaltigkeitsberichte und teils Zertifizierungen. Ein Blick dorthin lohnt, weil dort oft viel mehr Geld liegt als am Girokonto.',
+        'Ein Siegel ist ein Hinweis, kein Beweis. Lies im Zweifel nach, welche Kriterien dahinterstehen und wer sie prüft.',
         'Weitere Orientierung geben die Nachhaltigkeitsberichte der Banken, Berichte von Umweltorganisationen über die Finanzierung fossiler Energie und Informationen von Arbeiterkammer und Verein für Konsumenteninformation.',
         'Seit 2021 müssen Finanzprodukte nach der EU-Offenlegungsverordnung angeben, ob sie ökologische oder soziale Merkmale bewerben. Das betrifft Fonds und Versicherungsprodukte, nicht das Girokonto. Ein „grünes Konto“ ist also kein geschützter Begriff.',
         'Und die FMA? Sie beaufsichtigt Banken auf Stabilität und die Einhaltung der Gesetze, nicht darauf, ob eine Bank nachhaltig ist. Sie hat aber einen Leitfaden veröffentlicht, wie Banken mit Nachhaltigkeitsrisiken umgehen sollen.')))
@@ -1180,6 +1188,7 @@ def _nachhaltig_at(c):
             '<b>Wertpapiere prüfen:</b> Fonds mit Umweltzeichen oder strengen Ausschlüssen statt eines beliebigen Standardprodukts. Ein Hinweis auf „Artikel 8“ heißt nur, dass ein Fonds ökologische oder soziale Merkmale bewirbt, „Artikel 9“ steht für ein ausdrückliches Nachhaltigkeitsziel.',
             '<b>Vorsorge ansehen:</b> Bei der betrieblichen Vorsorgekasse und der Pensionskasse nachfragen, nach welchen Kriterien sie veranlagen.',
         '<b>Versicherungen:</b> Auch Versicherer veranlagen Prämien. Frag bei Lebens- und Pensionsversicherungen nach den Kriterien.',
+        '<b>Im Betrieb mitreden:</b> Die Vorsorgekasse für die Abfertigung neu wählt der Arbeitgeber, in Betrieben mit Betriebsrat gemeinsam mit ihm. Sprich das Thema dort an.',
         '<b>Bürgerbeteiligungen:</b> Gemeinden und Energieversorger bieten Beteiligungen an Solar- oder Windkraftanlagen an. Das ist keine Bankeinlage und nicht durch die Einlagensicherung geschützt, aber ein direkter Weg, Geld in erneuerbare Energie zu stecken.'),
         f'Wenn du wechselst, übernimmt der Kontowechselservice nach dem VZKG die Umstellung für dich, siehe {c["rg"]("girokonto-wechseln", "Girokonto wechseln")}. Und keine Sorge um die Sicherheit: Auch bei nachhaltigen Banken ist dein Guthaben bis 100.000 € gesetzlich gesichert, mehr dazu unter {c["rg"]("einlagensicherung", "Einlagensicherung")}.',
         'Kleine Schritte zählen: Schon eine Notreserve von ein paar tausend Euro bei einer nachhaltigen Bank ist Geld, das jahrelang nach klaren Regeln arbeitet. Und wenn deine Bank eine eigene grüne Produktlinie hat, frag nach, ob die Kriterien auch für das Kreditgeschäft gelten.')))

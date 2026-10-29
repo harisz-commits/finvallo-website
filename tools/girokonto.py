@@ -450,7 +450,7 @@ def listen_ctx(land=None,ks=None,BL=None):
         old=(LAND,CC); LAND,CC=land,CFG[land]; K.use(land); _,ks=load(land); rate(ks); BL=best_lists(ks); LAND,CC=old
     P='../../../../'; G=f'{P}{land}/girokonto/'
     def link(k,label=None): return f'<a class="lnk" href="{G}#gk-{k["slug"]}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
-    def liste(slug,label): return f'<a class="lnk" href="{G}bestenlisten/{slug}/">{E(label)}</a>'
+    def liste(slug,label): return f'<a class="lnk" href="{G}bestenlisten/{slug}/">{E(label)}</a>' if (BL or {}).get(slug) else E(label)   # Liste gibt es in diesem Land nicht
     def rg(slug,label): return f'<a class="lnk" href="{P}{land}/ratgeber/{slug}/">{E(label)}</a>' if os.path.exists(R+f'{land}/ratgeber/{slug}/index.html') else E(label)
     return dict(land=land,N=CFG[land]['N'],code=CFG[land]['code'],P=P,G=G,lists=BL,alle=ks,eur=eur,pct=pct,kfT=kfT,kurzbed=kurzbed,altT=altT,ukT=ukT,
                 link=link,liste=liste,rg=rg,stand=dmy(max(k.get('geprueft') or k.get('stand') for k in ks)),bon=('Schufa' if land=='de' else 'KSV1870'))

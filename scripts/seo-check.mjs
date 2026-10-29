@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUB = join(ROOT, 'public') + '/';
-const GLUE_OK = ['1822direkt', 'ChatGPT', 'NordVPN', 'eSIM', 'PayPal', 'MasterCard', 'iPhone', 'iOS', 'myFlex', 'WiFi', 'BahnCard', 'eBay', 'MiCA', 'BayernLB', '1822TAN', 'OeNB', '0er-Jahr', 'eID', 'VideoIdent', 'WebID', 'E1kv', '1kv', '0TO9', 'meineBTV', 'Bank11direkt', 'GoBD', 'meineSCHUFA', '069NXT', '100pro'];
+const GLUE_OK = ['1822direkt', 'ChatGPT', 'NordVPN', 'eSIM', 'PayPal', 'MasterCard', 'iPhone', 'iOS', 'myFlex', 'WiFi', 'BahnCard', 'eBay', 'MiCA', 'BayernLB', '1822TAN', 'OeNB', '0er-Jahr', 'eID', 'OeAD', 'VideoIdent', 'WebID', 'E1kv', '1kv', '0TO9', 'meineBTV', 'Bank11direkt', 'GoBD', 'meineSCHUFA', '069NXT', '100pro'];
 const LATER = new Set(['assets/haris.jpg']); // Foto wird nachgeliefert
 const ALLOWED = JSON.parse(readFileSync(join(ROOT, 'tools/daten/zaehler.json'), 'utf8'));
 const unesc = s => s.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'");

@@ -213,6 +213,9 @@ Redirect 301 /at/kreditkarten/anbieter/santander/ https://finvallo.com/at/kredit
 Redirect 301 /at/kreditkarten/anbieter/tf-bank/ https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/
 Redirect 301 /at/kreditkarten/anbieter/trade-republic/ https://finvallo.com/at/kreditkarten/trade-republic-karte/
 Redirect 301 /at/kreditkarten/anbieter/wise/ https://finvallo.com/at/kreditkarten/wise-karte/
+Redirect 301 /at/ratgeber/gemeinschaftskonto/ https://finvallo.com/at/girokonto/bestenlisten/gemeinschaftskonto/
+Redirect 301 /at/ratgeber/kinderkonto-jugendkonto/ https://finvallo.com/at/girokonto/bestenlisten/kinder-jugendkonto/
+Redirect 301 /at/ratgeber/kostenloses-girokonto/ https://finvallo.com/at/girokonto/bestenlisten/kostenlos/
 Redirect 301 /at/ratgeber/punkte/ https://finvallo.com/at/ratgeber/punkte-sammeln-at/
 Redirect 301 /de/festgeld/0to9-festgeld-de-raisin/ https://finvallo.com/de/festgeld/#fg-0to9-festgeld-de-raisin
 Redirect 301 /de/festgeld/1-jahr/ https://finvallo.com/de/festgeld/?laufzeit=12
@@ -847,5 +850,8 @@ Redirect 301 /de/kreditkarten/anbieter/wise/ https://finvallo.com/de/kreditkarte
 Redirect 301 /de/kreditkarten/tui-card-classic/ https://finvallo.com/de/kreditkarten/
 Redirect 301 /de/kreditkarten/tui-card-gold/ https://finvallo.com/de/kreditkarten/
 Redirect 301 /de/kreditkarten/tui-card-titan/ https://finvallo.com/de/kreditkarten/
+Redirect 301 /de/ratgeber/gemeinschaftskonto/ https://finvallo.com/de/girokonto/bestenlisten/gemeinschaftskonto/
+Redirect 301 /de/ratgeber/kinderkonto-jugendkonto/ https://finvallo.com/de/girokonto/bestenlisten/kinder-jugendkonto/
+Redirect 301 /de/ratgeber/kostenloses-girokonto/ https://finvallo.com/de/girokonto/bestenlisten/kostenlos/
 Redirect 301 /de/ratgeber/punkte/ https://finvallo.com/de/ratgeber/punkte-sammeln-de/
 ErrorDocument 404 /404.html

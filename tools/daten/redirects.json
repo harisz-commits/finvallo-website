@@ -197,6 +197,9 @@
  "/at/kreditkarten/anbieter/tf-bank/": "/at/kreditkarten/tf-bank-mastercard-gold/",
  "/at/kreditkarten/anbieter/trade-republic/": "/at/kreditkarten/trade-republic-karte/",
  "/at/kreditkarten/anbieter/wise/": "/at/kreditkarten/wise-karte/",
+ "/at/ratgeber/gemeinschaftskonto/": "/at/girokonto/bestenlisten/gemeinschaftskonto/",
+ "/at/ratgeber/kinderkonto-jugendkonto/": "/at/girokonto/bestenlisten/kinder-jugendkonto/",
+ "/at/ratgeber/kostenloses-girokonto/": "/at/girokonto/bestenlisten/kostenlos/",
  "/at/ratgeber/punkte/": "/at/ratgeber/punkte-sammeln-at/",
  "/de/festgeld/0to9-festgeld-de-raisin/": "/de/festgeld/#fg-0to9-festgeld-de-raisin",
  "/de/festgeld/1-jahr/": "/de/festgeld/?laufzeit=12",
@@ -831,5 +834,8 @@
  "/de/kreditkarten/tui-card-classic/": "/de/kreditkarten/",
  "/de/kreditkarten/tui-card-gold/": "/de/kreditkarten/",
  "/de/kreditkarten/tui-card-titan/": "/de/kreditkarten/",
+ "/de/ratgeber/gemeinschaftskonto/": "/de/girokonto/bestenlisten/gemeinschaftskonto/",
+ "/de/ratgeber/kinderkonto-jugendkonto/": "/de/girokonto/bestenlisten/kinder-jugendkonto/",
+ "/de/ratgeber/kostenloses-girokonto/": "/de/girokonto/bestenlisten/kostenlos/",
  "/de/ratgeber/punkte/": "/de/ratgeber/punkte-sammeln-de/"
 }
