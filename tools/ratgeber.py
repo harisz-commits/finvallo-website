@@ -83,7 +83,7 @@ DATES={
 def dates(): return DATES
 ARTS={}   # (land,slug) -> dict
 # Ratgeber, die in den Girokonto-Bestenlisten aufgegangen sind (301 über tools/daten/entfernt.json)
-ENTFALLEN={'kostenloses-girokonto','gemeinschaftskonto','kinderkonto-jugendkonto'}
+ENTFALLEN={'kostenloses-girokonto','gemeinschaftskonto','kinderkonto-jugendkonto','business'}
 def art(land,slug,**kw):
     if slug in ENTFALLEN: return
     ARTS[(land,slug)]=kw
@@ -180,7 +180,7 @@ def build(land):
     ratgeber_kostenlos.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
     import ratgeber_teilzahlung; ratgeber_teilzahlung.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
     import ratgeber_kartentypen; ratgeber_kartentypen.register(land,art,P,best,RC,eur,de1,pct)
-    import ratgeber_business; ratgeber_business.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
+    if False: import ratgeber_business; ratgeber_business.register(land,art,P,best,cards.D[land][0],karten.card_count(land,'private'),eur,karten,de1,pct)
     # B) Kreditkarte beantragen
     # AT und DE bekommen eigene Fassungen (Begriffe, Anbieter, Rechtslage), damit die Texte nicht als Duplikate gelten.
     kk=[c for c in credit if not c['giro']][:6]   # Karten ohne Girokonto-Pflicht

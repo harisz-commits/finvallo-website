@@ -6,9 +6,9 @@ BURGER='<svg class="ic-burger" width="26" height="26" viewBox="0 0 24 24" fill="
 
 # Hauptnavigation und „Mehr“ ohne Überschneidung (jeder Link nur einmal im DOM).
 AT_MAIN=[('at/kreditkarten/','Kreditkarten'),('at/girokonto/','Girokonten'),('at/bestenlisten/','Bestenlisten'),('at/ratgeber/','Ratgeber'),('at/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
-AT_MORE=[('at/kreditkarten/bestenlisten/','Kreditkarten-Bestenlisten'),('at/kreditkarten/business/','Business-Kreditkarten'),('at/kreditkarten/alle/','Alle Karten nach Anbieter'),('at/kreditkarten/rechner/','Kartenrechner'),('at/methodik/','So bewerten wir'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
+AT_MORE=[('at/kreditkarten/bestenlisten/','Kreditkarten-Bestenlisten'),('at/kreditkarten/alle/','Alle Karten nach Anbieter'),('at/kreditkarten/rechner/','Kartenrechner'),('at/methodik/','So bewerten wir'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
 DE_MAIN=[('de/kreditkarten/','Kreditkarten'),('de/bestenlisten/','Bestenlisten'),('de/ratgeber/','Ratgeber'),('de/rechner/','Rechner'),('ueber-uns/','Über Finvallo')]
-DE_MORE=[('de/kreditkarten/bestenlisten/','Kreditkarten-Bestenlisten'),('de/kreditkarten/business/','Business-Kreditkarten'),('de/kreditkarten/alle/','Alle Karten nach Anbieter'),('de/kreditkarten/rechner/','Kartenrechner'),('de/methodik/','So bewerten wir'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
+DE_MORE=[('de/kreditkarten/bestenlisten/','Kreditkarten-Bestenlisten'),('de/kreditkarten/alle/','Alle Karten nach Anbieter'),('de/kreditkarten/rechner/','Kartenrechner'),('de/methodik/','So bewerten wir'),('so-verdienen-wir-geld/','So verdient Finvallo Geld')]
 INFO=[]
 # Girokonten Deutschland erst ins Menü, wenn die Daten da sind
 if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)),'daten','de','girokonten.json')):

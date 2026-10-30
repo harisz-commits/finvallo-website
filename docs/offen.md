@@ -27,3 +27,4 @@ Stand: 28.10.2026
 - Review-Schema entfernt (29.10.): die Sterne bleiben sichtbar, aber ohne unsichtbare Auszeichnung „bewertet von“.
 - Offen: Rechner AT/DE zusammenlegen (vorerst nicht), Tempo neuer Seiten.
 - Girokonto-Bestenlisten nach Thema (29.10.): Texte in `tools/giro_listen_texte_a/b/c.py`, Zusatzdaten in `tools/daten/<land>/girokonten-extra.json`. Lücken: bei 37 DE- und 30 AT-Konten ist die Zahl der Unterkonten nicht belegt, bei 29 DE- und 32 AT-Konten die Bonitätsabfrage. AT hat noch keine Listen „mit Kreditkarte“, „ohne KSV“ und „nachhaltige Banken“ (zu wenige Konten oder Banken).
+- Kreditkarten (30.10.): Business-Karten und Karten nur für bestimmte Gruppen sind raus (`karten.aufnehmen()`), reine Studentenkarten stehen nur in der Bestenliste „Studierende“. Der Ratgeber „Firmenkreditkarte“ ist entfallen (`ratgeber.ENTFALLEN`), `ratgeber_business.py` bleibt ungenutzt im Repo.

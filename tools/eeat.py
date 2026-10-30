@@ -332,11 +332,11 @@ def main():
         if rel == 'at/':
             da = f'Unabhängiger Finanzvergleich für Österreich: {K.card_count("at", "all")} Karten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner.'
             s = s.replace('Finvallo vergleicht Finanzprodukte in Österreich unabhängig und nach offenen Regeln. Jetzt: 77 Kreditkarten. Bald: Girokonten, Depots und ETFs.', da)
-            s = re.sub(r'Unabhängiger Finanzvergleich für Österreich: \d+ Karten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner\.', da, s)
+            s = re.sub(r'Unabhängiger Finanzvergleich für Österreich: \d+ [^"<]*', da, s)
         if rel == 'de/':
             dd = f'Unabhängiger Finanzvergleich für Deutschland: {K.card_count("de", "all")} Karten mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner.'
             s = re.sub(r'Kreditkarten in Deutschland: unabhängige Ratgeber zu Punkten, Meilen, Auslandsgebühren, Reiseversicherung und Kartentypen\. Der Kartenvergleich folgt\.', dd, s)
-            s = re.sub(r'Unabhängiger Finanzvergleich für Deutschland: \d+ (?:Kreditkarten|Karten|Karten \(Kredit-, Debit- und Prepaid-Karten\)) mit offener Bewertung nach sieben Kriterien, Bestenlisten, Ratgeber und Rechner\.', dd, s)
+            s = re.sub(r'Unabhängiger Finanzvergleich für Deutschland: \d+ [^"<]*', dd, s)   # auch gekürzte Fassungen ersetzen
         parts = rel.split('/')
         land = parts[0] if parts[0] in ('at', 'de') else None
         title = (re.search(r'<title>(.*?)</title>', s, re.S) or [None, ''])[1]
