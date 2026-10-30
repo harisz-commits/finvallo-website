@@ -51,7 +51,15 @@ def load_at():
     for c in cs:
         c.setdefault('ex',{}); c.setdefault('sek',[]); c.setdefault('geprueft','2026-10-11'); c['land']='at'
     return cs
-def load(land='de'): return load_de() if land=='de' else load_at()
+def nur_student(c):
+    """Karte nur für Studierende oder junge Leute (eigene Bestenliste statt Hauptvergleich)"""
+    return bool(re.search(r'Studierend|Student|Maturant',(c.get('nurfuer') or '')+' '+c.get('titel',''))) or bool(re.search(r'young',c.get('titel','').lower()))
+def aufnehmen(c):
+    """Nicht im Vergleich: Business-Karten und Karten nur für bestimmte Gruppen (außer Studierende)"""
+    if c.get('art')=='Business': return False
+    if c.get('nurfuer') and not nur_student(c): return False
+    return True
+def load(land='de'): return [c for c in (load_de() if land=='de' else load_at()) if aufnehmen(c)]
 # Apple Pay / Google Pay je Anbieter (daten/at/anbieter.json, Feld wallet). Kartenfeld pay bleibt der Schalter:
 # pay=None → keine Angabe, pay=False → nein; bei pay=True entscheidet der Anbieter-Eintrag, ob „Apple Pay & Google Pay“ oder nur eines steht.
 _WALLET={}
@@ -665,7 +673,7 @@ def list_page(cards,priv,biz):
 <div class="wrap"><main id="app">
 <div class="crumb"><span>{N} › Kreditkarten</span><span class="ok">✓ Geprüft bis {st}</span></div>
 {hero_open(hero_kicker("Die besten Kreditkarten",max(c["geprueft"] for c in cards)))}<h1>Kreditkarten-Vergleich {N}</h1>
-  <p class="lede">{n} Karten in {N}: {card_count(code,'rated')} in der Rangliste, {card_count(code,'special')} für bestimmte Kundengruppen in einer eigenen Liste darunter und {card_count(code,'business')} Business-Karten auf einer <a href="business/">eigenen Seite</a>{f" und {len(unrated)} Karten ohne Bewertung (zu wenig bestätigte Daten)" if unrated else ""}. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>{hero_close(P,[(card_count(code,"rated"),"bewertete Karten"),(na,"Anbieter")],st,hero_best_card(top[0],P,code,"Beste Kreditkarte laut Finvallo"))}
+  <p class="lede">{n} Karten in {N}: {card_count(code,'rated')} in der Rangliste, {card_count(code,'special')} nur für Studierende und junge Leute auf einer <a href="bestenlisten/studium/">eigenen Seite</a>{f" und {len(unrated)} Karten ohne Bewertung (zu wenig bestätigte Daten)" if unrated else ""}. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>{hero_close(P,[(card_count(code,"rated"),"bewertete Karten"),(na,"Anbieter")],st,hero_best_card(top[0],P,code,"Beste Kreditkarte laut Finvallo"))}
   <div class="facts prose"><p>{kurz}</p></div>
   <p class="note" style="margin:6px 0 14px">Bestenlisten: {" · ".join(f'<a class="lnk" href="bestenlisten/{c["k"]}/">{E(c["t"])}</a>' for c in CATS if os.path.exists(R+f"{code}/kreditkarten/bestenlisten/{c['k']}/index.html"))}<br>Werkzeuge: <a class="lnk" href="rechner/">Kartenrechner</a> · <a class="lnk" href="{P}{code}/girokonto/">Girokonto-Vergleich</a>{f'<br>Ratgeber: {rgl}' if rgl else ''}</p>
   <details class="box howscore"><summary><span><b>So entstehen die Sterne</b><br><small>7 Kriterien, feste Regeln, offene Gewichtung</small></span><span class="lnk">anzeigen</span></summary>
@@ -676,7 +684,7 @@ def list_page(cards,priv,biz):
   <p class="lhead"><b>{card_count(code,'rated')} Karten in der Rangliste</b></p>
   <div class="list" id="list">{"".join(list_item(c,P) for c in priv)}</div>
   {f'<h2>Noch nicht bewertet</h2><p class="note">Für diese Karten fehlen uns bestätigte Angaben in mindestens drei Kriterien.</p><div class="list">{"".join(list_item(c,P) for c in unrated)}</div>' if unrated else ''}
-  {f'<h2>Nur für bestimmte Kundengruppen</h2><p class="note">Diese Karten bekommt nicht jeder. Sie stehen deshalb nicht in der Rangliste.</p><div class="list" data-special>{"".join(list_item(c,P) for c in special)}</div>' if special else ''}
+  {f'<h2>Karten für Studierende und junge Leute</h2><p class="note">{len(special)} Karten gibt es nur für Studierende oder bis zu einer Altersgrenze. Sie stehen deshalb nicht in der Rangliste, sondern mit allen anderen günstigen Karten für junge Leute auf einer eigenen Seite.</p><div class="catgrid"><a class="catcard" href="bestenlisten/studium/"><b>Die besten Karten für Studierende</b><span style="color:var(--muted)">{len(special)} reine Studentenkarten und weitere, die für junge Leute günstiger sind</span><small>Zur Liste →</small></a></div>' if special else ''}
   {f'<h2>Business-Kreditkarten</h2><p class="lede">Firmen- und Business-Karten bewerten wir nach denselben Regeln, aber in einer eigenen Liste.</p><p><a class="btn" href="business/">Alle {len(biz)} Business-Karten ansehen →</a></p>' if biz else ''}
   <p class="note" style="margin-top:18px"><a class="lnk" href="alle/">Alle Karten nach Anbieter →</a></p>
   <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div>
@@ -903,7 +911,7 @@ CATS=[
  dict(k='cashback',t='Cashback',h='Die besten Karten mit Cashback',d='Nur Karten, die auf normale Einkäufe Geld zurückgeben. Je mehr bei 1.000 € Umsatz im Monat nach Abzug der Jahresgebühr übrig bleibt, desto weiter vorn steht die Karte. Partner- und Reiserabatte zählen hier nicht.',f=lambda c:c.get('sammel') is not None and c.get('sammelKind')=='cash',w={'_bonus':'sammel'}),
  dict(k='lounge',t='Lounge-Zugang',h='Die besten Karten mit Lounge-Zugang',d='Nur Karten mit kostenlosen Lounge-Besuchen. Hier zählt vor allem der Lounge-Zugang: wie viele Besuche gratis sind, ob eine Begleitperson gratis mitkommt und ob die Lounges weltweit gelten.',f=lambda c:bool(c['ex'].get('lg')),w={'_bonus':'mix','fokus':['Lounge-Zugang'],'anteil':0.7}),
  dict(k='premium',t='Premium',h='Die besten Premiumkarten',d='Top-Karten mit Lounges oder Premium-Reiseschutz. Hier zählen vor allem Reiseschutz und Extras.',f=lambda c:c['klasse']=='Premium' and ((c.get('tier') or 0)>=2 or bool(c['ex'].get('lg'))),w={'_bonus':'fokus','fokus':['Reiseversicherung', 'Extras']}),
- dict(k='studium',f_at=lambda c:bool(re.search(r'Student|Maturant',c['titel'])),t='Studierende',h='Die besten Karten für Studierende und junge Leute',d='Karten, die für Studierende, Azubis oder junge Kunden günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.',f=lambda c:youth(c) is not None,w=None),
+ dict(k='studium',f_at=lambda c:bool(re.search(r'Student|Maturant',c['titel'])) or nur_student(c),t='Studierende',h='Die besten Karten für Studierende und junge Leute',d='Karten nur für Studierende und junge Leute sowie Karten, die für sie günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Die reinen Studentenkarten stehen nur hier, nicht im Hauptvergleich. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.',f=lambda c:youth(c) is not None or nur_student(c),w=None),
  dict(k='miles-and-more',t='Miles & More',h='Die besten Miles & More Kreditkarten',d='Alle Karten, die Miles & More Meilen auf normale Einkäufe sammeln. Je mehr bei 1.000 € Umsatz im Monat nach Abzug der Jahresgebühr übrig bleibt, desto weiter vorn steht die Karte.',f=lambda c:'miles' in c['titel'].lower() and 'more' in c['titel'].lower() and c.get('sammel') is not None,w={'_bonus':'sammel'}),
  dict(k='debit',t='Debit & App-Banken',h='Die besten Debitkarten und App-Banken',d='Karten, die sofort vom Konto abbuchen. Hier zählen vor allem günstiges Zahlen und Abheben im Ausland.',f=lambda c:c['typ'] in ('Debit','Prepaid'),w={'_bonus':'fokus','fokus':['Zahlen im Ausland', 'Bargeld']}),
 ]
@@ -1284,7 +1292,7 @@ def prepare():
     """Lädt und bewertet beide Länder (für andere Skripte wie ratgeber.py und listui.py)."""
     DATA={}
     for land in ('at','de'):
-        cards=load(land); apply_korrekturen(cards,land); apply_lounge(cards,land); apply_gruppen(cards); ratecards(cards)
+        cards=load(land); apply_korrekturen(cards,land); apply_lounge(cards,land); apply_gruppen(cards); cards=[c for c in cards if aufnehmen(c)]; ratecards(cards)
         LANDS[land]['stand']=max(c['geprueft'] for c in cards)
         DATA[land]=(cards,providers(land,cards))
         priv=[c for c in cards if c['art']!='Business']
@@ -1330,6 +1338,8 @@ def main():
         for c in cards: card_page(c,cards,len(priv),prov)
         list_page(cards,priv,biz)
         if biz: biz_page(biz)
+        else:   # keine Business-Karten mehr im Vergleich: Seite weg, 301 auf den Vergleich
+            shutil.rmtree(R+f'{land}/kreditkarten/business',ignore_errors=True); ENTF[f'/{land}/kreditkarten/business/']=f'/{land}/kreditkarten/'
         anbieter_pages(cards,prov); alle_page(cards,prov); datafile(cards)
         bestenlisten(cards,lists,LISTS['de' if land=='at' else 'at'][0])
         if land=='de': methodik_page(cards,priv)

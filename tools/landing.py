@@ -201,7 +201,6 @@ def b_at(P,hdr):
       tile(P,'at/girokonto/','bank','Girokonten',f'{nG} Konten im Vergleich'),
       *ftile(P,'at','Festgeld'),
       tile(P,'at/bestenlisten/','trophy','Bestenlisten','Karten, Konten und Festgeld nach Kategorie'),
-      tile(P,'at/kreditkarten/business/','brief','Business-Kreditkarten','Firmenkarten für Selbstständige'),
       tile(P,'at/kreditkarten/alle/','bank','Anbieter',f'{anbA} Banken und Kartenanbieter'),
       tile(P,'at/ratgeber/','book','Ratgeber','Karten, Konten, Festgeld erklärt'),
       tile(P,'at/rechner/','calc','Finanzrechner','Zinseszins, Kredit, KESt und mehr')])
@@ -228,7 +227,6 @@ def b_de(P,hdr):
       *([tile(P,'de/girokonto/','bank','Girokonten',f'{nGD} Konten im Vergleich')] if nGD else []),
       *ftile(P,'de','Festgeld'),
       tile(P,'de/bestenlisten/','trophy','Bestenlisten','Karten, Konten und Festgeld nach Kategorie'),
-      tile(P,'de/kreditkarten/business/','brief','Business-Kreditkarten','Firmenkarten für Selbstständige'),
       tile(P,'de/kreditkarten/alle/','bank','Anbieter',f'{anbD if DD else 0} Banken und Kartenanbieter'),
       tile(P,'de/ratgeber/','book','Ratgeber','Karten, Konten, Festgeld erklärt'),
       tile(P,'de/rechner/','calc','Finanzrechner','Zinseszins, Kredit, Abgeltungsteuer und mehr')])

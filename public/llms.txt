@@ -1,6 +1,6 @@
 # Finvallo
 
-> Unabhängiger Finanzvergleich für Österreich und Deutschland. 79 Karten in Österreich und 162 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Stand: 28.10.2026. Betrieben von Haris (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/ Betrieben von Haris Z. (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/
+> Unabhängiger Finanzvergleich für Österreich und Deutschland. 69 Karten in Österreich und 134 in Deutschland (Kredit-, Charge-, Debit- und Prepaid-Karten), bewertet nach 7 offen gelegten Kriterien. Bewertungen unabhängig von Provisionen; Affiliate-Links sind mit * markiert und haben keinen Einfluss auf Sterne oder Reihenfolge. Daten aus Preisblättern und Versicherungsbedingungen der Anbieter; Stand: 28.10.2026. Betrieben von Haris (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/ Betrieben von Haris Z. (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/
 
 Wichtig für die Nutzung: Österreich- und Deutschland-Inhalte sind getrennt (/at/ und /de/). Konditionen aus Deutschland gelten nicht für Österreich.
 
@@ -45,7 +45,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Die besten Karten mit Cashback in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/cashback/): Platz 1 Trade Republic Karte. Nur Karten, die auf normale Einkäufe Geld zurückgeben. Je mehr bei 1.000 € Umsatz im Monat nach Abzug der Jahresgebühr übrig bleibt, desto weiter vorn steht die Karte. Partner- und Reiserabatte zählen hier nicht.
 - [Die besten Karten mit Lounge-Zugang in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/lounge/): Platz 1 American Express Platinum Card. Nur Karten mit kostenlosen Lounge-Besuchen. Hier zählt vor allem der Lounge-Zugang: wie viele Besuche gratis sind, ob eine Begleitperson gratis mitkommt und ob die Lounges weltweit gelten.
 - [Die besten Premiumkarten in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/premium/): Platz 1 PayLife Black. Top-Karten mit Lounges oder Premium-Reiseschutz. Hier zählen vor allem Reiseschutz und Extras.
-- [Die besten Karten für Studierende und junge Leute in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/studium/): Platz 1 BAWAG Gold Student. Karten, die für Studierende, Azubis oder junge Kunden günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.
+- [Die besten Karten für Studierende und junge Leute in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/studium/): Platz 1 BAWAG Gold Student. Karten nur für Studierende und junge Leute sowie Karten, die für sie günstiger oder kostenlos sind, etwa weil das nötige Konto bis zu einem bestimmten Alter nichts kostet. Die reinen Studentenkarten stehen nur hier, nicht im Hauptvergleich. Bewertet wie in der Gesamtwertung, mit dem regulären Preis.
 - [Die besten Debitkarten und App-Banken in Österreich 2026](https://finvallo.com/at/kreditkarten/bestenlisten/debit/): Platz 1 Revolut Premium. Karten, die sofort vom Konto abbuchen. Hier zählen vor allem günstiges Zahlen und Abheben im Ausland.
 
 ## Österreich: Ratgeber
@@ -75,7 +75,6 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Kreditkarte ohne KSV-Abfrage: Was wirklich geht und was nur Werbung ist (Österreich)](https://finvallo.com/at/ratgeber/ohne-bonitaetspruefung/): Kreditkarte ohne KSV1870-Prüfung in Österreich? Warum es keine echte gibt, welche Debit- und Prepaid-Karten ohne Bonitätsprüfung funktionieren und was dir immer zusteht.
 - [Kreditkarte, Charge-Karte, Debitkarte oder Prepaid: Was passt zu dir? (Österreich)](https://finvallo.com/at/ratgeber/kartentypen/): Die vier Kartentypen in Österreich erklärt: Kreditkarte mit Teilzahlung, Charge-Karte der Hausbank, Debitkarte, Prepaid. Mit Zahlen aus 63 Karten.
 - [Kreditkarte mit Ratenzahlung in Österreich: Was die Teilzahlung kostet und wie du sie abschaltest (Österreich)](https://finvallo.com/at/ratgeber/teilzahlung/): Teilzahlung bei Kreditkarten in Österreich: Effektivzinsen aller Karten mit Kreditrahmen, was 1.000 € mit Mindestrate kosten und wie du sie abschaltest.
-- [Firmenkreditkarte in Österreich: Wer haftet, was sie kostet und ob du sie privat nutzen darfst (Österreich)](https://finvallo.com/at/ratgeber/business/): Firmenkreditkarte in Österreich: Haftung, Mitarbeiterkarten, Zahlungsziel, Buchhaltungsexport und Jahreskosten aller Business-Karten laut Anbieter.
 
 ## Österreich: Girokonten
 - [Girokonto-Vergleich Österreich](https://finvallo.com/at/girokonto/): 62 Konten von Banken mit Angebot in ganz Österreich, Jahreskosten selbst rechnen, Stand 27.10.2026
@@ -97,7 +96,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Zahlungskonto mit grundlegenden Funktionen (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/#gk-anadi-zahlungskonto): Basiskonten, 3,8/5, 80 € im Jahr im Beispiel
 
 ## Deutschland: Kreditkarten
-- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 162 Karten, Stand 21.10.2026
+- [Kreditkarten-Vergleich Deutschland](https://finvallo.com/de/kreditkarten/): Rangliste aller 134 Karten, Stand 21.10.2026
 - [Alle Karten nach Anbieter](https://finvallo.com/de/kreditkarten/alle/)
 - [Bestenlisten Deutschland](https://finvallo.com/de/kreditkarten/bestenlisten/): beste Karten nach Kategorie
 - [Bewertungsmethodik Deutschland](https://finvallo.com/de/kreditkarten/methodik/)
@@ -176,7 +175,6 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Kreditkarte ohne Schufa: Was wirklich geht und was nur Werbung ist (Deutschland)](https://finvallo.com/de/ratgeber/ohne-bonitaetspruefung/): Kreditkarte ohne Schufa in Deutschland? Warum es keine echte gibt, welche Debit- und Prepaid-Karten ohne Bonitätsprüfung funktionieren und woran du unseriöse Angebote erkennst.
 - [Kartentypen in Deutschland: Kreditkarte, Charge, Debit oder Prepaid? (Deutschland)](https://finvallo.com/de/ratgeber/kartentypen/): Kreditkarte, Charge, Debit und Prepaid in Deutschland erklärt: Unterschiede bei Abrechnung, Schufa, Mietwagen und Gebühren. Zahlen aus 133 Karten.
 - [Kreditkarte mit Ratenzahlung in Deutschland: Was die Teilzahlung kostet und wie du sie abschaltest (Deutschland)](https://finvallo.com/de/ratgeber/teilzahlung/): Teilzahlung bei Kreditkarten in Deutschland: Effektivzinsen aller Karten mit Kreditrahmen, was 1.000 € mit Mindestrate kosten und wie du sie abschaltest.
-- [Firmenkreditkarte in Deutschland: Wer haftet, was sie kostet und ob du sie privat nutzen darfst (Deutschland)](https://finvallo.com/de/ratgeber/business/): Firmenkreditkarte in Deutschland: Haftung, Mitarbeiterkarten, Zahlungsziel, Buchhaltungsexport und Jahreskosten aller Business-Karten laut Anbieter.
 
 ## Österreich: Top 10 laut Bewertung
 - [TF Bank Mastercard Gold](https://finvallo.com/at/kreditkarten/tf-bank-mastercard-gold/): Typ: Kreditkarte; Netz: Mastercard; Jahresgebühr: 0 €; Fremdwährung: 0 %; Bargeld: 0 € (Zinsen ab Abhebung); Reiseversicherung: inkl. Storno; Zins: 22,60 % Soll / 25,09 % effektiv; Sammelrate: bis 5 % Cashback bei Partnern; Bewertung: 4,6/5 (Sehr gut); geprüft am 11.10.2026

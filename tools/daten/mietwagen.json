@@ -1,32 +1,268 @@
 {
  "hinweis": "Mietwagen-Schutz je Karte, nur aus den Versicherungsbedingungen des Anbieters (geprüft 21.10.2026). art: kasko = Schäden am Mietwagen und Diebstahl, sb = Erstattung der Selbstbeteiligung aus der Vermieterversicherung, haft = zusätzliche Haftpflicht für Schäden an Dritten. Karten ohne Eintrag: kein bestätigter Mietwagen-Schutz, das heißt nicht, dass es keinen gibt. optional = nur gegen Aufpreis, nicht in der Karte enthalten.",
  "karten": {
-  "at/american-express-platinum-card": {"art": ["kasko", "haft"], "kasko": "bis 75.000 € je Unfall oder Ereignis, höchstens der Fahrzeugwert", "haft": "bis 750.000 € je Ereignis, in den USA bis 1.000.000 USD", "eigenanteil": "0 € (für Reiseleistungen gibt es laut Bedingungen keine Selbstbeteiligung)", "dauer": "Reisen bis 120 Tage; eine eigene Höchstdauer für die Miete nennen die Bedingungen nicht", "bedingungen": "Reise und Mietwagen mit der Karte bezahlen; bis 2 Fahrzeuge gleichzeitig und bis 5 eingetragene Fahrer; zahlt nur, wenn keine andere Versicherung leistet", "ausschluesse": "Motorräder, Wohnmobile, Nutzfahrzeuge, Fahrzeuge mit mehr als 9 Sitzen, Renn- und Geländefahrten", "quelle": "https://www.americanexpress.com/content/dam/amex/de-at/homepage/Document/AT_Platinum-Card_Mitgliedschaftbedingungen.pdf", "fundstelle": "Mitgliedschaftsbedingungen, Mietwagenversicherung, S. 25-26"},
-  "at/revolut-metal": {"art": ["sb"], "sb": "Erstattung der Selbstbeteiligung bis 2.000 €", "eigenanteil": "nicht eindeutig angegeben", "dauer": "Mieten bis 30 Tage laut Versicherungsbedingungen (die Revolut-Hilfe nennt 31 Tage)", "bedingungen": "Abo vor Mietbeginn aktiv; Reise mehr als 200 km vom Wohnort oder im Ausland; eigener Mietvertrag und eingetragene Fahrer; Vollkasko (CDW) des Vermieters nötig. Der Mietwagen muss nicht mit Revolut bezahlt werden.", "ausschluesse": "Carsharing zwischen Privatpersonen; keine eigene Vollkasko", "konflikt": "Versicherungsbedingungen und Revolut-Hilfe nennen unterschiedliche Höchstdauern (30 bzw. 31 Tage).", "quelle": "https://help.revolut.com/de-AT/help/insurance-products/insuring-my-travel/what-am-i-covered-for/travel-insurance-features/car-hire-excess-protection/", "fundstelle": "Revolut-Hilfe AT und Metal-Versicherungsbedingungen"},
-  "at/revolut-ultra": {"art": ["sb"], "sb": "Erstattung der Selbstbeteiligung bis 2.000 €", "eigenanteil": "nicht eindeutig angegeben", "dauer": "Mieten bis 31 Tage", "bedingungen": "Abo vor Mietbeginn aktiv; Reise mehr als 200 km vom Wohnort; eigener Mietvertrag und eingetragene Fahrer; Vollkasko (CDW) des Vermieters nötig. Der Mietwagen muss nicht mit Revolut bezahlt werden.", "ausschluesse": "Carsharing zwischen Privatpersonen; keine eigene Vollkasko", "quelle": "https://help.revolut.com/de-AT/help/insurance-products/insuring-my-travel/what-am-i-covered-for/travel-insurance-features/car-hire-excess-protection/", "fundstelle": "Revolut-Hilfe AT und Ultra-Versicherungsbedingungen"},
-  "de/revolut-metal": {"art": ["sb"], "sb": "Erstattung der Selbstbeteiligung bis 2.000 €", "eigenanteil": "nicht eindeutig angegeben", "dauer": "Mieten bis 30 Tage laut Versicherungsbedingungen (die Revolut-Hilfe nennt 31 Tage)", "bedingungen": "Abo vor Mietbeginn aktiv; Reise mehr als 200 km vom Wohnort oder im Ausland; eigener Mietvertrag und eingetragene Fahrer; Vollkasko (CDW) des Vermieters nötig. Der Mietwagen muss nicht mit Revolut bezahlt werden.", "ausschluesse": "Carsharing zwischen Privatpersonen; keine eigene Vollkasko", "konflikt": "Versicherungsbedingungen und Revolut-Hilfe nennen unterschiedliche Höchstdauern (30 bzw. 31 Tage).", "quelle": "https://help.revolut.com/de-DE/help/insurance-products/insuring-my-travel/what-am-i-covered-for/travel-insurance-features/car-hire-excess-protection/", "fundstelle": "Revolut-Hilfe DE und Metal-Versicherungsbedingungen"},
-  "de/revolut-ultra": {"art": ["sb"], "sb": "Erstattung der Selbstbeteiligung bis 2.000 €", "eigenanteil": "nicht eindeutig angegeben", "dauer": "Mieten bis 31 Tage", "bedingungen": "Abo vor Mietbeginn aktiv; Reise mehr als 200 km vom Wohnort; eigener Mietvertrag und eingetragene Fahrer; Vollkasko (CDW) des Vermieters nötig. Der Mietwagen muss nicht mit Revolut bezahlt werden.", "ausschluesse": "Carsharing zwischen Privatpersonen; keine eigene Vollkasko", "quelle": "https://help.revolut.com/de-DE/help/insurance-products/insuring-my-travel/what-am-i-covered-for/travel-insurance-features/car-hire-excess-protection/", "fundstelle": "Revolut-Hilfe DE und Ultra-Versicherungsbedingungen"},
-  "de/american-express-platinum-card": {"art": ["kasko", "haft"], "kasko": "bis 75.000 € je Unfall oder versichertem Ereignis, höchstens der Fahrzeugwert", "haft": "bis 750.000 € je Ereignis, in den USA bis 1.000.000 USD", "eigenanteil": "200 € je Versicherungsfall", "dauer": "Reisen bis 120 Tage; eine eigene Höchstdauer für die Miete nennen die Bedingungen nicht", "bedingungen": "Mietwagen mit der Karte bezahlen; Reise nötig; bis 2 Fahrzeuge gleichzeitig und bis 5 eingetragene Fahrer; zahlt nur, wenn keine andere Versicherung leistet", "ausschluesse": "Renn- und Geländefahrten, Nutzfahrzeuge, Wohnmobile, nicht eingetragene Fahrer", "quelle": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Platinum_Card_Informationen.pdf", "fundstelle": "Mietwagenleistungen, Diebstahl, Beschädigung und Haftpflicht"},
-  "de/american-express-business-platinum-card": {"art": ["kasko", "haft"], "kasko": "bis 75.000 € je Unfall oder versichertem Ereignis, höchstens der Fahrzeugwert; gilt auch ohne Reise", "haft": "bis 750.000 € je Ereignis, in den USA bis 1.000.000 USD; auf Reisen", "eigenanteil": "200 € je Versicherungsfall", "dauer": "Reisen bis 120 Tage; eine eigene Höchstdauer für die Miete nennen die Bedingungen nicht", "bedingungen": "Mietwagen mit der Karte bezahlen; bis 2 Fahrzeuge gleichzeitig und bis 5 eingetragene Fahrer; zahlt nur, wenn keine andere Versicherung leistet", "ausschluesse": "Renn- und Geländefahrten, Nutzfahrzeuge, Wohnmobile, nicht eingetragene Fahrer", "quelle": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Platinum_Card_Informationen_NEU.pdf", "fundstelle": "Mietwagenleistungen, Diebstahl, Beschädigung und Haftpflicht"},
-  "de/american-express-business-gold-card": {"art": ["kasko"], "kasko": "Kasko- und Diebstahlschutz bis 75.000 € je Leistungsfall, höchstens der Fahrzeugwert", "eigenanteil": "200 € je Versicherungsfall", "dauer": "Mieten bis 120 Tage", "bedingungen": "Mietwagen mit der Karte bezahlen; Miete bei einem zugelassenen Vermieter; bis 2 Fahrzeuge gleichzeitig und bis 5 eingetragene Fahrer; gilt im In- und Ausland", "ausschluesse": "keine zusätzliche Haftpflicht für Schäden an Dritten", "konflikt": "Laut Abschnitt E 2.1 besteht kein Schutz, wenn du die Versicherung des Vermieters wählst; Abschnitt E 3.1 nennt dagegen die Erstattung einer Vermieter-Selbstbeteiligung. Frag vor der Miete bei American Express nach.", "quelle": "https://www.americanexpress.com/content/dam/amex/de-de/business/Geschaeftsbedingungen/Amex_Business_Gold_Card_Informationen_NEU.pdf", "fundstelle": "Abschnitt E, Mietwagen, Ziffern 1-3 (Fassung 06/2026)"},
-  "de/bmw-premium-card-carbon": {"art": ["kasko"], "kasko": "bis 75.000 € je Leistungsfall, höchstens der Fahrzeugwert", "eigenanteil": "200 € je Versicherungsfall", "dauer": "Mieten bis 120 Tage", "bedingungen": "Mietwagen mit der Karte bezahlen; bis 2 Fahrzeuge gleichzeitig und bis 5 eingetragene Fahrer; In- und Ausland; zahlt nur, wenn keine andere Versicherung leistet", "ausschluesse": "keine zusätzliche Haftpflicht für Schäden an Dritten", "quelle": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/BMW_Carbon_Card_Informationen.pdf", "fundstelle": "Mietwagen-, Diebstahl- und Kaskoversicherung, S. 26"},
-  "de/miles-und-more-gold-credit-card": {"art": ["kasko"], "kasko": "bis 75.000 € je Mietzeitraum", "eigenanteil": "200 € je Versicherungsfall", "dauer": "Mieten bis 30 Tage", "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; Reise nötig; 1 Fahrzeug; eingetragene Fahrer ab 21; zahlt nicht, was die Vollkasko des Vermieters deckt", "ausschluesse": "keine zusätzliche Haftpflicht; Innenraum, Abnutzung, Pannen, Abschlepp- und Verwaltungsgebühren", "quelle": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/versicherungen/versicherungsbestaetigung-lufthansa-miles-and-more-credit-card.pdf", "fundstelle": "Abschnitt C, Mietwagen-Zusatz-Versicherung"},
-  "de/miles-und-more-lufthansa-frequent-traveller-credit-card": {"art": ["kasko"], "kasko": "bis 75.000 € je Mietzeitraum", "eigenanteil": "200 € je Versicherungsfall", "dauer": "Mieten bis 30 Tage", "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; Reise nötig; 1 Fahrzeug; eingetragene Fahrer ab 21; zahlt nicht, was die Vollkasko des Vermieters deckt", "ausschluesse": "keine zusätzliche Haftpflicht; Innenraum, Abnutzung, Pannen, Abschlepp- und Verwaltungsgebühren", "quelle": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/versicherungen/versicherungsbestaetigung-lufthansa-miles-and-more-credit-card.pdf", "fundstelle": "Abschnitt C, Mietwagen-Zusatz-Versicherung"},
-  "de/miles-und-more-lufthansa-senator-credit-card": {"art": ["kasko"], "kasko": "bis 75.000 € je Mietzeitraum", "eigenanteil": "200 € je Versicherungsfall", "dauer": "Mieten bis 30 Tage", "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; Reise nötig; 1 Fahrzeug; eingetragene Fahrer ab 21; zahlt nicht, was die Vollkasko des Vermieters deckt", "ausschluesse": "keine zusätzliche Haftpflicht; Innenraum, Abnutzung, Pannen, Abschlepp- und Verwaltungsgebühren", "quelle": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/versicherungen/versicherungsbestaetigung-lufthansa-miles-and-more-credit-card.pdf", "fundstelle": "Abschnitt C, Mietwagen-Zusatz-Versicherung"},
-  "de/miles-und-more-lufthansa-hon-circle-credit-card": {"art": ["kasko"], "kasko": "bis 100.000 € je Mietzeitraum", "eigenanteil": "0 €", "dauer": "Mieten bis 30 Tage", "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; Reise nötig; 1 Fahrzeug; eingetragene Fahrer ab 21; zahlt nicht, was die Vollkasko des Vermieters deckt", "ausschluesse": "keine zusätzliche Haftpflicht; Innenraum, Abnutzung, Pannen, Abschlepp- und Verwaltungsgebühren", "quelle": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/versicherungen/versicherungsbestaetigung-lufthansa-miles-and-more-credit-card.pdf", "fundstelle": "Abschnitt C, Mietwagen-Zusatz-Versicherung"},
-  "de/miles-und-more-gold-credit-card-business": {"art": ["kasko"], "kasko": "bis 75.000 € je Mietzeitraum", "eigenanteil": "200 € je Versicherungsfall", "dauer": "Mieten bis 30 Tage", "bedingungen": "nur geschäftlich veranlasste Reisen; Mietwagen vollständig mit der Karte bezahlen; 1 Fahrzeug; eingetragene Fahrer ab 21; zahlt nicht, was die Vollkasko des Vermieters deckt", "ausschluesse": "keine zusätzliche Haftpflicht; Innenraum, Abnutzung, Pannen, Abschlepp- und Verwaltungsgebühren", "quelle": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/versicherungen/versicherungsbestaetigung-lufthansa-miles-and-more-credit-card.pdf", "fundstelle": "Abschnitt C, Mietwagen-Zusatz-Versicherung"},
-  "de/targobank-premium-karte": {"art": ["kasko"], "kasko": "bis 75.000 €, begrenzt auf Fahrzeugwert bzw. Schaden", "eigenanteil": "250 € je Schadenfall; hast du die Vermieterversicherung, zahlt die Karte nur deren Selbstbeteiligung", "dauer": "Mieten bis 31 Tage", "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; keine Reise nötig; weltweit; 1 Fahrzeug; Fahrer: Karteninhaber und Ehe- bzw. eingetragener Lebenspartner", "ausschluesse": "Fahrzeuge über 80.000 € Kaufpreis, älter als 20 Jahre; Schaden spätestens 31 Tage nach Rückgabe melden", "quelle": "https://www.targobank.de/de/amc-content/pdf/02-11/versicherungsleistungen_premium.pdf", "fundstelle": "Mietwagen-Vollkaskoversicherung"},
-  "de/eurowings-kreditkarte-premium": {"art": ["kasko"], "kasko": "bis 75.000 € je Versicherungsfall", "eigenanteil": "230 € je Schadenfall", "dauer": "Mieten bis 30 Tage", "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; gültiger Führerschein, eingetragene Fahrer; weltweit; 1 Fahrzeug; zahlt nur, wenn keine andere Versicherung leistet", "ausschluesse": "keine zusätzliche Haftpflicht für Schäden an Dritten", "quelle": "https://www.easybank.de/resource/blob/122924/f779ed71783dd6fb9000a6eb220c7219/avb-eurowings-kreditkarte-premium-data.pdf", "fundstelle": "Mietwagenvollkaskoversicherung"},
-  "de/easybank-kreditkarte-platinum": {"art": ["kasko", "haft"], "kasko": "Voll- und Teilkasko bis 100.000 €", "haft": "bis 1.000.000 €", "eigenanteil": "Eigenanteil nicht eindeutig angegeben", "dauer": "Mieten bis 90 Tage", "bedingungen": "Mietwagen vollständig im Voraus mit der Karte bezahlen; berechtigte Fahrer im Vertrag; Pkw bis 9 Sitze; jede Schadenmeldung mit Polizeibericht", "ausschluesse": "andere Fahrzeugklassen laut Bedingungen", "quelle": "https://www.easybank.de/resource/blob/122934/3dbbeacf545c7a03724b3e806f97b074/avb-easybank-kreditkarte-platinum-data.pdf", "fundstelle": "Mietwagen-Versicherung"},
-  "de/consorsbank-visa-card-gold": {"art": ["sb"], "sb": "Erstattung der Selbstbeteiligung bis 1.500 €", "eigenanteil": "kein zusätzlicher Eigenanteil angegeben", "dauer": "Mieten bis 30 Tage", "bedingungen": "Miete mit der Visa Gold oder dem Consorsbank Girokonto bezahlen; Vollkasko des Vermieters nötig; Haupt- und Partnerkarteninhaber; Fahrer 21 bis 74 Jahre ohne Probezeit; keine Reise nötig", "ausschluesse": "Carsharing, Wohnmobile, Motorräder", "quelle": "https://www.consorsbank.de/content/dam/de-cb/editorial/PDF/Service-Beratung/Formulare/Girokonto/avb-visa-card-gold.pdf", "fundstelle": "Abschnitt VII, Selbstbeteiligungs-Versicherung"},
-  "de/bunq-elite": {"art": ["sb"], "sb": "Erstattung der Selbstbeteiligung bis 3.000 € je Kontoinhaber und Vorfall", "eigenanteil": "0 €", "dauer": "Mieten bis 31 Tage", "bedingungen": "Fahrer ab 21, im Vertrag eingetragen; 1 Mietwagen; Wohnsitz in Deutschland (versichert sind nur Kunden aus den Niederlanden, Deutschland, Frankreich, Spanien, Irland, Belgien und Italien)", "ausschluesse": "Leasing- und Verlängerungsverträge", "quelle": "https://assets.qover.com/documents/bunq/bunq_T%26Cs_DE.pdf", "fundstelle": "Leistungstabelle und Mietwagen-Selbstbeteiligung"},
-  "de/openbank-bestcard-premium": {"art": ["kasko"], "kasko": "bis 50.000 € pro Mietfahrzeug", "eigenanteil": "Eigenanteil nicht eindeutig angegeben", "dauer": "Mieten bis 30 Tage", "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; Fahrer ab 21, im Vertrag eingetragen; 1 Fahrzeug; Wohnsitz in Deutschland; zahlt nur, wenn keine andere Versicherung leistet", "ausschluesse": "keine zusätzliche Haftpflicht für Schäden an Dritten", "quelle": "https://www.openbank.de/content/dam/openbank/dokumente/versicherungen/versicherungsbedingungen-santander-kreditkarten.pdf.coredownload.pdf", "fundstelle": "Teil C, Mietwagenvollkaskoversicherung"},
-  "de/adac-kreditkarte-mit-paket-schutz": {"art": ["sb"], "sb": "Erstattung der Selbstbeteiligung bis 3.000 € je Schadenfall (gemeinsame Grenze für Selbstbeteiligung, persönlichen Besitz, Fehlbetankung und Schlüssel)", "eigenanteil": "0 €", "dauer": "Mieten bis 31 Tage", "bedingungen": "Paket aktiv; Mietwagen vollständig mit der ADAC-Karte bezahlen; Mieter und Fahrer ab 21; Vermieterversicherung mit Selbstbeteiligung nötig; weltweit, privat und geschäftlich", "ausschluesse": "Wohnmobile, Motorräder, bestimmte Luxusmarken, Geländefahrten", "quelle": "https://www.solarisgroup.com/adac-information/axa-versicherungsbedingungen-adac-kreditkarte-schutz", "fundstelle": "AXA-Bedingungen Ziffern 1.1-1.10, gültig ab 17.09.2024"},
-  "de/adac-kreditkarte-mit-paket-platin": {"art": ["sb", "haft"], "sb": "Erstattung der Selbstbeteiligung bis 3.000 € je Schadenfall (gemeinsame Grenze für Selbstbeteiligung, persönlichen Besitz, Fehlbetankung und Schlüssel)", "haft": "bis 1.000.000 € je Schadenereignis, weltweit außer Deutschland", "eigenanteil": "0 €", "dauer": "Mieten bis 31 Tage", "bedingungen": "Paket aktiv; Mietwagen vollständig mit der ADAC-Karte bezahlen; Mieter und Fahrer ab 21; Vermieterversicherung mit Selbstbeteiligung nötig", "ausschluesse": "Wohnmobile, Motorräder, bestimmte Luxusmarken, Geländefahrten", "quelle": "https://www.solarisgroup.com/adac-information/axa-versicherungsbedingungen-adac-kreditkarte-platin", "fundstelle": "AXA-Bedingungen Ziffern 1.1-1.10, gültig ab 17.09.2024; Zusatzhaftpflicht laut ADAC-Bedingungen Platin"},
-  "de/adac-kreditkarte-mit-paket-reise": {"art": ["haft"], "haft": "bis 1.000.000 € je Schadenereignis, weltweit außer Deutschland; dazu Reise-Rechtsschutz für Mietfahrzeuge", "eigenanteil": "Eigenanteil nicht eindeutig angegeben", "dauer": "nicht eigens angegeben", "bedingungen": "Paket Reise aktiv", "ausschluesse": "keine Kasko und keine Erstattung der Selbstbeteiligung", "quelle": "https://www.solarisgroup.com/adac-information/versicherungsbedingungen-adac-kreditkarte-reise", "fundstelle": "Zusatz-Haftpflichtversicherung für Mietwagen im Ausland"},
-  "de/postbank-mastercard-platinum": {"art": ["haft"], "haft": "insgesamt bis 1.050.000 € je Schadenereignis", "eigenanteil": "nicht eigens angegeben", "dauer": "nicht eigens angegeben", "bedingungen": "Mietwagen im Ausland mit der Karte bezahlen", "ausschluesse": "Schäden am Mietwagen selbst sind ausdrücklich nicht versichert", "quelle": "https://www.postbank.de/dam/postbank/pdf/privatkunden/karten/Postbank-Platinum-Kreditkarten-Versicherungsbedingungen-678-148-033-0825.pdf", "fundstelle": "Haftpflicht-Zusatzversicherung für Mietfahrzeuge"},
-  "de/klarna-max": {"art": ["sb"], "sb": "Schutz bei Schaden und Diebstahl bis 10.000 € (Selbstbeteiligungsschutz)", "eigenanteil": "nicht eindeutig angegeben", "dauer": "Mieten bis 30 Tage", "bedingungen": "Mitgliedschaft aktiv; Reise und Miete mit dem Klarna-Konto bezahlen; Fahrer ab 18 mit gültigem Führerschein; Vermieterversicherung nötig", "ausschluesse": "Carsharing zwischen Privatpersonen, ausgeschlossene Fahrzeugklassen", "quelle": "https://static.xcover.com/media/pds/20c500eb-3478-4c88-84a3-9dc6f7f19a37/Klarna_Max_IPID_DE.pdf", "fundstelle": "Kurzinfo zur Versicherung (IPID), Mietwagen"},
-  "de/klarna-premium": {"art": ["sb"], "sb": "Schutz bei Schaden und Diebstahl bis 10.000 € (Selbstbeteiligungsschutz)", "eigenanteil": "nicht eindeutig angegeben", "dauer": "Mieten bis 30 Tage", "bedingungen": "Mitgliedschaft aktiv; Reise und Miete mit dem Klarna-Konto bezahlen; Fahrer ab 18 mit gültigem Führerschein; Vermieterversicherung nötig", "ausschluesse": "Carsharing zwischen Privatpersonen, ausgeschlossene Fahrzeugklassen", "quelle": "https://www.klarna.com/de/mitgliedschaft/reisevorteile/", "fundstelle": "Klarna Reisevorteile und Kurzinfo (IPID) Premium"},
-  "de/bank-norwegian-visa-kreditkarte": {"art": ["sb"], "optional": "89 € pro Jahr, separat buchbar", "sb": "Erstattung der Selbstbeteiligung bis 2.500 € je Schadenfall, höchstens 5.000 € pro Jahr", "eigenanteil": "nicht eigens angegeben", "dauer": "Mieten bis 31 Tage", "bedingungen": "Zusatzversicherung vor der Abholung abschließen; Mietwagen zu 100 % mit der Karte bezahlen; Karteninhaber als Mieter; gewerblicher Vermieter mit Vollkasko; Wohnsitz in Deutschland", "ausschluesse": "nicht in der Karte enthalten", "quelle": "https://www.banknorwegian.de/versicherungen/selbstbeteiligungs-schutz-mietwagen/", "fundstelle": "Produktseite Selbstbeteiligungs-Schutz Mietwagen"}
+  "at/american-express-platinum-card": {
+   "art": [
+    "kasko",
+    "haft"
+   ],
+   "kasko": "bis 75.000 € je Unfall oder Ereignis, höchstens der Fahrzeugwert",
+   "haft": "bis 750.000 € je Ereignis, in den USA bis 1.000.000 USD",
+   "eigenanteil": "0 € (für Reiseleistungen gibt es laut Bedingungen keine Selbstbeteiligung)",
+   "dauer": "Reisen bis 120 Tage; eine eigene Höchstdauer für die Miete nennen die Bedingungen nicht",
+   "bedingungen": "Reise und Mietwagen mit der Karte bezahlen; bis 2 Fahrzeuge gleichzeitig und bis 5 eingetragene Fahrer; zahlt nur, wenn keine andere Versicherung leistet",
+   "ausschluesse": "Motorräder, Wohnmobile, Nutzfahrzeuge, Fahrzeuge mit mehr als 9 Sitzen, Renn- und Geländefahrten",
+   "quelle": "https://www.americanexpress.com/content/dam/amex/de-at/homepage/Document/AT_Platinum-Card_Mitgliedschaftbedingungen.pdf",
+   "fundstelle": "Mitgliedschaftsbedingungen, Mietwagenversicherung, S. 25-26"
+  },
+  "at/revolut-metal": {
+   "art": [
+    "sb"
+   ],
+   "sb": "Erstattung der Selbstbeteiligung bis 2.000 €",
+   "eigenanteil": "nicht eindeutig angegeben",
+   "dauer": "Mieten bis 30 Tage laut Versicherungsbedingungen (die Revolut-Hilfe nennt 31 Tage)",
+   "bedingungen": "Abo vor Mietbeginn aktiv; Reise mehr als 200 km vom Wohnort oder im Ausland; eigener Mietvertrag und eingetragene Fahrer; Vollkasko (CDW) des Vermieters nötig. Der Mietwagen muss nicht mit Revolut bezahlt werden.",
+   "ausschluesse": "Carsharing zwischen Privatpersonen; keine eigene Vollkasko",
+   "konflikt": "Versicherungsbedingungen und Revolut-Hilfe nennen unterschiedliche Höchstdauern (30 bzw. 31 Tage).",
+   "quelle": "https://help.revolut.com/de-AT/help/insurance-products/insuring-my-travel/what-am-i-covered-for/travel-insurance-features/car-hire-excess-protection/",
+   "fundstelle": "Revolut-Hilfe AT und Metal-Versicherungsbedingungen"
+  },
+  "at/revolut-ultra": {
+   "art": [
+    "sb"
+   ],
+   "sb": "Erstattung der Selbstbeteiligung bis 2.000 €",
+   "eigenanteil": "nicht eindeutig angegeben",
+   "dauer": "Mieten bis 31 Tage",
+   "bedingungen": "Abo vor Mietbeginn aktiv; Reise mehr als 200 km vom Wohnort; eigener Mietvertrag und eingetragene Fahrer; Vollkasko (CDW) des Vermieters nötig. Der Mietwagen muss nicht mit Revolut bezahlt werden.",
+   "ausschluesse": "Carsharing zwischen Privatpersonen; keine eigene Vollkasko",
+   "quelle": "https://help.revolut.com/de-AT/help/insurance-products/insuring-my-travel/what-am-i-covered-for/travel-insurance-features/car-hire-excess-protection/",
+   "fundstelle": "Revolut-Hilfe AT und Ultra-Versicherungsbedingungen"
+  },
+  "de/revolut-metal": {
+   "art": [
+    "sb"
+   ],
+   "sb": "Erstattung der Selbstbeteiligung bis 2.000 €",
+   "eigenanteil": "nicht eindeutig angegeben",
+   "dauer": "Mieten bis 30 Tage laut Versicherungsbedingungen (die Revolut-Hilfe nennt 31 Tage)",
+   "bedingungen": "Abo vor Mietbeginn aktiv; Reise mehr als 200 km vom Wohnort oder im Ausland; eigener Mietvertrag und eingetragene Fahrer; Vollkasko (CDW) des Vermieters nötig. Der Mietwagen muss nicht mit Revolut bezahlt werden.",
+   "ausschluesse": "Carsharing zwischen Privatpersonen; keine eigene Vollkasko",
+   "konflikt": "Versicherungsbedingungen und Revolut-Hilfe nennen unterschiedliche Höchstdauern (30 bzw. 31 Tage).",
+   "quelle": "https://help.revolut.com/de-DE/help/insurance-products/insuring-my-travel/what-am-i-covered-for/travel-insurance-features/car-hire-excess-protection/",
+   "fundstelle": "Revolut-Hilfe DE und Metal-Versicherungsbedingungen"
+  },
+  "de/revolut-ultra": {
+   "art": [
+    "sb"
+   ],
+   "sb": "Erstattung der Selbstbeteiligung bis 2.000 €",
+   "eigenanteil": "nicht eindeutig angegeben",
+   "dauer": "Mieten bis 31 Tage",
+   "bedingungen": "Abo vor Mietbeginn aktiv; Reise mehr als 200 km vom Wohnort; eigener Mietvertrag und eingetragene Fahrer; Vollkasko (CDW) des Vermieters nötig. Der Mietwagen muss nicht mit Revolut bezahlt werden.",
+   "ausschluesse": "Carsharing zwischen Privatpersonen; keine eigene Vollkasko",
+   "quelle": "https://help.revolut.com/de-DE/help/insurance-products/insuring-my-travel/what-am-i-covered-for/travel-insurance-features/car-hire-excess-protection/",
+   "fundstelle": "Revolut-Hilfe DE und Ultra-Versicherungsbedingungen"
+  },
+  "de/american-express-platinum-card": {
+   "art": [
+    "kasko",
+    "haft"
+   ],
+   "kasko": "bis 75.000 € je Unfall oder versichertem Ereignis, höchstens der Fahrzeugwert",
+   "haft": "bis 750.000 € je Ereignis, in den USA bis 1.000.000 USD",
+   "eigenanteil": "200 € je Versicherungsfall",
+   "dauer": "Reisen bis 120 Tage; eine eigene Höchstdauer für die Miete nennen die Bedingungen nicht",
+   "bedingungen": "Mietwagen mit der Karte bezahlen; Reise nötig; bis 2 Fahrzeuge gleichzeitig und bis 5 eingetragene Fahrer; zahlt nur, wenn keine andere Versicherung leistet",
+   "ausschluesse": "Renn- und Geländefahrten, Nutzfahrzeuge, Wohnmobile, nicht eingetragene Fahrer",
+   "quelle": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/Platinum_Card_Informationen.pdf",
+   "fundstelle": "Mietwagenleistungen, Diebstahl, Beschädigung und Haftpflicht"
+  },
+  "de/bmw-premium-card-carbon": {
+   "art": [
+    "kasko"
+   ],
+   "kasko": "bis 75.000 € je Leistungsfall, höchstens der Fahrzeugwert",
+   "eigenanteil": "200 € je Versicherungsfall",
+   "dauer": "Mieten bis 120 Tage",
+   "bedingungen": "Mietwagen mit der Karte bezahlen; bis 2 Fahrzeuge gleichzeitig und bis 5 eingetragene Fahrer; In- und Ausland; zahlt nur, wenn keine andere Versicherung leistet",
+   "ausschluesse": "keine zusätzliche Haftpflicht für Schäden an Dritten",
+   "quelle": "https://www.americanexpress.com/content/dam/amex/de/benefits/bedingungen/BMW_Carbon_Card_Informationen.pdf",
+   "fundstelle": "Mietwagen-, Diebstahl- und Kaskoversicherung, S. 26"
+  },
+  "de/miles-und-more-gold-credit-card": {
+   "art": [
+    "kasko"
+   ],
+   "kasko": "bis 75.000 € je Mietzeitraum",
+   "eigenanteil": "200 € je Versicherungsfall",
+   "dauer": "Mieten bis 30 Tage",
+   "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; Reise nötig; 1 Fahrzeug; eingetragene Fahrer ab 21; zahlt nicht, was die Vollkasko des Vermieters deckt",
+   "ausschluesse": "keine zusätzliche Haftpflicht; Innenraum, Abnutzung, Pannen, Abschlepp- und Verwaltungsgebühren",
+   "quelle": "https://www.miles-and-more-kreditkarte.com/dam/milesandmore/dokumente/pdf/versicherungen/versicherungsbestaetigung-lufthansa-miles-and-more-credit-card.pdf",
+   "fundstelle": "Abschnitt C, Mietwagen-Zusatz-Versicherung"
+  },
+  "de/targobank-premium-karte": {
+   "art": [
+    "kasko"
+   ],
+   "kasko": "bis 75.000 €, begrenzt auf Fahrzeugwert bzw. Schaden",
+   "eigenanteil": "250 € je Schadenfall; hast du die Vermieterversicherung, zahlt die Karte nur deren Selbstbeteiligung",
+   "dauer": "Mieten bis 31 Tage",
+   "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; keine Reise nötig; weltweit; 1 Fahrzeug; Fahrer: Karteninhaber und Ehe- bzw. eingetragener Lebenspartner",
+   "ausschluesse": "Fahrzeuge über 80.000 € Kaufpreis, älter als 20 Jahre; Schaden spätestens 31 Tage nach Rückgabe melden",
+   "quelle": "https://www.targobank.de/de/amc-content/pdf/02-11/versicherungsleistungen_premium.pdf",
+   "fundstelle": "Mietwagen-Vollkaskoversicherung"
+  },
+  "de/eurowings-kreditkarte-premium": {
+   "art": [
+    "kasko"
+   ],
+   "kasko": "bis 75.000 € je Versicherungsfall",
+   "eigenanteil": "230 € je Schadenfall",
+   "dauer": "Mieten bis 30 Tage",
+   "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; gültiger Führerschein, eingetragene Fahrer; weltweit; 1 Fahrzeug; zahlt nur, wenn keine andere Versicherung leistet",
+   "ausschluesse": "keine zusätzliche Haftpflicht für Schäden an Dritten",
+   "quelle": "https://www.easybank.de/resource/blob/122924/f779ed71783dd6fb9000a6eb220c7219/avb-eurowings-kreditkarte-premium-data.pdf",
+   "fundstelle": "Mietwagenvollkaskoversicherung"
+  },
+  "de/easybank-kreditkarte-platinum": {
+   "art": [
+    "kasko",
+    "haft"
+   ],
+   "kasko": "Voll- und Teilkasko bis 100.000 €",
+   "haft": "bis 1.000.000 €",
+   "eigenanteil": "Eigenanteil nicht eindeutig angegeben",
+   "dauer": "Mieten bis 90 Tage",
+   "bedingungen": "Mietwagen vollständig im Voraus mit der Karte bezahlen; berechtigte Fahrer im Vertrag; Pkw bis 9 Sitze; jede Schadenmeldung mit Polizeibericht",
+   "ausschluesse": "andere Fahrzeugklassen laut Bedingungen",
+   "quelle": "https://www.easybank.de/resource/blob/122934/3dbbeacf545c7a03724b3e806f97b074/avb-easybank-kreditkarte-platinum-data.pdf",
+   "fundstelle": "Mietwagen-Versicherung"
+  },
+  "de/consorsbank-visa-card-gold": {
+   "art": [
+    "sb"
+   ],
+   "sb": "Erstattung der Selbstbeteiligung bis 1.500 €",
+   "eigenanteil": "kein zusätzlicher Eigenanteil angegeben",
+   "dauer": "Mieten bis 30 Tage",
+   "bedingungen": "Miete mit der Visa Gold oder dem Consorsbank Girokonto bezahlen; Vollkasko des Vermieters nötig; Haupt- und Partnerkarteninhaber; Fahrer 21 bis 74 Jahre ohne Probezeit; keine Reise nötig",
+   "ausschluesse": "Carsharing, Wohnmobile, Motorräder",
+   "quelle": "https://www.consorsbank.de/content/dam/de-cb/editorial/PDF/Service-Beratung/Formulare/Girokonto/avb-visa-card-gold.pdf",
+   "fundstelle": "Abschnitt VII, Selbstbeteiligungs-Versicherung"
+  },
+  "de/bunq-elite": {
+   "art": [
+    "sb"
+   ],
+   "sb": "Erstattung der Selbstbeteiligung bis 3.000 € je Kontoinhaber und Vorfall",
+   "eigenanteil": "0 €",
+   "dauer": "Mieten bis 31 Tage",
+   "bedingungen": "Fahrer ab 21, im Vertrag eingetragen; 1 Mietwagen; Wohnsitz in Deutschland (versichert sind nur Kunden aus den Niederlanden, Deutschland, Frankreich, Spanien, Irland, Belgien und Italien)",
+   "ausschluesse": "Leasing- und Verlängerungsverträge",
+   "quelle": "https://assets.qover.com/documents/bunq/bunq_T%26Cs_DE.pdf",
+   "fundstelle": "Leistungstabelle und Mietwagen-Selbstbeteiligung"
+  },
+  "de/openbank-bestcard-premium": {
+   "art": [
+    "kasko"
+   ],
+   "kasko": "bis 50.000 € pro Mietfahrzeug",
+   "eigenanteil": "Eigenanteil nicht eindeutig angegeben",
+   "dauer": "Mieten bis 30 Tage",
+   "bedingungen": "Mietwagen vollständig mit der Karte bezahlen; Fahrer ab 21, im Vertrag eingetragen; 1 Fahrzeug; Wohnsitz in Deutschland; zahlt nur, wenn keine andere Versicherung leistet",
+   "ausschluesse": "keine zusätzliche Haftpflicht für Schäden an Dritten",
+   "quelle": "https://www.openbank.de/content/dam/openbank/dokumente/versicherungen/versicherungsbedingungen-santander-kreditkarten.pdf.coredownload.pdf",
+   "fundstelle": "Teil C, Mietwagenvollkaskoversicherung"
+  },
+  "de/adac-kreditkarte-mit-paket-schutz": {
+   "art": [
+    "sb"
+   ],
+   "sb": "Erstattung der Selbstbeteiligung bis 3.000 € je Schadenfall (gemeinsame Grenze für Selbstbeteiligung, persönlichen Besitz, Fehlbetankung und Schlüssel)",
+   "eigenanteil": "0 €",
+   "dauer": "Mieten bis 31 Tage",
+   "bedingungen": "Paket aktiv; Mietwagen vollständig mit der ADAC-Karte bezahlen; Mieter und Fahrer ab 21; Vermieterversicherung mit Selbstbeteiligung nötig; weltweit, privat und geschäftlich",
+   "ausschluesse": "Wohnmobile, Motorräder, bestimmte Luxusmarken, Geländefahrten",
+   "quelle": "https://www.solarisgroup.com/adac-information/axa-versicherungsbedingungen-adac-kreditkarte-schutz",
+   "fundstelle": "AXA-Bedingungen Ziffern 1.1-1.10, gültig ab 17.09.2024"
+  },
+  "de/adac-kreditkarte-mit-paket-platin": {
+   "art": [
+    "sb",
+    "haft"
+   ],
+   "sb": "Erstattung der Selbstbeteiligung bis 3.000 € je Schadenfall (gemeinsame Grenze für Selbstbeteiligung, persönlichen Besitz, Fehlbetankung und Schlüssel)",
+   "haft": "bis 1.000.000 € je Schadenereignis, weltweit außer Deutschland",
+   "eigenanteil": "0 €",
+   "dauer": "Mieten bis 31 Tage",
+   "bedingungen": "Paket aktiv; Mietwagen vollständig mit der ADAC-Karte bezahlen; Mieter und Fahrer ab 21; Vermieterversicherung mit Selbstbeteiligung nötig",
+   "ausschluesse": "Wohnmobile, Motorräder, bestimmte Luxusmarken, Geländefahrten",
+   "quelle": "https://www.solarisgroup.com/adac-information/axa-versicherungsbedingungen-adac-kreditkarte-platin",
+   "fundstelle": "AXA-Bedingungen Ziffern 1.1-1.10, gültig ab 17.09.2024; Zusatzhaftpflicht laut ADAC-Bedingungen Platin"
+  },
+  "de/adac-kreditkarte-mit-paket-reise": {
+   "art": [
+    "haft"
+   ],
+   "haft": "bis 1.000.000 € je Schadenereignis, weltweit außer Deutschland; dazu Reise-Rechtsschutz für Mietfahrzeuge",
+   "eigenanteil": "Eigenanteil nicht eindeutig angegeben",
+   "dauer": "nicht eigens angegeben",
+   "bedingungen": "Paket Reise aktiv",
+   "ausschluesse": "keine Kasko und keine Erstattung der Selbstbeteiligung",
+   "quelle": "https://www.solarisgroup.com/adac-information/versicherungsbedingungen-adac-kreditkarte-reise",
+   "fundstelle": "Zusatz-Haftpflichtversicherung für Mietwagen im Ausland"
+  },
+  "de/postbank-mastercard-platinum": {
+   "art": [
+    "haft"
+   ],
+   "haft": "insgesamt bis 1.050.000 € je Schadenereignis",
+   "eigenanteil": "nicht eigens angegeben",
+   "dauer": "nicht eigens angegeben",
+   "bedingungen": "Mietwagen im Ausland mit der Karte bezahlen",
+   "ausschluesse": "Schäden am Mietwagen selbst sind ausdrücklich nicht versichert",
+   "quelle": "https://www.postbank.de/dam/postbank/pdf/privatkunden/karten/Postbank-Platinum-Kreditkarten-Versicherungsbedingungen-678-148-033-0825.pdf",
+   "fundstelle": "Haftpflicht-Zusatzversicherung für Mietfahrzeuge"
+  },
+  "de/klarna-max": {
+   "art": [
+    "sb"
+   ],
+   "sb": "Schutz bei Schaden und Diebstahl bis 10.000 € (Selbstbeteiligungsschutz)",
+   "eigenanteil": "nicht eindeutig angegeben",
+   "dauer": "Mieten bis 30 Tage",
+   "bedingungen": "Mitgliedschaft aktiv; Reise und Miete mit dem Klarna-Konto bezahlen; Fahrer ab 18 mit gültigem Führerschein; Vermieterversicherung nötig",
+   "ausschluesse": "Carsharing zwischen Privatpersonen, ausgeschlossene Fahrzeugklassen",
+   "quelle": "https://static.xcover.com/media/pds/20c500eb-3478-4c88-84a3-9dc6f7f19a37/Klarna_Max_IPID_DE.pdf",
+   "fundstelle": "Kurzinfo zur Versicherung (IPID), Mietwagen"
+  },
+  "de/klarna-premium": {
+   "art": [
+    "sb"
+   ],
+   "sb": "Schutz bei Schaden und Diebstahl bis 10.000 € (Selbstbeteiligungsschutz)",
+   "eigenanteil": "nicht eindeutig angegeben",
+   "dauer": "Mieten bis 30 Tage",
+   "bedingungen": "Mitgliedschaft aktiv; Reise und Miete mit dem Klarna-Konto bezahlen; Fahrer ab 18 mit gültigem Führerschein; Vermieterversicherung nötig",
+   "ausschluesse": "Carsharing zwischen Privatpersonen, ausgeschlossene Fahrzeugklassen",
+   "quelle": "https://www.klarna.com/de/mitgliedschaft/reisevorteile/",
+   "fundstelle": "Klarna Reisevorteile und Kurzinfo (IPID) Premium"
+  },
+  "de/bank-norwegian-visa-kreditkarte": {
+   "art": [
+    "sb"
+   ],
+   "optional": "89 € pro Jahr, separat buchbar",
+   "sb": "Erstattung der Selbstbeteiligung bis 2.500 € je Schadenfall, höchstens 5.000 € pro Jahr",
+   "eigenanteil": "nicht eigens angegeben",
+   "dauer": "Mieten bis 31 Tage",
+   "bedingungen": "Zusatzversicherung vor der Abholung abschließen; Mietwagen zu 100 % mit der Karte bezahlen; Karteninhaber als Mieter; gewerblicher Vermieter mit Vollkasko; Wohnsitz in Deutschland",
+   "ausschluesse": "nicht in der Karte enthalten",
+   "quelle": "https://www.banknorwegian.de/versicherungen/selbstbeteiligungs-schutz-mietwagen/",
+   "fundstelle": "Produktseite Selbstbeteiligungs-Schutz Mietwagen"
+  }
  }
 }
