@@ -711,3 +711,9 @@ body{overflow-x:clip}
 @media (min-width:980px){.hero{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) 270px;padding:30px;align-items:start}}
 @media (min-width:700px) and (max-width:979px){.hero{grid-template-columns:minmax(0,1fr) 260px}.hero-t{grid-column:1/-1}}
 .hero .checked-line{color:#a9cfc8;margin:-4px 0 10px}
+/* Seiten mit breitem Kopfbereich: Inhalt am Desktop breiter, Einträge zweispaltig, Fließtext bleibt gut lesbar */
+@media (min-width:1100px){
+  .wrap:has(> main .hero){max-width:1232px}
+  .wrap:has(> main .hero) .list:not(.blt){grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+  .wrap:has(> main .hero) .prose p,.wrap:has(> main .hero) .prose li,.wrap:has(> main .hero) main > .note{max-width:86ch}
+}

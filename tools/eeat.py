@@ -16,7 +16,7 @@ import karten as K
 R = K.R; E = K.E
 ORG = {"@type": "Organization", "@id": "https://finvallo.com/#org", "name": "Finvallo", "url": "https://finvallo.com/",
        "logo": "https://finvallo.com/assets/brand/logo-400x400.png", "email": "hallo@finvallo.com", "founder": {"@id": "https://finvallo.com/ueber-uns/#haris"}}
-PERSON = {"@type": "Person", "@id": "https://finvallo.com/ueber-uns/#haris", "name": "Haris", "url": "https://finvallo.com/ueber-uns/",
+PERSON = {"@type": "Person", "@id": "https://finvallo.com/ueber-uns/#haris", "name": "Haris Z.", "url": "https://finvallo.com/ueber-uns/",
           "image": "https://finvallo.com/assets/haris.jpg", "jobTitle": "Gründer", "worksFor": {"@id": "https://finvallo.com/#org"},
           "knowsAbout": ["Kreditkarten", "Girokonten", "Festgeld", "Datenanalyse", "Finanzvergleich"]}
 AUTH = {"@id": "https://finvallo.com/ueber-uns/#haris"}
@@ -44,8 +44,8 @@ UEBER = '''<h1>Über Finvallo</h1>
 <h2>Was Finvallo nicht ist</h2>
 <p>Finvallo ist keine Finanzberatung und ersetzt keine. Wir erklären, was im Preisblatt steht, und rechnen vor, was es für verschiedene Nutzungsprofile bedeutet. Ob eine Karte, ein Konto oder eine Anlage für dich richtig ist, entscheidest du. Beratung zu deiner persönlichen Situation bekommst du bei Stellen, die dafür da sind – in Österreich etwa beim Konsumentenschutz der Arbeiterkammer, in Deutschland bei der Verbraucherzentrale.</p>
 <h2>Wer dahinter steht</h2>
-<p><img class="founder" src="/assets/haris.jpg" alt="Haris, Gründer von Finvallo" width="96" height="96"''' + IMG_ERR + '''></p>
-<p><b>Haris</b> – Gründer, Wien</p>
+<p><img class="founder" src="/assets/haris.jpg" alt="Haris Z., Gründer von Finvallo" width="96" height="96"''' + IMG_ERR + '''></p>
+<p><b>Haris Z.</b> - Gründer, Wien</p>
 <p>Hat Finvallo gebaut und betreibt es derzeit allein. Wir schreiben „wir“, weil Finvallo wachsen soll. Derzeit steckt hinter allem eine Person. Kommt aus Daten und Analyse: sammeln, prüfen, auswerten, aus Zahlen Entscheidungsgrundlagen machen. Kein Finanzberater, kein Banker – und das soll so bleiben. Finvallo liefert Regeln und Rechner, keine Empfehlungen.</p>
 <h2>Fehler gefunden?</h2>
 <p>Dann wollen wir es wissen. Schreib an <a class="lnk" href="mailto:korrektur@finvallo.com">korrektur@finvallo.com</a> mit Produktname und Quelle. Wir korrigieren und vermerken das Datum der Korrektur auf der betroffenen Seite.</p>
@@ -75,8 +75,8 @@ def author_box(land, title, bereich='kreditkarten'):
     mail = 'mailto:' + MAIL['korrektur'] + '?subject=' + quote('Korrektur: ' + t)
     meth = {'kreditkarten': (f'/{land}/kreditkarten/methodik/', 'So entstehen die Sterne'), 'girokonto': (f'/{land}/girokonto/methodik/', 'So bewerten wir Girokonten'),
             'festgeld': (f'/{land}/festgeld/methodik/', 'So vergleichen wir Festgeld')}.get(bereich, (f'/{land}/methodik/', 'So bewerten wir'))
-    return (f'<!--author--><aside class="author-box" aria-label="Über den Autor"><img src="/assets/haris.jpg" alt="Haris" width="48" height="48"{IMG_ERR}>'
-            f'<div><p><b>Haris</b> betreibt Finvallo. Er kommt aus Daten und Analyse, nicht aus der Finanzberatung – deshalb gibt es hier Regeln und Rechner statt persönlicher Beratung.</p>'
+    return (f'<!--author--><aside class="author-box" aria-label="Über den Autor"><img src="/assets/haris.jpg" alt="Haris Z." width="48" height="48"{IMG_ERR}>'
+            f'<div><p><b>Haris Z.</b> betreibt Finvallo. Er kommt aus Daten und Analyse, nicht aus der Finanzberatung – deshalb gibt es hier Regeln und Rechner statt persönlicher Beratung.</p>'
             f'<p class="author-links"><a class="lnk" href="/ueber-uns/">Über Finvallo</a> · <a class="lnk" href="{meth[0]}">{meth[1]}</a> · <a class="lnk" href="{H.escape(mail)}">Fehler melden</a></p></div></aside><!--/author-->')
 
 def put_author(s, box, before):
@@ -437,7 +437,7 @@ def main():
         p = R + fn
         if not os.path.exists(p): continue
         t = open(p, encoding='utf-8').read()
-        add = 'Betrieben von Haris (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/'
+        add = 'Betrieben von Haris Z. (Wien), Hintergrund Daten und Analyse; keine Finanzberatung. Details: https://finvallo.com/ueber-uns/'
         if add not in t: t = re.sub(r'^(> .*)$', lambda m: m.group(1) + ' ' + add, t, count=1, flags=re.M)
         # C25: einheitlicher Abschnitt „Zitieren“, Titel der Volltext-Datei mit dem jüngsten Prüfdatum
         t = t.replace(' Bitte bei Zitaten die jeweilige Seiten-URL als Quelle angeben.', '')
