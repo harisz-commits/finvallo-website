@@ -18,7 +18,17 @@
 
   var fmt = function (v) { return v.toLocaleString('de-DE', { minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 }) + ' €'; };
   var calcBox = document.getElementById('gcalc'), box = document.getElementById('filt');
-  if (!box) return;
+  // Seiten ohne Filter (Studierende, Jugend, Kinder): Sprung auf ein Konto öffnet dessen Konditionen
+  if (!box) {
+    var auf = function () {
+      var h = decodeURIComponent(location.hash.slice(1)), it = h.indexOf('gk-') === 0 && document.getElementById(h);
+      if (!it) return;
+      var d = it.querySelector('details.more'); if (d) d.open = true;
+      it.scrollIntoView({ block: 'start' });
+    };
+    window.addEventListener('hashchange', auf); auf();
+    return;
+  }
   var items = [].slice.call(document.querySelectorAll('article.item[data-k]'));
   items.forEach(function (it, i) { it.dataset.ord = i; it._k = JSON.parse(it.dataset.k); });
   var secs = [].slice.call(document.querySelectorAll('section.gsec'));

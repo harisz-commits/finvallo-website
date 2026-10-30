@@ -24,7 +24,7 @@ def register(art,P,eur):
     for k in ks: k.setdefault('geprueft',d['stand'])
     G.rate(ks)
     G.K.use('at'); G.LAND,G.CC='at',G.CFG['at']
-    def L(k,label=None): return f'<a class="lnk" href="{P}de/girokonto/#gk-{k["slug"]}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
+    def L(k,label=None): return f'<a class="lnk" href="{P}de/girokonto/{ {'student':'bestenlisten/studenten/','jugend':'bestenlisten/jugendkonto/','kinder':'bestenlisten/kinderkonto/'}.get(k.get('art'),'') }#gk-{k["slug"]}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
     alle=[k for k in ks if k['art'] in ('standard','premium')]
     pr=G.PROFIL['standard']
     cost=lambda k:G.kosten(k,pr['ein'],pr['alter'],pr['abh'])['total']

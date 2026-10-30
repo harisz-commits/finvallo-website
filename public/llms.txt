@@ -79,7 +79,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 
 ## Österreich: Girokonten
 - [Girokonto-Vergleich Österreich](https://finvallo.com/at/girokonto/): 62 Konten von Banken mit Angebot in ganz Österreich, Jahreskosten selbst rechnen, Stand 27.10.2026
-- [Bestenlisten Girokonten Österreich](https://finvallo.com/at/girokonto/bestenlisten/): Kostenlos, Gratis ohne Geldeingang, Mit Unterkonten, Mit Kreditkarte, Mit Prämie, Ohne KSV1870-Abfrage, Direktbanken, Neobanken, Nachhaltige Banken, Gemeinschaftskonto, Studierende, Kinder und Jugendliche
+- [Bestenlisten Girokonten Österreich](https://finvallo.com/at/girokonto/bestenlisten/): Kostenlos, Gratis ohne Geldeingang, Mit Unterkonten, Mit Kreditkarte, Mit Prämie, Ohne KSV1870-Abfrage, Direktbanken, Neobanken, Nachhaltige Banken, Gemeinschaftskonto, Studierende, Jugendliche, Kinder
 - [So bewerten wir Girokonten](https://finvallo.com/at/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/at/daten/girokonten.json)
 - [Online Gehalts-/Pensionskonto (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/#gk-anadi-online-gehalts-pensionskonto): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
@@ -87,12 +87,12 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [Pensionskonto (DADAT Bank)](https://finvallo.com/at/girokonto/#gk-dadat-bank-pensionskonto): Konten für alle, 4,7/5, 0 € im Jahr im Beispiel
 - [N26 Standard (N26)](https://finvallo.com/at/girokonto/#gk-n26-standard): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
 - [Girokonto (Trade Republic)](https://finvallo.com/at/girokonto/#gk-trade-republic-girokonto): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
-- [Studentenkonto (Erste Bank)](https://finvallo.com/at/girokonto/#gk-erste-bank-studentenkonto): Für Studierende und junge Erwachsene, 4,8/5, 0 € im Jahr im Beispiel
-- [U28-Konto (DADAT Bank)](https://finvallo.com/at/girokonto/#gk-dadat-bank-u28-konto): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
-- [Jugendkonto (B4-19 KontoBox) (BAWAG)](https://finvallo.com/at/girokonto/#gk-bawag-jugendkonto): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
-- [spark7 Jugendkonto (Erste Bank)](https://finvallo.com/at/girokonto/#gk-erste-bank-spark7-jugendkonto): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
-- [MegaCard-Konto 7-13 (Bank Austria)](https://finvallo.com/at/girokonto/#gk-bank-austria-megacard-konto-7-13): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
-- [Kinderkonto (BAWAG)](https://finvallo.com/at/girokonto/#gk-bawag-kinderkonto): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Studentenkonto (Erste Bank)](https://finvallo.com/at/girokonto/bestenlisten/studenten/#gk-erste-bank-studentenkonto): Für Studierende und junge Erwachsene, 4,8/5, 0 € im Jahr im Beispiel
+- [U28-Konto (DADAT Bank)](https://finvallo.com/at/girokonto/bestenlisten/studenten/#gk-dadat-bank-u28-konto): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [Jugendkonto (B4-19 KontoBox) (BAWAG)](https://finvallo.com/at/girokonto/bestenlisten/jugendkonto/#gk-bawag-jugendkonto): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [spark7 Jugendkonto (Erste Bank)](https://finvallo.com/at/girokonto/bestenlisten/jugendkonto/#gk-erste-bank-spark7-jugendkonto): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [MegaCard-Konto 7-13 (Bank Austria)](https://finvallo.com/at/girokonto/bestenlisten/kinderkonto/#gk-bank-austria-megacard-konto-7-13): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Kinderkonto (BAWAG)](https://finvallo.com/at/girokonto/bestenlisten/kinderkonto/#gk-bawag-kinderkonto): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
 - [Basiskonto (VZKG-Konto) (Wüstenrot Bank)](https://finvallo.com/at/girokonto/#gk-wuestenrot-bank-vzkg-konto): Basiskonten, 3,8/5, 58,80 € im Jahr im Beispiel
 - [Zahlungskonto mit grundlegenden Funktionen (Austrian Anadi Bank)](https://finvallo.com/at/girokonto/#gk-anadi-zahlungskonto): Basiskonten, 3,8/5, 80 € im Jahr im Beispiel
 
@@ -132,7 +132,7 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 
 ## Deutschland: Girokonten
 - [Girokonto-Vergleich Deutschland](https://finvallo.com/de/girokonto/): 87 Konten von Banken mit Angebot in ganz Deutschland, Jahreskosten selbst rechnen, Stand 27.10.2026
-- [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis ohne Geldeingang, Mit Unterkonten, Mit Kreditkarte, Mit Prämie, Ohne Schufa-Abfrage, Direktbanken, Neobanken, Nachhaltige Banken, Gemeinschaftskonto, Studierende, Kinder und Jugendliche
+- [Bestenlisten Girokonten Deutschland](https://finvallo.com/de/girokonto/bestenlisten/): Kostenlos, Gratis ohne Geldeingang, Mit Unterkonten, Mit Kreditkarte, Mit Prämie, Ohne Schufa-Abfrage, Direktbanken, Neobanken, Nachhaltige Banken, Gemeinschaftskonto, Studierende, Jugendliche, Kinder
 - [So bewerten wir Girokonten](https://finvallo.com/de/girokonto/methodik/)
 - [Daten als JSON](https://finvallo.com/de/daten/girokonten.json)
 - [Consorsbank! Girokonto (Consorsbank)](https://finvallo.com/de/girokonto/#gk-consorsbank-girokonto): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
@@ -140,12 +140,12 @@ Beim Zitieren bitte die jeweilige Seiten-URL und das Prüfdatum angeben.
 - [BestGiro (Openbank)](https://finvallo.com/de/girokonto/#gk-openbank-bestgiro): Konten für alle, 4,6/5, 0 € im Jahr im Beispiel
 - [Skatbank-TrumpfKonto (Deutsche Skatbank)](https://finvallo.com/de/girokonto/#gk-skatbank-trumpfkonto): Konten für alle, 4,6/5, 5 € im Jahr im Beispiel
 - [GiroDirekt (1822direkt)](https://finvallo.com/de/girokonto/#gk-1822direkt-girodirekt): Konten für alle, 4,5/5, 0 € im Jahr im Beispiel
-- [StartKonto (Studierende und Azubis) (Commerzbank)](https://finvallo.com/de/girokonto/#gk-commerzbank-startkonto): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
-- [HVB StartKonto (HypoVereinsbank)](https://finvallo.com/de/girokonto/#gk-hvb-startkonto): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
-- [StartKonto (Kinder und Jugendliche) (Commerzbank)](https://finvallo.com/de/girokonto/#gk-commerzbank-startkonto-jugend): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
-- [GLS Konto U18 (GLS Bank)](https://finvallo.com/de/girokonto/#gk-gls-konto-u18): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
-- [BambiniKonto (Kinderkonto) (Commerzbank)](https://finvallo.com/de/girokonto/#gk-commerzbank-bambinikonto): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
-- [Girokonto u18 (DKB)](https://finvallo.com/de/girokonto/#gk-dkb-girokonto-u18): Kinderkonten, 4,5/5, 0 € im Jahr im Beispiel
+- [StartKonto (Studierende und Azubis) (Commerzbank)](https://finvallo.com/de/girokonto/bestenlisten/studenten/#gk-commerzbank-startkonto): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [HVB StartKonto (HypoVereinsbank)](https://finvallo.com/de/girokonto/bestenlisten/studenten/#gk-hvb-startkonto): Für Studierende und junge Erwachsene, 4,7/5, 0 € im Jahr im Beispiel
+- [StartKonto (Kinder und Jugendliche) (Commerzbank)](https://finvallo.com/de/girokonto/bestenlisten/jugendkonto/#gk-commerzbank-startkonto-jugend): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [GLS Konto U18 (GLS Bank)](https://finvallo.com/de/girokonto/bestenlisten/jugendkonto/#gk-gls-konto-u18): Jugendkonten, 4,7/5, 0 € im Jahr im Beispiel
+- [BambiniKonto (Kinderkonto) (Commerzbank)](https://finvallo.com/de/girokonto/bestenlisten/kinderkonto/#gk-commerzbank-bambinikonto): Kinderkonten, 4,6/5, 0 € im Jahr im Beispiel
+- [Girokonto u18 (DKB)](https://finvallo.com/de/girokonto/bestenlisten/kinderkonto/#gk-dkb-girokonto-u18): Kinderkonten, 4,5/5, 0 € im Jahr im Beispiel
 - [Basiskonto (ING)](https://finvallo.com/de/girokonto/#gk-ing-basiskonto): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
 - [Zahlungskonto mit grundlegenden Funktionen (Revolut)](https://finvallo.com/de/girokonto/#gk-revolut-basiskonto): Basiskonten, 4,5/5, 0 € im Jahr im Beispiel
 
