@@ -1,7 +1,8 @@
-# Erklärtexte für die Girokonto-Bestenlisten: gemeinschaftskonto, studenten, kinder-jugendkonto (DE und AT).
+# Erklärtexte für die Girokonto-Bestenlisten: gemeinschaftskonto, studenten, jugendkonto, kinderkonto (DE und AT).
 # Aufruf aus girokonto.texte(land, ctx). Zahlen zu Konten kommen immer aus ctx, nie fest im Text.
 # Übernimmt die Inhalte der früheren Ratgeber "Gemeinschaftskonto" und "Kinderkonto und Jugendkonto" (ratgeber_konto.py, ratgeber_konto_de.py).
-# Rechtliches laut gesetze-im-internet.de, RIS, BMF, oesterreich.gv.at, BaFin und Arbeiterkammer, abgerufen am 29.10.2026.
+# Rechtliches laut gesetze-im-internet.de, RIS, BMF, oesterreich.gv.at, BaFin und Arbeiterkammer, abgerufen am 29.10.2026,
+# Ergänzungen für jugendkonto/kinderkonto (§§ 107, 113, 312g, 355 BGB, §§ 2, 5 JArbSchG, § 17 BBiG, § 32d EStG, oesterreich.gv.at) abgerufen am 30.10.2026.
 import html,re
 
 E=lambda s: html.escape(str(s)) if s is not None else ''
@@ -350,7 +351,7 @@ def _stu_de(c):
          +(f'Freiwilligendienst oder Bundesfreiwilligendienst zählen bei {_links(c,frw,3)}. ' if frw else '')
          +'Volljährige Schülerinnen und Schüler, Praktikanten und Volontäre sind bei vielen Banken ebenfalls dabei, solange sie einen Nachweis bringen.',
          'Für Azubis ist das Konto doppelt wichtig, weil hier die Ausbildungsvergütung eingeht. Gib deinem Ausbildungsbetrieb die IBAN rechtzeitig vor dem ersten Monat. Das Konto muss keine deutsche IBAN haben: Nach der SEPA-Verordnung darf ein Arbeitgeber keine Kontoverbindung aus einem anderen EU-Land ablehnen.',
-         'Bist du noch keine 18, eröffnen deine Eltern das Konto mit dir zusammen. Konten für Minderjährige laufen ohne Dispo und stehen in der Liste '+li('kinder-jugendkonto','Kinder- und Jugendkonten')+'.')),
+         'Bist du noch keine 18, eröffnen deine Eltern das Konto mit dir zusammen. Konten für Minderjährige laufen ohne Dispo und stehen in den Listen '+li('jugendkonto','Jugendkonten')+' und '+li('kinderkonto','Kinderkonten')+'.')),
      ('Quellen',
       _P(_ul(['Altersgrenzen, Nachweise, Preise, Dispozinsen und Fremdwährungsentgelte: Preis- und Leistungsverzeichnisse und Produktseiten der Banken, verlinkt bei jedem Konto im Vergleich, Stand '+E(c['stand'])+'.',
               'Steuer-ID bei der Kontoeröffnung: '+_ext(DE_AO_154,'§ 154 AO')+'; Identifizierung: '+_ext(DE_GWG_12,'§ 12 GwG')+'.',
@@ -453,7 +454,7 @@ def _stu_at(c):
          +(f'Lehrlinge oder alle in Aus- und Weiterbildung nennen die Bedingungen bei {_links(c,lehre,3)}. ' if lehre else '')
          +(f'{_links(c,erwerb)} richtet sich an junge Erwachsene in einem Dienstverhältnis. ' if erwerb else '')
          +(f'Bei {_links(c,eingang)} hängt die Gratis-Kontoführung an einem monatlichen Geldeingang. ' if eingang else ''),
-         'Für Lehrlinge unter 18 oder 20 gibt es außerdem eigene Jugendkonten, die meist bis zum 19. oder 20. Geburtstag gratis laufen. Sie stehen in der Liste '+li('kinder-jugendkonto','Kinder- und Jugendkonten')+'.',
+         'Für Lehrlinge unter 18 oder 20 gibt es außerdem eigene Jugendkonten, die meist bis zum 19. oder 20. Geburtstag gratis laufen. Sie stehen in der Liste '+li('jugendkonto','Jugendkonten')+'.',
          (f'Eine Kreditkarte zu Studierenden-Konditionen bieten {_links(c,kk,3)} an. ' if kk else '')
          +'Einen Vergleich der Jugend- und Lehrlingskonten veröffentlicht auch die '+_ext(AT_AK_JUGEND,'Arbeiterkammer Oberösterreich')+'.')),
      ('Quellen',
@@ -474,198 +475,415 @@ def _stu_at(c):
 
 
 # =====================================================================
-# Kinder und Jugendliche Deutschland
+# Kinder und Jugendliche: gemeinsame Helfer
 # =====================================================================
-def _kj_de(c):
-    X=c['lists'].get('kinder-jugendkonto') or []
-    L=c['link']; eur=c['eur']; pct=c['pct']; rg=c['rg']; li=c['liste']
+DE_JARBSCHG=lambda n: f'https://www.gesetze-im-internet.de/jarbschg/__{n}.html'
+DE_BBIG_17='https://www.gesetze-im-internet.de/bbig_2005/__17.html'
+AT_VERTRAG='https://www.oesterreich.gv.at/de/themen/gesetze_und_recht/gerichtsorganisation_der_justiz/zivilrecht/8/Seite.1740317'
+AT_FERIAL='https://www.oesterreich.gv.at/de/themen/arbeit_beruf_und_pension/berufsleben/jugendrechte-arbeit/Seite.1740314'
+AT_LEHRE='https://www.oesterreich.gv.at/de/themen/bildung_und_ausbildung/lehre-und-berufsbildende-schulen/Seite.333902'
+
+def _min(k): return (k.get('alter') or {}).get('min')
+def _bar(k): return (k.get('bargeld') or {}).get('text') or ''
+def _wlim(k):
+    t=_dk(k)+' '+_bar(k)
+    m=re.findall(r'(\d+)\s*€\s*(?:/|pro\s)Woche',t)+re.findall(r'Wochenlimit\D{0,10}(\d+)\s*€',t)
+    return max(int(x) for x in m) if m else None
+def _fw(X):
+    v=[k['fremdwaehrung_prozent'] for k in X if k.get('fremdwaehrung_prozent') is not None]
+    return (min(v),max(v)) if v else None
+
+
+# =====================================================================
+# Kinderkonto Deutschland
+# =====================================================================
+def _kk_de(c):
+    X=c['lists'].get('kinderkonto') or []
+    L=c['link']; pct=c['pct']; rg=c['rg']; li=c['liste']
     n=len(X)
     frei0=[k for k in X if k['kf_jahr']==0]
-    geburt=[k for k in X if (k.get('alter') or {}).get('min')==0]
-    ab7=[k for k in X if (k.get('alter') or {}).get('min')==7]
+    geburt=[k for k in X if _min(k)==0]
+    ab7=[k for k in X if _min(k)==7]
     kunde=[k for k in X if re.search(r'Elternteil|Kunde',_alt(k))]
     onl=[k for k in X if k.get('eroeffnung') in ('online','beides')]; fil=[k for k in X if k.get('eroeffnung')=='filiale']
     giro=[k for k in X if 'girocard' in _dk(k).lower()]
     deb=[k for k in X if re.search(r'Visa|Mastercard',_dk(k))]
     ab12=[k for k in X if re.search(r'ab 12',_dk(k))]
-    prep=[k for k in X if re.search(r'Prepaid',k.get('kreditkarte') or '')]
     zins=sorted([k for k in X if (k.get('habenzins') or 0)>0],key=lambda k:-k['habenzins'])
     akt=[k for k in X if k.get('aktion')]
-    rows_k=[(L(k),E(c['altT'](k)),_txt(_dk(k),150)) for k in X]
-    rows_u=[(L(k),_txt(_alt(k),160)) for k in X]
+    um=[k for k in X if re.search(r'danach|automatisch|Umstellung|StartKonto',_alt(k))]
+    bis17=[k for k in X if (k.get('alter') or {}).get('max')==17]
+    fw=_fw(X)
+    rows_k=[(L(k),E(c['altT'](k)),_txt(_dk(k),140),_txt(_bar(k),140)) for k in X]
+    rows_u=[(L(k),E(c['altT'](k)),_txt(_alt(k),160)) for k in X]
+    jl=li('jugendkonto','Jugendkonten')
 
     secs=[
-     ('Ab welchem Alter dein Kind ein Konto haben kann',
-      _P('Wie viel ein Kind beim Geld selbst entscheiden darf, regelt das BGB in drei Stufen:',
-         _ul(['<b>Unter 7 Jahren</b> ist ein Kind geschäftsunfähig (§ 104 BGB). Ein Konto kann trotzdem auf seinen Namen laufen, die Eltern verwalten es vollständig. Das passt für Geldgeschenke zur Geburt oder zur Taufe. '+(f'Ab der Geburt geht das in dieser Liste bei {_links(c,geburt)}.' if geburt else ''),
-              '<b>Von 7 bis 17 Jahren</b> ist es beschränkt geschäftsfähig (§ 106 BGB). Es darf mit seinem Taschengeld selbst einkaufen, für alles andere braucht es die Zustimmung der Eltern. '+(f'Ab 7 starten zum Beispiel {_links(c,ab7,3)}.' if ab7 else ''),
-              '<b>Ab 18</b> gehört das Konto dem jungen Erwachsenen allein, die Eltern verlieren den Zugriff.']),
-         (f'In der Liste stehen {n} Konten für Minderjährige, {len(frei0)} davon ohne Kontoführungsgebühr. ' if X else '')+
-         'Die Bezeichnungen sind nicht geschützt. Was die eine Bank Kinderkonto nennt, heißt bei der nächsten Jugendkonto, Junior-Konto oder Starter-Konto, oft für genau dieselbe Altersspanne. Schau deshalb auf das Alter in der Liste, nicht auf den Namen.',
-         'Wann ist ein eigenes Konto mit Karte sinnvoll? Eine feste Grenze gibt es nicht. Viele Familien starten mit 10 bis 12 Jahren, wenn das Kind allein zur Schule fährt und mehr als ein paar Euro im Monat bekommt. Vorher reicht oft ein Sparkonto, das die Eltern führen.')),
-     ('Wer eröffnet und was ihr dafür braucht',
-      _P('Das Konto eröffnen die Eltern als gesetzliche Vertreter. Haben beide das Sorgerecht, müssen auch beide zustimmen (§ 1629 BGB). Bei alleinigem Sorgerecht reicht ein Elternteil mit Nachweis, etwa einem Negativattest des Jugendamts oder einem Gerichtsbeschluss.',
-         _ul(['Ausweise beider Eltern',
-              'Geburtsurkunde oder Kinderreisepass, ab 16 den eigenen Personalausweis des Kindes',
-              'Steuer-ID des Kindes, die es seit der Geburt hat (§ 154 Abs. 2a AO)',
-              'Identifizierung per Video, in der Postfiliale oder in der Filiale, je nach Bank auch für das Kind']),
-         ((f'Bei {_links(c,kunde)} setzt die Bank voraus, dass ein Elternteil oder das Kind schon Kunde ist. ' if kunde else '')
-          +(f'Online oder per Post eröffnen kannst du {len(onl)} der {n} Konten, ' if X else '')
-          +(f'nur in der Filiale geht es bei {_links(c,fil)}. ' if fil else ('' if not X else 'eine Filiale brauchst du dafür nicht. '))
-          +(f'Gerade gibt es für {_w(len(akt),"ein Konto","Konten")} eine Startprämie oder ein Startguthaben, die aktuellen Aktionen stehen in der Liste '+li('praemie','Girokonten mit Prämie')+'.' if akt else '')),
-         'Kontoinhaber ist immer das Kind. Die Eltern handeln nur für es. Daraus folgt etwas, das viele unterschätzen: Das Geld auf dem Konto gehört dem Kind. Eltern dürfen es verwalten und für das Kind ausgeben, aber nicht für sich selbst zurückholen. Sie müssen das Vermögen des Kindes wirtschaftlich anlegen (§ 1642 BGB).')),
-     ('Der Taschengeldparagraf in der Praxis',
-      _P('Paragraf 110 BGB sagt: Kauft ein Kind ab 7 etwas mit Geld, das ihm die Eltern zur freien Verfügung gegeben haben, ist der Kauf wirksam. Das gilt auch für Kartenzahlungen vom eigenen Konto. Ein paar Beispiele:',
-         _ul(['<b>Kinokarte, Comic, Döner mit 12:</b> wirksam, wenn das Geld aus dem Taschengeld stammt.',
-              '<b>Gebrauchtes Fahrrad für 150 € mit 14, bezahlt aus angespartem Taschengeld:</b> kann wirksam sein, wenn der Kauf zu dem passt, wofür die Eltern das Taschengeld gegeben haben. Im Zweifel lieber vorher fragen.',
-              '<b>Handyvertrag oder Streaming-Abo mit 15:</b> nicht ohne Zustimmung der Eltern. Laufende Verträge mit monatlichen Zahlungen deckt der Taschengeldparagraf nicht, sie sind bis zur Genehmigung schwebend unwirksam (§ 108 BGB).',
-              '<b>In-App-Käufe:</b> Hier kommt es darauf an, ob das Kind sie aus seinem Guthaben bezahlt. Über die Karte der Eltern im App-Store greift der Taschengeldparagraf nicht.']),
-         'Einen Dispo oder Kredit darf ein Minderjähriger grundsätzlich nicht aufnehmen, dafür bräuchte es zusätzlich die Genehmigung des Familiengerichts (§ 1643 BGB). Deshalb laufen alle Konten in dieser Liste auf Guthabenbasis. Ein Minus ist im Normalfall nicht möglich. Rutscht das Konto doch einmal ins Minus, etwa durch eine spät gebuchte Kartenzahlung, sollten die Eltern es schnell ausgleichen.')),
-     ('Karten, Limits und Bargeld',
-      _P('Für Minderjährige gibt es zwei Kartentypen. Die girocard ist die klassische Karte für Läden und Automaten in Deutschland, online geht damit wenig. Die Debitkarte von Visa oder Mastercard zahlt ebenfalls direkt vom Guthaben, funktioniert aber auch online, im Ausland und mit dem Handy. '
-         +(f'Eine girocard gibt es bei {len(giro)} der {n} Konten, eine Visa- oder Mastercard-Debitkarte bei {len(deb)}. ' if X else '')
-         +(f'Eine Karte ab 12 Jahren gegen Aufpreis bieten {_links(c,ab12)} an. ' if ab12 else '')
-         +(f'Eine Prepaid-Kreditkarte für Jugendliche gibt es bei {_links(c,prep)}.' if prep else ''))+
-      (_tbl(['Konto','Alter','Karte laut Bank'],rows_k) if rows_k else '')+
-      _P('Limits stellt ihr in der App oder in der Filiale ein, meist pro Tag oder pro Woche. Für den Anfang reicht ein Limit in Höhe des Wochentaschengelds. Viele Banken sperren Glücksspiel und Erwachsenenangebote für Minderjährige automatisch. Prüft trotzdem, ob ihr Online-Zahlungen getrennt sperren könnt, bis euer Kind damit umgehen kann.',
-         'Beim Bargeld unterscheiden sich die Konten stärker. Manche erlauben kostenlose Abhebungen nur an den eigenen Automaten oder im Verbund, andere nur ab einem Mindestbetrag. Wohnt ihr nicht in der Nähe einer Filiale, ist eine Debitkarte, mit der man auch im Supermarkt an der Kasse Geld bekommt, praktisch.',
-         'Für den Start hat sich bewährt: Das Taschengeld kommt per Dauerauftrag immer am selben Tag. Die PIN lernt das Kind auswendig, aufgeschrieben wird sie nirgends. In den ersten Monaten schaut ihr euch die Umsätze einmal pro Woche gemeinsam in der App an. So sieht das Kind, wohin das Geld geht, und ihr merkt früh, wenn ein Abo oder ein In-App-Kauf durchgerutscht ist. Geht die Karte verloren, wird sie sofort gesperrt, auch das sollte das Kind wissen.')),
-     ('Zinsen und Sparen fürs Kind',
-      _P('Auf einem Girokonto bringt Geld kaum Zinsen. '
-         +(f'In dieser Liste zahlt den höchsten Guthabenzins {L(zins[0])} mit {pct(zins[0]["habenzins"])}. ' if zins else 'Die Konten in dieser Liste zahlen keine oder kaum Guthabenzinsen. ')
-         +'Größere Beträge, etwa Geldgeschenke von Großeltern, gehören deshalb auf ein Tagesgeld- oder Sparkonto auf den Namen des Kindes. Viele Banken bieten das zum Kinderkonto passend an.',
-         'Für langfristiges Sparen, etwa bis zum Führerschein oder Studium, nutzen viele Eltern einen Sparplan auf einen breit gestreuten Fonds im Kinderdepot. Das ist eine Geldanlage mit Kursschwankungen, kein Konto. Wichtig ist nur: Was auf Konten und Depots des Kindes liegt, gehört dem Kind. Mit 18 kann es frei darüber verfügen, auch wenn die Eltern sich etwas anderes gewünscht hätten.')),
-     ('Steuern: Freistellungsauftrag und NV-Bescheinigung',
-      _P('Auch Kinder zahlen Abgeltungsteuer auf Zinsen und andere Kapitalerträge. Jedes Kind hat aber einen eigenen Sparer-Pauschbetrag von 1.000 € im Jahr (§ 20 Abs. 9 EStG). Damit die Bank davon nichts abzieht, braucht sie einen Freistellungsauftrag. Den stellen die Eltern im Namen des Kindes, bei gemeinsamem Sorgerecht mit beiden Unterschriften.',
-         'Hat das Kind darüber hinaus keine nennenswerten Einkünfte, gibt es eine NV-Bescheinigung beim Finanzamt (§ 44a EStG). Dann bleiben Kapitalerträge bis zum Grundfreibetrag plus Sparer-Pauschbetrag steuerfrei, die Bank behält gar keine Steuer ein. Für die meisten Kinder reicht der Freistellungsauftrag, die NV-Bescheinigung lohnt sich bei größeren Vermögen, etwa nach einer Erbschaft.',
-         'Und die Schenkungsteuer? Eltern können jedem Kind innerhalb von zehn Jahren 400.000 € steuerfrei schenken, jeder Elternteil für sich. Großeltern 200.000 € je Enkelkind. Für Taschengeld und Geldgeschenke zu Geburtstagen spielt das keine Rolle.')),
-     ('Was mit 18 passiert',
-      _P('Am 18. Geburtstag wird das Kind voll geschäftsfähig. Die Eltern verlieren ihre Vertretungsmacht, ihre Zugänge zum Konto werden gesperrt, und der junge Erwachsene entscheidet allein. Ab jetzt kann er auch einen Dispo oder eine Kreditkarte beantragen. Die Bank stellt das Konto auf ein anderes Modell um:')+
-      (_tbl(['Konto','Alter und Umstellung laut Bank'],rows_u) if rows_u else '')+
-      _P('Einige Banken stellen auf ein Konto für junge Leute um, das bis Ende 20 kostenlos bleibt, oft nur mit Nachweis über Ausbildung oder Studium. Andere wechseln direkt auf ihr normales Girokonto, das dann eine Gebühr oder einen Geldeingang kostet. Konten für Studierende und Azubis findest du in der Liste '+li('studenten','Girokonten für Studierende')+'.',
-         'Redet vor dem 18. Geburtstag über den Dispo. Ein Rahmen von ein paar hundert Euro ist schnell beantragt und teuer, wenn er dauerhaft genutzt wird. Was er kostet und wie man ihn begrenzt, steht im Ratgeber '+rg('dispo','Dispo')+'.')),
+     ('Was ein Kinderkonto ist und ab welchem Alter es geht',
+      _P('Ein Kinderkonto ist ein Girokonto, das auf den Namen deines Kindes läuft und das du als Elternteil eröffnest und verwaltest. Es läuft auf Guthabenbasis, hat keinen Dispo und kostet bei fast allen Banken keine Kontoführungsgebühr. '
+         +(f'In dieser Liste stehen {_n(n,"Konto","Konten")}, {len(frei0)} davon ohne Kontoführungsgebühr. ' if X else ''),
+         (f'Schon ab der Geburt geht es bei {_links(c,geburt)}. ' if geburt else '')
+         +(f'Ab 7 Jahren starten {_links(c,ab7)}. ' if ab7 else '')
+         +'Andere Banken nennen gar kein Mindestalter und nehmen jedes minderjährige Kind. Das genaue Alter steht in der Rangliste oben bei jedem Konto.',
+         'Ob Baby oder Grundschulkind: Wann sich ein eigenes Konto lohnt, hängt weniger vom Alter ab als vom Geld, das reinkommt. Für Geldgeschenke zur Geburt, zur Taufe oder vom Patenonkel reicht ein Konto, das nur ihr Eltern bedient. Eine Karte für das Kind wird erst interessant, wenn es regelmäßig Taschengeld bekommt und allein einkaufen geht. Viele Familien fangen damit mit 10 bis 12 Jahren an.',
+         'Achte nicht auf den Namen des Produkts. Kinderkonto, Junior-Konto oder Konto u18 meinen oft dasselbe, und manche Banken führen dein Kind mit einem einzigen Konto vom ersten Geburtstag bis zum 18. Konten, die sich eher an Teenager richten, findest du in der Liste '+jl+'.')),
+     ('Geschäftsfähigkeit: was dein Kind rechtlich selbst darf',
+      _P('Ein Konto auf den Namen eines Kindes ist rechtlich nichts Besonderes. Spannend wird es bei der Frage, was das Kind mit dem Geld darf. Das BGB unterscheidet nach Alter:',
+         _ul(['<b>Bis zum 7. Geburtstag</b> ist dein Kind geschäftsunfähig (§ 104 BGB). Was es selbst erklärt, zählt rechtlich nicht. Alles rund ums Konto erledigt ihr Eltern.',
+              '<b>Ab 7 bis 17</b> ist es beschränkt geschäftsfähig (§ 106 BGB). Für alles, was ihm nicht nur einen rechtlichen Vorteil bringt, braucht es eure Einwilligung (§ 107 BGB). Ein Geschenk annehmen darf es allein, einen Kauf abschließen grundsätzlich nicht.',
+              '<b>Die Ausnahme ist das Taschengeld.</b> Bezahlt dein Kind mit Geld, das ihr ihm zur freien Verfügung gegeben habt, ist der Kauf von Anfang an wirksam (§ 110 BGB). Das gilt auch, wenn es mit der Karte vom eigenen Konto zahlt.']),
+         'Für ein Grundschulkind heißt das im Alltag: Das Eis im Freibad, das Sammelalbum am Kiosk oder die Fahrkarte für den Bus sind gedeckt, wenn das Geld vom Taschengeld kommt. Kauft dein Kind dagegen ohne Rücksprache ein teures Spielzeug, hängt der Kauf in der Luft, bis ihr ihn genehmigt (§ 108 BGB). Sagt ihr nein, muss der Händler das Geld zurückgeben.',
+         'Bei Käufen in Apps und Spielen kommt es darauf an, womit bezahlt wird. Hängt am Tablet eure eigene Karte oder euer Konto, ist es euer Vertrag, und der Taschengeldparagraf hilft nicht weiter. Sperrt deshalb In-App-Käufe in den Einstellungen des Geräts, bevor das Kind allein spielt.')),
+     ('Die Eröffnung: Rolle der Eltern',
+      _P('Das Konto eröffnet ihr als gesetzliche Vertreter. Habt ihr gemeinsam das Sorgerecht, vertretet ihr das Kind auch gemeinsam (§ 1629 BGB). Die Bank verlangt deshalb meist die Unterschriften beider Eltern. Hast du allein das Sorgerecht, weist du das nach, zum Beispiel mit einer Bescheinigung des Jugendamts oder einem Gerichtsbeschluss.',
+         _ul(['Personalausweis oder Reisepass beider Eltern',
+              'Geburtsurkunde des Kindes oder ein Kinderreisepass',
+              'die Steuer-ID des Kindes, die es kurz nach der Geburt bekommen hat (§ 154 Abs. 2a AO)',
+              'eine Identifizierung per Video, in der Postfiliale oder in der Filiale, je nach Bank auch für das Kind']),
+         ((f'Bei {_links(c,kunde)} muss ein Elternteil oder das Kind schon Kunde der Bank sein. ' if kunde else '')
+          +(('Alle Konten in dieser Liste eröffnest du online oder per Post, ' if len(onl)==n else f'Online oder per Post eröffnest du {len(onl)} der {n} Konten, ') if X else '')
+          +(f'nur in der Filiale geht es bei {_links(c,fil)}. ' if fil else ('eine Filiale brauchst du dafür nicht. ' if X else ''))
+          +(f'Für {_w(len(akt),"ein Konto","Konten")} gibt es gerade ein Startguthaben, alle laufenden Aktionen findest du in der Liste '+li('praemie','Girokonten mit Prämie')+'.' if akt else '')),
+         'Wichtig für später: Kontoinhaber ist das Kind, ihr handelt nur für es. Das Geld gehört ihm, auch wenn ihr es eingezahlt habt. Ihr dürft davon Dinge für das Kind bezahlen, etwa die Klassenfahrt oder ein Fahrrad, aber nicht euren eigenen Urlaub. Größere Summen müsst ihr wirtschaftlich anlegen (§ 1642 BGB). Einen Kredit oder Dispo für das Kind dürft ihr nicht einfach vereinbaren, dafür bräuchte es die Genehmigung des Familiengerichts (§ 1643 BGB).')),
+     ('Karten und Limits für Kinder',
+      _P('Für das Kinderkonto gibt es zwei Arten von Karten. Die girocard ist in Deutschland an fast jeder Kasse und jedem Automaten bekannt, im Internet aber kaum zu gebrauchen. Eine Debitkarte von Visa oder Mastercard bucht ebenfalls sofort vom Guthaben ab, funktioniert aber auch online und im Urlaub. '
+         +(f'Von den {n} Konten in dieser Liste gibt es bei {len(giro)} eine girocard und bei {len(deb)} eine Visa- oder Mastercard-Debitkarte. ' if X else '')
+         +(f'Eine zusätzliche Karte ab 12 Jahren gegen Aufpreis bieten {_links(c,ab12)} an.' if ab12 else ''))+
+      (_tbl(['Konto','Alter','Karte laut Bank','Bargeld laut Bank'],rows_k) if rows_k else '')+
+      _P('Bei Kindern zählt vor allem, dass die Karte nicht mehr hergibt als geplant. Stellt in der App oder in der Filiale ein Tageslimit oder ein Wochenlimit ein. Ein guter Startwert ist das Taschengeld einer Woche. Erhöhen könnt ihr später immer noch. Viele Banken sperren für Minderjährige automatisch Glücksspiel und Angebote für Erwachsene. Schaut trotzdem nach, ob sich Online-Zahlungen getrennt ausschalten lassen.',
+         'Eine Prepaid-Kreditkarte, die nur über vorher aufgeladenes Guthaben läuft, bieten einige Banken erst für Jugendliche an. Für jüngere Kinder ist eine Debitkarte mit niedrigem Limit meist die einfachere Lösung.',
+         'Übt das Bezahlen mit eurem Kind ein paar Mal gemeinsam. Zeigt ihm, wie man die PIN verdeckt eingibt, und vereinbart, dass sie nirgends notiert wird. Geht die Karte verloren, sperrt ihr sie über die App oder den Sperr-Notruf 116 116.')),
+     ('Taschengeld-Apps oder echtes Konto?',
+      _P('Neben den Kinderkonten der Banken gibt es Taschengeld-Apps. Das Prinzip: Ihr ladet Geld in die App, das Kind bekommt eine Karte oder zahlt mit dem Handy, und ihr seht jede Zahlung sofort. Manche Apps bieten Sparziele, Aufgaben gegen Belohnung und Benachrichtigungen bei jedem Einkauf.',
+         'Bevor ihr euch für so eine App entscheidet, lohnt ein Blick ins Kleingedruckte:',
+         _ul(['<b>Wer ist Vertragspartner?</b> Bei vielen Apps seid ihr Eltern der Kunde, und das Kind nutzt nur eine Karte. Ein Konto mit eigener IBAN auf den Namen des Kindes ist das dann nicht.',
+              '<b>Was kostet es?</b> Ein Monatsbeitrag von ein paar Euro summiert sich über Jahre. Die Kinderkonten in dieser Liste kosten dagegen '+(('keine' if len(frei0)==n else 'überwiegend keine')+' Kontoführungsgebühr' if X and len(frei0)*2>=n else 'oft wenig oder nichts')+'.',
+              '<b>Kann jemand Geld überweisen?</b> Oma und Opa wollen zum Geburtstag vielleicht direkt etwas schicken. Mit einer eigenen IBAN geht das einfach.',
+              '<b>Was passiert später?</b> Ein Bankkonto lässt sich bis 18 und darüber hinaus weiterführen. Eine App müsst ihr irgendwann durch ein Konto ersetzen.']),
+         'Für viele Familien ist die Kombination sinnvoll: das Kinderkonto als feste Adresse für Geldgeschenke und Taschengeld, dazu die Banking-App der Bank, in der ihr Limits setzt und die Umsätze anschaut. Die meisten Banken in dieser Liste bieten genau das, ohne Zusatzkosten.')),
+     ('Sparen und Zinsen fürs Kind',
+      _P('Das Girokonto ist zum Bezahlen da, nicht zum Sparen. '
+         +(f'Den höchsten Guthabenzins in dieser Liste zahlt {L(zins[0])} mit {pct(zins[0]["habenzins"])}. ' if zins else 'Die Konten in dieser Liste zahlen auf das Guthaben keine oder kaum Zinsen. ')
+         +'Für Geld, das länger liegen bleibt, eignet sich ein Tagesgeldkonto auf den Namen des Kindes. Viele Banken bieten es passend zum Kinderkonto an, oft in derselben App.',
+         'Wer bis zum Führerschein oder zum Studium spart, wählt häufig einen Fonds-Sparplan im Kinderdepot. Das ist kein Konto, die Kurse schwanken, dafür ist über viele Jahre mehr Ertrag möglich. Ein paar Euro im Monat reichen für den Anfang.',
+         'Guthaben auf dem Kinderkonto ist über die gesetzliche Einlagensicherung bis 100.000 € je Einleger und Bank geschützt (§ 8 EinSiG). Welche Sicherung bei welcher Bank greift, steht bei jedem Konto im Vergleich und im Ratgeber '+rg('einlagensicherung','Einlagensicherung')+'.',
+         'Denkt an eines: Was auf Konten und Depots des Kindes liegt, gehört dem Kind. Ab dem 18. Geburtstag entscheidet es allein darüber. Wer das Geld lieber selbst in der Hand behalten will, spart auf eigenen Namen und schenkt später.')),
+     ('Steuer: Freistellungsauftrag und NV-Bescheinigung',
+      _P('Zinsen und andere Kapitalerträge sind auch bei Kindern steuerpflichtig. Die Abgeltungsteuer beträgt 25 % (§ 32d EStG), die Bank zieht sie direkt ab. Jedes Kind hat aber einen eigenen Sparer-Pauschbetrag von 1.000 € im Jahr (§ 20 Abs. 9 EStG), unabhängig von euren eigenen Freibeträgen.',
+         'Damit die Bank den Pauschbetrag berücksichtigt, gebt ihr einen Freistellungsauftrag im Namen des Kindes ab. Bei gemeinsamem Sorgerecht unterschreiben beide Eltern. Liegt das Geld bei mehreren Banken, könnt ihr die 1.000 € aufteilen.',
+         'Hat das Kind keine weiteren Einkünfte, kommt eine NV-Bescheinigung in Frage. Die stellt das Finanzamt aus, und dann behält die Bank gar keine Steuer ein (§ 44a EStG). Steuerfrei bleiben die Erträge dann bis zum Grundfreibetrag plus Sparer-Pauschbetrag. Das lohnt sich bei größeren Vermögen, etwa nach einer Erbschaft. Für ein paar hundert Euro Taschengeldguthaben reicht der Freistellungsauftrag.',
+         'Schenkungsteuer spielt bei normalen Geldgeschenken keine Rolle. Jeder Elternteil kann seinem Kind innerhalb von zehn Jahren 400.000 € steuerfrei schenken, Großeltern ihrem Enkelkind 200.000 € (§ 16 ErbStG).')),
+     ('Vom Kinderkonto zum Jugendkonto',
+      _P('Was passiert, wenn aus dem Kind ein Teenager wird, regelt jede Bank anders. '
+         +(f'Bei {len(bis17)} der {n} Konten in dieser Liste bleibt es bis zum 18. Geburtstag dasselbe Konto. ' if bis17 else '')
+         +(f'Eine automatische Umstellung schon vor 18 oder ein festes Folgemodell nennen {_links(c,um)}. ' if um else '')
+         +'Die Bedingungen laut Bank:')+
+      (_tbl(['Konto','Alter','Altersgrenze und Umstellung laut Bank'],rows_u) if rows_u else '')+
+      _P('Mit etwa 12 bis 14 Jahren ändern sich die Wünsche: Das Kind will online bestellen, mit dem Handy zahlen und mehr selbst entscheiden. Prüft dann, ob euer Konto das mitmacht oder ob ein Wechsel sinnvoll ist. Konten, die auf diese Phase zugeschnitten sind, zeigt die Liste '+jl+'.',
+         'Am 18. Geburtstag endet eure Rolle als gesetzliche Vertreter. Ab dann entscheidet euer Kind allein, kann einen Dispo beantragen und das Konto wechseln. Ein Gespräch über Geld vor diesem Tag schadet nie.')),
      ('Quellen',
-      _P(_ul(['Alter, Karten, Zinsen, Eröffnung und Umstellung: Preis- und Leistungsverzeichnisse und Produktseiten der Banken, verlinkt bei jedem Konto im Vergleich, Stand '+E(c['stand'])+'.',
-              'Geschäftsfähigkeit und Vertretung: '+_ext(DE_BGB(104),'§ 104 BGB')+', '+_ext(DE_BGB(106),'§ 106 BGB')+', '+_ext(DE_BGB(108),'§ 108 BGB')+', '+_ext(DE_BGB(110),'§ 110 BGB')+', '+_ext(DE_BGB(1629),'§ 1629 BGB')+', '+_ext(DE_BGB(1642),'§ 1642 BGB')+', '+_ext(DE_BGB(1643),'§ 1643 BGB')+'.',
-              'Steuern: '+_ext(DE_ESTG(20),'§ 20 EStG')+', '+_ext(DE_ESTG('44a'),'§ 44a EStG')+', '+_ext(DE_ERBST(16),'§ 16 ErbStG')+'; Steuer-ID: '+_ext(DE_AO_154,'§ 154 AO')+'.',
-              'Kartensperre: '+_ext(DE_SPERR,'Sperr-Notruf 116 116')+', '+ABG+'.']))),
+      _P(_ul(['Alter, Karten, Bargeld, Zinsen, Eröffnung und Umstellung: Preis- und Leistungsverzeichnisse und Produktseiten der Banken, verlinkt bei jedem Konto im Vergleich, Stand '+E(c['stand'])+'.',
+              'Geschäftsfähigkeit und Vertretung: '+', '.join(_ext(DE_BGB(x),f'§ {x} BGB') for x in (104,106,107,108,110,1629,1642,1643))+'.',
+              'Steuern: '+_ext(DE_ESTG(20),'§ 20 EStG')+', '+_ext(DE_ESTG('32d'),'§ 32d EStG')+', '+_ext(DE_ESTG('44a'),'§ 44a EStG')+', '+_ext(DE_ERBST(16),'§ 16 ErbStG')+'; Steuer-ID: '+_ext(DE_AO_154,'§ 154 AO')+'.',
+              'Einlagensicherung: '+_ext(DE_EINSIG,'§ 8 EinSiG')+', '+_ext(DE_BAFIN_ES,'BaFin')+'; Kartensperre: '+_ext(DE_SPERR,'Sperr-Notruf 116 116')+', '+ABG+'.']))),
     ]
     faq=[
      ('Können Großeltern ein Konto für ihr Enkelkind eröffnen?','Ein Konto auf den Namen des Kindes können nur die Eltern als gesetzliche Vertreter eröffnen. Großeltern können aber ein Sparkonto auf ihren eigenen Namen anlegen und bestimmen, dass das Guthaben später dem Enkel zusteht (Vertrag zugunsten Dritter, § 328 BGB). Bis dahin bleibt das Geld ihres.'),
      ('Dürfen Eltern Geld vom Kinderkonto abheben?','Ja, aber nur für das Kind, etwa für die Klassenfahrt oder ein Fahrrad. Für eigene Ausgaben dürfen sie das Geld nicht nehmen, es gehört dem Kind. Wer es trotzdem tut, muss es später zurückzahlen.'),
-     ('Was tun, wenn die Karte meines Kindes verloren geht?','Sofort sperren lassen, rund um die Uhr über den Sperr-Notruf 116 116 oder in der Banking-App. Danach eine Ersatzkarte bestellen, die bei manchen Banken eine Gebühr kostet.'),
-     ('Wird das Kindergeld auf das Konto des Kindes überwiesen?','Normalerweise nicht. Kindergeld bekommen die Eltern auf ihr Konto. Viele Eltern geben aber einen Teil als Taschengeld per Dauerauftrag an das Kinderkonto weiter.'),
-     ('Wie viel Taschengeld ist für das Konto sinnvoll?','Das entscheiden die Eltern. Jugendämter veröffentlichen Empfehlungen, die mit dem Alter steigen, von wenigen Euro pro Woche bei Grundschulkindern bis zu einem Monatsbetrag für Jugendliche. Ab einem Monatsbetrag lohnt sich das Konto mit Karte, weil das Kind dann selbst einteilen muss.'),
+     ('Wird das Kindergeld auf das Kinderkonto überwiesen?','Normalerweise nicht. Kindergeld bekommen die Eltern auf ihr eigenes Konto. Viele geben aber einen Teil davon per Dauerauftrag als Taschengeld an das Kinderkonto weiter.'),
+     ('Kann ein Elternteil das Kinderkonto allein eröffnen?','Nur wenn er das alleinige Sorgerecht hat und das nachweisen kann. Bei gemeinsamem Sorgerecht vertreten beide Eltern das Kind gemeinsam, die Bank verlangt dann beide Unterschriften.'),
+     ('Lohnt sich ein Konto schon für ein Baby?','Für Geldgeschenke zur Geburt kann es sinnvoll sein, damit das Geld von Anfang an getrennt vom Haushaltskonto liegt. Für Zinsen ist ein Tagesgeldkonto auf den Namen des Kindes meist besser. '+(f'Ab der Geburt geht ein Girokonto zum Beispiel bei {_links(c,geburt)}.' if geburt else 'Ob ein Konto ab der Geburt möglich ist, steht bei jedem Konto im Vergleich.')),
     ]
-    lede='Hier findest du Girokonten, die Eltern für ihre Kinder und Jugendlichen eröffnen können, sortiert nach unserer Bewertung. Darunter erklären wir, ab wann ein Kind ein Konto haben kann, was es mit dem Taschengeld selbst darf, welche Karte passt und was mit 18 passiert.'
+    lede='Kinderkonten im Vergleich: Girokonten, die du als Elternteil für dein Kind eröffnest, sortiert nach unserer Bewertung. Darunter erfährst du, was dein Kind rechtlich selbst darf, welche Karte und welches Limit passen, wie es mit Zinsen und Freistellungsauftrag aussieht und was im Teenageralter passiert.'
     return dict(lede=lede,secs=secs,faq=faq)
 
 
 # =====================================================================
-# Kinder und Jugendliche Österreich
+# Jugendkonto Deutschland
 # =====================================================================
-def _kj_at(c):
-    X=c['lists'].get('kinder-jugendkonto') or []
+def _jk_de(c):
+    X=c['lists'].get('jugendkonto') or []
+    L=c['link']; rg=c['rg']; li=c['liste']; pct=c['pct']
+    n=len(X)
+    frei0=[k for k in X if k['kf_jahr']==0]
+    mins=sorted({_min(k) for k in X if _min(k) is not None})
+    ohnemin=[k for k in X if _min(k) is None]
+    onl=[k for k in X if k.get('eroeffnung') in ('online','beides')]; fil=[k for k in X if k.get('eroeffnung')=='filiale']
+    giro=[k for k in X if 'girocard' in _dk(k).lower()]
+    deb=[k for k in X if re.search(r'Visa|Mastercard',_dk(k))]
+    nfc=[k for k in X if re.search(r'NFC|digital',_dk(k))]
+    ab12=[k for k in X if re.search(r'ab 12',_dk(k))]
+    prep=[k for k in X if re.search(r'Prepaid',k.get('kreditkarte') or '')]
+    akt=[k for k in X if k.get('aktion')]
+    fw=_fw(X)
+    rows_k=[(L(k),E(c['altT'](k)),_txt(_dk(k),140),_txt(k.get('kreditkarte') or 'keine Angabe',120)) for k in X]
+    rows_u=[(L(k),_txt(_alt(k),170)) for k in X]
+    kl=li('kinderkonto','Kinderkonten')
+
+    secs=[
+     ('Ab welchem Alter es ein Jugendkonto gibt',
+      _P('Ein Jugendkonto ist ein Girokonto für Minderjährige, das schon mehr kann als ein reines Elternkonto: eigene Karte, eigene App, oft Online-Zahlungen. '
+         +(f'In dieser Liste stehen {_n(n,"Jugendkonto","Jugendkonten")}, {len(frei0)} davon ohne Kontoführungsgebühr. ' if X else '')
+         +(f'Das Mindestalter liegt laut Bank bei {_fmtl([str(x) for x in mins],"oder")} Jahren' if mins else '')
+         +(', ' if mins and ohnemin else ('. ' if mins else ''))
+         +(f'bei {_links(c,ohnemin)} gibt es keine feste Untergrenze. ' if ohnemin else ''),
+         'Die Grenze zwischen Kinder- und Jugendkonto ist in Deutschland fließend. Viele Banken führen ein einziges Konto für alle unter 18 und schalten mit dem Alter mehr Funktionen frei, etwa eine zweite Karte ab 12 oder eine Prepaid-Kreditkarte ab 14. Konten, die eher auf jüngere Kinder und die Kontrolle durch die Eltern zielen, stehen in der Liste '+kl+'.',
+         'Typisch für ein Jugendkonto ist der Moment, in dem eigenes Geld dazukommt: der erste Ferienjob, das Gehalt vom Zeitungsaustragen oder die Ausbildungsvergütung. Ab dann brauchst du ein Konto, auf das ein Arbeitgeber überweisen kann, und eine Karte, mit der du auch online bezahlst.')),
+     ('Was du als Jugendlicher selbst entscheiden darfst',
+      _P('Bis zu deinem 18. Geburtstag bist du beschränkt geschäftsfähig (§ 106 BGB). Verträge brauchen grundsätzlich die Einwilligung deiner Eltern (§ 107 BGB). Es gibt aber zwei wichtige Ausnahmen:',
+         _ul(['<b>Taschengeldparagraf (§ 110 BGB):</b> Was du mit Geld bezahlst, das dir deine Eltern zur freien Verfügung gegeben haben, ist sofort wirksam. Das Konzertticket für 45 €, die gebrauchte Jacke über eine Kleinanzeige oder neue Kopfhörer vom Ersparten gehören dazu, solange das Geld wirklich deins ist und der Kauf zu dem passt, wofür es gedacht war.',
+              '<b>Arbeit mit Erlaubnis (§ 113 BGB):</b> Erlauben dir deine Eltern, einen Job anzunehmen, darfst du alles selbst regeln, was zu diesem Job gehört, also den Vertrag schließen, kündigen und den Lohn annehmen. Die Erlaubnis können deine Eltern auch wieder einschränken.']),
+         'Nicht gedeckt sind Verträge, die dich über Monate binden. Handyvertrag, Fitnessstudio, Streaming-Abo oder Ratenkauf brauchen die Zustimmung deiner Eltern. Ohne sie ist der Vertrag schwebend unwirksam. Fordert der Anbieter deine Eltern zur Genehmigung auf, haben sie zwei Wochen Zeit. Sagen sie nichts, gilt sie als verweigert (§ 108 BGB).',
+         'Für die Bank heißt das: Das Jugendkonto eröffnen in Deutschland deine Eltern als gesetzliche Vertreter mit dir zusammen, auch wenn du schon 16 bist. '
+         +(f'Online oder per Post geht das bei {len(onl)} der {n} Konten' if X else '')
+         +(f', nur in der Filiale bei {_links(c,fil)}. ' if fil else ('. ' if X else ''))
+         +'Für dich brauchst du ab 16 einen eigenen Personalausweis, vorher reichen meist Geburtsurkunde oder Kinderreisepass.')),
+     ('Ferienjob und Ausbildungsvergütung',
+      _P('Arbeiten ist für Schülerinnen und Schüler streng geregelt. Das Jugendarbeitsschutzgesetz zählt alle unter 15 als Kinder, und wer noch vollzeitschulpflichtig ist, wird auch mit 15 bis 17 wie ein Kind behandelt (§ 2 JArbSchG). Für sie ist Beschäftigung grundsätzlich verboten, mit zwei wichtigen Ausnahmen (§ 5 JArbSchG):',
+         _ul(['<b>Ab 13 Jahren</b> sind leichte, für Kinder geeignete Tätigkeiten erlaubt, wenn die Eltern einwilligen. Höchstens zwei Stunden am Tag, nicht zwischen 18 und 8 Uhr und nicht vor oder während des Unterrichts. Klassiker sind Zeitungen austragen, Nachhilfe geben oder mit Nachbars Hund rausgehen.',
+              '<b>In den Schulferien</b> dürfen vollzeitschulpflichtige Jugendliche ab 15 höchstens vier Wochen im Kalenderjahr arbeiten.']),
+         'Mit der Ausbildung ändert sich das. Als Azubi bekommst du eine Ausbildungsvergütung, die mit jedem Ausbildungsjahr steigt. Das Berufsbildungsgesetz schreibt eine Mindestvergütung vor, die jedes Jahr neu festgelegt wird (§ 17 BBiG). In vielen Branchen liegt der Tarif darüber.',
+         'Für dein Konto bedeutet das: Dein Arbeitgeber braucht deine IBAN, und das Geld landet auf deinem Konto, nicht auf dem deiner Eltern. Ein Jugendkonto reicht dafür völlig. Viele Azubis bleiben auch nach dem 18. Geburtstag bei ihrer Bank, wenn die das Konto für Auszubildende weiter kostenlos führt. Welche Konten das tun, steht weiter unten bei der Umstellung.')),
+     ('Kein Dispo, keine Überziehung',
+      _P('Ein Jugendkonto läuft immer auf Guthabenbasis. Einen Dispo bekommst du vor 18 nicht, und zwar nicht aus Vorsicht der Bank, sondern aus rechtlichen Gründen: Ein Kredit für Minderjährige bräuchte neben der Zustimmung der Eltern auch die Genehmigung des Familiengerichts (§ 1643 BGB). Das macht keine Bank für ein Girokonto.',
+         'Im Alltag merkst du das, wenn eine Zahlung abgelehnt wird, weil das Guthaben nicht reicht. Das ist gewollt. Ganz ausschließen lässt sich ein Minus aber nicht: Bucht ein Händler eine Kartenzahlung erst Tage später ab oder zieht ein Abo eine Lastschrift ein, kann das Konto kurz ins Minus rutschen. Gleich das dann sofort aus, sonst kann die Bank Gebühren für eine Rücklastschrift berechnen.',
+         (f'Eine Prepaid-Kreditkarte ist keine Ausnahme von dieser Regel. Sie funktioniert nur mit vorher aufgeladenem Guthaben, etwa bei {_links(c,prep)}. ' if prep else 'Auch Prepaid-Kreditkarten für Jugendliche funktionieren nur mit vorher aufgeladenem Guthaben. ')
+         +'Damit kannst du dort zahlen, wo eine echte Kreditkarte verlangt wird, zum Beispiel bei manchen Buchungen im Internet oder im Urlaub, ohne Schulden machen zu können.',
+         'Ab 18 sieht das anders aus. Dann bietet dir die Bank vielleicht einen Dispo an. Wie teuer der ist und wie du ihn im Griff behältst, erklärt der Ratgeber '+rg('dispo','Dispo')+'.')),
+     ('Karten, Apple Pay und Google Pay',
+      _P((f'Bei {len(giro)} der {n} Konten bekommst du eine girocard, bei {len(deb)} eine Debitkarte von Visa oder Mastercard. ' if X else '')
+         +'Die girocard ist für Läden und Automaten in Deutschland gedacht. Mit der Visa- oder Mastercard-Debitkarte zahlst du zusätzlich online und im Ausland. '
+         +(f'Eine weitere Karte ab 12 Jahren gibt es gegen Aufpreis bei {_links(c,ab12)}. ' if ab12 else ''))+
+      (_tbl(['Konto','Alter','Karte laut Bank','Kreditkarte laut Bank'],rows_k) if rows_k else '')+
+      _P('Mit dem Handy zahlen geht, wenn deine Bank die Karte für Apple Pay oder Google Pay freigibt. Ob das auch für Minderjährige gilt, entscheidet jede Bank selbst, und manchmal braucht es dafür die Zustimmung der Eltern in der App. '
+         +(f'Kontaktlos oder als digitale Karte nennen die Banken ausdrücklich bei {_links(c,nfc)}. ' if nfc else '')
+         +'Frag im Zweifel vor der Eröffnung nach, wenn dir das Bezahlen mit dem Handy wichtig ist.',
+         ('Für Klassenfahrt oder Urlaub außerhalb des Euroraums lohnt ein Blick auf den Aufschlag für Zahlungen in fremder Währung. '
+          +(f'In dieser Liste liegt er zwischen {pct(fw[0])} und {pct(fw[1])}. ' if fw and fw[0]!=fw[1] else (f'In dieser Liste liegt er bei {pct(fw[0])}. ' if fw else ''))
+          +'Bei einer Woche London mit 200 € Ausgaben macht das ein paar Euro Unterschied, bei einem Austauschjahr deutlich mehr.'),
+         'Beim Bargeld lohnt ein Blick in die Konditionen. Kostenlos abheben kannst du meist nur an Automaten der eigenen Bank oder ihres Verbunds. An fremden Automaten zeigt dir der Bildschirm vorher an, was der Betreiber verlangt. Brich ab, wenn dir das zu teuer ist, und such einen anderen Automaten oder lass dir an der Supermarktkasse Geld auszahlen, wo das geht.')),
+     ('Online einkaufen mit dem Jugendkonto',
+      _P('Mit einer Debitkarte bestellst du online genauso wie Erwachsene. Die Bank fragt bei der Zahlung nicht nach deinem Alter. Bei den meisten Zahlungen bestätigst du den Kauf in der Banking-App, das schützt vor fremden Zugriffen auf deine Karte.',
+         'Ein paar Regeln, die dir Ärger ersparen:',
+         _ul(['<b>Probeabos genau lesen.</b> Viele Apps und Streamingdienste starten gratis und buchen danach jeden Monat ab. Ein Abo ist ein laufender Vertrag, für den du vor 18 die Zustimmung deiner Eltern brauchst. Kündige rechtzeitig, wenn du es nicht willst.',
+              '<b>Widerrufsrecht nutzen.</b> Kaufst du online bei einem Händler, kannst du den Vertrag in der Regel 14 Tage lang ohne Begründung widerrufen (§ 312g und § 355 BGB). Es gibt Ausnahmen, etwa für versiegelte Software oder individuell angefertigte Waren.',
+              '<b>Kartendaten nie per Chat weitergeben.</b> Wer dir auf Social Media oder im Spiel einen günstigen Deal gegen Vorkasse anbietet, will meistens nur dein Geld.',
+              '<b>Benachrichtigungen einschalten.</b> Dann siehst du jede Zahlung sofort und merkst, wenn etwas nicht stimmt.']),
+         'Bestellst du etwas, das deutlich über dein Taschengeld hinausgeht, ist der Kauf ohne Zustimmung deiner Eltern nicht wirksam. Der Händler kann die Ware zurückverlangen, und du bekommst dein Geld zurück. Einfacher ist es, vorher zu fragen. Geht deine Karte verloren oder siehst du eine Zahlung, die du nicht kennst, lass die Karte sofort sperren, in der App oder über den Sperr-Notruf 116 116.')),
+     ('Mit 18: Umstellung und Wechsel',
+      _P('Am 18. Geburtstag bist du voll geschäftsfähig. Deine Eltern verlieren den Zugriff auf dein Konto, und die Bank stellt dein Jugendkonto um. Wohin, steht in den Bedingungen:')+
+      (_tbl(['Konto','Alter und Umstellung laut Bank'],rows_u) if rows_u else '')+
+      _P('Manche Banken führen das Konto als Konto für junge Leute weiter, das bis zu einer Altersgrenze kostenlos bleibt, teils nur mit Nachweis über Studium oder Ausbildung. Andere stellen auf ihr normales Girokonto um, das dann eine Gebühr oder einen regelmäßigen Geldeingang kostet.',
+         'Du musst das nicht hinnehmen. Ab 18 kannst du jederzeit wechseln. Studierst du oder machst eine Ausbildung, schau in die Liste '+li('studenten','Girokonten für Studierende')+'. Arbeitest du schon, sind die '+li('kostenlos','kostenlosen Girokonten')+' der bessere Startpunkt. Wie der Umzug mit Daueraufträgen und Gehalt klappt, steht im Ratgeber '+rg('girokonto-wechseln','Girokonto wechseln')+'.'
+         +(f' Für {_w(len(akt),"ein Jugendkonto","Jugendkonten")} dieser Liste gibt es gerade eine Startprämie, mehr in der Liste '+li('praemie','Girokonten mit Prämie')+'.' if akt else ''))),
+     ('Quellen',
+      _P(_ul(['Alter, Karten, Kreditkarten, Eröffnung und Umstellung: Preis- und Leistungsverzeichnisse und Produktseiten der Banken, verlinkt bei jedem Konto im Vergleich, Stand '+E(c['stand'])+'.',
+              'Geschäftsfähigkeit: '+', '.join(_ext(DE_BGB(x),f'§ {x} BGB') for x in (106,107,108,110,113,1643))+'.',
+              'Jobs und Ausbildung: '+_ext(DE_JARBSCHG(2),'§ 2 JArbSchG')+', '+_ext(DE_JARBSCHG(5),'§ 5 JArbSchG')+', '+_ext(DE_BBIG_17,'§ 17 BBiG')+'.',
+              'Online-Kauf: '+_ext(DE_BGB('312g'),'§ 312g BGB')+', '+_ext(DE_BGB(355),'§ 355 BGB')+'; Kartensperre: '+_ext(DE_SPERR,'Sperr-Notruf 116 116')+', '+ABG+'.']))),
+    ]
+    faq=[
+     ('Kann ich mit 16 ohne meine Eltern ein Girokonto eröffnen?','In Deutschland in der Regel nicht. Bis 18 bist du beschränkt geschäftsfähig, und die Banken lassen das Konto von deinen Eltern als gesetzliche Vertreter mit eröffnen. Du bist aber Kontoinhaber, und das Geld darauf gehört dir.'),
+     ('Können meine Eltern sehen, wofür ich mein Geld ausgebe?','Solange du minderjährig bist, vertreten sie dich und haben in der Regel Zugriff auf das Konto und die Umsätze. Wie genau, regelt jede Bank selbst. Ab 18 endet das, dann siehst nur noch du deine Buchungen.'),
+     ('Kann meine Ausbildungsvergütung auf das Jugendkonto gehen?','Ja. Gib deinem Ausbildungsbetrieb die IBAN deines Jugendkontos. Ein eigenes Konto ist sogar sinnvoll, damit dein Lohn nicht auf dem Konto deiner Eltern landet. Prüf nur, wie lange die Bank das Konto nach deinem 18. Geburtstag kostenlos weiterführt.'),
+     ('Was passiert, wenn mein Jugendkonto ins Minus rutscht?','Das kann passieren, wenn eine Zahlung später gebucht wird. Zahl das Minus schnell aus, sonst können Gebühren oder Mahnungen kommen. Ein Dispo, den du dauerhaft nutzen könntest, ist vor 18 nicht vorgesehen.'),
+     ('Muss ich mein Jugendkonto mit 18 kündigen?','Nein, die Bank stellt es von selbst um. Du kannst aber jederzeit kündigen und zu einem Konto wechseln, das besser zu dir passt, etwa einem Konto für Studierende und Azubis.'),
+    ]
+    lede='Jugendkonten im Vergleich: Girokonten für Teenager, mit eigener Karte und App, sortiert nach unserer Bewertung. Darunter steht, was du mit dem Konto selbst entscheiden darfst, wie es mit Ferienjob und Ausbildungsvergütung läuft und was mit 18 passiert.'
+    return dict(lede=lede,secs=secs,faq=faq)
+
+
+# =====================================================================
+# Kinderkonto Österreich
+# =====================================================================
+def _kk_at(c):
+    X=c['lists'].get('kinderkonto') or []
     L=c['link']; eur=c['eur']; pct=c['pct']; rg=c['rg']; li=c['liste']
     n=len(X)
-    kinder=[k for k in X if k['art']=='kinder']; jugend=[k for k in X if k['art']=='jugend']
+    frei0=[k for k in X if k['kf_jahr']==0]
+    geburt=[k for k in X if _min(k)==0]
+    ab7=[k for k in X if _min(k)==7]
+    karte6=[k for k in X if re.search(r'ab 6|ab 6 Jahren|frühestens ab 6',_alt(k)+' '+_dk(k)+' '+_bar(k))]
+    kunde=[k for k in X if re.search(r'Bestandskunde|Kunde sein',_alt(k))]
+    onl=[k for k in X if k.get('eroeffnung') in ('online','beides')]; fil=[k for k in X if k.get('eroeffnung')=='filiale']
+    nokontakt=[k for k in X if re.search(r'ohne (NFC|Kontaktlos)',_dk(k))]
+    lims=[x for x in (_wlim(k) for k in X) if x]
+    zins=sorted([k for k in X if (k.get('habenzins') or 0)>=0.5],key=lambda k:-k['habenzins'])
+    akt=[k for k in X if k.get('aktion')]
+    rows_k=[(L(k),E(c['altT'](k)),_txt(_dk(k),140),_txt(_bar(k),140)) for k in X]
+    rows_u=[(L(k),E(c['altT'](k)),_txt(_alt(k),170)) for k in X]
+    jl=li('jugendkonto','Jugendkonten')
+
+    secs=[
+     ('Kinderkonto in Österreich: für wen und ab wann',
+      _P('Kinderkonten sind in Österreich klar von Jugendkonten getrennt. Das Kinderkonto ist für die Zeit vor dem 14. Geburtstag gedacht, also vor der Mündigkeit. Die Eltern eröffnen es, behalten den Überblick und legen fest, was die Karte darf. '
+         +(f'In dieser Liste stehen {_n(n,"Kinderkonto","Kinderkonten")}, {len(frei0)} davon ohne Kontoführungsentgelt.' if X else ''),
+         (f'Ab der Geburt eröffnen kannst du bei {_links(c,geburt)}. ' if geburt else '')
+         +(f'Ab 7 Jahren geht es bei {_links(c,ab7)}. ' if ab7 else '')
+         +(f'Die Karte nutzen darf das Kind bei {_links(c,karte6)} frühestens ab 6. ' if karte6 else '')
+         +'Bis dahin ist das Konto eher ein Sparplatz für Geldgeschenke, die Karte kommt später.',
+         'Sinnvoll wird die Karte, wenn dein Kind allein in die Schule geht, beim Bäcker die Jause kauft oder mit Freunden ins Schwimmbad fährt. Mit einem fixen Taschengeld auf dem Konto lernt es, dass Geld nicht nachwächst, wenn es weg ist. Für Teenager ab 14 gibt es eigene Modelle mit höheren Limits, siehe die Liste '+jl+'.')),
+     ('Was Kinder unter 7 und bis 14 rechtlich dürfen',
+      _P('Das ABGB staffelt die Geschäftsfähigkeit nach Alter. Für ein Kinderkonto zählen zwei Stufen:',
+         _ul(['<b>Unter 7 Jahren</b> ist ein Kind gänzlich geschäftsunfähig. Trotzdem darf es kleine Anschaffungen des täglichen Lebens selbst machen, die Kinder in seinem Alter üblicherweise machen, also etwa eine Wurstsemmel oder ein Zuckerl. So ein Kauf wird wirksam, sobald das Kind bezahlt hat (§ 170 Abs. 3 ABGB). Geschenke ohne Verpflichtung darf es annehmen.',
+              '<b>Von 7 bis 13 Jahren</b> ist es unmündig minderjährig und beschränkt geschäftsfähig. Taschengeldgeschäfte wie ein Buch, ein Stickeralbum oder eine Kinokarte gehen allein. Größere Geschäfte sind ohne Zustimmung der Eltern schwebend unwirksam: Sie gelten erst, wenn ihr nachträglich zustimmt.']),
+         'Ein Beispiel: Dein Zehnjähriger kauft mit der Kinderkarte um 300 € ein Tablet. Das ist weder eine Kleinigkeit noch altersüblich. Stimmt ihr nicht zu, ist der Kauf von Anfang an ungültig. Der Händler bekommt das Tablet zurück, euer Kind das Geld. In der Praxis verhindern die niedrigen Limits der Kinderkarten solche Käufe meist schon an der Kassa.',
+         'Und das Taschengeld selbst? Das darf das Kind für Taschengeldgeschäfte einsetzen, also für das, was Kinder in seinem Alter üblicherweise kaufen. Was über dieses Maß hinausgeht, braucht eure Zustimmung, auch wenn das Kind lange darauf gespart hat. Ein Volksschulkind, das sich vom Ersparten ein Rad um 250 € kaufen will, braucht euch also an seiner Seite. Erst ab 14 lockert das Gesetz diese Regel.',
+         'Ein Konto auf den Namen des Kindes eröffnen und führen bleibt in beiden Altersstufen Sache der Eltern. Das Kind wird Kontoinhaber, handelt aber nur im Rahmen der Taschengeldgeschäfte selbst.')),
+     ('Eröffnung: Obsorge, Unterlagen und Bestandskunden',
+      _P('Für ein Kinderkonto unterschreiben die obsorgeberechtigten Eltern. Leben sie getrennt, verlangt die Bank oft beide Unterschriften oder einen Nachweis, dass ein Elternteil die alleinige Obsorge hat.',
+         _ul(['Lichtbildausweis der Eltern',
+              'Geburtsurkunde des Kindes',
+              'je nach Bank ein Meldezettel des Kindes oder ein Nachweis über den Hauptwohnsitz']),
+         ((f'Bei {_links(c,kunde)} muss ein Elternteil selbst schon Kunde der Bank sein. ' if kunde else '')
+          +(f'Online oder mit Termin in der Filiale geht die Eröffnung bei {len(onl)} der {n} Konten, ' if X else '')
+          +(f'nur in der Filiale bei {_links(c,fil)}. ' if fil else ('' if not X else 'eine Filiale ist nicht zwingend. '))
+          +(f'Ein Startguthaben gibt es gerade bei {_w(len(akt),"einem Konto","Konten")} dieser Liste, alle Aktionen stehen in der Liste '+li('praemie','Girokonten mit Prämie')+'.' if akt else '')),
+         'Auch wenn ihr einzahlt: Das Guthaben gehört dem Kind. Ihr dürft es für das Kind verwenden, zum Beispiel für den Skikurs oder die Schultasche, nicht aber für eigene Ausgaben. Bei größerem Vermögen, etwa nach einer Erbschaft, kann das Pflegschaftsgericht mitreden.')),
+     ('Kinderkarte: Limits, Kontaktlos und Online',
+      _P('Die Karte zum Kinderkonto ist eine Debitkarte mit bewusst engen Grenzen. '
+         +(f'Die Wochenlimits liegen laut Bank bei {"bis zu " if len(set(lims))>1 else ""}{eur(max(lims))} €. ' if lims else '')
+         +(f'Ohne Kontaktlos-Funktion kommen die Karten bei {_links(c,nokontakt)}, das Kind steckt die Karte also immer und gibt den PIN-Code ein. ' if nokontakt else '')
+         +'Überweisungen und Zahlungen über dem Limit gehen nur über die Eltern.')+
+      (_tbl(['Konto','Alter','Karte laut Bank','Bargeld laut Bank'],rows_k) if rows_k else '')+
+      _P('Ein niedriges Limit ist bei Kindern ein Vorteil, kein Nachteil. Ist die Karte weg, ist höchstens ein Wochenbetrag in Gefahr. Und euer Kind lernt, sich das Geld einzuteilen. Ein guter Start: Taschengeld jeden Montag per Dauerauftrag, Limit auf denselben Betrag.',
+         'Online-Einkäufe sind bei Kinderkarten oft gar nicht oder erst nach Freischaltung durch die Eltern möglich. Das ist bei Kindern unter 14 meistens auch sinnvoll. Wer Spiele am Handy erlaubt, sollte In-App-Käufe in den Geräteeinstellungen sperren, denn dort zahlt meist die Karte der Eltern.',
+         'Bargeld am Bankomaten ist bei den meisten Kinderkonten inkludiert, allerdings nur im Rahmen des Limits. Bei Automaten privater Betreiber können trotzdem Fremdspesen anfallen. Zeigt eurem Kind, welche Bankomaten in der Nähe zur eigenen Bank gehören, und schaut die Spalte zum Bargeld in der Tabelle an.',
+         'Geht die Karte verloren, sperrt ihr sie in der Banking-App oder über die Hotline der Bank. Die Nummer gehört ins Handy der Eltern und, sobald es eines hat, auch ins Handy des Kindes.')),
+     ('Taschengeld-App, Prepaid-Karte oder Kinderkonto?',
+      _P('Statt eines Kinderkontos bieten manche Anbieter Prepaid-Karten oder Taschengeld-Apps an. Ihr ladet Guthaben auf, das Kind zahlt damit, ihr seht alles im Handy. Für den Anfang klingt das bequem. Ein paar Fragen helfen bei der Entscheidung:',
+         _ul(['<b>Gibt es eine eigene IBAN für das Kind?</b> Beim Kinderkonto ja. Dann können auch Oma, Opa oder die Taufpatin direkt etwas überweisen.',
+              '<b>Was kostet es auf Dauer?</b> '+('Die Kinderkonten in dieser Liste kosten '+('kein Kontoführungsentgelt' if X and len(frei0)==n else 'meist wenig oder nichts')+'. ' if X else '')+'Eine App mit Monatsgebühr kostet über mehrere Jahre schnell mehr als gedacht.',
+              '<b>Gibt es Zinsen?</b> Auf Prepaid-Guthaben gibt es normalerweise keine. Manche Kinderkonten verzinsen das Guthaben dagegen gut.',
+              '<b>Wie geht es mit 14 weiter?</b> Ein Kinderkonto stellt die Bank auf das Jugendkonto um. Eine App müsst ihr irgendwann ersetzen.']),
+         'Wer die Kontrolle einer App möchte, findet sie oft auch beim Kinderkonto selbst: Die meisten Banken zeigen die Umsätze in der App der Eltern und lassen Limits dort ändern. Fragt bei der Eröffnung konkret nach, wie das funktioniert.')),
+     ('Zinsen, Sparbuch und KESt',
+      _P('Anders als bei Erwachsenen lohnen sich manche Kinderkonten auch als Sparplatz. '
+         +(f'Am meisten Habenzins zahlen hier {_links(c,zins[:3])}, bis zu {pct(zins[0]["habenzins"])} im Jahr. Oft gilt der Zins nur bis zu einem Höchstbetrag, der in den Konditionen steht. ' if zins else 'In dieser Liste ist der Habenzins allerdings gering. '),
+         'Ein Sparbuch oder Sparkonto bleibt trotzdem eine Option. Es hat keine Karte und dient nur dem Ansparen. Für das Geld zur Erstkommunion oder Firmung, das bis zum Führerschein liegen bleiben soll, passt es oft besser als das Girokonto. Viele Familien nutzen beides: das Kinderkonto für das Taschengeld, das Sparbuch für die großen Geschenke.',
+         'Auf Zinsen von Bankguthaben fallen 25 % Kapitalertragsteuer an, auch bei Kindern. Die Bank behält sie automatisch ein, eine Steuererklärung braucht es dafür nicht. Einen Freibetrag für Zinsen gibt es nicht. Hat das Kind kein oder nur ein geringes Einkommen, kann es sich die KESt mit der Regelbesteuerungsoption über die Steuererklärung zurückholen. Das lohnt sich erst bei größeren Beträgen.',
+         'Geldgeschenke an das Kind sind steuerfrei, eine Schenkungssteuer gibt es in Österreich nicht. Schenken Eltern oder Großeltern innerhalb eines Jahres mehr als 50.000 €, muss das aber dem Finanzamt gemeldet werden. Wie das Guthaben bei einer Bankpleite geschützt ist, erklärt der Ratgeber '+rg('einlagensicherung','Einlagensicherung')+'.')),
+     ('Mit 14 aufs Jugendkonto',
+      _P('Am 14. Geburtstag wird dein Kind mündig minderjährig. Ab dann darf es über eigenes Einkommen, etwa aus einer Lehre, und über Taschengeld weitgehend selbst verfügen, solange seine Lebensbedürfnisse nicht gefährdet sind (§ 170 Abs. 2 ABGB). Die Banken reagieren darauf mit eigenen Jugendkonten. '
+         +'Altersgrenzen und Umstellung laut Bank:')+
+      (_tbl(['Konto','Alter','Altersgrenze und Umstellung laut Bank'],rows_u) if rows_u else '')+
+      _P('Meistens passiert die Umstellung automatisch, die IBAN bleibt gleich. Mit dem Jugendkonto kommen höhere Limits, oft eine Karte mit Kontaktlos-Funktion und Online-Zahlungen. Redet vor dem 14. Geburtstag darüber, was sich ändert und welche Regeln in der Familie weiter gelten.',
+         'Ein guter Zeitpunkt für neue Abmachungen: Vielleicht übernimmt euer Kind ab 14 selbst die Handy-Wertkarte oder das Geld für Kino und Ausflüge, und das Taschengeld steigt dafür. Wer die Verantwortung schrittweise abgibt, erspart sich mit 18 einen harten Schnitt.',
+         'Ihr müsst nicht bei derselben Bank bleiben. Welche Jugendkonten es gibt und wie lange sie gratis bleiben, zeigt die Liste '+jl+'.')),
+     ('Quellen',
+      _P(_ul(['Alter, Karten, Limits, Habenzinsen, Eröffnung und Umstellung: Preisblätter, Entgeltinformationen und Produktseiten der Banken, verlinkt bei jedem Konto im Vergleich, Stand '+E(c['stand'])+'.',
+              'Geschäftsfähigkeit: '+_ext(AT_ABGB_170,'§ 170 ABGB (RIS)')+', '+_ext(AT_VERTRAG,'oesterreich.gv.at, Vertragsabschluss durch Kinder und Jugendliche')+', '+_ext(AT_GESCH,'oesterreich.gv.at, Übersicht Geschäftsfähigkeit')+'.',
+              'Kapitalertragsteuer: '+_ext(AT_BMF_KEST,'BMF, Besteuerung von Kapitalerträgen')+', '+_ext(AT_BMF_KAP,'BMF, Einkünfte aus Kapitalvermögen')+'; Schenkungsmeldung: '+_ext(AT_BMF_SCHENK,'BMF')+', '+ABG+'.']))),
+    ]
+    faq=[
+     ('Braucht mein Kind für das Kinderkonto einen eigenen Ausweis?','Meist nicht. Für ein Kinderkonto reichen in der Regel die Geburtsurkunde und der Lichtbildausweis der Eltern. Einen eigenen Ausweis verlangen viele Banken erst beim Jugendkonto.'),
+     ('Was passiert mit dem Geld auf dem Kinderkonto, wenn sich die Eltern scheiden lassen?','Nichts, es gehört dem Kind und fällt nicht in die Aufteilung zwischen den Eltern. Wer das Konto weiter verwaltet, hängt von der Obsorge ab.'),
+     ('Kann ich das Limit der Kinderkarte erhöhen?','Bei vielen Banken ja, in der App oder in der Filiale. Manche Kinderkonten haben aber feste Obergrenzen, die sich erst mit dem Jugendkonto ändern. Was gilt, steht in der Kartentabelle auf dieser Seite.'),
+     ('Ab wann darf mein Kind die Karte allein benutzen?',(f'Das legt die Bank fest. Bei {_links(c,karte6)} ist die Nutzung ab 6 möglich, bei den übrigen ab dem Mindestalter des Kontos. ' if karte6 else 'Das legt die Bank fest, meist ab 6 oder 7 Jahren. ')+'Ob euer Kind so weit ist, entscheidet ihr. Ein guter Test: Kann es sich die PIN merken und weiß es, was es tun soll, wenn die Karte weg ist?'),
+     ('Sparbuch oder Kinderkonto: was ist besser?','Für Taschengeld, das ausgegeben wird, das Kinderkonto mit Karte. Für Geldgeschenke, die liegen bleiben sollen, ein Sparbuch oder Sparkonto. Vergleicht die Zinsen, manche Kinderkonten zahlen mehr als ein Sparbuch.'),
+    ]
+    lede='Kinderkonten in Österreich im Vergleich, sortiert nach unserer Bewertung. Darunter erfährst du, was Kinder unter 14 rechtlich selbst dürfen, wer das Konto eröffnet, welche Limits die Kinderkarte hat, wie es mit Zinsen und KESt aussieht und was mit 14 passiert.'
+    return dict(lede=lede,secs=secs,faq=faq)
+
+
+# =====================================================================
+# Jugendkonto Österreich
+# =====================================================================
+def _jk_at(c):
+    X=c['lists'].get('jugendkonto') or []
+    L=c['link']; eur=c['eur']; pct=c['pct']; rg=c['rg']; li=c['liste']
+    n=len(X)
     frei0=[k for k in X if k['kf_jahr']==0]; bedingt=[k for k in X if k['kf_jahr']>0]
-    geburt=[k for k in X if (k.get('alter') or {}).get('min')==0]
-    unter14=sorted([k for k in jugend if ((k.get('alter') or {}).get('min') or 14)<14],key=lambda k:k['alter']['min'])
+    unter14=sorted([k for k in X if (_min(k) if _min(k) is not None else 14)<14],key=lambda k:_min(k))
     allein=[k for k in X if re.search(r'(ohne|keine) Unterschrift der Eltern',_alt(k))]
     wohn=[k for k in X if re.search(r'Hauptwohnsitz',_alt(k))]
     kunde=[k for k in X if re.search(r'Bestandskunde|Kunde sein',_alt(k))]
     fil=[k for k in X if k.get('eroeffnung')=='filiale']
-    nokontakt=[k for k in X if re.search(r'ohne (NFC|Kontaktlos)',_dk(k))]
-    lim=[]
-    for k in X:
-        m=re.findall(r'(\d+)\s*€\s*(?:/|pro\s)Woche',_dk(k)+' '+((k.get('bargeld') or {}).get('text') or ''))
-        if m: lim.append((k,max(int(x) for x in m)))
-    lk=[x for k,x in lim if k['art']=='kinder']; lj=[x for k,x in lim if k['art']=='jugend']
-    zins=sorted([k for k in X if (k.get('habenzins') or 0)>=0.5],key=lambda k:-k['habenzins'])
+    kontakt=[k for k in X if re.search(r'kontaktlos',_dk(k),re.I) and not re.search(r'ohne (NFC|Kontaktlos)',_dk(k))]
+    lims=[x for x in (_wlim(k) for k in X) if x]
+    ue=sorted([k for k in X if k.get('ueberschreitung')],key=lambda k:-k['ueberschreitung'])
     akt=[k for k in X if k.get('aktion')]
-    rows_k=[(L(k),E(c['altT'](k)),_txt(_dk(k),150)) for k in X]
-    rows_u=[(L(k),_txt(_alt(k),170)) for k in X]
+    fw=_fw(X)
+    rows_k=[(L(k),E(c['altT'](k)),_txt(_dk(k),140),_txt(_bar(k),140)) for k in X]
+    rows_u=[(L(k),E(c['altT'](k)),_txt(_alt(k),170),E(_kost(c,k))) for k in X]
+    kl=li('kinderkonto','Kinderkonten')
 
     secs=[
-     ('Ab welchem Alter: Kinderkonto und Jugendkonto',
-      _P('Das ABGB teilt Minderjährige in Altersstufen, und genau daran orientieren sich die Banken:',
-         _ul(['<b>Unter 7 Jahren</b> darf ein Kind nur ganz kleine Alltagskäufe selbst machen, etwa Süßigkeiten vom Taschengeld. Ein Konto auf seinen Namen ist trotzdem möglich, die Eltern führen es. '+(f'Ab der Geburt geht das bei {_links(c,geburt)}.' if geburt else ''),
-              '<b>Von 7 bis 13 Jahren</b> ist es unmündig minderjährig. Es darf geringfügige Geschäfte des täglichen Lebens selbst abschließen, also mit dem Taschengeld eine Jause oder ein Heft kaufen (§ 170 Abs. 3 ABGB). Hier setzen die Kinderkonten mit Karte an.',
-              '<b>Ab 14 Jahren</b> ist es mündig minderjährig und darf über eigenes Einkommen, etwa die Lehrlingsentschädigung, selbst verfügen, soweit sein Lebensunterhalt nicht gefährdet ist (§ 170 Abs. 2 ABGB). Ab hier gibt es Jugendkonten.']),
-         ((f'In dieser Liste stehen {len(kinder)} Kinderkonten und {len(jugend)} Jugendkonten. ' if X else '')
-          +(f'{len(frei0)} davon kosten kein Kontoführungsentgelt, ' if X else '')
-          +(f'bei {_links(c,bedingt)} entfällt es bis zu einer Altersgrenze. ' if bedingt else ('' if not X else 'ohne Bedingung. '))
-          +(f'Ein Jugendkonto schon vor 14 gibt es bei {_links(c,unter14)}, dann mit den Eltern als Vertretern.' if unter14 else '')))),
-     ('Wer eröffnet: Obsorge und eigene Unterschrift ab 14',
-      _P('Für ein Kinderkonto braucht es die Eltern oder andere Obsorgeberechtigte. Sie unterschreiben den Vertrag, das Kind wird Kontoinhaber. Leben die Eltern getrennt, verlangen Banken oft die Zustimmung beider Obsorgeberechtigten oder einen Nachweis über die alleinige Obsorge.',
-         _ul(['Lichtbildausweis der Eltern',
-              'Geburtsurkunde des Kindes, ab dem Jugendkonto meist auch ein eigener Ausweis wie Reisepass oder Personalausweis',
-              'Meldezettel oder Nachweis des Hauptwohnsitzes, je nach Bank']),
-         ((f'Ein Jugendkonto ab 14 ohne Unterschrift der Eltern eröffnen laut Bank {_links(c,allein)}. Das stützt sich auf das Recht mündiger Minderjähriger, über ihr eigenes Einkommen zu verfügen. Andere Banken verlangen die Unterschrift der Eltern bis 18. ' if allein else 'Bei den meisten Banken unterschreiben die Eltern auch beim Jugendkonto mit. ')
-          +(f'Einen Hauptwohnsitz in Österreich seit mindestens einem Jahr setzen {_links(c,wohn)} voraus. ' if wohn else '')
-          +(f'Bei {_links(c,kunde)} muss ein Elternteil selbst schon Kunde sein. ' if kunde else '')
-          +(f'Nur mit Termin in der Filiale oder bei einer Beraterin eröffnest du {_links(c,fil)}.' if fil else '')),
-         'Das Geld auf dem Konto gehört dem Kind. Eltern dürfen es verwalten und für das Kind verwenden, aber nicht für sich selbst. Bei größeren Beträgen, etwa einer Erbschaft, kann das Pflegschaftsgericht mitreden.')),
-     ('Taschengeld, Lehrlingsentschädigung und Verträge',
-      _P('Was ein Kind mit seinem Konto rechtlich darf, hängt vom Alter und von der Herkunft des Geldes ab. Ein paar Beispiele aus dem Alltag:',
-         _ul(['<b>Mit 9 eine Jause, ein Pickerlheft oder eine Kinokarte bezahlen:</b> wirksam, das sind geringfügige Geschäfte des täglichen Lebens.',
-              '<b>Mit 12 eine Spielkonsole um 400 € vom Ersparten:</b> nicht ohne Zustimmung der Eltern. Das ist kein geringfügiges Geschäft mehr.',
-              '<b>Mit 16 als Lehrling ein Moped aus der Lehrlingsentschädigung:</b> grundsätzlich möglich, solange Essen, Wohnen und Ausbildung nicht darunter leiden.',
-              '<b>Handyvertrag oder Streaming-Abo:</b> Verträge mit laufenden Zahlungen brauchen bis 18 in der Regel die Zustimmung der Eltern. Wertkartenhandys sind die einfache Lösung.']),
-         'Besonders heikel sind Käufe im Internet und in Spielen. Mit einer Debitkarte kann ein Jugendlicher online genauso bezahlen wie ein Erwachsener, die Bank prüft das Alter dabei nicht. Viele Banken schicken aber bei jeder Zahlung eine Mitteilung in die App. Redet mit eurem Kind darüber, wofür das Geld gedacht ist, bevor ihr Online-Zahlungen freischaltet. Kauft ein Kind ohne Zustimmung etwas, das über seine Altersstufe hinausgeht, ist der Vertrag nicht wirksam, und ihr könnt das Geld zurückfordern. In der Praxis ist das bei Online-Händlern im Ausland aber mühsam.',
-         'Einen Kredit, auch einen Überziehungsrahmen, darf ein Minderjähriger nicht ohne gerichtliche Genehmigung aufnehmen. Deshalb laufen Kinder- und Jugendkonten auf Guthabenbasis. Eine Überschreitung ist im Normalfall nicht vorgesehen. Wie Überziehung bei Erwachsenen funktioniert und was sie kostet, steht im Ratgeber '+rg('kontoueberziehung','Kontoüberziehung')+'.')),
-     ('Bankomatkarte und Limits',
-      _P('Zu fast jedem Kinder- und Jugendkonto gehört eine Debitkarte. Bei Kindern ist sie bewusst eingeschränkt. '
-         +(f'Ohne Kontaktlos-Funktion kommen zum Beispiel die Karten bei {_links(c,nokontakt)}. ' if nokontakt else '')
-         +(f'Die Wochenlimits bei Kinderkonten liegen laut Bank bei {"bis zu " if len(set(lk))>1 else ""}{eur(max(lk))} €' if lk else '')
-         +(f', bei Jugendkonten bei {"bis zu " if len(set(lj))>1 else ""}{eur(max(lj))} €. ' if lj else ('. ' if lk else ''))
-         +'Die Eltern können Limits bei vielen Banken senken oder anheben.')+
-      (_tbl(['Konto','Alter','Karte und Limit laut Bank'],rows_k) if rows_k else '')+
-      _P('Ein Tipp für den Anfang: Setzt das Limit auf das Taschengeld einer Woche. Dann lernt das Kind, dass die Karte nicht mehr hergibt als das Konto. Online-Zahlungen und Zahlungen mit dem Handy schaltet ihr erst frei, wenn es mit der Karte im Geschäft gut klarkommt.',
-         'Beim Bargeld sind die meisten Kinder- und Jugendkonten großzügig: Behebungen an Bankomaten in Österreich sind in der Regel inkludiert. Fremde Spesen von privaten Automatenbetreibern können trotzdem anfallen. Das steht bei jedem Konto im Vergleich.')),
-     ('Zinsen und KESt auf dem Kinderkonto',
-      _P(('Einige Kinderkonten verzinsen das Guthaben deutlich besser als ein normales Girokonto. '
-          +(f'Den höchsten Habenzins in dieser Liste zahlen {_links(c,zins[:3])}, bis zu {pct(zins[0]["habenzins"])} im Jahr. Oft gilt das nur bis zu einem Höchstbetrag, der in den Konditionen steht. ' if zins else 'In dieser Liste sind die Habenzinsen aber gering. '))
-         +'Für größere Beträge lohnt trotzdem ein Vergleich mit Sparkonten.',
-         'Ein Sparbuch oder Sparkonto ist etwas anderes als ein Kinderkonto: Es hat keine Karte, keine Überweisungen nach außen und dient nur dem Ansparen. Für Geldgeschenke von Oma und Opa, die bis zum Führerschein liegen bleiben sollen, ist es oft die bessere Wahl. Für Taschengeld, das ausgegeben werden soll, ist das Kinderkonto mit Karte praktischer. Viele Familien kombinieren beides.',
-         'Auf Zinsen von Bankguthaben fallen 25 % Kapitalertragsteuer an, auch bei Kindern. Die Bank zieht sie automatisch ab, damit ist die Steuer erledigt. Einen Freibetrag wie den Sparer-Pauschbetrag in Deutschland gibt es nicht. Hat das Kind kein oder nur ein geringes Einkommen, kann es sich die KESt über die Regelbesteuerungsoption in der Steuererklärung zurückholen. Bei ein paar Euro Zinsen lohnt der Aufwand selten, bei einer größeren Summe schon.',
-         'Geldgeschenke an das Kind sind steuerfrei. Eine Schenkungssteuer gibt es in Österreich nicht. Schenken Eltern oder Großeltern innerhalb eines Jahres mehr als 50.000 €, muss das aber dem Finanzamt gemeldet werden.'
-         +(f' Viele Banken zahlen zur Eröffnung außerdem ein Startguthaben, gerade bei {_w(len(akt),"einem Konto","Konten")} dieser Liste. Die Aktionen stehen in der Liste '+li('praemie','Girokonten mit Prämie')+'.' if akt else ''))),
-     ('Mit 14, 18 oder 20: wann umgestellt wird',
-      _P('Kinder- und Jugendkonten haben feste Altersgrenzen. Die Bank stellt das Konto beim Erreichen um, meist automatisch: zuerst vom Kinder- auf das Jugendkonto, später auf ein Konto für Erwachsene. Das passiert je nach Bank mit 18, 19, 20 oder 21.')+
-      (_tbl(['Konto','Alter und Umstellung laut Bank'],rows_u) if rows_u else '')+
-      _P('Mit 18 enden die Rechte der Eltern. Der junge Erwachsene kann sie als Verfügungsberechtigte streichen, einen Überziehungsrahmen beantragen und das Konto selbst kündigen. Wer studiert, bekommt bei vielen Banken danach ein Studentenkonto, siehe '+li('studenten','Girokonten für Studierende')+'. Wer arbeitet, findet Konten ohne Kontoführungsentgelt in der Liste '+li('kostenlos','kostenlose Girokonten')+'.')),
-     ('Checkliste für Eltern vor der Eröffnung',
-      _P(_ul(['Ab welchem Alter gibt es die Karte, und hat sie Kontaktlos- und Online-Funktion?',
-              'Wie hoch ist das Wochenlimit, und können wir es in der App selbst ändern?',
-              'Sehen wir als Eltern die Umsätze, auch beim Jugendkonto?',
-              'Muss ein Elternteil Kunde der Bank sein, und braucht es beide Unterschriften?',
-              'Wie hoch ist der Habenzins, und bis zu welchem Betrag gilt er?',
-              'Wann und auf welches Konto wird umgestellt, und was kostet es danach?',
-              'Gibt es eine Filiale oder Beratung in der Nähe, falls die Karte gesperrt werden muss?'],'checks'),
-         'Nach der Eröffnung hilft ein fester Rhythmus. Überweist das Taschengeld per Dauerauftrag, zum Beispiel jeden Montag oder am Monatsersten. Setzt euch anfangs regelmäßig zusammen und schaut, was gekauft wurde. Wer früh lernt, ein Wochenbudget einzuteilen, hat es mit der ersten Lehrlingsentschädigung oder dem ersten Ferialjob leichter. Und erklärt eurem Kind, dass es den PIN-Code niemandem verrät, auch nicht Freunden.',
-         'Einen Vergleich speziell für Jugendliche und Lehrlinge veröffentlicht die '+_ext(AT_AK_JUGEND,'Arbeiterkammer Oberösterreich')+'. Bei Problemen mit der Bank hilft die Konsumentenberatung der Arbeiterkammer in deinem Bundesland.')),
+     ('Jugendkonto: ab 14, manchmal früher',
+      _P('Das Jugendkonto ist in Österreich das Konto für mündige Minderjährige, also für alle ab 14. Es löst das Kinderkonto ab und begleitet dich durch Schule, Lehre oder Ferialjob, je nach Bank bis 18, 19 oder 20. '
+         +(f'In dieser Liste stehen {_n(n,"Jugendkonto","Jugendkonten")}, {len(frei0)} davon ohne Kontoführungsentgelt' if X else '')
+         +(f', bei {_links(c,bedingt)} entfällt das Entgelt bis zu einer Altersgrenze. ' if bedingt else ('. ' if X else '')),
+         (f'Schon vor 14 bekommst du ein Jugendkonto bei {_links(c,unter14)}, dann eröffnen es deine Eltern als gesetzliche Vertreter. ' if unter14 else '')
+         +'Wer jünger ist, findet passende Modelle in der Liste '+kl+'.',
+         'Der Unterschied zum Kinderkonto zeigt sich im Alltag: höhere Wochenlimits, meist Kontaktlos-Zahlung, Online-Shopping und eine eigene App, in der du selbst überweist. Das Konto ist für dich da, nicht mehr in erster Linie für deine Eltern.')),
+     ('Mündig mit 14: was du selbst darfst',
+      _P('Mit 14 wirst du mündig minderjährig. Du bist noch nicht voll geschäftsfähig, darfst aber deutlich mehr als vorher (§ 170 Abs. 2 ABGB):',
+         _ul(['Über <b>Einkommen aus eigener Arbeit</b>, etwa dein Lehrlingseinkommen oder den Lohn vom Ferialjob, darfst du selbst verfügen.',
+              'Über <b>Sachen, die dir zur freien Verfügung überlassen wurden</b>, also Taschengeld oder Geburtstagsgeld, ebenso.',
+              'Die Grenze: Deine grundlegenden Lebensbedürfnisse dürfen nicht gefährdet sein. Wer das ganze Lehrlingseinkommen für ein Moped ausgibt und dann die Monatskarte nicht mehr zahlen kann, überschreitet sie.']),
+         'Ein paar Beispiele: Neue Sneakers um 120 € vom eigenen Ersparten sind in Ordnung. Ein Handyvertrag mit 24 Monaten Laufzeit oder ein Ratenkauf brauchen dagegen die Zustimmung deiner Eltern. Ohne sie ist so ein Vertrag schwebend unwirksam und gilt erst, wenn sie nachträglich zustimmen. Ein Wertkartenhandy kaufst du dagegen ohne Probleme selbst.',
+         'Online gilt dasselbe. Kaufst du im Spiel eine Währung oder schließt ein Abo für Musik ab, zählt nicht, mit welcher Karte du zahlst, sondern ob der Vertrag zu deinem Alter und deinem Geld passt. Ein einzelner Kauf um ein paar Euro ist kein Problem. Ein Abo, das jeden Monat abbucht, ist ein laufender Vertrag und braucht vor 18 die Zustimmung deiner Eltern.',
+         'Wichtig für Lehrlinge: Den Lehrvertrag selbst darfst du nur mit Zustimmung deiner Eltern abschließen. Kleinere Jobs wie Babysitten oder einen Ferialjob darfst du dagegen ab 14 selbst annehmen, solange etwa die Schule nicht darunter leidet. Sonst können deine Eltern den Job untersagen.')),
+     ('Eröffnen ohne Eltern?',
+      _P('Weil du ab 14 über dein eigenes Einkommen verfügen darfst, lassen manche Banken dich das Jugendkonto ganz allein eröffnen. '
+         +(f'Ohne Unterschrift der Eltern geht es laut Bank bei {_links(c,allein)}. ' if allein else '')
+         +'Andere verlangen die Unterschrift deiner Eltern bis 18, auch wenn du schon Lehrling bist.',
+         _ul(['ein eigener Lichtbildausweis, also Reisepass oder Personalausweis',
+              'je nach Bank ein Meldezettel oder ein anderer Nachweis über den Hauptwohnsitz',
+              'bei Eröffnung mit den Eltern auch deren Ausweise und eventuell ein Nachweis über die Obsorge']),
+         ((f'Einen Hauptwohnsitz in Österreich seit mindestens einem Jahr setzen {_links(c,wohn)} voraus. ' if wohn else '')
+          +(f'Bei {_links(c,kunde)} muss ein Elternteil schon Kunde sein. ' if kunde else '')
+          +(f'Nur in der Filiale eröffnest du {_links(c,fil)}. ' if fil else '')
+          +(f'Für {_w(len(akt),"ein Jugendkonto","Jugendkonten")} dieser Liste gibt es gerade einen Startbonus, Details in der Liste '+li('praemie','Girokonten mit Prämie')+'.' if akt else '')),
+         'Auch wenn deine Eltern unterschreiben: Kontoinhaber bist du. Ab 18 entscheidest du allein, wer noch Zugriff hat.')),
+     ('Lehrlingseinkommen und Ferialjob',
+      _P('Als Lehrling bekommst du jeden Monat ein Lehrlingseinkommen, oft noch Lehrlingsentschädigung genannt. Die Höhe steht normalerweise im Kollektivvertrag deiner Branche und steigt mit jedem Lehrjahr. Dazu kommen Sonderzahlungen wie Urlaubs- und Weihnachtsgeld. Weil das Lehrlingseinkommen niedriger ist als ein Fachkräftegehalt, fällt in der Regel keine oder nur wenig Einkommensteuer an.',
+         'Wie viel du in deinem Lehrberuf genau bekommst, erfährst du bei der Lehrlingsstelle der Wirtschaftskammer in deinem Bundesland oder im Berufslexikon des AMS.',
+         'Einen Ferialjob darfst du annehmen, sobald du 15 bist und deine Schulpflicht beendet hast. Die Schulpflicht endet nach dem neunten Schuljahr am Tag vor den Sommerferien. Wirst du schon vorher 15, giltst du bis Ferienbeginn noch als Kind im Sinne des Kinder- und Jugendlichenbeschäftigungsgesetzes. Als Ferialarbeiter oder Ferialangestellter hast du einen befristeten Arbeitsvertrag mit Anspruch auf Lohn nach Kollektivvertrag. Ein echtes Ferialpraktikum kann dagegen auch unbezahlt sein.',
+         'Für das Konto heißt das: Dein Lehrbetrieb oder Ferialarbeitgeber braucht deine IBAN, und das Geld kommt auf dein eigenes Konto. Gerade wenn du lernst, mit einem Monatsbudget auszukommen, hilft es, Miete, Handy und Monatskarte gleich nach dem Lohneingang per Dauerauftrag wegzubuchen.',
+         'Ein einfacher Plan für den ersten Lohn: Zuerst kommt weg, was jeden Monat fix fällig ist. Dann legst du einen festen Betrag auf ein Sparkonto, auch wenn es nur 20 oder 30 € sind. Der Rest ist für Freizeit, Kleidung und Ausgehen. Wer das von Anfang an so macht, steht am Monatsende nicht mit leerem Konto da und hat nach der Lehre schon ein Polster für Führerschein oder erste Wohnung.')),
+     ('Keine Überziehung: was bei einem Minus passiert',
+      _P('Jugendkonten laufen auf Guthabenbasis. Einen Überziehungsrahmen bekommst du vor 18 nicht, denn einen Kredit dürfen Minderjährige nicht ohne gerichtliche Genehmigung aufnehmen. Ist nichts mehr drauf, lehnt die Karte die Zahlung ab.',
+         'Ganz ausgeschlossen ist ein Minus trotzdem nicht. Wird eine Kartenzahlung erst Tage später gebucht oder zieht ein Anbieter eine Lastschrift ein, kann das Konto kurz ins Minus rutschen. Dann verrechnet die Bank Zinsen für die Überschreitung. '
+         +(f'In dieser Liste nennen die Preisblätter dafür bis zu {pct(ue[0]["ueberschreitung"])} im Jahr, etwa bei {L(ue[0])}. ' if ue else '')
+         +'Bei kleinen Beträgen und wenigen Tagen sind das Cent, aber das Minus sollte trotzdem schnell weg.',
+         'Ab 18 kann dir die Bank einen Überziehungsrahmen anbieten. Was der kostet und wann er zur Falle wird, steht im Ratgeber '+rg('kontoueberziehung','Kontoüberziehung')+'.')),
+     ('Bankomatkarte, Handy und Online-Shopping',
+      _P('Zum Jugendkonto gehört eine Debitkarte, meist mit deutlich mehr Spielraum als beim Kinderkonto. '
+         +(f'Die Wochenlimits liegen laut Bank bei {"bis zu " if len(set(lims))>1 else ""}{eur(max(lims))} €. ' if lims else '')
+         +(f'Kontaktlos zahlen nennen ausdrücklich {_links(c,kontakt)}. ' if kontakt else ''))+
+      (_tbl(['Konto','Alter','Karte laut Bank','Bargeld laut Bank'],rows_k) if rows_k else '')+
+      _P('Mit dem Handy zahlen über Apple Pay oder Google Pay geht nur, wenn deine Bank die Karte dafür freigibt. Für Jugendliche handhaben das die Banken unterschiedlich, teils erst ab einem bestimmten Alter oder mit Zustimmung der Eltern. Wenn dir das wichtig ist, frag vor der Eröffnung nach.',
+         'Online bezahlst du mit der Debitkarte wie Erwachsene. Bestätigt wird meist in der Banking-App. Pass bei Gratis-Testabos auf, die nach ein paar Tagen kostenpflichtig werden, und gib Kartendaten nie in Chats oder über Links aus Nachrichten ein.',
+         ('Auf Reisen außerhalb des Euroraums kostet jede Kartenzahlung einen Aufschlag für Fremdwährung. '
+          +(f'Bei den Jugendkonten in dieser Liste liegt er zwischen {pct(fw[0])} und {pct(fw[1])}. ' if fw and fw[0]!=fw[1] else (f'Bei den Jugendkonten in dieser Liste liegt er bei {pct(fw[0])}. ' if fw else ''))
+          +'Für die Sprachreise nach England lohnt der Vergleich.'),
+         'Bargeld bekommst du an Bankomaten deiner Bank meist ohne Entgelt, die genauen Regeln stehen in der Tabelle. Private Automatenbetreiber verlangen teils eigene Spesen, die die Bank an dich weitergibt. Schau vor dem Abheben auf den Hinweis am Bildschirm und brich ab, wenn eine Gebühr angezeigt wird.')),
+     ('Mit 18, 19 oder 20: Umstellung und Wechsel',
+      _P('Jugendkonten enden an einer festen Altersgrenze. Danach stellt die Bank meist automatisch auf ein Konto für Erwachsene um, und das kann etwas kosten:')+
+      (_tbl(['Konto','Alter','Umstellung laut Bank','Jahreskosten im Vergleich'],rows_u) if rows_u else '')+
+      _P('Mit 18 bist du voll geschäftsfähig. Deine Eltern verlieren ihre Rechte am Konto, und du entscheidest allein über Überziehungsrahmen, Kreditkarte und Kündigung. Läuft das Jugendkonto bei deiner Bank noch bis 19 oder 20 weiter, bleibt es so lange meist gratis.',
+         'Danach lohnt der Vergleich. Wer studiert, findet passende Konten in der Liste '+li('studenten','Girokonten für Studierende')+'. Wer arbeitet, schaut bei den '+li('kostenlos','kostenlosen Girokonten')+'. Den Umzug mit Lohn und Daueraufträgen erklärt der Ratgeber '+rg('girokonto-wechseln','Girokonto wechseln')+'. Einen eigenen Vergleich für Jugendliche und Lehrlinge veröffentlicht die '+_ext(AT_AK_JUGEND,'Arbeiterkammer Oberösterreich')+'.')),
      ('Quellen',
-      _P(_ul(['Alter, Karten, Limits, Habenzinsen, Eröffnung und Umstellung: Preisblätter, Entgeltinformationen und Produktseiten der Banken, verlinkt bei jedem Konto im Vergleich, Stand '+E(c['stand'])+'.',
-              'Geschäftsfähigkeit Minderjähriger: '+_ext(AT_ABGB_170,'§ 170 ABGB (RIS)')+', '+_ext(AT_GESCH,'oesterreich.gv.at, Geschäftsfähigkeit')+'.',
-              'Kapitalertragsteuer: '+_ext(AT_BMF_KEST,'BMF, Besteuerung von Kapitalerträgen')+', '+_ext(AT_BMF_KAP,'BMF, Einkünfte aus Kapitalvermögen')+'; Schenkungsmeldung: '+_ext(AT_BMF_SCHENK,'BMF')+'.',
+      _P(_ul(['Alter, Karten, Limits, Überschreitungszinsen, Eröffnung und Umstellung: Preisblätter, Entgeltinformationen und Produktseiten der Banken, verlinkt bei jedem Konto im Vergleich, Stand '+E(c['stand'])+'.',
+              'Geschäftsfähigkeit mündiger Minderjähriger, Lehrvertrag und kleinere Arbeiten: '+_ext(AT_ABGB_170,'§ 170 ABGB (RIS)')+', '+_ext(AT_VERTRAG,'oesterreich.gv.at, Vertragsabschluss durch Kinder und Jugendliche')+'.',
+              'Lehrlingseinkommen: '+_ext(AT_LEHRE,'oesterreich.gv.at, Lehrlingseinkommen')+'; Ferialjob: '+_ext(AT_FERIAL,'oesterreich.gv.at, Ferialjob')+'.',
               'Jugend- und Lehrlingskonten: '+_ext(AT_AK_JUGEND,'Arbeiterkammer Oberösterreich')+', '+ABG+'.']))),
     ]
     faq=[
-     ('Braucht mein Kind für das Konto einen eigenen Ausweis?','Für ein Kinderkonto reichen meist die Geburtsurkunde und der Ausweis der Eltern. Für ein Jugendkonto verlangen viele Banken einen eigenen Lichtbildausweis des Kindes, also Reisepass oder Personalausweis.'),
-     ('Kann mein Kind mit der Karte online einkaufen?','Bei Jugendkonten meist ja, bei Kinderkonten oft nicht oder erst nach Freischaltung durch die Eltern. Manche Kinderkarten haben auch keine Kontaktlos-Funktion. Das steht in der Kartentabelle auf dieser Seite.'),
-     ('Muss die Lehrlingsentschädigung auf ein Jugendkonto gehen?','Nein, sie kann auf jedes Konto, das auf den Namen des Lehrlings läuft. Ein Jugendkonto ist dafür aber meist die günstigste Wahl, weil es bis 19 oder 20 gratis bleibt.'),
-     ('Was passiert mit dem Geld auf dem Kinderkonto, wenn sich die Eltern scheiden lassen?','Nichts, es gehört dem Kind und fällt nicht in die Aufteilung zwischen den Eltern. Wer das Konto weiter verwaltet, hängt von der Obsorge ab.'),
-     ('Was tun, wenn die Karte meines Kindes verloren geht?','Sofort sperren, über die Banking-App, die Hotline der Bank oder die Kartensperrhotline unter 0800 204 8800, aus dem Ausland +43 1 204 8800. Die gilt für Debitkarten der meisten österreichischen Banken, bei Neobanken sperrst du in der App. Die Ersatzkarte ist bei Kinder- und Jugendkonten oft gratis, das steht in den Konditionen.'),
+     ('Muss das Lehrlingseinkommen auf ein Jugendkonto gehen?','Nein, es kann auf jedes Konto, das auf deinen Namen läuft. Ein Jugendkonto ist dafür aber meist die günstigste Wahl, weil es bis 18, 19 oder 20 gratis bleibt.'),
+     ('Kann ich mit 14 ohne meine Eltern ein Konto eröffnen?',(f'Bei manchen Banken ja, laut Bank etwa bei {_links(c,allein)}. ' if allein else 'Bei manchen Banken ja. ')+'Andere verlangen die Unterschrift der Eltern bis 18. Einen eigenen Lichtbildausweis brauchst du in jedem Fall.'),
+     ('Darf ich mit 15 einen Handyvertrag abschließen?','Nicht allein. Ein Vertrag mit monatlichen Zahlungen über eine lange Laufzeit braucht bis 18 die Zustimmung deiner Eltern. Ein Wertkartenhandy oder eine Wertkarte kannst du dagegen selbst kaufen.'),
+     ('Was tun, wenn meine Karte verloren geht?','Sofort sperren, über die Banking-App, die Hotline deiner Bank oder die Kartensperrhotline unter 0800 204 8800, aus dem Ausland +43 1 204 8800. Die gilt für Debitkarten der meisten österreichischen Banken, bei Neobanken sperrst du in der App.'),
+     ('Bekomme ich mit dem Jugendkonto schon einen Überziehungsrahmen?','Nein. Vor 18 läuft das Konto nur auf Guthaben. Rutscht es durch eine spät gebuchte Zahlung trotzdem ins Minus, verrechnet die Bank Überschreitungszinsen, bis du ausgleichst.'),
     ]
-    lede='Diese Liste zeigt Kinderkonten und Jugendkonten in Österreich, sortiert nach unserer Bewertung. Darunter erfährst du, ab welchem Alter dein Kind ein Konto haben kann, wer unterschreiben muss, welche Limits die Karte hat und wann die Bank umstellt.'
+    lede='Jugendkonten in Österreich im Vergleich, sortiert nach unserer Bewertung. Darunter liest du, was du ab 14 mit deinem Geld selbst darfst, ob du das Konto ohne Eltern eröffnen kannst, wie es mit Lehrlingseinkommen und Ferialjob läuft und wann die Bank umstellt.'
     return dict(lede=lede,secs=secs,faq=faq)
 
 
 def texte(land,ctx):
     if land=='de':
-        return {'gemeinschaftskonto':_gem_de(ctx),'studenten':_stu_de(ctx),'kinder-jugendkonto':_kj_de(ctx)}
+        return {'gemeinschaftskonto':_gem_de(ctx),'studenten':_stu_de(ctx),'jugendkonto':_jk_de(ctx),'kinderkonto':_kk_de(ctx)}
     if land=='at':
-        return {'gemeinschaftskonto':_gem_at(ctx),'studenten':_stu_at(ctx),'kinder-jugendkonto':_kj_at(ctx)}
+        return {'gemeinschaftskonto':_gem_at(ctx),'studenten':_stu_at(ctx),'jugendkonto':_jk_at(ctx),'kinderkonto':_kk_at(ctx)}
     return {}
