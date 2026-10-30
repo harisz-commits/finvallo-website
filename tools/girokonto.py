@@ -219,8 +219,10 @@ def item(k,P,base,voll=True,extra=None,rank=None):
     <div class="acts">{affiliate.btn(LAND,'girokonto',k['slug'],k.get('quelle2') or k['quelle'])}{"" if voll else f'<a class="btn ghost block" href="{P}{url(k)}">Alle Konditionen</a>'}</div>
     {mehr(k,P) if voll else ""}
   </article>'''
+SEG={'student':'studenten','jugend':'jugendkonto','kinder':'kinderkonto'}   # Kontoarten mit eigener Vergleichsseite statt im Hauptvergleich
 def url(k,land=None):
-    """Adresse eines Kontos: Eintrag im Vergleich (eigene Kontoseiten gibt es nicht mehr)"""
+    """Adresse eines Kontos: Eintrag im Vergleich bzw. auf der eigenen Seite für Studierende, Jugendliche, Kinder"""
+    if k['art'] in SEG: return f'{land or LAND}/girokonto/bestenlisten/{SEG[k["art"]]}/#gk-{k["slug"]}'
     return f'{land or LAND}/girokonto/#gk-{k["slug"]}'
 def mehr(k,P):
     """Aufklappbare Produktinfos im Listeneintrag: alle Konditionen, Kostenbeispiel, Vor- und Nachteile, Quelle"""
@@ -298,12 +300,23 @@ def filterbox(n):
     return f'''<div class="box filt" id="filt" hidden>
     <label class="fq"><span class="sr">Suche</span><input type="search" data-q placeholder="Konto oder Bank suchen" autocomplete="off"></label>
     <div class="chips">{"".join(f'<button type="button" class="chip" data-flag="{a}" aria-pressed="false">{t}</button>' for a,t in chips)}</div>
-    <div class="frow"><select data-art aria-label="Kontoart">{opt([("","Alle Kontoarten")]+[(a,t) for a,t,_ in SEK])}</select>
+    <div class="frow"><select data-art aria-label="Kontoart">{opt([("","Alle Kontoarten")]+[(a,t) for a,t,_ in SEK if a not in SEG])}</select>
     <select data-sort aria-label="Sortierung">{opt([("rank","Nach Bewertung"),("cost","Günstigste für dich zuerst"),("name","Nach Name")])}</select></div>
     <div class="fbot"><b data-count>{n} Konten</b><button type="button" class="lnk" data-reset hidden>Filter zurücksetzen</button></div>
   </div>'''
 
+def hero_best(k,P,label,note=None):
+    return dict(label=label,name=k['name'],by=f'von {k["bank"]}',face=face(k),
+                rate=f'<div>{K.stars(k["stars"])} <b>{de1(k["stars"])}</b> <span class="mut">{k["note"]}</span></div>',
+                btn=affiliate.btn(LAND,'girokonto',k['slug'],k.get('quelle2') or k['quelle'])+f'<a class="lnk" href="{P}{url(k)}">Alle Konditionen →</a>',
+                note=(note[:90].rsplit(' ',1)[0]+' …') if note and len(note)>90 else note)
+def eigene_seiten(P):
+    """Kacheln zu den eigenen Seiten für Studierende, Jugendliche und Kinder (nicht im Hauptvergleich)"""
+    xs=[(k,t,d) for a,k,t,d in (('student','studenten','Studierende und junge Erwachsene','Konten bis zu einer Altersgrenze, oft kostenlos'),('jugend','jugendkonto','Jugendliche','Konten ab 10 bis 14 Jahren, ohne Überziehung'),('kinder','kinderkonto','Kinder','Konten, die Eltern für ihr Kind eröffnen')) if BLG.get(k)]
+    if not xs: return ''
+    return '<h2>Konten für Studierende, Jugendliche und Kinder</h2><p class="note">Diese Konten haben eigene Bedingungen und Altersgrenzen. Sie stehen deshalb auf eigenen Seiten, jeweils mit Rangliste und allen Konditionen.</p><div class="catgrid">'+''.join(f'<a class="catcard" href="bestenlisten/{k}/"><b>{E(t)}</b><span style="color:var(--muted)">{len(BLG[k])} Konten · {E(d)}</span><small>Zum Vergleich →</small></a>' for k,t,d in xs)+'</div>'
 def list_page(ks,secs,d):
+    ks=[k for k in ks if k['art'] not in SEG]; secs={a:v for a,v in secs.items() if a not in SEG}
     rel=f'{LAND}/girokonto/'; P='../../'; n=len(ks); nb=len({k['bank'] for k in ks})
     N=CC['N']
     t=f'Girokonto-Vergleich {N} 2026: Kosten und Bewertung | Finvallo'
@@ -312,7 +325,7 @@ def list_page(ks,secs,d):
     ld=K.graph(rel,t,ds,[(CC['N'],f'{LAND}/'),('Girokonten',rel)],[{"@type":"ItemList","name":f"Beste Girokonten {N}","itemListElement":[{"@type":"ListItem","position":k['rank'],"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{url(k)}"} for k in top]}])
     sections=''
     for a,h,txt in SEK:
-        xs=secs[a]
+        xs=secs.get(a)
         if not xs: continue
         txt=sektxt(a,txt)
         sections+=f'<section class="gsec" data-sec="{a}"><h2>{h} <small class="mut">({len(xs)})</small></h2>{f"<p class=note>{E(txt)}</p>" if txt else ""}<div class="list">{"".join(item(k,P,"") for k in xs)}</div></section>'
@@ -326,8 +339,8 @@ def list_page(ks,secs,d):
     body=f'''{hdr(P,rel)}
 <div class="wrap"><main id="app">
 <div class="crumb"><span>{N} › Girokonten</span><span class="ok">✓ Geprüft bis {st}</span></div>
-<h1>Girokonto-Vergleich {N}</h1>
-  <p class="lede">{n} Girokonten von {nb} Banken, die überall in {N} Kundinnen und Kunden annehmen. Jede Zahl stammt aus der Entgeltinformation oder Preisliste der Bank. Sortiert nach unserer Bewertung, Provisionen haben keinen Einfluss.</p>
+{K.hero_open(K.hero_kicker("Die besten Girokonten",max(k["geprueft"] for k in ks)))}<h1>Girokonto-Vergleich {N}</h1>
+  <p class="lede">{n} Girokonten von {nb} Banken, die überall in {N} Kundinnen und Kunden annehmen. Jede Zahl stammt aus der Entgeltinformation oder Preisliste der Bank. Sortiert nach unserer Bewertung, Provisionen haben keinen Einfluss.</p>{K.hero_close(P,[(n,"geprüfte Konten"),(nb,"Banken")],st,hero_best(top1,P,"Bestes Girokonto laut Finvallo"))}
   <div class="facts prose"><p>{kurz}</p></div>
   <p class="note" style="margin:6px 0 14px">Bestenlisten: {" · ".join(f'<a class="lnk" href="bestenlisten/{c["k"]}/">{E(c["t"])}</a>' for c in gcats() if BLG.get(c["k"]))}{rgline(P,"<br>")}</p>
   {f'<p class="note">Geld, das du länger nicht brauchst, bringt auf dem Girokonto kaum Zinsen. Was du für feste Laufzeiten bekommst, zeigt der <a class="lnk" href="{P}{LAND}/festgeld/">Festgeld-Vergleich {N}</a>.</p>' if os.path.exists(R+f'{LAND}/festgeld/index.html') else ''}
@@ -338,6 +351,7 @@ def list_page(ks,secs,d):
     <p class="note">Die Kosten rechnen wir für einen typischen Fall: bei Konten für alle mit 1.500 € Gehalt pro Monat und 4 Abhebungen pro Monat. Jedes Kriterium bekommt nach festen Regeln 1 bis 5 Sterne, die Gesamtnote ist der gewichtete Durchschnitt. Fehlende Angaben zählen mit 2,5 Sternen. Studenten-, Jugend-, Kinder- und Basiskonten stehen in eigenen Listen.</p>
     <a class="lnk" href="methodik/">Alle Regeln →</a></details>
   {sections}
+  {eigene_seiten(P)}
   <h2>Was in den Vergleich kommt</h2><div class="prose"><p>Konten, die man von überall in {N} eröffnen kann und deren Guthaben über eine gesetzliche Einlagensicherung geschützt ist. {CC["regional"]}</p>{CC["extern"]}</div>
   <h2>Fragen und Antworten</h2><div class="faq">{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q,a in fq)}</div>
   <p class="note" style="margin-top:18px">Die Daten gibt es offen als <a class="lnk" href="../daten/girokonten.json">JSON</a>, frei nutzbar mit Quellenangabe. Zinsen für Geld, das länger liegen kann: <a class="lnk" href="{P}{LAND}/festgeld/">Festgeld-Vergleich {N}</a>.</p>
@@ -425,8 +439,10 @@ def gcats():
       f=lambda k:k['art'] in ALLE and k.get('gemeinschaftskonto') is True,why=('Gratis, wenn',kurzbed)),
  dict(k='studenten',t='Studierende',h='Girokonten für Studierende',d='Konten für Studierende, Azubis und junge Erwachsene bis zu einer Altersgrenze. Danach stellt die Bank meist auf ein normales Konto um.',
       f=lambda k:k['art']=='student',why=('Alter',altT)),
- dict(k='kinder-jugendkonto',t='Kinder und Jugendliche',h='Kinder- und Jugendkonten',d='Konten, die Eltern für ihre Kinder eröffnen, und Konten für Jugendliche, meist ab 10 oder 14 Jahren.',
-      f=lambda k:k['art'] in ('kinder','jugend'),why=('Alter',altT)),
+ dict(k='jugendkonto',t='Jugendliche',h='Jugendkonten',d='Konten für Jugendliche, je nach Bank ab 10, 12 oder 14 Jahren. Die Bank stellt sie meist mit 18 oder etwas später auf ein normales Konto um.',
+      f=lambda k:k['art']=='jugend',why=('Alter',altT)),
+ dict(k='kinderkonto',t='Kinder',h='Kinderkonten',d='Konten, die Eltern für ihr Kind eröffnen, meist für Kinder unter 14 Jahren. Die Eltern behalten den Überblick und legen Limits fest.',
+      f=lambda k:k['art']=='kinder',why=('Alter',altT)),
     ]
 GCATS=[]
 def best_lists(ks):
@@ -449,7 +465,7 @@ def listen_ctx(land=None,ks=None,BL=None):
     if ks is None:
         old=(LAND,CC); LAND,CC=land,CFG[land]; K.use(land); _,ks=load(land); rate(ks); BL=best_lists(ks); LAND,CC=old
     P='../../../../'; G=f'{P}{land}/girokonto/'
-    def link(k,label=None): return f'<a class="lnk" href="{G}#gk-{k["slug"]}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
+    def link(k,label=None): return f'<a class="lnk" href="{P}{url(k,land)}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
     def liste(slug,label): return f'<a class="lnk" href="{G}bestenlisten/{slug}/">{E(label)}</a>' if (BL or {}).get(slug) else E(label)   # Liste gibt es in diesem Land nicht
     def rg(slug,label): return f'<a class="lnk" href="{P}{land}/ratgeber/{slug}/">{E(label)}</a>' if os.path.exists(R+f'{land}/ratgeber/{slug}/index.html') else E(label)
     return dict(land=land,N=CFG[land]['N'],code=CFG[land]['code'],P=P,G=G,lists=BL,alle=ks,eur=eur,pct=pct,kfT=kfT,kurzbed=kurzbed,altT=altT,ukT=ukT,
@@ -511,14 +527,15 @@ def bestenlisten(ks,BL):
         if len(d)>155: d=f'{c["h"]} in {N}: {len(X)} Konten im Vergleich, Stand {S}.'
         kurz=f'<b>Kurz gesagt:</b> {"Die höchste Prämie" if c["k"]=="praemie" else "Platz 1"} hat laut Finvallo das {E(top["name"])} von {E(top["bank"])}'+(f' ({de1(top["stars"])} von 5 Sternen)' if c['k']!='praemie' else f': {E(top["aktion"])}')+(f', vor dem {E(X[1]["name"])} von {E(X[1]["bank"])}' if len(X)>1 else '')+(f' und dem {E(X[2]["name"])} von {E(X[2]["bank"])}' if len(X)>2 else '')+f'. {len(X)} Konten in dieser Liste. Stand: {S}.'
         fq=[(f'Welches Konto ist in {N} am besten in der Liste „{c["t"]}“?',f'Laut Finvallo-Bewertung liegt das {top["name"]} von {top["bank"]} vorn, mit {de1(top["stars"])} von 5 Sternen. Stand: {S}.' if c['k']!='praemie' else f'Die höchste Prämie zahlt aktuell {top["bank"]} für das {top["name"]}: {top["aktion"]}. Stand: {S}.')]+list(T.get('faq') or [])
-        items=''.join(item(k,P2,'',voll=False,extra=(c['why'][0],c['why'][1](k)),rank=i+1) for i,k in enumerate(X))
+        eigen=c['k'] in SEG.values()   # Studierende, Jugend, Kinder: nur hier, deshalb mit allen Konditionen
+        items=''.join(item(k,P2,'',voll=eigen,extra=(c['why'][0],c['why'][1](k)),rank=i+1) for i,k in enumerate(X))
         secs=''.join(f'<h2>{E(h)}</h2>{x if x.lstrip().startswith("<") else "<div class=prose><p>"+x+"</p></div>"}' for h,x in (T.get('secs') or []))
         ld=K.graph(rel,t,d,[(CC['N'],f'{LAND}/'),('Girokonten',f'{LAND}/girokonto/'),('Bestenlisten',base),(c['t'],rel)],
             [{"@type":"ItemList","name":h1,"numberOfItems":len(X),"itemListElement":[{"@type":"ListItem","position":i+1,"name":f'{k["name"]} ({k["bank"]})',"url":f"https://finvallo.com/{url(k)}"} for i,k in enumerate(X)]},
              {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":re.sub(r'<[^>]+>','',a)}} for q,a in fq]}])
-        K.write(rel,head(t,d,rel,P2,ld)+f'''{hdr(P2,rel)}
+        html_=head(t,d,rel,P2,ld)+f'''{hdr(P2,rel)}
 <div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../../">Girokonten</a> › <a href="../">Bestenlisten</a> › {E(c["t"])}</span><span>Stand {S}</span></div><h1>{E(h1)}</h1><p class="lede">{T.get("lede") or E(c["d"])}</p>
+<div class="crumb"><span><a href="../../">Girokonten</a> › <a href="../">Bestenlisten</a> › {E(c["t"])}</span><span>Stand {S}</span></div>{K.hero_open(K.hero_kicker(c["h"],max(k["geprueft"] for k in X)))}<h1>{E(h1)}</h1><p class="lede">{T.get("lede") or E(c["d"])}</p>{K.hero_close(P2,[(len(X),"Konten in der Liste"),(len({k["bank"] for k in X}),"Banken")],S,hero_best(top,P2,"Höchste Prämie" if c["k"]=="praemie" else "Platz 1 in dieser Liste",note=top.get("aktion") if c["k"]=="praemie" else None))}
 <div class="facts prose"><p>{kurz}</p></div>
 <div class="chips" style="margin:14px 0">{nav(c["k"])}</div>
 <h2>Die {len(X)} Konten im Vergleich</h2>
@@ -530,7 +547,9 @@ def bestenlisten(ks,BL):
 <p class="note" style="margin-top:18px"><a class="lnk" href="../../">Zum Girokonto-Vergleich mit Rechner →</a> · <a class="lnk" href="../../methodik/">So bewerten wir →</a></p>
 {rgline(P2,"P","</p>")}
 </main>
-{K.footer(P2)}''')
+{K.footer(P2)}'''
+        if eigen: html_=html_.replace('</body>',f'<script src="{P2}assets/giro.js?v={__import__('hashlib').sha256(open(R+'assets/giro.js','rb').read()).hexdigest()[:8]}" defer></script>\n</body>',1)
+        K.write(rel,html_)
 
 # ---------- Anbieterseiten der Kreditkarten: Abschnitt „Girokonten von …“ ----------
 def anb_rel(bank):
@@ -545,7 +564,7 @@ def anbieter_giro(ks):
         f=R+rel+'index.html'; s=open(f,encoding='utf-8').read()
         s=re.sub(r'<!--giro-->.*?<!--/giro-->','',s,flags=re.S)
         xs=sorted(xs,key=lambda k:(-k['stars'],k['kf_jahr']))
-        rows=''.join(f'<tr><td><a class="lnk" href="../../../girokonto/#gk-{k["slug"]}">{E(k["name"])}</a><br><small class="mut">{E(ART[k["art"]])}</small></td><td>{E(kfT(k))}</td><td>{E(kurzbed(k))}</td><td style="white-space:nowrap">{de1(k["stars"])} ★</td></tr>' for k in xs)
+        rows=''.join(f'<tr><td><a class="lnk" href="../../../../{url(k)}">{E(k["name"])}</a><br><small class="mut">{E(ART[k["art"]])}</small></td><td>{E(kfT(k))}</td><td>{E(kurzbed(k))}</td><td style="white-space:nowrap">{de1(k["stars"])} ★</td></tr>' for k in xs)
         blk=(f'<!--giro--><h2>Girokonten von {E(bank)}</h2><p class="note">{len(xs)} {"Konto" if len(xs)==1 else "Konten"} von {E(bank)} in unserem <a class="lnk" href="../../../girokonto/">Girokonto-Vergleich</a>, bewertet nach eigenen Regeln für Girokonten.</p>'
              f'<div class="tbl wide"><table><thead><tr><th>Konto</th><th>Kontoführung</th><th>Günstiger, wenn</th><th>Bewertung</th></tr></thead><tbody>{rows}</tbody></table></div><!--/giro-->')
         for mk in ('<h2>Für wen passt','<h2>Fragen und Antworten</h2>','</main>'):

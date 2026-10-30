@@ -122,10 +122,11 @@ def lzspan(a):
     l=laufzeiten(a)
     return lzt(l[0]) if len(l)==1 else f'{lzt(l[0])} bis {lzt(l[-1])}'
 def geschwister(a,xs): return [x for x in xs if x['bank_key']==a['bank_key'] and x is not a]
+GSEG={'student':'bestenlisten/studenten','jugend':'bestenlisten/jugendkonto','kinder':'bestenlisten/kinderkonto'}   # wie girokonto.SEG
 def giro_links(a):
     """Girokonten derselben Bank im Girokonto-Vergleich: [(slug,name)]"""
     b=a['bank'].lower()
-    return [(k['slug'],k['name']) for k in GIRO.get(LAND,[]) if k['bank'].lower()==b or k['bank'].lower().startswith(b+' ') or b.startswith(k['bank'].lower()+' ')]
+    return [(k['slug'],k['name'],k.get('art')) for k in GIRO.get(LAND,[]) if k['bank'].lower()==b or k['bank'].lower().startswith(b+' ') or b.startswith(k['bank'].lower()+' ')]
 def anb_rel(a):
     sl=CC['anb'].get(a['bank']) or K.slug(a['bank'])
     return f'{LAND}/kreditkarten/anbieter/{sl}/' if os.path.exists(R+f'{LAND}/kreditkarten/anbieter/{sl}/index.html') else None
@@ -205,7 +206,7 @@ def mehr(a,P):
     <div class="pc"><div class="box pro"><h4>Das spricht dafür</h4>{'<ul class="checks">'+"".join(f"<li>{E(x)}</li>" for x in pc)+'</ul>' if pc else '<p class="note">Keine besonderen Vorteile.</p>'}</div>
     <div class="box con"><h4>Das spricht dagegen</h4>{'<ul class="checks neg">'+"".join(f"<li>{E(x)}</li>" for x in kc)+'</ul>' if kc else '<p class="note">Keine bekannten Nachteile.</p>'}</div></div>
     {cond}{gst}
-    {('<p class="note">Girokonto bei derselben Bank: '+', '.join(f'<a class="lnk" href="{P}{LAND}/girokonto/#gk-{sl}">{E(n)}</a>' for sl,n in giro_links(a))+'</p>') if giro_links(a) else ''}
+    {('<p class="note">Girokonto bei derselben Bank: '+', '.join(f'<a class="lnk" href="{P}{LAND}/girokonto/{GSEG[ar]+"/" if ar in GSEG else ""}#gk-{sl}">{E(n)}</a>' for sl,n,ar in giro_links(a))+'</p>') if giro_links(a) else ''}
     <p class="src">Quelle: {K.ext(a["quelle"])}{" · "+K.ext(a["quelle2"]) if a.get("quelle2") else ""}, Stand {dmy(a.get("stand") or gp)}, geprüft am {dmy(gp)}. Fehler gefunden? <a href="mailto:hallo@finvallo.com?subject=Korrektur%20{E(a['slug'])}">Schreib uns</a>.</p>
   </div></details>'''
 def item(a,P,base,m,rank,hide=False,voll=True):
@@ -346,6 +347,10 @@ def liste_html(X,P,base,m,voll=True):
         if n<=IM_HTML: vis_html+=h
         else: rest+=h
     return vis_html+(f'<template data-rest>{rest}</template>' if rest else '')
+def hero_best(kz,P,m):
+    a=kz['best']
+    return dict(label=f'Höchster Zins für {lzt(m)}',name=titel(a),by=vtT(a),face=face(a),rate=f'<div class="hero-r">{pct(kz["bz"])} p. a.</div>',
+                btn=btn(a)+f'<a class="lnk" href="#fg-{a["slug"]}">Alle Konditionen →</a>',note=f'Einlagensicherung {landN(a)}')
 def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
     """Gesamtvergleich (alle Angebote), Laufzeit-Seite (lzslug) oder Bestenliste (sub = Eintrag aus fcats())."""
     N=CC['N']; base='' if not (lzslug or sub) else '../' if lzslug else '../../'
@@ -400,8 +405,8 @@ def list_page(xs,d,m=DEF_M,lzslug=None,sub=None):
     body=f'''{hdr(P,rel)}
 <div class="wrap"><main id="app">
 {crumb}
-<h1>{E(h1)}</h1>
-  <p class="lede">{E(lede)}</p>
+{K.hero_open(K.hero_kicker("Die besten Festgeld-Angebote",max(a["geprueft"] for a in xs)))}<h1>{E(h1)}</h1>
+  <p class="lede">{E(lede)}</p>{K.hero_close(P,[(n,"geprüfte Angebote"),(nb,"Banken")],st,hero_best(kz,P,m) if kz else None)}
   {f'<div class="facts prose"><p>{kurz}</p></div>' if kurz else ''}
   <p class="note" style="margin:6px 0 14px"><a class="lnk" href="{up}methodik/">So vergleichen wir</a>{" · Ratgeber: "+rg if rg else ""}</p>
   {calcbox(m,nav)}

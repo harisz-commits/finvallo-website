@@ -664,8 +664,8 @@ def list_page(cards,priv,biz):
     body=f'''{HDR(P,rel,("de" if code=="at" else "at")+"/kreditkarten/")}
 <div class="wrap"><main id="app">
 <div class="crumb"><span>{N} › Kreditkarten</span><span class="ok">✓ Geprüft bis {st}</span></div>
-<h1>Kreditkarten-Vergleich {N}</h1>
-  <p class="lede">{n} Karten in {N}: {card_count(code,'rated')} in der Rangliste, {card_count(code,'special')} für bestimmte Kundengruppen in einer eigenen Liste darunter und {card_count(code,'business')} Business-Karten auf einer <a href="business/">eigenen Seite</a>{f" und {len(unrated)} Karten ohne Bewertung (zu wenig bestätigte Daten)" if unrated else ""}. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>
+{hero_open(hero_kicker("Die besten Kreditkarten",max(c["geprueft"] for c in cards)))}<h1>Kreditkarten-Vergleich {N}</h1>
+  <p class="lede">{n} Karten in {N}: {card_count(code,'rated')} in der Rangliste, {card_count(code,'special')} für bestimmte Kundengruppen in einer eigenen Liste darunter und {card_count(code,'business')} Business-Karten auf einer <a href="business/">eigenen Seite</a>{f" und {len(unrated)} Karten ohne Bewertung (zu wenig bestätigte Daten)" if unrated else ""}. Sortiert nach unserer Bewertung. Provisionen haben keinen Einfluss auf die Reihenfolge.</p>{hero_close(P,[(card_count(code,"rated"),"bewertete Karten"),(na,"Anbieter")],st,hero_best_card(top[0],P,code,"Beste Kreditkarte laut Finvallo"))}
   <div class="facts prose"><p>{kurz}</p></div>
   <p class="note" style="margin:6px 0 14px">Bestenlisten: {" · ".join(f'<a class="lnk" href="bestenlisten/{c["k"]}/">{E(c["t"])}</a>' for c in CATS if os.path.exists(R+f"{code}/kreditkarten/bestenlisten/{c['k']}/index.html"))}<br>Werkzeuge: <a class="lnk" href="rechner/">Kartenrechner</a> · <a class="lnk" href="{P}{code}/girokonto/">Girokonto-Vergleich</a>{f'<br>Ratgeber: {rgl}' if rgl else ''}</p>
   <details class="box howscore"><summary><span><b>So entstehen die Sterne</b><br><small>7 Kriterien, feste Regeln, offene Gewichtung</small></span><span class="lnk">anzeigen</span></summary>
@@ -727,6 +727,31 @@ def biz_page(biz):
 {footer(P)}'''
     write(rel,head(t,d,rel,P,ld,alt=alt_links('at/kreditkarten/business/','de/kreditkarten/business/'))+body)
 def initials(n): return re.sub(r'[^A-Za-z0-9]','',n)[:2].upper()
+# ---------- Kopfbereich der Vergleiche und Bestenlisten (breit, mit Kennzahlen, Autor und „Beste“-Kachel) ----------
+MON=['','01','02','03','04','05','06','07','08','09','10','11','12']
+def hero_open(kicker):
+    return f'<section class="hero"><div class="hero-t"><p class="hero-k">{E(kicker)}</p>'
+def hero_close(P,stats,stand,best=None):
+    """stats: [(Wert, Beschriftung)], best: dict(label, name, by, face, rate, btn, note) oder None"""
+    st=''.join(f'<div class="hero-s"><b>{E(str(v))}</b><span>{E(l)}</span></div>' for v,l in stats)
+    au=(f'<a class="hero-a" href="{P}ueber-uns/"><img src="{P}assets/haris.jpg" alt="Haris" width="44" height="44" loading="lazy">'
+        f'<span><b>Haris</b><small>Geprüft bis {E(stand)}</small></span></a>')
+    b=''
+    if best:
+        b=(f'<aside class="hero-b" aria-label="{E(best["label"])}"><p class="hero-bl">{E(best["label"])}</p>{best.get("face","")}'
+           f'<b class="hero-bn">{E(best["name"])}</b>{f"<small>{E(best["by"])}</small>" if best.get("by") else ""}{best.get("rate","")}'
+           f'{best.get("btn","")}{f"<p class=hero-bx>{E(best["note"])}</p>" if best.get("note") else ""}</aside>')
+    return f'</div><div class="hero-m"><div class="hero-ss">{st}</div>{au}</div>{b}</section>'
+def hero_best_card(c,P,code,label,score=None):
+    sc=score if score is not None else c.get('stars')
+    return dict(label=label,name=c['titel'],face=face(c,' sm'),
+                rate=f'<div>{stars(sc)} <b>{de1(sc)}</b> <span class="mut">{note(sc)}</span></div>' if sc else '',
+                btn=affiliate.btn(code,'kreditkarten',c['slug'],c.get('quelle'))+f'<a class="lnk" href="{P}{code}/kreditkarten/{c["slug"]}/">Alle Details zur Karte →</a>')
+def hero_kicker(text,stand):
+    """„Die besten Kreditkarten 10/2026“ aus dem Prüfstand"""
+    y,m=stand[:4],stand[5:7]
+    return f'{text} {m}/{y}'
+
 def prow_card(c,base):
     return (f'<a class="prow" href="{base}{c["slug"]}/"><span style="width:52px">{face(c," sm")}</span><span style="min-width:0"><b>{E(c["name"] if c.get("name") and c["titel"].endswith(c["name"]) else c["titel"])}</b>'
             f'<small>{TYPLAB.get(c["typ"],c["typ"]).replace(" mit Teilzahlung","")} · {"kostenlos" if c.get("fee")==0 else (eur(c["fee"])+" €/Jahr") if c.get("fee") is not None else "Preis beim Anbieter"}</small>'
@@ -1105,7 +1130,7 @@ def bestenlisten(cards,lists,other_lists):
         other=swap(rel) if other_lists.get(cat['k']) else None
         write(rel,head(t,d,rel,P2,ld,alt=alt(rel) if other else None)+f'''{HDR(P2,rel,other or swap(base))}
 <div class="wrap"><main id="app">
-<div class="crumb"><span><a href="../">Bestenlisten</a> › {E(cat["t"])}</span><span>Stand {S}</span></div><h1>{E(cat["h"])} in {N}</h1><p class="lede">{E(cat["d"])}</p>
+<div class="crumb"><span><a href="../">Bestenlisten</a> › {E(cat["t"])}</span><span>Stand {S}</span></div>{hero_open(hero_kicker(cat["h"],max(c["geprueft"] for c in X)))}<h1>{E(cat["h"])} in {N}</h1><p class="lede">{E(cat["d"])}</p>{hero_close(P2,[(len(X),"Karten in der Liste"),(len({c["anbieter"] for c in X}),"Anbieter")],S,hero_best_card(top,P2,code,"Platz 1 in dieser Liste",cat_stars(top,cat["w"]) if cat["w"] else None))}
 <div class="facts prose"><p>{kurz}</p></div>
 <div class="chips" style="margin:14px 0">{chips(cat["k"])}</div>
 {wb}

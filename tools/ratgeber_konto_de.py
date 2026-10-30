@@ -38,7 +38,7 @@ def _load():
 
 def register(art,P,eur):
     d,ks=_load()
-    def L(k,label=None): return f'<a class="lnk" href="{P}de/girokonto/#gk-{k["slug"]}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
+    def L(k,label=None): return f'<a class="lnk" href="{P}de/girokonto/{ {'student':'bestenlisten/studenten/','jugend':'bestenlisten/jugendkonto/','kinder':'bestenlisten/kinderkonto/'}.get(k.get('art'),'') }#gk-{k["slug"]}">{E(label or k["name"])}</a> <small class="mut">({E(k["bank"])})</small>'
     G1=f'{P}de/girokonto/'; B=f'{G1}bestenlisten/'; RG=f'{P}de/ratgeber/'
     alle=[k for k in ks if k['art'] in ('standard','premium')]
     kfT=lambda k:'kostenlos' if k['kf_jahr']==0 else f'{eur(k["kf_jahr"])} € im Jahr'

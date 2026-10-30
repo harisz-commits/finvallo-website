@@ -179,8 +179,8 @@ for _l, _b, _k in AF.keys():
         _p = _AP[_b].format(l=_l, k=_k)
         if not os.path.exists(R + _p + 'index.html'): err.append(f'affiliate.json {_l}/{_b}/{_k}: keine Seite {_p}')
     elif _b == 'girokonto':
-        _gp = R + f'{_l}/girokonto/index.html'
-        if not os.path.exists(_gp) or f'id="gk-{_k}"' not in open(_gp, encoding='utf-8').read(): err.append(f'affiliate.json {_l}/girokonto/{_k}: Konto nicht im Vergleich')
+        _gp = [R + f'{_l}/girokonto/index.html'] + glob.glob(R + f'{_l}/girokonto/bestenlisten/*/index.html')
+        if not any(f'id="gk-{_k}"' in open(x, encoding='utf-8').read() for x in _gp if os.path.exists(x)): err.append(f'affiliate.json {_l}/girokonto/{_k}: Konto nicht im Vergleich')
     elif _b == 'festgeld' and _k not in _FGB.get(_l, set()): err.append(f'affiliate.json {_l}/festgeld/{_k}: Bank nicht im Vergleich')
 _AU = {u for _l, _b, _k in AF.keys() for u in [AF.link(_l, _b, _k)]}
 for f in pages:
@@ -189,6 +189,14 @@ for f in pages:
         a = m.group(0); href = re.search(r'href="([^"]*)"', a)
         if 'sponsored' in a and not re.match(r'[^<]*\*', s[m.end():m.end() + 80]): err.append(f'{rel}: sponsored-Link ohne Stern')
         if href and href.group(1) in _AU and 'sponsored' not in a: err.append(f'{rel}: Partnerlink ohne rel=sponsored')
+# Sprungmarken auf Konten und Festgeld-Angebote (#gk-…, #fg-…) müssen auf der Zielseite existieren
+_IDS = {}
+for f in pages:
+    for _m in re.finditer(r'href="([^"#]*)#((?:gk|fg)-[a-z0-9-]+)"', open(f, encoding='utf-8').read()):
+        _t = os.path.normpath(os.path.join(os.path.dirname(f), _m.group(1) or '.'))
+        _t = _t + '/index.html' if os.path.isdir(_t) else _t
+        if _t not in _IDS: _IDS[_t] = set(re.findall(r'id="((?:gk|fg)-[a-z0-9-]+)"', open(_t, encoding='utf-8').read())) if os.path.isfile(_t) else set()
+        if _m.group(2) not in _IDS[_t]: err.append(f'{f[len(R):]}: Sprungmarke #{_m.group(2)} fehlt auf {_t[len(os.path.normpath(R))+1:]}')
 # FAQ: dieselbe Frage auf vielen Seiten ist Vorlagen-Füllstoff (gleichlautende Standardfragen fliegen raus, siehe docs/offen.md)
 _FQ = {}
 for f in pages:
