@@ -734,8 +734,8 @@ def hero_open(kicker):
 def hero_close(P,stats,stand,best=None):
     """stats: [(Wert, Beschriftung)], best: dict(label, name, by, face, rate, btn, note) oder None"""
     st=''.join(f'<div class="hero-s"><b>{E(str(v))}</b><span>{E(l)}</span></div>' for v,l in stats)
-    au=(f'<a class="hero-a" href="{P}ueber-uns/"><img src="{P}assets/haris.jpg" alt="Haris" width="44" height="44" loading="lazy">'
-        f'<span><b>Haris</b><small>Geprüft bis {E(stand)}</small></span></a>')
+    au=(f'<a class="hero-a" href="{P}ueber-uns/"><img src="{P}assets/haris.jpg" alt="Haris Z." width="44" height="44" loading="lazy">'
+        f'<span><b>Haris Z.</b><small>Geprüft bis {E(stand)}</small></span></a>')
     b=''
     if best:
         b=(f'<aside class="hero-b" aria-label="{E(best["label"])}"><p class="hero-bl">{E(best["label"])}</p>{best.get("face","")}'
